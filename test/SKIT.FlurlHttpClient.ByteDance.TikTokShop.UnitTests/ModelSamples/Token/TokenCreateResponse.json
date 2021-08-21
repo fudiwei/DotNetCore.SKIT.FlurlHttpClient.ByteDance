@@ -1,0 +1,13 @@
+﻿{
+    "data": {
+        "access_token": "ACCESS_TOKEN",
+        "expires_in": 530808,
+        "refresh_token": "REFRESH_TOKEN",
+        "scope": "SCOPE",
+        "shop_id": "SHOPID",
+        "shop_name": "SHOPNAME"
+    },
+    "err_no": 0,
+    "log_id": "202106081408160101311300265F00266E",
+    "message": "success"
+} 

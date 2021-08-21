@@ -1,0 +1,39 @@
+﻿using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
+{
+    /// <summary>
+    /// 抖店开放平台 API 请求的基类。
+    /// </summary>
+    public abstract class TikTokShopRequest : IByteDanceRequest
+    {
+        /// <summary>
+        /// 获取或设置请求超时时间（单位：毫秒）。如果不指定将使用构造 <see cref="TikTokShopClient"/> 时的 <see cref="TikTokShopClientOptions.Timeout"/> 参数，这在需要指定特定耗时请求（比如上传或下载文件）的超时时间时很有用。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual int? Timeout { get; set; }
+
+        /// <summary>
+        /// 获取抖店开放平台的 API 接口名称。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        protected internal virtual string Method { get; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置抖店开放平台的 AccessToken。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual string? AccessToken { get; set; }
+
+        /// <summary>
+        /// 获取或设置抖店开放平台的 API 协议版本。
+        /// <para>默认值：2</para>
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual string Version { get; set; } = "2";
+    }
+}

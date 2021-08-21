@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <summary>
         /// 主域名（默认）。
         /// </summary>
-        public const string DEFAULT = "https://openapi-fxg.jinritemai.com ";
+        public const string DEFAULT = "https://openapi-fxg.jinritemai.com";
 
         /// <summary>
         /// 沙箱域名。

@@ -15,13 +15,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         public virtual int? Timeout { get; set; }
 
         /// <summary>
-        /// 获取抖店开放平台的 API 接口名称。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        protected internal virtual string Method { get; } = string.Empty;
-
-        /// <summary>
         /// 获取或设置抖店开放平台的 AccessToken。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
@@ -35,5 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual string Version { get; set; } = "2";
+
+        protected internal abstract string GetMethod();
     }
 }

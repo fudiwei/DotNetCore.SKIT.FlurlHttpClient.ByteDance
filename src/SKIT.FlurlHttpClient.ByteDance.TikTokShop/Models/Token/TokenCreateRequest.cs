@@ -8,10 +8,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
     /// </summary>
     public class TokenCreateRequest : TikTokShopRequest
     {
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        protected internal override string Method => "token.create";
-
         /// <summary>
         /// 获取或设置授权 Code。
         /// </summary>
@@ -32,6 +28,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("shop_id")]
         [System.Text.Json.Serialization.JsonPropertyName("shop_id")]
-        public string? ShopId { get; set; }
+        public int? ShopId { get; set; }
+
+        protected internal override string GetMethod()
+        {
+            return string.Intern("token.create");
+        }
     }
 }

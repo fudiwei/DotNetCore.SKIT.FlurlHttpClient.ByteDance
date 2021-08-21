@@ -45,8 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shop_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("shop_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
-                public string? ShopId { get; set; }
+                public int? ShopId { get; set; }
 
                 /// <summary>
                 /// 获取或设置店铺名称。

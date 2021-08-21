@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             }
 
             flurlRequest.SetQueryParam("v", request.Version);
-            flurlRequest.SetQueryParam("method", request.Method);
+            flurlRequest.SetQueryParam("method", request.GetMethod());
 
             return flurlRequest;
         }

@@ -64,7 +64,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
     /// 抖店开放平台 API 响应的泛型基类。
     /// </summary>
     public abstract class TikTokShopResponse<TData> : TikTokShopResponse
-        where TData : new()
     {
         /// <summary>
         /// 获取或设置接口返回数据。

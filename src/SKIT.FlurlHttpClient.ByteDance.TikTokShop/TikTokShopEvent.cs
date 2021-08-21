@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
+{
+    /// <summary>
+    /// 表示抖店开放平台 API 消息推送事件的基类。
+    /// </summary>
+    public class TikTokShopEvent
+    {
+        /// <summary>
+        /// 获取或设置消息 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("msg_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("msg_id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// 获取或设置消息类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("tag")]
+        [System.Text.Json.Serialization.JsonPropertyName("tag")]
+        public string Tag { get; set; } = default!;
+    }
+
+    /// <summary>
+    /// 表示抖店开放平台 API 消息推送事件的泛型基类。
+    /// </summary>
+    public abstract class TikTokShopEvent<TData> : TikTokShopEvent
+    {
+        /// <summary>
+        /// 获取或设置接口返回数据。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("data")]
+        [System.Text.Json.Serialization.JsonPropertyName("data")]
+        public TData Data { get; set; } = default!;
+    }
+}

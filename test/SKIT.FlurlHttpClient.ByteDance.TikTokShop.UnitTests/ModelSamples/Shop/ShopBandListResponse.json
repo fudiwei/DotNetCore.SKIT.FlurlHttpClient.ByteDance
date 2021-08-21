@@ -1,0 +1,12 @@
+﻿{
+    "data": [
+        {
+            "id": 14133,
+            "brand_chinese_name": "品牌名",
+            "brand_english_name": "brand_name",
+            "brand_reg_num": "12363569"
+        }
+    ],
+    "err_no": 0,
+    "message": "success"
+}

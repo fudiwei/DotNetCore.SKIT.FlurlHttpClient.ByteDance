@@ -1,0 +1,11 @@
+﻿{
+    "data": {
+        "decision": {
+            "decision": "PASS",
+            "decision_detail": "detail",
+            "hit_status": "hint"
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

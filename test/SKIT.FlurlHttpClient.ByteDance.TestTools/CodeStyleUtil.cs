@@ -323,7 +323,6 @@ namespace SKIT.FlurlHttpClient.ByteDance
             var lstExtensionsCodeFile = TestIOUtil.GetAllFiles(workdir)
                 .Where(e => string.Equals(Path.GetExtension(e), ".cs", StringComparison.InvariantCultureIgnoreCase))
                 .Where(e => Path.GetDirectoryName(e).StartsWith(Path.Combine(workdir, "Extensions")))
-                .Where(e => Path.GetFileNameWithoutExtension(e).StartsWith("ByteDance"))
                 .Where(e => Path.GetFileNameWithoutExtension(e).Contains("ClientExecute"))
                 .Where(e => Path.GetFileNameWithoutExtension(e).EndsWith("Extensions"))
                 .ToArray();

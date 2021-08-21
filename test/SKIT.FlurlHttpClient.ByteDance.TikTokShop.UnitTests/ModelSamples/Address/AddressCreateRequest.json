@@ -1,0 +1,13 @@
+﻿{
+    "address": {
+        "user_name": "张三",
+        "mobile": "18012345678",
+        "province_id": 32,
+        "city_id": 330700,
+        "town_id": 330782,
+        "detail": "xxxx",
+        "street_id": 330782003,
+        "link_type": 0,
+        "fixed_phone": "400-12345678-1234"
+    }
+}

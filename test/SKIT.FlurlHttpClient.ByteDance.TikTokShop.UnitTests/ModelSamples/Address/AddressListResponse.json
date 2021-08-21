@@ -1,0 +1,24 @@
+﻿{
+    "data": {
+        "total": 10,
+        "page_size": 1,
+        "page_no": 10,
+        "address_list": [
+            {
+                "address_id": 1,
+                "reciever_name": "张三",
+                "is_default": "1",
+                "is_send_default": "1",
+                "create_time": "1622103276",
+                "update_time": "1622103276",
+                "receiver_provinc": "北京市",
+                "receiver_city": "北京",
+                "receiver_district": "海淀区",
+                "receiver_detail": "xxxx",
+                "receiver_street": "丹棱街"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

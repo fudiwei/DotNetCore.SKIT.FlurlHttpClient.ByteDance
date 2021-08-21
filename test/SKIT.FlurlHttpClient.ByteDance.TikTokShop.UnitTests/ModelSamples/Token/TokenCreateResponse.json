@@ -4,7 +4,7 @@
         "expires_in": 530808,
         "refresh_token": "REFRESH_TOKEN",
         "scope": "SCOPE",
-        "shop_id": "SHOPID",
+        "shop_id": 12345,
         "shop_name": "SHOPNAME"
     },
     "err_no": 0,

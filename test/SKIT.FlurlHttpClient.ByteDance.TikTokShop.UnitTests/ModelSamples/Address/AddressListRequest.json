@@ -1,0 +1,7 @@
+﻿{
+    "shop_id": 123,
+    "page_size": 10,
+    "page_no": 1,
+    "order_by": "asc",
+    "order_field": "create_time"
+}

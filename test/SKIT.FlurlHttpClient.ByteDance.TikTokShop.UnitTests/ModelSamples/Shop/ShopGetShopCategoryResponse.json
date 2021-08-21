@@ -1,0 +1,14 @@
+﻿{
+    "data": [
+        {
+            "id": 1,
+            "name": "类目名称",
+            "level": 1,
+            "parent_id": 1,
+            "is_leaf": true,
+            "enable": true
+        }
+    ],
+    "err_no": 0,
+    "message": "success"
+}

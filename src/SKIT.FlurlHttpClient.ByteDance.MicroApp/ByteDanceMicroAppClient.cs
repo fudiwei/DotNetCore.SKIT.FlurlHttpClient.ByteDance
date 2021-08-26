@@ -115,7 +115,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         {
             string contentType = flurlResponse.Headers.GetAll("Content-Type").FirstOrDefault() ?? string.Empty;
             string contentDisposition = flurlResponse.Headers.GetAll("Content-Disposition").FirstOrDefault() ?? string.Empty;
-            bool contentTypeIsNotJson = flurlResponse.StatusCode != (int)HttpStatusCode.OK;
+            bool contentTypeIsNotJson =
+                (flurlResponse.StatusCode != (int)HttpStatusCode.OK) ||
+                (!contentType.StartsWith("application/json") && !contentType.StartsWith("text/json") && !contentType.StartsWith("text/plain"));
 
             T result = contentTypeIsNotJson ? new T() : await flurlResponse.GetJsonAsync<T>().ConfigureAwait(false);
             result.RawStatus = flurlResponse.StatusCode;

@@ -1,0 +1,44 @@
+﻿{
+    "log_id": "2019010320551501001001621510071",
+    "data": [
+        {
+            "code": 0,
+            "task_id": "d18197c4-0f56-11e9-99a5-0242ac110004",
+            "data_id": null,
+            "predicts": [
+                {
+                    "prob": 1,
+                    "model_name": "image_ocr",
+                    "target": "ad"
+                },
+                {
+                    "prob": 0,
+                    "model_name": "image_qrcode",
+                    "target": "ad"
+                }
+            ],
+            "msg": "ok"
+        },
+        {
+            "code": 0,
+            "task_id": "d1aedc02-0f56-11e9-99a5-0242ac110004",
+            "data_id": null,
+            "predicts": [
+                {
+                    "prob": 0.0005013857153244317,
+                    "model_name": "image_porn",
+                    "target": "porn"
+                },
+                {
+                    "prob": 0.022131478413939476,
+                    "model_name": "image_vulgar",
+                    "target": "porn"
+                }
+            ],
+            "msg": "ok"
+        }
+    ],
+    "error_id": "7bf3b7e299e9448796aa99b44750df68",
+    "code": 401,
+    "exception": "[app token sign fail] bad token"
+}

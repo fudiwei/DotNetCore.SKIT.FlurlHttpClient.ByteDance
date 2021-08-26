@@ -1,0 +1,8 @@
+﻿{
+    "targets": [ "ad", "porn" ],
+    "tasks": [
+        {
+            "image": "https://image.url"
+        }
+    ]
+}

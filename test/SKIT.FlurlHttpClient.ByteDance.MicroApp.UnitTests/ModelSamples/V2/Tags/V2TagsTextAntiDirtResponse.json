@@ -1,0 +1,22 @@
+﻿{
+    "log_id": "202008181611370100150421452708466F",
+    "data": [
+        {
+            "msg": "",
+            "code": 0,
+            "task_id": "MICROAPP_6862233737027911687",
+            "predicts": [
+                {
+                    "prob": 0,
+                    "hit": false,
+                    "target": null,
+                    "model_name": "short_content_antidirt"
+                }
+            ],
+            "data_id": null
+        }
+    ],
+    "error_id": "7bf3b7e299e9448796aa99b44750df68",
+    "code": 401,
+    "exception": "[app token sign fail] bad token"
+}

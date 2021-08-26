@@ -1,0 +1,9 @@
+﻿{
+    "err_no": 0,
+    "err_tips": "",
+    "settle_info": {
+        "settle_no": "69822583687211557",
+        "settle_amount": 5990,
+        "settle_status": "SUCCESS"
+    }
+}

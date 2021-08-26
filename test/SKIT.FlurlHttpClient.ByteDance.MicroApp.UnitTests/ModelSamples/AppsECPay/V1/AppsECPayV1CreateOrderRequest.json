@@ -1,0 +1,13 @@
+﻿{
+    "app_id": "tt07e3715e98c9aac0",
+    "out_order_no": "out_order_no_1",
+    "total_amount": 12800,
+    "subject": "测试商品",
+    "body": "测试商品",
+    "valid_time": 180,
+    "sign": "d716027b7b5a91a3319a061d818cc9cc",
+    "cp_extra": "一些附加信息",
+    "notify_url": "https://xxx.com/callback",
+    "disable_msg": 0,
+    "msg_page": "pages/index"
+}

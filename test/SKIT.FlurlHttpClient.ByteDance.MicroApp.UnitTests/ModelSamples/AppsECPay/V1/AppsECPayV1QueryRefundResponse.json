@@ -1,0 +1,9 @@
+﻿{
+    "err_no": 0,
+    "err_tips": "",
+    "refundInfo": {
+        "refund_no": "69821555158047006",
+        "refund_amount": 3580,
+        "refund_status": "SUCCESS"
+    }
+}

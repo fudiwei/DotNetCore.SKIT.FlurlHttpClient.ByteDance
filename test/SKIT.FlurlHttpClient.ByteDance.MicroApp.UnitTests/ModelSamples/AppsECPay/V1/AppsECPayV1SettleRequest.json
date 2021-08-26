@@ -1,0 +1,10 @@
+﻿{
+    "out_settle_no": "out_settle_no_1",
+    "out_order_no": "out_order_no_1",
+    "settle_desc": "分账",
+    "notify_url": "https://your.callback.url",
+    "cp_extra": "2856",
+    "app_id": "tt07e3715e98c9aac0",
+    "sign": "d98e6af1c490b36f7b72e2037f81a511",
+    "settle_params": "[{\"merchant_uid\":\"696458350318359362\",\"amount\":60}]"
+}

@@ -1,0 +1,15 @@
+﻿{
+    "app_id": "tt07e3715e98c9aac0",
+    "out_order_no": "out_order_no_1",
+    "out_refund_no": "out_refund_no_1",
+    "total_amount": 19800,
+    "refund_amount": 19800,
+    "reason": "订单退款",
+    "cp_extra": "",
+    "notify_url": "",
+    "sign": "6eeb2a4d336f9c7c38f05acb598b7dcc",
+    "thirdparty_id": "",
+    "disable_msg": 0,
+    "msg_page": "",
+    "all_settle": 0
+}

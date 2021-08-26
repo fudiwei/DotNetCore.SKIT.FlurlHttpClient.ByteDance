@@ -1,0 +1,16 @@
+﻿{
+    "err_no": 0,
+    "err_tips": "",
+    "out_order_no": "out_order_no_1",
+    "order_id": "6979643835974486313",
+    "payment_info": {
+        "total_fee": 68800,
+        "order_status": "SUCCESS",
+        "pay_time": "2021-07-01 01:43:15",
+        "way": 2,
+        "channel_no": "2021070122001432551415940569",
+        "channel_gateway_no": "12107010014028882037",
+        "seller_uid": "6943058549596520",
+        "item_id": "6943058549596520"
+    }
+}

@@ -1,0 +1,7 @@
+﻿{
+    "ToUserName": "appid",
+    "FromUserName": "openid",
+    "CreateTime": 1577364225,
+    "MsgType": "image",
+    "PicUrl": "this is image url link"
+}

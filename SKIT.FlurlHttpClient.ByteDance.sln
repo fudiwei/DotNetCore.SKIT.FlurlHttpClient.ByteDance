@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5AE72EE1-09C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance", "src\SKIT.FlurlHttpClient.ByteDance\SKIT.FlurlHttpClient.ByteDance.csproj", "{7F53CF88-D674-4DF0-9956-9FF5D968CA9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKIT.FlurlHttpClient.ByteDance.MicroApp", "src\SKIT.FlurlHttpClient.ByteDance.MicroApp\SKIT.FlurlHttpClient.ByteDance.MicroApp.csproj", "{34B28663-B4DF-4357-808F-5D74795D6D5B}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTok", "src\SKIT.FlurlHttpClient.ByteDance.TikTok\SKIT.FlurlHttpClient.ByteDance.TikTok.csproj", "{5C10E8B7-B96A-4D3E-889E-3D9DD5FE41EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokShop", "src\SKIT.FlurlHttpClient.ByteDance.TikTokShop\SKIT.FlurlHttpClient.ByteDance.TikTokShop.csproj", "{E2F2ADEC-CD97-4CF9-A835-5F4B76EED1EA}"
@@ -15,9 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2430FAD4-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{2AF6E09C-06D8-415D-B041-5D4FD6B31CD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKIT.FlurlHttpClient.ByteDance.TestTools", "test\SKIT.FlurlHttpClient.ByteDance.TestTools\SKIT.FlurlHttpClient.ByteDance.TestTools.csproj", "{7FDD3DEF-5B90-4C3F-839F-39D1B88D6F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TestTools", "test\SKIT.FlurlHttpClient.ByteDance.TestTools\SKIT.FlurlHttpClient.ByteDance.TestTools.csproj", "{7FDD3DEF-5B90-4C3F-839F-39D1B88D6F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests.csproj", "{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests\SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests.csproj", "{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests.csproj", "{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B28663-B4DF-4357-808F-5D74795D6D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B28663-B4DF-4357-808F-5D74795D6D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B28663-B4DF-4357-808F-5D74795D6D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B28663-B4DF-4357-808F-5D74795D6D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +68,8 @@ Global
 		{2AF6E09C-06D8-415D-B041-5D4FD6B31CD1} = {2430FAD4-4F4F-488A-A9A4-E283538EB124}
 		{7FDD3DEF-5B90-4C3F-839F-39D1B88D6F68} = {2AF6E09C-06D8-415D-B041-5D4FD6B31CD1}
 		{F08FBA3E-BFE1-4A26-822D-260BC2359CB9} = {2430FAD4-4F4F-488A-A9A4-E283538EB124}
+		{34B28663-B4DF-4357-808F-5D74795D6D5B} = {5AE72EE1-09C8-4A9C-B2A8-665F9E462CFB}
+		{40A12CB0-DF2D-4FCB-BCEA-C168EAA28B94} = {2430FAD4-4F4F-488A-A9A4-E283538EB124}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A384D7D-67A1-421D-89EF-3E330BA6AF25}

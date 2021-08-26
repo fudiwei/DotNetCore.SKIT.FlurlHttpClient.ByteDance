@@ -1,0 +1,7 @@
+﻿<xml>
+    <ToUserName><![CDATA[appid]]></ToUserName>
+    <FromUserName><![CDATA[openid]]></FromUserName>
+    <CreateTime>1577364225</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[text content]]></Content>
+</xml>

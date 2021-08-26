@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net461; netstandard2.0; net5.0</TargetFrameworks>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableReferenceTypes>true</NullableReferenceTypes>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>SKIT.FlurlHttpClient.ByteDance.MicroApp</PackageId>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
+        <PackageTags>Flurl.Http ByteDance MicroApp 字节 字节小程序 字节跳动 字节跳动小程序 头条 头条小程序 今日头条 今日头条小程序</PackageTags>
+        <Version>0.1.0-alpha</Version>
+        <Description>基于 Flurl.Http 的字节小程序 API 客户端。</Description>
+        <Authors>Fu Diwei</Authors>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance.git</RepositoryUrl>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net461'" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SKIT.FlurlHttpClient.ByteDance\SKIT.FlurlHttpClient.ByteDance.csproj" />
+    </ItemGroup>
+
+</Project>

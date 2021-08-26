@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// </summary>
         [Newtonsoft.Json.JsonProperty("log_id")]
         [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        public string LogId { get; set; } = default!;
+        public virtual string LogId { get; set; } = default!;
 
         /// <summary>
         /// 获取抖店开放平台 API 返回的错误码。

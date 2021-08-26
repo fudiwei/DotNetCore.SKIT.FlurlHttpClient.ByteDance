@@ -1,0 +1,17 @@
+﻿{
+    "appname": "toutiao",
+    "access_token": "XXX",
+    "path": "",
+    "width": 430,
+    "line_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+    },
+    "background": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+    },
+    "set_icon": true
+}

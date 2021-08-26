@@ -1,0 +1,11 @@
+﻿{
+    "access_token": "b13b4c7679150245dac2249aafd8aca8e9dceaff9e22cee05e1d30fb67e18916358d73c235fcaab9007ec0976ee40d26ee56a43c32398b9d6680105e5535cd1ef40a803d790668581************",
+    "app_id": "31198cf00b********",
+    "tpl_id": "MSG38489d04608c5f0fdeb565fc5114afff6410*******",
+    "open_id": "36d4bd3c8****",
+    "data": {
+        "版本号": "v1.0",
+        "版本描述": "新版本发布了"
+    },
+    "page": "pages/index?a=b"
+}

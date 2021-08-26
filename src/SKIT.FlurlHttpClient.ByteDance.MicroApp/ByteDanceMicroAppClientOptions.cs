@@ -33,5 +33,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// 获取或设置头条服务器推送的 Token。
         /// </summary>
         public string? PushToken { get; set; }
+
+        /// <summary>
+        /// 获取或设置用于担保支付请求签名的密钥。
+        /// </summary>
+        public string? ECPaySalt { get; set; }
     }
 }

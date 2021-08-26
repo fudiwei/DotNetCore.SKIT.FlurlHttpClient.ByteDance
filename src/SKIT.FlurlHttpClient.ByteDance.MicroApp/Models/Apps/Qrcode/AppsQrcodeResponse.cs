@@ -35,5 +35,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("unionid")]
         [System.Text.Json.Serialization.JsonPropertyName("unionid")]
         public string? UnionId { get; set; }
+
+        public override bool IsSuccessful()
+        {
+            return base.IsSuccessful() && RawBytes?.Length > 0;
+        }
     }
 }

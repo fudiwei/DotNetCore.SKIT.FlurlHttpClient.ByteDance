@@ -23,6 +23,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
         /// </summary>
         public string? PushToken { get; }
 
+        /// <summary>
+        /// 初始化客户端时 <see cref="ByteDanceMicroAppClientOptions.ECPaySalt"/> 的副本。
+        /// </summary>
+        public string? ECPaySalt { get; }
+
         internal Credentials(ByteDanceMicroAppClientOptions options)
         {
             if (options == null) throw new ArgumentNullException(nameof(options));
@@ -30,6 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
             AppId = options.AppId;
             AppSecret = options.AppSecret;
             PushToken = options.PushToken;
+            ECPaySalt = options.ECPaySalt;
         }
     }
 }

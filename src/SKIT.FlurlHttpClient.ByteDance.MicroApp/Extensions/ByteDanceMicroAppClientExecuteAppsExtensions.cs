@@ -164,7 +164,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             httpContent.Add(fileContent, "\"image\"", $"\"{HttpUtility.UrlEncode(request.ImageFileName)}\"");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.AppId)), "app_id");
             if (request.RoomId.HasValue)
-                httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RoomId.ToString())), "room_id");
+                httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RoomId.Value.ToString())), "room_id");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Title)), "title");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PagePath)), "start_page");
             httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data; boundary=" + boundary);

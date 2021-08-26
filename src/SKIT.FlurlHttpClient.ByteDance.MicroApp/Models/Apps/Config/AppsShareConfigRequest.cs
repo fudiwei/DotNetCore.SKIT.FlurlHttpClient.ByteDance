@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     public class AppsShareConfigRequest : ByteDanceMicroAppRequest
     {
         /// <summary>
-        /// 获取或设置字节小程序的 AccessToken。
+        /// <inheritdoc/>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("access_token")]

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/convert_video_id/video_id_to_open_item_id 接口的请求。</para>
+    /// <para>表示 [POST] /apps/censor/image 接口的请求。</para>
     /// </summary>
-    public class AppsConvertVideoIdToOpenItemIdRequest : ByteDanceMicroAppRequest
+    public class AppsCensorImageRequest : ByteDanceMicroAppRequest
     {
         /// <summary>
-        /// <inheritdoc/>
+        /// <inheritdoc />
         /// </summary>
         [Newtonsoft.Json.JsonProperty("access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("access_token")]
@@ -23,17 +23,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string? AppId { get; set; }
 
         /// <summary>
-        /// 获取或设置访问密钥。
+        /// 获取或设置图片 URL。与字段 <see cref="ImageData"/> 二选一。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("access_key")]
-        [System.Text.Json.Serialization.JsonPropertyName("access_key")]
-        public string AccessKey { get; set; } = string.Empty;
+        [Newtonsoft.Json.JsonProperty("image")]
+        [System.Text.Json.Serialization.JsonPropertyName("image")]
+        public string? ImageUrl { get; set; }
 
         /// <summary>
-        /// 获取或设置视频 ID 列表。
+        /// 获取或设置经过 Base64 编码的图片数据。与字段 <see cref="ImageUrl"/> 二选一。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("video_ids")]
-        [System.Text.Json.Serialization.JsonPropertyName("video_ids")]
-        public IList<string> VideoIdList { get; set; } = new List<string>();
+        [Newtonsoft.Json.JsonProperty("image_data")]
+        [System.Text.Json.Serialization.JsonPropertyName("image_data")]
+        public string? ImageData { get; set; }
     }
 }

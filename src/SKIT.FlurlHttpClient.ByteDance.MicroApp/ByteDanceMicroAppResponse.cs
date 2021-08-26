@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// </summary>
         [Newtonsoft.Json.JsonProperty("error")]
         [System.Text.Json.Serialization.JsonPropertyName("error")]
-        public virtual long Error { get; set; } = default!;
+        public virtual int Error { get; set; } = default!;
 
         /// <summary>
         /// 获取字节小程序 API 返回的错误号。

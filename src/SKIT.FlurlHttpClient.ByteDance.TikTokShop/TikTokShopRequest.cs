@@ -29,6 +29,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual string Version { get; set; } = "2";
 
+        /// <summary>
+        /// 获取调用的 API 接口名称。
+        /// </summary>
+        /// <returns></returns>
         protected internal abstract string GetMethod();
     }
 }

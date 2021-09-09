@@ -568,16 +568,28 @@ namespace SKIT.FlurlHttpClient.ByteDance
                         return true;
                     }
 
-                    if (!TryCheckExtensionSourceCode(array[i], out var request))
+                    if (!TryCheckExtensionSourceCode(array[i], out var requestModel))
                     {
                         continue;
                     }
                     else
                     {
-                        string requestModelFileName = lstModelsCodeFile.Single(e => string.Equals(Path.GetFileNameWithoutExtension(e), $"{request.Value.Name}Request"));
-                        string responseModelFileName = lstModelsCodeFile.Single(e => string.Equals(Path.GetFileNameWithoutExtension(e), $"{request.Value.Name}Response"));
-                        bool isValidReq = TryCheckRequestModelSourceCode(requestModelFileName, request.Value.Method, request.Value.Url);
-                        bool isValidRes = TryCheckResponseModelSourceCode(responseModelFileName, request.Value.Method, request.Value.Url);
+                        string requestModelFileName = lstModelsCodeFile.SingleOrDefault(e => string.Equals(Path.GetFileNameWithoutExtension(e), $"{requestModel.Value.Name}Request"));
+                        if (string.IsNullOrEmpty(requestModelFileName))
+                        {
+                            lstError.Add(new Exception($"{requestModel.Value.Name}Request 文件不存在。"));
+                            continue;
+                        }
+                        
+                        string responseModelFileName = lstModelsCodeFile.SingleOrDefault(e => string.Equals(Path.GetFileNameWithoutExtension(e), $"{requestModel.Value.Name}Response"));
+                        if (string.IsNullOrEmpty(responseModelFileName))
+                        {
+                            lstError.Add(new Exception($"{requestModel.Value.Name}Response 文件不存在。"));
+                            continue;
+                        }
+
+                        bool isValidReq = TryCheckRequestModelSourceCode(requestModelFileName, requestModel.Value.Method, requestModel.Value.Url);
+                        bool isValidRes = TryCheckResponseModelSourceCode(responseModelFileName, requestModel.Value.Method, requestModel.Value.Url);
                         if (!isValidReq || !isValidRes)
                         {
                             continue;

@@ -12,7 +12,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance 字节 字节跳动 头条 今日头条</PackageTags>
-        <Version>1.1.0</Version>
+        <Version>1.0.0-beta.1.210826</Version>
         <Description>SKIT.FlurlClient.ByteDance（含 SKIT.FlurlHttpClient.ByteDance.MicroApp、SKIT.FlurlHttpClient.ByteDance.TikTok、SKIT.FlurlHttpClient.ByteDance.TikTokShop 等模块）的核心库，具体用法请参阅开发文档。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>

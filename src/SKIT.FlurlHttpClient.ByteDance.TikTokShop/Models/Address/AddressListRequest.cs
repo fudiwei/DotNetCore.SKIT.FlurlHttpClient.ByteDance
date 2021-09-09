@@ -33,11 +33,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
         /// <summary>
         /// 获取或设置排序方式。
-        /// <para>默认值：asc</para>
+        /// <para>默认值：desc</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_by")]
         [System.Text.Json.Serialization.JsonPropertyName("order_by")]
-        public string SortBy { get; set; } = "asc";
+        public string SortBy { get; set; } = "desc";
 
         /// <summary>
         /// 获取或设置排序字段。

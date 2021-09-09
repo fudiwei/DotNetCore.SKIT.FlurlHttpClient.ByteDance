@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sku_id")]
         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-        public int? SKUId { get; set; }
+        public long? SKUId { get; set; }
 
         /// <summary>
         /// 获取或设置卡券信息列表。

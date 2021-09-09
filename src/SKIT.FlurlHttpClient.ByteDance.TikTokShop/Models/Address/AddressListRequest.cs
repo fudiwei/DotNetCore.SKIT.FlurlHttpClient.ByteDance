@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("order_field")]
         public string SortField { get; set; } = "create_time";
 
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("address.list");
         }

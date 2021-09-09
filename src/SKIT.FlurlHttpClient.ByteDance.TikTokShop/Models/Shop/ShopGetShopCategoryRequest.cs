@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
     /// </summary>
     public class ShopGetShopCategoryRequest : TikTokShopRequest
     {
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("shop.getShopCategory");
         }

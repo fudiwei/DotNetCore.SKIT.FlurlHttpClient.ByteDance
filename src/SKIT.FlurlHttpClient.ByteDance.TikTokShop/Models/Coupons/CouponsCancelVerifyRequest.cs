@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("cancel_verify_count")]
         public int? CancelVerifyCount { get; set; }
 
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("coupons.cancelVerify");
         }

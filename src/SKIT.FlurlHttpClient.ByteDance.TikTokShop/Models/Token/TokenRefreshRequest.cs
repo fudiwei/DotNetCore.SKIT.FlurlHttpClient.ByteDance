@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
         public string RefreshToken { get; set; } = string.Empty;
 
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("token.refresh");
         }

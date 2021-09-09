@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("size")]
         public int? PageSize { get; set; }
 
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("member.searchList");
         }

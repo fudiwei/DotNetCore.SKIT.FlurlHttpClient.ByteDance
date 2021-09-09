@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("event_time")]
         public long? EventTimestamp { get; set; }
 
-        protected internal override string GetMethod()
+        protected internal override string GetApiMethod()
         {
             return string.Intern("antispam.userLogin");
         }

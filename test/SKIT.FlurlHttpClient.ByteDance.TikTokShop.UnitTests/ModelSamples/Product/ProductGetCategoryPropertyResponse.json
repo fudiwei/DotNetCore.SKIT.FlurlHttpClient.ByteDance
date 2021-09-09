@@ -1,0 +1,2821 @@
+﻿{
+    "data": [
+        {
+            "property_id": 0,
+            "property_name": "品牌",
+            "required": false,
+            "options": [
+                {
+                    "name": "ON:THE BODY/安宝笛",
+                    "value": "1062254699"
+                },
+                {
+                    "name": "糖小蜂",
+                    "value": "1939652452"
+                },
+                {
+                    "name": "Sony/索尼",
+                    "value": "679903018"
+                },
+                {
+                    "name": "ChaCheer/洽洽",
+                    "value": "70355890"
+                },
+                {
+                    "name": "lan/测试品牌",
+                    "value": "459328772"
+                },
+                {
+                    "name": "15MINS/15分钟",
+                    "value": "560560669"
+                },
+                {
+                    "name": "哈哈龙",
+                    "value": "340239287"
+                },
+                {
+                    "name": "中茶",
+                    "value": "1514387954"
+                },
+                {
+                    "name": "大小",
+                    "value": "1525687123"
+                },
+                {
+                    "name": "AOLAIWEN/澳·莱文",
+                    "value": "1756077704"
+                },
+                {
+                    "name": "1+1=3",
+                    "value": "1068989229"
+                },
+                {
+                    "name": "Apple/苹果",
+                    "value": "359833403"
+                },
+                {
+                    "name": "美特斯⸱邦威",
+                    "value": "752153247"
+                },
+                {
+                    "name": "其他",
+                    "value": "283604817"
+                },
+                {
+                    "name": "48H AFTER/后天",
+                    "value": "1941153109"
+                },
+                {
+                    "name": "422",
+                    "value": "512462293"
+                },
+                {
+                    "name": "斌工场BGC",
+                    "value": "461597452"
+                },
+                {
+                    "name": "12121212/11111",
+                    "value": "1826644684"
+                },
+                {
+                    "name": "韵の堂",
+                    "value": "1509558059"
+                },
+                {
+                    "name": "111111",
+                    "value": "2046099318"
+                },
+                {
+                    "name": "哈哈哈哈哈耶",
+                    "value": "1686431476"
+                },
+                {
+                    "name": "おはよう/啊发SV风神",
+                    "value": "1390315676"
+                }
+            ]
+        },
+        {
+            "property_id": 828231,
+            "property_name": "屏幕材质",
+            "required": false,
+            "options": [
+                {
+                    "name": "TFT",
+                    "value": "TFT"
+                },
+                {
+                    "name": "LCD",
+                    "value": "LCD"
+                },
+                {
+                    "name": "SUPER Amoled",
+                    "value": "SUPER Amoled"
+                },
+                {
+                    "name": "OLED",
+                    "value": "OLED"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                },
+                {
+                    "name": "超视网膜XDR显示屏",
+                    "value": "超视网膜XDR显示屏"
+                }
+            ]
+        },
+        {
+            "property_id": 828232,
+            "property_name": "电池容量",
+            "required": false
+        },
+        {
+            "property_id": 828233,
+            "property_name": "蓝牙版本",
+            "required": false,
+            "options": [
+                {
+                    "name": "4.0",
+                    "value": "4.0"
+                },
+                {
+                    "name": "5.0",
+                    "value": "5.0"
+                },
+                {
+                    "name": "4.2",
+                    "value": "4.2"
+                },
+                {
+                    "name": "4.1",
+                    "value": "4.1"
+                },
+                {
+                    "name": "无",
+                    "value": "无"
+                },
+                {
+                    "name": "BT5.1",
+                    "value": "BT5.1"
+                },
+                {
+                    "name": "支持蓝牙",
+                    "value": "支持蓝牙"
+                }
+            ]
+        },
+        {
+            "property_id": 828234,
+            "property_name": "耳机接口类型",
+            "required": false,
+            "options": [
+                {
+                    "name": "无",
+                    "value": "无"
+                },
+                {
+                    "name": "蓝牙",
+                    "value": "蓝牙"
+                },
+                {
+                    "name": "3.5mm",
+                    "value": "3.5mm"
+                },
+                {
+                    "name": "TYPE-C",
+                    "value": "TYPE-C"
+                },
+                {
+                    "name": "以官网为准",
+                    "value": "以官网为准"
+                },
+                {
+                    "name": "Micro USB",
+                    "value": "Micro USB"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                },
+                {
+                    "name": "Lightning",
+                    "value": "Lightning"
+                }
+            ]
+        },
+        {
+            "property_id": 828235,
+            "property_name": "网络类型",
+            "required": false,
+            "options": [
+                {
+                    "name": "全网通5G",
+                    "value": "全网通5G"
+                },
+                {
+                    "name": "SA/NSA双模(5G)",
+                    "value": "SA/NSA双模(5G)"
+                },
+                {
+                    "name": "无需合约版",
+                    "value": "无需合约版"
+                },
+                {
+                    "name": "公开版",
+                    "value": "公开版"
+                },
+                {
+                    "name": "电信2G",
+                    "value": "电信2G"
+                },
+                {
+                    "name": "电信3G",
+                    "value": "电信3G"
+                },
+                {
+                    "name": "电信4G",
+                    "value": "电信4G"
+                },
+                {
+                    "name": "电信4G+",
+                    "value": "电信4G+"
+                },
+                {
+                    "name": "电信联通4G",
+                    "value": "电信联通4G"
+                },
+                {
+                    "name": "联通2G",
+                    "value": "联通2G"
+                },
+                {
+                    "name": "联通3G",
+                    "value": "联通3G"
+                },
+                {
+                    "name": "联通4G",
+                    "value": "联通4G"
+                },
+                {
+                    "name": "全网通3G",
+                    "value": "全网通3G"
+                },
+                {
+                    "name": "全网通4G",
+                    "value": "全网通4G"
+                },
+                {
+                    "name": "移动2G",
+                    "value": "移动2G"
+                },
+                {
+                    "name": "移动3G",
+                    "value": "移动3G"
+                },
+                {
+                    "name": "移动4G",
+                    "value": "移动4G"
+                },
+                {
+                    "name": "移动4G+",
+                    "value": "移动4G+"
+                },
+                {
+                    "name": "移动联通2G",
+                    "value": "移动联通2G"
+                },
+                {
+                    "name": "移动联通3G",
+                    "value": "移动联通3G"
+                },
+                {
+                    "name": "移动联通4G",
+                    "value": "移动联通4G"
+                },
+                {
+                    "name": "",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "property_id": 828236,
+            "property_name": "屏幕刷新率",
+            "required": false
+        },
+        {
+            "property_id": 828237,
+            "property_name": "CPU型号",
+            "required": false,
+            "options": [
+                {
+                    "name": "Exynos 8895",
+                    "value": "Exynos 8895"
+                },
+                {
+                    "name": "Helio A22",
+                    "value": "Helio A22"
+                },
+                {
+                    "name": "Helio P22(MT6762)",
+                    "value": "Helio P22(MT6762)"
+                },
+                {
+                    "name": "Helio P60",
+                    "value": "Helio P60"
+                },
+                {
+                    "name": "helio P70",
+                    "value": "helio P70"
+                },
+                {
+                    "name": " Helio X25(MT6797T）",
+                    "value": " Helio X25(MT6797T）"
+                },
+                {
+                    "name": "Helio X27（MT6797X）",
+                    "value": "Helio X27（MT6797X）"
+                },
+                {
+                    "name": "Helio X30(MT6799）",
+                    "value": "Helio X30(MT6799）"
+                },
+                {
+                    "name": "MT6739",
+                    "value": "MT6739"
+                },
+                {
+                    "name": "MT6750",
+                    "value": "MT6750"
+                },
+                {
+                    "name": "MT6763T",
+                    "value": "MT6763T"
+                },
+                {
+                    "name": "高通骁龙660",
+                    "value": "高通骁龙660"
+                },
+                {
+                    "name": "高通骁龙660(AIE)",
+                    "value": "高通骁龙660(AIE)"
+                },
+                {
+                    "name": "苹果 A10",
+                    "value": "苹果 A10"
+                },
+                {
+                    "name": "苹果 A11",
+                    "value": "苹果 A11"
+                },
+                {
+                    "name": "苹果 A12",
+                    "value": "苹果 A12"
+                },
+                {
+                    "name": "苹果 A13",
+                    "value": "苹果 A13"
+                },
+                {
+                    "name": "苹果 A14",
+                    "value": "苹果 A14"
+                },
+                {
+                    "name": "苹果 A9",
+                    "value": "苹果 A9"
+                },
+                {
+                    "name": "其它",
+                    "value": "其它"
+                },
+                {
+                    "name": "麒麟659",
+                    "value": "麒麟659"
+                },
+                {
+                    "name": "麒麟710",
+                    "value": "麒麟710"
+                },
+                {
+                    "name": "麒麟960",
+                    "value": "麒麟960"
+                },
+                {
+                    "name": "麒麟970",
+                    "value": "麒麟970"
+                },
+                {
+                    "name": "麒麟980",
+                    "value": "麒麟980"
+                },
+                {
+                    "name": "麒麟990",
+                    "value": "麒麟990"
+                },
+                {
+                    "name": "麒麟990 5G",
+                    "value": "麒麟990 5G"
+                },
+                {
+                    "name": "骁龙430",
+                    "value": "骁龙430"
+                },
+                {
+                    "name": "骁龙450",
+                    "value": "骁龙450"
+                },
+                {
+                    "name": "骁龙625",
+                    "value": "骁龙625"
+                },
+                {
+                    "name": "骁龙626",
+                    "value": "骁龙626"
+                },
+                {
+                    "name": "骁龙632",
+                    "value": "骁龙632"
+                },
+                {
+                    "name": "骁龙636",
+                    "value": "骁龙636"
+                },
+                {
+                    "name": "骁龙652",
+                    "value": "骁龙652"
+                },
+                {
+                    "name": "骁龙660",
+                    "value": "骁龙660"
+                },
+                {
+                    "name": "骁龙660(AIE)",
+                    "value": "骁龙660(AIE)"
+                },
+                {
+                    "name": "骁龙670",
+                    "value": "骁龙670"
+                },
+                {
+                    "name": "骁龙670(AIE)",
+                    "value": "骁龙670(AIE)"
+                },
+                {
+                    "name": "骁龙710",
+                    "value": "骁龙710"
+                },
+                {
+                    "name": "骁龙710(AIE)",
+                    "value": "骁龙710(AIE)"
+                },
+                {
+                    "name": "骁龙835",
+                    "value": "骁龙835"
+                },
+                {
+                    "name": "骁龙845",
+                    "value": "骁龙845"
+                },
+                {
+                    "name": "骁龙845(AIE)",
+                    "value": "骁龙845(AIE)"
+                },
+                {
+                    "name": "骁龙855",
+                    "value": "骁龙855"
+                },
+                {
+                    "name": "展讯 9850K",
+                    "value": "展讯 9850K"
+                },
+                {
+                    "name": "骁龙888",
+                    "value": "骁龙888"
+                },
+                {
+                    "name": "骁龙870",
+                    "value": "骁龙870"
+                },
+                {
+                    "name": "天玑1000",
+                    "value": "天玑1000"
+                },
+                {
+                    "name": "天玑1000+",
+                    "value": "天玑1000+"
+                },
+                {
+                    "name": "天玑1000 L",
+                    "value": "天玑1000 L"
+                },
+                {
+                    "name": "天玑820",
+                    "value": "天玑820"
+                },
+                {
+                    "name": "骁龙675",
+                    "value": "骁龙675"
+                },
+                {
+                    "name": "骁龙712",
+                    "value": "骁龙712"
+                },
+                {
+                    "name": "骁龙439",
+                    "value": "骁龙439"
+                },
+                {
+                    "name": "MT6765",
+                    "value": "MT6765"
+                },
+                {
+                    "name": "骁龙730",
+                    "value": "骁龙730"
+                },
+                {
+                    "name": "麒麟810",
+                    "value": "麒麟810"
+                },
+                {
+                    "name": "骁龙665",
+                    "value": "骁龙665"
+                },
+                {
+                    "name": "MT6761 ",
+                    "value": "MT6761 "
+                },
+                {
+                    "name": "骁龙855 Plus",
+                    "value": "骁龙855 Plus"
+                },
+                {
+                    "name": "Helio G90T",
+                    "value": "Helio G90T"
+                }
+            ]
+        },
+        {
+            "property_id": 828238,
+            "property_name": "有线充电功率",
+            "required": false,
+            "options": [
+                {
+                    "name": "10V/2.25A",
+                    "value": "10V/2.25A"
+                },
+                {
+                    "name": "10V/4A",
+                    "value": "10V/4A"
+                },
+                {
+                    "name": "10V/5A",
+                    "value": "10V/5A"
+                },
+                {
+                    "name": "5V/1A",
+                    "value": "5V/1A"
+                },
+                {
+                    "name": "5V/2A",
+                    "value": "5V/2A"
+                },
+                {
+                    "name": "5V/4.5A",
+                    "value": "5V/4.5A"
+                },
+                {
+                    "name": "5V/4A",
+                    "value": "5V/4A"
+                },
+                {
+                    "name": "9V/2A",
+                    "value": "9V/2A"
+                },
+                {
+                    "name": "其它",
+                    "value": "其它"
+                },
+                {
+                    "name": "5V/3.6A",
+                    "value": "5V/3.6A"
+                },
+                {
+                    "name": "5V/3.2A",
+                    "value": "5V/3.2A"
+                },
+                {
+                    "name": "5V/3A",
+                    "value": "5V/3A"
+                },
+                {
+                    "name": "4.5V/5A",
+                    "value": "4.5V/5A"
+                },
+                {
+                    "name": "5V/6A",
+                    "value": "5V/6A"
+                },
+                {
+                    "name": "18W",
+                    "value": "18W"
+                },
+                {
+                    "name": "20W",
+                    "value": "20W"
+                },
+                {
+                    "name": "22.5W",
+                    "value": "22.5W"
+                },
+                {
+                    "name": "40W",
+                    "value": "40W"
+                },
+                {
+                    "name": "50W",
+                    "value": "50W"
+                },
+                {
+                    "name": "10W",
+                    "value": "10W"
+                },
+                {
+                    "name": "66W",
+                    "value": "66W"
+                },
+                {
+                    "name": "55W",
+                    "value": "55W"
+                }
+            ]
+        },
+        {
+            "property_id": 828239,
+            "property_name": "内存扩展容量",
+            "required": false,
+            "options": [
+                {
+                    "name": "不支持",
+                    "value": "不支持"
+                },
+                {
+                    "name": "2GB",
+                    "value": "2GB"
+                },
+                {
+                    "name": "4GB",
+                    "value": "4GB"
+                },
+                {
+                    "name": "8GB",
+                    "value": "8GB"
+                },
+                {
+                    "name": "16GB",
+                    "value": "16GB"
+                },
+                {
+                    "name": "32GB",
+                    "value": "32GB"
+                },
+                {
+                    "name": "64GB",
+                    "value": "64GB"
+                },
+                {
+                    "name": "128GB",
+                    "value": "128GB"
+                },
+                {
+                    "name": "256GB",
+                    "value": "256GB"
+                },
+                {
+                    "name": "512GB",
+                    "value": "512GB"
+                }
+            ]
+        },
+        {
+            "property_id": 828240,
+            "property_name": "机身颜色",
+            "required": false
+        },
+        {
+            "property_id": 828241,
+            "property_name": "型号",
+            "required": true,
+            "options": [
+                {
+                    "name": "iPhone 12",
+                    "value": "iPhone 12"
+                },
+                {
+                    "name": "iPhone 12 Pro",
+                    "value": "iPhone 12 Pro"
+                },
+                {
+                    "name": "iPhone 12 Pro Max",
+                    "value": "iPhone 12 Pro Max"
+                },
+                {
+                    "name": "iPhone 12 mini",
+                    "value": "iPhone 12 mini"
+                },
+                {
+                    "name": "iPhone 11",
+                    "value": "iPhone 11"
+                },
+                {
+                    "name": "iPhone 11 Pro",
+                    "value": "iPhone 11 Pro"
+                },
+                {
+                    "name": "iPhone 11 Pro Max",
+                    "value": "iPhone 11 Pro Max"
+                },
+                {
+                    "name": "iPhone Xs",
+                    "value": "iPhone Xs"
+                },
+                {
+                    "name": "iPhone Xs Max",
+                    "value": "iPhone Xs Max"
+                },
+                {
+                    "name": "iPhone X",
+                    "value": "iPhone X"
+                },
+                {
+                    "name": "iPhone XR",
+                    "value": "iPhone XR"
+                },
+                {
+                    "name": "iPhone SE",
+                    "value": "iPhone SE"
+                },
+                {
+                    "name": "华为 Mate 40",
+                    "value": "华为 Mate 40"
+                },
+                {
+                    "name": "华为 Mate 40 Pro",
+                    "value": "华为 Mate 40 Pro"
+                },
+                {
+                    "name": "华为 Mate 40 Pro+",
+                    "value": "华为 Mate 40 Pro+"
+                },
+                {
+                    "name": "华为 Mate 40 RS保时捷设计",
+                    "value": "华为 Mate 40 RS保时捷设计"
+                },
+                {
+                    "name": "华为 Mate 40E",
+                    "value": "华为 Mate 40E"
+                },
+                {
+                    "name": "华为 nova 8",
+                    "value": "华为 nova 8"
+                },
+                {
+                    "name": "华为 nova 8 Pro",
+                    "value": "华为 nova 8 Pro"
+                },
+                {
+                    "name": "华为 nova 8 SE",
+                    "value": "华为 nova 8 SE"
+                },
+                {
+                    "name": "华为 Mate X2",
+                    "value": "华为 Mate X2"
+                },
+                {
+                    "name": "华为 P40",
+                    "value": "华为 P40"
+                },
+                {
+                    "name": "华为 P40 Pro",
+                    "value": "华为 P40 Pro"
+                },
+                {
+                    "name": "华为 P40 Pro+",
+                    "value": "华为 P40 Pro+"
+                },
+                {
+                    "name": "华为 畅享7",
+                    "value": "华为 畅享7"
+                },
+                {
+                    "name": "华为 畅享9s",
+                    "value": "华为 畅享9s"
+                },
+                {
+                    "name": "华为 畅享Z",
+                    "value": "华为 畅享Z"
+                },
+                {
+                    "name": "华为 畅享20 Plus",
+                    "value": "华为 畅享20 Plus"
+                },
+                {
+                    "name": "华为 畅享20",
+                    "value": "华为 畅享20"
+                },
+                {
+                    "name": "华为 nova 7",
+                    "value": "华为 nova 7"
+                },
+                {
+                    "name": "华为 nova 7 Pro",
+                    "value": "华为 nova 7 Pro"
+                },
+                {
+                    "name": "华为 nova 7 SE",
+                    "value": "华为 nova 7 SE"
+                },
+                {
+                    "name": "vivo S9e",
+                    "value": "vivo S9e"
+                },
+                {
+                    "name": "vivo S9 ",
+                    "value": "vivo S9 "
+                },
+                {
+                    "name": "vivo Y30g",
+                    "value": "vivo Y30g"
+                },
+                {
+                    "name": "vivo Y31s标准版",
+                    "value": "vivo Y31s标准版"
+                },
+                {
+                    "name": "vivo Y31S",
+                    "value": "vivo Y31S"
+                },
+                {
+                    "name": "vivo S7t",
+                    "value": "vivo S7t"
+                },
+                {
+                    "name": "vivo Y3s ",
+                    "value": "vivo Y3s "
+                },
+                {
+                    "name": "vivo Y51s",
+                    "value": "vivo Y51s"
+                },
+                {
+                    "name": "vivo Y73s",
+                    "value": "vivo Y73s"
+                },
+                {
+                    "name": "vivo Y52s",
+                    "value": "vivo Y52s"
+                },
+                {
+                    "name": "vivo X60 ",
+                    "value": "vivo X60 "
+                },
+                {
+                    "name": "vivo X60Pro ",
+                    "value": "vivo X60Pro "
+                },
+                {
+                    "name": "vivo X60Pro+",
+                    "value": "vivo X60Pro+"
+                },
+                {
+                    "name": "vivo S7e活力版",
+                    "value": "vivo S7e活力版"
+                },
+                {
+                    "name": "荣耀V40轻奢版",
+                    "value": "荣耀V40轻奢版"
+                },
+                {
+                    "name": "荣耀V40 ",
+                    "value": "荣耀V40 "
+                },
+                {
+                    "name": "荣耀X10",
+                    "value": "荣耀X10"
+                },
+                {
+                    "name": "荣耀 Play4T Pro",
+                    "value": "荣耀 Play4T Pro"
+                },
+                {
+                    "name": "荣耀30",
+                    "value": "荣耀30"
+                },
+                {
+                    "name": "荣耀30 Pro",
+                    "value": "荣耀30 Pro"
+                },
+                {
+                    "name": "荣耀 30Pro+",
+                    "value": "荣耀 30Pro+"
+                },
+                {
+                    "name": "荣耀 X10 Max",
+                    "value": "荣耀 X10 Max"
+                },
+                {
+                    "name": "荣耀20青春版",
+                    "value": "荣耀20青春版"
+                },
+                {
+                    "name": "荣耀30青春版",
+                    "value": "荣耀30青春版"
+                },
+                {
+                    "name": "荣耀畅玩9A",
+                    "value": "荣耀畅玩9A"
+                },
+                {
+                    "name": "荣耀Play4T",
+                    "value": "荣耀Play4T"
+                },
+                {
+                    "name": "iQOO Z3",
+                    "value": "iQOO Z3"
+                },
+                {
+                    "name": "iQOO U3x",
+                    "value": "iQOO U3x"
+                },
+                {
+                    "name": "iQOO Neo5",
+                    "value": "iQOO Neo5"
+                },
+                {
+                    "name": "iQOO5 ",
+                    "value": "iQOO5 "
+                },
+                {
+                    "name": "iQOO Z1x ",
+                    "value": "iQOO Z1x "
+                },
+                {
+                    "name": "iQOO 5 Pro",
+                    "value": "iQOO 5 Pro"
+                },
+                {
+                    "name": "iQOO U1x ",
+                    "value": "iQOO U1x "
+                },
+                {
+                    "name": "iQOO 7 ",
+                    "value": "iQOO 7 "
+                },
+                {
+                    "name": "iQOO U3",
+                    "value": "iQOO U3"
+                },
+                {
+                    "name": "iQOO Neo3",
+                    "value": "iQOO Neo3"
+                },
+                {
+                    "name": "一加8T",
+                    "value": "一加8T"
+                },
+                {
+                    "name": "一加8 Pro",
+                    "value": "一加8 Pro"
+                },
+                {
+                    "name": "一加8",
+                    "value": "一加8"
+                },
+                {
+                    "name": "一加9",
+                    "value": "一加9"
+                },
+                {
+                    "name": "一加9 Pro",
+                    "value": "一加9 Pro"
+                },
+                {
+                    "name": "OPPO Findx3Pro",
+                    "value": "OPPO Findx3Pro"
+                },
+                {
+                    "name": "OPPO Findx3",
+                    "value": "OPPO Findx3"
+                },
+                {
+                    "name": "OPPO Reno5",
+                    "value": "OPPO Reno5"
+                },
+                {
+                    "name": "OPPO Reno4 Se",
+                    "value": "OPPO Reno4 Se"
+                },
+                {
+                    "name": "OPPO K7",
+                    "value": "OPPO K7"
+                },
+                {
+                    "name": "OPPO A93",
+                    "value": "OPPO A93"
+                },
+                {
+                    "name": "OPPO Reno5 Pro",
+                    "value": "OPPO Reno5 Pro"
+                },
+                {
+                    "name": "OPPO Reno5 Pro+",
+                    "value": "OPPO Reno5 Pro+"
+                },
+                {
+                    "name": "OPPO Reno5 K ",
+                    "value": "OPPO Reno5 K "
+                },
+                {
+                    "name": "OPPO K7x",
+                    "value": "OPPO K7x"
+                },
+                {
+                    "name": "OPPO Ace2",
+                    "value": "OPPO Ace2"
+                },
+                {
+                    "name": "OPPO A72",
+                    "value": "OPPO A72"
+                },
+                {
+                    "name": "OPPO Findx2",
+                    "value": "OPPO Findx2"
+                },
+                {
+                    "name": "OPPO A32",
+                    "value": "OPPO A32"
+                },
+                {
+                    "name": "OPPO A53",
+                    "value": "OPPO A53"
+                },
+                {
+                    "name": "OPPO A8",
+                    "value": "OPPO A8"
+                },
+                {
+                    "name": "OPPO A55",
+                    "value": "OPPO A55"
+                },
+                {
+                    "name": "OPPO A93s",
+                    "value": "OPPO A93s"
+                },
+                {
+                    "name": "OPPO A93",
+                    "value": "OPPO A93"
+                },
+                {
+                    "name": "OPPO A35",
+                    "value": "OPPO A35"
+                },
+                {
+                    "name": "Realme GT",
+                    "value": "Realme GT"
+                },
+                {
+                    "name": "Realme X7 Pro",
+                    "value": "Realme X7 Pro"
+                },
+                {
+                    "name": "Realme Q2 Pro",
+                    "value": "Realme Q2 Pro"
+                },
+                {
+                    "name": "Realme GT Neo",
+                    "value": "Realme GT Neo"
+                },
+                {
+                    "name": "Realme X50 Pro",
+                    "value": "Realme X50 Pro"
+                },
+                {
+                    "name": "Realme V15",
+                    "value": "Realme V15"
+                },
+                {
+                    "name": "Realme Q2",
+                    "value": "Realme Q2"
+                },
+                {
+                    "name": "Realme X50",
+                    "value": "Realme X50"
+                },
+                {
+                    "name": "Realme Q2i",
+                    "value": "Realme Q2i"
+                },
+                {
+                    "name": "Realme Q2 Pro",
+                    "value": "Realme Q2 Pro"
+                },
+                {
+                    "name": "Realme V11",
+                    "value": "Realme V11"
+                },
+                {
+                    "name": "Realme X7",
+                    "value": "Realme X7"
+                },
+                {
+                    "name": "Realme X7 Pro",
+                    "value": "Realme X7 Pro"
+                },
+                {
+                    "name": "Realme V5",
+                    "value": "Realme V5"
+                },
+                {
+                    "name": "Realme V3",
+                    "value": "Realme V3"
+                },
+                {
+                    "name": "小米11",
+                    "value": "小米11"
+                },
+                {
+                    "name": "小米10青春版",
+                    "value": "小米10青春版"
+                },
+                {
+                    "name": "小米 10S",
+                    "value": "小米 10S"
+                },
+                {
+                    "name": "Redmi 10X",
+                    "value": "Redmi 10X"
+                },
+                {
+                    "name": "Redmi K40",
+                    "value": "Redmi K40"
+                },
+                {
+                    "name": "Redmi K40pro",
+                    "value": "Redmi K40pro"
+                },
+                {
+                    "name": "Redmi Note9 pro",
+                    "value": "Redmi Note9 pro"
+                },
+                {
+                    "name": "Redmi Note9",
+                    "value": "Redmi Note9"
+                },
+                {
+                    "name": "K30至尊纪念版",
+                    "value": "K30至尊纪念版"
+                },
+                {
+                    "name": "Redmi 9A",
+                    "value": "Redmi 9A"
+                },
+                {
+                    "name": "Redmi 9",
+                    "value": "Redmi 9"
+                },
+                {
+                    "name": "Redmi K30",
+                    "value": "Redmi K30"
+                },
+                {
+                    "name": "Redmi Note8 pro",
+                    "value": "Redmi Note8 pro"
+                },
+                {
+                    "name": "Redmi Note8",
+                    "value": "Redmi Note8"
+                },
+                {
+                    "name": "Redmi 8A",
+                    "value": "Redmi 8A"
+                },
+                {
+                    "name": "Redmi 8",
+                    "value": "Redmi 8"
+                },
+                {
+                    "name": "Galaxy S21 Ultra",
+                    "value": "Galaxy S21 Ultra"
+                },
+                {
+                    "name": "Galaxy S21 ",
+                    "value": "Galaxy S21 "
+                },
+                {
+                    "name": "Galaxy S20",
+                    "value": "Galaxy S20"
+                },
+                {
+                    "name": "Galaxy S20 Ultra",
+                    "value": "Galaxy S20 Ultra"
+                },
+                {
+                    "name": "Galaxy Note20 Ultra ",
+                    "value": "Galaxy Note20 Ultra "
+                },
+                {
+                    "name": "Galaxy A71",
+                    "value": "Galaxy A71"
+                },
+                {
+                    "name": "Galaxy Z Flip",
+                    "value": "Galaxy Z Flip"
+                },
+                {
+                    "name": "Galaxy Z Fold2",
+                    "value": "Galaxy Z Fold2"
+                },
+                {
+                    "name": "W21 5G ",
+                    "value": "W21 5G "
+                },
+                {
+                    "name": "W21 5G ",
+                    "value": "W21 5G "
+                },
+                {
+                    "name": "Galaxy Z Fold2 5G ",
+                    "value": "Galaxy Z Fold2 5G "
+                },
+                {
+                    "name": "联想拯救者电竞手机Pro",
+                    "value": "联想拯救者电竞手机Pro"
+                },
+                {
+                    "name": "联想乐檬K12Pro",
+                    "value": "联想乐檬K12Pro"
+                },
+                {
+                    "name": "联想乐檬K12",
+                    "value": "联想乐檬K12"
+                },
+                {
+                    "name": "联想乐檬K12Pro",
+                    "value": "联想乐檬K12Pro"
+                },
+                {
+                    "name": "摩托罗拉 edge s ",
+                    "value": "摩托罗拉 edge s "
+                },
+                {
+                    "name": "努比亚play",
+                    "value": "努比亚play"
+                },
+                {
+                    "name": "努比亚红魔6 Pro",
+                    "value": "努比亚红魔6 Pro"
+                },
+                {
+                    "name": "努比亚红魔6",
+                    "value": "努比亚红魔6"
+                },
+                {
+                    "name": "游戏手机5",
+                    "value": "游戏手机5"
+                },
+                {
+                    "name": "游戏手机3",
+                    "value": "游戏手机3"
+                },
+                {
+                    "name": "游戏手机2",
+                    "value": "游戏手机2"
+                },
+                {
+                    "name": "黑鲨4",
+                    "value": "黑鲨4"
+                },
+                {
+                    "name": "黑鲨4 Pro",
+                    "value": "黑鲨4 Pro"
+                },
+                {
+                    "name": "黑鲨3s",
+                    "value": "黑鲨3s"
+                },
+                {
+                    "name": "黑鲨3 Pro",
+                    "value": "黑鲨3 Pro"
+                },
+                {
+                    "name": "黑鲨3",
+                    "value": "黑鲨3"
+                },
+                {
+                    "name": "魅族17",
+                    "value": "魅族17"
+                },
+                {
+                    "name": "魅族17 Pro",
+                    "value": "魅族17 Pro"
+                },
+                {
+                    "name": "魅族18",
+                    "value": "魅族18"
+                },
+                {
+                    "name": "魅族18 Pro",
+                    "value": "魅族18 Pro"
+                },
+                {
+                    "name": "D19pro Max",
+                    "value": "D19pro Max"
+                },
+                {
+                    "name": "M12Pro",
+                    "value": "M12Pro"
+                },
+                {
+                    "name": "华为 Mate 30E Pro",
+                    "value": "华为 Mate 30E Pro"
+                },
+                {
+                    "name": "华为 畅享20 SE",
+                    "value": "华为 畅享20 SE"
+                },
+                {
+                    "name": "一加9R",
+                    "value": "一加9R"
+                },
+                {
+                    "name": "小米11 Pro",
+                    "value": "小米11 Pro"
+                },
+                {
+                    "name": "小米 MIX FOLD",
+                    "value": "小米 MIX FOLD"
+                },
+                {
+                    "name": "小米11 Ultra",
+                    "value": "小米11 Ultra"
+                },
+                {
+                    "name": "小米11 青春版",
+                    "value": "小米11 青春版"
+                },
+                {
+                    "name": "Redmi K30S 至尊纪念版",
+                    "value": "Redmi K30S 至尊纪念版"
+                },
+                {
+                    "name": "联想拯救者电竞手机2 Pro",
+                    "value": "联想拯救者电竞手机2 Pro"
+                },
+                {
+                    "name": "天语E2",
+                    "value": "天语E2"
+                },
+                {
+                    "name": "天语N1",
+                    "value": "天语N1"
+                },
+                {
+                    "name": "天语N2",
+                    "value": "天语N2"
+                },
+                {
+                    "name": "天语X71",
+                    "value": "天语X71"
+                },
+                {
+                    "name": "天语Q21",
+                    "value": "天语Q21"
+                },
+                {
+                    "name": "天语Q21C",
+                    "value": "天语Q21C"
+                },
+                {
+                    "name": "天语Q31",
+                    "value": "天语Q31"
+                },
+                {
+                    "name": "天语Q31C",
+                    "value": "天语Q31C"
+                },
+                {
+                    "name": "天语Q7",
+                    "value": "天语Q7"
+                },
+                {
+                    "name": "天语Q7C",
+                    "value": "天语Q7C"
+                },
+                {
+                    "name": "天语T15",
+                    "value": "天语T15"
+                },
+                {
+                    "name": "天语S8",
+                    "value": "天语S8"
+                },
+                {
+                    "name": "天语S6",
+                    "value": "天语S6"
+                },
+                {
+                    "name": "天语Q8",
+                    "value": "天语Q8"
+                },
+                {
+                    "name": "天语N1S",
+                    "value": "天语N1S"
+                },
+                {
+                    "name": "天语N1 4G",
+                    "value": "天语N1 4G"
+                },
+                {
+                    "name": "天语K10",
+                    "value": "天语K10"
+                },
+                {
+                    "name": "天语S9 Pro",
+                    "value": "天语S9 Pro"
+                },
+                {
+                    "name": "天语T15 Pro",
+                    "value": "天语T15 Pro"
+                },
+                {
+                    "name": "天语T9",
+                    "value": "天语T9"
+                },
+                {
+                    "name": "天语T9S",
+                    "value": "天语T9S"
+                },
+                {
+                    "name": "天语L660+",
+                    "value": "天语L660+"
+                },
+                {
+                    "name": "天语V9",
+                    "value": "天语V9"
+                },
+                {
+                    "name": "天语V9C",
+                    "value": "天语V9C"
+                },
+                {
+                    "name": "天语V9S",
+                    "value": "天语V9S"
+                },
+                {
+                    "name": "天语T11",
+                    "value": "天语T11"
+                },
+                {
+                    "name": "天语V3",
+                    "value": "天语V3"
+                },
+                {
+                    "name": "天语V3S",
+                    "value": "天语V3S"
+                },
+                {
+                    "name": "天语V1",
+                    "value": "天语V1"
+                },
+                {
+                    "name": "X60 pro",
+                    "value": "X60 pro"
+                },
+                {
+                    "name": "M40",
+                    "value": "M40"
+                },
+                {
+                    "name": "F30 PRO",
+                    "value": "F30 PRO"
+                },
+                {
+                    "name": "Mate 40 Pro",
+                    "value": "Mate 40 Pro"
+                },
+                {
+                    "name": "X50pro",
+                    "value": "X50pro"
+                },
+                {
+                    "name": "OPPO A52",
+                    "value": "OPPO A52"
+                },
+                {
+                    "name": "OPPO Reno4 Pro",
+                    "value": "OPPO Reno4 Pro"
+                },
+                {
+                    "name": "OPPO A92s",
+                    "value": "OPPO A92s"
+                },
+                {
+                    "name": "OPPO A95",
+                    "value": "OPPO A95"
+                }
+            ]
+        },
+        {
+            "property_id": 828242,
+            "property_name": "摄像头类型",
+            "required": false,
+            "options": [
+                {
+                    "name": "双摄像头(前后)",
+                    "value": "双摄像头(前后)"
+                },
+                {
+                    "name": "前置",
+                    "value": "前置"
+                },
+                {
+                    "name": "双摄像头（后双）",
+                    "value": "双摄像头（后双）"
+                },
+                {
+                    "name": "三摄像头",
+                    "value": "三摄像头"
+                },
+                {
+                    "name": "单摄像头",
+                    "value": "单摄像头"
+                },
+                {
+                    "name": "无摄像头",
+                    "value": "无摄像头"
+                },
+                {
+                    "name": "双摄像头（前后）",
+                    "value": "双摄像头（前后）"
+                },
+                {
+                    "name": "不详",
+                    "value": "不详"
+                },
+                {
+                    "name": "三摄像头（后双）",
+                    "value": "三摄像头（后双）"
+                },
+                {
+                    "name": "四摄像头（前双后双）",
+                    "value": "四摄像头（前双后双）"
+                },
+                {
+                    "name": "四摄像头（前一后三）",
+                    "value": "四摄像头（前一后三）"
+                },
+                {
+                    "name": "后置五摄像头",
+                    "value": "后置五摄像头"
+                },
+                {
+                    "name": "后置七摄像头",
+                    "value": "后置七摄像头"
+                },
+                {
+                    "name": "后置四摄像头",
+                    "value": "后置四摄像头"
+                },
+                {
+                    "name": "四摄像头（后三） ",
+                    "value": "四摄像头（后三） "
+                },
+                {
+                    "name": "五摄像头（后四） ",
+                    "value": "五摄像头（后四） "
+                },
+                {
+                    "name": "四摄像头（前双+后双） ",
+                    "value": "四摄像头（前双+后双） "
+                },
+                {
+                    "name": "三摄像头（前双） ",
+                    "value": "三摄像头（前双） "
+                },
+                {
+                    "name": "四摄像头 ",
+                    "value": "四摄像头 "
+                },
+                {
+                    "name": "六摄像头（后四） ",
+                    "value": "六摄像头（后四） "
+                },
+                {
+                    "name": "五摄像头（后三） ",
+                    "value": "五摄像头（后三） "
+                },
+                {
+                    "name": "双摄像头 ",
+                    "value": "双摄像头 "
+                },
+                {
+                    "name": "六摄像头（前双+后四） ",
+                    "value": "六摄像头（前双+后四） "
+                },
+                {
+                    "name": "单摄像头（后） ",
+                    "value": "单摄像头（后） "
+                },
+                {
+                    "name": "六摄像头（后五） ",
+                    "value": "六摄像头（后五） "
+                },
+                {
+                    "name": "六摄像头（前三+后三） ",
+                    "value": "六摄像头（前三+后三） "
+                },
+                {
+                    "name": "五摄像头（前双+后三） ",
+                    "value": "五摄像头（前双+后三） "
+                },
+                {
+                    "name": "五摄像头（前二后三） ",
+                    "value": "五摄像头（前二后三） "
+                },
+                {
+                    "name": "三摄像头（后三） ",
+                    "value": "三摄像头（后三） "
+                },
+                {
+                    "name": "七摄像头（后五） ",
+                    "value": "七摄像头（后五） "
+                },
+                {
+                    "name": "三摄像头（后二） ",
+                    "value": "三摄像头（后二） "
+                },
+                {
+                    "name": "单摄像头（后置） ",
+                    "value": "单摄像头（后置） "
+                },
+                {
+                    "name": "五摄像头（后三+前双） ",
+                    "value": "五摄像头（后三+前双） "
+                },
+                {
+                    "name": "五摄像头（前三+后双） ",
+                    "value": "五摄像头（前三+后双） "
+                },
+                {
+                    "name": "双摄像头（前双） ",
+                    "value": "双摄像头（前双） "
+                },
+                {
+                    "name": "双摄像头（旋转） ",
+                    "value": "双摄像头（旋转） "
+                },
+                {
+                    "name": "两摄像头（后一） ",
+                    "value": "两摄像头（后一） "
+                },
+                {
+                    "name": "前置摄像头+后置摄像头 ",
+                    "value": "前置摄像头+后置摄像头 "
+                },
+                {
+                    "name": "三摄像头（升降式可旋转三摄） ",
+                    "value": "三摄像头（升降式可旋转三摄） "
+                },
+                {
+                    "name": "三摄像头（前摄） ",
+                    "value": "三摄像头（前摄） "
+                },
+                {
+                    "name": "单摄像头（前后翻转）  ",
+                    "value": "单摄像头（前后翻转）  "
+                },
+                {
+                    "name": "双摄像头（180度翻转相机） ",
+                    "value": "双摄像头（180度翻转相机） "
+                },
+                {
+                    "name": "四摄像头（后双）",
+                    "value": "四摄像头（后双）"
+                }
+            ]
+        },
+        {
+            "property_id": 828243,
+            "property_name": "套餐类型",
+            "required": false
+        },
+        {
+            "property_id": 828244,
+            "property_name": "CPU频率",
+            "required": false,
+            "options": [
+                {
+                    "name": "1.3 GHz",
+                    "value": "1.3 GHz"
+                },
+                {
+                    "name": "1.4 GHz",
+                    "value": "1.4 GHz"
+                },
+                {
+                    "name": "1.5 GHz",
+                    "value": "1.5 GHz"
+                },
+                {
+                    "name": "1.8 GHz",
+                    "value": "1.8 GHz"
+                },
+                {
+                    "name": "1.95 GHz",
+                    "value": "1.95 GHz"
+                },
+                {
+                    "name": "2.0 GHz",
+                    "value": "2.0 GHz"
+                },
+                {
+                    "name": "2.2 GHz",
+                    "value": "2.2 GHz"
+                },
+                {
+                    "name": "2.36 GHz",
+                    "value": "2.36 GHz"
+                },
+                {
+                    "name": "2.3 GHz",
+                    "value": "2.3 GHz"
+                },
+                {
+                    "name": "2.45 GHz",
+                    "value": "2.45 GHz"
+                },
+                {
+                    "name": "2.4 GHz",
+                    "value": "2.4 GHz"
+                },
+                {
+                    "name": "2.5 GHz",
+                    "value": "2.5 GHz"
+                },
+                {
+                    "name": "2.6 GHz",
+                    "value": "2.6 GHz"
+                },
+                {
+                    "name": "2.84 GHz",
+                    "value": "2.84 GHz"
+                },
+                {
+                    "name": "2.8 GHz",
+                    "value": "2.8 GHz"
+                },
+                {
+                    "name": "4*Cortex A73 2.2 GHz + 4*Cortex A53 1.7 GHz",
+                    "value": "4*Cortex A73 2.2 GHz + 4*Cortex A53 1.7 GHz"
+                },
+                {
+                    "name": "4*Cortex A53 2.36 GHz + 4*Cortex-A53 1.7 GHz",
+                    "value": "4*Cortex A53 2.36 GHz + 4*Cortex-A53 1.7 GHz"
+                },
+                {
+                    "name": "4*Cortex A73 2.4 GHz + 4*Cortex A53 1.8 GHz",
+                    "value": "4*Cortex A73 2.4 GHz + 4*Cortex A53 1.8 GHz"
+                },
+                {
+                    "name": "4*Cortex A73 2.36 GHz + 4*Cortex A53 1.8 GHz",
+                    "value": "4*Cortex A73 2.36 GHz + 4*Cortex A53 1.8 GHz"
+                },
+                {
+                    "name": "2*Cortex A76 2.6 GHz+ 2*Cortex A76 1.92 GHz + 4*Cortex A55 1.8 GHz",
+                    "value": "2*Cortex A76 2.6 GHz+ 2*Cortex A76 1.92 GHz + 4*Cortex A55 1.8 GHz"
+                },
+                {
+                    "name": "其它",
+                    "value": "其它"
+                },
+                {
+                    "name": "2.35 GHz",
+                    "value": "2.35 GHz"
+                },
+                {
+                    "name": "2.1 GHz",
+                    "value": "2.1 GHz"
+                },
+                {
+                    "name": "2.96 GHz",
+                    "value": "2.96 GHz"
+                },
+                {
+                    "name": "2*Cortex A76 2.86 GHz + 2*Cortex A76 2.09 GHz + 4*Cortex A55 1.86 GHz",
+                    "value": "2*Cortex A76 2.86 GHz + 2*Cortex A76 2.09 GHz + 4*Cortex A55 1.86 GHz"
+                }
+            ]
+        },
+        {
+            "property_id": 828245,
+            "property_name": "机身厚度",
+            "required": false
+        },
+        {
+            "property_id": 828246,
+            "property_name": "屏幕尺寸",
+            "required": false
+        },
+        {
+            "property_id": 828247,
+            "property_name": "屏幕分辨率",
+            "required": false
+        },
+        {
+            "property_id": 828248,
+            "property_name": "前置摄像头像素",
+            "required": false,
+            "options": [
+                {
+                    "name": "1200万+500万像素",
+                    "value": "1200万+500万像素"
+                },
+                {
+                    "name": "1200万像素",
+                    "value": "1200万像素"
+                },
+                {
+                    "name": "1300万+200万像素",
+                    "value": "1300万+200万像素"
+                },
+                {
+                    "name": "1300万像素",
+                    "value": "1300万像素"
+                },
+                {
+                    "name": "1600万+200万像素",
+                    "value": "1600万+200万像素"
+                },
+                {
+                    "name": "1600万+200万像素+200万像素",
+                    "value": "1600万+200万像素+200万像素"
+                },
+                {
+                    "name": "1600万+500万像素",
+                    "value": "1600万+500万像素"
+                },
+                {
+                    "name": "1600万+800万像素",
+                    "value": "1600万+800万像素"
+                },
+                {
+                    "name": "1600万像素",
+                    "value": "1600万像素"
+                },
+                {
+                    "name": "2000万+200万像素",
+                    "value": "2000万+200万像素"
+                },
+                {
+                    "name": "2000万像素",
+                    "value": "2000万像素"
+                },
+                {
+                    "name": "200万像素",
+                    "value": "200万像素"
+                },
+                {
+                    "name": "2400万+200万像素",
+                    "value": "2400万+200万像素"
+                },
+                {
+                    "name": "2400万像素",
+                    "value": "2400万像素"
+                },
+                {
+                    "name": "2480万像素",
+                    "value": "2480万像素"
+                },
+                {
+                    "name": "2500万像素",
+                    "value": "2500万像素"
+                },
+                {
+                    "name": "500万像素",
+                    "value": "500万像素"
+                },
+                {
+                    "name": "700万像素",
+                    "value": "700万像素"
+                },
+                {
+                    "name": "800万像素",
+                    "value": "800万像素"
+                },
+                {
+                    "name": "120万像素",
+                    "value": "120万像素"
+                },
+                {
+                    "name": "1200万+2000万+800万像素",
+                    "value": "1200万+2000万+800万像素"
+                },
+                {
+                    "name": "1000万像素",
+                    "value": "1000万像素"
+                },
+                {
+                    "name": "1000万+800万像素",
+                    "value": "1000万+800万像素"
+                },
+                {
+                    "name": "2480万像素",
+                    "value": "2480万像素"
+                },
+                {
+                    "name": "3200万像素",
+                    "value": "3200万像素"
+                }
+            ]
+        },
+        {
+            "property_id": 828249,
+            "property_name": "充电接口类型",
+            "required": false,
+            "options": [
+                {
+                    "name": "Mini USB",
+                    "value": "Mini USB"
+                },
+                {
+                    "name": "TYPE-C",
+                    "value": "TYPE-C"
+                },
+                {
+                    "name": "Lightning",
+                    "value": "Lightning"
+                },
+                {
+                    "name": "无",
+                    "value": "无"
+                },
+                {
+                    "name": "MIC 5PIN",
+                    "value": "MIC 5PIN"
+                },
+                {
+                    "name": "Micro USB",
+                    "value": "Micro USB"
+                },
+                {
+                    "name": "以官网为准",
+                    "value": "以官网为准"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                }
+            ]
+        },
+        {
+            "property_id": 828250,
+            "property_name": "存储容量",
+            "required": false,
+            "options": [
+                {
+                    "name": "32GB",
+                    "value": "32GB"
+                },
+                {
+                    "name": "64GB",
+                    "value": "64GB"
+                },
+                {
+                    "name": "128GB",
+                    "value": "128GB"
+                },
+                {
+                    "name": "256GB",
+                    "value": "256GB"
+                },
+                {
+                    "name": "512GB",
+                    "value": "512GB"
+                },
+                {
+                    "name": "1TB",
+                    "value": "1TB"
+                },
+                {
+                    "name": "4GB+32GB",
+                    "value": "4GB+32GB"
+                },
+                {
+                    "name": "4GB+64GB",
+                    "value": "4GB+64GB"
+                },
+                {
+                    "name": "4GB+128GB",
+                    "value": "4GB+128GB"
+                },
+                {
+                    "name": "6GB+64GB",
+                    "value": "6GB+64GB"
+                },
+                {
+                    "name": "6GB+128GB",
+                    "value": "6GB+128GB"
+                },
+                {
+                    "name": "8GB+128GB",
+                    "value": "8GB+128GB"
+                },
+                {
+                    "name": "12GB+128GB",
+                    "value": "12GB+128GB"
+                },
+                {
+                    "name": "8GB+256GB",
+                    "value": "8GB+256GB"
+                },
+                {
+                    "name": "12GB+256GB",
+                    "value": "12GB+256GB"
+                },
+                {
+                    "name": "12GB+512GB",
+                    "value": "12GB+512GB"
+                },
+                {
+                    "name": "16GB+512GB",
+                    "value": "16GB+512GB"
+                }
+            ]
+        },
+        {
+            "property_id": 828251,
+            "property_name": "CCC证书编号",
+            "required": true
+        },
+        {
+            "property_id": 828252,
+            "property_name": "是否支持无线充电",
+            "required": false,
+            "options": [
+                {
+                    "name": "是",
+                    "value": "是"
+                },
+                {
+                    "name": "否",
+                    "value": "否"
+                }
+            ]
+        },
+        {
+            "property_id": 828253,
+            "property_name": "指纹识别方式",
+            "required": false,
+            "options": [
+                {
+                    "name": "屏下指纹",
+                    "value": "屏下指纹"
+                },
+                {
+                    "name": "侧边指纹",
+                    "value": "侧边指纹"
+                },
+                {
+                    "name": "背部指纹",
+                    "value": "背部指纹"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                },
+                {
+                    "name": "无",
+                    "value": "无"
+                },
+                {
+                    "name": "前置指纹",
+                    "value": "前置指纹"
+                },
+                {
+                    "name": "屏幕光学指纹",
+                    "value": "屏幕光学指纹"
+                }
+            ]
+        },
+        {
+            "property_id": 828254,
+            "property_name": "网络模式",
+            "required": false,
+            "options": [
+                {
+                    "name": "单卡双模",
+                    "value": "单卡双模"
+                },
+                {
+                    "name": "双卡双模",
+                    "value": "双卡双模"
+                },
+                {
+                    "name": "双卡多模",
+                    "value": "双卡多模"
+                },
+                {
+                    "name": "单卡单模",
+                    "value": "单卡单模"
+                },
+                {
+                    "name": "单卡多模",
+                    "value": "单卡多模"
+                },
+                {
+                    "name": "双卡单模",
+                    "value": "双卡单模"
+                },
+                {
+                    "name": "双卡双待",
+                    "value": "双卡双待"
+                },
+                {
+                    "name": "不详",
+                    "value": "不详"
+                }
+            ]
+        },
+        {
+            "property_id": 828255,
+            "property_name": "电信设备进网许可证编号",
+            "required": false
+        },
+        {
+            "property_id": 828256,
+            "property_name": "机身重量",
+            "required": false
+        },
+        {
+            "property_id": 828257,
+            "property_name": "后置摄像头像素",
+            "required": false,
+            "options": [
+                {
+                    "name": "1亿像素",
+                    "value": "1亿像素"
+                },
+                {
+                    "name": "1200万+800万后置AF摄像头",
+                    "value": "1200万+800万后置AF摄像头"
+                },
+                {
+                    "name": "800万像素",
+                    "value": "800万像素"
+                },
+                {
+                    "name": "1300万像素",
+                    "value": "1300万像素"
+                },
+                {
+                    "name": "双1300万",
+                    "value": "双1300万"
+                },
+                {
+                    "name": "双1200万",
+                    "value": "双1200万"
+                },
+                {
+                    "name": "1278万",
+                    "value": "1278万"
+                },
+                {
+                    "name": "2000万",
+                    "value": "2000万"
+                },
+                {
+                    "name": "2070万",
+                    "value": "2070万"
+                },
+                {
+                    "name": "2020万",
+                    "value": "2020万"
+                },
+                {
+                    "name": "1310万",
+                    "value": "1310万"
+                },
+                {
+                    "name": "1600万",
+                    "value": "1600万"
+                },
+                {
+                    "name": "8万",
+                    "value": "8万"
+                },
+                {
+                    "name": "800-1300万",
+                    "value": "800-1300万"
+                },
+                {
+                    "name": "800-1600万",
+                    "value": "800-1600万"
+                },
+                {
+                    "name": "670万",
+                    "value": "670万"
+                },
+                {
+                    "name": "870万",
+                    "value": "870万"
+                },
+                {
+                    "name": "4100万",
+                    "value": "4100万"
+                },
+                {
+                    "name": "1300万",
+                    "value": "1300万"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                },
+                {
+                    "name": "1400万",
+                    "value": "1400万"
+                },
+                {
+                    "name": "1210万",
+                    "value": "1210万"
+                },
+                {
+                    "name": "800万",
+                    "value": "800万"
+                },
+                {
+                    "name": "700万",
+                    "value": "700万"
+                },
+                {
+                    "name": "600万",
+                    "value": "600万"
+                },
+                {
+                    "name": "500万",
+                    "value": "500万"
+                },
+                {
+                    "name": "400万",
+                    "value": "400万"
+                },
+                {
+                    "name": "320万",
+                    "value": "320万"
+                },
+                {
+                    "name": "300万",
+                    "value": "300万"
+                },
+                {
+                    "name": "200万",
+                    "value": "200万"
+                },
+                {
+                    "name": "130万",
+                    "value": "130万"
+                },
+                {
+                    "name": "100万",
+                    "value": "100万"
+                },
+                {
+                    "name": "50万",
+                    "value": "50万"
+                },
+                {
+                    "name": "30万",
+                    "value": "30万"
+                },
+                {
+                    "name": "10万",
+                    "value": "10万"
+                },
+                {
+                    "name": "无摄像头",
+                    "value": "无摄像头"
+                },
+                {
+                    "name": "810万",
+                    "value": "810万"
+                },
+                {
+                    "name": "310万",
+                    "value": "310万"
+                },
+                {
+                    "name": "1900万",
+                    "value": "1900万"
+                },
+                {
+                    "name": "1800万",
+                    "value": "1800万"
+                },
+                {
+                    "name": "1230万",
+                    "value": "1230万"
+                },
+                {
+                    "name": "1200万",
+                    "value": "1200万"
+                },
+                {
+                    "name": "2300万",
+                    "value": "2300万"
+                },
+                {
+                    "name": "2100万",
+                    "value": "2100万"
+                },
+                {
+                    "name": "1000万",
+                    "value": "1000万"
+                },
+                {
+                    "name": "4800万+500万",
+                    "value": "4800万+500万"
+                },
+                {
+                    "name": "4000万",
+                    "value": "4000万"
+                },
+                {
+                    "name": "2400万",
+                    "value": "2400万"
+                },
+                {
+                    "name": "1600万像素",
+                    "value": "1600万像素"
+                },
+                {
+                    "name": "4800万",
+                    "value": "4800万"
+                },
+                {
+                    "name": "其他/others",
+                    "value": "其他/others"
+                },
+                {
+                    "name": "1200万+1200万像素",
+                    "value": "1200万+1200万像素"
+                },
+                {
+                    "name": "1200万+1300万像素",
+                    "value": "1200万+1300万像素"
+                },
+                {
+                    "name": "1200万+1600万+800万像素",
+                    "value": "1200万+1600万+800万像素"
+                },
+                {
+                    "name": "1200万+2000万像素",
+                    "value": "1200万+2000万像素"
+                },
+                {
+                    "name": "1200万+200万像素",
+                    "value": "1200万+200万像素"
+                },
+                {
+                    "name": "1200万+500万像素",
+                    "value": "1200万+500万像素"
+                },
+                {
+                    "name": "1200万+800万像素",
+                    "value": "1200万+800万像素"
+                },
+                {
+                    "name": "1200万像素",
+                    "value": "1200万像素"
+                },
+                {
+                    "name": "1300万+1300万像素",
+                    "value": "1300万+1300万像素"
+                },
+                {
+                    "name": "1300万+200万像素",
+                    "value": "1300万+200万像素"
+                },
+                {
+                    "name": "1300万+30万像素",
+                    "value": "1300万+30万像素"
+                },
+                {
+                    "name": "1300万像素",
+                    "value": "1300万像素"
+                },
+                {
+                    "name": "1600万+200万像素",
+                    "value": "1600万+200万像素"
+                },
+                {
+                    "name": "1600万+2400万+1600万像素",
+                    "value": "1600万+2400万+1600万像素"
+                },
+                {
+                    "name": "1600万+500万像素",
+                    "value": "1600万+500万像素"
+                },
+                {
+                    "name": "1600万+800万像素",
+                    "value": "1600万+800万像素"
+                },
+                {
+                    "name": "1600万像素",
+                    "value": "1600万像素"
+                },
+                {
+                    "name": "2000万+1600万+200万像素",
+                    "value": "2000万+1600万+200万像素"
+                },
+                {
+                    "name": "2000万+1600万像素",
+                    "value": "2000万+1600万像素"
+                },
+                {
+                    "name": "2000万+200万像素",
+                    "value": "2000万+200万像素"
+                },
+                {
+                    "name": "200万像素",
+                    "value": "200万像素"
+                },
+                {
+                    "name": "2100万像素",
+                    "value": "2100万像素"
+                },
+                {
+                    "name": "2400万+1000万+800万+500万像素",
+                    "value": "2400万+1000万+800万+500万像素"
+                },
+                {
+                    "name": "2400万+1600万像素",
+                    "value": "2400万+1600万像素"
+                },
+                {
+                    "name": "4000万+2000万+800万像素",
+                    "value": "4000万+2000万+800万像素"
+                },
+                {
+                    "name": "4800万+1600万+200万像素",
+                    "value": "4800万+1600万+200万像素"
+                },
+                {
+                    "name": "500万像素",
+                    "value": "500万像素"
+                },
+                {
+                    "name": "800万+200万像素",
+                    "value": "800万+200万像素"
+                },
+                {
+                    "name": "800万像素",
+                    "value": "800万像素"
+                },
+                {
+                    "name": "4800万像素",
+                    "value": "4800万像素"
+                },
+                {
+                    "name": "2400万像素",
+                    "value": "2400万像素"
+                },
+                {
+                    "name": "1600万+800万+500万像素",
+                    "value": "1600万+800万+500万像素"
+                },
+                {
+                    "name": "4800万+500万像素",
+                    "value": "4800万+500万像素"
+                },
+                {
+                    "name": "1200万+1300万+200万像素",
+                    "value": "1200万+1300万+200万像素"
+                },
+                {
+                    "name": "1200万+1200万+1200万+1200万+1200万像素",
+                    "value": "1200万+1200万+1200万+1200万+1200万像素"
+                },
+                {
+                    "name": "1600万+1200万像素",
+                    "value": "1600万+1200万像素"
+                },
+                {
+                    "name": "1600万+1200万+1200万像素",
+                    "value": "1600万+1200万+1200万像素"
+                },
+                {
+                    "name": "4800万+1600万+1200万像素",
+                    "value": "4800万+1600万+1200万像素"
+                },
+                {
+                    "name": "4800万+1300万+800万像素",
+                    "value": "4800万+1300万+800万像素"
+                },
+                {
+                    "name": "4800万+1200万像素",
+                    "value": "4800万+1200万像素"
+                },
+                {
+                    "name": "4800万+1300万+500万像素",
+                    "value": "4800万+1300万+500万像素"
+                },
+                {
+                    "name": "2400万+1600万+200万像素",
+                    "value": "2400万+1600万+200万像素"
+                },
+                {
+                    "name": "1200万+800万+500万像素",
+                    "value": "1200万+800万+500万像素"
+                },
+                {
+                    "name": "4000万+1600万+800万像素",
+                    "value": "4000万+1600万+800万像素"
+                },
+                {
+                    "name": "2400万+800万+200万像素",
+                    "value": "2400万+800万+200万像素"
+                },
+                {
+                    "name": "4800万+2000万像素",
+                    "value": "4800万+2000万像素"
+                },
+                {
+                    "name": "4800万+1600万+800万+200万像素",
+                    "value": "4800万+1600万+800万+200万像素"
+                },
+                {
+                    "name": "3200万+800万+500万像素",
+                    "value": "3200万+800万+500万像素"
+                },
+                {
+                    "name": " 4800万+1600万+200万+200万像素",
+                    "value": " 4800万+1600万+200万+200万像素"
+                },
+                {
+                    "name": "2400万+800万+200万+200万像素",
+                    "value": "2400万+800万+200万+200万像素"
+                },
+                {
+                    "name": "4800万+800万+200万像素",
+                    "value": "4800万+800万+200万像素"
+                },
+                {
+                    "name": "4800万+1300万像素",
+                    "value": "4800万+1300万像素"
+                },
+                {
+                    "name": "4800万+2000万+800万像素",
+                    "value": "4800万+2000万+800万像素"
+                },
+                {
+                    "name": "4800万+200万像素",
+                    "value": "4800万+200万像素"
+                },
+                {
+                    "name": "4800万+2000万+1600万像素",
+                    "value": "4800万+2000万+1600万像素"
+                },
+                {
+                    "name": "4800万+1300万+200万像素",
+                    "value": "4800万+1300万+200万像素"
+                },
+                {
+                    "name": "4800万+800万+200万+200万像素",
+                    "value": "4800万+800万+200万+200万像素"
+                },
+                {
+                    "name": " 6400万+800万+200万+200万像素",
+                    "value": " 6400万+800万+200万+200万像素"
+                }
+            ]
+        },
+        {
+            "property_id": 828258,
+            "property_name": "是否支持NFC",
+            "required": false,
+            "options": [
+                {
+                    "name": "是",
+                    "value": "是"
+                },
+                {
+                    "name": "否",
+                    "value": "否"
+                }
+            ]
+        },
+        {
+            "property_id": 828259,
+            "property_name": "是否支持红外",
+            "required": false,
+            "options": [
+                {
+                    "name": "是",
+                    "value": "是"
+                },
+                {
+                    "name": "否",
+                    "value": "否"
+                }
+            ]
+        },
+        {
+            "property_id": 828260,
+            "property_name": "电池类型",
+            "required": false,
+            "options": [
+                {
+                    "name": "不可拆卸式电池",
+                    "value": "不可拆卸式电池"
+                },
+                {
+                    "name": "可拆卸式电池",
+                    "value": "可拆卸式电池"
+                }
+            ]
+        },
+        {
+            "property_id": 828261,
+            "property_name": "运行内存RAM",
+            "required": false,
+            "options": [
+                {
+                    "name": "1GB",
+                    "value": "1GB"
+                },
+                {
+                    "name": "2GB",
+                    "value": "2GB"
+                },
+                {
+                    "name": "3GB",
+                    "value": "3GB"
+                },
+                {
+                    "name": "4GB",
+                    "value": "4GB"
+                },
+                {
+                    "name": "6GB",
+                    "value": "6GB"
+                },
+                {
+                    "name": "8GB",
+                    "value": "8GB"
+                },
+                {
+                    "name": "10GB",
+                    "value": "10GB"
+                },
+                {
+                    "name": "12GB",
+                    "value": "12GB"
+                },
+                {
+                    "name": "16GB",
+                    "value": "16GB"
+                },
+                {
+                    "name": "32MB",
+                    "value": "32MB"
+                },
+                {
+                    "name": "64MB",
+                    "value": "64MB"
+                },
+                {
+                    "name": "128MB",
+                    "value": "128MB"
+                },
+                {
+                    "name": "256MB",
+                    "value": "256MB"
+                },
+                {
+                    "name": "512MB",
+                    "value": "512MB"
+                }
+            ]
+        },
+        {
+            "property_id": 828262,
+            "property_name": "机身材质",
+            "required": false,
+            "options": [
+                {
+                    "name": "玻璃后盖",
+                    "value": "玻璃后盖"
+                },
+                {
+                    "name": "塑料后盖",
+                    "value": "塑料后盖"
+                },
+                {
+                    "name": "金属后盖",
+                    "value": "金属后盖"
+                },
+                {
+                    "name": "塑料边框",
+                    "value": "塑料边框"
+                },
+                {
+                    "name": "金属边框",
+                    "value": "金属边框"
+                },
+                {
+                    "name": "不锈钢边框",
+                    "value": "不锈钢边框"
+                },
+                {
+                    "name": "超瓷晶面板",
+                    "value": "超瓷晶面板"
+                },
+                {
+                    "name": "玻璃机身",
+                    "value": "玻璃机身"
+                },
+                {
+                    "name": "铝金属边框",
+                    "value": "铝金属边框"
+                },
+                {
+                    "name": "亚光质感玻璃背板",
+                    "value": "亚光质感玻璃背板"
+                },
+                {
+                    "name": "",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "property_id": 828263,
+            "property_name": "CPU品牌",
+            "required": false,
+            "options": [
+                {
+                    "name": "海思（Hisilicon)",
+                    "value": "海思（Hisilicon)"
+                },
+                {
+                    "name": "联发科（MTK）",
+                    "value": "联发科（MTK）"
+                },
+                {
+                    "name": "苹果(Apple）",
+                    "value": "苹果(Apple）"
+                },
+                {
+                    "name": "其它",
+                    "value": "其它"
+                },
+                {
+                    "name": "三星（Exynos）",
+                    "value": "三星（Exynos）"
+                },
+                {
+                    "name": "高通骁龙（Snapdragon)",
+                    "value": "高通骁龙（Snapdragon)"
+                },
+                {
+                    "name": "展讯",
+                    "value": "展讯"
+                }
+            ]
+        },
+        {
+            "property_id": 828264,
+            "property_name": "CPU核心数",
+            "required": false,
+            "options": [
+                {
+                    "name": "八核",
+                    "value": "八核"
+                },
+                {
+                    "name": "六核",
+                    "value": "六核"
+                },
+                {
+                    "name": "十核",
+                    "value": "十核"
+                },
+                {
+                    "name": "双核",
+                    "value": "双核"
+                }
+            ]
+        }
+    ]
+}

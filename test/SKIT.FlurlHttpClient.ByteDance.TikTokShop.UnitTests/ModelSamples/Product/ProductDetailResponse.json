@@ -1,0 +1,164 @@
+﻿{
+    "data": {
+        "product_id": 3472490447010721067,
+        "product_id_str": "3472490447010721067",
+        "out_product_id": 1617004369,
+        "outer_product_id": "1617004369",
+        "name": "抖店开放平台自动化测试专用，勿动谢谢",
+        "description": "<img src=\"https://sf6-ttcdn-tos.pstatp.com/obj/temai/93addf0cd27c5ac835767731e33aa1dfe02c5854www750-1336\" style=\"width:100%;\">",
+        "market_price": 200,
+        "discount_price": 100,
+        "status": 0,
+        "spec_id": 1695459998447624,
+        "check_status": 2,
+        "mobile": "18888888888",
+        "first_cid": 1305,
+        "second_cid": 1399,
+        "third_cid": 2523,
+        "category_detail": {
+            "first_cid": 20077,
+            "second_cid": 21129,
+            "third_cid": 0,
+            "fourth_cid": 0,
+            "first_cname": "教育培训",
+            "second_cname": "学习卡",
+            "third_cname": "",
+            "fourth_cname": ""
+        },
+        "pay_type": 1,
+        "recommend_remark": "remark...",
+        "extra": "{\"category_detail\":{\"first_cid\":20077,\"first_cname\":\"教育培训\",\"fourth_cid\":0,\"fourth_cname\":\"\",\"is_leaf\":true,\"second_cid\":21129,\"second_cname\":\"学习卡\",\"third_cid\":0,\"third_cname\":\"\"},\"class_quality\":\"https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800,https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\",\"is_publish\":1,\"quality_list\":[{\"quality_key\":\"1\",\"quality_name\":\"进货凭证1\",\"quality_attachments\":[{\"media_type\":1,\"url\":\"https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\"},{\"media_type\":1,\"url\":\"https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\"}]},{\"quality_key\":\"2\",\"quality_name\":\"进货凭证2\",\"quality_attachments\":[{\"media_type\":1,\"url\":\"https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800\"}]}],\"quality_report\":\"\",\"stone\":{\"remark\":\"商家备注\"}}",
+        "create_time": "2021-03-29 15:52:52",
+        "update_time": "2021-03-29T15:52:52+08:00",
+        "pic": [
+            "https://sf6-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800"
+        ],
+        "product_format": "{\"货号\":\"8888\"}",
+        "spec_pics": [
+            {
+                "spec_detail_id": 1695459998447656,
+                "pic": "temai/b637513c50b994f4c89de56a17886caca5d6569awww800-800"
+            }
+        ],
+        "spec_prices": [
+            {
+                "sku_id": 1695459998495774,
+                "out_sku_id": 0,
+                "outer_sku_id": "",
+                "spec_detail_ids": [
+                    1695459998494734,
+                    1695459998494766
+                ],
+                "stock_num": 13,
+                "price": 102,
+                "code": "",
+                "settlement_price": 102,
+                "step_stock_num": 0,
+                "prom_stock_num": 0,
+                "prom_step_stock_num": 0,
+                "spec_detail_id1": 1695459998494734,
+                "spec_detail_id2": 1695459998494766,
+                "spec_detail_id3": 0,
+                "sku_type": 0,
+                "supplier_id": "",
+                "lock_stock_num": 0,
+                "lock_step_stock_num": 0,
+                "stock_num_map": null
+            }
+        ],
+        "specs": [
+            {
+                "id": 1695459998447640,
+                "spec_id": 1695459998447624,
+                "name": "颜色",
+                "pid": 0,
+                "is_leaf": 0,
+                "values": [
+                    {
+                        "id": 1695459998447656,
+                        "spec_id": 1695459998447624,
+                        "name": "红色",
+                        "pid": 1695459998447640,
+                        "is_leaf": 1,
+                        "status": 0
+                    },
+                    {
+                        "id": 1695459998447672,
+                        "spec_id": 1695459998447624,
+                        "name": "黄色",
+                        "pid": 1695459998447640,
+                        "is_leaf": 1,
+                        "status": 0
+                    },
+                    {
+                        "id": 1695459998494734,
+                        "spec_id": 1695459998447624,
+                        "name": "蓝色",
+                        "pid": 1695459998447640,
+                        "is_leaf": 1,
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "id": 1695459998494750,
+                "spec_id": 1695459998447624,
+                "name": "尺寸",
+                "pid": 0,
+                "is_leaf": 0,
+                "values": [
+                    {
+                        "id": 1695459998494766,
+                        "spec_id": 1695459998447624,
+                        "name": "S",
+                        "pid": 1695459998494750,
+                        "is_leaf": 1,
+                        "status": 0
+                    }
+                ]
+            }
+        ],
+        "img": "https://sf6-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800",
+        "presell_type": 0,
+        "maximum_per_order": 0,
+        "limit_per_buyer": 0,
+        "minimum_per_order": 1,
+        "quality_list": [
+            {
+                "quality_key": "1",
+                "quality_name": "进货凭证1",
+                "quality_attachments": [
+                    {
+                        "media_type": 1,
+                        "url": "https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800"
+                    },
+                    {
+                        "media_type": 1,
+                        "url": "https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800"
+                    }
+                ]
+            },
+            {
+                "quality_key": "2",
+                "quality_name": "进货凭证2",
+                "quality_attachments": [
+                    {
+                        "media_type": 1,
+                        "url": "https://sf1-ttcdn-tos.pstatp.com/obj/temai/0c71ce6acb4e3b508e0d30042b1a94262818ab41www800-800"
+                    }
+                ]
+            }
+        ],
+        "logistics_info": {
+            "customs_clear_type": 0,
+            "origin_region_id": 0,
+            "source_region_id": 0,
+            "brand_region_id": 0,
+            "tax_payer": 0,
+            "net_weight_qty": 0
+        },
+        "after_sale_service": "{\"supply_7day_return\":\"2\"}"
+    },
+    "err_no": 0,
+    "message": "success"
+}

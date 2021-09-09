@@ -1,0 +1,18 @@
+﻿{
+    "data": {
+        "field_problem": [
+            {
+                "field_key": "product_name",
+                "field_name": "标题",
+                "problem_key": 501,
+                "problem_name": "详情页图片较少",
+                "suggestion": "商品素材缺少，详情页的图片说明较少。促进商品购买的决策性信息过少，影响购买，建议丰富商品信息，上传不少于5张详情图片，将商品优势展示出来",
+                "problem_type": 1
+            }
+        ],
+        "product_id": 3469673915587121000,
+        "product_name": "奈克牌大皮鞋"
+    },
+    "err_no": 0,
+    "message": "success"
+}

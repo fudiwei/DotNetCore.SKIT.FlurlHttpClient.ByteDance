@@ -1,0 +1,24 @@
+﻿{
+    "data": {
+        "product_num_total": 10,
+        "product_num_finished": 10,
+        "task_status": 2,
+        "product_num_to_improve_total": 10,
+        "problem_num_total": 10,
+        "problem_num_to_improve": 10,
+        "task_finish_time": "2021-09-07 01:21:46",
+        "problem_type_distribution": [
+            {
+                "type_key": 1,
+                "type_name": "商品信息不规范",
+                "num": 2
+            }
+        ],
+        "task_id": 15293,
+        "standard_rate": 10,
+        "is_standard": true,
+        "meet_standard_num": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,22 @@
+﻿{
+    "data": {
+        "quality_list": [
+            {
+                "product_id": 3502373827210525000,
+                "product_name": "奈克牌皮鞋",
+                "problem_num_to_improve": 2,
+                "problem_type_distribution": [
+                    {
+                        "type_name": "关键信息需优化",
+                        "num": 1
+                    }
+                ],
+                "meet_standard": 2,
+                "base_score": 20
+            }
+        ],
+        "total": 50
+    },
+    "err_no": 0,
+    "message": "success"
+}

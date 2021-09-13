@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        "List": [
+            {
+                "template": {
+                    "id": 1,
+                    "template_name": "模版示例"
+                }
+            }
+        ],
+        "Count": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,15 @@
+﻿{
+    "spu_name": "Apple/Iphone11",
+    "upc_code": "A1101",
+    "category_id": 31860,
+    "brand_id": 1001,
+    "property_infos": [
+        {
+            "property_id": 1493,
+            "value_id": 10001,
+            "parent_value_id": 0,
+            "level": 1,
+            "value_name": ""
+        }
+    ]
+}

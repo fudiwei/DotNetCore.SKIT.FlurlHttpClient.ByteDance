@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "property_info": [
+            {
+                "rel_value_id": 1001,
+                "property_id": 1487,
+                "property_name": "型号",
+                "value_id": 1001,
+                "value_name": "iphone11"
+            }
+        ],
+        "brand_info": [
+            {
+                "rel_value_id": 0,
+                "property_id": 1493,
+                "property_name": "品牌",
+                "value_id": 1001,
+                "value_name": "苹果"
+            }
+        ],
+        "total": 30
+    },
+    "err_no": 0,
+    "message": "success"
+}

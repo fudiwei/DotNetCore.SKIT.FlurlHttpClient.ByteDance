@@ -1,0 +1,33 @@
+﻿{
+    "data": {
+        "spu_property_infos": [
+            {
+                "property_id": 1493,
+                "property_name": "品牌",
+                "type": 0,
+                "property_alias": "品牌别名",
+                "spu_property_value_info": [
+                    {
+                        "value_id": 1001,
+                        "value_name": "苹果",
+                        "value_alias": "苹果别名"
+                    }
+                ]
+            }
+        ],
+        "spu_info": {
+            "spu_name": "苹果/iphone11",
+            "upc_code": "A1001",
+            "category_id": 31860,
+            "brand_id": 1001,
+            "status": 1,
+            "update_time": "2020-11-11 11:00:00",
+            "create_time": "2020-11-11 11:00:00",
+            "spu_id": "6950545601998242092",
+            "op_status": 0,
+            "audit_time": "2020-11-11 11:00:00"
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "product_format": [
+            {
+                "name": "后置摄像头像素",
+                "options": [
+                    {
+                        "name": "1300万像素",
+                        "value_id": 26219,
+                        "sequence": 1
+                    }
+                ],
+                "require": 1,
+                "type": "select",
+                "category_id": 31860,
+                "multi_select_max": 5,
+                "property_type": 0,
+                "property_id": 1001,
+                "sequence": 1
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

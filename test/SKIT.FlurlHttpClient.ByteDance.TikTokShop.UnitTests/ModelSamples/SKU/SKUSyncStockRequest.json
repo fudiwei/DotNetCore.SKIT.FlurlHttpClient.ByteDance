@@ -1,0 +1,8 @@
+﻿{
+    "product_id": "123456",
+    "sku_id": "123",
+    "incremental": false,
+    "out_warehouse_id": "123",
+    "idempotent_id": "2",
+    "stock_num": 300
+}

@@ -1,0 +1,49 @@
+﻿{
+    "data": [
+        {
+            "id": 1445163,
+            "out_sku_id": 0,
+            "product_id": 3306028663170020210,
+            "product_id_str": "3306028663170020210",
+            "spec_detail_id1": 3153838,
+            "spec_detail_id2": 3153843,
+            "spec_detail_id3": 0,
+            "spec_detail_name1": "白色",
+            "spec_detail_name2": "大",
+            "spec_detail_name3": "",
+            "stock_num": 84,
+            "price": 1280,
+            "spec_id": 1515634,
+            "create_time": 0,
+            "code": "",
+            "sku_type": 0,
+            "stock_map": {}
+        },
+        {
+            "id": 1445164,
+            "out_sku_id": 0,
+            "product_id": 3306028663170020210,
+            "product_id_str": "3306028663170020210",
+            "spec_detail_id1": 3153838,
+            "spec_detail_id2": 3153844,
+            "spec_detail_id3": 0,
+            "spec_detail_name1": "37/38适合35-37",
+            "spec_detail_name2": "红格子",
+            "spec_detail_name3": "",
+            "stock_num": 0,
+            "price": 1280,
+            "spec_id": 1515634,
+            "create_time": 0,
+            "code": "",
+            "sku_type": 1,
+            "stock_map": {
+                "123": 10,
+                "1234": 30,
+                "12345": 105
+            },
+            "supplier_id": 123
+        }
+    ],
+    "err_no": 0,
+    "message": "success"
+}

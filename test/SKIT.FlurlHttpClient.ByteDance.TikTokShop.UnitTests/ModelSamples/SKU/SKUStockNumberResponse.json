@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "sku_id": 12345,
+        "out_sku_id": 12345,
+        "code": "abc",
+        "sku_type": 0,
+        "stock_num": 12,
+        "prehold_stock_num": 12,
+        "prom_stock_num": 12,
+        "step_stock_num": 12,
+        "prehold_step_stock_num": 12,
+        "prom_step_stock_num": 12,
+        "stock_num_map": {},
+        "prehold_stock_map": {},
+        "ship_rule_map": {},
+        "normal_stock_num": 1,
+        "channel_stock_num": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

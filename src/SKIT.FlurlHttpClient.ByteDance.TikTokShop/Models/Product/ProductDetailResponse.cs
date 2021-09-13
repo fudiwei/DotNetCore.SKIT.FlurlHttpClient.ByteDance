@@ -216,14 +216,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("stock_num_map")]
                         [System.Text.Json.Serialization.JsonPropertyName("stock_num_map")]
-                        public IDictionary<string, int>? StockNumberMap { get; set; }
+                        public IDictionary<string, int>? StockMap { get; set; }
 
                         /// <summary>
                         /// 获取或设置供应商 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
-                        public string SupplierId { get; set; } = default!;
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        public string? SupplierId { get; set; }
                     }
 
                     public class Specification
@@ -243,7 +244,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         public long ParentID { get; set; }
 
                         /// <summary>
-                        /// 获取或设置规格 ID。
+                        /// 获取或设置规格组 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("spec_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("spec_id")]
@@ -322,7 +323,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("net_weight_qty")]
                         [System.Text.Json.Serialization.JsonPropertyName("net_weight_qty")]
-                        public int NetWeightQuality { get; set; }
+                        public int NetWeightQuantity { get; set; }
                     }
 
                     public class Qualification

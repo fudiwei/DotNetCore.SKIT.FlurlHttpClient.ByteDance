@@ -1,0 +1,9 @@
+﻿{
+    "data": {
+        "url": "http://aaa.csv",
+        "count": 123,
+        "update_date": "2021-07-29"
+    },
+    "err_no": 0,
+    "message": "success"
+}

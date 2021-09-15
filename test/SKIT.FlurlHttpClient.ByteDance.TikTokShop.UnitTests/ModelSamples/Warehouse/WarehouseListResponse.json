@@ -1,0 +1,28 @@
+﻿{
+    "data": {
+        "warehouses": [
+            {
+                "warehouse_id": 6853386941874864000,
+                "name": "名字",
+                "intro": "介绍",
+                "update_time": 1623918481,
+                "create_time": 1623918481,
+                "out_warehouse_id": "ABC",
+                "addr": [
+                    {
+                        "addr_id1": 100,
+                        "addr_id2": 100100,
+                        "addr_id3": 100110,
+                        "addr_id4": 100111,
+                        "update_time": 1623918481,
+                        "create_time": 1623918481
+                    }
+                ],
+                "shop_id": 123456
+            }
+        ],
+        "total": 3
+    },
+    "err_no": 0,
+    "message": "success"
+}

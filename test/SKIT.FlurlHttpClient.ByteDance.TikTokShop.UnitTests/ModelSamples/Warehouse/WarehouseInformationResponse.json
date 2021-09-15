@@ -1,0 +1,23 @@
+﻿{
+    "data": {
+        "warehouse_id": 6152361283123,
+        "out_warehouse_id": "ABC",
+        "name": "名称测试",
+        "intro": "介绍测试",
+        "addr": [
+            {
+                "addr_id1": 1,
+                "addr_id2": 2,
+                "addr_id3": 3,
+                "addr_id4": 4,
+                "update_time": 1624245280,
+                "create_time": 1624245280
+            }
+        ],
+        "update_time": 1624245280,
+        "create_time": 1624245280,
+        "shop_id": 95250
+    },
+    "err_no": 0,
+    "message": "success"
+}

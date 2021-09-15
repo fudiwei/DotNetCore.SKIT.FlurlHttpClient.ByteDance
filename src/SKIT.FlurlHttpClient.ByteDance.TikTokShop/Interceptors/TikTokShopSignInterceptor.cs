@@ -131,9 +131,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
             public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
             {
                 var jVal = (JValue)value!;
-                if (jVal.Type == JTokenType.Float)
+                if (jVal.Type == JTokenType.Float ||
+                    jVal.Type == JTokenType.String)
                 {
-                    double d = Convert.ToDouble(jVal.Value);
+                    double d;
+
+                    if (jVal.Type == JTokenType.String)
+                    {
+                        if (!double.TryParse(jVal.Value?.ToString(), out d))
+                        {
+                            writer.WriteValue(value);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        d = Convert.ToDouble(jVal.Value);
+                    }                 
+
                     long i = (long)d;
                     if (Math.Abs(i - d) == 0)
                     {
@@ -142,7 +157,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                     }
                 }
 
-                writer.WriteValue(value); // 否则按原逻辑
+                writer.WriteValue(value);
             }
 
             public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)

@@ -1,0 +1,36 @@
+﻿{
+    "data": [
+        {
+            "code": 41,
+            "father_code": 8,
+            "name": "河南省",
+            "level": "Province",
+            "sub_districts": [
+                {
+                    "code": 410500,
+                    "father_code": 41,
+                    "name": "安阳市",
+                    "level": "City",
+                    "sub_districts": [
+                        {
+                            "code": 410522,
+                            "father_code": 410500,
+                            "name": "安阳县",
+                            "level": "District",
+                            "sub_districts": [
+                                {
+                                    "code": 410522107,
+                                    "father_code": 410522,
+                                    "level": "Street",
+                                    "name": "伦掌镇"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "err_no": 0,
+    "message": "success"
+}

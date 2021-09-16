@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        "success_ids": [
+            "123"
+        ],
+        "failed_map": {
+            "7001012973925941548": {
+                "code": 20001,
+                "msg": "文件夹id不存在"
+            }
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

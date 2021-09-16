@@ -1,0 +1,46 @@
+﻿{
+    "data": {
+        "folder_info": {
+            "object_id": "70032596029638413241510",
+            "name": "我是文件夹",
+            "folder_object_type": 0,
+            "operate_status": 1,
+            "child_folder": [
+                {
+                    "object_id": "70032596029638413241510",
+                    "name": "我是文件夹",
+                    "folder_object_type": 0,
+                    "operate_status": 1
+                }
+            ],
+            "child_material": [
+                {
+                    "object_id": "7000291764753940780",
+                    "parent_id": "6999834643465781548",
+                    "origin_url": "http://tosv.byted.org/obj/ecom-shop-material/ByteSuite%E8%AF%AD%E9%9F%B3%E8%AE%B2%E8%A7%A3.mp4",
+                    "byte_url": "http://tosv.byted.org/obj/ecom-shop-material/ByteSuite%E8%AF%AD%E9%9F%B3%E8%AE%B2%E8%A7%A3.mp4",
+                    "material_name": "素材名",
+                    "material_type": "photo",
+                    "operate_status": 1,
+                    "audit_status": 1,
+                    "audit_refuse_reason": "不符合",
+                    "size": 1234,
+                    "create_time": "2021-08-12 12:00:12",
+                    "update_time": "2021-08-12 12:00:12",
+                    "delete_time": "2021-08-12 12:00:12",
+                    "photoInfo": {
+                        "height": 123,
+                        "width": 123,
+                        "format": "jpg"
+                    },
+                    "videoInfo": {
+                        "duration": 1.1,
+                        "format": "mp3"
+                    }
+                }
+            ]
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

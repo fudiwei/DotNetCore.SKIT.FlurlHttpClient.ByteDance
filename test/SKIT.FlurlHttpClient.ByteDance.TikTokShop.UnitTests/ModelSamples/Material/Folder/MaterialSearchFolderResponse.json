@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "folder_info_list": [
+            {
+                "object_id": "70032596029638413241510",
+                "parent_id": "70032596029638413241510",
+                "name": "我是文件夹",
+                "folder_object_type": 0,
+                "operate_status": 1,
+                "create_time": "2020-09-03 18:28:01",
+                "update_time": "2020-09-03 18:28:01",
+                "delete_time": "2020-09-03 18:28:01"
+            }
+        ],
+        "total": 12
+    },
+    "err_no": 0,
+    "message": "success"
+}

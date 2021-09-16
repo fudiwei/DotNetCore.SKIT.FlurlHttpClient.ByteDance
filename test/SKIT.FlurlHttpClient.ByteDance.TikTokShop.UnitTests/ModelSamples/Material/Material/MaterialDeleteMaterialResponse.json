@@ -1,0 +1,10 @@
+﻿{
+    "data": {
+        "success_ids": [
+            "123"
+        ],
+        "failed_map": {}
+    },
+    "err_no": 0,
+    "message": "success"
+}

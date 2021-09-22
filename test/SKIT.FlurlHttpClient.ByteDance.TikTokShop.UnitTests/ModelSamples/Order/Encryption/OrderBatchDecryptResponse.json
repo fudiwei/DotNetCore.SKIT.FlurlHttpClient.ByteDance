@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "decrypt_infos": [
+            {
+                "auth_id": "123",
+                "cipher_text": "密文，具体内容参考[数据安全加密对接文档](https://op.jinritemai.com/docs/guide-docs/56/589)",
+                "decrypt_text": "13117428564",
+                "err_no": 0,
+                "err_msg": "错误描述"
+            }
+        ],
+        "custom_err": {
+            "err_code": 0,
+            "err_msg": "错误描述"
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,10 @@
+﻿{
+    "batch_encrypt_list": [
+        {
+            "auth_id": "123",
+            "plain_text": "待加密明文",
+            "is_support_index": true,
+            "sensitive_type": 3
+        }
+    ]
+}

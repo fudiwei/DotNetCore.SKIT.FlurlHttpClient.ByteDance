@@ -195,7 +195,7 @@ namespace SKIT.FlurlHttpClient.ByteDance
                 Type type = assembly.GetType($"{assembly.GetName().Name}.Events.{name}");
                 if (type == null)
                 {
-                    lstError.Add(new Exception($"类型 `{name}`不存在。"));
+                    lstError.Add(new Exception($"类型 `{name}` 不存在。"));
                     continue;
                 }
 
@@ -213,7 +213,7 @@ namespace SKIT.FlurlHttpClient.ByteDance
                 Type type = assembly.GetType($"{assembly.GetName().Name}.Events.{name}");
                 if (type == null)
                 {
-                    lstError.Add(new Exception($"类型 `{name}`不存在。"));
+                    lstError.Add(new Exception($"类型 `{name}` 不存在。"));
                     continue;
                 }
 

@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "encrypt_infos": [
+            {
+                "auth_id": "123",
+                "cipher_text": "asdfasdfsasfdasdf",
+                "decrypt_text": "13117428564",
+                "err_no": 0,
+                "err_msg": ""
+            }
+        ],
+        "custom_err": {
+            "err_code": 0,
+            "err_msg": ""
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

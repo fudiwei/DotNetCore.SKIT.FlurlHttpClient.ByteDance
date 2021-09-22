@@ -11,6 +11,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 {
     public static class TikTokShopClientExecuteOrderExtensions
     {
+        /// <summary>
+        /// <para>异步调用 [POST] /order/searchList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/555 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderSearchListResponse> ExecuteOrderSearchListAsync(this TikTokShopClient client, Models.OrderSearchListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "searchList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderSearchListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/orderDetail 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/1144 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderDetailResponse> ExecuteOrderDetailAsync(this TikTokShopClient client, Models.OrderDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "orderDetail")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Encryption
         /// <summary>
         /// <para>异步调用 [POST] /order/batchDecrypt 接口。</para>

@@ -8,6 +8,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
     /// </summary>
     public class WarehouseSetAddressBatchResponse : TikTokShopResponse
     {
-
     }
 }

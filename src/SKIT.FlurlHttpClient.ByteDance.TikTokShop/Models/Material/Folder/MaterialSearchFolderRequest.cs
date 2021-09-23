@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("operate_status")]
         [System.Text.Json.Serialization.JsonPropertyName("operate_status")]
-        public IList<int> OperateStatusList { get; set; }
+        public IList<int>? OperateStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置创建开始时间。

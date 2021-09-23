@@ -292,5 +292,47 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             return await client.SendRequestWithJsonAsync<Models.OrderBatchSearchIndexResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+    
+        #region Insurance
+        /// <summary>
+        /// <para>异步调用 [POST] /order/insurance 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/32/626 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderInsuranceResponse> ExecuteOrderInsuranceAsync(this TikTokShopClient client, Models.OrderInsuranceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "insurance")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderInsuranceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/policy 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/32/902 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderPolicyResponse> ExecuteOrderPolicyAsync(this TikTokShopClient client, Models.OrderPolicyRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "policy")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderPolicyResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

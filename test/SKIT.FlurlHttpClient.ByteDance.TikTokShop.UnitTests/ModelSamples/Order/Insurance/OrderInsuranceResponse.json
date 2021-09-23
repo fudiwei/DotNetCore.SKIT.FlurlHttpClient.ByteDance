@@ -1,0 +1,35 @@
+﻿{
+    "data": {
+        "policy_info_list": [
+            {
+                "ins_policy_no": "10202009171446081711854084111",
+                "approximate_return_fee": 1200,
+                "total_premium": 60,
+                "user_premium": 0,
+                "merchant_premium": 60,
+                "platform_premium": 0,
+                "status": 2,
+                "appeal_status": 0,
+                "claim_status": 0,
+                "company_name": "中国人民财产保险股份有限公司",
+                "is_allow_appeal": false,
+                "goods_info_list": [
+                    {
+                        "product_name": "商品名称",
+                        "product_id": 3436088998672617500,
+                        "category_id": "13-3004-3006",
+                        "show_page_url": "https://sf1-ttcdn-tos.pstatp.com/obj/temai/6535e88c983f735cabb99f5b00f6212awww800-800",
+                        "amount": 1
+                    }
+                ],
+                "fail_reason": "失败原因",
+                "insurance_hotline": "400-188-1949转1",
+                "premium_status": 2,
+                "ins_ensured_time_begin": "2020-09-17 14:48:08",
+                "ins_ensured_time_end": "2020-12-16 14:48:08"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

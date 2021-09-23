@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using Flurl;
 using Flurl.Http;
 
@@ -394,6 +396,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.OrderReplyServiceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Invoice
+        /// <summary>
+        /// <para>异步调用 [POST] /order/invoiceUpload 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/150/812 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderInvoiceUploadResponse> ExecuteOrderInvoiceUploadAsync(this TikTokShopClient client, Models.OrderInvoiceUploadRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "invoiceUpload")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            if (request.FileBytes == null)
+            {
+                return await client.SendRequestWithJsonAsync<Models.OrderInvoiceUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            }
+            else
+            {
+                string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
+                string filename = "invoice.pdf";
+                using var fileContent = new ByteArrayContent(request.FileBytes);
+                using var paramContent = new StringContent(client.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
+                using var httpContent = new MultipartFormDataContent(boundary);
+                httpContent.Add(fileContent, "\"upload_file\"", $"\"{HttpUtility.UrlEncode(filename)}\"");
+                httpContent.Add(paramContent, Constants.FormDataFields.FORMDATA_PARAM_JSON);
+                httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data; boundary=" + boundary);
+                fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/pdf");
+                fileContent.Headers.ContentLength = request.FileBytes.Length;
+
+                return await client.SendRequestAsync<Models.OrderInvoiceUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            }
         }
         #endregion
 

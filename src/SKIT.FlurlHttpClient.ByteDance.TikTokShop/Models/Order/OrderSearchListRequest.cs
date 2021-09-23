@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -17,94 +16,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// 获取或设置订单状态列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_status")]
-                [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonInt32ListWithCommaConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerIListWithComma))]
                 [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonInt32ListWithCommaConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerIListWithComma))]
                 public IList<int>? OrderStatusList { get; set; }
                 
                 /// <summary>
                 /// 获取或设置主流程状态列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("main_status")]
-                [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonInt32ListWithCommaConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerIListWithComma))]
                 [System.Text.Json.Serialization.JsonPropertyName("main_status")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonInt32ListWithCommaConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerIListWithComma))]
                 public IList<int>? MainStatusList { get; set; }
-            }
-        }
-
-        internal static class Converters
-        {
-            internal class NewtonsoftJsonInt32ListWithCommaConverter : Newtonsoft.Json.JsonConverter<IList<int>?>
-            {
-                private const char SEPARATOR = ',';
-
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<int>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<int>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).Select(e => int.Parse(e)).ToList();
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<int>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNull();
-                }
-            }
-
-            internal class SystemTextJsonInt32ListWithCommaConverter : System.Text.Json.Serialization.JsonConverter<IList<int>?>
-            {
-                private const char SEPARATOR = ',';
-
-                public override IList<int>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).Select(e => int.Parse(e)).ToList();
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<int>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNullValue();
-                }
             }
         }
 

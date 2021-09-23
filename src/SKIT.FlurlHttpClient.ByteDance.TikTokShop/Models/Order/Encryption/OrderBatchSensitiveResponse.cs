@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("decrypt_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("decrypt_infos")]
-                public Types.DecryptData[] DecryptDataList { get; set; }= default!;
+                public Types.DecryptData[] DecryptDataList { get; set; } = default!;
             }
         }
 

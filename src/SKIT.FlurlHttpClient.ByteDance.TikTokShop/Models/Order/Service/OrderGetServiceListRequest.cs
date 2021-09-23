@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("start_time")]
         [System.Text.Json.Serialization.JsonPropertyName("start_time")]
-        public long StartTimestamp { get; set; }
+        public long? StartTimestamp { get; set; }
 
         /// <summary>
         /// 获取或设置结束时间时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("end_time")]
         [System.Text.Json.Serialization.JsonPropertyName("end_time")]
-        public long EndTimestamp { get; set; }
+        public long? EndTimestamp { get; set; }
 
         /// <summary>
         /// 获取或设置操作状态。

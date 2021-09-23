@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("encrypt_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("encrypt_infos")]
-                public Types.EncryptData[] EncryptDataList { get; set; }= default!;
+                public Types.EncryptData[] EncryptDataList { get; set; } = default!;
             }
         }
 

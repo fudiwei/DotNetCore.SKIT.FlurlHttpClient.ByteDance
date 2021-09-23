@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_detail")]
-                        public string ServiceDetail { get; set; }= default!;
+                        public string ServiceDetail { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置回复内容。

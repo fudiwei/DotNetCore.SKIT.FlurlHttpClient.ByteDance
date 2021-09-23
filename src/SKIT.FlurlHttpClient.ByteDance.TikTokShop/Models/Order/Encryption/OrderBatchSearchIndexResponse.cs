@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("search_index")]
                         [System.Text.Json.Serialization.JsonPropertyName("search_index")]
-                        public string SearchIndex { get; set; }= default!;
+                        public string SearchIndex { get; set; } = default!;
                     }
                 }
 
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("plain_to_encrypt_index_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("plain_to_encrypt_index_list")]
-                public Types.EncryptIndex[] EncryptIndexList { get; set; }= default!;
+                public Types.EncryptIndex[] EncryptIndexList { get; set; } = default!;
             }
         }
 

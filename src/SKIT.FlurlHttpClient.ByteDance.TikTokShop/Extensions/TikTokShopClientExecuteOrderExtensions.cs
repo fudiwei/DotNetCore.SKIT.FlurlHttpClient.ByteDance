@@ -401,6 +401,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
         #region Invoice
         /// <summary>
+        /// <para>异步调用 [POST] /order/invoiceList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/660 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderInvoiceListResponse> ExecuteOrderInvoiceListAsync(this TikTokShopClient client, Models.OrderInvoiceListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "invoiceList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderInvoiceListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
         /// <para>异步调用 [POST] /order/invoiceUpload 接口。</para>
         /// <para>REF: https://op.jinritemai.com/docs/guide-docs/150/812 </para>
         /// </summary>

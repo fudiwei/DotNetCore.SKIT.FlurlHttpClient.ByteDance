@@ -26,22 +26,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonStringListWithVBarConverter : ProductAddV2Request.Converters.NewtonsoftJsonStringListWithVBarConverter
-            {
-            }
-
-            internal class SystemTextJsonStringListWithVBarConverter : ProductAddV2Request.Converters.SystemTextJsonStringListWithVBarConverter
-            {
-            }
-
-            internal class NewtonsoftJsonStringListWithCommaConverter : ProductAddV2Request.Converters.NewtonsoftJsonStringListWithCommaConverter
-            {
-            }
-
-            internal class SystemTextJsonStringListWithCommaConverter : ProductAddV2Request.Converters.SystemTextJsonStringListWithCommaConverter
-            {
-            }
-
             internal class NewtonsoftJsonQulificationListConverter : ProductAddV2Request.Converters.NewtonsoftJsonQulificationListConverter
             {
             }
@@ -180,9 +164,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置商品主图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithVBarConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipe))]
         [System.Text.Json.Serialization.JsonPropertyName("pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithVBarConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipe))]
         public IList<string>? PictureUrlList { get; set; }
 
         /// <summary>
@@ -212,9 +196,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置同店推荐商品 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("assoc_ids")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithVBarConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipe))]
         [System.Text.Json.Serialization.JsonPropertyName("assoc_ids")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithVBarConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipe))]
         public IList<string>? AssociateProductIdList { get; set; }
 
         /// <summary>
@@ -309,18 +293,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置质检报告 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("quality_report")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("quality_report")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? QualityReportUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置品类资质 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("class_quality")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("class_quality")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? ClassQualificationUrlList { get; set; }
 
         /// <summary>
@@ -361,9 +345,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置规格图片 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spec_pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("spec_pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? SpecificationPictureUrlList { get; set; }
 
         /// <summary>

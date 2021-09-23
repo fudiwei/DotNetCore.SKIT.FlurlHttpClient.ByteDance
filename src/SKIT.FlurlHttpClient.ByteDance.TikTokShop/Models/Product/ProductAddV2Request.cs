@@ -150,150 +150,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonStringListWithVBarConverter : Newtonsoft.Json.JsonConverter<IList<string>?>
-            {
-                private const char SEPARATOR = '|';
-
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<string>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<string>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return value.Split(SEPARATOR);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<string>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNull();
-                }
-            }
-
-            internal class SystemTextJsonStringListWithVBarConverter : System.Text.Json.Serialization.JsonConverter<IList<string>?>
-            {
-                private const char SEPARATOR = '|';
-
-                public override IList<string>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return value.Split(SEPARATOR);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<string>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNullValue();
-                }
-            }
-
-            internal class NewtonsoftJsonStringListWithCommaConverter : Newtonsoft.Json.JsonConverter<IList<string>?>
-            {
-                private const char SEPARATOR = ',';
-
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<string>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<string>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return value.Split(SEPARATOR);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<string>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNull();
-                }
-            }
-
-            internal class SystemTextJsonStringListWithCommaConverter : System.Text.Json.Serialization.JsonConverter<IList<string>?>
-            {
-                private const char SEPARATOR = ',';
-
-                public override IList<string>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return value.Split(SEPARATOR);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<string>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(string.Join(SEPARATOR.ToString(), value));
-                    else
-                        writer.WriteNullValue();
-                }
-            }
-
             internal class NewtonsoftJsonQulificationListConverter : Newtonsoft.Json.JsonConverter<IList<Types.Qualification>?>
             {
                 public override bool CanRead
@@ -642,9 +498,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置商品主图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithVBarConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipe))]
         [System.Text.Json.Serialization.JsonPropertyName("pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithVBarConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipe))]
         public IList<string> PictureUrlList { get; set; } = new List<string>();
 
         /// <summary>
@@ -674,9 +530,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置同店推荐商品 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("assoc_ids")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithVBarConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipe))]
         [System.Text.Json.Serialization.JsonPropertyName("assoc_ids")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithVBarConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipe))]
         public IList<string>? AssociateProductIdList { get; set; }
 
         /// <summary>
@@ -771,18 +627,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置质检报告 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("quality_report")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("quality_report")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? QualityReportUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置品类资质 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("class_quality")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("class_quality")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? ClassQualificationUrlList { get; set; }
 
         /// <summary>
@@ -823,9 +679,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置规格图片 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spec_pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonStringListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithComma))]
         [System.Text.Json.Serialization.JsonPropertyName("spec_pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonStringListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithComma))]
         public IList<string>? SpecificationPictureUrlList { get; set; }
 
         /// <summary>

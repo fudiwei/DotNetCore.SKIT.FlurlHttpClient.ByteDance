@@ -38,17 +38,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                             if (item == oldParamHttpContent)
                                 continue;
 
-                            if (string.IsNullOrEmpty(item.Headers.ContentDisposition.FileName))
-                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name);
+                            if (string.IsNullOrEmpty(item.Headers.ContentDisposition!.FileName))
+                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name!);
                             else
-                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name, item.Headers.ContentDisposition.FileName);
+                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name!, item.Headers.ContentDisposition.FileName!);
                         }
 
                         var newParamHttpContent = new StringContent(paramJson, Encoding.UTF8, "application/json");
                         newFormdataContent.Add(newParamHttpContent, Constants.FormDataFields.FORMDATA_PARAM_JSON);
                         flurlCall.HttpRequestMessage.Content = newFormdataContent;
 
-                        oldFormdataContent.Dispose();
+                        flurlCall.Request.AfterCall((_) => oldFormdataContent.Dispose());
                     }
                 }
                 else
@@ -61,10 +61,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                         var oldParamHttpContent = flurlCall.HttpRequestMessage.Content;
 
                         var newParamHttpContent = new ByteArrayContent(Encoding.UTF8.GetBytes(paramJson));
-                        newParamHttpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json; charset=UTF-8");
+                        newParamHttpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json; charset=UTF-8");
                         flurlCall.HttpRequestMessage.Content = newParamHttpContent;
 
-                        oldParamHttpContent.Dispose();
+                        oldParamHttpContent?.Dispose();
                     }
                 }
             }

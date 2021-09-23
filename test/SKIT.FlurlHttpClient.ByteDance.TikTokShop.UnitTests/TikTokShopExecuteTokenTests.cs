@@ -12,9 +12,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests
         [Fact(DisplayName = "[POST] /token/create")]
         public async Task TokenCreateTest()
         {
-            var request = new Models.TokenCreateRequest();
+            var request = new Models.TokenCreateRequest()
+            { 
+                Code = "TEST_CODE"
+            };
             var response = await TestClients.Instance.ExecuteTokenCreateAsync(request);
-
+            
             Assert.True(response.IsSuccessful());
             Assert.NotNull(response.Data);
             Assert.NotEmpty(response.Data.AccessToken);

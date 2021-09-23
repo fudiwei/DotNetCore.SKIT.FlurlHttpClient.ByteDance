@@ -25,11 +25,7 @@
     <ItemGroup>
         <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net461'" />
     </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    </ItemGroup>
-
+    
     <ItemGroup>
         <ProjectReference Include="..\SKIT.FlurlHttpClient.ByteDance\SKIT.FlurlHttpClient.ByteDance.csproj" />
     </ItemGroup>

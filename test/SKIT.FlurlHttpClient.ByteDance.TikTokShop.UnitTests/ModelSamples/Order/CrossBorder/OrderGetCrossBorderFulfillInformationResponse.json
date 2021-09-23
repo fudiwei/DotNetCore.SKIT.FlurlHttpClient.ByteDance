@@ -1,0 +1,16 @@
+﻿{
+    "data": {
+        "shop_order_id": "4790307922954771917",
+        "company": "顺丰",
+        "company_code": "shunfeng",
+        "sku_order_ids": [
+            "4790307922954771917"
+        ],
+        "logistics_code": "SF12345",
+        "way_bill_url": "https://sf6-ttcdn-tos.pstatp.com/obj/temai/xxx",
+        "mark": "1",
+        "product_num": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

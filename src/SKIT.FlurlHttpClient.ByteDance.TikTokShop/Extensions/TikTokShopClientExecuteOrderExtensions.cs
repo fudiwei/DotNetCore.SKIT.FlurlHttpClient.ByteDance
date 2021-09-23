@@ -334,5 +334,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             return await client.SendRequestWithJsonAsync<Models.OrderPolicyResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region CrossBorder
+        /// <summary>
+        /// <para>异步调用 [POST] /order/getCrossBorderFulfillInfo 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/495 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderGetCrossBorderFulfillInformationResponse> ExecuteOrderGetCrossBorderFulfillInformationAsync(this TikTokShopClient client, Models.OrderGetCrossBorderFulfillInformationRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "getCrossBorderFulfillInfo")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderGetCrossBorderFulfillInformationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

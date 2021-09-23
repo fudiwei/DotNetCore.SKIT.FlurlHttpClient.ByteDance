@@ -18,7 +18,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                     {
                         public static class Types
                         {
-                            
                             public class PostAddress
                             {
                                 public static class Types
@@ -955,20 +954,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
                         public string SKUCode { get; set; }  = default!;
-
-                        /// <summary>
-                        /// 获取或设置预计发货时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("exp_ship_time")]
-                        [System.Text.Json.Serialization.JsonPropertyName("exp_ship_time")]
-                        public long? ExpectedShipTimestamp { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置发货时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("ship_time")]
-                        [System.Text.Json.Serialization.JsonPropertyName("ship_time")]
-                        public long? ShipTimestamp { get; set; }
 
                         /// <summary>
                         /// 获取或设置物流收货时间戳。

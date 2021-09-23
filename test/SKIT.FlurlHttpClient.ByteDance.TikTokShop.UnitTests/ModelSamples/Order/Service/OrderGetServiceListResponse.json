@@ -1,0 +1,35 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "create_time": "2020-12-08 17:01:05",
+                "detail": "服务测试2-商家回复前\n",
+                "id": 10884357,
+                "operate_status": 100,
+                "operate_status_desc": "已关闭",
+                "order_id": "4738008402565375458",
+                "reply": "我再来狡辩一次",
+                "reply_time": "2020-12-09 13:34:55",
+                "service_type": 3,
+                "shop_id": 77977,
+                "update_time": "2020-12-09 13:34:55"
+            },
+            {
+                "create_time": "2020-12-08 17:00:54",
+                "detail": "服务测试",
+                "id": 10884339,
+                "operate_status": 100,
+                "operate_status_desc": "已关闭",
+                "order_id": 4738008402565375458,
+                "reply": "啦啦啦啦",
+                "reply_time": "2020-12-08 17:05:43",
+                "service_type": 3,
+                "shop_id": 77977,
+                "update_time": "2020-12-08 17:05:43"
+            }
+        ],
+        "total": 2
+    },
+    "err_no": 0,
+    "message": "success"
+}

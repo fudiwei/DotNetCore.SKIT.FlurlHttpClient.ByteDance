@@ -1,0 +1,13 @@
+﻿{
+    "data": {
+        "balance_list": [
+            {
+                "balance_type": "UNSETTLE",
+                "amount": 1,
+                "currency": "CNY"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

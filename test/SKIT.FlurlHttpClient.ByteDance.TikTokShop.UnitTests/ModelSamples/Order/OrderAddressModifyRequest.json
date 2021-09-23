@@ -1,0 +1,25 @@
+﻿{
+    "order_id": "4800612094963473807",
+    "post_receiver": "周五",
+    "post_code": "18224267539",
+    "post_addr": {
+        "province": {
+            "id": "2784",
+            "name": "浙江省"
+        },
+        "city": {
+            "id": "2841",
+            "name": "杭州市"
+        },
+        "town": {
+            "id": "2843",
+            "name": "西湖区"
+        },
+        "street": {
+            "id": "1023",
+            "name": "火炬路"
+        },
+        "address_detail": "蒋村街道双龙街239号西投创智中心1号楼西投创智中心1号楼",
+        "land_mark": "land"
+    }
+}

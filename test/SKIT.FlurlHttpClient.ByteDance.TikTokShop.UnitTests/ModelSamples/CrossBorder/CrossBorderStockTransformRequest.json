@@ -1,0 +1,18 @@
+﻿{
+    "vendor": "GZJS",
+    "warehouse_code": "JSBBC01",
+    "shop_id": 4321,
+    "transform_type": 1,
+    "occurrence_time": 123456789,
+    "remark": "备注",
+    "stock_transform_details": [
+        {
+            "cargo_code": "6543",
+            "from_grade": 1,
+            "to_grade": 2,
+            "quantity": 10,
+            "reason_code": 1,
+            "reason_msg": "具体原因"
+        }
+    ]
+}

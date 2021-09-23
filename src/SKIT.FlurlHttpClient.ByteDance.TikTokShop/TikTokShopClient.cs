@@ -36,6 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             FlurlClient.BaseUrl = options.Endpoints ?? TikTokShopEndpoints.DEFAULT;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
 
+            Interceptors.Add(new Interceptors.TikTokShopMarshalJsonInterceptor());
             Interceptors.Add(new Interceptors.TikTokShopSignInterceptor(
                 signMethod: options.SignAlgorithm,
                 appKey: options.AppKey,

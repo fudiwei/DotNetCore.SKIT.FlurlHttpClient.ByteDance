@@ -27,21 +27,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("material_type")]
         [System.Text.Json.Serialization.JsonPropertyName("material_type")]
-        public IList<string> MaterialTypeList { get; set; }
+        public IList<string>? MaterialTypeList { get; set; }
 
         /// <summary>
         /// 获取或设置审核状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("audit_status")]
         [System.Text.Json.Serialization.JsonPropertyName("audit_status")]
-        public IList<int> AuditStatusList { get; set; }
+        public IList<int>? AuditStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置素材状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("operate_status")]
         [System.Text.Json.Serialization.JsonPropertyName("operate_status")]
-        public IList<int> OperateStatusList { get; set; }
+        public IList<int>? OperateStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置创建开始时间。

@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// 获取或设置抖店开放平台 API 域名。
         /// <para>默认值：<see cref="TikTokShopEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; } = TikTokShopEndpoints.DEFAULT;
+        public string? Endpoints { get; set; }
 
         /// <summary>
         /// 获取或设置抖店开放平台应用 Key。

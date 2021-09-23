@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_id")]
-                public string? DataId { get; set; } = default!;
+                public string? DataId { get; set; }
 
                 /// <summary>
                 /// 获取或设置检测任务 ID。

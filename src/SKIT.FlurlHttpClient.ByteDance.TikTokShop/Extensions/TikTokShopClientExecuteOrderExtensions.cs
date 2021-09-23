@@ -335,6 +335,68 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         }
         #endregion
 
+        #region Service
+        /// <summary>
+        /// <para>异步调用 [POST] /order/getServiceList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/266 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderGetServiceListResponse> ExecuteOrderGetServiceListAsync(this TikTokShopClient client, Models.OrderGetServiceListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "getServiceList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderGetServiceListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/serviceDetail 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/266 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderServiceDetailResponse> ExecuteOrderServiceDetailAsync(this TikTokShopClient client, Models.OrderServiceDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "serviceDetail")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderServiceDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/replyService 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/15/75 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderReplyServiceResponse> ExecuteOrderReplyServiceAsync(this TikTokShopClient client, Models.OrderReplyServiceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "replyService")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderReplyServiceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
         #region CrossBorder
         /// <summary>
         /// <para>异步调用 [POST] /order/getCrossBorderFulfillInfo 接口。</para>

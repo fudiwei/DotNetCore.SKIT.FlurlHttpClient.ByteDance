@@ -26,14 +26,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 [System.Text.Json.Serialization.JsonPropertyName("company")]
                 public string CompanyName { get; set; } = default!;
 
-
                 /// <summary>
                 /// 获取或设置物流公司编码。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("company_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("company_code")]
                 public string CompanyCode { get; set; } = default!;
-
 
                 /// <summary>
                 /// 获取或设置商品单 ID 列表。

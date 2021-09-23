@@ -1,0 +1,53 @@
+﻿{
+    "data": {
+        "detail": {
+            "close_detail": "",
+            "close_time": "",
+            "create_time": "2020-11-24 17:57:51",
+            "detail": "阿迪锅还是个打瞌睡肯德基萨德好久撒1",
+            "evidence_required": 0,
+            "expiration_time": "2020-11-25 17:57:51",
+            "first_reply_time": "2020-11-26 14:10:53",
+            "id": 10057242,
+            "img_list": [],
+            "is_reject": 0,
+            "operate_status": 10,
+            "operate_status_desc": "审核中",
+            "order_id": 4733127198026678040,
+            "proof_demo": "",
+            "reject_detail": "",
+            "reject_time": "",
+            "reply": "283883",
+            "reply_time": "2020-11-26 14:10:53",
+            "service_type": 3,
+            "shop_id": 77977,
+            "update_time": "2020-11-26 14:10:53"
+        },
+        "logs": [
+            {
+                "close_detail": "",
+                "content": "回复内容：283883",
+                "deal_time": "24小时",
+                "img_list": [],
+                "operate_name": "商家",
+                "reject_detail": "",
+                "reply_detail": "283883",
+                "service_detail": "阿迪锅还是个打瞌睡肯德基萨德好久撒1",
+                "service_log_type": 2
+            },
+            {
+                "close_detail": "",
+                "content": "关联订单号：4733127198026678040\n服务单类型:售后服务\n服务说明:阿迪锅还是个打瞌睡肯德基萨德好久撒1\n商家处理时长:24小时",
+                "deal_time": "24小时",
+                "img_list": [],
+                "operate_name": "平台客服",
+                "reject_detail": "",
+                "reply_detail": "",
+                "service_detail": "阿迪锅还是个打瞌睡肯德基萨德好久撒1",
+                "service_log_type": 1
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

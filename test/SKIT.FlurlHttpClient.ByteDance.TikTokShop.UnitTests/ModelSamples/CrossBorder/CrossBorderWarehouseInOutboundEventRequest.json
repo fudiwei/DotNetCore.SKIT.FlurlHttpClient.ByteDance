@@ -1,0 +1,31 @@
+﻿{
+    "vendor": "GZJS",
+    "in_outbound_event_type": 200,
+    "source_order_no": "9876",
+    "sp_order_no": "4321",
+    "occurrence_time": 123456789,
+    "error_reason": "异常",
+    "tally_report_url": [
+        {
+            "url": "https://xxx",
+            "name": "标题"
+        }
+    ],
+    "inbound_cargo_infos": [
+        {
+            "cargo_code": "6543",
+            "actual_stack_count": 10,
+            "good_cargo_count": 10,
+            "defective_cargo_count": 0,
+            "expiry_date": "2021-08-24 20:00:00"
+        }
+    ],
+    "outbound_cargo_infos": [
+        {
+            "cargo_code": "6543",
+            "quality_grade": 1,
+            "quantity": 10,
+            "extend": {}
+        }
+    ]
+}

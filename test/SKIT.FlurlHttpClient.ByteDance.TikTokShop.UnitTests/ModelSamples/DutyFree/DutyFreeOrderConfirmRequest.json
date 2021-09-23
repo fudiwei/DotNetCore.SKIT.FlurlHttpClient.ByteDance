@@ -1,0 +1,9 @@
+﻿{
+    "order_id": "3214321413241",
+    "status": 1,
+    "occurrence_time": "2018-06-03 00:00:00",
+    "error_info": {
+        "error_code": "ERR_100",
+        "error_msg": "库存不足"
+    }
+}

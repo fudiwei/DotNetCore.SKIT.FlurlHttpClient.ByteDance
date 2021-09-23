@@ -1,0 +1,19 @@
+﻿{
+    "shop_package_id": 6941730766905180453,
+    "delivery_type": 0,
+    "ship_type": 1,
+    "order_list": [
+        {
+            "order_id": 4782860977949521619,
+            "order_code": "0822597409",
+            "logistics_code": "9595123123",
+            "logistics_id": 12,
+            "order_detail": [
+                {
+                    "combo_id": 1696289587496995,
+                    "shop_qty": 1
+                }
+            ]
+        }
+    ]
+}

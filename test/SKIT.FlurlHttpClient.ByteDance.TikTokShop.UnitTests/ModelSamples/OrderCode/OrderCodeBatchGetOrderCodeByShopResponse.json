@@ -1,0 +1,14 @@
+﻿{
+    "data": {
+        "batch_data": [
+            {
+                "order_id": 4817027636051905000,
+                "order_code": "0067108864"
+            }
+        ],
+        "delivery_type": 0,
+        "ship_type": 3
+    },
+    "err_no": 0,
+    "message": "success"
+}

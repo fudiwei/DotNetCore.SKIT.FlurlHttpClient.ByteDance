@@ -1,0 +1,11 @@
+﻿{
+    "data": {
+        "is_success": "SUCCESS",
+        "error_desc": "找不到对应订单",
+        "delivery_type": 0,
+        "ship_type": 1,
+        "order_code": "0704798730"
+    },
+    "err_no": 0,
+    "message": "success"
+}

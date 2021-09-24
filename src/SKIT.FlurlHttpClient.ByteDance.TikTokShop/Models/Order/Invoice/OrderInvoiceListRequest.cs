@@ -19,9 +19,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置订单状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_status")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerIListWithComma))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerIListWithCommaConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerIListWithComma))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerIListWithCommaConverter))]
         public IList<int>? OrderStatus { get; set; }
 
         /// <summary>

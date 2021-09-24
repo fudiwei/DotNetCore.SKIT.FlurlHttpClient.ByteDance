@@ -1,0 +1,16 @@
+﻿{
+    "data": {
+        "order_id": "4775168038676399798",
+        "product_orders": [
+            {
+                "product_order_id": "4775168038676399799",
+                "order_code": [
+                    "0123456788",
+                    "2526267880"
+                ]
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,17 @@
+﻿{
+    "data": {
+        "order_id": "4775168038676399798",
+        "product_order_id": "4775168038676399798",
+        "order_code": "0123456787",
+        "inspection_result": 1,
+        "certification_code": "XXXX-2021-03T617",
+        "detail": "{\"id\":\"20455\",\"region\":\"6\",\"order_id\":\"0\",\"type\":\"2\",\"zsbh\":\"COIC-2021-03T617\"}",
+        "inspection_comment": "表盘后镶钻",
+        "inspection_cost": 200,
+        "logistics_cost": 2000,
+        "inspection_time": "1616679140",
+        "inspection_order_id": "GGEE12321"
+    },
+    "err_no": 0,
+    "message": "success"
+}

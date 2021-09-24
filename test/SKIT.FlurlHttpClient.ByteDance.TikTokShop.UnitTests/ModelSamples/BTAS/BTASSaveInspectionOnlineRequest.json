@@ -1,0 +1,17 @@
+﻿{
+    "order_id": "4775168038676399798",
+    "product_order_id": "4775168038676399799",
+    "order_code": "0123456787",
+    "service_status": 1,
+    "certification_code": "Q12312312312",
+    "is_original_info": 1,
+    "brand_id": 2,
+    "return_intercept_type": 0,
+    "images": [
+        {
+            "image_id": 1,
+            "image_url": "https://xxx.xxxx.xxxx",
+            "image_comment": "带扣"
+        }
+    ]
+}

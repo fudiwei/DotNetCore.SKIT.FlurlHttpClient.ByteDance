@@ -5,9 +5,9 @@ using Newtonsoft.Json;
 
 namespace Newtonsoft.Json.Converters
 {
-    internal class TextualStringIListWithPipe : JsonConverter<IList<string>?>
+    internal class TextualStringIListWithCommaConverter : JsonConverter<IList<string>?>
     {
-        private const char SEPARATOR = '|';
+        private const char SEPARATOR = ',';
 
         public override bool CanRead
         {

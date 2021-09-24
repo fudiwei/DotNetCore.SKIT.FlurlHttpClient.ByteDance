@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace System.Text.Json.Converters
 {
-    internal class TextualStringIListWithPipe : JsonConverter<IList<string>?>
+    internal class TextualStringIListWithPipeConverter : JsonConverter<IList<string>?>
     {
         private const char SEPARATOR = '|';
 

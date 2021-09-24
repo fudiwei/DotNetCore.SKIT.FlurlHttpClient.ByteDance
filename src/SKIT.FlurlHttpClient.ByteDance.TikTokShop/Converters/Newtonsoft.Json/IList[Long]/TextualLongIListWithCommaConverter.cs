@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Newtonsoft.Json.Converters
 {
-    internal class TextualLongIListWithComma : JsonConverter<IList<long>?>
+    internal class TextualLongIListWithCommaConverter : JsonConverter<IList<long>?>
     {
         private const char SEPARATOR = ',';
 

@@ -1,0 +1,16 @@
+﻿{
+    "order_id": "4775168038676399798",
+    "product_order_id": "4775168038676399798",
+    "order_code": "0123456787",
+    "service_status": 1,
+    "base_send_logistics_code": "SF12345678901",
+    "send_type": 0,
+    "send_logistics_id": "1",
+    "send_logistics_company_code": "shunfeng",
+    "send_logistics_code": "SF12345678901",
+    "is_shipping_self": 0,
+    "shipping_logistics_type": 1,
+    "insurance_cost": 200,
+    "return_intercept_type": 0,
+    "return_type": 1
+}

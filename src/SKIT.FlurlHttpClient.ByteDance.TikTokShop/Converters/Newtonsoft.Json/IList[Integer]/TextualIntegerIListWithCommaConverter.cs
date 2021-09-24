@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Newtonsoft.Json.Converters
 {
-    internal class TextualStringIListWithComma : JsonConverter<IList<string>?>
+    internal class TextualIntegerIListWithCommaConverter : JsonConverter<IList<int>?>
     {
         private const char SEPARATOR = ',';
 
@@ -19,7 +19,7 @@ namespace Newtonsoft.Json.Converters
             get { return true; }
         }
 
-        public override IList<string>? ReadJson(JsonReader reader, Type objectType, IList<string>? existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override IList<int>? ReadJson(JsonReader reader, Type objectType, IList<int>? existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null)
             {
@@ -31,13 +31,13 @@ namespace Newtonsoft.Json.Converters
                 if (value == null)
                     return existingValue;
 
-                return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).Select(e => int.Parse(e)).ToList();
             }
 
             throw new JsonReaderException();
         }
 
-        public override void WriteJson(JsonWriter writer, IList<string>? value, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, IList<int>? value, JsonSerializer serializer)
         {
             if (value != null)
                 writer.WriteValue(string.Join(SEPARATOR.ToString(), value));

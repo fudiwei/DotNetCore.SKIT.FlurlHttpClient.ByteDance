@@ -1,0 +1,18 @@
+﻿{
+    "data": {
+        "brand_list": [
+            {
+                "brand_id": 1,
+                "brand_name": "aj",
+                "brand_category_list": [
+                    {
+                        "id": 1,
+                        "name": "鞋靴"
+                    }
+                ]
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

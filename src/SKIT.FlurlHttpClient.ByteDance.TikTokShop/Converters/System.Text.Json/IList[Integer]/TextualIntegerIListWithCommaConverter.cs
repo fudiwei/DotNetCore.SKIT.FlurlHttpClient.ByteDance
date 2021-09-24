@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace System.Text.Json.Converters
 {
-    internal class TextualIntegerIListWithComma : JsonConverter<IList<int>?>
+    internal class TextualIntegerIListWithCommaConverter : JsonConverter<IList<int>?>
     {
         private const char SEPARATOR = ',';
 

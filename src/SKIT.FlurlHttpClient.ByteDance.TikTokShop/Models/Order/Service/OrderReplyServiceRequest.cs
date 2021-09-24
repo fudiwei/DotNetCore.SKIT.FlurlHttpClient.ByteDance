@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipeConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("evidence")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipeConverter))]
-        public IList<string>? ProofUrlList { get; set; }
+        public IList<string>? EvidenceUrlList { get; set; }
 
         protected internal override string GetApiMethod()
         {

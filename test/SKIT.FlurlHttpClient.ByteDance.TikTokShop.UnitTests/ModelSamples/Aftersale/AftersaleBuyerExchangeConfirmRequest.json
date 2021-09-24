@@ -1,0 +1,11 @@
+﻿{
+    "logistics_code": "123",
+    "company_code": "1",
+    "aftersale_id": 123123123123123,
+    "action": "refund_agree",
+    "comment": "1",
+    "evidence": [
+        "http://pic/pic.jpeg"
+    ],
+    "is_reject": true
+}

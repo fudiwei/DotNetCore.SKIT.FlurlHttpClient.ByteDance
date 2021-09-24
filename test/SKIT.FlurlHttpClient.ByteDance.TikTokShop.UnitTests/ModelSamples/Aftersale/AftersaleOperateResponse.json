@@ -1,0 +1,13 @@
+﻿{
+    "data": {
+        "items": [
+            {
+                "aftersale_id": 6959800000297566000,
+                "status_code": 0,
+                "status_msg": "success"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

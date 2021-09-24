@@ -1,0 +1,17 @@
+﻿{
+    "type": 111,
+    "items": [
+        {
+            "aftersale_id": "6959800000297566494",
+            "reason": "商品有破损",
+            "remark": "商品有污渍，影响二次销售",
+            "evidence": [],
+            "logistics": {
+                "company_code": "yuantong",
+                "logistics_code": "YT31368712931",
+                "receiver_address_id": 95251,
+                "sender_address_id": 95251
+            }
+        }
+    ]
+}

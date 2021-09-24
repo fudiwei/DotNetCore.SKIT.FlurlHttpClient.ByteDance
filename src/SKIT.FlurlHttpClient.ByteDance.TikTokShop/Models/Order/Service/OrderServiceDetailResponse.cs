@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -57,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("evidence_required")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalBooleanConverter))]
-                        public bool RequireProof { get; set; }
+                        public bool RequireEvidence { get; set; }
 
                         /// <summary>
                         /// 获取或设置凭证 DEMO URL。

@@ -1,0 +1,10 @@
+﻿{
+    "after_sale_id": "1234",
+    "op_from": 1,
+    "intercept_targets": [
+        {
+            "company_code": "yuantong",
+            "tracking_no": "YT1387990014325"
+        }
+    ]
+}

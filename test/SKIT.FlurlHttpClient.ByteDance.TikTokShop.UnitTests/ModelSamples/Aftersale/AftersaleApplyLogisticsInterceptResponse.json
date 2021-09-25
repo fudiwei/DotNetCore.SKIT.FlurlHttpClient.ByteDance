@@ -1,0 +1,45 @@
+﻿{
+    "data": {
+        "intercept_results": [
+            {
+                "company_code": "powertestexpress",
+                "company_name": "物流测试快递",
+                "tracking_no": "3213123123",
+                "value_amount": 400,
+                "can_intercept": false,
+                "is_success": false,
+                "unavailable_reason_code": -10006,
+                "unavailable_reason": "服务器开了小差，请稍后重试",
+                "intercept_cost": 400,
+                "cur_product": {
+                    "order_id": 1706063166401591,
+                    "product_image": "https://tosv.boe.byted.org/obj/temai/5a10d8cfc3747b2862fb72090fd976a3www660-660",
+                    "product_name": "云达人测试单裙",
+                    "product_spec": "红色系",
+                    "tags": null,
+                    "price": 200,
+                    "amount": 1
+                },
+                "other_products": [
+                    {
+                        "order_id": 1706063166401575,
+                        "product_image": "https://tosv.boe.byted.org/obj/temai/5a10d8cfc3747b2862fb72090fd976a3www660-660",
+                        "product_name": "云达人测试单裙",
+                        "product_spec": "白色系",
+                        "tags": null,
+                        "price": 200,
+                        "amount": 1
+                    }
+                ],
+                "other_product_amount": 1
+            }
+        ],
+        "success_count": 0,
+        "failed_count": 1,
+        "unavailable_reason_code": -10006,
+        "unavailable_reason": "服务器开了小差，请稍后重试",
+        "refund_amount": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

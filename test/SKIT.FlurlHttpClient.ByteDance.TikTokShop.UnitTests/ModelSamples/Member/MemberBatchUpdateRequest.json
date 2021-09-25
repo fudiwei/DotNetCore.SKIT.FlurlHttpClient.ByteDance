@@ -1,0 +1,12 @@
+﻿{
+    "app_id": "1",
+    "member_info_list": [
+        {
+            "open_id": "cb7bf7efa6d652046abd2f7d84ee18c1",
+            "mobile": "15012345678",
+            "level": 1,
+            "unbind": true,
+            "integral": 100
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+﻿{
+    "data": {
+        "code": "100000",
+        "code_msg": "success",
+        "datas": [
+            {
+                "order_id": "4790957107260097836",
+                "product_id": "3475285904548040556",
+                "author_account": "北三环小王子",
+                "short_id": "1068048",
+                "total_pay_amount": 31000,
+                "commission_rate": 300,
+                "estimated_comission": 810,
+                "real_comission": 0,
+                "order_status": "支付成功",
+                "shop_id": "1111115516",
+                "alliance_biz_type": "COMMON",
+                "phase_id": 1
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,9 @@
+﻿{
+    "data": {
+        "code": "100000",
+        "code_msg": "success",
+        "url": "https://lf6-tos-bill-center-sign.bytetos.com/ecom-paysettleinfo/data/download/item/DL202108191056192174226975.csv?x-expires=1629345425&x-signature=iaiLmiwJbc%2FMNKFrS6RaHzbdNwU%3D"
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,37 @@
+﻿{
+    "data": {
+        "data": [
+            {
+                "order_info": {
+                    "shop_order_id": "4787693795403838870",
+                    "order_id": "4707186553290011111",
+                    "create_time": "2020-08-21 12:23:21",
+                    "product_id": "3435006789295412728",
+                    "phase_order_no": "",
+                    "phase_cnt": 1,
+                    "phase_id": 1
+                },
+                "settle_info": {
+                    "settle_time": "2020-08-21 15:23:21",
+                    "pay_type": "1",
+                    "flow_type": "1",
+                    "settle_amount": 97
+                },
+                "income_info": {
+                    "pay_amount": 102,
+                    "platform_coupon": 0,
+                    "pay_promotion_amount": 0
+                },
+                "outcome_info": {
+                    "order_refund": 0,
+                    "platform_service_fee": 5,
+                    "author_commission": 0,
+                    "good_learn_channel_fee": 0
+                }
+            }
+        ],
+        "total": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

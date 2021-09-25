@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -478,6 +477,88 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.OrderGetCrossBorderFulfillInformationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Settle
+        /// <summary>
+        /// <para>异步调用 [POST] /order/settle 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/46/204 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderSettleResponse> ExecuteOrderSettleAsync(this TikTokShopClient client, Models.OrderSettleRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "settle")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderSettleResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/getSettleBillDetail 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/46/1192 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderGetSettleBillDetailResponse> ExecuteOrderGetSettleBillDetailAsync(this TikTokShopClient client, Models.OrderGetSettleBillDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "getSettleBillDetail")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderGetSettleBillDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/downloadToShop 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/46/1193 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderDownloadToShopResponse> ExecuteOrderDownloadToShopAsync(this TikTokShopClient client, Models.OrderDownloadToShopRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "downloadToShop")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderDownloadToShopResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/downloadSettleItemToShop 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/46/1191 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderDownloadSettleItemToShopResponse> ExecuteOrderDownloadSettleItemToShopAsync(this TikTokShopClient client, Models.OrderDownloadSettleItemToShopRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "downloadSettleItemToShop")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderDownloadSettleItemToShopResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

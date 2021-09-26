@@ -1,0 +1,26 @@
+﻿{
+    "order_id": "4782813149182887526",
+    "pack_list": [
+        {
+            "shipped_order_info": [
+                {
+                    "shipped_order_id": "123123",
+                    "shipped_num": 1,
+                    "shipped_item_ids": [
+                        "123123"
+                    ]
+                }
+            ],
+            "logistics_id": 12,
+            "company": "顺丰",
+            "company_code": "shunfeng",
+            "logistics_code": "sf1231231231234"
+        }
+    ],
+    "request_id": "1267250f-8b9d-4d9e-9fad-0cd9629c83de",
+    "is_refund_reject": false,
+    "serial_number_list": [
+        "546443524543534",
+        "646443524543534"
+    ]
+}

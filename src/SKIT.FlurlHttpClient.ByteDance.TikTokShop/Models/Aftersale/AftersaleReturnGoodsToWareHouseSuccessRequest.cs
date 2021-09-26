@@ -24,14 +24,14 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tracking_no")]
         [System.Text.Json.Serialization.JsonPropertyName("tracking_no")]
-        public string TrackingNumber { get; set; }= string.Empty;
+        public string TrackingNumber { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置物流公司编码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("logistics_company_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_company_code")]
-        public string LogisticsCompanyCode { get; set; }= string.Empty;
+        public string LogisticsCompanyCode { get; set; } = string.Empty;
 
         protected internal override string GetApiMethod()
         {

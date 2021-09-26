@@ -28,7 +28,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_code")]
-                public string OrderCode { get; set; }= default!;
+                public string OrderCode { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置证书编号。

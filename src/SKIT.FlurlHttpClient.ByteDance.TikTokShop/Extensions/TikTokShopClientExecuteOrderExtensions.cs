@@ -293,7 +293,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             return await client.SendRequestWithJsonAsync<Models.OrderBatchSearchIndexResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
-    
+
         #region Insurance
         /// <summary>
         /// <para>异步调用 [POST] /order/insurance 接口。</para>
@@ -559,6 +559,128 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.OrderDownloadSettleItemToShopResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Logistics
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsAdd 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/389 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsAddResponse> ExecuteOrderLogisticsAddAsync(this TikTokShopClient client, Models.OrderLogisticsAddRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsAdd")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsAddResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsCompanyList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/541 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsCompanyListResponse> ExecuteOrderLogisticsCompanyListAsync(this TikTokShopClient client, Models.OrderLogisticsCompanyListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsCompanyList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsCompanyListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsEdit 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/390 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsEditResponse> ExecuteOrderLogisticsEditAsync(this TikTokShopClient client, Models.OrderLogisticsEditRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsEdit")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsEditResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsAddSinglePack 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/563 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsAddSinglePackageResponse> ExecuteOrderLogisticsAddSinglePackageAsync(this TikTokShopClient client, Models.OrderLogisticsAddSinglePackageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsAddSinglePack")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsAddSinglePackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsAddMultiPack 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/562 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsAddMultiplePackageResponse> ExecuteOrderLogisticsAddMultiplePackageAsync(this TikTokShopClient client, Models.OrderLogisticsAddMultiplePackageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsAddMultiPack")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsAddMultiplePackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /order/logisticsEditByPack 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/539 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OrderLogisticsEditByPackageResponse> ExecuteOrderLogisticsEditByPackageAsync(this TikTokShopClient client, Models.OrderLogisticsEditByPackageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "order", "logisticsEditByPack")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OrderLogisticsEditByPackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

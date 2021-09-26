@@ -1,0 +1,11 @@
+﻿{
+    "data": [
+        {
+            "id": 7,
+            "name": "圆通快递",
+            "code": "yuantong"
+        }
+    ],
+    "err_no": 0,
+    "message": "success"
+}

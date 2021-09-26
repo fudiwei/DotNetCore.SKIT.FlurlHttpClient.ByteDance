@@ -1,0 +1,12 @@
+﻿{
+    "order_id": "4782813149182887526",
+    "logistics_id": 12,
+    "company": "顺丰",
+    "company_code": "shunfeng",
+    "logistics_code": "sf1231231231234",
+    "is_refund_reject": false,
+    "serial_number_list": [
+        "546443524543534",
+        "646443524543534"
+    ]
+}

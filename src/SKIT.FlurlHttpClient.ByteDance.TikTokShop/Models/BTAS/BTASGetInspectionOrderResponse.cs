@@ -25,7 +25,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_code")]
-                        public string[] OrderCodeList { get; set; }= default!;
+                        public string[] OrderCodeList { get; set; } = default!;
                     }
                 }
 

@@ -208,5 +208,65 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             return await client.SendRequestWithJsonAsync<Models.AftersaleApplyLogisticsInterceptResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /afterSale/refundListSearch 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/17/254 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AftersaleRefundListSearchResponse> ExecuteAftersaleRefundListSearchAsync(this TikTokShopClient client, Models.AftersaleRefundListSearchRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "afterSale", "refundListSearch")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AftersaleRefundListSearchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /afterSale/List 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/17/254 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AftersaleListResponse> ExecuteAftersaleListAsync(this TikTokShopClient client, Models.AftersaleListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "afterSale", "List")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AftersaleListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /afterSale/Detail 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/17/1095 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AftersaleDetailResponse> ExecuteAftersaleDetailAsync(this TikTokShopClient client, Models.AftersaleDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "afterSale", "Detail")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AftersaleDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
     }
 }

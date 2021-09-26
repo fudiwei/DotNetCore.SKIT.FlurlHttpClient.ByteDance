@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "has_more": "true",
+        "items": [
+            {
+                "aftersale_info": {},
+                "order_info": {},
+                "seller_logs": [
+                    {
+                        "content": "\"买家觉得小兔子太可爱了，不想要了\"",
+                        "create_time": "1626675161",
+                        "op_name": "\"兔子店铺CEO\"",
+                        "star": "0"
+                    }
+                ],
+                "text_part": {}
+            }
+        ],
+        "page": 0,
+        "size": 10,
+        "total": 1025
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -54,7 +54,7 @@
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualNullableIntegerConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("send_logistics_id")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
-        public int? SendLogisticsId { get; set; }
+        public int? SendLogisticsCompanyId { get; set; }
 
         /// <summary>
         /// 获取或设置物流公司编码。

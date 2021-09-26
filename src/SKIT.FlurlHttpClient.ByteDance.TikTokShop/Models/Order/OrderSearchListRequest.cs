@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -142,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_asc")]
         [System.Text.Json.Serialization.JsonPropertyName("order_asc")]
-        public bool? SortByAsc { get; set; }
+        public bool? SortByAscending { get; set; }
 
         /// <summary>
         /// 获取或设置排序字段。

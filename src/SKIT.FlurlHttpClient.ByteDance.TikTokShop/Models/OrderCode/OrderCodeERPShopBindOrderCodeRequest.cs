@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -80,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logistics_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("logistics_id")]
-                public int? LogisticsId { get; set; }
+                public int? LogisticsCompanyId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品明细列表。

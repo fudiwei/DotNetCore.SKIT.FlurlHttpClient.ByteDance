@@ -1,0 +1,112 @@
+﻿{
+    "data": {
+        "aftersale_list": [
+            {
+                "order_id": 4733587476763186359,
+                "aftersale_id": 6898662840928862468,
+                "apply_time": "2020-11-24 20:16:07",
+                "aftersale_type": 2,
+                "status_deadline": "",
+                "deadline_type": 0,
+                "aftersale_process_desc": "未发货仅退款",
+                "aftersale_status_desc": "同意退款，退款成功",
+                "return_status_desc": "未发货",
+                "reason_desc": "其他",
+                "part_type": 0,
+                "pid": 4733587476763186359,
+                "aftersale_refund_type_desc": "原路退款",
+                "refund_status": 3,
+                "aftersale_status": 12,
+                "post_receiver": "小雨测试01",
+                "arbitrate_status": 0,
+                "refund_type": 0,
+                "urge_sms_cnt": 3,
+                "aftersale_items": [
+                    {
+                        "product_name": "测试商品",
+                        "product_id": 3449112394213808795,
+                        "product_img": "https://sf1-ttcdn-tos.pstatp.com/obj/temai/b01d3603e080606c6d0238a119094cb2www750-1039",
+                        "num": 1,
+                        "pay_amount": 1,
+                        "post_amount": 0,
+                        "refund_amount": 1,
+                        "refund_post_amount": 0,
+                        "aftersale_service": [
+                            "supply_7day_return"
+                        ],
+                        "sku_spec": [
+                            {
+                                "name": "颜色",
+                                "value": "1"
+                            },
+                            {
+                                "name": "尺码",
+                                "value": "1"
+                            }
+                        ],
+                        "order_id": 4733587476763186359,
+                        "create_time": "2020-11-24 20:02:03",
+                        "part_type": 0
+                    }
+                ],
+                "aftersale_record_items": [
+                    {
+                        "aftersale_id": 0,
+                        "order_id": 0,
+                        "role": "user",
+                        "op_type": "apply",
+                        "op_name": "",
+                        "conclusion": 0,
+                        "op_time": "2020-11-24 20:16:07",
+                        "comment": "其他",
+                        "evidence": [],
+                        "remark": "测试",
+                        "got_pkg": 0,
+                        "logistics_code": null,
+                        "company_code": null,
+                        "company_name": null,
+                        "refund_type": null,
+                        "aftersale_order_type": 2
+                    },
+                    {
+                        "aftersale_id": 0,
+                        "order_id": 0,
+                        "role": "shop",
+                        "op_type": "audit",
+                        "op_name": "",
+                        "conclusion": 1,
+                        "op_time": "2020-11-24 20:16:31",
+                        "comment": "",
+                        "evidence": [],
+                        "remark": null,
+                        "got_pkg": null,
+                        "logistics_code": null,
+                        "company_code": null,
+                        "company_name": null,
+                        "refund_type": null
+                    },
+                    {
+                        "aftersale_id": 0,
+                        "order_id": 0,
+                        "role": "system",
+                        "op_type": "refund",
+                        "op_name": "",
+                        "conclusion": 0,
+                        "op_time": "2020-11-24 20:19:34",
+                        "comment": "",
+                        "evidence": [],
+                        "remark": null,
+                        "got_pkg": null,
+                        "logistics_code": null,
+                        "company_code": null,
+                        "company_name": null,
+                        "refund_type": null
+                    }
+                ]
+            }
+        ],
+        "total": 3779
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,0 +1,20 @@
+﻿{
+    "type": 1,
+    "logistics_code": "jtexpress",
+    "sender_address": {
+        "country_code": "CHN",
+        "province_name": "浙江省",
+        "city_name": "杭州市",
+        "district_name": "滨江区",
+        "street_name": "长河街道",
+        "detail_address": "XX小区X幢"
+    },
+    "receiver_address": {
+        "country_code": "CHN",
+        "province_name": "浙江省",
+        "city_name": "杭州市",
+        "district_name": "滨江区",
+        "street_name": "长河街道",
+        "detail_address": "XX小区X幢"
+    }
+}

@@ -1,0 +1,29 @@
+﻿{
+    "data": {
+        "netsites": [
+            {
+                "netsite_code": "100010",
+                "netsite_name": "E世界",
+                "amount": "1",
+                "sender_address": [
+                    {
+                        "province_name": "北京",
+                        "city_name": "北京市",
+                        "district_name": "海淀区",
+                        "street_name": "E世界",
+                        "detail_address": "E世界"
+                    }
+                ],
+                "allocated_quantity": 1,
+                "cancelled_quantity": 1,
+                "recycled_quantity": 1,
+                "company": "zhongtong",
+                "company_type": 1
+            }
+        ],
+        "logistics_code": "zhongtong",
+        "company_type": 1
+    },
+    "err_no": 0,
+    "message": "success"
+}

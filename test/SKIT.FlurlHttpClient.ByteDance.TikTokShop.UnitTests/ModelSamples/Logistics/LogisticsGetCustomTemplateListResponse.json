@@ -1,0 +1,22 @@
+﻿{
+    "data": {
+        "custom_template_data": [
+            {
+                "logistics_code": "shunfeng",
+                "custom_template_infos": [
+                    {
+                        "custom_template_code": "123",
+                        "custom_template_name": "muban",
+                        "parent_template_code": "1",
+                        "custom_template_url": "1",
+                        "custom_template_key_list": [],
+                        "custom_template_id": 1,
+                        "parent_template_id": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

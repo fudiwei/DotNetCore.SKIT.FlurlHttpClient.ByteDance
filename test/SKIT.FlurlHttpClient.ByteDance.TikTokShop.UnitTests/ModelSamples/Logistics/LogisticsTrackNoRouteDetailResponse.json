@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "route_node_list": [
+            {
+                "content": "配送中",
+                "timestamp": "161324234234",
+                "state": "1",
+                "state_description": "配送",
+                "site_name": "北京"
+            }
+        ],
+        "track_info": {
+            "track_no": "234234234",
+            "express": "ssss"
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

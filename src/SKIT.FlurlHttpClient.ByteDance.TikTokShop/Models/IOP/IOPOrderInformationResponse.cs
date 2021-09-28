@@ -7,7 +7,7 @@
     {
         public static class Types
         {
-            public class Data : IOPOrderListResponse.Types.Data.Types.Order
+            public class Data : IOPOrderListResponse.Types.Data.Types.DistributeOrder
             {
             }
         }

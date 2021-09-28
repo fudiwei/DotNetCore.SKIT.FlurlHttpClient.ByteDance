@@ -1,0 +1,41 @@
+﻿{
+    "data": {
+        "distr_order_list": [
+            {
+                "distr_order_id": "2222333332223",
+                "shop_order_id": "22131323322",
+                "order_status": 2,
+                "distr_status": 1,
+                "distr_time": 1630484005,
+                "after_sale_status": 1,
+                "supplier_shop_id": 77977,
+                "supplier_shop_name": "厂家店铺名",
+                "exp_ship_time": 1630484005,
+                "pay_time": 1630484005,
+                "seller_words": "发货黑色",
+                "product_name": "鞋子",
+                "product_count": 1,
+                "product_id": "2313131313",
+                "product_price": 1000,
+                "sku_spec": "褐色",
+                "out_sku_id": "123123",
+                "province_id": "110000",
+                "province": "北京",
+                "city_id": "110000",
+                "city": "北京",
+                "district_id": "110000",
+                "district": "海淀",
+                "street_id": "110000",
+                "street": "中关村",
+                "tracking_no": "5443445",
+                "company_name": "shunfeng",
+                "distr_cancel_reason": "订单已取消"
+            }
+        ],
+        "page": 0,
+        "size": 20,
+        "total": 100
+    },
+    "err_no": 0,
+    "message": "success"
+}

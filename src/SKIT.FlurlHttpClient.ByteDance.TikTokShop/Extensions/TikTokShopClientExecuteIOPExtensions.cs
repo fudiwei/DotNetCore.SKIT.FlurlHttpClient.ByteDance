@@ -68,5 +68,107 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             return await client.SendRequestWithJsonAsync<Models.IOPOrderInformationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        #region Seller
+        /// <summary>
+        /// <para>异步调用 [POST] /iop/sellerDistribute 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/59/958 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.IOPSellerDistributeResponse> ExecuteIOPSellerDistributeAsync(this TikTokShopClient client, Models.IOPSellerDistributeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "iop", "sellerDistribute")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.IOPSellerDistributeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /iop/sellerCancleDistribute 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/59/958 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.IOPSellerCancelDistributeResponse> ExecuteIOPSellerCancelDistributeAsync(this TikTokShopClient client, Models.IOPSellerCancelDistributeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "iop", "sellerCancleDistribute")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.IOPSellerCancelDistributeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /iop/sellerSupplierList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/59/958 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.IOPSellerSupplierListResponse> ExecuteIOPSellerSupplierListAsync(this TikTokShopClient client, Models.IOPSellerSupplierListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "iop", "sellerSupplierList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.IOPSellerSupplierListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /iop/sellerOrderList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/59/960 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.IOPSellerOrderListResponse> ExecuteIOPSellerOrderListAsync(this TikTokShopClient client, Models.IOPSellerOrderListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "iop", "sellerOrderList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.IOPSellerOrderListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /iop/sellerOrderInfo 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/59/959 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.IOPSellerOrderInformationResponse> ExecuteIOPSellerOrderInformationAsync(this TikTokShopClient client, Models.IOPSellerOrderInformationRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "iop", "sellerOrderInfo")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.IOPSellerOrderInformationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

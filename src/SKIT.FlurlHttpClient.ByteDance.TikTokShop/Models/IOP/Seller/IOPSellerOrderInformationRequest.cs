@@ -1,17 +1,10 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /iop/orderInfo 接口的请求。</para>
+    /// <para>表示 [POST] /iop/sellerOrderInfo 接口的请求。</para>
     /// </summary>
-    public class IOPOrderInformationRequest : TikTokShopRequest
+    public class IOPSellerOrderInformationRequest : TikTokShopRequest
     {
-        /// <summary>
-        /// 获取或设置代打店铺 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("user_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("user_id")]
-        public long DistributeShopId { get; set; }
-
         /// <summary>
         /// 获取或设置代打订单 ID。
         /// </summary>

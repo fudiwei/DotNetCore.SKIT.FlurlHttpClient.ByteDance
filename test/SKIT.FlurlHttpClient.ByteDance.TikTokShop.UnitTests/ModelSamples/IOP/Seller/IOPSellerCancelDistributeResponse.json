@@ -1,0 +1,11 @@
+﻿{
+    "data": {
+        "succ_distr_order_ids": [
+            "4535353535",
+            "3453543534535"
+        ],
+        "fail_distr_order_ids": []
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /iop/orderList 接口的响应。</para>
+    /// <para>表示 [POST] /iop/sellerOrderList 接口的响应。</para>
     /// </summary>
-    public class IOPOrderListResponse : TikTokShopResponse<IOPOrderListResponse.Types.Data>
+    public class IOPSellerOrderListResponse : TikTokShopResponse<IOPSellerOrderListResponse.Types.Data>
     {
         public static class Types
         {
@@ -14,18 +14,18 @@
                     public class DistributeOrder
                     {
                         /// <summary>
-                        /// 获取或设置代打店铺 ID。
+                        /// 获取或设置厂商店铺 ID。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("user_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("user_id")]
-                        public long DistributeShopId { get; set; }
+                        [Newtonsoft.Json.JsonProperty("supplier_shop_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("supplier_shop_id")]
+                        public int SupplierShopId { get; set; }
 
                         /// <summary>
-                        /// 获取或设置代打店铺自定义名称。
+                        /// 获取或设置厂商店铺名称。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("user_name")]
-                        [System.Text.Json.Serialization.JsonPropertyName("user_name")]
-                        public string DistributeShopName { get; set; } = default!;
+                        [Newtonsoft.Json.JsonProperty("supplier_shop_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("supplier_shop_name")]
+                        public string SupplierShopName { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置代打订单 ID。
@@ -42,6 +42,20 @@
                         public string? SellerWords { get; set; }
 
                         /// <summary>
+                        /// 获取或设置店铺订单号。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("shop_order_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("shop_order_id")]
+                        public string ShopOrderId { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置支付时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("pay_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("pay_time")]
+                        public long PayTimestamp { get; set; }
+
+                        /// <summary>
                         /// 获取或设置分配时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("distr_time")]
@@ -54,6 +68,20 @@
                         [Newtonsoft.Json.JsonProperty("distr_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("distr_status")]
                         public int DistributeStatus { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置订单状态。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("order_status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("order_status")]
+                        public int OrderStatus { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置售后状态。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("after_sale_status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("after_sale_status")]
+                        public int AftersaleStatus { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品 ID。
@@ -166,6 +194,27 @@
                         public string StreetName { get; set; } = default!;
 
                         /// <summary>
+                        /// 获取或设置承诺发货时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("exp_ship_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("exp_ship_time")]
+                        public long? ExpectedShipTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置物流单号。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("tracking_no")]
+                        [System.Text.Json.Serialization.JsonPropertyName("tracking_no")]
+                        public string? TrackingNumber { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置物流公司名称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("company_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("company_name")]
+                        public string? LogisticsCompanyName { get; set; }
+
+                        /// <summary>
                         /// 获取或设置取消原因。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("distr_cancel_reason")]
@@ -177,9 +226,23 @@
                 /// <summary>
                 /// 获取或设置代打订单列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("order_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("order_list")]
+                [Newtonsoft.Json.JsonProperty("distr_order_list")]
+                [System.Text.Json.Serialization.JsonPropertyName("distr_order_list")]
                 public Types.DistributeOrder[] DistributeOrderList { get; set; } = default!;
+
+                /// <summary>
+                /// 获取或设置翻页页数。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("page")]
+                [System.Text.Json.Serialization.JsonPropertyName("page")]
+                public int PageNumber { get; set; }
+
+                /// <summary>
+                /// 获取或设置翻页每页数量。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("size")]
+                [System.Text.Json.Serialization.JsonPropertyName("size")]
+                public int PageSize { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

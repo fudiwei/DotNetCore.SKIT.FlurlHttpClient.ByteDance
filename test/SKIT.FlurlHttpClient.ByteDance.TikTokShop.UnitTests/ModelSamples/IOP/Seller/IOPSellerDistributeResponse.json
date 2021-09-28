@@ -1,0 +1,14 @@
+﻿{
+    "data": {
+        "distribute_order_reuslts": [
+            {
+                "supplier_shop_id": 77977,
+                "distr_order_id": "77878786688878787",
+                "err_no": 0,
+                "message": "succ"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

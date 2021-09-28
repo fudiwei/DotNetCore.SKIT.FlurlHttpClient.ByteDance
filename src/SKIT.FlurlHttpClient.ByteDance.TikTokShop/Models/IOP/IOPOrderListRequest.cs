@@ -6,18 +6,25 @@
     public class IOPOrderListRequest : TikTokShopRequest
     {
         /// <summary>
-        /// 获取或设置更新时间开始时间的时间戳。
+        /// 获取或设置更新时间开始时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("start_update_time")]
         [System.Text.Json.Serialization.JsonPropertyName("start_update_time")]
         public long StartUpdateTimestamp { get; set; }
 
         /// <summary>
-        /// 获取或设置更新时间结束时间的时间戳。
+        /// 获取或设置更新时间结束时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("end_update_time")]
         [System.Text.Json.Serialization.JsonPropertyName("end_update_time")]
         public long EndUpdateTimestamp { get; set; }
+
+        /// <summary>
+        /// 获取或设置分配状态。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("distr_status")]
+        [System.Text.Json.Serialization.JsonPropertyName("distr_status")]
+        public int? DistributeStatus { get; set; }
 
         /// <summary>
         /// 获取或设置翻页页数。
@@ -34,12 +41,5 @@
         [Newtonsoft.Json.JsonProperty("size")]
         [System.Text.Json.Serialization.JsonPropertyName("size")]
         public int PageSize { get; set; } = 10;
-
-        /// <summary>
-        /// 获取或设置分配状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("distr_status")]
-        [System.Text.Json.Serialization.JsonPropertyName("distr_status")]
-        public int? DistributeStatus { get; set; }
     }
 }

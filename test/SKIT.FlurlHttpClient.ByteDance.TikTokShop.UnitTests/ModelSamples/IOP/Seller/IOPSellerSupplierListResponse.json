@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "supplier_shop_list": [
+            {
+                "supplier_shop_name": "大白店铺二",
+                "supplier_shop_id": 77977,
+                "apply_time": 1630484005,
+                "band_time": 1630484005,
+                "refuse_time": 1630484005,
+                "bind_status": 1
+            }
+        ],
+        "page": 0,
+        "page_size": 20,
+        "total": 100
+    },
+    "err_no": 0,
+    "message": "success"
+}

@@ -24,6 +24,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_id")]
         [System.Text.Json.Serialization.JsonPropertyName("user_id")]
-        public int? UserId { get; set; }
+        public long? UserId { get; set; }
     }
 }

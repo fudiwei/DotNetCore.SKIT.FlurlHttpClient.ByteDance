@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /apps/share_config 接口的请求。</para>
@@ -27,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("uniq_id")]
         [System.Text.Json.Serialization.JsonPropertyName("uniq_id")]
-        public string UserId { get; set; } = string.Empty;
+        public string UserUniqueId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置操作类型。

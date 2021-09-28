@@ -1,0 +1,33 @@
+﻿{
+    "data": {
+        "order_list": [
+            {
+                "distr_order_id": "77878786688878787",
+                "user_id": 55557775757756,
+                "user_name": "xxx店",
+                "seller_words": "发xxx快递",
+                "distr_time": 1625628558,
+                "distr_status": 1,
+                "product_name": "衣服",
+                "product_count": 2,
+                "product_id": "1142351234",
+                "product_price": 990,
+                "sku_spec": "绿色/小",
+                "out_sku_id": "A11",
+                "receiver_id": "4239E33B82F201A3D73D8DA2DDA21AD4",
+                "province": "上海市",
+                "city": "上海市",
+                "district": "长宁区",
+                "street": "中关村",
+                "province_id": "101000",
+                "city_id": "101000",
+                "district_id": "101000",
+                "street_id": "101000",
+                "distr_cancel_reason": "订单已取消"
+            }
+        ],
+        "total": 100
+    },
+    "err_no": 0,
+    "message": "success"
+}

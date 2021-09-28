@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -129,6 +127,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.CrossBorderOrderInterceptionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        
+        /// <summary>
+        /// <para>异步调用 [POST] /crossBorder/orderList 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/496 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.CrossBorderOrderListResponse> ExecuteCrossBorderOrderListAsync(this TikTokShopClient client, Models.CrossBorderQueryBalanceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "crossBorder", "orderList")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.CrossBorderOrderListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

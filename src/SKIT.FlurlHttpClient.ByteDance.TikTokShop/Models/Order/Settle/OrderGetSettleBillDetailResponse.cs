@@ -205,7 +205,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("real_pay_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("real_pay_amount")]
-                        public int RealPayAmount { get; set; }
+                        public int ActualPayAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单实付应结（单位：分）。

@@ -106,7 +106,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("real_refund_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("real_refund_amount")]
-                                public int RealRefundmount { get; set; }
+                                public int ActualRefundmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置退款金额（单位：分）。

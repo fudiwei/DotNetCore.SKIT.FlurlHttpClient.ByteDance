@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/searchList 接口的响应。</para>
@@ -521,7 +518,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("delivery_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("delivery_id")]
-                                public string? DeliveryId { get; set; }
+                                public string? PackageId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品列表。

@@ -9,74 +9,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
     {
         public static class Types
         {
-            public class Contact
+            public class Contact : LogisticsNewCreateOrderRequest.Types.Contact
             {
-                /// <summary>
-                /// 获取或设置姓名。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("name")]
-                [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置固定电话。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("phone")]
-                [System.Text.Json.Serialization.JsonPropertyName("phone")]
-                public string? TeleNumber { get; set; }
-
-                /// <summary>
-                /// 获取或设置手机号码。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("mobile")]
-                [System.Text.Json.Serialization.JsonPropertyName("mobile")]
-                public string? MobileNumber { get; set; }
             }
 
-            public class Address
+            public class Address : LogisticsNewCreateOrderRequest.Types.Address
             {
-                /// <summary>
-                /// 获取或设置国家编码。
-                /// <para>默认值：CHN</para>
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("country_code")]
-                [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                public string CountryCode { get; set; } = "CHN";
-
-                /// <summary>
-                /// 获取或设置省份名称。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("province_name")]
-                [System.Text.Json.Serialization.JsonPropertyName("province_name")]
-                public string ProvinceName { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置城市名称。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("city_name")]
-                [System.Text.Json.Serialization.JsonPropertyName("city_name")]
-                public string CityName { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置区县名称。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("district_name")]
-                [System.Text.Json.Serialization.JsonPropertyName("district_name")]
-                public string DistrictName { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置街道名称。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("street_name")]
-                [System.Text.Json.Serialization.JsonPropertyName("street_name")]
-                public string StreetName { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置详细地址。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("detail_address")]
-                [System.Text.Json.Serialization.JsonPropertyName("detail_address")]
-                public string Detail { get; set; } = string.Empty;
             }
         
             public class Sender
@@ -89,15 +27,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 public Contact? Contact { get; set; }
             }
 
-            public class Receiver
+            public class Receiver : Sender
             {
-                /// <summary>
-                /// 获取或设置联系方式信息。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("contact")]
-                [System.Text.Json.Serialization.JsonPropertyName("contact")]
-                public Contact? Contact { get; set; }
-
                 /// <summary>
                 /// 获取或设置收货地址信息。
                 /// </summary>
@@ -106,49 +37,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 public Address? Address { get; set; }
             }
 
-            public class Item
+            public class Item : LogisticsNewCreateOrderRequest.Types.Order.Types.Item
             {
-                /// <summary>
-                /// 获取或设置商品名称。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_name")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_name")]
-                public string Name { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置商品规格。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_specs")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_specs")]
-                public string? Specification { get; set; }
-
-                /// <summary>
-                /// 获取或设置商品数量。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_count")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_count")]
-                public int Count { get; set; }
-
-                /// <summary>
-                /// 获取或设置单件体积（单位：立方厘米）。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_volume")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_volume")]
-                public int? Volume { get; set; }
-
-                /// <summary>
-                /// 获取或设置单件重量（单位：克）。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_weight")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_weight")]
-                public int? Weight { get; set; }
-
-                /// <summary>
-                /// 获取或设置单件净重（单位：克）。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("item_net_weight")]
-                [System.Text.Json.Serialization.JsonPropertyName("item_net_weight")]
-                public int? NetWeight { get; set; }
             }
         }
 
@@ -202,25 +92,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         public string? Extra { get; set; }
 
         /// <summary>
-        /// 获取或设置用户 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("user_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("user_id")]
-        public int? UserId { get; set; }
-
-        /// <summary>
-        /// 获取或设置体积信息。
+        /// 获取或设置总体积字符串。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("volume")]
         [System.Text.Json.Serialization.JsonPropertyName("volume")]
-        public string? Volume { get; set; }
+        public string? TotalVolumeString { get; set; }
 
         /// <summary>
         /// 获取或设置总重量（单位：克）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("weight")]
         [System.Text.Json.Serialization.JsonPropertyName("weight")]
-        public int? Weight { get; set; }
+        public int? TotalWeight { get; set; }
+
+        /// <summary>
+        /// 获取或设置用户 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("user_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("user_id")]
+        public int? UserId { get; set; }
 
         internal protected override string GetApiMethod()
         {

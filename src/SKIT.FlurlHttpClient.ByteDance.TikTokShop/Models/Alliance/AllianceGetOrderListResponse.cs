@@ -75,7 +75,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("real_comission")]
                         [System.Text.Json.Serialization.JsonPropertyName("real_comission")]
-                        public int RealComission { get; set; }
+                        public int ActualComission { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单状态。

@@ -1,0 +1,50 @@
+﻿{
+    "sender_info": {
+        "address": {},
+        "contact": {}
+    },
+    "logistics_code": "jtexpress",
+    "order_infos": [
+        {
+            "order_id": "202011809",
+            "pack_id": "1", 
+            "service_list": [],
+            "product_type": 1,
+            "pay_method": 1,
+            "pay_amount": 5000,
+            "pod_model_address": {},
+            "receiver_info": {
+                "address": {},
+                "contact": {}
+            },
+            "sender_fetch_time": "2020-11-11 22:00:00|2020-11-11 23:00:00",
+            "is_sign_back": 0,
+            "remark": "我的包裹易碎，包严实点",
+            "total_pack_count": 2,
+            "total_weight": 1,
+            "total_length": 1,
+            "total_width": 1,
+            "total_height": 1,
+            "volume": 1,
+            "warehouse": {
+                "is_sum_up": true,
+                "wh_code": "1",
+                "wh_order_no": "8837383",
+                "delivery_type": 2
+            },
+            "net_info": {
+                "category": "加盟",
+                "net_code": "XS222",
+                "monthly_account": "324322432",
+                "secret_key": "ddfdfdf"
+            },
+            "shipping_code": "SF24234234234234"
+        }
+    ],
+    "user_id": 1,
+    "delivery_req": {
+        "is_center_delivery": true,
+        "is_pickup_self": true
+    },
+    "order_channel": "1"
+}

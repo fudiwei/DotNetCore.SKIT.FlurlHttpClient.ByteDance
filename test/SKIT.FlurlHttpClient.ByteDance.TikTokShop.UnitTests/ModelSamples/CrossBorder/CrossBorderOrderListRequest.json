@@ -1,0 +1,13 @@
+﻿{
+    "vendor": "ABCD",
+    "start_time": "2018-06-03 00:00:00",
+    "end_time": "2018-06-03 00:00:00",
+    "order_by": "create_time",
+    "is_desc": 1,
+    "order_list": [
+        "order_id1",
+        "order_id2"
+    ],
+    "page": 0,
+    "size": 100
+}

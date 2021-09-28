@@ -85,7 +85,7 @@
                 }
 
                 /// <summary>
-                /// 获取或设置自定义模板信息。
+                /// 获取或设置自定义模板列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("custom_template_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("custom_template_data")]

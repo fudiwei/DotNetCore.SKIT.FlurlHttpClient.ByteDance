@@ -1,0 +1,31 @@
+﻿{
+    "data": {
+        "ebill_infos": [
+            {
+                "extra_resp": "1",
+                "order_channel": "c",
+                "order_id": "202011809",
+                "pack_id": "1",
+                "package_center_code": "1",
+                "package_center_name": "1",
+                "shipping_code": "34343",
+                "short_address_code": "1",
+                "short_address_name": "1",
+                "sort_code": "400-W00 000",
+                "sub_waybill_codes": "13,434,556",
+                "track_no": "202011809"
+            }
+        ],
+        "err_infos": [
+            {
+                "err_code": "10701",
+                "err_msg": "电子面单库存不足",
+                "order_channel": "2",
+                "order_id": "1",
+                "pack_id": "1"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

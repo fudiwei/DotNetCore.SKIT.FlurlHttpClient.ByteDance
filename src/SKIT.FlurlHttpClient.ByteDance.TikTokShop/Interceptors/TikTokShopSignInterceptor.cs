@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
             if (flurlCall == null) throw new ArgumentNullException(nameof(flurlCall));
 
             var queries = HttpUtility.ParseQueryString(flurlCall.HttpRequestMessage.RequestUri?.Query ?? string.Empty);
-            string method = flurlCall.Request.Url.ToString().Substring(_baseUrl.Length).Split('?')[0].TrimStart('/').TrimEnd('/').Trim().Replace("/", ".");
+            string method = queries.Get("method") ?? flurlCall.Request.Url.ToString().Substring(_baseUrl.Length).Split('?')[0].TrimStart('/').TrimEnd('/').Trim().Replace("/", ".");
             string version = queries.Get("v") ?? string.Empty;
             string timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds().ToString();
 

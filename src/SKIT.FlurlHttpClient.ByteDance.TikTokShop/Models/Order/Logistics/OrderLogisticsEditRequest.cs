@@ -39,10 +39,5 @@
         [Newtonsoft.Json.JsonProperty("logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
         public string? LogisticsCode { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order/logisticsEdit");
-        }
     }
 }

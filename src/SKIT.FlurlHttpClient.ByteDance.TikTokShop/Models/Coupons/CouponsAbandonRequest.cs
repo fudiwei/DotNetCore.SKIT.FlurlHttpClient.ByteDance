@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /coupons/abandon 接口的请求。</para>
@@ -14,10 +11,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("cert_no")]
         [System.Text.Json.Serialization.JsonPropertyName("cert_no")]
         public string CertNumber { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("coupons.abandon");
-        }
     }
 }

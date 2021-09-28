@@ -32,10 +32,5 @@
         [Newtonsoft.Json.JsonProperty("logistics_company_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_company_code")]
         public string LogisticsCompanyCode { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.returnGoodsToWareHouseSuccess");
-        }
     }
 }

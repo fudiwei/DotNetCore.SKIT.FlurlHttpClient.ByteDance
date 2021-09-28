@@ -62,10 +62,5 @@
         [Newtonsoft.Json.JsonProperty("shipping_logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("shipping_logistics_code")]
         public string? ShippingLogisticsCode { get; set; } 
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("btas.shipping");
-        }
     }
 }

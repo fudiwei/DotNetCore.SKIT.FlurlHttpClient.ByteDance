@@ -25,10 +25,5 @@
         [Newtonsoft.Json.JsonProperty("user_id")]
         [System.Text.Json.Serialization.JsonPropertyName("user_id")]
         public int? UserId { get; set; }
-
-        internal protected override string GetApiMethod()
-        {
-            return string.Intern("logistics.cancelOrder");
-        }
     }
 }

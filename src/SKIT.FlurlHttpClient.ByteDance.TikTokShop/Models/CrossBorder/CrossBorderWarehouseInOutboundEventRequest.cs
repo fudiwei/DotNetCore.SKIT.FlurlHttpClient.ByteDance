@@ -162,10 +162,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("outbound_cargo_infos")]
         [System.Text.Json.Serialization.JsonPropertyName("outbound_cargo_infos")]
         public IList<Types.OutboundCargo>? OutboundCargoList { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("crossBorder.warehouseInOutboundEvent");
-        }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /product/detail 接口的请求。</para>
@@ -25,10 +22,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("show_draft")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualNullableBooleanConverter))]
         public bool? RequireShowDraft { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("product.detail");
-        }
     }
 }

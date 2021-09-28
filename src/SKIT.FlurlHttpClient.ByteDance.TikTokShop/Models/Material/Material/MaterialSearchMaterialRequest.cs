@@ -88,10 +88,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_type")]
         [System.Text.Json.Serialization.JsonPropertyName("order_type")]
         public int? OrderType { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("material.searchMaterial");
-        }
     }
 }

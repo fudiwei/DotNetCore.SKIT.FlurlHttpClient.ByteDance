@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -28,10 +27,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("priorities")]
         [System.Text.Json.Serialization.JsonPropertyName("priorities")]
         public IDictionary<string, int> OutWarehousePriorityMap { get; set; } = new Dictionary<string, int>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("warehouse.setPriority");
-        }
     }
 }

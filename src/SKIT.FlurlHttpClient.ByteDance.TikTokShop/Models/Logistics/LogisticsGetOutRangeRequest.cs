@@ -81,10 +81,5 @@
         [Newtonsoft.Json.JsonProperty("receiver_address")]
         [System.Text.Json.Serialization.JsonPropertyName("receiver_address")]
         public Types.Address ReceiverAddress { get; set; } = new Types.Address();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("logistics.getOutRange");
-        }
     }
 }

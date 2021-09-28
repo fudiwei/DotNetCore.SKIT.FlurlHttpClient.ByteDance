@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -14,10 +13,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("object_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("object_ids")]
         public IList<string> ObjectIdList { get; set; } = new List<string>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("material.recoverFolder");
-        }
     }
 }

@@ -5,9 +5,5 @@
     /// </summary>
     public class LogisticsTemplateListRequest : TikTokShopRequest
     {
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("logistics.templateList");
-        }
     }
 }

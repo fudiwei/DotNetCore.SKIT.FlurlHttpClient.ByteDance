@@ -18,10 +18,5 @@
         [Newtonsoft.Json.JsonProperty("track_no")]
         [System.Text.Json.Serialization.JsonPropertyName("track_no")]
         public string TrackingNumber { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("logistics.trackNoRouteDetail");
-        }
     }
 }

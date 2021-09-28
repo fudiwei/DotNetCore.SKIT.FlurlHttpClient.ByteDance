@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -55,10 +53,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("update_detail")]
         [System.Text.Json.Serialization.JsonPropertyName("update_detail")]
         public Types.Detail Detail { get; set; } = new Types.Detail();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.updateOrderAmount");
-        }
     }
 }

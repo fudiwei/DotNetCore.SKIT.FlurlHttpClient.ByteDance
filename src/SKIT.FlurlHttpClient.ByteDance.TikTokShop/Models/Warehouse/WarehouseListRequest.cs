@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -74,10 +73,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_by")]
         [System.Text.Json.Serialization.JsonPropertyName("order_by")]
         public string SortField { get; set; } = "create_time";
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("warehouse.list");
-        }
     }
 }

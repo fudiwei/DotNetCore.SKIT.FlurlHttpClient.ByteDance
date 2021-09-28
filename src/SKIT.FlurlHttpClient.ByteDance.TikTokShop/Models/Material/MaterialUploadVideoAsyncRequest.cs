@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /material/uploadVideoAsync 接口的请求。</para>
@@ -28,10 +25,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("url")]
         [System.Text.Json.Serialization.JsonPropertyName("url")]
         public string VideoUrl { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("material.uploadVideoAsync");
-        }
     }
 }

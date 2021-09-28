@@ -27,10 +27,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("comment")]
         [System.Text.Json.Serialization.JsonPropertyName("comment")]
         public string? Remark { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.submitEvidence");
-        }
     }
 }

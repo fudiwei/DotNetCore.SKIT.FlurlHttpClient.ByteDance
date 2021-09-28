@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/getServiceList 接口的请求。</para>
@@ -73,10 +69,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_by")]
         [System.Text.Json.Serialization.JsonPropertyName("order_by")]
         public string? SortField { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.getServiceList");
-        }
     }
 }

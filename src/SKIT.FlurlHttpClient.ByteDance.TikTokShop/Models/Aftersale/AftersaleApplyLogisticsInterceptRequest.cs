@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -48,10 +47,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("intercept_targets")]
         [System.Text.Json.Serialization.JsonPropertyName("intercept_targets")]
         public IList<Types.TnterceptTarget> TnterceptTargetList { get; set; } = new List<Types.TnterceptTarget>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.applyLogisticsIntercept");
-        }
     }
 }

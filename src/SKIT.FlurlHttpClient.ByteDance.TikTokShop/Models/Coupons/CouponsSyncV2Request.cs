@@ -96,10 +96,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("cert_list")]
         [System.Text.Json.Serialization.JsonPropertyName("cert_list")]
         public IList<Types.Cert> CertList { get; set; } = new List<Types.Cert>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("coupons.syncV2");
-        }
     }
 }

@@ -11,10 +11,5 @@
         [Newtonsoft.Json.JsonProperty("order_code")]
         [System.Text.Json.Serialization.JsonPropertyName("order_code")]
         public string OrderCode { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("btas.getOrderInspectionResult");
-        }
     }
 }

@@ -61,10 +61,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("member_info_list")]
         [System.Text.Json.Serialization.JsonPropertyName("member_info_list")]
         public IList<Types.Member> MemberList { get; set; } = new List<Types.Member>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("member.batchUpdate");
-        }
     }
 }

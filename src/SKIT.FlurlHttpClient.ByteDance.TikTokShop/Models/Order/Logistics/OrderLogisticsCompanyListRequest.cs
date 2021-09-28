@@ -5,9 +5,5 @@
     /// </summary>
     public class OrderLogisticsCompanyListRequest : TikTokShopRequest
     {
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order/logisticsCompanyList");
-        }
     }
 }

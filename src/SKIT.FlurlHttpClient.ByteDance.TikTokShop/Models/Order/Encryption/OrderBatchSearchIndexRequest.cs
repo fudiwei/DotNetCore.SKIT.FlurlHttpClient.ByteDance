@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -34,10 +33,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("plain_text_list")]
         [System.Text.Json.Serialization.JsonPropertyName("plain_text_list")]
         public IList<Types.PlainData> PlainDataList { get; set; } = new List<Types.PlainData>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.BatchSearchIndex");
-        }
     }
 }

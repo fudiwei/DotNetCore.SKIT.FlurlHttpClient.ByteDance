@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/AddressAppliedSwitch 接口的请求。</para>
@@ -17,10 +13,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("is_allowed")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalBooleanConverter))]
         public bool IsAllowed { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.AddressAppliedSwitch");
-        }
     }
 }

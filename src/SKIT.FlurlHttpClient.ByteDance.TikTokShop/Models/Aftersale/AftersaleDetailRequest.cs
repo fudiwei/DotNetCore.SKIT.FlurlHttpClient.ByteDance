@@ -11,10 +11,5 @@
         [Newtonsoft.Json.JsonProperty("after_sale_id")]
         [System.Text.Json.Serialization.JsonPropertyName("after_sale_id")]
         public string AftersaleId { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.Detail");
-        }
     }
 }

@@ -56,10 +56,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("company_code")]
         [System.Text.Json.Serialization.JsonPropertyName("company_code")]
         public string? LogisticsCompanyCode { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.buyerExchangeConfirm");
-        }
     }
 }

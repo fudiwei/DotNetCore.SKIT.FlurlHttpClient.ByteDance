@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -41,10 +40,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("out_warehouse_list")]
         [System.Text.Json.Serialization.JsonPropertyName("out_warehouse_list")]
         public IList<Types.OutWarehouse> OutWarehouseList { get; set; } = new List<Types.OutWarehouse>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("warehouse.setAddrBatch");
-        }
     }
 }

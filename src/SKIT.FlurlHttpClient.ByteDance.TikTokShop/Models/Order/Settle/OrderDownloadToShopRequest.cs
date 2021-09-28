@@ -11,10 +11,5 @@
         [Newtonsoft.Json.JsonProperty("download_id")]
         [System.Text.Json.Serialization.JsonPropertyName("download_id")]
         public string DownloadId { get; set; } = string.Empty;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.downloadToShop");
-        }
     }
 }

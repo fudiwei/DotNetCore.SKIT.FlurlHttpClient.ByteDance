@@ -29,10 +29,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("evidence")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipeConverter))]
         public IList<string>? EvidenceUrlList { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.replyService");
-        }
     }
 }

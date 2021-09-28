@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /address/list 接口的请求。</para>
@@ -46,10 +43,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_field")]
         [System.Text.Json.Serialization.JsonPropertyName("order_field")]
         public string SortField { get; set; } = "create_time";
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("address.list");
-        }
     }
 }

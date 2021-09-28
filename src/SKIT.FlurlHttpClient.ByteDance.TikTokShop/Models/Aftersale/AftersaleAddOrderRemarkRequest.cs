@@ -25,10 +25,5 @@
         [Newtonsoft.Json.JsonProperty("remark")]
         [System.Text.Json.Serialization.JsonPropertyName("remark")]
         public string? Remark { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.addOrderRemark");
-        }
     }
 }

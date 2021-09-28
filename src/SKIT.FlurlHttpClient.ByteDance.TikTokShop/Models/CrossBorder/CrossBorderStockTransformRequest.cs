@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -111,10 +110,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("stock_transform_details")]
         [System.Text.Json.Serialization.JsonPropertyName("stock_transform_details")]
         public IList<Types.Detail> DetailList { get; set; } = new List<Types.Detail>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("crossBorder.stockTransform");
-        }
     }
 }

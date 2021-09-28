@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -104,10 +103,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("sku_sync_list")]
         [System.Text.Json.Serialization.JsonPropertyName("sku_sync_list")]
         public IList<Types.SyncSKU> SyncSKUList { get; set; } = new List<Types.SyncSKU>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("sku.syncStockBatch");
-        }
     }
 }

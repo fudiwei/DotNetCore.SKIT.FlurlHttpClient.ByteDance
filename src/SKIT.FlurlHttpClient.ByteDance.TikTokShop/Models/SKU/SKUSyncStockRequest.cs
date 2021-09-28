@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /sku/syncStock 接口的请求。</para>
@@ -60,10 +57,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("incremental")]
         [System.Text.Json.Serialization.JsonPropertyName("incremental")]
         public bool IsIncremental { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("sku.syncStock");
-        }
     }
 }

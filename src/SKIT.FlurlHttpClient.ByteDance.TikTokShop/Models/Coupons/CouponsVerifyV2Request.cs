@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -37,10 +36,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("verify_count")]
         [System.Text.Json.Serialization.JsonPropertyName("verify_count")]
         public int? VerifyCount { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("coupons.verifyV2");
-        }
     }
 }

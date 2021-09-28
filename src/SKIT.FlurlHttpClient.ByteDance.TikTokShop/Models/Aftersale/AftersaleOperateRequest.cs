@@ -216,10 +216,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("items")]
         [System.Text.Json.Serialization.JsonPropertyName("items")]
         public IList<Types.Aftersale> AftersaleList { get; set; } = new List<Types.Aftersale>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.Operate");
-        }
     }
 }

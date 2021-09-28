@@ -18,10 +18,5 @@
         [Newtonsoft.Json.JsonProperty("op_time")]
         [System.Text.Json.Serialization.JsonPropertyName("op_time")]
         public long OperateTimestamp { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.CancelSendGoodsSuccess");
-        }
     }
 }

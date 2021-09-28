@@ -106,10 +106,5 @@
         [Newtonsoft.Json.JsonProperty("return_type")]
         [System.Text.Json.Serialization.JsonPropertyName("return_type")]
         public int? ReturnType { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("btas.saveInspectionInfo");
-        }
     }
 }

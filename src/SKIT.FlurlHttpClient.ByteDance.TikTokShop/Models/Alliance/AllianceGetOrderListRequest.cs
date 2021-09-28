@@ -13,10 +13,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
         public IList<string> OrderIdList { get; set; } = new List<string>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("alliance.getOrderList");
-        }
     }
 }

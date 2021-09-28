@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/addressConfirm 接口的请求。</para>
@@ -22,10 +18,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("is_approved")]
         [System.Text.Json.Serialization.JsonPropertyName("is_approved")]
         public int ApprovedType { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.addressConfirm");
-        }
     }
 }

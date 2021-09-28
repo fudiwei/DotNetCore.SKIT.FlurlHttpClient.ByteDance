@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /material/getFolderInfo 接口的请求。</para>
@@ -30,10 +27,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("page_size")]
         [System.Text.Json.Serialization.JsonPropertyName("page_size")]
         public int PageSize { get; set; } = 50;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("material.getFolderInfo");
-        }
     }
 }

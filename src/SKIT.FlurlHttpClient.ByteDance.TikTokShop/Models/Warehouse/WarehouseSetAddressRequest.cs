@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /warehouse/setAddr 接口的请求。</para>
@@ -55,10 +52,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("addr")]
         [System.Text.Json.Serialization.JsonPropertyName("addr")]
         public Types.Address Address { get; set; } = new Types.Address();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("warehouse.setAddr");
-        }
     }
 }

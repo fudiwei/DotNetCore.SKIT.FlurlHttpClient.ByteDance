@@ -117,10 +117,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_list")]
         [System.Text.Json.Serialization.JsonPropertyName("order_list")]
         public IList<Types.Order> OrderList { get; set; } = new List<Types.Order>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("orderCode.erpShopBindOrderCode");
-        }
     }
 }

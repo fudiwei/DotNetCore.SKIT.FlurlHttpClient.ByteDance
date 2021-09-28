@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/addOrderRemark 接口的请求。</para>
@@ -38,10 +34,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("star")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
         public int? Star { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.addOrderRemark");
-        }
     }
 }

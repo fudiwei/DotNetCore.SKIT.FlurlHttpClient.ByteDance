@@ -38,9 +38,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             Interceptors.Add(new Interceptors.TikTokShopMarshalJsonInterceptor());
             Interceptors.Add(new Interceptors.TikTokShopSignInterceptor(
-                signMethod: options.SignAlgorithm,
+                baseUrl: FlurlClient.BaseUrl,
                 appKey: options.AppKey,
-                appSecret: options.AppSecret
+                appSecret: options.AppSecret,
+                signMethod: options.SignAlgorithm
             ));
         }
 
@@ -71,7 +72,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             }
 
             flurlRequest.SetQueryParam("v", request.ApiVersion);
-            flurlRequest.SetQueryParam("method", request.GetApiMethod());
 
             return flurlRequest;
         }

@@ -96,10 +96,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("serial_number_list")]
         [System.Text.Json.Serialization.JsonPropertyName("serial_number_list")]
         public IList<string>? SerialNumberList { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order/logisticsAddMultiPack");
-        }
     }
 }

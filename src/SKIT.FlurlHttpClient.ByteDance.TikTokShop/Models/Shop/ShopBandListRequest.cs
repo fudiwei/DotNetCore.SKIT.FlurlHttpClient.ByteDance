@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /shop/brandList 接口的请求。</para>
     /// </summary>
     public class ShopBandListRequest : TikTokShopRequest
     {
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("shop.brandList");
-        }
     }
 }

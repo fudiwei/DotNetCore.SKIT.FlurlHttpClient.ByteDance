@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -57,10 +56,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("error_info")]
         [System.Text.Json.Serialization.JsonPropertyName("error_info")]
         public Types.Error? Error { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("dutyFree.orderConfirm");
-        }
     }
 }

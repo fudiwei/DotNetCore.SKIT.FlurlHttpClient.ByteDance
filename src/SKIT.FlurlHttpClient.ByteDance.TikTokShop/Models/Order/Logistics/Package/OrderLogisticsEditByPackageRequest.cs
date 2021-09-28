@@ -39,10 +39,5 @@
         [Newtonsoft.Json.JsonProperty("company_code")]
         [System.Text.Json.Serialization.JsonPropertyName("company_code")]
         public string? CompanyCode { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order/logisticsEditByPack");
-        }
     }
 }

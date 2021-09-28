@@ -11,10 +11,5 @@
         [Newtonsoft.Json.JsonProperty("logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
         public string LogisticsCompanyCode { get; set; } = string.Empty;
-
-        internal protected override string GetApiMethod()
-        {
-            return string.Intern("logistics.listShopNetsite");
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -83,10 +82,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("property_infos")]
         [System.Text.Json.Serialization.JsonPropertyName("property_infos")]
         public IList<Types.Property> PropertyList { get; set; } = new List<Types.Property>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("spu.addShopSpu");
-        }
     }
 }

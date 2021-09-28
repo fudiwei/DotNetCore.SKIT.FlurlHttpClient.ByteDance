@@ -15,15 +15,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
 {
     internal partial class TikTokShopSignInterceptor : FlurlHttpCallInterceptor
     {
-        private readonly string _signMethod;
+        private readonly string _baseUrl;
         private readonly string _appKey;
         private readonly string _appSecret;
+        private readonly string _signMethod;
 
-        public TikTokShopSignInterceptor(string signMethod, string appKey, string appSecret)
+        public TikTokShopSignInterceptor(string baseUrl, string appKey, string appSecret, string signMethod)
         {
-            _signMethod = signMethod;
+            _baseUrl = baseUrl;
             _appKey = appKey;
             _appSecret = appSecret;
+            _signMethod = signMethod;
         }
 
         public override async Task BeforeCallAsync(FlurlCall flurlCall)
@@ -31,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
             if (flurlCall == null) throw new ArgumentNullException(nameof(flurlCall));
 
             var queries = HttpUtility.ParseQueryString(flurlCall.HttpRequestMessage.RequestUri?.Query ?? string.Empty);
-            string method = queries.Get("method") ?? string.Empty;
+            string method = flurlCall.Request.Url.ToString().Substring(_baseUrl.Length).Split('?')[0].TrimStart('/').TrimEnd('/').Trim().Replace("/", ".");
             string version = queries.Get("v") ?? string.Empty;
             string timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds().ToString();
 
@@ -86,8 +88,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
             }
 
             flurlCall.Request.SetQueryParam("app_key", _appKey);
-            flurlCall.Request.SetQueryParam("sign_method", _signMethod);
+            flurlCall.Request.SetQueryParam("method", method);
             flurlCall.Request.SetQueryParam("sign", signText);
+            flurlCall.Request.SetQueryParam("sign_method", _signMethod);
             flurlCall.Request.SetQueryParam("timestamp", timestamp);
         }
     }

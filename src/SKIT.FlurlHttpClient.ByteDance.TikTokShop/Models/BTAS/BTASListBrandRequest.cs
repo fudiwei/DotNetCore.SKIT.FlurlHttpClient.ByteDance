@@ -5,9 +5,5 @@
     /// </summary>
     public class BTASListBrandRequest : TikTokShopRequest
     {
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("btas.listBrand");
-        }
     }
 }

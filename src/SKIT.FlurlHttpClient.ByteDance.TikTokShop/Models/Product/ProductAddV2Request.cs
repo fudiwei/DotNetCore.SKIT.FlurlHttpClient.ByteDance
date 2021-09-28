@@ -713,10 +713,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [System.Text.Json.Serialization.JsonPropertyName("commit")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualBooleanConverter))]
         public bool IsCommit { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("product.addV2");
-        }
     }
 }

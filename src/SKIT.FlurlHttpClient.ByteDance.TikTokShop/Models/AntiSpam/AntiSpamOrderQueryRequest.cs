@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /antispam/orderQuery 接口的请求。</para>
@@ -35,10 +32,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("event_time")]
         [System.Text.Json.Serialization.JsonPropertyName("event_time")]
         public long? EventTimestamp { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("antispam.orderQuery");
-        }
     }
 }

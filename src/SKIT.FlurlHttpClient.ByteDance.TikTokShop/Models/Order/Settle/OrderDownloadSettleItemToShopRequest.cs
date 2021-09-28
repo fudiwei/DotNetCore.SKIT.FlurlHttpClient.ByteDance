@@ -66,10 +66,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("flow_type")]
         [System.Text.Json.Serialization.JsonPropertyName("flow_type")]
         public int? FlowType { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.downloadSettleItemToShop");
-        }
     }
 }

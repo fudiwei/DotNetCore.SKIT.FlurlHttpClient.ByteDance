@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -22,10 +20,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("serial_number_list")]
         [System.Text.Json.Serialization.JsonPropertyName("serial_number_list")]
         public IList<string> SerialNumberList { get; set; } = new List<string>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.addSerialNumber");
-        }
     }
 }

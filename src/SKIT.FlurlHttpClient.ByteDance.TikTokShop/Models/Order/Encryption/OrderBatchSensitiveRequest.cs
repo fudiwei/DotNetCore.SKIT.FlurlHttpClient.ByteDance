@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -34,10 +33,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("cipher_infos")]
         [System.Text.Json.Serialization.JsonPropertyName("cipher_infos")]
         public IList<Types.CipherData> CipherDataList { get; set; } = new List<Types.CipherData>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.batchSensitive");
-        }
     }
 }

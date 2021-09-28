@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /product/qualityTask 接口的请求。</para>
@@ -14,10 +11,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("brief_only")]
         [System.Text.Json.Serialization.JsonPropertyName("brief_only")]
         public bool? IsBriefOnly { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("product.qualityTask");
-        }
     }
 }

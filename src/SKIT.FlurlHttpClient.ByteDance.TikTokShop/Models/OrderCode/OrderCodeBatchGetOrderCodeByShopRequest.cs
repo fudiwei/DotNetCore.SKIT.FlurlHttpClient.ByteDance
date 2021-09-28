@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -15,10 +13,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
         public IList<long> OrderIdList { get; set; } = new List<long>();
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("orderCode.batchGetOrderCodeByShop");
-        }
     }
 }

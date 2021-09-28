@@ -75,10 +75,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("size")]
         [System.Text.Json.Serialization.JsonPropertyName("size")]
         public int PageSize { get; set; } = 20;
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("order.getSettleBillDetail");
-        }
     }
 }

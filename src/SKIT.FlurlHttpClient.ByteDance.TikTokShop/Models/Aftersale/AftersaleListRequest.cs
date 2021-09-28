@@ -137,10 +137,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("order_by")]
         [System.Text.Json.Serialization.JsonPropertyName("order_by")]
         public IList<string>? SortFields { get; set; }
-
-        protected internal override string GetApiMethod()
-        {
-            return string.Intern("afterSale.List");
-        }
     }
 }

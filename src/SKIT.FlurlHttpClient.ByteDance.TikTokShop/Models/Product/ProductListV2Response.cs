@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -115,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         public Types.Category? Category { get; set; }
 
                         /// <summary>
-                        /// 获取或设置佣金比例（单位：0～100）。
+                        /// 获取或设置佣金比例（范围：0～100）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cos_ratio")]
                         [System.Text.Json.Serialization.JsonPropertyName("cos_ratio")]

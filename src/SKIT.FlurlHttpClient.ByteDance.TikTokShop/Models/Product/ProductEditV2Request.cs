@@ -377,6 +377,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("commit")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualBooleanConverter))]
-        public bool IsCommit { get; set; }
+        public bool IsCommitting { get; set; }
     }
 }

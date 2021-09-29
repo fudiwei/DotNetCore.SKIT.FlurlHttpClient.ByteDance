@@ -37,7 +37,7 @@
                 public string OrderId { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置商品但列表。
+                /// 获取或设置商品单列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_orders")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_orders")]

@@ -1,0 +1,16 @@
+﻿{
+    "activity_id": 1234234123,
+    "service_rate": 20,
+    "service_ratio": 20.50,
+    "phone_number": "12318726321",
+    "products": [
+        {
+            "product_id": 3276187891830787600,
+            "activity_price": 200,
+            "promotion_stock": 100,
+            "gift_info": "无赠品",
+            "promotion_step": "满减",
+            "product_activity_ratio": 20.50
+        }
+    ]
+}

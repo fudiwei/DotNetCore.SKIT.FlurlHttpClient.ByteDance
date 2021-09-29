@@ -36,14 +36,14 @@
         public int PageSize { get; set; } = 10;
 
         /// <summary>
-        /// 获取或设置排序方式。
+        /// 获取或设置排序方式类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sort_type")]
         [System.Text.Json.Serialization.JsonPropertyName("sort_type")]
         public int? SortByType { get; set; }
 
         /// <summary>
-        /// 获取或设置排序字段。
+        /// 获取或设置排序字段类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("search_type")]
         [System.Text.Json.Serialization.JsonPropertyName("search_type")]

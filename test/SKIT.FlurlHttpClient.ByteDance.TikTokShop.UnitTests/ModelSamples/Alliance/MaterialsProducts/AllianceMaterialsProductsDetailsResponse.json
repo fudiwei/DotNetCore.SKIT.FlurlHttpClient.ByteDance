@@ -1,0 +1,44 @@
+﻿{
+    "data": {
+        "products": [
+            {
+                "category_id": "2",
+                "category_name": "玩具乐器",
+                "comment_num": "2321",
+                "comment_score": "2",
+                "cos_fee": "10",
+                "cos_ratio": "10",
+                "cover": "https://sf1-ttcdn-tos.pstatp.com/img/temai/Fpt8famR3twTGYz09e25nz5PbTRuwww800-800~1125x1125_q50.webp",
+                "daily_statistics": [
+                    {
+                        "date": "20210101",
+                        "kol_num": "1",
+                        "order_num": "102",
+                        "view_num": "343"
+                    }
+                ],
+                "detail_url": "https://haohuo.jinritemai.com/views/product/item2?id=3400312511185213726",
+                "first_cid": "11",
+                "in_stock": "true",
+                "kol_cos_fee": "100",
+                "kol_cos_ratio": "10.00",
+                "kol_num": "2",
+                "order_num": "1232",
+                "price": "100",
+                "product_id": "12233112",
+                "reason": "同意",
+                "sales": "1000",
+                "second_cid": "2011",
+                "shop_id": "1234",
+                "shop_name": "测试店铺",
+                "status": "1",
+                "third_cid": "3040",
+                "title": "测试商品",
+                "view_num": "5432"
+            }
+        ],
+        "total": "10"
+    },
+    "err_no": 0,
+    "message": "success"
+}

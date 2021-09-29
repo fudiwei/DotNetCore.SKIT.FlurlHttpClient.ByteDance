@@ -118,7 +118,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cos_ratio")]
                         [System.Text.Json.Serialization.JsonPropertyName("cos_ratio")]
-                        public int COSRatio { get; set; }
+                        public double COSRatio { get; set; }
 
                         /// <summary>
                         /// 获取或设置支持的支付方式类型。

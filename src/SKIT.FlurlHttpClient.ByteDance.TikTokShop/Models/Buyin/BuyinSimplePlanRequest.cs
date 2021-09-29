@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cos_ratio")]
                 [System.Text.Json.Serialization.JsonPropertyName("cos_ratio")]
-                public int COSRatio { get; set; }
+                public double COSRatio { get; set; }
             }
         }
 

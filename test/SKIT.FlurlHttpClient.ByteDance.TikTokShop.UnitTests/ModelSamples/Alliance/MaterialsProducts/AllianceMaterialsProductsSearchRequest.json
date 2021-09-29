@@ -1,0 +1,27 @@
+﻿{
+    "title": "测试商品名称",
+    "first_cids": [
+        1,
+        2,
+        3,
+        4
+    ],
+    "second_cids": [
+        22
+    ],
+    "third_cids": [
+        333
+    ],
+    "price_min": 1,
+    "price_max": 1000,
+    "sell_num_min": 0,
+    "sell_num_max": 1000,
+    "cos_fee_min": 1,
+    "cos_fee_max": 50,
+    "cos_ratio_min": 1,
+    "cos_ratio_max": 15,
+    "page": 1,
+    "page_size": 15,
+    "search_type": 0,
+    "sort_type": 0
+}

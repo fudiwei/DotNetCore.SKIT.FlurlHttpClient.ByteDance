@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "total": 1000,
+        "products": [
+            {
+                "product_id": 3400312511185214000,
+                "title": "测试商品",
+                "price": 100,
+                "cos_ratio": 10,
+                "cos_fee": 1,
+                "first_cid": 1206,
+                "second_cid": 1402,
+                "third_cid": 2634,
+                "in_stock": 1,
+                "sales": 1234,
+                "cover": "https://sf1-ttcdn-tos.pstatp.com/img/temai/Fpt8famR3twTGYz09e25nz5PbTRuwww800-800~1125x1125_q50.webp",
+                "detail_url": "https://haohuo.jinritemai.com/views/product/item2?id=3400312511185213726",
+                "shop_name": "maggie测试小铺",
+                "shop_id": 2232
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

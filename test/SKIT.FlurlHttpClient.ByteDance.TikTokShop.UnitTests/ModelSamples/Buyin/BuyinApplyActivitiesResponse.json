@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        "total": 20,
+        "result": [
+            {
+                "product_id": 123123123123,
+                "is_success": true,
+                "error_code": 0,
+                "error_msg": "success"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

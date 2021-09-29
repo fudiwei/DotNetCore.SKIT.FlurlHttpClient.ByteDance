@@ -93,7 +93,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("address")]
                 [System.Text.Json.Serialization.JsonPropertyName("address")]
-                public Address Address { get; set; }= new Address();
+                public Address Address { get; set; } = new Address();
             }
 
             public class Receiver : Sender

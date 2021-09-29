@@ -90,14 +90,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street_id")]
-                                public int StreetId { get; set; }
+                                public int? StreetId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置街道名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street_name")]
-                                public string StreetName { get; set; } = string.Empty;
+                                public string? StreetName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置详细地址。

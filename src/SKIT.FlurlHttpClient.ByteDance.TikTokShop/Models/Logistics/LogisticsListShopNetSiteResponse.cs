@@ -43,7 +43,7 @@
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street_name")]
-                                public string StreetName { get; set; } = default!;
+                                public string? StreetName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置详细地址。

@@ -1,0 +1,35 @@
+﻿{
+    "sender": {
+        "address": {},
+        "contact": {}
+    },
+    "trade_order_list": [
+        {
+            "company_code": "jtexpress",
+            "order_infos": [
+                {
+                    "distr_order_id": "202011809",
+                    "pack_id": "1",
+                    "service_list": [],
+                    "product_type": 1,
+                    "pay_method": 1,
+                    "pay_amount": 5000,
+                    "sender_fetch_time": "2020-11-11 22:00:00|2020-11-11 23:00:00",
+                    "is_sign_back": 0,
+                    "remark": "我的包裹易碎，包严实点",
+                    "total_pack_count": 2,
+                    "total_weight": 1,
+                    "total_length": 1,
+                    "total_width": 1,
+                    "total_height": 1,
+                    "volume": 1
+                }
+            ],
+            "user_id": 1,
+            "delivery_req": {
+                "is_center_delivery": true,
+                "is_pickup_self": true
+            }
+        }
+    ]
+}

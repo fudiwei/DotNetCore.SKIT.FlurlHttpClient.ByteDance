@@ -55,7 +55,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("street")]
                 [System.Text.Json.Serialization.JsonPropertyName("street")]
-                public Types.Area Street { get; set; } = new Types.Area();
+                public Types.Area? Street { get; set; }
 
                 /// <summary>
                 /// 获取或设置详细地址。

@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street")]
-                                public Types.Area Street { get; set; } = default!;
+                                public Types.Area? Street { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置详细地址。

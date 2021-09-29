@@ -156,14 +156,14 @@
                         [Newtonsoft.Json.JsonProperty("street_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("street_id")]
                         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                        public int StreetId { get; set; }
+                        public int? StreetId { get; set; }
 
                         /// <summary>
                         /// 获取或设置街道名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("street")]
                         [System.Text.Json.Serialization.JsonPropertyName("street")]
-                        public string StreetName { get; set; } = default!;
+                        public string? StreetName { get; set; }
 
                         /// <summary>
                         /// 获取或设置取消原因。

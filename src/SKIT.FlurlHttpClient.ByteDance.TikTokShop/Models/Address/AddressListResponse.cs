@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /address/list 接口的响应。</para>
@@ -56,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("receiver_street")]
                         [System.Text.Json.Serialization.JsonPropertyName("receiver_street")]
-                        public string Street { get; set; } = default!;
+                        public string? Street { get; set; }
 
                         /// <summary>
                         /// 获取或设置详情地址。

@@ -63,7 +63,7 @@
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street")]
-                                public Types.Area Street { get; set; } = default!;
+                                public Types.Area? Street { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置经过加密的详细地址。
@@ -514,11 +514,11 @@
                                 public long? ShipTimestamp { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置包裹 ID。
+                                /// 获取或设置包裹单号。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("delivery_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("delivery_id")]
-                                public string? PackageId { get; set; }
+                                public string? DeliveryId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品列表。

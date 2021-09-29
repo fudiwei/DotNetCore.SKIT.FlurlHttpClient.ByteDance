@@ -1,0 +1,27 @@
+﻿{
+    "data": {
+        "ebill_infos": [
+            {
+                "distr_order_id": "7874584357345",
+                "track_no": "202011809",
+                "sort_code": "400-W00 000",
+                "package_code": "1",
+                "package_code_name": "1",
+                "mark_destination_code": "1",
+                "mark_destination_code_name": "1",
+                "extra": "1",
+                "extra_resp": "1",
+                "sub_waybill_codes": "13,434,556"
+            }
+        ],
+        "err_infos": [
+            {
+                "distr_order_id": "7874584357345",
+                "err_code": "10701",
+                "err_msg": "电子面单库存不足"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

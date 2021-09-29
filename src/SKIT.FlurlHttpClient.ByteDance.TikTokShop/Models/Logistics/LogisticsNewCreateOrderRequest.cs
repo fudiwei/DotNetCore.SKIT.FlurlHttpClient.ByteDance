@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("street_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("street_name")]
-                public string StreetName { get; set; } = string.Empty;
+                public string? StreetName { get; set; }
 
                 /// <summary>
                 /// 获取或设置详细地址。
@@ -419,7 +419,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         public Types.Sender Sender { get; set; } = new Types.Sender();
 
         /// <summary>
-        /// 获取或设置订单列表。
+        /// 获取或设置代打订单列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_infos")]
         [System.Text.Json.Serialization.JsonPropertyName("order_infos")]

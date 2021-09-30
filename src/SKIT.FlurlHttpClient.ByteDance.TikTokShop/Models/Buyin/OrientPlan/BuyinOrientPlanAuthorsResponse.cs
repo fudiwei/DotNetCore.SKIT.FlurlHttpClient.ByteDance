@@ -32,7 +32,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("user_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("user_name")]
-                        public string UserName { get; set; } = default!;
+                        public string AuthorName { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置联系方式。

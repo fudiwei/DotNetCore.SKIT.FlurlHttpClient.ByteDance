@@ -214,5 +214,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             return await client.SendRequestWithJsonAsync<Models.BuyinOrientPlanAuthorsAddResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        /// <summary>
+        /// <para>异步调用 [POST] /buyin/instituteOrderAds 接口。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/61/1296 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.BuyinInstituteOrderAdsResponse> ExecuteBuyinInstituteOrderAdsAsync(this TikTokShopClient client, Models.BuyinInstituteOrderAdsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "buyin", "instituteOrderAds")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.BuyinInstituteOrderAdsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
     }
 }

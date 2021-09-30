@@ -24,7 +24,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_name")]
         [System.Text.Json.Serialization.JsonPropertyName("user_name")]
-        public string? UserName { get; set; }
+        public string? AuthorName { get; set; }
 
         /// <summary>
         /// 获取或设置审核状态。

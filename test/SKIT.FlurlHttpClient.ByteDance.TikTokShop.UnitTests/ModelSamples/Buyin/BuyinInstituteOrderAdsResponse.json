@@ -1,0 +1,47 @@
+﻿{
+    "data": {
+        "data": {
+            "cursor": "4737996432465788974",
+            "orders": [
+                {
+                    "ads_estimated_commission": "100",
+                    "ads_real_commission": "100",
+                    "ads_split_rate": "0",
+                    "app": "抖音",
+                    "author_account": "我的昵称",
+                    "author_openid": "f190e172-5fd8-4b7b-babb-f32323e60f7b",
+                    "buyer_openid": "f190e172-5fd8-4b7b-babb-f32323e60f7b",
+                    "commission_rate": "2000",
+                    "estimated_commission": "165",
+                    "estimated_tech_service_fee": "12",
+                    "estimated_total_commission": "580",
+                    "flow_point": "PAY_SUCC",
+                    "item_num": "2",
+                    "order_id": "4737996432465788974",
+                    "pay_goods_amount": "1100",
+                    "pay_success_time": "2006-01-02 15:04:05",
+                    "pick_source_client_key": "jifji32rnu3jit43",
+                    "pid_info": {
+                        "external_info": "1222_2333",
+                        "media_type_name": "Live",
+                        "pid": "dy_1234_33_455"
+                    },
+                    "product_id": "3450632721376902816",
+                    "product_img": "https://tosv.boe.byted.org/obj/temai/7e92a281163e33cedef99d8735d1e90bwww828-708",
+                    "product_name": "测试商品",
+                    "real_commission": "165",
+                    "refund_time": "2006-01-02 15:04:05",
+                    "settle_time": "2006-01-02 15:04:05",
+                    "settled_goods_amount": "0",
+                    "settled_tech_service_fee": "12",
+                    "shop_id": "1234",
+                    "shop_name": "我的店铺",
+                    "total_pay_amount": "2100",
+                    "update_time": "2006-01-02 15:04:05"
+                }
+            ]
+        }
+    },
+    "err_no": 0,
+    "message": "success"
+}

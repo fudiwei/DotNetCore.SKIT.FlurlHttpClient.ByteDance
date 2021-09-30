@@ -7,7 +7,7 @@
     {
         /// <summary>
         /// 获取或设置授权类型。
-        /// 默认值：refresh_token。
+        /// <para>默认值：refresh_token</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("grant_type")]
         [System.Text.Json.Serialization.JsonPropertyName("grant_type")]

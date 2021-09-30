@@ -38,7 +38,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("base_shipping_logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("base_shipping_logistics_code")]
-        public string? BaseShippingLogisticsCode { get; set; } 
+        public string? BaseShippingLogisticsNumber { get; set; } 
         
         /// <summary>
         /// 获取或设置物流公司 ID。
@@ -61,6 +61,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("shipping_logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("shipping_logistics_code")]
-        public string? ShippingLogisticsCode { get; set; } 
+        public string? ShippingLogisticsNumber { get; set; } 
     }
 }

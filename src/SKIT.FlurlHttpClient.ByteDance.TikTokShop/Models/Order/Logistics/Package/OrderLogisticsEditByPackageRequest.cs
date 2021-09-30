@@ -24,7 +24,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-        public string LogisticsCode { get; set; } = string.Empty;
+        public string LogisticsNumber { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置物流公司 ID。与字段 <see cref="CompanyCode"/> 二选一。

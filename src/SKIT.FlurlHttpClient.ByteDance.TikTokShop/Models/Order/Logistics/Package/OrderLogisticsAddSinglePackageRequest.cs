@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("logistics_code")]
         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-        public string LogisticsCode { get; set; } = string.Empty;
+        public string LogisticsNumber { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置请求唯一标识。

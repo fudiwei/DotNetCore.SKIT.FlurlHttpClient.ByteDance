@@ -1,0 +1,7 @@
+﻿{
+    "logistics_no": "LB00001",
+    "vendor": "Vendor1",
+    "status": 1,
+    "occurrence_time": 1620647951,
+    "reason": "{\"error_code\": \"\",\"error_message\": \"\"}"
+}

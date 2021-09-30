@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logistics_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-                public string? LogisticsCode { get; set; }
+                public string? LogisticsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置物流公司 ID。

@@ -65,7 +65,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("track_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("track_no")]
-                        public string TrackingNumber { get; set; } = default!;
+                        public string LogisticsNumber { get; set; } = default!;
                     }
                 }
 

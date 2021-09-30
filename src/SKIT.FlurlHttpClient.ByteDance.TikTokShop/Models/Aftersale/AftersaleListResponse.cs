@@ -206,7 +206,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("return_logistics_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("return_logistics_code")]
-                                public string? ReturnLogisticsCode { get; set; }
+                                public string? ReturnLogisticsNumber { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置退优惠金额金额（单位：分）。
@@ -452,7 +452,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("logistics_code")]
                                         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-                                        public string LogisticsCode { get; set; } = default!;
+                                        public string LogisticsNumber { get; set; } = default!;
 
                                         /// <summary>
                                         /// 获取或设置售后退款金额（单位：分）。

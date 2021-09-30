@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
     /// <summary>
     /// <para>表示 [POST] /order/getCrossBorderFulfillInfo 接口的响应。</para>
@@ -45,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logistics_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-                public string? LogisticsCode { get; set; }
+                public string? LogisticsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置电子面单链接。

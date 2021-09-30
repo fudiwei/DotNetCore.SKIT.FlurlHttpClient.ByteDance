@@ -57,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tracking_no")]
         [System.Text.Json.Serialization.JsonPropertyName("tracking_no")]
-        public string? TrackingNumber { get; set; }
+        public string? LogisticsNumber { get; set; }
 
         /// <summary>
         /// 获取或设置预售类型。

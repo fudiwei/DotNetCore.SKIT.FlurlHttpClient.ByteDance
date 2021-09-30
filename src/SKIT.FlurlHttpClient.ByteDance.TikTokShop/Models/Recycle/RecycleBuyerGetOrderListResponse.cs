@@ -127,7 +127,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logistics_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
-                public string? LogisticsCode { get; set; }
+                public string? LogisticsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置寄出方式。
@@ -309,7 +309,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reverse_logistics_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("reverse_logistics_code")]
-                public string? ReverseLogisticsCode { get; set; }
+                public string? ReverseLogisticsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。

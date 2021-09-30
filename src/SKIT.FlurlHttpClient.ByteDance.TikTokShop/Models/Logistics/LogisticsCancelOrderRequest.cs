@@ -17,7 +17,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("track_no")]
         [System.Text.Json.Serialization.JsonPropertyName("track_no")]
-        public string TrackingNumber { get; set; } = string.Empty;
+        public string LogisticsNumber { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置用户 ID。

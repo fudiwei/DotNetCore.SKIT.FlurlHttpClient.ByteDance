@@ -17,7 +17,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("vendor")]
         [System.Text.Json.Serialization.JsonPropertyName("vendor")]
-        public string VendorCode { get; set; } = "authorization_self";
+        public string VendorCode { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置状态。

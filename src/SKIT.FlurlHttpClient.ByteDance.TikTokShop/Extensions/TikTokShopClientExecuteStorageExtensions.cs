@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /storage/notifySaleReturnStatus 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/13/558 </para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/50/538 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

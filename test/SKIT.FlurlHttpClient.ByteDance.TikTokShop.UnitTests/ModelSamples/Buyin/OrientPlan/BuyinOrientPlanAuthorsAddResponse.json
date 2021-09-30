@@ -1,0 +1,17 @@
+﻿{
+    "data": {
+        "success_ids": [
+            11,
+            22
+        ],
+        "failed_ids": [
+            {
+                "buyin_id": 333,
+                "error_code": 22,
+                "error_msg": "不存在"
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

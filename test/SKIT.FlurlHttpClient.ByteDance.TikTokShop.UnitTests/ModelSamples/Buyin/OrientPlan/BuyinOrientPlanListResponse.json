@@ -1,0 +1,33 @@
+﻿{
+    "data": {
+        "total": 122,
+        "orien_plans": [
+            {
+                "product_id": 3482204602722574300,
+                "orien_plans": [
+                    {
+                        "orien_plan_id": "111",
+                        "product_id": 3482204602722574300,
+                        "product_name": "测试商品",
+                        "cover": "https://tosv.boe.byted.org/obj/temai/7e92a281163e33cedef99d8735d1e90bwww828-708",
+                        "plan_status": 2,
+                        "cos_ratio": 50,
+                        "apply_type": 1,
+                        "restricted_type": 1,
+                        "author_level": 1,
+                        "audit_type": 1,
+                        "start_time": 1625480546,
+                        "end_time": 1625480546,
+                        "create_time": 1625480546,
+                        "kol_num": 1,
+                        "price": 120,
+                        "new_cos_ratio": 0,
+                        "new_cos_ratio_start_time": 1625480546
+                    }
+                ]
+            }
+        ]
+    },
+    "err_no": 0,
+    "message": "success"
+}

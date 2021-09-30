@@ -1,0 +1,13 @@
+﻿{
+    "is_create": false,
+    "plan": {
+        "orien_plan_id": "22432343",
+        "product_id": 3482204602722574252,
+        "cos_ratio": 20,
+        "apply_type": 1,
+        "restricted_type": 1,
+        "author_level": 1,
+        "audit_type": 1,
+        "end_time": 1625480546
+    }
+}

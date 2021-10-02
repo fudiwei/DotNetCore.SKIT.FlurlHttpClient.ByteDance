@@ -44,6 +44,13 @@
                 [Newtonsoft.Json.JsonProperty("check_reject_reason")]
                 [System.Text.Json.Serialization.JsonPropertyName("check_reject_reason")]
                 public string? RejectReason { get; set; }
+
+                /// <summary>
+                /// 获取或设置事件时间戳。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("update_time")]
+                [System.Text.Json.Serialization.JsonPropertyName("update_time")]
+                public long UpdateTimestamp { get; set; }
             }
         }
     }

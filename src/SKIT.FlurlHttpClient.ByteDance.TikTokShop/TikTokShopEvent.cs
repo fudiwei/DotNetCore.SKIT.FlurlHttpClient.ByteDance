@@ -11,8 +11,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <summary>
         /// 获取或设置消息 ID。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("msg_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("msg_id")]
+        [Newtonsoft.Json.JsonProperty("msgId")]
+        [System.Text.Json.Serialization.JsonPropertyName("msgId")]
         public string Id { get; set; } = default!;
 
         /// <summary>

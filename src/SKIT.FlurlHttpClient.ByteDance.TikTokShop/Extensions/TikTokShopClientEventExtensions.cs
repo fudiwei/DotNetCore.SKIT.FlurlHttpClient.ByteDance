@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         }
 
         /// <summary>
-        /// <para>验证回调通知事件签名。</para>
+        /// <para>验证消息推送事件签名。</para>
         /// <para>REF: https://op.jinritemai.com/docs/guide-docs/153/99 </para>
         /// </summary>
         /// <param name="client"></param>

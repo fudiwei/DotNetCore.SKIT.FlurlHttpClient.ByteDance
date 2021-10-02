@@ -1,11 +1,12 @@
 ﻿{
+    "tag": "xxx",
+    "msgId": "0443477XXXXXXX48874::xxx:1618990587:6837374XXXXXXX89128",
     "data": {
-        "check_reject_reason": "{\"audit_formatted_reason\":\"{\"biz_type\":\"1\",\"op_id\":-1,\"audit_status\":2,\"human_audit_status\":1,\"pass_through_extra\":\"{\\\"audit_record_id\\\":\\\"0\\\"}\"}\"}",
+        "check_reject_reason": "{\"audit_formatted_reason\":\"{\\\"biz_type\\\":\\\"1\\\",\\\"op_id\\\":-1,\\\"audit_status\\\":2,\\\"human_audit_status\\\":1,\\\"pass_through_extra\\\":\\\"{\\\\\\\"audit_record_id\\\\\\\":\\\\\\\"0\\\\\\\"}\\\"}\"}",
         "event": 5,
         "out_product_id": 0,
         "product_id": 3488625851803765000,
-        "shop_id": 95250
-    },
-    "msg_id": "0443477XXXXXXX48874::xxx:1618990587:6837374XXXXXXX89128",
-    "tag": "xxx"
+        "shop_id": 95250,
+        "update_time": 16473829442
+    }
 }

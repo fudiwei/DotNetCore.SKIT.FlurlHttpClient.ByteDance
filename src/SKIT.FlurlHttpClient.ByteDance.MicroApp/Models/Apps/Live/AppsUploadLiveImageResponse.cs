@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/upload_live_image 接口的响应。</para>
     /// </summary>
-    public class AppsUplodateLiveImageResponse : ByteDanceMicroAppResponse
+    public class AppsUploadLiveImageResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// 获取或设置会话密钥。

@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/upload_live_image 接口的请求。</para>
     /// </summary>
-    public class AppsUplodateLiveImageRequest : ByteDanceMicroAppRequest
+    public class AppsUploadLiveImageRequest : ByteDanceMicroAppRequest
     {
         /// <summary>
         /// 获取或设置字节小程序的 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。

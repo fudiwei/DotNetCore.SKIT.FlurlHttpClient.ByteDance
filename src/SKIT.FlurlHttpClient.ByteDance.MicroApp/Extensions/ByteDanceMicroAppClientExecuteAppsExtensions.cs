@@ -165,7 +165,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsUplodateLiveImageResponse> ExecuteAppsUplodateLiveImageAsync(this ByteDanceMicroAppClient client, Models.AppsUplodateLiveImageRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsUploadLiveImageResponse> ExecuteAppsUploadLiveImageAsync(this ByteDanceMicroAppClient client, Models.AppsUploadLiveImageRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -192,7 +192,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
             fileContent.Headers.ContentLength = request.ImageFileBytes?.Length;
 
-            return await client.SendRequestAsync<Models.AppsUplodateLiveImageResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestAsync<Models.AppsUploadLiveImageResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
         #endregion
 

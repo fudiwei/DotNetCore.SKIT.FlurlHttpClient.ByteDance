@@ -10,48 +10,40 @@ using System.Threading.Tasks;
 using Flurl.Http;
 using Flurl.Http.Configuration;
 
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
     /// <summary>
-    /// 一个抖店开放平台 API HTTP 客户端。
+    /// 一个抖音开放平台 API HTTP 客户端。
     /// </summary>
-    public class TikTokShopClient : CommonClientBase, IByteDanceClient
+    public class TikTokClient : CommonClientBase, IByteDanceClient
     {
         /// <summary>
-        /// 获取当前客户端使用的抖店开放平台凭证。
+        /// 获取当前客户端使用的抖音开放平台凭证。
         /// </summary>
         public Settings.Credentials Credentials { get; }
 
         /// <summary>
-        /// 用指定的配置项初始化 <see cref="TikTokShopClient"/> 类的新实例。
+        /// 用指定的配置项初始化 <see cref="TikTokClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
-        public TikTokShopClient(TikTokShopClientOptions options)
+        public TikTokClient(TikTokClientOptions options)
             : base()
         {
             if (options == null) throw new ArgumentNullException(nameof(options));
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? TikTokShopEndpoints.DEFAULT;
+            FlurlClient.BaseUrl = options.Endpoints ?? TikTokEndpoints.XIGUA;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
-
-            Interceptors.Add(new Interceptors.TikTokShopRequestFormatInterceptor());
-            Interceptors.Add(new Interceptors.TikTokShopRequestSignInterceptor(
-                baseUrl: FlurlClient.BaseUrl,
-                appKey: options.AppKey,
-                appSecret: options.AppSecret,
-                signMethod: options.SignAlgorithm
-            ));
         }
 
         /// <summary>
-        /// 用指定的抖店开放平台应用 Key、抖店开放平台应用密钥初始化 <see cref="TikTokShopClient"/> 类的新实例。
+        /// 用指定的抖音开放平台应用 Key、抖音开放平台应用密钥初始化 <see cref="TikTokClient"/> 类的新实例。
         /// </summary>
-        /// <param name="appKey">抖店开放平台应用 Key。</param>
-        /// <param name="appSecret">抖店开放平台应用密钥。</param>
-        public TikTokShopClient(string appKey, string appSecret)
-            : this(new TikTokShopClientOptions() { AppKey = appKey, AppSecret = appSecret })
+        /// <param name="clientKey">抖音开放平台应用 Key。</param>
+        /// <param name="clientSecret">抖音开放平台应用密钥。</param>
+        public TikTokClient(string clientKey, string clientSecret)
+            : this(new TikTokClientOptions() { ClientKey = clientKey, ClientSecret = clientSecret })
         {
         }
 
@@ -62,23 +54,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <param name="method"></param>
         /// <param name="urlSegments"></param>
         /// <returns></returns>
-        public IFlurlRequest CreateRequest(TikTokShopRequest request, HttpMethod method, params object[] urlSegments)
+        public IFlurlRequest CreateRequest(TikTokRequest request, HttpMethod method, params object[] urlSegments)
         {
             IFlurlRequest flurlRequest = FlurlClient.Request(urlSegments).WithVerb(method);
 
             if (request.Timeout.HasValue)
             {
                 flurlRequest.WithTimeout(TimeSpan.FromMilliseconds(request.Timeout.Value));
-            }
-
-            if (string.IsNullOrEmpty(request.ApiMethod))
-            {
-                flurlRequest.SetQueryParam("method", request.ApiMethod);
-            }
-
-            if (string.IsNullOrEmpty(request.ApiMethod))
-            {
-                flurlRequest.SetQueryParam("v", request.ApiVersion);
             }
 
             return flurlRequest;
@@ -93,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
-            where T : TikTokShopResponse, new()
+            where T : TikTokResponse, new()
         {
             try
             {
@@ -102,7 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             }
             catch (FlurlHttpException ex)
             {
-                throw new TikTokShopException(ex.Message, ex);
+                throw new TikTokException(ex.Message, ex);
             }
         }
 
@@ -115,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
-            where T : TikTokShopResponse, new()
+            where T : TikTokResponse, new()
         {
             try
             {
@@ -124,12 +106,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             }
             catch (FlurlHttpException ex)
             {
-                throw new TikTokShopException(ex.Message, ex);
+                throw new TikTokException(ex.Message, ex);
             }
         }
 
         private async Task<T> GetResposneAsync<T>(IFlurlResponse flurlResponse)
-            where T : TikTokShopResponse, new()
+            where T : TikTokResponse, new()
         {
             string contentType = flurlResponse.Headers.GetAll("Content-Type").FirstOrDefault() ?? string.Empty;
             string contentDisposition = flurlResponse.Headers.GetAll("Content-Disposition").FirstOrDefault() ?? string.Empty;

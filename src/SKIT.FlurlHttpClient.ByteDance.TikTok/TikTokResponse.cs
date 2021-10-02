@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     /// <summary>
     /// 抖音开放平台 API 响应的扩展信息字段。
     /// </summary>
-    public abstract class TikTokResposneExtra
+    public sealed class TikTokResposneExtra
     {
         /// <summary>
         /// 获取请求唯一标识。

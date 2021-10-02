@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Events
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Events
 {
     /// <summary>
     /// <para>表示 doudian_product_change 消息的数据。</para>

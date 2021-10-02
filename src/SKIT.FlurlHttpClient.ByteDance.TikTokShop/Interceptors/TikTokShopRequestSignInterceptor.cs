@@ -13,14 +13,14 @@ using Newtonsoft.Json.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
 {
-    internal partial class TikTokShopSignInterceptor : FlurlHttpCallInterceptor
+    internal partial class TikTokShopRequestSignInterceptor : FlurlHttpCallInterceptor
     {
         private readonly string _baseUrl;
         private readonly string _appKey;
         private readonly string _appSecret;
         private readonly string _signMethod;
 
-        public TikTokShopSignInterceptor(string baseUrl, string appKey, string appSecret, string signMethod)
+        public TikTokShopRequestSignInterceptor(string baseUrl, string appKey, string appSecret, string signMethod)
         {
             _baseUrl = baseUrl;
             _appKey = appKey;

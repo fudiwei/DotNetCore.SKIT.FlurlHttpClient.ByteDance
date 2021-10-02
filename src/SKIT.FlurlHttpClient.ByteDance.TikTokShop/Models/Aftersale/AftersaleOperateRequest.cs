@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                             public class Address
                             {
                                 /// <summary>
-                                /// 获取或设置省份名称。
+                                /// 获取或设置省份 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("province_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("province_id")]
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 public string ProvinceName { get; set; } = string.Empty;
                                 
                                 /// <summary>
-                                /// 获取或设置城市名称。
+                                /// 获取或设置城市 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("city_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("city_id")]
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 public string CityName { get; set; } = string.Empty;
 
                                 /// <summary>
-                                /// 获取或设置区县名称。
+                                /// 获取或设置区县 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("town_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("town_id")]
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 public string DistrictName { get; set; } = string.Empty;
 
                                 /// <summary>
-                                /// 获取或设置街道名称。
+                                /// 获取或设置街道 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("street_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("street_id")]

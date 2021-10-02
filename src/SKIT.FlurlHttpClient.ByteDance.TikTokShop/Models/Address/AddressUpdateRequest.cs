@@ -70,7 +70,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("street_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("street_id")]
-                public int? Street { get; set; }
+                public int? StreetId { get; set; }
 
                 /// <summary>
                 /// 获取或设置详情地址。

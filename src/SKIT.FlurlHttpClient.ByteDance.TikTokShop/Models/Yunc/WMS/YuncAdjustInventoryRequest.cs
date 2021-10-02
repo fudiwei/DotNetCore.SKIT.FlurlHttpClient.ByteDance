@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cargo_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("cargo_code")]
-                public int CargoCode { get; set; }
+                public string CargoCode { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置 ERP SKU ID。

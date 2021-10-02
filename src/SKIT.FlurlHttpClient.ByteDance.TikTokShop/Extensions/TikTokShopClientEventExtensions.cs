@@ -36,5 +36,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
                 throw new Exceptions.TikTokShopEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
             }
         }
+
+        /// <summary>
+        /// <para>验证回调通知事件签名。</para>
+        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/153/99 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="callbackJson">微信回调通知中请求正文（JSON 格式）。</param>
+        /// <param name="callbackSignature">抖店回调通知中的 event-sign 字段。</param>
+        /// <returns></returns>
+        public static bool VerifyEventSignature(this TikTokShopClient client, string callbackJson, string callbackSignature)
+        {
+            if (client == null) throw new ArgumentNullException(nameof(client));
+            if (callbackJson == null) throw new ArgumentNullException(nameof(callbackJson));
+
+            try
+            {
+                Utilities.MarshalJsonUtility.Format(callbackJson); // 验证是否是有效的 JSON
+
+                string plainText = $"{client.Credentials.AppKey}{callbackJson}{client.Credentials.AppSecret}";
+                string signText = Security.MD5Utility.Hash(plainText);
+                return string.Equals(signText, callbackSignature, StringComparison.OrdinalIgnoreCase);
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

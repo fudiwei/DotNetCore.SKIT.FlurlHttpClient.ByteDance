@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string? OpenId { get; set; }
+                public string OpenId { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置用户的 UnionId。
@@ -46,21 +46,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("nickname")]
                 [System.Text.Json.Serialization.JsonPropertyName("nickname")]
-                public string? Nickname { get; set; }
+                public string Nickname { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置用户性别。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("gender")]
                 [System.Text.Json.Serialization.JsonPropertyName("gender")]
-                public int? Gender { get; set; }
+                public int Gender { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户头像 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("avatar")]
                 [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                public string? AvatarUrl { get; set; }
+                public string AvatarUrl { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置账号类型。
@@ -74,21 +74,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("country")]
                 [System.Text.Json.Serialization.JsonPropertyName("country")]
-                public string? Country { get; set; }
+                public string Country { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置省份。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("province")]
                 [System.Text.Json.Serialization.JsonPropertyName("province")]
-                public string? Province { get; set; }
+                public string Province { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置省份。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("city")]
                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                public string? City { get; set; }
+                public string City { get; set; } = default!;
             }
         }
 

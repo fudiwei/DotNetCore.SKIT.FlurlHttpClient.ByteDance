@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.User[]? FansList { get; set; }
+                public Types.User[] FansList { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置分页游标。
@@ -93,14 +93,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("has_more")]
                 [System.Text.Json.Serialization.JsonPropertyName("has_more")]
-                public bool? HasMore { get; set; }
+                public bool HasMore { get; set; }
 
                 /// <summary>
                 /// 获取或设置粉丝总数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("total")]
                 [System.Text.Json.Serialization.JsonPropertyName("total")]
-                public int? TotalCount { get; set; }
+                public int TotalCount { get; set; }
             }
         }
     }

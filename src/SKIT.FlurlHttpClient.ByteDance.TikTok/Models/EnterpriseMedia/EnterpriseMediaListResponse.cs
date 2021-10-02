@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("medias")]
                 [System.Text.Json.Serialization.JsonPropertyName("medias")]
-                public Types.Media[]? MediaList { get; set; }
+                public Types.Media[] MediaList { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置分页游标。
@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("has_more")]
                 [System.Text.Json.Serialization.JsonPropertyName("has_more")]
-                public bool? HasMore { get; set; }
+                public bool HasMore { get; set; }
             }
         }
 

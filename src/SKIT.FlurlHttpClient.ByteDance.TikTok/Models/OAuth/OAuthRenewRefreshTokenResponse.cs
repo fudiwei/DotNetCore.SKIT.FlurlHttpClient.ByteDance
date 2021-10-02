@@ -32,14 +32,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-                public string? RefreshToken { get; set; }
+                public string RefreshToken { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置刷新令牌有效期（单位：秒）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expires_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
-                public int? RefreshTokenExpiresIn { get; set; }
+                public int RefreshTokenExpiresIn { get; set; }
             }
         }
 

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /oauth/client_token 接口的响应。</para>
+    /// <para>表示 [GET] /devtool/micapp/is_legal 接口的响应。</para>
     /// </summary>
-    public class OAuthClientTokenResponse : TikTokResponse<OAuthClientTokenResponse.Types.Data>
+    public class DevToolMicroAppIsLegalResponse : TikTokResponse<DevToolMicroAppIsLegalResponse.Types.Data>
     {
         public static class Types
         {
@@ -28,27 +28,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 public string? ErrorDescription { get; set; }
 
                 /// <summary>
-                /// 获取或设置接口调用凭证。
+                /// 获取或设置是否是合法信息。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("access_token")]
-                [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-                public string AccessToken { get; set; } = default!;
-
-                /// <summary>
-                /// 获取或设置凭证有效期（单位：秒）。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("expires_in")]
-                [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
-                public int ExpiresIn { get; set; }
+                [Newtonsoft.Json.JsonProperty("is_legal")]
+                [System.Text.Json.Serialization.JsonPropertyName("is_legal")]
+                public bool IsLegal { get; set; }
             }
         }
-
-        /// <summary>
-        /// 获取或设置返回信息。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("message")]
-        [System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
 
         public override bool IsSuccessful()
         {

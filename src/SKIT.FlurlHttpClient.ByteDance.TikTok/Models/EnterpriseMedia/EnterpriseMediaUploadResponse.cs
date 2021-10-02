@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("media")]
                 [System.Text.Json.Serialization.JsonPropertyName("media")]
-                public Types.Media? Media { get; set; }
+                public Types.Media Media { get; set; } = default!;
             }
         }
 

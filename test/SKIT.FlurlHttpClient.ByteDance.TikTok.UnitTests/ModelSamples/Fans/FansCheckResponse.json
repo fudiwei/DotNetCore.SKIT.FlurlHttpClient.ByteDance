@@ -1,0 +1,14 @@
+﻿{
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393
+    },
+    "data": {
+        "is_follower": true,
+        "follow_time": 1571075129
+    }
+}

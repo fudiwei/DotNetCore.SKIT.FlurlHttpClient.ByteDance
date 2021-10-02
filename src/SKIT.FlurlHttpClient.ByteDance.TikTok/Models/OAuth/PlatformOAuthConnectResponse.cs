@@ -17,6 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("error_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("error_code")]
+                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                 public int ErrorCode { get; set; }
 
                 /// <summary>

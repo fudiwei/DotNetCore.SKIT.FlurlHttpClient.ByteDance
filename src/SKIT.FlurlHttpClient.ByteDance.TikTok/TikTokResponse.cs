@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 && Extra?.ErrorCode.GetValueOrDefault() == 0;
+            return RawStatus == 200 && Extra?.ErrorCode.GetValueOrDefault() == 0 && Extra?.SubErrorCode.GetValueOrDefault() == 0;
         }
     }
 
@@ -70,6 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// </summary>
         [Newtonsoft.Json.JsonProperty("error_code")]
         [System.Text.Json.Serialization.JsonPropertyName("error_code")]
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
         public int? ErrorCode { get; set; }
 
         /// <summary>
@@ -84,6 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sub_error_code")]
         [System.Text.Json.Serialization.JsonPropertyName("sub_error_code")]
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
         public int? SubErrorCode { get; set; }
 
         /// <summary>

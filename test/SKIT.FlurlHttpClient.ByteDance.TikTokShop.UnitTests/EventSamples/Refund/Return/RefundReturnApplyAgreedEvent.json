@@ -1,0 +1,30 @@
+﻿{
+    "tag": 202,
+    "msgId": "04288XXXXXXX9348874::100:1618990587:68373744XXXXXXX9128",
+    "data": {
+        "p_id": 4705288465508532862,
+        "s_id": 4705288465508532862,
+        "shop_id": 95250,
+        "aftersale_id": "xxxxxx",
+        "aftersale_status": 13,
+        "aftersale_type": 3,
+        "refund_amount": 0,
+        "refund_post_amount": 0,
+        "reason_code": 9,
+        "agree_time": 1618990587,
+        "addr": {
+            "province": "福建省",
+            "province_id": "350000",
+            "city": "南平市",
+            "city_id": "350700",
+            "town": "建阳区",
+            "town_id": "350703",
+            "street": "",
+            "street_id": "0",
+            "detail": "潭城街道XXXX",
+            "name": "潭诚XXX",
+            "mobile": "xxxxx"
+        },
+        "refund_voucher_num": 0
+    }
+}

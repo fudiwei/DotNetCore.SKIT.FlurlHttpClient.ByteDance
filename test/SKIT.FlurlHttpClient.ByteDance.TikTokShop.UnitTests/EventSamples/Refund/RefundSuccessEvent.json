@@ -1,0 +1,17 @@
+﻿{
+    "tag": 206,
+    "msgId": "04288XXXXXXX9348874::100:1618990587:68373744XXXXXXX9128",
+    "data": {
+        "p_id": 4705288465508532862,
+        "s_id": 4705288465508532862,
+        "shop_id": 95250,
+        "aftersale_id": "xxxxxx",
+        "aftersale_status": 6,
+        "aftersale_type": 1,
+        "refund_amount": 13200,
+        "refund_post_amount": 0,
+        "reason_code": 15,
+        "success_time": 1618991959,
+        "refund_voucher_num": 0
+    }
+}

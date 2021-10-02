@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
+{
+    public class TikTokDeclarationTests
+    {
+        private static readonly Assembly _assembly = Assembly.Load("SKIT.FlurlHttpClient.ByteDance.TikTok");
+
+        [Fact(DisplayName = "验证 API 模型命名")]
+        public void ApiModelsNamingTest()
+        {
+            CodeStyleUtil.VerifyApiModelsNaming(_assembly, out var ex);
+
+            if (ex != null)
+                throw ex;
+
+            Assert.Null(ex);
+        }
+
+        [Fact(DisplayName = "验证 API 模型定义")]
+        public void ApiModelsDefinitionTest()
+        {
+            string workdir = Path.Combine(TestConfigs.ProjectTestDirectory, "ModelSamples");
+            Assert.True(Directory.Exists(workdir));
+
+            CodeStyleUtil.VerifyApiModelsDefinition(_assembly, workdir, out var ex);
+
+            if (ex != null)
+                throw ex;
+
+            Assert.Null(ex);
+        }
+
+        [Fact(DisplayName = "验证 API 接口命名")]
+        public void ApiExtensionsNamingTest()
+        {
+            CodeStyleUtil.VerifyApiExtensionsNaming(_assembly, out var ex);
+
+            if (ex != null)
+                throw ex;
+
+            Assert.Null(ex);
+        }
+
+        [Fact(DisplayName = "验证代码规范")]
+        public void CodeStyleTest()
+        {
+            string workdir = Path.Combine(TestConfigs.ProjectSourceDirectory);
+            Assert.True(Directory.Exists(workdir));
+
+            CodeStyleUtil.VerifySourceCodeStyle(workdir, out var ex);
+
+            if (ex != null)
+                throw ex;
+
+            Assert.Null(ex);
+        }
+    }
+}

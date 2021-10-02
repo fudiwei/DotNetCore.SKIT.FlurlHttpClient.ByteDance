@@ -10,23 +10,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     {
         public static class Types
         {
-            public class Data
+            public class Data : TikTokResposneData
             {
-                /// <summary>
-                /// 获取或设置错误码。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("error_code")]
-                [System.Text.Json.Serialization.JsonPropertyName("error_code")]
-                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                public int ErrorCode { get; set; }
-
-                /// <summary>
-                /// 获取或设置错误描述。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("description")]
-                [System.Text.Json.Serialization.JsonPropertyName("description")]
-                public string? ErrorDescription { get; set; }
-
                 /// <summary>
                 /// 获取或设置刷新令牌。
                 /// </summary>

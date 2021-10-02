@@ -47,6 +47,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     }
 
     /// <summary>
+    /// 抖音开放平台 API 响应的返回数据字段。
+    /// </summary>
+    public abstract class TikTokResposneData
+    {
+        /// <summary>
+        /// 获取或设置错误码。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("error_code")]
+        [System.Text.Json.Serialization.JsonPropertyName("error_code")]
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+        public int ErrorCode { get; set; }
+
+        /// <summary>
+        /// 获取或设置错误描述。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("description")]
+        [System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? ErrorDescription { get; set; }
+    }
+
+    /// <summary>
     /// 抖音开放平台 API 响应的扩展信息字段。
     /// </summary>
     public sealed class TikTokResposneExtra

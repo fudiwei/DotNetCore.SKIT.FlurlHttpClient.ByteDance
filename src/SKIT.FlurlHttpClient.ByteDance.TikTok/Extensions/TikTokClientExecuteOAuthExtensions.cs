@@ -110,10 +110,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "oauth", "access_token");
 
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientKey)), "client_key");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientSecret)), "client_secret");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Code)), "code");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.GrantType)), "grant_type");
+            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
+            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
+            httpContent.Add(new StringContent(request.Code, Encoding.UTF8), "code");
+            httpContent.Add(new StringContent(request.GrantType, Encoding.UTF8), "grant_type");
 
             return await client.SendRequestAsync<Models.OAuthAccessTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
@@ -135,8 +135,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "oauth", "renew_refresh_token");
 
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientKey)), "client_key");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RefreshToken)), "refresh_token");
+            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
+            httpContent.Add(new StringContent(request.RefreshToken, Encoding.UTF8), "refresh_token");
 
             return await client.SendRequestAsync<Models.OAuthRenewRefreshTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
@@ -158,9 +158,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "oauth", "client_token");
 
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientKey)), "client_key");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientSecret)), "client_secret");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.GrantType)), "grant_type");
+            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
+            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
+            httpContent.Add(new StringContent(request.GrantType, Encoding.UTF8), "grant_type");
 
             return await client.SendRequestAsync<Models.OAuthClientTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
@@ -182,9 +182,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "oauth", "refresh_token");
 
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientKey)), "client_key");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(client.Credentials.ClientSecret)), "client_secret");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RefreshToken)), "refresh_token");
+            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
+            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
+            httpContent.Add(new StringContent(request.RefreshToken, Encoding.UTF8), "refresh_token");
 
             return await client.SendRequestAsync<Models.OAuthRefreshTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }

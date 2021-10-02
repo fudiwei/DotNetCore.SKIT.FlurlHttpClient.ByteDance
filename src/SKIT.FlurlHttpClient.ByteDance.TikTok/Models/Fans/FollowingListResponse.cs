@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.User[] FollowingList { get; set; } = default!;
+                public Types.User[]? FollowingList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("has_more")]
                 [System.Text.Json.Serialization.JsonPropertyName("has_more")]
-                public bool HasMore { get; set; }
+                public bool? HasMore { get; set; }
             }
         }
     }

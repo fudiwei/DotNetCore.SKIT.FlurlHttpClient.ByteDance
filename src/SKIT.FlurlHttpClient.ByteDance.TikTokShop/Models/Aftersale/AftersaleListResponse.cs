@@ -568,7 +568,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 public string Content { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置标记类型。
+                                /// 获取或设置星标。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("star")]
                                 [System.Text.Json.Serialization.JsonPropertyName("star")]

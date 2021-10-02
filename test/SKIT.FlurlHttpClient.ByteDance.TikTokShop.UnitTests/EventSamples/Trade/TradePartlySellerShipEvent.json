@@ -1,0 +1,57 @@
+﻿{
+    "tag": 108,
+    "msgId": "04288XXXXXXX9348874::100:1618990587:68373744XXXXXXX9128",
+    "data": {
+        "p_id": 4705288465508532862,
+        "s_ids": [
+            4705288465508533000
+        ],
+        "shop_id": 95250,
+        "order_status": 101,
+        "order_type": 0,
+        "biz": 2,
+        "update_time": 1599644408,
+        "receiver_msg": {
+            "name": "周一",
+            "tel": "13678643212",
+            "addr": [
+                {
+                    "province": {
+                        "name": "浙江省",
+                        "id": "330000"
+                    },
+                    "city": {
+                        "name": "杭州市",
+                        "id": "330100"
+                    },
+                    "town": {
+                        "name": "滨江区",
+                        "id": "330108"
+                    },
+                    "detail": "松岭路888号"
+                }
+            ]
+        },
+        "logistics_msg": {
+            "shipped_order_info": [
+                {
+                    "shipped_order_id": "4705288465508532862",
+                    "product_id": "2329389",
+                    "sku_id": "3373737",
+                    "sku_num": "2",
+                    "shipped_num": "1"
+                },
+                {
+                    "shipped_order_id": "4705288465508532862",
+                    "product_id": "2329389",
+                    "sku_id": "3373737",
+                    "sku_num": "2",
+                    "shipped_num": "1"
+                }
+            ],
+            "pack_id": "4705288465508532862",
+            "express_company_id": "gdkd",
+            "logistics_code": "111111111111111"
+        }
+    }
+}

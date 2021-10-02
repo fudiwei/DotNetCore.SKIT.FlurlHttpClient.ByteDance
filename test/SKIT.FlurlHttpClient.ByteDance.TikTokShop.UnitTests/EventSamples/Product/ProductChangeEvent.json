@@ -1,5 +1,5 @@
 ﻿{
-    "tag": "xxx",
+    "tag": "400",
     "msgId": "0443477XXXXXXX48874::xxx:1618990587:6837374XXXXXXX89128",
     "data": {
         "check_reject_reason": "{\"audit_formatted_reason\":\"{\\\"biz_type\\\":\\\"1\\\",\\\"op_id\\\":-1,\\\"audit_status\\\":2,\\\"human_audit_status\\\":1,\\\"pass_through_extra\\\":\\\"{\\\\\\\"audit_record_id\\\\\\\":\\\\\\\"0\\\\\\\"}\\\"}\"}",

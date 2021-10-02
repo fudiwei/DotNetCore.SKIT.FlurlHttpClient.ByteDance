@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 {
     /// <summary>
     /// 表示抖店开放平台 API 消息推送事件的基类。
@@ -20,7 +17,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tag")]
         [System.Text.Json.Serialization.JsonPropertyName("tag")]
-        public string Tag { get; set; } = default!;
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+        public int Tag { get; set; }
     }
 
     /// <summary>

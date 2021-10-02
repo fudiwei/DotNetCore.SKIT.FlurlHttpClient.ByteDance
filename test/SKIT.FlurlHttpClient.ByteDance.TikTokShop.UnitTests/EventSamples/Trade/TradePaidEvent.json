@@ -1,0 +1,17 @@
+﻿{
+    "tag": 110,
+    "msgId": "04288XXXXXXX9348874::100:1618990587:68373744XXXXXXX9128",
+    "data": {
+        "p_id": "xxxxxxx",
+        "s_ids": [
+            "xxxxxxx"
+        ],
+        "shop_id": 12345,
+        "order_status": 2,
+        "order_type": 0,
+        "pay_type": 1,
+        "biz": 2,
+        "pay_time": 1618990587,
+        "pay_amount": 2990
+    }
+}

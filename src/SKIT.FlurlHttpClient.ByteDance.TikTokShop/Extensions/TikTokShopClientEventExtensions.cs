@@ -38,6 +38,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         }
 
         /// <summary>
+        /// <para>从 JSON 反序列化得到 <see cref="TikTokShopEvent"/> 对象数组。</para>
+        /// </summary>
+        /// <typeparam name="TEvent"></typeparam>
+        /// <param name="client"></param>
+        /// <param name="callbackJson"></param>
+        /// <returns></returns>
+        public static TEvent[] DeserializeEvents<TEvent>(this TikTokShopClient client, string callbackJson)
+            where TEvent : TikTokShopEvent, new()
+        {
+            if (client == null) throw new ArgumentNullException(nameof(client));
+            if (string.IsNullOrEmpty(callbackJson)) throw new ArgumentNullException(callbackJson);
+
+            try
+            {
+                return client.JsonSerializer.Deserialize<TEvent[]>(callbackJson);
+            }
+            catch (Exception ex)
+            {
+                throw new Exceptions.TikTokShopEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
+            }
+        }
+
+        /// <summary>
         /// <para>验证回调通知事件签名。</para>
         /// <para>REF: https://op.jinritemai.com/docs/guide-docs/153/99 </para>
         /// </summary>

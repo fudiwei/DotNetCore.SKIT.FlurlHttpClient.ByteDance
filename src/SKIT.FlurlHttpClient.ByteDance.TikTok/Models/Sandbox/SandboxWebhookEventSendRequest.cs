@@ -6,10 +6,10 @@
     public class SandboxWebhookEventSendRequest : TikTokRequest
     {
         /// <summary>
-        /// 获取或设置小程序 AppId。
+        /// 获取或设置需要模拟的事件类型。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string MicroAppId { get; set; } = string.Empty;
+        public string EventType { get; set; } = string.Empty;
     }
 }

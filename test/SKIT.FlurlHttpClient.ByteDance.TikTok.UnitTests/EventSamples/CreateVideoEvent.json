@@ -1,0 +1,9 @@
+﻿{
+    "event": "create_video",
+    "from_user_id": "",
+    "client_key": "",
+    "content": {
+        "item_id": "",
+        "share_id": ""
+    }
+}

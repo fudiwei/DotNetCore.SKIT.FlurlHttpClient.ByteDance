@@ -20,11 +20,18 @@
         public string ClientKey { get; set; } = default!;
 
         /// <summary>
-        /// 获取或设置事件发起用户 ID。
+        /// 获取或设置事件发起者用户 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("from_user_id")]
         [System.Text.Json.Serialization.JsonPropertyName("from_user_id")]
         public string FromUserId { get; set; } = default!;
+
+        /// <summary>
+        /// 获取或设置事件接收者用户 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("to_user_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("to_user_id")]
+        public string? ToUserId { get; set; }
     }
 
     /// <summary>

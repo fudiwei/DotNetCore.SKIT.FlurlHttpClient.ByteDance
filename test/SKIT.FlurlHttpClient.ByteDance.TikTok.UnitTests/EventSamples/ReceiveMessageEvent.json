@@ -1,0 +1,25 @@
+﻿{
+    "event": "receive_msg",
+    "from_user_id": "",
+    "to_user_id": "",
+    "client_key": "",
+    "content": {
+        "message_type": "typr",
+        "text": "string",
+        "resource_type": "gif",
+        "resource_height": 123,
+        "resource_width": 123,
+        "resource_url": "http(s)://sssssss",
+        "title": "xxx",
+        "icon_url": "http(s)://ssss",
+        "description": "xxxxx",
+        "link_url": "http(s)://sssssss",
+        "actions": {
+            "xxx": {
+                "name": "text name",
+                "value": "link",
+                "action_type": "send_message/redirect/dial_phone"
+            }
+        }
+    }
+}

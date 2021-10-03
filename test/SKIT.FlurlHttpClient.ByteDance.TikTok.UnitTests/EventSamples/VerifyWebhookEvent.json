@@ -1,0 +1,7 @@
+﻿{
+    "event": "verify_webhook",
+    "client_key": "",
+    "content": {
+        "challenge": 12345
+    }
+}

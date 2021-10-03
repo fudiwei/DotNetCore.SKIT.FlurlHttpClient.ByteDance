@@ -38,6 +38,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
             Assert.Null(ex);
         }
 
+        [Fact(DisplayName = "验证 API 事件定义")]
+        public void ApiEventsDefinitionTest()
+        {
+            string workdir = Path.Combine(TestConfigs.ProjectTestDirectory, "EventSamples");
+            Assert.True(Directory.Exists(workdir));
+
+            CodeStyleUtil.VerifyApiEventsDefinition(_assembly, workdir, out var ex);
+
+            if (ex != null)
+                throw ex;
+
+            Assert.Null(ex);
+        }
+
         [Fact(DisplayName = "验证 API 接口命名")]
         public void ApiExtensionsNamingTest()
         {

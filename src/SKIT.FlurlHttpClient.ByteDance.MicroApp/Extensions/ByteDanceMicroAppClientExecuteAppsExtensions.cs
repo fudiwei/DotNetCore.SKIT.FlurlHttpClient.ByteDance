@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -55,10 +54,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("appid", client.Credentials.AppId)
                 .SetQueryParam("secret", client.Credentials.AppSecret);
 
-            if (!string.IsNullOrEmpty(request.Code))
+            if (request.Code != null)
                 flurlReq.SetQueryParam("code", request.Code);
 
-            if (!string.IsNullOrEmpty(request.AnoymousCode))
+            if (request.AnoymousCode != null)
                 flurlReq.SetQueryParam("anonymous_code", request.AnoymousCode);
 
             return await client.SendRequestWithJsonAsync<Models.AppsJsCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);

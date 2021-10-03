@@ -1,0 +1,30 @@
+﻿{
+    "data": {
+        "cursor": 0,
+        "description": "",
+        "error_code": "0",
+        "has_more": false,
+        "pois": [
+            {
+                "address": "东城区",
+                "city": "北京市",
+                "city_code": "110101",
+                "country": "中国",
+                "country_code": "CN",
+                "district": "东城区",
+                "location": "116.401179,39.902768",
+                "poi_id": "6601131771805304836",
+                "poi_name": "北京市",
+                "province": "北京市"
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

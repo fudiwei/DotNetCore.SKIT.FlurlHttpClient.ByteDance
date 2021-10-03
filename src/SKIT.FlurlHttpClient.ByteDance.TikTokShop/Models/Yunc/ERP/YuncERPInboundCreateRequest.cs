@@ -16,14 +16,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("line_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("line_no")]
-                public string LineNumber { get; set; }= string.Empty;
+                public string LineNumber { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置入库单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("biz_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("biz_order_no")]
-                public string BusinessOrderNumber { get; set; }= string.Empty;
+                public string BusinessOrderNumber { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置货品编码。

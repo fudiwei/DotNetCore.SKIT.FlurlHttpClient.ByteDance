@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -32,10 +30,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("scope", request.Scope)
                 .SetQueryParam("redirect_uri", request.RedirectUrl);
 
-            if (!string.IsNullOrEmpty(request.OptionalScope))
+            if (request.OptionalScope != null)
                 flurlReq.SetQueryParam("optionalScope", request.OptionalScope);
 
-            if (!string.IsNullOrEmpty(request.State))
+            if (request.State != null)
                 flurlReq.SetQueryParam("state", request.State);
 
             return await client.SendRequestWithJsonAsync<Models.PlatformOAuthConnectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -61,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("scope", request.Scope)
                 .SetQueryParam("redirect_uri", request.RedirectUrl);
 
-            if (!string.IsNullOrEmpty(request.State))
+            if (request.State != null)
                 flurlReq.SetQueryParam("state", request.State);
 
             return await client.SendRequestWithJsonAsync<Models.OAuthAuthorizeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -87,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("scope", request.Scope)
                 .SetQueryParam("redirect_uri", request.RedirectUrl);
 
-            if (!string.IsNullOrEmpty(request.State))
+            if (request.State != null)
                 flurlReq.SetQueryParam("state", request.State);
 
             return await client.SendRequestWithJsonAsync<Models.OAuthAuthorizeV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);

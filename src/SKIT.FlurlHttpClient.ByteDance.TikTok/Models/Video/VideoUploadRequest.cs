@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /enterprise/media/upload 接口的请求。</para>
+    /// <para>表示 [POST] /video/upload 接口的请求。</para>
     /// </summary>
-    public class EnterpriseMediaUploadRequest : TikTokRequest
+    public class VideoUploadRequest : TikTokRequest
     {
         /// <summary>
         /// 获取或设置用户的 OpenId。
@@ -13,24 +13,24 @@
         public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置素材文件字节数组。
+        /// 获取或设置视频文件字节数组。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] MediaFileBytes { get; set; } = new byte[0];
+        public byte[] VideoFileBytes { get; set; } = new byte[0];
 
         /// <summary>
-        /// 获取或设置素材文件名。如果不指定将由系统自动生成。
+        /// 获取或设置视频文件名。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string? MediaFileName { get; set; }
+        public string? VideoFileName { get; set; }
 
         /// <summary>
-        /// 获取或设置素材文件类型。如果不指定将由系统自动生成。
+        /// 获取或设置视频文件类型。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string? MediaContentType { get; set; }
+        public string? VideoContentType { get; set; }
     }
 }

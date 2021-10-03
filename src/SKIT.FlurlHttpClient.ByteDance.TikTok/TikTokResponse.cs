@@ -121,6 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     /// 抖音开放平台 API 响应的泛型基类。
     /// </summary>
     public abstract class TikTokResponse<TData> : TikTokResponse
+        where TData : TikTokResposneData
     {
         /// <summary>
         /// 获取或设置接口返回数据。
@@ -128,5 +129,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         public TData Data { get; set; } = default!;
+
+        public override bool IsSuccessful()
+        {
+            return base.IsSuccessful() && Data?.ErrorCode == 0;
+        }
     }
 }

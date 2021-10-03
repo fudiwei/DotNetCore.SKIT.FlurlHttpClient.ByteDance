@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -30,11 +28,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
-            if (string.IsNullOrEmpty(request.MediaFileName))
-                request.MediaFileName = Guid.NewGuid().ToString("N").ToLower();
+            if (string.IsNullOrEmpty(request.MediaContentType))
+                request.MediaContentType = "image/jpeg";
 
+            if (string.IsNullOrEmpty(request.MediaFileName))
+                request.MediaFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
+
+            using var fileContent = new ByteArrayContent(request.MediaFileBytes ?? new byte[0]);
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(request.MediaFileBytes ?? new byte[0]), "media", request.MediaFileName);
+            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.MediaContentType);
+            httpContent.Add(fileContent, "media", request.MediaFileName);
 
             return await client.SendRequestAsync<Models.EnterpriseMediaUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }

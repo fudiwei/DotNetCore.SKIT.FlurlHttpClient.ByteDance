@@ -1,13 +1,13 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /enterprise/media/delete 接口的响应。</para>
+    /// <para>表示 [POST] /video/part/complete 接口的响应。</para>
     /// </summary>
-    public class EnterpriseMediaDeleteResponse : TikTokResponse<EnterpriseMediaDeleteResponse.Types.Data>
+    public class VideoPartCompleteResponse : TikTokResponse<VideoPartCompleteResponse.Types.Data>
     {
         public static class Types
         {
-            public class Data : TikTokResposneData
+            public class Data : VideoUploadResponse.Types.Data
             {
             }
         }

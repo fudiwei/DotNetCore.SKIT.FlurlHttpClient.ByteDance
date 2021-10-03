@@ -36,5 +36,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 throw new Exceptions.TikTokEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
             }
         }
+
+        /// <summary>
+        /// <para>验证 Webhook 事件签名。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6850452582826067975 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="callbackJson">抖音 Webhook 事件中请求正文（JSON 格式）。</param>
+        /// <param name="callbackSignature">抖音 Webhook 事件中的 X-Douyin-Signature 字段。</param>
+        /// <returns></returns>
+        public static bool VerifyEventSignature(this TikTokClient client, string callbackJson, string callbackSignature)
+        {
+            if (client == null) throw new ArgumentNullException(nameof(client));
+            if (callbackJson == null) throw new ArgumentNullException(nameof(callbackJson));
+
+            try
+            {
+                string plainText = $"{client.Credentials.ClientSecret}{callbackJson}";
+                string signText = Security.SHA1Utility.Hash(plainText);
+                return string.Equals(signText, callbackSignature, StringComparison.OrdinalIgnoreCase);
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

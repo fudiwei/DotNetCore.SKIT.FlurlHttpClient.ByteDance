@@ -31,10 +31,5 @@
         [Newtonsoft.Json.JsonProperty("message")]
         [System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
-
-        public override bool IsSuccessful()
-        {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
-        }
     }
 }

@@ -58,10 +58,5 @@
                 public bool HasMore { get; set; }
             }
         }
-
-        public override bool IsSuccessful()
-        {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
-        }
     }
 }

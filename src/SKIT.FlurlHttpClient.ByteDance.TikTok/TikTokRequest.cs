@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         public virtual int? Timeout { get; set; }
 
         /// <summary>
-        /// 获取或设置抖音开放平台的 AccessToken。
+        /// 获取或设置接口调用凭证。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

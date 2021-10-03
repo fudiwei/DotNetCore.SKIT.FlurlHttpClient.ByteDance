@@ -130,6 +130,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         public TData Data { get; set; } = default!;
 
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        /// <returns></returns>
         public override bool IsSuccessful()
         {
             return base.IsSuccessful() && Data?.ErrorCode == 0;

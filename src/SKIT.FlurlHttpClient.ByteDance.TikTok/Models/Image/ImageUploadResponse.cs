@@ -44,10 +44,5 @@
                 public Types.Image Image { get; set; } = default!;
             }
         }
-
-        public override bool IsSuccessful()
-        {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
-        }
     }
 }

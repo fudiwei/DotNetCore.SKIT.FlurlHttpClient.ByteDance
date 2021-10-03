@@ -52,10 +52,5 @@
                 public int RefreshTokenExpiresIn { get; set; }
             }
         }
-
-        public override bool IsSuccessful()
-        {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
-        }
     }
 }

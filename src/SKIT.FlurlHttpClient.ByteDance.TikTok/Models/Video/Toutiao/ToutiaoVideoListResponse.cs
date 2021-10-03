@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /video/list 接口的响应。</para>
+    /// <para>表示 [GET] /toutiao/video/list 接口的响应。</para>
     /// </summary>
-    public class VideoListResponse : TikTokResponse<VideoListResponse.Types.Data>
+    public class ToutiaoVideoListResponse : TikTokResponse<ToutiaoVideoListResponse.Types.Data>
     {
         public static class Types
         {
@@ -23,13 +23,6 @@
                                 [Newtonsoft.Json.JsonProperty("digg_count")]
                                 [System.Text.Json.Serialization.JsonPropertyName("digg_count")]
                                 public int DiggCount { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置下载数。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("download_count")]
-                                [System.Text.Json.Serialization.JsonPropertyName("download_count")]
-                                public int DownloadCount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置转发数。
@@ -76,39 +69,11 @@
                         public string Title { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置视频状态。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("video_status")]
-                        [System.Text.Json.Serialization.JsonPropertyName("video_status")]
-                        public int Status { get; set; }
-
-                        /// <summary>
                         /// 获取或设置封面 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover")]
                         public string CoverUrl { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置视频分享 URL。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("share_url")]
-                        [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置是否置顶。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("is_top")]
-                        [System.Text.Json.Serialization.JsonPropertyName("is_top")]
-                        public bool IsTop { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置是否审核结束。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("is_reviewed")]
-                        [System.Text.Json.Serialization.JsonPropertyName("is_reviewed")]
-                        public bool IsReviewed { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。

@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /video/data 接口的响应。</para>
+    /// <para>表示 [POST] /toutiao/video/data 接口的响应。</para>
     /// </summary>
-    public class VideoDataResponse : TikTokResponse<VideoDataResponse.Types.Data>
+    public class ToutiaoVideoDataResponse : TikTokResponse<ToutiaoVideoDataResponse.Types.Data>
     {
         public static class Types
         {
@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class Video : VideoListResponse.Types.Data.Types.Video
+                    public class Video : ToutiaoVideoListResponse.Types.Data.Types.Video
                     {
                     }
                 }

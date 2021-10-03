@@ -24,10 +24,5 @@
                 public int ExpiresIn { get; set; }
             }
         }
-
-        public override bool IsSuccessful()
-        {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
-        }
     }
 }

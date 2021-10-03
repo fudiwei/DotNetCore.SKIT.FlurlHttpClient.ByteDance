@@ -25,8 +25,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "enterprise", "media", "upload")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             if (string.IsNullOrEmpty(request.MediaContentType))
                 request.MediaContentType = "image/jpeg";
@@ -57,8 +57,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "enterprise", "media", "temp", "upload")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             if (string.IsNullOrEmpty(request.MediaFileName))
                 request.MediaFileName = Guid.NewGuid().ToString("N").ToLower();
@@ -84,8 +84,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "enterprise", "media", "list")
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize);
 
@@ -107,8 +107,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "enterprise", "media", "delete")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             using var httpContent = new MultipartFormDataContent();
             httpContent.Add(new StringContent(request.MediaId), "media_id");

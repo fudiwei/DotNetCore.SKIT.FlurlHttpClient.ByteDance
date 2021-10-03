@@ -8,13 +8,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     public class ImageCreateRequest : TikTokRequest
     {
         /// <summary>
-        /// 获取或设置用户的 OpenId。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
-
-        /// <summary>
         /// 获取或设置图片 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_id")]

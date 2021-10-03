@@ -25,8 +25,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "upload")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             if (string.IsNullOrEmpty(request.VideoContentType))
                 request.VideoContentType = "video/mp4";
@@ -57,8 +57,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "part", "init")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.VideoPartInitializeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -78,8 +78,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "part", "upload")
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
@@ -112,8 +112,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "part", "complete")
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("upload_id", request.UploadId);
 
             return await client.SendRequestWithJsonAsync<Models.VideoPartCompleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -134,8 +134,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "create")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.VideoCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -155,8 +155,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "delete")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.VideoDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -176,8 +176,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "video", "list")
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize);
 
@@ -199,8 +199,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "video", "data")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.VideoDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

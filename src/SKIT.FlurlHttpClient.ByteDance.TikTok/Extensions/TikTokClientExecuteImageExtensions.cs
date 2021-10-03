@@ -25,8 +25,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "image", "upload")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             if (string.IsNullOrEmpty(request.ImageContentType))
                 request.ImageContentType = "image/jpeg";
@@ -57,8 +57,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "image", "create")
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.ImageCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

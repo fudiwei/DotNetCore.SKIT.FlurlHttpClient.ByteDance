@@ -186,5 +186,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestAsync<Models.OAuthRefreshTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
+
+        #region User
+        /// <summary>
+        /// <para>异步调用 [GET] /oauth/userinfo 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848806527751489550 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OAuthUserInfoResponse> ExecuteOAuthUserInfoAsync(this TikTokClient client, Models.OAuthUserInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "oauth", "userinfo")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
+
+            return await client.SendRequestWithJsonAsync<Models.OAuthUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

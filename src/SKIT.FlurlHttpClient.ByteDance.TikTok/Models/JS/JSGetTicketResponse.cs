@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [GET] /js/getticket 接口的响应。</para>

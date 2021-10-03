@@ -20,5 +20,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual string? AccessToken { get; set; }
+
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual string? OpenId { get; set; }
     }
 }

@@ -11,9 +11,9 @@
         <PackageId>SKIT.FlurlHttpClient.ByteDance.TikTok</PackageId>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
-        <PackageTags>Flurl.Http ByteDance Douyin TikTok 字节 字节跳动 头条 今日头条 抖音 抖音开放平台</PackageTags>
-        <Version>0.1.0-alpha</Version>
-        <Description>基于 Flurl.Http 的抖音 API 客户端。</Description>
+        <PackageTags>Flurl.Http ByteDance Douyin TikTok 字节 字节跳动 头条 今日头条 头条开放平台 抖音 抖音开放平台 西瓜 西瓜视频 西瓜开放平台</PackageTags>
+        <Version>1.0.0-beta.1.211003</Version>
+        <Description>基于 Flurl.Http 的抖音开放平台 API 客户端，支持抖音、头条、西瓜 OAuth API，支持账号授权、用户管理、视频管理、工具能力等功能。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance.git</RepositoryUrl>

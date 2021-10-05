@@ -39,8 +39,21 @@
 
 |               名称               |                                                                                                                                                                                          NuGet                                                                                                                                                                                           |     其他     |
 | :------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|   字节小程序（小程序、小游戏）   |     [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp)     | _文档编写中_ |
+|   字节小程序（小程序、小游戏）   |     [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp)     | [开发文档](./docs/MicroApp/README.md) |
 |    头条号开放平台（今日头条）    |                                                                                                                                                                                                                                                                                                                                                                                          |   _开发中_   |
 |           抖音开放平台           |         [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTok.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTok) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTok.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTok)         | _文档编写中_ |
 | 抖店开放平台（今日特卖、放心购） | [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokShop.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokShop) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokShop.svg?sanitize=true)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokShop) | _文档编写中_ |
 |   巨量引擎开放平台（头条广告）   |                                                                                                                                                                                                                                                                                                                                                                                          |   _开发中_   |
+
+
+---
+
+## 参与贡献
+
+-   GitHub：https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance
+
+-   Gitee：https://gitee.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance
+
+以上仓库地址同步更新，均可接受 Issue 或 Pull Request。
+
+如何参与贡献请参阅 [CONTRIBUTING](./CONTRIBUTING.md)。

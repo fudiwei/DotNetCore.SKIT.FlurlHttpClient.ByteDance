@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using System.Xml.Serialization;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 {
@@ -65,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <para>REF: https://op.jinritemai.com/docs/guide-docs/153/99 </para>
         /// </summary>
         /// <param name="client"></param>
-        /// <param name="callbackJson">微信回调通知中请求正文（JSON 格式）。</param>
+        /// <param name="callbackJson">抖店回调通知中请求正文（JSON 格式）。</param>
         /// <param name="callbackSignature">抖店回调通知中的 event-sign 字段。</param>
         /// <returns></returns>
         public static bool VerifyEventSignature(this TikTokShopClient client, string callbackJson, string callbackSignature)

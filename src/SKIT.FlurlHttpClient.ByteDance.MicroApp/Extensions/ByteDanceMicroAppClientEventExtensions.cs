@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
@@ -71,6 +67,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             string sign = Security.SHA1Utility.Hash(string.Concat(set));
             return string.Equals(sign, callbackSignature, StringComparison.InvariantCultureIgnoreCase);
         }
-
     }
 }

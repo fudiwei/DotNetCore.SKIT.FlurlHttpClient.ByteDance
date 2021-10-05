@@ -1,0 +1,7 @@
+﻿{
+    "client_msg_id": "client_msg_id",
+    "content": "{\"text\": \"文本内容\"}",
+    "message_type": "text",
+    "persona_id": "persona_id",
+    "to_user_id": "0da22181-d833-447f-995f-1beefea5bef3"
+}

@@ -10,7 +10,7 @@
 
 -   提供了抖音开放平台 API 所需的 HMAC-SHA-256、SHA-1、MD5 等算法工具类。
 
--   提供了解析回调通知事件等扩展方法。
+-   提供了 JSBridge 签名、解析回调通知事件等扩展方法。
 
 ---
 
@@ -81,5 +81,7 @@ else
 -   [如何解析 Webhook 事件？](./Advanced_EventDataDeserialization.md)
 
 -   [如何验证 Webhook 事件签名？](./Advanced_EventDataSignatureVerification.md)
+
+-   [如何生成 JSBridge 初始化时所需的参数及签名？](./Advanced_JSBridge.md)
 
 -   [如何扩展额外的 API？](./Advanced_Extensions.md)

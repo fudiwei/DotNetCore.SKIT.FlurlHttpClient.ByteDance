@@ -1,14 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web;
-using Flurl;
-using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
@@ -25,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="jsapiTicket"></param>
         /// <param name="url"></param>
         /// <returns></returns>
-        public static IDictionary<string, string> GenerateParametersForJssdkConfigRequest(this TikTokClient client, string jsapiTicket, string url)
+        public static IDictionary<string, string> GenerateParametersForJSBridgeConfig(this TikTokClient client, string jsapiTicket, string url)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (jsapiTicket is null) throw new ArgumentNullException(nameof(jsapiTicket));

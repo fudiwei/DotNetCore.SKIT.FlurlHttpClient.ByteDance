@@ -556,5 +556,101 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.XiguaVideoDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region Search
+        /// <summary>
+        /// <para>异步调用 [GET] /video/search 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848806544931358733 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoSearchResponse> ExecuteVideoSearchAsync(this TikTokClient client, Models.VideoSearchRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "video", "search")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
+                .SetQueryParam("keyword", request.Keyword);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoSearchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /video/search/comment/list 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6857340280354457614 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoSearchCommentListResponse> ExecuteVideoSearchCommentListAsync(this TikTokClient client, Models.VideoSearchCommentListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "video", "search", "comment", "list")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
+                .SetQueryParam("sec_item_id", request.SecurityItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoSearchCommentListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /video/search/comment/reply/list 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6857375753722447879 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoSearchCommentReplyListResponse> ExecuteVideoSearchCommentReplyListAsync(this TikTokClient client, Models.VideoSearchCommentReplyListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "video", "search", "comment", "reply", "list")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
+                .SetQueryParam("sec_item_id", request.SecurityItemId)
+                .SetQueryParam("comment_id", request.CommentId);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoSearchCommentReplyListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /video/search/comment/reply 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6857389572192520200 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoSearchCommentReplyResponse> ExecuteVideoSearchCommentReplyAsync(this TikTokClient client, Models.VideoSearchCommentReplyRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "video", "search", "comment", "reply")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoSearchCommentReplyResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

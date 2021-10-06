@@ -1,0 +1,14 @@
+﻿{
+    "event": "item_comment_reply",
+    "from_user_id": "",
+    "to_user_id": "",
+    "client_key": "",
+    "content": {
+        "comment_id": "",
+        "comment_user_id": "",
+        "content": "",
+        "create_time": 123123,
+        "digg_count": 0,
+        "reply_comment_total": 1
+    }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "has_more": true,
+        "list": [
+            {
+                "create_time": 1607399832,
+                "digg_count": 647,
+                "reply_comment_total": 12,
+                "top": true,
+                "comment_id": "",
+                "comment_user_id": "",
+                "content": "回复内容"
+            }
+        ],
+        "cursor": 1
+    },
+    "extra": {
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0
+    }
+}

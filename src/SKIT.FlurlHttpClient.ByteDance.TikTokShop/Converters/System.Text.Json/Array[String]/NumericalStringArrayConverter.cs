@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
 
 namespace System.Text.Json.Converters
@@ -16,8 +15,8 @@ namespace System.Text.Json.Converters
             {
                 reader.Read();
 
-                IList<string> tmpList = new List<string>();
-                JsonSerializerOptions tmpOptions = new JsonSerializerOptions(options);
+                var tmpList = new List<string>();
+                var tmpOptions = new JsonSerializerOptions(options);
                 tmpOptions.Converters.Add(new NumericalStringConverter());
 
                 while (reader.TokenType != JsonTokenType.EndArray)

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
@@ -129,6 +128,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         public TData Data { get; set; } = default!;
+
+        /// <summary>
+        /// 获取或设置接口返回消息。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("message")]
+        [System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
 
         /// <summary>
         /// <inheritdoc/>

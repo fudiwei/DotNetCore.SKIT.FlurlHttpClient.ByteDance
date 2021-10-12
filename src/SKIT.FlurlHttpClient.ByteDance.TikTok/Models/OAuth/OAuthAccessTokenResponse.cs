@@ -11,12 +11,5 @@
             {
             }
         }
-
-        /// <summary>
-        /// 获取或设置返回信息。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("message")]
-        [System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
     }
 }

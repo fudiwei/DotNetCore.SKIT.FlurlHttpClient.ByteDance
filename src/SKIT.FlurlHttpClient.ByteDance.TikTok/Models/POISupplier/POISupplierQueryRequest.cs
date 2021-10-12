@@ -10,6 +10,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string SupplierExternalId { get; set; } = string.Empty;
+        public string ExternalSupplierId { get; set; } = string.Empty;
     }
 }

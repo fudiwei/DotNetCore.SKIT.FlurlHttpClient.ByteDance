@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "poi", "supplier", "query")
                 .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
+                .SetQueryParam("supplier_ext_id", request.ExternalSupplierId);
 
             return await client.SendRequestWithJsonAsync<Models.POISupplierQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

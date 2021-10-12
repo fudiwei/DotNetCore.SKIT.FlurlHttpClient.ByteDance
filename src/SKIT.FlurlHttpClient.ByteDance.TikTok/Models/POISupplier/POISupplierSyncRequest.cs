@@ -524,7 +524,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("entry_mini_app")]
                         [System.Text.Json.Serialization.JsonPropertyName("entry_mini_app")]
-                        public Types.EntryMiniApp? MiniApp { get; set; }
+                        public Types.EntryMiniApp? EntryMiniApp { get; set; }
                     }
                 }
 

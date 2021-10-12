@@ -1,0 +1,13 @@
+﻿{
+    "date_time": 0,
+    "ext_shop_info": {
+        "ext_shop_id": "",
+        "shop_id": ""
+    },
+    "mini_app": {
+        "app_id": "",
+        "user_open_id": ""
+    },
+    "order_detail": "",
+    "order_type": 200
+}

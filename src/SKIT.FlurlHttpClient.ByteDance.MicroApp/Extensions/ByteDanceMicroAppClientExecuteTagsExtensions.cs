@@ -10,9 +10,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
-    public static class ByteDanceMicroAppClientExecuteV2Extensions
+    public static class ByteDanceMicroAppClientExecuteTagsExtensions
     {
-        #region Tags
         /// <summary>
         /// <para>异步调用 [POST] /v2/tags/text/antidirt 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/content-security/content-security-detect </para>
@@ -22,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.V2TagsTextAntiDirtResponse> ExecuteV2TagsTextAntiDirtAsync(this ByteDanceMicroAppClient client, Models.V2TagsTextAntiDirtRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.TagsTextAntiDirtResponse> ExecuteTagsTextAntiDirtAsync(this ByteDanceMicroAppClient client, Models.TagsTextAntiDirtRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -31,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "v2", "tags", "text", "antidirt")
                 .WithHeader("X-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.V2TagsTextAntiDirtResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.TagsTextAntiDirtResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -42,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.V2TagsImageResponse> ExecuteV2TagsImageAsync(this ByteDanceMicroAppClient client, Models.V2TagsImageRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.TagsImageResponse> ExecuteTagsImageAsync(this ByteDanceMicroAppClient client, Models.TagsImageRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -51,8 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "v2", "tags", "image")
                 .WithHeader("X-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.V2TagsImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.TagsImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        #endregion
     }
 }

@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /v2/tags/text/antidirt 接口的请求。</para>
     /// </summary>
-    public class V2TagsTextAntiDirtRequest : ByteDanceMicroAppRequest
+    public class TagsTextAntiDirtRequest : ByteDanceMicroAppRequest
     {
         public static class Types
         {

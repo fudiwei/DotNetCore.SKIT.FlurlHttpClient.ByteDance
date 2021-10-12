@@ -55,5 +55,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /poi/base/query/amap 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848798579239192588 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.POIBaseQueryAMapResponse> ExecutePOIBaseQueryAMapAsync(this TikTokClient client, Models.POIBaseQueryAMapRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "poi", "base", "query", "amap")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("amap_id", request.AMapId);
+
+            return await client.SendRequestWithJsonAsync<Models.POIBaseQueryAMapResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
     }
 }

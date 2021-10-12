@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "address": "<nil>",
+        "amap_id": "<nil>",
+        "city": "<nil>",
+        "description": "",
+        "error_code": "0",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "poi_id": "<nil>",
+        "poi_name": "<nil>"
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

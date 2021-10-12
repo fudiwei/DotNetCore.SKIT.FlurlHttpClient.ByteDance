@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /poi/order/status 接口的请求。</para>
+    /// <para>表示 [POST] /poi/ext/hotel/order/cancel 接口的请求。</para>
     /// </summary>
-    public class POIOrderStatusRequest : TikTokRequest
+    public class POIExternalHotelOrderCancelRequest : TikTokRequest
     {
         /// <summary>
         /// 获取或设置订单 ID。
@@ -27,10 +27,10 @@
         public string SupplierExternalId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置订单确认状态。
+        /// 获取或设置订单支付状态。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("status")]
-        [System.Text.Json.Serialization.JsonPropertyName("status")]
+        [Newtonsoft.Json.JsonProperty("order_status")]
+        [System.Text.Json.Serialization.JsonPropertyName("order_status")]
         public int Status { get; set; }
     }
 }

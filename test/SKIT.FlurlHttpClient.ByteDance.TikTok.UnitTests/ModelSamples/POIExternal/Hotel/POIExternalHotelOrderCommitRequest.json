@@ -1,0 +1,24 @@
+﻿{
+    "order_id": "",
+    "check_in": "20201010",
+    "check_out": "20201010",
+    "customer_name": "",
+    "customer_phone": "",
+    "total_price": 0,
+    "status": 0,
+    "spu_ext_id": "",
+    "remark": "",
+    "customer_list": [
+        {
+            "surname": "",
+            "cn_name": "",
+            "given_name": ""
+        }
+    ],
+    "date_price": [
+        {
+            "date": "20201010",
+            "date_price": 0
+        }
+    ]
+}

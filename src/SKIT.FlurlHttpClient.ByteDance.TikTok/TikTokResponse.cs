@@ -36,12 +36,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         public virtual TikTokResposneExtra Extra { get; set; } = default!;
 
         /// <summary>
+        /// 获取抖音开放平台 API 返回的错误码。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("error_code")]
+        [System.Text.Json.Serialization.JsonPropertyName("error_code")]
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+        public virtual int? ErrorCode { get; set; }
+
+        /// <summary>
+        /// 获取抖音开放平台 API 返回的错误描述。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("description")]
+        [System.Text.Json.Serialization.JsonPropertyName("description")]
+        public virtual string? ErrorDescription { get; set; }
+
+        /// <summary>
         /// 获取一个值，该值指示调用抖音开放平台 API 是否成功（即 HTTP 状态码为 200、且 errcode 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 && Extra?.ErrorCode.GetValueOrDefault() == 0 && Extra?.SubErrorCode.GetValueOrDefault() == 0;
+            return RawStatus == 200 && 
+                ErrorCode.GetValueOrDefault() == 0 && 
+                Extra?.ErrorCode.GetValueOrDefault() == 0 && 
+                Extra?.SubErrorCode.GetValueOrDefault() == 0;
         }
     }
 

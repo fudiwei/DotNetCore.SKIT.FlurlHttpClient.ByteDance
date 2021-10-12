@@ -92,5 +92,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIOrderBillTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /poi/order/list/token 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6932733054666524685 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.POIOrderListTokenResponse> ExecutePOIOrderListTokenAsync(this TikTokClient client, Models.POIOrderListTokenRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "poi", "order", "list", "token")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("order_date", request.OrderDateString);
+
+            return await client.SendRequestWithJsonAsync<Models.POIOrderListTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
     }
 }

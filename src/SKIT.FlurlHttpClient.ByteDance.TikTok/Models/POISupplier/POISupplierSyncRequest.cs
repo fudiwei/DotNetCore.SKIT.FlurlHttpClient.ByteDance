@@ -351,7 +351,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 {
                     get 
                     {
-                        if (this.TryGetValue(1101, out object obj) && obj is IList<Types.HotelService> value)
+                        if (this.TryGetValue(1101, out object? obj) && obj is IList<Types.HotelService> value)
                         {
                             return value;
                         }
@@ -373,7 +373,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 {
                     get 
                     {
-                        if (this.TryGetValue(1102, out object obj) && obj is IList<Types.HotelFacility> value)
+                        if (this.TryGetValue(1102, out object? obj) && obj is IList<Types.HotelFacility> value)
                         {
                             return value;
                         }
@@ -395,7 +395,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 {
                     get 
                     {
-                        if (this.TryGetValue(1103, out object obj) && obj is IList<Types.HotelFeature> value)
+                        if (this.TryGetValue(1103, out object? obj) && obj is IList<Types.HotelFeature> value)
                         {
                             return value;
                         }
@@ -417,7 +417,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 {
                     get 
                     {
-                        if (this.TryGetValue(1104, out object obj) && obj is Types.HotelPolicy value)
+                        if (this.TryGetValue(1104, out object? obj) && obj is Types.HotelPolicy value)
                         {
                             return value;
                         }
@@ -439,7 +439,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 {
                     get 
                     {
-                        if (this.TryGetValue(3101, out object obj) && obj is Types.ScenicInstruction value)
+                        if (this.TryGetValue(3101, out object? obj) && obj is Types.ScenicInstruction value)
                         {
                             return value;
                         }

@@ -1,0 +1,32 @@
+﻿{
+    "data": {
+        "age_list": [
+            {
+                "key": "",
+                "value": ""
+            }
+        ],
+        "city_list": [
+            {
+                "key": "",
+                "value": ""
+            }
+        ],
+        "description": "",
+        "error_code": "0",
+        "gender_list": [
+            {
+                "key": "",
+                "value": ""
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

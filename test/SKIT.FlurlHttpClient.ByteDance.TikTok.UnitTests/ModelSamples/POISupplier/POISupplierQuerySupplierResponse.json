@@ -1,0 +1,14 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "match_result_list": [
+            {
+                "poi_id": "123456",
+                "status": 0,
+                "supplier_ext_id": "<nil>",
+                "task_id": "<nil>"
+            }
+        ]
+    }
+}

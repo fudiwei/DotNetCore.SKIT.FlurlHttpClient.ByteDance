@@ -163,10 +163,14 @@ namespace SKIT.FlurlHttpClient.ByteDance
                     }
                     else
                     {
-                        object elObj = Activator.CreateInstance(propInfo.PropertyType);
-                        func(elObj);
+                        try
+                        {
+                            object elObj = Activator.CreateInstance(propInfo.PropertyType);
+                            func(elObj);
 
-                        propInfo.SetValue(obj, elObj);
+                            propInfo.SetValue(obj, elObj);
+                        }
+                        catch { }
                     }
                 }
 

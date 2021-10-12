@@ -1,0 +1,121 @@
+﻿{
+    "data": {
+        "data_detail": {
+            "address": "栏学路328弄97号",
+            "attributes": {
+                "1101": [
+                    {
+                        "code": 1,
+                        "name": "<nil>"
+                    }
+                ],
+                "1102": [
+                    {
+                        "code": 1,
+                        "name": "<nil>"
+                    }
+                ],
+                "1103": [
+                    {
+                        "code": 1,
+                        "name": "<nil>"
+                    }
+                ],
+                "1104": {
+                    "breakfast": {
+                        "price": "10000",
+                        "type": 1
+                    },
+                    "check_in_time": "12:00",
+                    "check_out_time": "12:00",
+                    "child": "<nil>",
+                    "pet": "<nil>"
+                },
+                "1105": "1",
+                "3101": {
+                    "facility": [
+                        {
+                            "name": "免费停车场"
+                        }
+                    ],
+                    "open_time": "08:00-22:00(最晚入场时间17:00)",
+                    "open_time_ext": [
+                        {
+                            "content": "节点内容: 文字，图片地址...",
+                            "node_type": 1
+                        }
+                    ],
+                    "pet": "1",
+                    "play_intro": [
+                        {
+                            "content": "节点内容: 文字，图片地址...",
+                            "node_type": 1
+                        }
+                    ],
+                    "preferential_policy": [
+                        {
+                            "condition": "3周岁以内",
+                            "discount": "免费",
+                            "population": "婴儿"
+                        }
+                    ],
+                    "preferential_policy_ext": [
+                        {
+                            "content": "节点内容: 文字，图片地址...",
+                            "node_type": 1
+                        }
+                    ],
+                    "scenic_intro": [
+                        {
+                            "content": "节点内容: 文字，图片地址...",
+                            "node_type": 1
+                        }
+                    ],
+                    "traffic": [
+                        {
+                            "content": "节点内容: 文字，图片地址...",
+                            "node_type": 1
+                        }
+                    ]
+                }
+            },
+            "contact_phone": "189xxxx8929",
+            "contact_tel": "021-58xxxx95",
+            "description": "<nil>",
+            "images": [
+                "[https://static.dingdandao.com/0ffaf1b5a669ea216a960c97ded9a3b0 https://static.dingdandao.com/9119b617eff7c8fe2be318da0459d4db]"
+            ],
+            "name": "上海几茶.知更民宿（迪士尼店）",
+            "poi_id": "6601136930455291912",
+            "poi_info": {
+                "first_category": "住宿",
+                "second_category": "酒店",
+                "third_category": "豪华型酒店"
+            },
+            "services": [
+                {
+                    "enable": 1,
+                    "entry": {
+                        "entry_mini_app": {
+                            "app_id": "tt34843ubcs",
+                            "is_test": "1",
+                            "params": "{\"productId\":115511}",
+                            "path": "pages/productDetail/productDetail"
+                        },
+                        "entry_type": 1
+                    },
+                    "service_type": 1
+                }
+            ],
+            "status": "1",
+            "supplier_ext_id": "x0001",
+            "type": 1
+        },
+        "description": "",
+        "error_code": "0",
+        "sync_status": {
+            "fail_reason": "<nil>",
+            "last_sync_status": 0
+        }
+    }
+}

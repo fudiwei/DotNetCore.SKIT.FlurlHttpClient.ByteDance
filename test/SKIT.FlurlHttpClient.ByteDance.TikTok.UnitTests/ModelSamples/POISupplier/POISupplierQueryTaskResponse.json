@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "match_result_list": [
+            {
+                "address": "<nil>",
+                "city": "<nil>",
+                "extra": "<nil>",
+                "match_status": 0,
+                "mismatch_status_desc": "<nil>",
+                "poi_id": "<nil>",
+                "poi_name": "<nil>",
+                "province": "<nil>",
+                "supplier_ext_id": "<nil>"
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+﻿{
+    "card_id": "",
+    "card_type": "question_list",
+    "content": "{ \"question_list\": { \"text\": \"有什么疑问呢\", \"questions\": [{ \"name\": \"问题1\", \"text\": \"关键词1\" }, { \"name\": \"问题2\", \"text\": \"关键词2\" } ] } }"
+}

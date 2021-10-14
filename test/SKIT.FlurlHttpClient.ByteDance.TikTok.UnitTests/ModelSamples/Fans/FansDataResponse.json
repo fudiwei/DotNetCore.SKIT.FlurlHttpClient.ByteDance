@@ -1,0 +1,56 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "fans_data": {
+            "active_days_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ],
+            "age_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ],
+            "all_fans_num": "10000",
+            "device_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ],
+            "flow_contributions": [
+                {
+                    "all_sum": 0,
+                    "fans_sum": 0,
+                    "flow": "vv"
+                }
+            ],
+            "gender_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ],
+            "geographical_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ],
+            "interest_distributions": [
+                {
+                    "item": "<nil>",
+                    "value": 0
+                }
+            ]
+        }
+    },
+    "extra": {
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393"
+    }
+}

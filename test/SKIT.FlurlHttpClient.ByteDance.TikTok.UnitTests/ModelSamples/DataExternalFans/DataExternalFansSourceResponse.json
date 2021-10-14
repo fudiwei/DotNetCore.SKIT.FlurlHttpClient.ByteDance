@@ -1,0 +1,18 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "source": "来源key",
+                "percent": "31.32%"
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0
+    }
+}

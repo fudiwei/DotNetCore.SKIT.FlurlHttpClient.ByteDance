@@ -1,0 +1,19 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "rank": 1,
+                "keyword": "关键词测试",
+                "hot_value": 10000
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0
+    }
+}

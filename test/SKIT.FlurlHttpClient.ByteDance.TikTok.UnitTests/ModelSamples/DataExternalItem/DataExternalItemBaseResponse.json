@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "result": {
+            "avg_play_duration": "200",
+            "total_comment": "200",
+            "total_like": "200",
+            "total_play": "200",
+            "total_share": "200"
+        }
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

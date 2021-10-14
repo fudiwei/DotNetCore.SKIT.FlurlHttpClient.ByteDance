@@ -1,0 +1,22 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "result_list": [
+            {
+                "date": "yyyy-MM-dd",
+                "new_issue": "200",
+                "new_play": "200",
+                "total_issue": "200"
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

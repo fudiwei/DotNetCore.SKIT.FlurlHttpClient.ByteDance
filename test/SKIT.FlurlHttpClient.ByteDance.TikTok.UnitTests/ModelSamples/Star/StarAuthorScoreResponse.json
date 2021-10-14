@@ -1,0 +1,23 @@
+﻿{
+    "data": {
+        "cooperation_score": 80.6,
+        "cp_score": 80.6,
+        "description": "",
+        "error_code": "0",
+        "follower": 1,
+        "growth_score": 80.6,
+        "nick_name": "<nil>",
+        "shop_score": 80.6,
+        "spread_score": 80.6,
+        "star_score": 80.6,
+        "update_timestamp": 1
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

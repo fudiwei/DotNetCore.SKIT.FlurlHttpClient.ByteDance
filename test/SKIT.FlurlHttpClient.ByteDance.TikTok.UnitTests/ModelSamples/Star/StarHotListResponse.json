@@ -1,0 +1,29 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "hot_list_description": "【筛选规则】：综合评估创作者近期作品的有效视频数据、性价比、信用分、有效涨粉、种草指数等加权取值进行排序，以内容数据为主要衡量标准。【达人优势】：综合能力高，具有较大的商业价值。【适用场景】：适用于大部分营销场景，可作为各领域商业投放的必选名单。",
+        "hot_list_type": 1,
+        "hot_list_update_timestamp": 1,
+        "list": [
+            {
+                "follower": 0,
+                "nick_name": "<nil>",
+                "rank": 0,
+                "score": 80.6,
+                "tags": [
+                    "<nil>"
+                ],
+                "unique_id": "<nil>"
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

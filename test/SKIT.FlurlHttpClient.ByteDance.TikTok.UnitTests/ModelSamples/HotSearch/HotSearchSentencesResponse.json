@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "active_time": "2019-10-31 11:00:37",
+        "description": "",
+        "error_code": "0",
+        "list": [
+            {
+                "hot_level": 1,
+                "sentence": "苹果发布AirPods Pro"
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "error_code": "0",
+        "logid": "202008121419360101980821035705926A",
+        "now": "1597213176393",
+        "sub_description": "",
+        "sub_error_code": "0"
+    }
+}

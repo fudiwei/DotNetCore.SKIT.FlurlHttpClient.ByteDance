@@ -39,7 +39,7 @@
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("flow")]
                                 [System.Text.Json.Serialization.JsonPropertyName("flow")]
-                                public string Flow { get; set; } = string.Empty;
+                                public string Flow { get; set; } = default!;
 
                                 /// <summary>
                                 /// 获取或设置流量总值。

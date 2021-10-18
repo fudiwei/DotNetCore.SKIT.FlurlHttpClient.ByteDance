@@ -66,17 +66,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         {
             IFlurlRequest flurlRequest = FlurlClient.Request(urlSegments).WithVerb(method);
 
-            if (request.Timeout.HasValue)
+            if (request.Timeout != null)
             {
                 flurlRequest.WithTimeout(TimeSpan.FromMilliseconds(request.Timeout.Value));
             }
 
-            if (string.IsNullOrEmpty(request.ApiMethod))
+            if (request.ApiMethod == null)
             {
                 flurlRequest.SetQueryParam("method", request.ApiMethod);
             }
 
-            if (string.IsNullOrEmpty(request.ApiMethod))
+            if (request.ApiVersion == null)
             {
                 flurlRequest.SetQueryParam("v", request.ApiVersion);
             }

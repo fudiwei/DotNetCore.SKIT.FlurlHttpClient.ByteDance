@@ -28,10 +28,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.MediaContentType))
+            if (request.MediaContentType == null)
                 request.MediaContentType = "image/jpeg";
 
-            if (string.IsNullOrEmpty(request.MediaFileName))
+            if (request.MediaFileName == null)
                 request.MediaFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             using var fileContent = new ByteArrayContent(request.MediaFileBytes ?? new byte[0]);
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.MediaFileName))
+            if (request.MediaFileName == null)
                 request.MediaFileName = Guid.NewGuid().ToString("N").ToLower();
 
             using var httpContent = new MultipartFormDataContent();

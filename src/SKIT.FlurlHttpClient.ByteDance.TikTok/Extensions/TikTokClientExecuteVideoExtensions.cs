@@ -28,10 +28,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
@@ -83,10 +83,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
@@ -224,10 +224,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
@@ -279,10 +279,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
@@ -400,10 +400,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
@@ -455,10 +455,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
-            if (string.IsNullOrEmpty(request.VideoContentType))
+            if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
 
-            if (string.IsNullOrEmpty(request.VideoFileName))
+            if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);

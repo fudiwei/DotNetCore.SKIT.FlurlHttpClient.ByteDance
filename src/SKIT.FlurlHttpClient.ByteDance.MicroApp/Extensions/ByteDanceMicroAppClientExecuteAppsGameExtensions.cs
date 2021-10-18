@@ -23,12 +23,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
              * REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/api/payment/payment-signature-generation-algorithm
              */
 
-            if (string.IsNullOrEmpty(request.AppId))
+            if (request.AppId == null)
             {
                 request.AppId = client.Credentials.AppId;
             }
 
-            if (!request.Timestamp.HasValue)
+            if (request.Timestamp == null)
             {
                 request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
             }
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.Signature))
+            if (request.Signature == null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/get_balance");
 
             IFlurlRequest flurlReq = client
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.Signature))
+            if (request.Signature == null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/game_pay");
 
             IFlurlRequest flurlReq = client
@@ -108,7 +108,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.Signature))
+            if (request.Signature == null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/add_coin");
 
             IFlurlRequest flurlReq = client

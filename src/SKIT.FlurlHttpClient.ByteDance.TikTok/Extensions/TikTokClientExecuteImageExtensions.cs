@@ -28,10 +28,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (string.IsNullOrEmpty(request.ImageContentType))
+            if (request.ImageContentType == null)
                 request.ImageContentType = "image/jpeg";
 
-            if (string.IsNullOrEmpty(request.ImageFileName))
+            if (request.ImageFileName == null)
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             using var fileContent = new ByteArrayContent(request.ImageFileBytes ?? new byte[0]);

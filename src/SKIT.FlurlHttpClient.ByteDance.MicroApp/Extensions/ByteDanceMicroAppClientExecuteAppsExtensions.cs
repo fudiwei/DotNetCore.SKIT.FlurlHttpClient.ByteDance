@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.AppId))
+            if (request.AppId == null)
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
@@ -145,7 +145,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.AppId))
+            if (request.AppId == null)
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
@@ -169,10 +169,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.AppId))
+            if (request.AppId == null)
                 request.AppId = client.Credentials.AppId;
 
-            if (string.IsNullOrEmpty(request.ImageFileName))
+            if (request.ImageFileName == null)
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             IFlurlRequest flurlReq = client
@@ -183,7 +183,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             using var httpContent = new MultipartFormDataContent(boundary);
             httpContent.Add(fileContent, "\"image\"", $"\"{HttpUtility.UrlEncode(request.ImageFileName)}\"");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.AppId)), "app_id");
-            if (request.RoomId.HasValue)
+            if (request.RoomId != null)
                 httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RoomId.Value.ToString())), "room_id");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Title)), "title");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PagePath)), "start_page");
@@ -209,7 +209,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.AppId))
+            if (request.AppId == null)
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client

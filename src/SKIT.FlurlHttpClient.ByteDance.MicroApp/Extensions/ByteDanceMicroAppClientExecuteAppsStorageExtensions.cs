@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.Signature))
+            if (request.Signature == null)
                 request.Signature = client.GenerateRequestSignature(request, request.SignMethod, request.SessionKey!);
 
             IFlurlRequest flurlReq = client
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (string.IsNullOrEmpty(request.Signature))
+            if (request.Signature == null)
                 request.Signature = client.GenerateRequestSignature(request, request.SignMethod, request.SessionKey!);
 
             IFlurlRequest flurlReq = client

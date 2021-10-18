@@ -12,7 +12,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance Douyin TikTok DouyinShop TikTokShop 字节 字节跳动 头条 今日头条 抖店 抖音小店 抖音放心购 抖音今日特卖 放心购 今日特卖</PackageTags>
-        <Version>1.0.0-beta.1.211002</Version>
+        <Version>1.0.0-beta.2.211018</Version>
         <Description>基于 Flurl.Http 的抖店 API 客户端，支持商家自研、软件服务商模式，支持店铺管理、素材中心、商品管理、库存管理、订单管理、物流发货、售后退款、保险管理、账单管理、代发代打、跨境物流、卡券管理、仓库作业、精选联盟、回收寄卖、BIC 质检、BTAS 质检等功能。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>

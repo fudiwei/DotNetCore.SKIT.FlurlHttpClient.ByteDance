@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.Json;
 
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
     class TestConfigs
     {
@@ -15,17 +15,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             using var json = JsonDocument.Parse(stream);
 
             var config = json.RootElement.GetProperty("ByteDanceMicroAppConfig");
-            MicroAppId = config.GetProperty("AppId").GetString();
-            MicroAppSecret = config.GetProperty("AppSecret").GetString();
-            MicroAppAccessToken = config.GetProperty("AccessToken").GetString();
+            OceanEngineAppId = config.GetProperty("AppId").GetString();
+            OceanEngineAppSecret = config.GetProperty("AppSecret").GetString();
+            OceanEngineAccessToken = config.GetProperty("AccessToken").GetString();
 
             ProjectSourceDirectory = json.RootElement.GetProperty("ProjectSourceDirectory").GetString();
             ProjectTestDirectory = json.RootElement.GetProperty("ProjectTestDirectory").GetString();
         }
 
-        public static readonly string MicroAppId;
-        public static readonly string MicroAppSecret;
-        public static readonly string MicroAppAccessToken;
+        public static readonly string OceanEngineAppId;
+        public static readonly string OceanEngineAppSecret;
+        public static readonly string OceanEngineAccessToken;
 
         public static readonly string ProjectSourceDirectory;
         public static readonly string ProjectTestDirectory;

@@ -1,0 +1,15 @@
+﻿{
+    "code": 0,
+    "message": "",
+    "data": {
+        "access_token": "",
+        "expires_in": 86400,
+        "refresh_token": "",
+        "advertiser_ids": [
+            1,
+            2,
+            3
+        ],
+        "refresh_token_expires_in": 604800
+    }
+}

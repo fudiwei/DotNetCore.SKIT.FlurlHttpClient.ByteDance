@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         /// <summary>
         /// 获取或设置巨量引擎开放平台应用 ID。
         /// </summary>
-        public string AppId { get; set; } = default!;
+        public long AppId { get; set; } = default!;
 
         /// <summary>
         /// 获取或设置巨量引擎开放平台应用密钥。

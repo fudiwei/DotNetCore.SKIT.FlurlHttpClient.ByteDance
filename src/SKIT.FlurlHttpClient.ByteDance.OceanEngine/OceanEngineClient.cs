@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         /// </summary>
         /// <param name="appId">巨量引擎开放平台应用 ID。</param>
         /// <param name="appSecret">巨量引擎开放平台应用密钥。</param>
-        public OceanEngineClient(string appId, string appSecret)
+        public OceanEngineClient(long appId, string appSecret)
             : this(new OceanEngineClientOptions() { AppId = appId, AppSecret = appSecret })
         {
         }

@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\SKIT.FlurlHttpClient.ByteDance.MicroApp\SKIT.FlurlHttpClient.ByteDance.OceanEngine.csproj" />
+        <ProjectReference Include="..\..\src\SKIT.FlurlHttpClient.ByteDance.OceanEngine\SKIT.FlurlHttpClient.ByteDance.OceanEngine.csproj" />
         <ProjectReference Include="..\SKIT.FlurlHttpClient.ByteDance.TestTools\SKIT.FlurlHttpClient.ByteDance.TestTools.csproj" />
     </ItemGroup>
 

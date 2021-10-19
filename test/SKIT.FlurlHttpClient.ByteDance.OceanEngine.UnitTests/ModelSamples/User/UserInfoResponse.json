@@ -1,0 +1,12 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": [
+        {
+            "id": 12312431,
+            "email": "shi****ang@bytedance.com",
+            "display_name": "Tony Zhang"
+        }
+    ],
+    "request_id": "20200303065512010189049223187AB4E5"
+}

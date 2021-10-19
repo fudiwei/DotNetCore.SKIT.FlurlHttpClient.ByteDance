@@ -1,0 +1,15 @@
+﻿{
+    "code": 0,
+    "message": "",
+    "data": {
+        "list": [
+            {
+                "advertiser_id": 12312321,
+                "advertiser_name": "test_developer",
+                "advertiser_role": 1,
+                "is_valid": true,
+                "account_role": "CUSTOMER_OPERATOR"
+            }
+        ]
+    }
+}

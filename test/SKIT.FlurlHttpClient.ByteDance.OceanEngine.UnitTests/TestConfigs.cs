@@ -14,8 +14,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
             using var stream = File.OpenRead("appsettings.json");
             using var json = JsonDocument.Parse(stream);
 
-            var config = json.RootElement.GetProperty("ByteDanceMicroAppConfig");
-            OceanEngineAppId = config.GetProperty("AppId").GetString();
+            var config = json.RootElement.GetProperty("OceanEngineConfig");
+            OceanEngineAppId = config.GetProperty("AppId").GetInt64();
             OceanEngineAppSecret = config.GetProperty("AppSecret").GetString();
             OceanEngineAccessToken = config.GetProperty("AccessToken").GetString();
 
@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
             ProjectTestDirectory = json.RootElement.GetProperty("ProjectTestDirectory").GetString();
         }
 
-        public static readonly string OceanEngineAppId;
+        public static readonly long OceanEngineAppId;
         public static readonly string OceanEngineAppSecret;
         public static readonly string OceanEngineAccessToken;
 

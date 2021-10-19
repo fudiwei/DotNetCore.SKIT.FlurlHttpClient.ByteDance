@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         [Newtonsoft.Json.JsonProperty("code")]
         [System.Text.Json.Serialization.JsonPropertyName("code")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-        public virtual int? ErrorCode { get; set; }
+        public virtual int ErrorCode { get; set; }
 
         /// <summary>
         /// 获取巨量引擎开放平台 API 返回的错误描述。
@@ -44,12 +44,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public virtual string? ErrorMessage { get; set; }
 
         /// <summary>
+        /// 获取巨量引擎开放平台 API 返回的请求日志 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("request_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public virtual string? RequestId { get; set; }
+
+        /// <summary>
         /// 获取一个值，该值指示调用巨量引擎开放平台 API 是否成功（即 HTTP 状态码为 200、且 code 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 && ErrorCode.GetValueOrDefault() == 0;
+            return RawStatus == 200 && ErrorCode == 0;
         }
     }
 

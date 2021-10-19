@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class HotVideo
+                    public class Item
                     {
                         /// <summary>
                         /// 获取或设置视频标题。
@@ -90,7 +90,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.HotVideo[] HotVideoList { get; set; } = default!;
+                public Types.Item[] List { get; set; } = default!;
             }
         }
     }

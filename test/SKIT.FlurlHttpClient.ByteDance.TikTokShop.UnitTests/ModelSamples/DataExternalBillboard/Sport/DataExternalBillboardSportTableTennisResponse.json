@@ -1,0 +1,30 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "avatar": "https://example.com/x.jpeg",
+                "follower_count": 200,
+                "onbillbaord_times": 200,
+                "effect_value": 10000,
+                "video_list": [
+                    {
+                        "share_url": "https://www.iesdouyin.com/share/video/QDlWd0EzdWVMU2Q0aU5tKzVaOElvVU03ODBtRHFQUCtLUHBSMHFRT21MVkFYYi9UMDYwemRSbVlxaWczNTd6RUJRc3MrM2hvRGlqK2EwNnhBc1lGUkpRPT0=/?region=CN&mid=6753173704399670023&u_code=12h9je425&titleType=title",
+                        "title": "测试视频 #测试话题 @抖音小助手",
+                        "item_cover": "https://example.com/x.jpeg"
+                    }
+                ],
+                "rank": 1,
+                "rank_change": "1",
+                "nickname": "昵称"
+            }
+        ]
+    },
+    "extra": {
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    }
+}

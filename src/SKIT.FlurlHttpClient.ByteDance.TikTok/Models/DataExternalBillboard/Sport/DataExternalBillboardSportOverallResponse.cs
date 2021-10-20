@@ -34,8 +34,8 @@
                                 /// <summary>
                                 /// 获取或设置视频播放链接。
                                 /// </summary>
-                                [Newtonsoft.Json.JsonProperty("title")]
-                                [System.Text.Json.Serialization.JsonPropertyName("title")]
+                                [Newtonsoft.Json.JsonProperty("share_url")]
+                                [System.Text.Json.Serialization.JsonPropertyName("share_url")]
                                 public string ShareUrl { get; set; } = default!;
                             }
                         }
@@ -43,8 +43,8 @@
                         /// <summary>
                         /// 获取或设置昵称。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("title")]
-                        [System.Text.Json.Serialization.JsonPropertyName("title")]
+                        [Newtonsoft.Json.JsonProperty("nickname")]
+                        [System.Text.Json.Serialization.JsonPropertyName("nickname")]
                         public string Nickname { get; set; } = default!;
 
                         /// <summary>
@@ -87,7 +87,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("effect_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("effect_value")]
-                        public string EffectValue { get; set; } = default!;
+                        public double EffectValue { get; set; }
 
                         /// <summary>
                         /// 获取或设置热度指数。

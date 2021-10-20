@@ -1,0 +1,26 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "rank": 1,
+                "show_cnt": 300,
+                "daily_issue_percent": "30.61%",
+                "daily_collection_cnt": 100,
+                "daily_play_cnt": 100,
+                "rank_change": "1",
+                "name": "测试名",
+                "shoot_cnt": 300,
+                "daily_issue_cnt": 300,
+                "effect_value": 10000
+            }
+        ]
+    },
+    "extra": {
+        "now": 1597213176393,
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A"
+    }
+}

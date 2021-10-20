@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot")]
-                        public int HotValue { get; set; }
+                        public double HotValue { get; set; }
                     }
                 }
 

@@ -688,5 +688,89 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardStarsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region Live
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/live 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908950744699766796 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardLiveResponse> ExecuteDataExternalBillboardLiveAsync(this TikTokClient client, Models.DataExternalBillboardLiveRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "live")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardLiveResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Music
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/music/hot 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908972512596592652 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardMusicHotResponse> ExecuteDataExternalBillboardMusicHotAsync(this TikTokClient client, Models.DataExternalBillboardMusicHotRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "music", "hot")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardMusicHotResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/music/soar 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908970631979632644 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardMusicSoarResponse> ExecuteDataExternalBillboardMusicSoarAsync(this TikTokClient client, Models.DataExternalBillboardMusicSoarRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "music", "soar")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardMusicSoarResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/music/original 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908950744699865100 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardMusicOriginalResponse> ExecuteDataExternalBillboardMusicOriginalAsync(this TikTokClient client, Models.DataExternalBillboardMusicOriginalRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "music", "original")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardMusicOriginalResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

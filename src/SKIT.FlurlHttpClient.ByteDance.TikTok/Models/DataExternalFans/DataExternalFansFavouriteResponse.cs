@@ -32,7 +32,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot_value")]
-                        public int HotValue { get; set; }
+                        public double HotValue { get; set; }
                     }
                 }
 

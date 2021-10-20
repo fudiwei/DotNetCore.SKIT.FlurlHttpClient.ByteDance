@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "rank": 1,
+                "cover": "https://example.com/x.jpeg",
+                "title": "测试标题",
+                "nickname": "昵称",
+                "hot_value": 10000
+            }
+        ]
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393
+    }
+}

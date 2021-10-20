@@ -1,0 +1,23 @@
+﻿{
+    "data": {
+        "list": [
+            {
+                "rank": 1,
+                "cover": "https://example.com/x.jpeg",
+                "title": "测试标题",
+                "duration": 10,
+                "author": "昵称",
+                "use_count": 10000,
+                "share_url": "https://example.com/xxx"
+            }
+        ]
+    },
+    "extra": {
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    }
+}

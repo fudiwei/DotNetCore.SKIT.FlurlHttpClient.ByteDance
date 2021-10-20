@@ -106,7 +106,7 @@
                 }
 
                 /// <summary>
-                /// 获取或设置体育榜单列表。
+                /// 获取或设置榜单列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]

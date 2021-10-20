@@ -482,5 +482,47 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCarDriverResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region Travel
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/travel/overall 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908932866969733124 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardTravelOverallResponse> ExecuteDataExternalBillboardTravelOverallAsync(this TikTokClient client, Models.DataExternalBillboardTravelOverallRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "travel", "overall")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardTravelOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/billboard/travel/new 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6908972511904466947 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalBillboardTravelNewResponse> ExecuteDataExternalBillboardTravelNewAsync(this TikTokClient client, Models.DataExternalBillboardTravelNewRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "billboard", "travel", "new")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardTravelNewResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

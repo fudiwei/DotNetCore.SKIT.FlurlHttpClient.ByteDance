@@ -1,0 +1,30 @@
+﻿{
+    "code": 0,
+    "message": "OK",
+    "request_id": "202109081725140102112191331607F047",
+    "data": {
+        "list": [
+            {
+                "partner_organization_id": 0,
+                "remark": "",
+                "status": "BOUND"
+            },
+            {
+                "partner_organization_id": 1,
+                "remark": "",
+                "status": "BOUND"
+            },
+            {
+                "partner_organization_id": 2,
+                "remark": "",
+                "status": "BOUND"
+            }
+        ],
+        "page_info": {
+            "page": 1,
+            "page_size": 10,
+            "total_number": 3,
+            "total_page": 1
+        }
+    }
+}

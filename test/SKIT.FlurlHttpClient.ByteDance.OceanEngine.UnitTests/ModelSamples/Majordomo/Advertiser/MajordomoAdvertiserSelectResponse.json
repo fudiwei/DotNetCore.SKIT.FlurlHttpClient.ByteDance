@@ -1,0 +1,12 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "advertiser_id": 1,
+                "advertiser_name": "xxx"
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "advertiser_id": 1,
+                "advertiser_name": "xxx"
+            }
+        ],
+        "page_info": {
+            "total_number": 1,
+            "page": 1,
+            "page_size": 100,
+            "total_page": 1
+        }
+    }
+}

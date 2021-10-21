@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualification_img_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualification_img_id")]
-                public string? ImageId { get; set; }= string.Empty;
+                public string ImageId { get; set; } = string.Empty;
             }
         }
 

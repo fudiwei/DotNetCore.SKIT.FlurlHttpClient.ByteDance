@@ -1,0 +1,18 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            1,
+            2,
+            3
+        ],
+        "page_info": {
+            "page": 1,
+            "page_size": 10,
+            "total_number": 10,
+            "total_page": 1
+        }
+    },
+    "request_id": "×××"
+}

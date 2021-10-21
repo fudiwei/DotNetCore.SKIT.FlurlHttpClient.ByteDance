@@ -1,0 +1,8 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "advertiser_id": 0,
+        "need_audit": 0
+    }
+}

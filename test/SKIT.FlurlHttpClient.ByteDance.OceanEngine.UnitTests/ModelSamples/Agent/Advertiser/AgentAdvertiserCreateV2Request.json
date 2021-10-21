@@ -1,0 +1,20 @@
+﻿{
+    "name": "xxx",
+    "company": "xx",
+    "role": "ROLE_CHILD_ADVERTISER",
+    "email": "xxx",
+    "promotion_area": "NATION",
+    "promotion_province": 0,
+    "promotion_city": 0,
+    "first_industry_id": 0,
+    "second_industry_id": 0,
+    "contact": "xxx",
+    "phone_number": "xxx",
+    "telephone": "xxx",
+    "address": "xx",
+    "license_no": "xxx",
+    "license_province": 0,
+    "license_city": 0,
+    "license_type": 0,
+    "brand": "xx"
+}

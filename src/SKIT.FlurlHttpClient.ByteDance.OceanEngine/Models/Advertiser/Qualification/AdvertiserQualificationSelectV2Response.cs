@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 [Newtonsoft.Json.JsonProperty("attachment_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attachment_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
-                                public string AttachmentId { get; set; }= default!;
+                                public string AttachmentId { get; set; } = default!;
 
                                 /// <summary>
                                 /// 获取或设置附件图片 URL。

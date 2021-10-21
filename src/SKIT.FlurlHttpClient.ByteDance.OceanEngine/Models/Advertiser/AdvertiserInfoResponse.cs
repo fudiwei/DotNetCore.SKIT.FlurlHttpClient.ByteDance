@@ -132,11 +132,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 public string? RejectReason { get; set; }
 
                 /// <summary>
-                /// 获取或设置注册时间字符串。
+                /// 获取或设置注册时间。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("create_time")]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                public string? CreateTimeString { get; set; }
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                public DateTimeOffset? CreateTime { get; set; }
             }
         }
     }

@@ -15,7 +15,8 @@
             "license_url": "xxx",
             "role": "ROLE_ADVERTISER",
             "license_province": "",
-            "company": "xxx"
+            "company": "xxx",
+            "create_time": "2020-01-01 12:34:56"
         }
     ],
     "request_id": "xxx"

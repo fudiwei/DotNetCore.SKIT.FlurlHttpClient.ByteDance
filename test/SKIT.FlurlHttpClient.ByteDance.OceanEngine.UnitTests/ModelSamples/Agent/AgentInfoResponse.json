@@ -1,0 +1,17 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": [
+        {
+            "agent_id": 0,
+            "agent_name": "xxx",
+            "customer_id": 0,
+            "customer_name": "0",
+            "company_id": 0,
+            "company_name": "xxx",
+            "account_status": "xxx",
+            "create_time": "2020-01-01 12:34:56",
+            "role": "xxx"
+        }
+    ]
+}

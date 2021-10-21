@@ -1,0 +1,12 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "e_douyin_id": "xxx",
+                "e_douyin_name": "xxx"
+            }
+        ]
+    }
+}

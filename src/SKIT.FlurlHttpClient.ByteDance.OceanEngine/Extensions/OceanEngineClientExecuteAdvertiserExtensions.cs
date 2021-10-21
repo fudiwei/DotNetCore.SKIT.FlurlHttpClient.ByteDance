@@ -172,5 +172,67 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             return await client.SendRequestWithJsonAsync<Models.AdvertiserAvatarGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region Fund
+        /// <summary>
+        /// <para>异步调用 [GET] /2/advertiser/fund/get 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710526192652 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AdvertiserFundGetResponse> ExecuteAdvertiserFundGetAsync(this OceanEngineClient client, Models.AdvertiserFundGetRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "2", "advertiser", "fund", "get")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AdvertiserFundGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /2/advertiser/fund/daily_stat 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710526682112 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AdvertiserFundDailyStatisticsResponse> ExecuteAdvertiserFundDailyStatisticsAsync(this OceanEngineClient client, Models.AdvertiserFundDailyStatisticsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "2", "advertiser", "fund", "daily_stat")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AdvertiserFundDailyStatisticsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        
+        /// <summary>
+        /// <para>异步调用 [GET] /2/advertiser/fund/transaction/get 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710527205388 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AdvertiserFundTransactionGetResponse> ExecuteAdvertiserFundTransactionGetAsync(this OceanEngineClient client, Models.AdvertiserFundTransactionGetRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "2", "advertiser", "fund", "transaction", "get")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AdvertiserFundTransactionGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
     }
 }

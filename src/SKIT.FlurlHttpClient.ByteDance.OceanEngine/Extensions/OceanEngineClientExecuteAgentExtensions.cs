@@ -109,6 +109,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /2/agent/advertiser/recharge 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710527687680 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AgentAdvertiserRechargeResponse> ExecuteAgentAdvertiserRechargeAsync(this OceanEngineClient client, Models.AgentAdvertiserRechargeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "recharge")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserRechargeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /2/agent/advertiser/refund 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710528174095 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AgentAdvertiserRefundResponse> ExecuteAgentAdvertiserRefundAsync(this OceanEngineClient client, Models.AgentAdvertiserRefundRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "refund")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserRefundResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
     }
 }

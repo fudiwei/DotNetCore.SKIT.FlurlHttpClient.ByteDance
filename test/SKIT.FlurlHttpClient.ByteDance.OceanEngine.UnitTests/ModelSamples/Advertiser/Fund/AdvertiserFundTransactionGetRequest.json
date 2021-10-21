@@ -1,0 +1,8 @@
+﻿{
+    "advertiser_id": 0,
+    "transaction_type": "TRANSFER",
+    "start_date": "2018-01-01",
+    "end_date": "2018-05-01",
+    "page": 1,
+    "page_size": 10
+}

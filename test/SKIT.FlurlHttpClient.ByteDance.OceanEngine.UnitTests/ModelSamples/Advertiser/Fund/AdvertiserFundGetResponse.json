@@ -1,0 +1,20 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "advertiser_id": 1,
+        "name": "xxx",
+        "emal": "xxx",
+        "balance": 0,
+        "valid_balance": 0,
+        "cash": 0,
+        "valid_cash": 0,
+        "grant": 0,
+        "union_grant": 0,
+        "search_grant": 0,
+        "common_grant": 0,
+        "default_grant": 0,
+        "valid_grant": 0
+    },
+    "request_id": "×××"
+}

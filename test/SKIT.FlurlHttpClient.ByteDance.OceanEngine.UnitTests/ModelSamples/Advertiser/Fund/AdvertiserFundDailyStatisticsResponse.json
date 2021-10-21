@@ -1,0 +1,39 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "advertiser_id": 1,
+                "date": "2018-01-01",
+                "balance": 0,
+                "cash_cost": 1,
+                "shared_wallet_cost": 0,
+                "cost": 0,
+                "income": 0,
+                "reward_cost": 0,
+                "transfer_in": 0,
+                "transfer_out": 0
+            },
+            {
+                "advertiser_id": 1,
+                "date": "2018-01-02",
+                "balance": 0,
+                "cash_cost": 1,
+                "shared_wallet_cost": 0,
+                "cost": 0,
+                "income": 0,
+                "reward_cost": 0,
+                "transfer_in": 0,
+                "transfer_out": 0
+            }
+        ],
+        "page_info": {
+            "page": 1,
+            "page_size": 10,
+            "total_number": 2,
+            "total_page": 1
+        }
+    },
+    "request_id": "×××"
+}

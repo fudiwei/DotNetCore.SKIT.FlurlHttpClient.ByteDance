@@ -1,0 +1,14 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "fail_list": [
+            {
+                "video_id": "vxxxx",
+                "fail_reason": "VIDEO_BINDING_EXISTED",
+                "target_advertiser_id": 0
+            }
+        ]
+    },
+    "request_id": ""
+}

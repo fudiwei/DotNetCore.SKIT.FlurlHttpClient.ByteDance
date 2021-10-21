@@ -1,0 +1,25 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "page_info": {
+            "total_number": 226,
+            "page": 1,
+            "page_size": 20,
+            "total_page": 12
+        },
+        "list": [
+            {
+                "format": "JPEG",
+                "url": "",
+                "material_id": 111,
+                "height": 1863,
+                "width": 1242,
+                "signature": "",
+                "id": "",
+                "size": 65016
+            }
+        ]
+    },
+    "request_id": ""
+}

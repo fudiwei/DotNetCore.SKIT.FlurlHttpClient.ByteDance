@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("e_douyin_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("e_douyin_name")]
-                        public string Name { get; set; }
+                        public string Name { get; set; } = default!;
                     }
                 }
 

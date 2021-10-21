@@ -1,0 +1,16 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "status": "SUCCESS",
+        "list": [
+            {
+                "id": "",
+                "url": "",
+                "height": 640,
+                "width": 368
+            }
+        ]
+    },
+    "request_id": ""
+}

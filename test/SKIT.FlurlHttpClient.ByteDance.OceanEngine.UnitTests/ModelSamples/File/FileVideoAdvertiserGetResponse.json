@@ -1,0 +1,21 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "format": "mp4",
+                "url": "",
+                "height": 640,
+                "width": 368,
+                "poster_url": "",
+                "size": 7581506,
+                "id": "×××",
+                "signature": "×××",
+                "bit_rate": 1782131,
+                "duration": 40.01
+            }
+        ]
+    },
+    "request_id": ""
+}

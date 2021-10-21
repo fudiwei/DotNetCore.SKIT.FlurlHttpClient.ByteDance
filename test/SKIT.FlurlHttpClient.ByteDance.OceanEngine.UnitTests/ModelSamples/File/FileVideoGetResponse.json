@@ -1,0 +1,29 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "page_info": {
+            "total_number": 27,
+            "total_page": 2,
+            "page_size": 20,
+            "page": 1
+        },
+        "list": [
+            {
+                "format": "mp4",
+                "url": "",
+                "poster_url": "×××",
+                "height": 360,
+                "width": 640,
+                "bit_rate": 566247,
+                "signature": "×××",
+                "duration": 6.369,
+                "id": "×××",
+                "size": 450804,
+                "create_time": "2020-03-01 11:21:02",
+                "filename": "xxx"
+            }
+        ]
+    },
+    "request_id": ""
+}

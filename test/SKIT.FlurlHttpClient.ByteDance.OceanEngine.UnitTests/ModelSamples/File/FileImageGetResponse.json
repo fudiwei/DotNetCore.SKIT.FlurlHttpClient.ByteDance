@@ -1,0 +1,27 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "page_info": {
+            "total_number": 226,
+            "page": 1,
+            "page_size": 20,
+            "total_page": 12
+        },
+        "list": [
+            {
+                "format": "JPEG",
+                "material_id": 111,
+                "url": "",
+                "height": 1863,
+                "width": 1242,
+                "signature": "",
+                "id": "",
+                "size": 65016,
+                "create_time": "2020-03-01 11:21:02",
+                "filename": "xxx"
+            }
+        ]
+    },
+    "request_id": ""
+}

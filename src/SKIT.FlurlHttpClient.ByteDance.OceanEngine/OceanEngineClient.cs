@@ -104,6 +104,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
             where T : OceanEngineResponse, new()
         {
+            // 允许 GET 请求携带请求体
+            if (flurlRequest.Verb == HttpMethod.Get && data != null)
+            {
+                using var httpContent = new StringContent(JsonSerializer.Serialize(data), Encoding.UTF8);
+                return await SendRequestAsync<T>(flurlRequest, httpContent, cancellationToken);
+            }
+
             try
             {
                 using IFlurlResponse flurlResponse = await base.SendRequestWithJsonAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);

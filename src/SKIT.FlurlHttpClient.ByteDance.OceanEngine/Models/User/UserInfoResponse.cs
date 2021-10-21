@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public int Id { get; set; }
+                public long Id { get; set; }
 
                 /// <summary>
                 /// 获取或设置邮箱（已脱敏处理）。

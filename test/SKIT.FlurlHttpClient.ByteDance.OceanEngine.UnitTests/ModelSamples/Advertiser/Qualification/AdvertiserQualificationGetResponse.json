@@ -1,0 +1,51 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "status": 2,
+        "reject_reason": "",
+        "advertiser_id": 3526908054,
+        "others": [
+            {
+                "status": 2,
+                "picture_url": "https://passport-test.bytedance.com/external/attachment/download?file_sign=4882617-a3a67c47b8e5832e5d3008204214ccd7",
+                "attachment_id": "4882617",
+                "reject_reason": "",
+                "qualification_id": 10000110
+            },
+            {
+                "status": 2,
+                "picture_url": "https://passport-test.bytedance.com/external/attachment/download?file_sign=4882617-a3a67c47b8e5832e5d3008204214ccd7",
+                "attachment_id": "4882617",
+                "reject_reason": "",
+                "qualification_id": 10000110
+            }
+        ],
+        "promotion": {
+            "status": 3,
+            "content": "呵呵",
+            "qualification_id": 10000175,
+            "reject_reason": ""
+        },
+        "subject": {
+            "status": 2,
+            "has_effective_date": false,
+            "attachment_id": "4882617",
+            "check_type": 1,
+            "picture_url": "https://passport-test.bytedance.com/external/attachment/download?file_sign=4882617-a3a67c47b8e5832e5d3008204214ccd7",
+            "company_type": 1,
+            "proprietor_name": "呵呵呵",
+            "registered_province_name": "湖北",
+            "registered_city_name": "武汉",
+            "company_name": "信控共用-company-测试-误删",
+            "address": "biss",
+            "effective_date": "2020-01-01",
+            "registered_nation_name": "中国",
+            "qualification_code": "91630104MA752TJB5Y",
+            "qualification_type": 1,
+            "qualification_id": 10000217,
+            "reject_reason": ""
+        }
+    },
+    "request_id": "20190308160510127000000001536810"
+}

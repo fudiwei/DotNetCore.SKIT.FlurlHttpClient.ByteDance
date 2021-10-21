@@ -1,0 +1,23 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "status": 2,
+                "reject_reason": "",
+                "audit_time": null,
+                "picture_preview_url": "https://passport.bytedance.com/external/attachment/preview?entity_no=9&amp;file_sign=xxx",
+                "qualification_type": 0,
+                "qualification_id": 2489346,
+                "image_list": [
+                    {
+                        "image_url": "https://www.ad.oceanengine.com/xxxx",
+                        "attachment_id": 100000
+                    }
+                ]
+            }
+        ]
+    },
+    "request_id": "xxx"
+}

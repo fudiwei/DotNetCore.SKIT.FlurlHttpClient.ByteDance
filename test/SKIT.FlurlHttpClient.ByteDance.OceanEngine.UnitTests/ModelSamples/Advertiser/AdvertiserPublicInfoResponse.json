@@ -1,0 +1,14 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": [
+        {
+            "id": 0,
+            "name": "xxx",
+            "company": "xxx",
+            "first_industry_name": "xxx",
+            "second_industry_name": "xxx"
+        }
+    ],
+    "request_id": "xxx"
+}

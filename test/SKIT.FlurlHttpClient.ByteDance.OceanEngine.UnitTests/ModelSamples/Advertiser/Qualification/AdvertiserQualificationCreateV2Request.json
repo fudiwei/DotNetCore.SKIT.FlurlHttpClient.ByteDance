@@ -1,0 +1,10 @@
+﻿{
+    "advertiser_id": 0,
+    "qualification_type": "QUALIFICATION_AD",
+    "qualifications": [
+        {
+            "ad_qualification_type": "AUTHORIZATION",
+            "qualification_img_id": ""
+        }
+    ]
+}

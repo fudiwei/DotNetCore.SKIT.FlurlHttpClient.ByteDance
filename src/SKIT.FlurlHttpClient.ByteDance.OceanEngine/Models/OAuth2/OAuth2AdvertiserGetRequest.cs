@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/* @codestyle-disable no-jsonable-property-in-get */
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /oauth2/advertiser/get 接口的请求。</para>
+    /// <para>表示 [GET] /oauth2/advertiser/get 接口的请求。</para>
     /// </summary>
     public class OAuth2AdvertiserGetRequest : OceanEngineRequest
     {

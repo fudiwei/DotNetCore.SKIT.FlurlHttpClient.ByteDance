@@ -1,0 +1,22 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": [
+        {
+            "promotion_area": "",
+            "brand": "xxx",
+            "address": "",
+            "id": 0,
+            "name": "xxx",
+            "license_city": "",
+            "promotion_center_city": "",
+            "promotion_center_province": "",
+            "license_no": "xxx",
+            "license_url": "xxx",
+            "role": "ROLE_ADVERTISER",
+            "license_province": "",
+            "company": "xxx"
+        }
+    ],
+    "request_id": "xxx"
+}

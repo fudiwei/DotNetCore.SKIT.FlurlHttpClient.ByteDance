@@ -1,0 +1,10 @@
+﻿{
+    "advertiser_ids": [
+        0
+    ],
+    "fields": [
+        "id",
+        "name",
+        "status"
+    ]
+}

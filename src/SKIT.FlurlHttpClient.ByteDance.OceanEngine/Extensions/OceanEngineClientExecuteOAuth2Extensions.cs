@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /oauth2/advertiser/get 接口。</para>
+        /// <para>异步调用 [GET] /oauth2/advertiser/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710506574848 </para>
         /// </summary>
         /// <param name="client"></param>
@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 request.AppSecret = client.Credentials.AppSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth2", "advertiser", "get");
+                .CreateRequest(request, HttpMethod.Get, "oauth2", "advertiser", "get");
 
             return await client.SendRequestWithJsonAsync<Models.OAuth2AdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

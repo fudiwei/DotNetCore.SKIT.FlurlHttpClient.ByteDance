@@ -1,0 +1,18 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "advertiser_id": 123123123,
+        "avatar_status": 1,
+        "avatar_reason": "xxxxxxx",
+        "source_status": 1,
+        "source_info": "xxxxxx",
+        "source_reason": "xxxxxsx",
+        "avatar_info": {
+            "web_uri": "web.business.image/2018850fa1ba94912a2f2",
+            "audit_web_uri": "web.business.image/21213120fa1ba94912a2f2",
+            "height": 200,
+            "width": 200
+        }
+    }
+}

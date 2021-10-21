@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -108,6 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (flurlRequest.Verb == HttpMethod.Get && data != null)
             {
                 using var httpContent = new StringContent(JsonSerializer.Serialize(data), Encoding.UTF8);
+                httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
                 return await SendRequestAsync<T>(flurlRequest, httpContent, cancellationToken);
             }
 

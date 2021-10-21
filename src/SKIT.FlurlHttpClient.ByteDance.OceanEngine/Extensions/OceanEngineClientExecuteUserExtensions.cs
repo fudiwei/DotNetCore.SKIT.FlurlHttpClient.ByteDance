@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "2", "user", "info")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("Access-Token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.UserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

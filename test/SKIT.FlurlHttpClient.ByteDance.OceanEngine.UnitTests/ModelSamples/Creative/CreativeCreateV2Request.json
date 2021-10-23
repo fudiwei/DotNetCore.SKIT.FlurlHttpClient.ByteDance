@@ -1,0 +1,92 @@
+﻿{
+    "is_feed_and_fav_see": 0,
+    "title_list": [
+        {
+            "creative_word_ids": [0],
+            "title": "TITLE",
+            "dpa_dict_ids": [0]
+        }
+    ],
+    "app_name": "APP_NAME",
+    "generate_derived_ad": 0,
+    "playable_url": "PLAYABLE_URL",
+    "scene_inventory": "SCENE_INVENTORY",
+    "web_url": "WEB_URL",
+    "third_industry_id": 0,
+    "creative_material_mode": "CREATIVE_MATERIAL_MODE",
+    "advanced_creative_title": "ADVANCED_CREATIVE_TITLE",
+    "sub_title": "SUB_TITLE",
+    "inventory_type": ["INVENTORY_TYPE"],
+    "source": "SOURCE",
+    "advanced_creative_type": "ADVANCED_CREATIVE_TYPE",
+    "track_url": "TRACK_URL",
+    "ies_core_user_id": "IES_CORE_USER_ID",
+    "phone_number": "PHONE_NUMBER",
+    "procedural_package_id": 0,
+    "ad_id": 0,
+    "is_presented_video": 0,
+    "image_list": [
+        {
+            "template_data_list": [
+                {
+                    "background_image_id": "BACKGROUND_IMAGE_ID"
+                }
+            ],
+            "image_ids": ["IMAGE_IDS"],
+            "video_id": "VIDEO_ID",
+            "image_id": "IMAGE_ID",
+            "image_mode": "IMAGE_MODE",
+            "template_id": "TEMPLATE_ID"
+        }
+    ],
+    "button_text": "BUTTON_TEXT",
+    "creatives": [
+        {
+            "template_data_list": [
+                {
+                    "background_image_id": "BACKGROUND_IMAGE_ID"
+                }
+            ],
+            "dpa_dict_ids": [0],
+            "title": "TITLE",
+            "derive_poster_cid": 0,
+            "creative_word_ids": [0],
+            "image_id": "IMAGE_ID",
+            "dpa_template": 0,
+            "third_party_id": "THIRD_PARTY_ID",
+            "image_mode": "IMAGE_MODE",
+            "dpa_video_task_ids": ["DPA_VIDEO_TASK_IDS"],
+            "video_id": "VIDEO_ID",
+            "image_ids": ["IMAGE_IDS"],
+            "template_id": "TEMPLATE_ID",
+            "dpa_video_template_type": "DPA_VIDEO_TEMPLATE_TYPE"
+        }
+    ],
+    "advertiser_id": 0,
+    "action_text": "ACTION_TEXT",
+    "track_url_send_type": "TRACK_URL_SEND_TYPE",
+    "commerce_cards": [
+        {
+            "source": "SOURCE",
+            "title": "TITLE"
+        }
+    ],
+    "action_track_url": "ACTION_TRACK_URL",
+    "is_comment_disable": 0,
+    "creative_auto_generate_switch": 0,
+    "video_play_done_track_url": "VIDEO_PLAY_DONE_TRACK_URL",
+    "creative_display_mode": "CREATIVE_DISPLAY_MODE",
+    "video_play_effective_track_url": "VIDEO_PLAY_EFFECTIVE_TRACK_URL",
+    "smart_inventory": 0,
+    "ad_keywords": ["AD_KEYWORDS"],
+    "video_play_track_url": "VIDEO_PLAY_TRACK_URL",
+    "form_url": "FORM_URL",
+    "promotion_card": {
+        "enable_store_pack": true,
+        "product_selling_points": ["PRODUCT_SELLING_POINTS"],
+        "product_description": "PRODUCT_DESCRIPTION",
+        "call_to_action": "CALL_TO_ACTION",
+        "enable_personal_action": true,
+        "product_image_id": "PRODUCT_IMAGE_ID"
+    }
+}

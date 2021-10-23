@@ -1,0 +1,16 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "modify_time": 0,
+        "ad_id": 0,
+        "creatives": [
+            {
+                "creative_id": 0,
+                "title": "xx"
+            }
+        ],
+        "advertiser_id": 0
+    },
+    "request_id": "xx"
+} 

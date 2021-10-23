@@ -1,0 +1,9 @@
+﻿{
+    "advertiser_id": 0,
+    "filtering": {
+        "campaign_id": 0,
+        "ad_id": 0,
+        "creative_ids": [0],
+        "creative_title": ""
+    }
+}

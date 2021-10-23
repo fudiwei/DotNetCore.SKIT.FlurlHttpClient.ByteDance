@@ -1,0 +1,37 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "page_info": {
+            "page_size": 100,
+            "page": 1,
+            "total_number": 3698,
+            "total_page": 37
+        },
+        "list": [
+            {
+                "status": "CREATIVE_STATUS_AUDIT",
+                "advertiser_id": 0,
+                "ad_id": 0,
+                "title": "xx",
+                "creative_id": 0,
+                "video_id": null,
+                "creative_word_ids": [],
+                "image_id": null,
+                "metarials": [
+                    {
+                        "image_id": "xx",
+                        "video_id": null,
+                        "title": null
+                    }
+                ],
+                "third_party_id": null,
+                "image_mode": "CREATIVE_IMAGE_MODE_SMALL",
+                "image_ids": ["xx"],
+                "creative_create_time": "2020-12-31 11:22:33",
+                "creative_modify_time": "2020-12-31 11:22:33",
+                "opt_status": "CREATIVE_STATUS_ENABLE"
+            }
+        ]
+    }
+}

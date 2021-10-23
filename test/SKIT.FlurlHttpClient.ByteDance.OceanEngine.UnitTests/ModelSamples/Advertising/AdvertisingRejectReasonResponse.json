@@ -1,0 +1,49 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "creative_reject": [
+                    {
+                        "creative_id": 1234,
+                        "reject_data": [
+                            {
+                                "reject_item": "",
+                                "reject_reason": "1. 您好，广告中含有虚假宣传或误导用户的内容，请修改，谢谢。 \n"
+                            }
+                        ]
+                    },
+                    {
+                        "creative_id": 5678,
+                        "reject_data": [
+                            {
+                                "reject_item": "",
+                                "reject_reason": "1. 您好，广告中含有虚假宣传或误导用户的内容，请修改，谢谢。 \n"
+                            }
+                        ]
+                    }
+                ],
+                "material_reject": [],
+                "ad_reject": {
+                    "ad_id": 1234,
+                    "reject_data": []
+                }
+            },
+            {
+                "creative_reject": [],
+                "material_reject": [],
+                "ad_reject": {
+                    "ad_id": 5678,
+                    "reject_data": [
+                        {
+                            "reject_item": "计划",
+                            "reject_reason": "1. 您好，请添加风险提示语：“具体金额以活动规则为准”。 "
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "request_id": "2019081518283512700000100113146"
+}

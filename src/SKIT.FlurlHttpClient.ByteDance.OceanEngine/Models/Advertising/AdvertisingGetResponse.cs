@@ -205,6 +205,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 [Newtonsoft.Json.JsonProperty("age")]
                                 [System.Text.Json.Serialization.JsonPropertyName("age")]
                                 public string[]? AgeTypeList { get; set; }
+        
+                                /// <summary>
+                                /// 获取或设置职业类型列表。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("career")]
+                                [System.Text.Json.Serialization.JsonPropertyName("career")]
+                                public string[]? CareerTypeList { get; set; }
                                 
                                 /// <summary>
                                 /// 获取或设置定向人群包列表。
@@ -438,6 +445,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("auto_extend_enabled")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                                 public bool? IsAutoExtendEnabled { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置可放开定向列表。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("auto_extend_targets")]
+                                [System.Text.Json.Serialization.JsonPropertyName("auto_extend_targets")]
+                                public string[]? AutoExtendTargetList { get; set; }
                             }
                         
                             public class CustomAction
@@ -796,7 +810,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_product_target")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_product_target")]
-                        public long[]? DPAProductTargetList { get; set; }
+                        public Types.DPAProductTarget[]? DPAProductTargetList { get; set; }
 
                         /// <summary>
                         /// 获取或设置 DPA 广告类型。
@@ -838,7 +852,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("promotion_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("promotion_type")]
-                        public string[]? PromotionType { get; set; }
+                        public string? PromotionType { get; set; }
 
                         /// <summary>
                         /// 获取或设置抖音号。
@@ -963,36 +977,36 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置是否启用 LBS 地域匹配。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_lbs")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_lbs")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsDPALBSEnabled { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否启用城市地域匹配。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_city")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_city")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsDPACityEnabled { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否启用省份地域匹配。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_province")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_province")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsDPAProvinceEnabled { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否启用 DPA 行为重定向。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_local_audience")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_local_audience")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsDPALocalAudienceEnabled { get; set; }
 
                         /// <summary>
@@ -1006,9 +1020,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置是否启用价值优选。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("value_optimized_open")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("value_optimized_open")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsValueOptimizedEnabled { get; set; }
 
                         /// <summary>
@@ -1050,9 +1064,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置是否调整自动出价。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("adjust_cpa")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("adjust_cpa")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
                         public bool? IsAutoAdjustCPA { get; set; }
 
                         /// <summary>

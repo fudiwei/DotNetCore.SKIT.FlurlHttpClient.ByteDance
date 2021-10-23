@@ -1,0 +1,14 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "ad_ids": [1, 2, 3],
+        "errors": [
+            {
+                "error_message": "广告计划不存在",
+                "ad_id": 11111111111111
+            }
+        ]
+    },
+    "request_id": "×××"
+}

@@ -1,0 +1,13 @@
+﻿{
+    "advertiser_id": 0,
+    "data": [
+        {
+            "ad_id": 0,
+            "bid": 0
+        },
+        {
+            "ad_id": 1,
+            "bid": 0
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+﻿{
+    "advertiser_id": 123,
+    "ad_ids": [234, 345, 456, 567],
+    "opt_status": "disable"
+}

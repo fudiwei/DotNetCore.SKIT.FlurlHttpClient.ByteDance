@@ -1,0 +1,22 @@
+﻿{
+    "advertiser_id": 0,
+    "campaign_id": 0,
+    "budget_mode": "BUDGET_MODE_DAY",
+    "budget": 1234,
+    "name": "ad_create",
+    "download_url": "xxx",
+    "schedule_type": "SCHEDULE_START_END",
+    "flow_control_mode": "FLOW_CONTROL_MODE_FAST",
+    "start_time": "2017-04-27 00:00",
+    "end_time": "2017-04-29 23:59",
+    "bid": 10,
+    "app_type": "APP_ANDROID",
+    "package": "info.pkg",
+    "pricing": "PRICING_CPM",
+    "gender": "GENDER_FEMALE",
+    "age": ["AGE_BETWEEN_18_23", "AGE_ABOVE_50"],
+    "ac": ["WIFI"],
+    "android_osv": "4.1",
+    "platform": ["ANDROID", "IOS"],
+    "carrier": ["UNICOM"]
+}

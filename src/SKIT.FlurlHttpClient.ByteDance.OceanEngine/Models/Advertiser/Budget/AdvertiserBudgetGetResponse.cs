@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class Budget
+                    public class AdvertiserBudget
                     {
                         /// <summary>
                         /// 获取或设置广告主 ID。
@@ -21,11 +21,11 @@
                         public long AdvertiserId { get; set; }
 
                         /// <summary>
-                        /// 获取或设置预算（单位：原）。
+                        /// 获取或设置预算（单位：元）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("budget")]
                         [System.Text.Json.Serialization.JsonPropertyName("budget")]
-                        public double BudgetAmount { get; set; }
+                        public double Budget { get; set; }
 
                         /// <summary>
                         /// 获取或设置预算类型。
@@ -37,11 +37,11 @@
                 }
 
                 /// <summary>
-                /// 获取或设置预算列表。
+                /// 获取或设置广告主预算列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Budget[] BudgetList { get; set; } = default!;
+                public Types.AdvertiserBudget[] AdvertiserBudgetList { get; set; } = default!;
             }
         }
     }

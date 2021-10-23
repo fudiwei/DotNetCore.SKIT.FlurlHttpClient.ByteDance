@@ -1,0 +1,14 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "campaign_ids": [1, 2, 3],
+        "errors": [
+            {
+                "error_message": "广告组已删除",
+                "campaign_id": 11111111111111
+            }
+        ]
+    },
+    "request_id": "×××"
+}

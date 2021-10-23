@@ -1,0 +1,26 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "name": "xxx",
+                "id": 0,
+                "campaign_create_time": "2019-04-23 00:25:34",
+                "campaign_modify_time": "2019-04-23 00:25:34"
+            },
+            {
+                "name": "xxxx",
+                "id": 1,
+                "campaign_create_time": "2019-04-23 00:25:34",
+                "campaign_modify_time": "2019-04-23 00:25:34"
+            }
+        ],
+        "page_info": {
+            "page": 1,
+            "page_size": 10,
+            "total_number": 2,
+            "total_page": 1
+        }
+    }
+}

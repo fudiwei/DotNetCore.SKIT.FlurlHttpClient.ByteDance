@@ -13,6 +13,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("advertiser_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("advertiser_ids")]
-        public IList<long> AdvertiserId { get; set; } = new List<long>();
+        public IList<long> AdvertiserIdList { get; set; } = new List<long>();
     }
 }

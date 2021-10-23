@@ -13,17 +13,17 @@
         public long AdvertiserId { get; set; }
 
         /// <summary>
+        /// 获取或设置预算（单位：元）。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("budget")]
+        [System.Text.Json.Serialization.JsonPropertyName("budget")]
+        public double? Budget { get; set; }
+
+        /// <summary>
         /// 获取或设置预算类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("budget_mode")]
         [System.Text.Json.Serialization.JsonPropertyName("budget_mode")]
         public string BudgetMode { get; set; } = string.Empty;
-
-        /// <summary>
-        /// 获取或设置预算（单位：原）。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("budget")]
-        [System.Text.Json.Serialization.JsonPropertyName("budget")]
-        public double? BudgetAmount { get; set; }
     }
 }

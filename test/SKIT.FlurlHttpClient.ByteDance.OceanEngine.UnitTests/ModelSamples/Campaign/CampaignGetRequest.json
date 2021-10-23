@@ -1,0 +1,13 @@
+﻿{
+    "advertiser_id": 0,
+    "fields": ["FIELDS"],
+    "filtering": {
+        "campaign_create_time": "CAMPAIGN_CREATE_TIME",
+        "campaign_name": "CAMPAIGN_NAME",
+        "ids": [0],
+        "landing_type": "LANDING_TYPE",
+        "status": "STATUS"
+    },
+    "page": 0,
+    "page_size": 0
+}

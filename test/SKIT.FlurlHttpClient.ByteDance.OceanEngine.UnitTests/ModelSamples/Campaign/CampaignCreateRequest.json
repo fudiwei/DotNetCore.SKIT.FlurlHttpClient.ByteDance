@@ -1,0 +1,9 @@
+﻿{
+    "campaign_name": "CAMPAIGN_NAME",
+    "delivery_related_num": "DELIVERY_RELATED_NUM",
+    "landing_type": "LANDING_TYPE",
+    "operation": "OPERATION",
+    "advertiser_id": 0,
+    "budget": 0.0,
+    "budget_mode": "BUDGET_MODE"
+}

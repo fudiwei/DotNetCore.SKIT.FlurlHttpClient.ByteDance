@@ -1,0 +1,28 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "campaign_id": 111,
+                "id": 222,
+                "name": "xxx",
+                "ad_create_time": "2019-01-01",
+                "ad_modify_time": "2019-01-01"
+            },
+            {
+                "campaign_id": 333,
+                "id": 666,
+                "name": "xxx",
+                "ad_create_time": "2019-01-01",
+                "ad_modify_time": "2019-01-01"
+            }
+        ],
+        "page_info": {
+            "page": 1,
+            "page_size": 10,
+            "total_number": 2,
+            "total_page": 1
+        }
+    }
+}

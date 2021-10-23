@@ -1,0 +1,12 @@
+﻿{
+    "advertiser_id": 0,
+    "page": 1,
+    "page_size": 10,
+    "filtering": {
+        "ids": [0],
+        "pricing_list": ["PRICING_CPC"],
+        "campaign_id": 0,
+        "status": "AD_STATUS_AUDIT"
+    },
+    "fields": ["id", "name", "campaign_id"]
+}

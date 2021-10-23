@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
@@ -232,6 +231,48 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 .WithHeader("Access-Token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.AdvertiserFundTransactionGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Budget
+        /// <summary>
+        /// <para>异步调用 [GET] /2/advertiser/budget/get 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710531128335 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AdvertiserBudgetGetResponse> ExecuteAdvertiserBudgetGetAsync(this OceanEngineClient client, Models.AdvertiserBudgetGetRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "2", "advertiser", "budget", "get")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AdvertiserBudgetGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /2/advertiser/update/budget 接口。</para>
+        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710531631116 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AdvertiserUpdateBudgetResponse> ExecuteAdvertiserUpdateBudgetAsync(this OceanEngineClient client, Models.AdvertiserUpdateBudgetRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "2", "advertiser", "update", "budget")
+                .WithHeader("Access-Token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AdvertiserUpdateBudgetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

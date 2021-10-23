@@ -1,0 +1,14 @@
+﻿{
+    "message": "OK",
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "advertiser_id": 100,
+                "budget": 100.01,
+                "budget_mode": "BUDGET_MODE_DAY"
+            }
+        ]
+    },
+    "request_id": "request_id"
+}

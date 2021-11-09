@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             var tempArray = tempList.ToArray();
             Array.Sort(tempArray, StringComparer.Ordinal);
             string plainText = string.Join("&", tempArray);
-            return Security.MD5Utility.Hash(plainText).ToLower();
+            return Utilities.MD5Utility.Hash(plainText).ToLower();
         }
 
         #region SaaS

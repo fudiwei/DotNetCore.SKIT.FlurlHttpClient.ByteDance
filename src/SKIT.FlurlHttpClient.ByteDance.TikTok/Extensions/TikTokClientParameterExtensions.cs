@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             url = url.Split('#')[0];
             string timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds().ToString();
             string nonce = Guid.NewGuid().ToString("N");
-            string sign = Security.MD5Utility.Hash($"jsapi_ticket={jsapiTicket}&nonce_str={nonce}&timestamp={timestamp}&url={url}").ToLower();
+            string sign = Utilities.MD5Utility.Hash($"jsapi_ticket={jsapiTicket}&nonce_str={nonce}&timestamp={timestamp}&url={url}").ToLower();
 
             return new ReadOnlyDictionary<string, string>(new Dictionary<string, string>()
             {

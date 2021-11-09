@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl.Http;
-using Flurl.Http.Configuration;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
     /// <summary>
     /// 一个抖音开放平台 API HTTP 客户端。
     /// </summary>
-    public class TikTokClient : CommonClientBase, IByteDanceClient
+    public class TikTokClient : CommonClientBase, ICommonClient
     {
         /// <summary>
         /// 获取当前客户端使用的抖音开放平台凭证。

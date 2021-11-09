@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             string plainText = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))
                 + $"&org_loc={reqLoc}"
                 + $"&method={method.ToUpper()}";
-            return Security.HMACSHA256Utility.Hash(client.Credentials.ECPaySalt ?? string.Empty, plainText).ToLower();
+            return Utilities.HMACSHA256Utility.Hash(client.Credentials.ECPaySalt ?? string.Empty, plainText).ToLower();
         }
 
         /// <summary>

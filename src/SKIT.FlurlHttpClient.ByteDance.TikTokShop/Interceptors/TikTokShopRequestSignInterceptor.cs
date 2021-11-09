@@ -64,13 +64,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                 {
                     case Constants.SignAlgorithms.MD5:
                         {
-                            signText = Security.MD5Utility.Hash(plainText).ToLower();
+                            signText = Utilities.MD5Utility.Hash(plainText).ToLower();
                         }
                         break;
 
                     case Constants.SignAlgorithms.HMAC_SHA256:
                         {
-                            signText = Security.HMACSHA256Utility.Hash(_appSecret, plainText).ToLower();
+                            signText = Utilities.HMACSHA256Utility.Hash(_appSecret, plainText).ToLower();
                         }
                         break;
 

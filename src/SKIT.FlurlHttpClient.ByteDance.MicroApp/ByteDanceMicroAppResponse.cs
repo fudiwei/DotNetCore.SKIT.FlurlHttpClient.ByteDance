@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     /// <summary>
     /// 字节小程序 API 响应的基类。
     /// </summary>
-    public abstract class ByteDanceMicroAppResponse : IByteDanceResponse
+    public abstract class ByteDanceMicroAppResponse : ICommonResponse
     {
         /// <summary>
         /// <inheritdoc/>

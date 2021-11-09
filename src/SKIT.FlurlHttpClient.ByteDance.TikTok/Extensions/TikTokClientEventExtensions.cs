@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             try
             {
                 string plainText = $"{client.Credentials.ClientSecret}{callbackJson}";
-                string signText = Security.SHA1Utility.Hash(plainText);
+                string signText = Utilities.SHA1Utility.Hash(plainText);
                 return string.Equals(signText, callbackSignature, StringComparison.OrdinalIgnoreCase);
             }
             catch

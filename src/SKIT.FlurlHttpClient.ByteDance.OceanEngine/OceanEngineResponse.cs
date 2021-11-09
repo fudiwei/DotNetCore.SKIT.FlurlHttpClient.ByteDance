@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     /// <summary>
     /// 巨量引擎开放平台 API 响应的基类。
     /// </summary>
-    public abstract class OceanEngineResponse : IByteDanceResponse
+    public abstract class OceanEngineResponse : ICommonResponse
     {
         /// <summary>
         /// <inheritdoc/>

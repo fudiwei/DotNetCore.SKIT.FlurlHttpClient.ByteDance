@@ -124,7 +124,6 @@
 
     - **必须**：提交记录中的 `<scope>`，可取值为：
 
-        - _core_：关于 `SKIT.FlurlHttpClient.ByteDance` 项目的变化；
         - _microapp_：关于 `SKIT.FlurlHttpClient.ByteDance.MicroApp` 项目的变化；
         - _tiktok_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTok` 项目的变化；
         - _tiktokshop_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTokShop` 项目的变化；

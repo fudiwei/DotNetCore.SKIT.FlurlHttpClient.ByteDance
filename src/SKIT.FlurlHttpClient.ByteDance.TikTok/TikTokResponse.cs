@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     /// <summary>
     /// 抖音开放平台 API 响应的基类。
     /// </summary>
-    public abstract class TikTokResponse : IByteDanceResponse
+    public abstract class TikTokResponse : ICommonResponse
     {
         /// <summary>
         /// <inheritdoc/>

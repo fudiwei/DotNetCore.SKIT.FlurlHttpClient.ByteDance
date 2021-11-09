@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
     /// <summary>
     /// 抖店开放平台 API 请求的基类。
     /// </summary>
-    public abstract class TikTokShopRequest : IByteDanceRequest
+    public abstract class TikTokShopRequest : ICommonRequest
     {
         /// <summary>
         /// 获取或设置请求超时时间（单位：毫秒）。如果不指定将使用构造 <see cref="TikTokShopClient"/> 时的 <see cref="TikTokShopClientOptions.Timeout"/> 参数，这在需要指定特定耗时请求（比如上传或下载文件）的超时时间时很有用。

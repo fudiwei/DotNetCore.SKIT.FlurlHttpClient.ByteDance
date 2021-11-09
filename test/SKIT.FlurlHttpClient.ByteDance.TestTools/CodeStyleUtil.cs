@@ -85,9 +85,9 @@ namespace SKIT.FlurlHttpClient.ByteDance
 
                 if (name.EndsWith("Request"))
                 {
-                    if (!typeof(IByteDanceRequest).IsAssignableFrom(modelType))
+                    if (!typeof(ICommonRequest).IsAssignableFrom(modelType))
                     {
-                        lstError.Add(new Exception($"`{name}` 类需实现自 `IByteDanceRequest`。"));
+                        lstError.Add(new Exception($"`{name}` 类需实现自 `ICommonRequest`。"));
                         continue;
                     }
 
@@ -100,9 +100,9 @@ namespace SKIT.FlurlHttpClient.ByteDance
 
                 if (name.EndsWith("Response"))
                 {
-                    if (!typeof(IByteDanceResponse).IsAssignableFrom(modelType))
+                    if (!typeof(ICommonResponse).IsAssignableFrom(modelType))
                     {
-                        lstError.Add(new Exception($"`{name}` 类需实现自 `IByteDanceResponse`。"));
+                        lstError.Add(new Exception($"`{name}` 类需实现自 `ICommonResponse`。"));
                         continue;
                     }
 
@@ -252,7 +252,7 @@ namespace SKIT.FlurlHttpClient.ByteDance
                     .Where(e =>
                         e.IsPublic &&
                         e.IsStatic &&
-                        typeof(IByteDanceClient).IsAssignableFrom(e.GetParameters().FirstOrDefault().ParameterType)
+                        typeof(ICommonClient).IsAssignableFrom(e.GetParameters().FirstOrDefault().ParameterType)
                     )
                     .ToArray();
 
@@ -267,10 +267,10 @@ namespace SKIT.FlurlHttpClient.ByteDance
                         continue;
                     }
 
-                    // 第二个参数必为 IByteDanceRequest 子类
-                    if (!typeof(IByteDanceRequest).IsAssignableFrom(lstParamInfo[1].ParameterType))
+                    // 第二个参数必为 ICommonRequest 子类
+                    if (!typeof(ICommonRequest).IsAssignableFrom(lstParamInfo[1].ParameterType))
                     {
-                        lstError.Add(new Exception($"`{extType.Name}.{methodInfo.Name}` 方法第 1 个入参需实现自 `IByteDanceRequest`。"));
+                        lstError.Add(new Exception($"`{extType.Name}.{methodInfo.Name}` 方法第 1 个入参需实现自 `ICommonRequest`。"));
                         continue;
                     }
 

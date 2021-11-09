@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (callbackSignature == null) throw new ArgumentNullException(nameof(callbackSignature));
 
             ISet<string> set = new SortedSet<string>(StringComparer.Ordinal) { client.Credentials.PushToken!, callbackTimestamp, callbackNonce, callbackMessage };
-            string sign = Security.SHA1Utility.Hash(string.Concat(set));
+            string sign = Utilities.SHA1Utility.Hash(string.Concat(set));
             return string.Equals(sign, callbackSignature, StringComparison.InvariantCultureIgnoreCase);
         }
     }

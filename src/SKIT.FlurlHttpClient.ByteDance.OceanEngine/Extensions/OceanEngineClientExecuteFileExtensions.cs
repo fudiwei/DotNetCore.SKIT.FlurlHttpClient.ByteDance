@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
                 if (request.ImageFileHash == null)
-                    request.ImageFileHash = Security.MD5Utility.Hash(request.ImageFileBytes);
+                    request.ImageFileHash = Utilities.MD5Utility.Hash(request.ImageFileBytes);
 
                 if (request.ImageContentType == null)
                     request.ImageContentType = "image/jpeg";
@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
                 if (request.ImageFileHash == null)
-                    request.ImageFileHash = Security.MD5Utility.Hash(request.ImageFileBytes);
+                    request.ImageFileHash = Utilities.MD5Utility.Hash(request.ImageFileBytes);
 
                 if (request.ImageContentType == null)
                     request.ImageContentType = "image/jpeg";
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".mp4";
 
             if (request.VideoFileHash == null)
-                request.VideoFileHash = Security.MD5Utility.Hash(request.VideoFileBytes ?? new byte[0]);
+                request.VideoFileHash = Utilities.MD5Utility.Hash(request.VideoFileBytes ?? new byte[0]);
 
             if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";

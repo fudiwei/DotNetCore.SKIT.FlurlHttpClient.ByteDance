@@ -329,7 +329,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/ecpay/bill 接口。</para>
+        /// <para>异步调用 [GET] /apps/bill 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/bill </para>
         /// </summary>
         /// <param name="client"></param>
@@ -348,7 +348,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "ecpay", "bill");
+                .CreateRequest(request, HttpMethod.Get, "apps", "bill")
+                .SetQueryParam("app_id", request.AppId)
+                .SetQueryParam("seller", request.MerchantId)
+                .SetQueryParam("start_date", request.StartDateString)
+                .SetQueryParam("end_date", request.EndDateString)
+                .SetQueryParam("bill_type", request.BillType)
+                .SetQueryParam("sign", request.Signature);
 
             return await client.SendRequestWithJsonAsync<Models.AppsBillResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

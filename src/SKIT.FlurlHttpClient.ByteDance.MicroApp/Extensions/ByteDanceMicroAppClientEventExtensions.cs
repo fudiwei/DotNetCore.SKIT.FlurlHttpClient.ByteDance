@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             ISet<string> set = new SortedSet<string>(StringComparer.Ordinal) { client.Credentials.PushToken!, callbackTimestamp, callbackNonce, callbackMessage };
             string sign = Utilities.SHA1Utility.Hash(string.Concat(set));
-            return string.Equals(sign, callbackSignature, StringComparison.InvariantCultureIgnoreCase);
+            return string.Equals(sign, callbackSignature, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -7,7 +7,7 @@
 [![Vistors](https://visitor-badge.laobi.icu/badge?page_id=fudiwei.DotNetCore.SKIT.FlurlHttpClient.ByteDance&title=Visitors)](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance)
 [![License](https://img.shields.io/github/license/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance?label=License)](https://mit-license.org/)
 
-基于 `Flurl.Http` 的字节跳动 API HTTP 客户端，支持字节小程序、头条号开放平台、抖音开放平台、抖店开放平台等模块。
+基于 `Flurl.Http` 的字节跳动 API HTTP 客户端，支持字节小程序、抖音开放平台、抖店开放平台、巨量引擎开放平台等模块。
 
 > 更多 SKIT.FlurlHttpClient 系列开发工具包请[点此查看](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient)。
 
@@ -48,9 +48,9 @@
 
 ## 参与贡献
 
--   GitHub：https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance
+-   GitHub Repo：https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance.git
 
--   Gitee：https://gitee.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance
+-   Gitee Repo：https://gitee.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance.git
 
 以上仓库地址同步更新，均可接受 Issue 或 Pull Request。
 

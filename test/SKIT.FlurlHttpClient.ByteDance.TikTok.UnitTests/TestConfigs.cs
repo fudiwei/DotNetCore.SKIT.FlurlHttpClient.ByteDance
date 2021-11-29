@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
                 using var stream = File.OpenRead("appsettings.local.json");
                 using var json = JsonDocument.Parse(stream);
 
-                var config = json.RootElement.GetProperty("TikTokConfig");
+                var config = json.RootElement.GetProperty("TestConfig");
                 TikTokClientKey = config.GetProperty("ClientKey").GetString();
                 TikTokClientSecret = config.GetProperty("ClientSecret").GetString();
                 TikTokAccessToken = config.GetProperty("AccessToken").GetString();
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
             }
             catch (Exception ex)
             {
-                throw new Exception("加载配置文件 appsettings.local.json 失败", ex);
+                throw new Exception("加载配置文件 appsettings.local.json 失败，请查看 `InnerException` 了解具体失败原因", ex);
             }
         }
 

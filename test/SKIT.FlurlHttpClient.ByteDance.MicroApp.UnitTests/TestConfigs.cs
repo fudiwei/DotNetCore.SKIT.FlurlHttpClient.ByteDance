@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 using var stream = File.OpenRead("appsettings.local.json");
                 using var json = JsonDocument.Parse(stream);
 
-                var config = json.RootElement.GetProperty("ByteDanceMicroAppConfig");
+                var config = json.RootElement.GetProperty("TestConfig");
                 MicroAppId = config.GetProperty("AppId").GetString();
                 MicroAppSecret = config.GetProperty("AppSecret").GetString();
                 MicroAppAccessToken = config.GetProperty("AccessToken").GetString();
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             }
             catch (Exception ex)
             {
-                throw new Exception("加载配置文件 appsettings.local.json 失败", ex);
+                throw new Exception("加载配置文件 appsettings.local.json 失败，请查看 `InnerException` 了解具体失败原因", ex);
             }
         }
 

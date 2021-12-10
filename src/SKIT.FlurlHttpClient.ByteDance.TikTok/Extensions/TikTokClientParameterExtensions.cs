@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Flurl;
+using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
-    /// <summary>
-    /// 为 <see cref="TikTokClient"/> 提供客户端调起 JSBridge 签名的扩展方法。
-    /// </summary>
     public static class TikTokClientParameterExtensions
     {
         /// <summary>
@@ -36,6 +35,94 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 { "url", url },
                 { "signature", sign }
             });
+        }
+
+        /// <summary>
+        /// <para>生成抖音获取授权临时票据的 URL。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848834666171009035 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="scope"></param>
+        /// <param name="optionalScope"></param>
+        /// <param name="redirectUrl"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public static string GenerateParameterizedUrlForPlatformOAuthConnect(this TikTokClient client, string? scope = null, string? optionalScope = null, string? redirectUrl = null, string? state = null)
+        {
+            return new Url("https://open.douyin.com/")
+                .AppendPathSegments("platform", "oauth", "connect")
+                .SetQueryParam("client_key", client.Credentials.ClientKey)
+                .SetQueryParam("response_type", "code")
+                .SetQueryParam("scope", scope)
+                .SetQueryParam("optionalScope", optionalScope)
+                .SetQueryParam("redirect_uri", redirectUrl)
+                .SetQueryParam("state", state)
+                .ToString();
+        }
+
+        /// <summary>
+        /// <para>生成头条获取授权临时票据的 URL。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848834851366275076 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="scope"></param>
+        /// <param name="redirectUrl"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public static string GenerateParameterizedUrlForOAuthAuthorize(this TikTokClient client, string? scope = null, string? redirectUrl = null, string? state = null)
+        {
+            return new Url("https://open.snssdk.com/")
+                .AppendPathSegments("oauth", "authorize")
+                .SetQueryParam("client_key", client.Credentials.ClientKey)
+                .SetQueryParam("response_type", "code")
+                .SetQueryParam("scope", scope)
+                .SetQueryParam("redirect_uri", redirectUrl)
+                .SetQueryParam("state", state)
+                .ToString();
+        }
+
+        /// <summary>
+        /// <para>生成抖音获取静默授权临时票据的 URL。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6848834666170959883 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="scope"></param>
+        /// <param name="redirectUrl"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public static string GenerateParameterizedUrlForOAuthAuthorizeV2(this TikTokClient client, string? scope = null, string? redirectUrl = null, string? state = null)
+        {
+            return new Url("https://open.snssdk.com/")
+                .AppendPathSegments("oauth", "authorize", "v2")
+                .SetQueryParam("client_key", client.Credentials.ClientKey)
+                .SetQueryParam("response_type", "code")
+                .SetQueryParam("scope", scope)
+                .SetQueryParam("redirect_uri", redirectUrl)
+                .SetQueryParam("state", state)
+                .ToString();
+        }
+
+        /// <summary>
+        /// <para>生成西瓜获取授权临时票据的 URL。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc/6852243568438822925 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="scope"></param>
+        /// <param name="optionalScope"></param>
+        /// <param name="redirectUrl"></param>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public static string GenerateParameterizedUrlForOAuthConnect(this TikTokClient client, string? scope = null, string? optionalScope = null, string? redirectUrl = null, string? state = null)
+        {
+            return new Url("https://open-api.ixigua.com/")
+                .AppendPathSegments("oauth", "connect")
+                .SetQueryParam("client_key", client.Credentials.ClientKey)
+                .SetQueryParam("response_type", "code")
+                .SetQueryParam("scope", scope)
+                .SetQueryParam("optionalScope", optionalScope)
+                .SetQueryParam("redirect_uri", redirectUrl)
+                .SetQueryParam("state", state)
+                .ToString();
         }
     }
 }

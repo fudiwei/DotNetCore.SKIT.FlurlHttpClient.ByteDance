@@ -27,6 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("item_id", request.ItemId);
 
             if (request.SortType != null)
@@ -53,6 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId);
 
@@ -101,6 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("item_id", request.ItemId);
 
             return await client.SendRequestWithJsonAsync<Models.VideoCommentListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -124,6 +127,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId);
 

@@ -56,10 +56,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 && 
-                ErrorCode.GetValueOrDefault() == 0 && 
-                Extra?.ErrorCode.GetValueOrDefault() == 0 && 
-                Extra?.SubErrorCode.GetValueOrDefault() == 0;
+            return RawStatus == 200 &&
+                ErrorCode.GetValueOrDefault() == 0 &&
+                (Extra?.ErrorCode).GetValueOrDefault() == 0 &&
+                (Extra?.SubErrorCode).GetValueOrDefault() == 0;
         }
     }
 

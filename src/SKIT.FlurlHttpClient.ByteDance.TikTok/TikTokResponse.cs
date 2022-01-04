@@ -8,25 +8,52 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     public abstract class TikTokResponse : ICommonResponse
     {
         /// <summary>
-        /// <inheritdoc/>
+        /// 
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public int RawStatus { get; internal set; }
+        int ICommonResponse.RawStatus { get; set; }
 
         /// <summary>
-        /// <inheritdoc/>
+        /// 
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public IDictionary<string, string> RawHeaders { get; internal set; } = default!;
+        IDictionary<string, string> ICommonResponse.RawHeaders { get; set; } = default!;
 
         /// <summary>
-        /// <inheritdoc/>
+        /// 
+        /// </summary>
+        byte[] ICommonResponse.RawBytes { get; set; } = default!;
+
+        /// <summary>
+        /// 获取原始的 HTTP 响应状态码。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] RawBytes { get; internal set; } = default!;
+        public int RawStatus
+        {
+            get { return ((ICommonResponse)this).RawStatus; }
+            internal set { ((ICommonResponse)this).RawStatus = value; }
+        }
+
+        /// <summary>
+        /// 获取原始的 HTTP 响应表头集合。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public IDictionary<string, string> RawHeaders
+        {
+            get { return ((ICommonResponse)this).RawHeaders; }
+            internal set { ((ICommonResponse)this).RawHeaders = value; }
+        }
+
+        /// <summary>
+        /// 获取原始的 HTTP 响应正文。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public byte[] RawBytes
+        {
+            get { return ((ICommonResponse)this).RawBytes; }
+            internal set { ((ICommonResponse)this).RawBytes = value; }
+        }
 
         /// <summary>
         /// 获取抖音开放平台 API 返回的扩展信息。

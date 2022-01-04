@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl.Http;
@@ -80,10 +76,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public async Task<T> SendRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
             where T : OceanEngineResponse, new()
         {
+            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
+
             try
             {
                 using IFlurlResponse flurlResponse = await base.SendRequestAsync(flurlRequest, httpContent, cancellationToken).ConfigureAwait(false);
-                return await GetResposneAsync<T>(flurlResponse).ConfigureAwait(false);
+                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
             }
             catch (FlurlHttpException ex)
             {
@@ -102,47 +100,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
             where T : OceanEngineResponse, new()
         {
-            // 允许 GET 请求携带请求体
-            if (flurlRequest.Verb == HttpMethod.Get && data != null)
-            {
-                using var httpContent = new StringContent(JsonSerializer.Serialize(data), Encoding.UTF8);
-                httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
-                return await SendRequestAsync<T>(flurlRequest, httpContent, cancellationToken);
-            }
+            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
 
             try
             {
                 using IFlurlResponse flurlResponse = await base.SendRequestWithJsonAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);
-                return await GetResposneAsync<T>(flurlResponse).ConfigureAwait(false);
+                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
             }
             catch (FlurlHttpException ex)
             {
                 throw new OceanEngineException(ex.Message, ex);
             }
-        }
-
-        private async Task<T> GetResposneAsync<T>(IFlurlResponse flurlResponse)
-            where T : OceanEngineResponse, new()
-        {
-            byte[] bytes = await flurlResponse.GetBytesAsync().ConfigureAwait(false);
-            bool jsonable =
-                (bytes.FirstOrDefault() == 91 && bytes.LastOrDefault() == 93) || // "[...]"
-                (bytes.FirstOrDefault() == 123 && bytes.LastOrDefault() == 125); // "{...}"
-
-            T result = jsonable ? JsonSerializer.Deserialize<T>(Encoding.UTF8.GetString(bytes)) : new T();
-
-            result.RawStatus = flurlResponse.StatusCode;
-            result.RawHeaders = new ReadOnlyDictionary<string, string>(
-                flurlResponse.Headers
-                    .GroupBy(e => e.Name)
-                    .ToDictionary(
-                        k => k.Key,
-                        v => string.Join(", ", v.Select(e => e.Value))
-                    )
-            );
-            result.RawBytes = bytes;
-
-            return result;
         }
     }
 }

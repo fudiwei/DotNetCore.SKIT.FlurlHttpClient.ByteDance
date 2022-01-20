@@ -9,6 +9,8 @@
 
     <PropertyGroup>
         <PackageId>SKIT.FlurlHttpClient.ByteDance.TikTokShop</PackageId>
+		<PackageIcon>LOGO.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance Douyin TikTok DouyinShop TikTokShop 字节 字节跳动 头条 今日头条 抖店 抖音小店 抖音放心购 抖音今日特卖 放心购 今日特卖</PackageTags>
@@ -22,12 +24,26 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<Deterministic>true</Deterministic>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../LOGO.png" Pack="true" PackagePath="/" />
+		<None Include="README.md" Pack="true" PackagePath="/" />
+	</ItemGroup>
+
     <ItemGroup>
         <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net461'" />
     </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="SKIT.FlurlHttpClient.Common" Version="2.1.1" />
+		<PackageReference Include="SKIT.FlurlHttpClient.Common" Version="2.2.0" />
 	</ItemGroup>
 
 </Project>

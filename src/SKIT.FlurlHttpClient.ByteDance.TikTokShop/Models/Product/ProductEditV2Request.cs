@@ -163,9 +163,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置商品主图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipeConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithPipeSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipeConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithPipeSplitConverter))]
         public IList<string>? PictureUrlList { get; set; }
 
         /// <summary>
@@ -195,9 +195,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置同店推荐商品 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("assoc_ids")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipeConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithPipeSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("assoc_ids")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipeConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithPipeSplitConverter))]
         public IList<string>? AssociateProductIdList { get; set; }
 
         /// <summary>
@@ -292,18 +292,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置质检报告 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("quality_report")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithCommaSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("quality_report")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithCommaSplitConverter))]
         public IList<string>? QualityReportUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置品类资质 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("class_quality")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithCommaSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("class_quality")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithCommaSplitConverter))]
         public IList<string>? ClassQualificationUrlList { get; set; }
 
         /// <summary>
@@ -344,9 +344,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置规格图片 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spec_pic")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithCommaSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("spec_pic")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithCommaSplitConverter))]
         public IList<string>? SpecificationPictureUrlList { get; set; }
 
         /// <summary>

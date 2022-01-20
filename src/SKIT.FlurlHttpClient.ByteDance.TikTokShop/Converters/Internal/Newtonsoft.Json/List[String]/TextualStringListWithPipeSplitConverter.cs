@@ -1,11 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Newtonsoft.Json.Converters
 {
-    internal class TextualIntegerArrayWithCommaConverter : JsonConverter<int[]?>
+    internal class TextualStringListWithPipeSplitConverter : JsonConverter
     {
-        private const char SEPARATOR = ',';
+        private const char SEPARATOR = '|';
+
+        public override bool CanConvert(Type objectType)
+        {
+            return objectType.IsGenericType &&
+                   typeof(IList<>).IsAssignableFrom(objectType.GetGenericTypeDefinition()) &&
+                   typeof(string) == objectType.GetGenericArguments()[0];
+        }
 
         public override bool CanRead
         {
@@ -17,7 +25,7 @@ namespace Newtonsoft.Json.Converters
             get { return true; }
         }
 
-        public override int[]? ReadJson(JsonReader reader, Type objectType, int[]? existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null)
             {
@@ -29,13 +37,13 @@ namespace Newtonsoft.Json.Converters
                 if (value == null)
                     return existingValue;
 
-                return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).Select(e => int.Parse(e)).ToArray();
+                return value.Split(new char[] { SEPARATOR }, StringSplitOptions.RemoveEmptyEntries).ToList();
             }
 
             throw new JsonReaderException();
         }
 
-        public override void WriteJson(JsonWriter writer, int[]? value, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
         {
             if (value != null)
                 writer.WriteValue(string.Join(SEPARATOR.ToString(), value));

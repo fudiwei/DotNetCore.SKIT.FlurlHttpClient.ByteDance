@@ -12,9 +12,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置商品名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ids")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithCommaConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithCommaSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithCommaConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithCommaSplitConverter))]
         public IList<string>? OrderIdList { get; set; }
 
         /// <summary>

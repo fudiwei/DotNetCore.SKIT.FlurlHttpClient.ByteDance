@@ -25,9 +25,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// 获取或设置回复凭证 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("evidence")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithPipeConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithPipeSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("evidence")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithPipeConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithPipeSplitConverter))]
         public IList<string>? EvidenceUrlList { get; set; }
     }
 }

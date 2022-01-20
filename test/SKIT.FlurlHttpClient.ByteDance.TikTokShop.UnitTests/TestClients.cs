@@ -1,15 +1,13 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests
 {
     class TestClients
     {
         static TestClients()
         {
             Instance = new TikTokShopClient(new TikTokShopClientOptions()
-            { 
+            {
                 AppKey = TestConfigs.TikTokShopAppKey,
-                AppSecret =  TestConfigs.TikTokShopAppSecret
+                AppSecret = TestConfigs.TikTokShopAppSecret
             });
         }
 

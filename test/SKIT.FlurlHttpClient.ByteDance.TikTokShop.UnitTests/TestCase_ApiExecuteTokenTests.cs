@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests
 {
-    public class TikTokShopExecuteTokenTests
+    public class TestCase_ApiExecuteTokenTests
     {
-        [Fact(DisplayName = "[POST] /token/create")]
+        [Fact(DisplayName = "测试用例：调用 API [POST] /token/create")]
         public async Task TokenCreateTest()
         {
             var request = new Models.TokenCreateRequest()
-            { 
+            {
                 Code = "TEST_CODE"
             };
             var response = await TestClients.Instance.ExecuteTokenCreateAsync(request);
-            
+
             Assert.True(response.IsSuccessful());
             Assert.NotNull(response.Data);
             Assert.NotEmpty(response.Data.AccessToken);

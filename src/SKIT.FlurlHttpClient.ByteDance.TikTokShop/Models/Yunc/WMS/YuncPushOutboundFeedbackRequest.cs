@@ -202,9 +202,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// 获取或设置序列号列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sn_list")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringIListWithCommaConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualStringListWithCommaSplitConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("sn_list")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringIListWithCommaConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualStringListWithCommaSplitConverter))]
                 public IList<string>? SerialNumberList { get; set; }
 
                 /// <summary>

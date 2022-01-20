@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
 
                     case Constants.SignAlgorithms.HMAC_SHA256:
                         {
-                            signText = Utilities.HMACSHA256Utility.Hash(_appSecret, plainText).ToLower();
+                            signText = Utilities.HMACUtility.HashWithSHA256(_appSecret, plainText).ToLower();
                         }
                         break;
 

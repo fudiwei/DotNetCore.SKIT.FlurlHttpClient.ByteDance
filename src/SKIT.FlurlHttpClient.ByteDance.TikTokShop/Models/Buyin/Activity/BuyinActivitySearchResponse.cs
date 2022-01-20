@@ -123,27 +123,27 @@
                         /// 获取或设置商家类型限制列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shop_type_limit")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("shop_type_limit")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         public int[]? LimittedShopTypeList { get; set; }
 
                         /// <summary>
                         /// 获取或设置商家体验分限制列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shop_score_limit")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("shop_score_limit")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         public int[]? LimittedShopScoreList { get; set; }
 
                         /// <summary>
                         /// 获取或设置招商类目 ID 限制列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categories_limit")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("categories_limit")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerArrayWithCommaSplitConverter))]
                         public int[]? LimittedCategoryIdList { get; set; }
                     }
                 }

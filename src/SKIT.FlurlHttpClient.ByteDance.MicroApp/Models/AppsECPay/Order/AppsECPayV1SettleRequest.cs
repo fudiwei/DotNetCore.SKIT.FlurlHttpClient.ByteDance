@@ -30,72 +30,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonSettleParametersConverter : Newtonsoft.Json.JsonConverter<IList<Types.SettleParameter>?>
+            internal class ResponsePropertySettleParametersNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SettleParameter>?>
             {
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<Types.SettleParameter>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<Types.SettleParameter>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<IList<Types.SettleParameter>>(value);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<Types.SettleParameter>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None));
-                    else
-                        writer.WriteNull();
-                }
             }
 
-            internal class SystemTextJsonSettleParametersConverter : System.Text.Json.Serialization.JsonConverter<IList<Types.SettleParameter>?>
+            internal class ResponsePropertySettleParametersSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SettleParameter>?>
             {
-                public override IList<Types.SettleParameter>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return System.Text.Json.JsonSerializer.Deserialize<IList<Types.SettleParameter>>(value, options);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<Types.SettleParameter>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(System.Text.Json.JsonSerializer.Serialize(value, options));
-                    else
-                        writer.WriteNullValue();
-                }
             }
         }
 
@@ -138,9 +78,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// 获取或设置分账方参数列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("settle_params")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonSettleParametersConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Converters.ResponsePropertySettleParametersNewtonsoftJsonConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("settle_params")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonSettleParametersConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.ResponsePropertySettleParametersSystemTextJsonConverter))]
         public IList<Types.SettleParameter> SettleParameterList { get; set; } = new List<Types.SettleParameter>();
 
         /// <summary>

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
-    public class MicroAppExecuteTokenTests
+    public class TestCase_ApiExecuteTokenTests
     {
-        [Fact(DisplayName = "[POST] /token/create")]
+        [Fact(DisplayName = "测试用例：调用 API [POST] /token/create")]
         public async Task TokenCreateTest()
         {
             var request = new Models.AppsTokenRequest();

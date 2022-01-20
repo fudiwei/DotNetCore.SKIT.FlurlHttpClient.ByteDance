@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
     class TestClients
     {
@@ -9,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             Instance = new ByteDanceMicroAppClient(new ByteDanceMicroAppClientOptions()
             {
                 AppId = TestConfigs.MicroAppId,
-                AppSecret =  TestConfigs.MicroAppSecret
+                AppSecret = TestConfigs.MicroAppSecret
             });
         }
 

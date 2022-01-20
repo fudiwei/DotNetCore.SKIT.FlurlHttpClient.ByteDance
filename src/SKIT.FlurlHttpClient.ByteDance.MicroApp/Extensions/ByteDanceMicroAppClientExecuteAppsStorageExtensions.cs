@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             switch (signMethod)
             {
                 case "hmac_sha256":
-                    return Utilities.HMACSHA256Utility.Hash(sessionKey, json).ToLower();
+                    return Utilities.HMACUtility.HashWithSHA256(sessionKey, json).ToLower();
 
                 default:
                     return string.Empty;

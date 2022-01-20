@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
+﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
     class TestClients
     {
@@ -9,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
             Instance = new OceanEngineClient(new OceanEngineClientOptions()
             {
                 AppId = TestConfigs.OceanEngineAppId,
-                AppSecret =  TestConfigs.OceanEngineAppSecret
+                AppSecret = TestConfigs.OceanEngineAppSecret
             });
         }
 

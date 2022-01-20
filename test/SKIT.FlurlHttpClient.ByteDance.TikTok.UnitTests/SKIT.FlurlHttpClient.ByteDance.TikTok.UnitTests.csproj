@@ -2,20 +2,14 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netcoreapp3.1; net6.0</TargetFrameworks>
-		<LangVersion>9.0</LangVersion>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<NullableReferenceTypes>true</NullableReferenceTypes>
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Remove=".gitignore" />
-		<None Remove="ModelSamples\DataExternalBillboard\HotVideo\DataExternalBillboardHotVideoResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportBasketballResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportComprehensiveResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportCultureResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportFitnessResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportOutdoorsResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportOverallResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportSoccerResponse.json" />
-		<None Remove="ModelSamples\DataExternalBillboard\Sport\DataExternalBillboardSportTableTennisResponse.json" />
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 			<CopyToPublishDirectory>Never</CopyToPublishDirectory>

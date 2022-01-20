@@ -43,72 +43,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonContentConverter : Newtonsoft.Json.JsonConverter<Types.Content?>
+            internal class RequestPropertyContentNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
             {
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override Types.Content? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, Types.Content? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<Types.Content>(value);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, Types.Content? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None));
-                    else
-                        writer.WriteNull();
-                }
             }
 
-            internal class SystemTextJsonContentConverter : System.Text.Json.Serialization.JsonConverter<Types.Content?>
+            internal class RequestPropertyContentSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
             {
-                public override Types.Content? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return System.Text.Json.JsonSerializer.Deserialize<Types.Content>(value, options);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, Types.Content? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(System.Text.Json.JsonSerializer.Serialize(value, options));
-                    else
-                        writer.WriteNullValue();
-                }
             }
         }
 
@@ -137,9 +77,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
         /// 获取或设置消息体。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("content")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.NewtonsoftJsonContentConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Converters.RequestPropertyContentNewtonsoftJsonConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.SystemTextJsonContentConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.RequestPropertyContentSystemTextJsonConverter))]
         public Types.Content Content { get; set; } = new Types.Content();
 
         /// <summary>

@@ -53,7 +53,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reject_reason")]
                         [System.Text.Json.Serialization.JsonPropertyName("reject_reason")]
-                        public string? RejectReason { get; set; } 
+                        public string? RejectReason { get; set; }
                     }
                 }
 

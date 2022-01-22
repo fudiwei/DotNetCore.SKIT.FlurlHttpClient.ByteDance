@@ -52,35 +52,35 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                        public string AvatarUrl { get; set; } = default!; 
+                        public string AvatarUrl { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置排名。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank")]
-                        public int Rank { get; set; }  
+                        public int Rank { get; set; }
 
                         /// <summary>
                         /// 获取或设置排名变化。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank_change")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank_change")]
-                        public string? RankChange { get; set; } 
+                        public string? RankChange { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("follower_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("follower_count")]
-                        public int FollowerCount { get; set; } 
+                        public int FollowerCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置近一月在榜次数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("onbillbaord_times")]
                         [System.Text.Json.Serialization.JsonPropertyName("onbillbaord_times")]
-                        public int OnbillbaordTimes { get; set; } 
+                        public int OnbillbaordTimes { get; set; }
 
                         /// <summary>
                         /// 获取或设置影响力指数。

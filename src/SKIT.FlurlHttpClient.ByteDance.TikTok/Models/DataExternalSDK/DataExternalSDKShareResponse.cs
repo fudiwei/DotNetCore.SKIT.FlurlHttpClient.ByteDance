@@ -25,28 +25,28 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delete_item_total")]
                         [System.Text.Json.Serialization.JsonPropertyName("delete_item_total")]
-                        public int DeleteItemTotalCount { get; set; } 
+                        public int DeleteItemTotalCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置当日分享到抖音的视频数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_item_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_item_count")]
-                        public int ShareItemCount { get; set; } 
+                        public int ShareItemCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置累计分享到抖音的视频总数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_item_total")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_item_total")]
-                        public int ShareItemTotalCount { get; set; } 
+                        public int ShareItemTotalCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置当日完成分享的用户数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_user_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_user_count")]
-                        public int ShareUserCount { get; set; } 
+                        public int ShareUserCount { get; set; }
                     }
                 }
 

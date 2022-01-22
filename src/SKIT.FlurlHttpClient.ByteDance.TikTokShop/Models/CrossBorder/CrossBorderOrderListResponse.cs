@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                         public string Name { get; set; } = default!;
                                     }
                                 }
-                                
+
                                 /// <summary>
                                 /// 获取或设置省份信息。
                                 /// </summary>
@@ -147,7 +147,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 }
                             }
                         }
-                    
+
                         /// <summary>
                         /// 获取或设置订单 ID。
                         /// </summary>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTok
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
     /// <summary>
     /// 一个用于构造 <see cref="TikTokClient"/> 时使用的配置项。

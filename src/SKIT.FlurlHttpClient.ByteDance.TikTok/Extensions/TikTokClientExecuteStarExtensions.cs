@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.StarHotListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /star/author_score 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798622172153867 </para>
@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.StarAuthorScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /star/author_score_v2 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848806514870798343 </para>

@@ -128,7 +128,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             return await client.SendRequestWithJsonAsync<Models.CrossBorderOrderInterceptionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /crossBorder/orderList 接口。</para>
         /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/496 </para>

@@ -172,7 +172,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.EnterpriseLeadsTagDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/tag/user/list 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798278490818563 </para>
@@ -193,7 +193,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.EnterpriseLeadsTagUserListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/leads/tag/user/update 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798256999237644 </para>

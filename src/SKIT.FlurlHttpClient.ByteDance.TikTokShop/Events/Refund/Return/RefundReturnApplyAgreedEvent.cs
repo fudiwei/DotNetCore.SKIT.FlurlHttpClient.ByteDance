@@ -27,7 +27,7 @@
                         [Newtonsoft.Json.JsonProperty("province")]
                         [System.Text.Json.Serialization.JsonPropertyName("province")]
                         public string ProvinceName { get; set; } = default!;
-                        
+
                         /// <summary>
                         /// 获取或设置城市 ID。
                         /// </summary>

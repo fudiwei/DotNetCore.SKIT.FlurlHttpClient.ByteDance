@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
-    class TestConfigs
+    internal class TestConfigs
     {
         static TestConfigs()
         {

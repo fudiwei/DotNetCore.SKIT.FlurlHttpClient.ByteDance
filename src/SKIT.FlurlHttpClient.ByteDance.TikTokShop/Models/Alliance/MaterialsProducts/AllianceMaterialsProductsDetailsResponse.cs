@@ -49,7 +49,7 @@
                                 public int KOLCount { get; set; }
                             }
                         }
-                        
+
                         /// <summary>
                         /// 获取或设置店铺 ID。
                         /// </summary>
@@ -259,7 +259,7 @@
                 [Newtonsoft.Json.JsonProperty("products")]
                 [System.Text.Json.Serialization.JsonPropertyName("products")]
                 public Types.Product[] ProductList { get; set; } = default!;
-                
+
                 /// <summary>
                 /// 获取或设置总数量。
                 /// </summary>

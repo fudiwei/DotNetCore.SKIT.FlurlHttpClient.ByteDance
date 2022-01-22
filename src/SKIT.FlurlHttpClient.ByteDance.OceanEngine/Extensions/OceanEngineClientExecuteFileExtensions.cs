@@ -3,7 +3,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
@@ -58,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestAsync<Models.FileImageAdvertiserResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/file/image/ad 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600176640 </para>
@@ -144,7 +143,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestAsync<Models.FileVideoAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/file/image/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 </para>
@@ -164,7 +163,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileImageGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/file/video/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710601820172 </para>
@@ -184,7 +183,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileVideoGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/file/image/ad/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 </para>
@@ -204,7 +203,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileImageAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/file/video/ad/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710603509772 </para>
@@ -224,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileVideoAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/file/video/delete 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605373455 </para>
@@ -244,7 +243,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileVideoDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/file/video/update 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605909004 </para>
@@ -264,7 +263,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.FileVideoUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/file/material/bind 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710604852236 </para>

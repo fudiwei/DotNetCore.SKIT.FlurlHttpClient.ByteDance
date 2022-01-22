@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-/* @codestyle-disable no-jsonable-property-in-request-get */
+﻿/* @codestyle-disable no-jsonable-property-in-request-get */
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
@@ -14,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("advertiser_id")]
         [System.Text.Json.Serialization.JsonPropertyName("advertiser_id")]
-        public long AdvertiserId { get; set; } 
+        public long AdvertiserId { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID。

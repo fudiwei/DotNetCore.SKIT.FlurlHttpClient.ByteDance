@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 public string? MobileNumber { get; set; }
             }
 
-            public class Address 
+            public class Address
             {
                 /// <summary>
                 /// 获取或设置国家编码。

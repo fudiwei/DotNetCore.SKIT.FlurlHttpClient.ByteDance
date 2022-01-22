@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     /// <summary>
     /// 一个用于构造 <see cref="ByteDanceMicroAppClient"/> 时使用的配置项。

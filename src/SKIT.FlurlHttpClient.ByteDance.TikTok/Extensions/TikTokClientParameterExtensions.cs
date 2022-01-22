@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Flurl;
-using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {

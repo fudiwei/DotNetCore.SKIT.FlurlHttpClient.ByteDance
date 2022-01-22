@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 {
     /// <summary>
     /// 一个用于构造 <see cref="TikTokShopClient"/> 时使用的配置项。

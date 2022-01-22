@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Exceptions
         }
 
         /// <inheritdoc/>
-        internal TikTokShopRequestSignatureException(string message) 
+        internal TikTokShopRequestSignatureException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        internal TikTokShopRequestSignatureException(string message, Exception innerException) 
+        internal TikTokShopRequestSignatureException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

@@ -35,8 +35,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("external_info")]
                                         [System.Text.Json.Serialization.JsonPropertyName("external_info")]
-                                        public string? ExternalInformation { get; set; } 
-        
+                                        public string? ExternalInformation { get; set; }
+
                                         /// <summary>
                                         /// 获取或设置分销类型。
                                         /// </summary>

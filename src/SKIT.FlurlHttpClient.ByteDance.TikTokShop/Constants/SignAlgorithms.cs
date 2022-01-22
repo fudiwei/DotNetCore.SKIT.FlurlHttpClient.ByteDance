@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Constants
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Constants
 {
     public static class SignAlgorithms
     {

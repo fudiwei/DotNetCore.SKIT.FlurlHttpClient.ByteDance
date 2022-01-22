@@ -25,7 +25,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank")]
-                        public int Rank { get; set; } 
+                        public int Rank { get; set; }
 
                         /// <summary>
                         /// 获取或设置排名变化。

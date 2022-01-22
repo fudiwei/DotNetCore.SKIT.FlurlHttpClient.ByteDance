@@ -443,7 +443,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("exchange")]
                                 public Types.ExchangeLogistics? ExchangeLogistics { get; set; }
                             }
-                        
+
                             public class ShopRemark
                             {
                                 /// <summary>
@@ -481,7 +481,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("create_time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                                public long CreateTimestamp { get; set; } 
+                                public long CreateTimestamp { get; set; }
                             }
                         }
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
@@ -52,21 +51,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualification_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualification_code")]
-                public string QualificationCode { get; set; }  = string.Empty;
+                public string QualificationCode { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置注册国家。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("registered_nation_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("registered_nation_name")]
-                public string RegisteredNationName { get; set; }  = string.Empty;
+                public string RegisteredNationName { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置注册省份。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("registered_province_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("registered_province_name")]
-                public string RegisteredProvinceName { get; set; }  = string.Empty;
+                public string RegisteredProvinceName { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置注册城市。

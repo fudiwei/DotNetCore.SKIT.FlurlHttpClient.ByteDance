@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 [System.Text.Json.Serialization.JsonPropertyName("order_status")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualIntegerListWithCommaSplitConverter))]
                 public IList<int>? OrderStatusList { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置主流程状态列表。
                 /// </summary>

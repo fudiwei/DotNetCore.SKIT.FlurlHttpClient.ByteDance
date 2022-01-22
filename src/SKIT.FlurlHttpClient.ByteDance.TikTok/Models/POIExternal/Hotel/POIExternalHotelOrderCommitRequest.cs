@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 [Newtonsoft.Json.JsonProperty("surname")]
                 [System.Text.Json.Serialization.JsonPropertyName("surname")]
                 public string? FamilyName { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置英文名。
                 /// </summary>

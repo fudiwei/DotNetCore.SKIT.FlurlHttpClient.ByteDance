@@ -49,7 +49,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("inspection_result")]
                 [System.Text.Json.Serialization.JsonPropertyName("inspection_result")]
-                public int InspectionResult { get; set; } 
+                public int InspectionResult { get; set; }
 
                 /// <summary>
                 /// 获取或设置鉴定明细。
@@ -70,21 +70,21 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("inspection_cost")]
                 [System.Text.Json.Serialization.JsonPropertyName("inspection_cost")]
-                public int InspectionCost { get; set; } 
+                public int InspectionCost { get; set; }
 
                 /// <summary>
                 /// 获取或设置物流费用（单位：分）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logistics_cost")]
                 [System.Text.Json.Serialization.JsonPropertyName("logistics_cost")]
-                public int LogisticsCost { get; set; } 
+                public int LogisticsCost { get; set; }
 
                 /// <summary>
                 /// 获取或设置鉴定结果时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("inspection_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("inspection_time")]
-                public long InspectionTimestamp { get; set; } 
+                public long InspectionTimestamp { get; set; }
             }
         }
     }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
@@ -13,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("advertiser_id")]
         [System.Text.Json.Serialization.JsonPropertyName("advertiser_id")]
-        public long AdvertiserId { get; set; } 
+        public long AdvertiserId { get; set; }
 
         /// <summary>
         /// 获取或设置待推送的广告主 ID 列表。

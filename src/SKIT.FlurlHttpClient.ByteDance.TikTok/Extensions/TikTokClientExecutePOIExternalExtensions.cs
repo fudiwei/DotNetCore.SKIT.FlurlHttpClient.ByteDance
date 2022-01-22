@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIExternalHotelOrderCommitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/hotel/order/status 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848806510630307854 </para>
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIExternalHotelOrderStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/hotel/order/cancel 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848806501990041614 </para>
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/presale_groupon/order/commit 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6875919211626072068 </para>
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponCommitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/presale_groupon/order/cancel 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6875919211626022916 </para>

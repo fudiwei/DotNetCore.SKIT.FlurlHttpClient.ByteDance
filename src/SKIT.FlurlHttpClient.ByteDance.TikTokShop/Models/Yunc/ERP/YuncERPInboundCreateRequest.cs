@@ -116,7 +116,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("extend")]
                 [System.Text.Json.Serialization.JsonPropertyName("extend")]
-                public string? Extra { get; set; } 
+                public string? Extra { get; set; }
             }
         }
 
@@ -202,20 +202,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("delivery_extend")]
         [System.Text.Json.Serialization.JsonPropertyName("delivery_extend")]
-        public string? DeliveryExtra { get; set; } 
+        public string? DeliveryExtra { get; set; }
 
         /// <summary>
         /// 获取或设置扩展字段。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("extend")]
         [System.Text.Json.Serialization.JsonPropertyName("extend")]
-        public string? Extra { get; set; } 
+        public string? Extra { get; set; }
 
         /// <summary>
         /// 获取或设置订单列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_details")]
         [System.Text.Json.Serialization.JsonPropertyName("order_details")]
-        public IList<Types.OrderLine>? OrderLineList { get; set; }  
+        public IList<Types.OrderLine>? OrderLineList { get; set; }
     }
 }

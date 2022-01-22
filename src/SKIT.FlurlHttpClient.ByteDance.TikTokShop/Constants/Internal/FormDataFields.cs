@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Constants
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Constants
 {
     internal static class FormDataFields
     {

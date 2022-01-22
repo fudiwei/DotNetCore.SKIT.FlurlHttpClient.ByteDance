@@ -61,7 +61,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order")]
         [System.Text.Json.Serialization.JsonPropertyName("order")]
-        public string? SortBy { get; set; } 
+        public string? SortBy { get; set; }
 
         /// <summary>
         /// 获取或设置排序字段。

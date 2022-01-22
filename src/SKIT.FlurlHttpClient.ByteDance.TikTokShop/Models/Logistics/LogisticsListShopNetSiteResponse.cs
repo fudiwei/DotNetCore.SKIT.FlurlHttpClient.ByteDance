@@ -119,7 +119,7 @@
                         public Types.Address[]? SenderAddressLiser { get; set; }
                     }
                 }
-                
+
                 /// <summary>
                 /// 获取或设置结果信息。
                 /// </summary>
@@ -133,7 +133,7 @@
                 [Newtonsoft.Json.JsonProperty("company_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("company_type")]
                 public int CompanyType { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置快递公司编码。
                 /// </summary>

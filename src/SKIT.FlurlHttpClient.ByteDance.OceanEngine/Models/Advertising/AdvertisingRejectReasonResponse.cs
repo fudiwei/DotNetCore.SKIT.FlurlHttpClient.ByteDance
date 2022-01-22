@@ -55,7 +55,7 @@
                                 [System.Text.Json.Serialization.JsonPropertyName("material_reject")]
                                 public Types.MaterialRejection[]? MaterialRejectionList { get; set; }
                             }
-                            
+
                             public class MaterialRejection
                             {
                                 /// <summary>
@@ -104,7 +104,7 @@
                                 public string Reason { get; set; } = default!;
                             }
                         }
-                        
+
                         /// <summary>
                         /// 获取或设置计划维度审核建议。
                         /// </summary>

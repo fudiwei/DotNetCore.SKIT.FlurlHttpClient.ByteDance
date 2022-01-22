@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
     /// <para>表示 [POST] /2/file/image/ad 接口的请求。</para>
@@ -13,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public long AdvertiserId { get; set; } 
+        public long AdvertiserId { get; set; }
 
         /// <summary>
         /// 获取或设置上传类型。

@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardHotVideoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
-        
+
         #region Sport
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/overall 接口。</para>
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardSportSoccerResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/comprehensive 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908910551598893060 </para>
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardSportComprehensiveResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/fitness 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908972452743825419 </para>
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardSportFitnessResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/outdoors 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908957982965499908 </para>
@@ -151,7 +151,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardSportOutdoorsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/table_tennis 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908910551598942212 </para>
@@ -171,7 +171,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardSportTableTennisResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/culture 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908972452743874571 </para>
@@ -213,7 +213,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardAmusementOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/amusement/new 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908910551598991364 </para>
@@ -255,7 +255,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardGameConsoleResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/game/inf 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908910551599040516 </para>
@@ -297,7 +297,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardFoodOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/food/new 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908972452978690059 </para>
@@ -317,7 +317,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardFoodNewResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/food/tutorial 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908957983204558860 </para>
@@ -337,7 +337,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardFoodTutorialResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/food/shop 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908932866709719052 </para>
@@ -380,7 +380,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardDramaOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
-        
+
         #region Car
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/overall 接口。</para>
@@ -401,7 +401,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCarOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/comment 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908932866709768204 </para>
@@ -421,7 +421,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCarCommentResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/play 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908962762139977731 </para>
@@ -441,7 +441,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCarPlayResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/use 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908962762140026883 </para>
@@ -461,7 +461,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCarUseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/driver 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908932866709817356 </para>
@@ -503,7 +503,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardTravelOverallResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/travel/new 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908972511904466947 </para>
@@ -585,7 +585,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCospaOutshotResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/cospa/painting 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908932866969782276 </para>
@@ -605,7 +605,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCospaPaintingResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/cospa/voice_control 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908972512596494348 </para>
@@ -625,7 +625,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardCospaVoiceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/cospa/brain_cavity 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6908962762370631691 </para>

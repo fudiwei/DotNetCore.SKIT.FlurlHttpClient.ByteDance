@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Exceptions
         }
 
         /// <inheritdoc/>
-        internal TikTokShopRequestMarshalException(string message) 
+        internal TikTokShopRequestMarshalException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        internal TikTokShopRequestMarshalException(string message, Exception innerException) 
+        internal TikTokShopRequestMarshalException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

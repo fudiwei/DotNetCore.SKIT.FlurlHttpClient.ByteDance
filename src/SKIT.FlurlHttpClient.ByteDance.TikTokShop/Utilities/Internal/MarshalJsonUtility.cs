@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Utilities
 {
-    internal class MarshalJsonUtility
+    internal static class MarshalJsonUtility
     {
-        class MarshalJObjectConverter : JsonConverter
+        private class MarshalJObjectConverter : JsonConverter
         {
             public override bool CanConvert(Type objectType)
             {
@@ -38,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Utilities
             }
         }
 
-        class MarshalJValueConverter : JsonConverter
+        private class MarshalJValueConverter : JsonConverter
         {
             public override bool CanConvert(Type objectType)
             {

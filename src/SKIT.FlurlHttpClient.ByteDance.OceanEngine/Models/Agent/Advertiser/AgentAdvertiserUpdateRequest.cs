@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
     /// <para>表示 [POST] /2/agent/advertiser/update 接口的请求。</para>
@@ -21,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
-        
+
         /// <summary>
         /// 获取或设置联系人。
         /// </summary>

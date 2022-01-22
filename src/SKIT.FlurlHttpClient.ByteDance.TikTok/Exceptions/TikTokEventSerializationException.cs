@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Exceptions
         }
 
         /// <inheritdoc/>
-        internal TikTokEventSerializationException(string message) 
+        internal TikTokEventSerializationException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        internal TikTokEventSerializationException(string message, Exception innerException) 
+        internal TikTokEventSerializationException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

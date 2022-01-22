@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -153,7 +152,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("is_allow_appeal")]
                         [System.Text.Json.Serialization.JsonPropertyName("is_allow_appeal")]
-                        public bool IsAllowAppeal { get; set; } 
+                        public bool IsAllowAppeal { get; set; }
 
                         /// <summary>
                         /// 获取或设置理赔或申述失败原因。

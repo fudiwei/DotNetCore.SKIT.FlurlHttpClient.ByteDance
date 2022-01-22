@@ -19,7 +19,7 @@
                         [Newtonsoft.Json.JsonProperty("sec_item_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sec_item_id")]
                         public string? SecurityItemId { get; set; }
-                        
+
                         /// <summary>
                         /// 获取或设置作者 OpenId。
                         /// </summary>

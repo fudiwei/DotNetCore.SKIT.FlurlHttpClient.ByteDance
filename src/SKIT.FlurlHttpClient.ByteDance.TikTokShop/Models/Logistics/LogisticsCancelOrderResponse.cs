@@ -21,7 +21,7 @@
                         public bool? IsSucceeded { get; set; }
                     }
                 }
-                
+
                 /// <summary>
                 /// 获取或设置结果信息。
                 /// </summary>

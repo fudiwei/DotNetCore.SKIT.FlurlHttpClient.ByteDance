@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                     {
                     }
 
-                    public class SupplierExternalInfo  : POICouponSyncRequest.Types.Availability.Types.SupplierExternalInfo
+                    public class SupplierExternalInfo : POICouponSyncRequest.Types.Availability.Types.SupplierExternalInfo
                     {
                     }
                 }

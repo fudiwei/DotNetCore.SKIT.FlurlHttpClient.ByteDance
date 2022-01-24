@@ -25,14 +25,14 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                        public string AvatarUrl { get; set; } = default!; 
+                        public string AvatarUrl { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置排名。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank")]
-                        public int Rank { get; set; } 
+                        public int Rank { get; set; }
 
                         /// <summary>
                         /// 获取或设置影响力指数。

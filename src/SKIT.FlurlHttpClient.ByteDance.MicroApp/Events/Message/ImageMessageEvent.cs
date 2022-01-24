@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
 {
     /// <summary>
     /// <para>表示 image 事件的数据。</para>

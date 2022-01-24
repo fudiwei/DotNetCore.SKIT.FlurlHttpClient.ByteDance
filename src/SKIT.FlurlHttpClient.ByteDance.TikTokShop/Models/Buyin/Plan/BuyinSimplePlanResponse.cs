@@ -48,7 +48,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("total")]
                 [System.Text.Json.Serialization.JsonPropertyName("total")]
-                public int TotalCount { get; set; } 
+                public int TotalCount { get; set; }
 
                 /// <summary>
                 /// 获取或设置操作结果列表。

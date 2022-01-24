@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTok
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
     /// <summary>
     /// 抖音开放平台 API 接口域名。

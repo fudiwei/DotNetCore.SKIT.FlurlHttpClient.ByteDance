@@ -18,35 +18,35 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("total_comment")]
                         [System.Text.Json.Serialization.JsonPropertyName("total_comment")]
-                        public int TotalCommentCount { get; set; } 
+                        public int TotalCommentCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置最近 30 天点赞数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("total_like")]
                         [System.Text.Json.Serialization.JsonPropertyName("total_like")]
-                        public int TotalLikeCount { get; set; } 
+                        public int TotalLikeCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置最近 30 天播放数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("total_play")]
                         [System.Text.Json.Serialization.JsonPropertyName("total_play")]
-                        public int TotalPlayCount { get; set; } 
+                        public int TotalPlayCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置最近 30 天分享数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("total_share")]
                         [System.Text.Json.Serialization.JsonPropertyName("total_share")]
-                        public int TotalShareCount { get; set; } 
+                        public int TotalShareCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置最近 30 天平均播放时长（单位：秒）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avg_play_duration")]
                         [System.Text.Json.Serialization.JsonPropertyName("avg_play_duration")]
-                        public double AveragePlayDuration { get; set; } 
+                        public double AveragePlayDuration { get; set; }
                     }
                 }
 

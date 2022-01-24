@@ -13,13 +13,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
 
         /// <inheritdoc/>
-        public TikTokException(string message) 
+        public TikTokException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        public TikTokException(string message, Exception innerException) 
+        public TikTokException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

@@ -99,7 +99,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("post_receiver")]
         [System.Text.Json.Serialization.JsonPropertyName("post_receiver")]
-        public string? PostReceiver { get; set; } 
+        public string? PostReceiver { get; set; }
 
         /// <summary>
         /// 获取或设置收货人电话号码。

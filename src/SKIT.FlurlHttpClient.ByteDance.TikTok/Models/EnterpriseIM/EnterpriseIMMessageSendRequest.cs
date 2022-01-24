@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [POST] /enterprise/im/message/send 接口的请求。</para>

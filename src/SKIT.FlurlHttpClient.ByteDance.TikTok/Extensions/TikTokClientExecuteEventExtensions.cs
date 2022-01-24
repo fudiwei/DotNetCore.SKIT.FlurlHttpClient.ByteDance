@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.EventStatusListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /event/status/update 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848806484822771725 </para>

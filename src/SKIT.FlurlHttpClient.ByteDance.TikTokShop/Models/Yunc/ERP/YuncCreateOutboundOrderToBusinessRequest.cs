@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 [Newtonsoft.Json.JsonProperty("province")]
                 [System.Text.Json.Serialization.JsonPropertyName("province")]
                 public string? ProvinceName { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置城市编码。
                 /// </summary>
@@ -323,14 +323,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sender_info")]
         [System.Text.Json.Serialization.JsonPropertyName("sender_info")]
-        public Types.Sender? Sender { get; set; } 
+        public Types.Sender? Sender { get; set; }
 
         /// <summary>
         /// 获取或设置收货人信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("receiver_info")]
         [System.Text.Json.Serialization.JsonPropertyName("receiver_info")]
-        public Types.Receiver? Receiver { get; set; }  
+        public Types.Receiver? Receiver { get; set; }
 
         /// <summary>
         /// 获取或设置备注。
@@ -358,13 +358,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("extend")]
         [System.Text.Json.Serialization.JsonPropertyName("extend")]
-        public string? Extra { get; set; } 
+        public string? Extra { get; set; }
 
         /// <summary>
         /// 获取或设置订单列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_details")]
         [System.Text.Json.Serialization.JsonPropertyName("order_details")]
-        public IList<Types.OrderLine>? OrderLineList { get; set; }  
+        public IList<Types.OrderLine>? OrderLineList { get; set; }
     }
 }

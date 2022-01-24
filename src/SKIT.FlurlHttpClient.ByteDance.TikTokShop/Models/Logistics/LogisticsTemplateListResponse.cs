@@ -39,28 +39,28 @@
                                 [Newtonsoft.Json.JsonProperty("template_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("template_code")]
                                 public string TemplateCode { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置模板名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("template_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("template_name")]
                                 public string TemplateName { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置模板 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("template_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("template_url")]
                                 public string TemplateUrl { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置预览 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("perview_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("perview_url")]
                                 public string PreviewUrl { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置版本。
                                 /// </summary>
@@ -77,7 +77,7 @@
                         [Newtonsoft.Json.JsonProperty("logistics_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
                         public string LogisticsCompanyCode { get; set; } = default!;
-                        
+
                         /// <summary>
                         /// 获取或设置模板列表。
                         /// </summary>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     /// <summary>
     /// 表示字节小程序 API 消息推送事件的基类。

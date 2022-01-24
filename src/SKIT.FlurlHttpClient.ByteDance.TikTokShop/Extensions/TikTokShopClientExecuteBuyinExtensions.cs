@@ -113,7 +113,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             return await client.SendRequestWithJsonAsync<Models.BuyinOrientPlanListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /buyin/createOrUpdateOrienPlan 接口。</para>
         /// <para>REF: https://op.jinritemai.com/docs/api-docs/61/708 </para>
@@ -153,7 +153,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             return await client.SendRequestWithJsonAsync<Models.BuyinOrientPlanControlResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /buyin/orienPlanAuthors 接口。</para>
         /// <para>REF: https://op.jinritemai.com/docs/api-docs/61/709 </para>

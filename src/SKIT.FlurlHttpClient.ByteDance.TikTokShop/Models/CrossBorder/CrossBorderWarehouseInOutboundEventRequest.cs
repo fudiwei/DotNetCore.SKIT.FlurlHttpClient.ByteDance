@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
                 public DateTimeOffset ExpiryTime { get; set; }
             }
-            
+
 
             public class OutboundCargo
             {

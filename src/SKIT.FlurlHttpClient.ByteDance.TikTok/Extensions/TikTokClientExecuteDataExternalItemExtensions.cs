@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalItemBaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/like 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798407369230339 </para>
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalItemLikeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/comment 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798407369197571 </para>
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalItemCommentResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/play 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798385894426636 </para>
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalItemPlayResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/share 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6848798385894459404 </para>

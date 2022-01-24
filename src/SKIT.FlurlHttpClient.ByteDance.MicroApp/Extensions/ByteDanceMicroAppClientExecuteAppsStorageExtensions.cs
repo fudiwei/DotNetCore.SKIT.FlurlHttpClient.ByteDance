@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -72,7 +69,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsRemoveUserStorageResponse> ExecuteAppsRemoveUserStorageAsync(this ByteDanceMicroAppClient client, Models.AppsRemoveUserStorageRequest request, CancellationToken cancellationToken = default)        {
+        public static async Task<Models.AppsRemoveUserStorageResponse> ExecuteAppsRemoveUserStorageAsync(this ByteDanceMicroAppClient client, Models.AppsRemoveUserStorageRequest request, CancellationToken cancellationToken = default)
+        {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 

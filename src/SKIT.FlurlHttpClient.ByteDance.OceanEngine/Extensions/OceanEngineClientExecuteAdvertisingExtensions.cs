@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/create 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701607421369355 </para>
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 </para>
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/status 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 </para>
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/budget 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537225231 </para>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateBudgetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/bid 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 </para>
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateBidResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/ad/reject_reason 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 </para>
@@ -149,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertisingRejectReasonResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/ad/cost_protect_status/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1697193170177032 </para>

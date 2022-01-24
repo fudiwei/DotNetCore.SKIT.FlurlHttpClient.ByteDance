@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
+﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
     /// 一个用于构造 <see cref="OceanEngineClient"/> 时使用的配置项。

@@ -13,13 +13,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <inheritdoc/>
-        public ByteDanceMicroAppException(string message) 
+        public ByteDanceMicroAppException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        public ByteDanceMicroAppException(string message, Exception innerException) 
+        public ByteDanceMicroAppException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
@@ -42,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 public Types.Result[] ResultList { get; set; } = default!;
             }
         }
-    
+
         internal static class Converters
         {
             internal class ResponsePropertyItemClickDistributionMapNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IDictionary<string, int>?>

@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 [System.Text.Json.Serialization.JsonPropertyName("prop_val")]
                 public string? Valud { get; set; }
             }
-        
+
             public class SKUProperty : ExtendedProperty
             {
             }

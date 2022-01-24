@@ -30,14 +30,14 @@
                                 [Newtonsoft.Json.JsonProperty("custom_template_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("custom_template_code")]
                                 public string CustomTemplateCode { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置自定义模板名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("custom_template_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("custom_template_name")]
                                 public string CustomTemplateName { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置上级模板 ID。
                                 /// </summary>
@@ -51,14 +51,14 @@
                                 [Newtonsoft.Json.JsonProperty("parent_template_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("parent_template_code")]
                                 public string? ParentTemplateCode { get; set; }
-                                
+
                                 /// <summary>
                                 /// 获取或设置自定义模板 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("custom_template_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("custom_template_url")]
                                 public string CustomTemplateUrl { get; set; } = default!;
-                                
+
                                 /// <summary>
                                 /// 获取或设置自定义模板打印项字段列表。
                                 /// </summary>
@@ -74,7 +74,7 @@
                         [Newtonsoft.Json.JsonProperty("logistics_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("logistics_code")]
                         public string LogisticsCompanyCode { get; set; } = default!;
-                        
+
                         /// <summary>
                         /// 获取或设置模板列表。
                         /// </summary>

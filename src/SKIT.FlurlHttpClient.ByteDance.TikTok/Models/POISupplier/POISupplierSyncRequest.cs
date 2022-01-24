@@ -341,7 +341,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                         public IList<Types.PreferentialPolicyExtra>? PreferentialPolicyExtraList { get; set; }
                     }
                 }
-            
+
                 /// <summary>
                 /// 获取或设置酒店服务列表。
                 /// </summary>
@@ -349,7 +349,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 [System.Text.Json.Serialization.JsonIgnore]
                 public IList<Types.HotelService>? HotelServiceList
                 {
-                    get 
+                    get
                     {
                         if (this.TryGetValue(1101, out object? obj) && obj is IList<Types.HotelService> value)
                         {
@@ -358,9 +358,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                         return null;
                     }
-                    set 
-                    { 
-                        this[1101] = value!; 
+                    set
+                    {
+                        this[1101] = value!;
                     }
                 }
 
@@ -369,9 +369,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonIgnore]
                 [System.Text.Json.Serialization.JsonIgnore]
-                public IList<Types.HotelFacility>? HotelFacilityList 
+                public IList<Types.HotelFacility>? HotelFacilityList
                 {
-                    get 
+                    get
                     {
                         if (this.TryGetValue(1102, out object? obj) && obj is IList<Types.HotelFacility> value)
                         {
@@ -380,9 +380,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                         return null;
                     }
-                    set 
-                    { 
-                        this[1102] = value!; 
+                    set
+                    {
+                        this[1102] = value!;
                     }
                 }
 
@@ -393,7 +393,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 [System.Text.Json.Serialization.JsonIgnore]
                 public IList<Types.HotelFeature>? HotelFeatureList
                 {
-                    get 
+                    get
                     {
                         if (this.TryGetValue(1103, out object? obj) && obj is IList<Types.HotelFeature> value)
                         {
@@ -402,9 +402,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                         return null;
                     }
-                    set 
-                    { 
-                        this[1103] = value!; 
+                    set
+                    {
+                        this[1103] = value!;
                     }
                 }
 
@@ -413,9 +413,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonIgnore]
                 [System.Text.Json.Serialization.JsonIgnore]
-                public Types.HotelPolicy? HotelPolicy 
+                public Types.HotelPolicy? HotelPolicy
                 {
-                    get 
+                    get
                     {
                         if (this.TryGetValue(1104, out object? obj) && obj is Types.HotelPolicy value)
                         {
@@ -424,9 +424,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                         return null;
                     }
-                    set 
-                    { 
-                        this[1104] = value!; 
+                    set
+                    {
+                        this[1104] = value!;
                     }
                 }
 
@@ -435,9 +435,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonIgnore]
                 [System.Text.Json.Serialization.JsonIgnore]
-                public Types.ScenicInstruction? ScenicInstruction 
+                public Types.ScenicInstruction? ScenicInstruction
                 {
-                    get 
+                    get
                     {
                         if (this.TryGetValue(3101, out object? obj) && obj is Types.ScenicInstruction value)
                         {
@@ -446,9 +446,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                         return null;
                     }
-                    set 
-                    { 
-                        this[3101] = value!; 
+                    set
+                    {
+                        this[3101] = value!;
                     }
                 }
             }

@@ -13,13 +13,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         }
 
         /// <inheritdoc/>
-        public TikTokShopException(string message) 
+        public TikTokShopException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        public TikTokShopException(string message, Exception innerException) 
+        public TikTokShopException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

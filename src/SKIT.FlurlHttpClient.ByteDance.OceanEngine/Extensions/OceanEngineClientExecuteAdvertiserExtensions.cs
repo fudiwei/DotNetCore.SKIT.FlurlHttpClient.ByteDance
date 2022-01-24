@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertiserQualificationSubmitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/advertiser/qualification/select_v2 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710513397775 </para>
@@ -108,7 +108,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertiserQualificationSelectV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/advertiser/qualification/create_v2 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710514343951 </para>
@@ -212,7 +212,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AdvertiserFundDailyStatisticsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/advertiser/fund/transaction/get 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710527205388 </para>

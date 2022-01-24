@@ -41,14 +41,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonProperty("pid")]
         [System.Text.Json.Serialization.JsonPropertyName("pid")]
         public string? InstitutionId { get; set; }
-        
+
         /// <summary>
         /// 获取或设置分销类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("distribution_type")]
         [System.Text.Json.Serialization.JsonPropertyName("distribution_type")]
         public string? DistributionType { get; set; }
-        
+
         /// <summary>
         /// 获取或设置用户的 OpenId。
         /// </summary>

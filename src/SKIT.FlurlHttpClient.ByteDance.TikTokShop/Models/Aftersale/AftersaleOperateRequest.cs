@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 [Newtonsoft.Json.JsonProperty("province_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("province_name")]
                                 public string ProvinceName { get; set; } = string.Empty;
-                                
+
                                 /// <summary>
                                 /// 获取或设置城市 ID。
                                 /// </summary>

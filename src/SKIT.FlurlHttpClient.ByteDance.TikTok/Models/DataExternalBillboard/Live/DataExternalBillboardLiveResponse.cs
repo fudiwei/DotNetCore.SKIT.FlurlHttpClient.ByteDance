@@ -32,14 +32,14 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover")]
-                        public string CoverUrl { get; set; } = default!; 
+                        public string CoverUrl { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置排名。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank")]
-                        public int Rank { get; set; } 
+                        public int Rank { get; set; }
 
                         /// <summary>
                         /// 获取或设置热度指数。

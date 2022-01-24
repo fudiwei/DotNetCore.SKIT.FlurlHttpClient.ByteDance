@@ -38,7 +38,7 @@
                                         public string Name { get; set; } = default!;
                                     }
                                 }
-                                
+
                                 /// <summary>
                                 /// 获取或设置省份信息。
                                 /// </summary>

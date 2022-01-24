@@ -1,6 +1,6 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
-    class TestClients
+    internal class TestClients
     {
         static TestClients()
         {

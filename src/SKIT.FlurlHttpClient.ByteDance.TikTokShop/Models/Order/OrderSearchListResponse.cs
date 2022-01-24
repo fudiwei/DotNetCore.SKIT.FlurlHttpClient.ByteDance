@@ -399,7 +399,7 @@
 
                     public class ShopOrder : OrderBase
                     {
-                        public new static class Types
+                        public static new class Types
                         {
                             public class Logistics
                             {
@@ -769,7 +769,7 @@
 
                     public class SKUOrder : OrderBase
                     {
-                        public new static class Types
+                        public static new class Types
                         {
                             public class SKUSpecification : ShopOrder.Types.Logistics.Types.Product.Types.Specification
                             {
@@ -950,7 +950,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public string SKUCode { get; set; }  = default!;
+                        public string SKUCode { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置物流收货时间戳。

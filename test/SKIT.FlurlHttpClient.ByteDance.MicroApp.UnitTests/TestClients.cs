@@ -1,6 +1,6 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
-    class TestClients
+    internal class TestClients
     {
         static TestClients()
         {

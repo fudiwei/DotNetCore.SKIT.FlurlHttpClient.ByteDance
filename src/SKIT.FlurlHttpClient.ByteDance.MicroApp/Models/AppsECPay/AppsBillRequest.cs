@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-/* @codestyle-disable no-jsonable-property-in-get */
+﻿/* @codestyle-disable no-jsonable-property-in-get */
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>

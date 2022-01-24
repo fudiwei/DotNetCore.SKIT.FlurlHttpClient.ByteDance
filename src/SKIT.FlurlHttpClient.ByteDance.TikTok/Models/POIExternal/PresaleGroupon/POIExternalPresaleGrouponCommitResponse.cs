@@ -15,7 +15,7 @@
                 [Newtonsoft.Json.JsonProperty("order_ext_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_ext_id")]
                 public string OrderExternalId { get; set; } = default!;
-                
+
                 /// <summary>
                 /// 获取或设置预约券券码列表。
                 /// </summary>

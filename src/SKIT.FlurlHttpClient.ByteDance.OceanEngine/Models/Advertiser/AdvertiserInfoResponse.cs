@@ -93,7 +93,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("promotion_area")]
                 [System.Text.Json.Serialization.JsonPropertyName("promotion_area")]
-                public string? PromotionArea { get; set; } 
+                public string? PromotionArea { get; set; }
 
                 /// <summary>
                 /// 获取或设置运营省份。

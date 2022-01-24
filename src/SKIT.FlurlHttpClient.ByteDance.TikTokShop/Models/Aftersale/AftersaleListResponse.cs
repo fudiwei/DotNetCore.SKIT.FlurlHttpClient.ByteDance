@@ -282,7 +282,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("exchange_sku_info")]
                                 public Types.SKUExchange? SKUExchange { get; set; }
                             }
-                        
+
                             public class Order
                             {
                                 public static class Types

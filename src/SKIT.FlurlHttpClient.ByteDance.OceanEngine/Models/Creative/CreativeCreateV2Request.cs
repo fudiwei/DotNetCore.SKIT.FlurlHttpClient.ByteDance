@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
     /// </summary>
     public class CreativeCreateV2Request : OceanEngineRequest
     {
-        public static class Types 
+        public static class Types
         {
             public class Material
             {
@@ -100,12 +100,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [System.Text.Json.Serialization.JsonPropertyName("component_id")]
                 public string ComponentId { get; set; } = string.Empty;
             }
-        
+
             public class Creative
             {
                 public static class Types
                 {
-                    public class TemplateData: Material.Types.TemplateData
+                    public class TemplateData : Material.Types.TemplateData
                     {
                     }
 
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [Newtonsoft.Json.JsonProperty("image_mode")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_mode")]
                 public string ImageMode { get; set; } = string.Empty;
-                
+
                 /// <summary>
                 /// 获取或设置创意标题。
                 /// </summary>
@@ -250,28 +250,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [Newtonsoft.Json.JsonProperty("product_selling_points")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_selling_points")]
                 public IList<string> ProductSellingPointList { get; set; } = new List<string>();
-                
+
                 /// <summary>
                 /// 获取或设置商品描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_description")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_description")]
                 public string ProductDescription { get; set; } = string.Empty;
-                
+
                 /// <summary>
                 /// 获取或设置推广卡片的行动号召。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("call_to_action")]
                 [System.Text.Json.Serialization.JsonPropertyName("call_to_action")]
                 public string CallToAction { get; set; } = string.Empty;
-                
+
                 /// <summary>
                 /// 获取或设置是否使用智能优选。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("enable_personal_action")]
                 [System.Text.Json.Serialization.JsonPropertyName("enable_personal_action")]
                 public bool IsPersonalActionEnabled { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置商品图片 ID。
                 /// </summary>
@@ -279,7 +279,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [System.Text.Json.Serialization.JsonPropertyName("product_image_id")]
                 public string ProductImageId { get; set; } = string.Empty;
             }
-        
+
             public class CommerceCard
             {
                 /// <summary>
@@ -288,14 +288,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [Newtonsoft.Json.JsonProperty("call_to_action")]
                 [System.Text.Json.Serialization.JsonPropertyName("call_to_action")]
                 public string ImageId { get; set; } = string.Empty;
-                
+
                 /// <summary>
                 /// 获取或设置产品名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
                 public string Source { get; set; } = string.Empty;
-                
+
                 /// <summary>
                 /// 获取或设置产品卖点。
                 /// </summary>
@@ -552,7 +552,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("ad_keywords")]
         [System.Text.Json.Serialization.JsonPropertyName("ad_keywords")]
         public IList<string>? AdKeywordList { get; set; }
-        
+
         /// <summary>
         /// 获取或设置展示监测链接。
         /// </summary>

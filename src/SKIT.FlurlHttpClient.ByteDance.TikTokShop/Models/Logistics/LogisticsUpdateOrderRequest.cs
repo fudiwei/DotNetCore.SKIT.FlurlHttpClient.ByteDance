@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
             public class Address : LogisticsNewCreateOrderRequest.Types.Address
             {
             }
-        
+
             public class Sender
             {
                 /// <summary>

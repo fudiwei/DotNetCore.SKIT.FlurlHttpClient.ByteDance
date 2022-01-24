@@ -1,6 +1,6 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests
 {
-    class TestClients
+    internal class TestClients
     {
         static TestClients()
         {

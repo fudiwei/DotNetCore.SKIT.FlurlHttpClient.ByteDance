@@ -25,7 +25,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("author")]
                         [System.Text.Json.Serialization.JsonPropertyName("author")]
-                        public string Author { get; set; } = default!; 
+                        public string Author { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置封面 URL。
@@ -46,28 +46,28 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rank")]
                         [System.Text.Json.Serialization.JsonPropertyName("rank")]
-                        public int Rank { get; set; }  
+                        public int Rank { get; set; }
 
                         /// <summary>
                         /// 获取或设置播放数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("play_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("play_count")]
-                        public int PlayCount { get; set; } 
+                        public int PlayCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置点赞数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("digg_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("digg_count")]
-                        public int DiggCount { get; set; } 
+                        public int DiggCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置评论数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_count")]
-                        public int CommentCount { get; set; } 
+                        public int CommentCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置热词。

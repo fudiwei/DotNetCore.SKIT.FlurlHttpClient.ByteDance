@@ -11,7 +11,7 @@
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string ItemId { get; set; } = string.Empty;
-        
+
         /// <summary>
         /// 获取或设置日期类型。
         /// </summary>

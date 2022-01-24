@@ -13,13 +13,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         }
 
         /// <inheritdoc/>
-        public OceanEngineException(string message) 
+        public OceanEngineException(string message)
             : base(message)
         {
         }
 
         /// <inheritdoc/>
-        public OceanEngineException(string message, Exception innerException) 
+        public OceanEngineException(string message, Exception innerException)
             : base(message, innerException)
         {
         }

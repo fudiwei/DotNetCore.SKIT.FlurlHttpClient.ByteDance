@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIOrderStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/confirm 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc/6875919211793778699 </para>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     public abstract class AppsGameWalletRequestBase : ByteDanceMicroAppRequest
     {

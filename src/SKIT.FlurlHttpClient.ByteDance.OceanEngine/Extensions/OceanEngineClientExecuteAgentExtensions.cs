@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
@@ -28,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AgentInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [GET] /2/agent/child_agent/select 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710517693452 </para>
@@ -69,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-        
+
         /// <summary>
         /// <para>异步调用 [POST] /2/agent/advertiser/create_v2 接口。</para>
         /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710516003852 </para>

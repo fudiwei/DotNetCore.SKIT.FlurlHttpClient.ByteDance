@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [System.Text.Json.Serialization.JsonPropertyName("street_number")]
                 public string? StreetNumber { get; set; }
             }
-        
+
             public class CustomAction
             {
                 /// <summary>
@@ -122,7 +122,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [System.Text.Json.Serialization.JsonPropertyName("days")]
                 public int Days { get; set; }
             }
-        
+
         }
 
         /// <summary>
@@ -455,63 +455,63 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("region_version")]
         [System.Text.Json.Serialization.JsonPropertyName("region_version")]
         public string? RegionVersion { get; set; }
-                                
+
         /// <summary>
         /// 获取或设置定向商圈 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("business_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("business_ids")]
         public IList<int>? BusinessIdList { get; set; }
-                                
+
         /// <summary>
         /// 获取或设置定向位置类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("location_type")]
         [System.Text.Json.Serialization.JsonPropertyName("location_type")]
         public string? LocationType { get; set; }
-        
+
         /// <summary>
         /// 获取或设置定向位置信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("geolocation")]
         [System.Text.Json.Serialization.JsonPropertyName("geolocation")]
         public Types.AudienceLocation? Location { get; set; }
-                                
+
         /// <summary>
         /// 获取或设置定向性别类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("gender")]
         [System.Text.Json.Serialization.JsonPropertyName("gender")]
         public string? GenderType { get; set; }
-        
+
         /// <summary>
         /// 获取或设置定向年龄类型列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("age")]
         [System.Text.Json.Serialization.JsonPropertyName("age")]
         public IList<string>? AgeTypeList { get; set; }
-        
+
         /// <summary>
         /// 获取或设置定向职业类型列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("career")]
         [System.Text.Json.Serialization.JsonPropertyName("career")]
         public IList<string>? CareerTypeList { get; set; }
-                                
+
         /// <summary>
         /// 获取或设置定向定向人群包列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("retargeting_tags_include")]
         [System.Text.Json.Serialization.JsonPropertyName("retargeting_tags_include")]
         public IList<long>? RetargetingTagsIncludedList { get; set; }
-        
+
         /// <summary>
         /// 获取或设置定向排除人群包列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("retargeting_tags_exclude")]
         [System.Text.Json.Serialization.JsonPropertyName("retargeting_tags_exclude")]
         public IList<long>? RetargetingTagsExcludedList { get; set; }
-        
+
         /// <summary>
         /// 获取或设置定向行为兴趣。
         /// </summary>
@@ -609,7 +609,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("filter_own_aweme_fans")]
         [System.Text.Json.Serialization.JsonPropertyName("filter_own_aweme_fans")]
         public int? FilterOwnAwemeFansType { get; set; }
-        
+
         /// <summary>
         /// 获取或设置媒体定向类型。
         /// </summary>
@@ -693,7 +693,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("converted_time_duration")]
         [System.Text.Json.Serialization.JsonPropertyName("converted_time_duration")]
         public string? ConvertedTimeDurationTypeList { get; set; }
-        
+
         /// <summary>
         /// 获取或设置新用户使用头条的时间类型列表。
         /// </summary>
@@ -908,7 +908,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("roi_goal")]
         [System.Text.Json.Serialization.JsonPropertyName("roi_goal")]
         public double? DeepROIGoal { get; set; }
-        
+
         /// <summary>
         /// 获取或设置展示监测链接列表。
         /// </summary>

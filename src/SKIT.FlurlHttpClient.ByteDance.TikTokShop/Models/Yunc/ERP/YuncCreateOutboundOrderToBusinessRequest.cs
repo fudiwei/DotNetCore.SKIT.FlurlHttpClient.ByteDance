@@ -286,7 +286,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("is_insure")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
-        public int? IsInsured { get; set; }
+        public bool? IsInsured { get; set; }
 
         /// <summary>
         /// 获取或设置保价金额（单位：分）。
@@ -316,7 +316,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("allow_merge")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
-        public int? AllowMerge { get; set; }
+        public bool? AllowMerge { get; set; }
 
         /// <summary>
         /// 获取或设置发货人信息。

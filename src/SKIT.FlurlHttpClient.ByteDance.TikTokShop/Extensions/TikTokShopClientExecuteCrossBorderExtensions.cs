@@ -137,7 +137,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.CrossBorderOrderListResponse> ExecuteCrossBorderOrderListAsync(this TikTokShopClient client, Models.CrossBorderQueryBalanceRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.CrossBorderOrderListResponse> ExecuteCrossBorderOrderListAsync(this TikTokShopClient client, Models.CrossBorderOrderListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));

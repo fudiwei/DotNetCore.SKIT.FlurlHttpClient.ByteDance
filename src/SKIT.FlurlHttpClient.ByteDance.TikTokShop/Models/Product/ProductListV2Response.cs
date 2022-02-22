@@ -206,15 +206,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 /// <summary>
                 /// 获取或设置翻页页数。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("total")]
-                [System.Text.Json.Serialization.JsonPropertyName("total")]
+                [Newtonsoft.Json.JsonProperty("page")]
+                [System.Text.Json.Serialization.JsonPropertyName("page")]
                 public int PageNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置翻页每页数量。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("total")]
-                [System.Text.Json.Serialization.JsonPropertyName("total")]
+                [Newtonsoft.Json.JsonProperty("size")]
+                [System.Text.Json.Serialization.JsonPropertyName("size")]
                 public int PageSize { get; set; }
             }
         }

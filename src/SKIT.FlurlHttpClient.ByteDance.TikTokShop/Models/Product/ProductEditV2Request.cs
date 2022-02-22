@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 {
@@ -25,27 +26,117 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonQulificationListConverter : ProductAddV2Request.Converters.NewtonsoftJsonQulificationListConverter
+            internal class NewtonsoftJsonQulificationListConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.Qualification>?>
             {
             }
 
-            internal class SystemTextJsonQulificationListConverter : ProductAddV2Request.Converters.SystemTextJsonQulificationListConverter
+            internal class SystemTextJsonQulificationListConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.Qualification>?>
             {
             }
 
-            internal class NewtonsoftJsonSpecificationListConverter : ProductAddV2Request.Converters.NewtonsoftJsonSpecificationListConverter
+            internal class NewtonsoftJsonSpecificationListConverter : Newtonsoft.Json.JsonConverter<IList<Types.Specification>?>
+            {
+                private const char SEPARATOR = '^';
+                private const char SEPARATOR_NAME = '|';
+                private const char SEPARATOR_VALUE = ',';
+
+                public override bool CanRead
+                {
+                    get { return true; }
+                }
+
+                public override bool CanWrite
+                {
+                    get { return true; }
+                }
+
+                public override IList<Types.Specification>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<Types.Specification>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
+                {
+                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
+                    {
+                        return existingValue;
+                    }
+                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
+                    {
+                        string? value = serializer.Deserialize<string>(reader);
+                        if (value == null)
+                            return existingValue;
+
+                        return value
+                            .Split(SEPARATOR)
+                            .Select(e =>
+                            {
+                                string[] arr = e.Split(SEPARATOR_NAME);
+                                return new Types.Specification()
+                                {
+                                    Name = arr[0],
+                                    Values = arr.Length >= 2 ? arr[1].Split(SEPARATOR_VALUE).ToList() : new List<string>()
+                                };
+                            })
+                            .ToList();
+                    }
+
+                    throw new Newtonsoft.Json.JsonReaderException();
+                }
+
+                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<Types.Specification>? value, Newtonsoft.Json.JsonSerializer serializer)
+                {
+                    if (value != null)
+                        writer.WriteValue(string.Join(SEPARATOR.ToString(), value.Select(e => $"{e.Name}{SEPARATOR_NAME}{string.Join(SEPARATOR_VALUE.ToString(), e.Values)}")));
+                    else
+                        writer.WriteNull();
+                }
+            }
+
+            internal class SystemTextJsonSpecificationListConverter : System.Text.Json.Serialization.JsonConverter<IList<Types.Specification>?>
+            {
+                private const char SEPARATOR = '^';
+                private const char SEPARATOR_NAME = '|';
+                private const char SEPARATOR_VALUE = ',';
+
+                public override IList<Types.Specification>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
+                {
+                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
+                    {
+                        return null;
+                    }
+                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
+                    {
+                        string? value = reader.GetString();
+                        if (value == null)
+                            return null;
+
+                        return value
+                            .Split(SEPARATOR)
+                            .Select(e =>
+                            {
+                                string[] arr = e.Split(SEPARATOR_NAME);
+                                return new Types.Specification()
+                                {
+                                    Name = arr[0],
+                                    Values = arr.Length >= 2 ? arr[1].Split(SEPARATOR_VALUE).ToList() : new List<string>()
+                                };
+                            })
+                            .ToList();
+                    }
+
+                    throw new System.Text.Json.JsonException();
+                }
+
+                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<Types.Specification>? value, System.Text.Json.JsonSerializerOptions options)
+                {
+                    if (value != null)
+                        writer.WriteStringValue(string.Join(SEPARATOR.ToString(), value.Select(e => $"{e.Name}{SEPARATOR_NAME}{string.Join(SEPARATOR_VALUE.ToString(), e.Values)}")));
+                    else
+                        writer.WriteNullValue();
+                }
+            }
+
+            internal class NewtonsoftJsonSpecificationPriceListConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SpecificationPrice>?>
             {
             }
 
-            internal class SystemTextJsonSpecificationListConverter : ProductAddV2Request.Converters.SystemTextJsonSpecificationListConverter
-            {
-            }
-
-            internal class NewtonsoftJsonSpecificationPriceListConverter : ProductAddV2Request.Converters.NewtonsoftJsonSpecificationPriceListConverter
-            {
-            }
-
-            internal class SystemTextJsonSpecificationPriceListConverter : ProductAddV2Request.Converters.SystemTextJsonSpecificationPriceListConverter
+            internal class SystemTextJsonSpecificationPriceListConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SpecificationPrice>?>
             {
             }
         }

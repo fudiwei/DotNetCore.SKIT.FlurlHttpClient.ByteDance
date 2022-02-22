@@ -385,72 +385,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
                 internal static class Converters
                 {
-                    internal class NewtonsoftJsonAftersaleServiceConverter : Newtonsoft.Json.JsonConverter<Types.AftersaleService?>
+                    internal class NewtonsoftJsonAftersaleServiceConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.AftersaleService?>
                     {
-                        public override bool CanRead
-                        {
-                            get { return true; }
-                        }
-
-                        public override bool CanWrite
-                        {
-                            get { return true; }
-                        }
-
-                        public override Types.AftersaleService? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, Types.AftersaleService? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                        {
-                            if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                            {
-                                return existingValue;
-                            }
-                            else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                            {
-                                string? value = serializer.Deserialize<string>(reader);
-                                if (value == null)
-                                    return existingValue;
-
-                                return Newtonsoft.Json.JsonConvert.DeserializeObject<Types.AftersaleService>(value);
-                            }
-
-                            throw new Newtonsoft.Json.JsonReaderException();
-                        }
-
-                        public override void WriteJson(Newtonsoft.Json.JsonWriter writer, Types.AftersaleService? value, Newtonsoft.Json.JsonSerializer serializer)
-                        {
-                            if (value != null)
-                                writer.WriteValue(Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None));
-                            else
-                                writer.WriteNull();
-                        }
                     }
 
-                    internal class SystemTextJsonAftersaleServiceConverter : System.Text.Json.Serialization.JsonConverter<Types.AftersaleService?>
+                    internal class SystemTextJsonAftersaleServiceConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.AftersaleService?>
                     {
-                        public override Types.AftersaleService? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                        {
-                            if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                            {
-                                return null;
-                            }
-                            else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                            {
-                                string? value = reader.GetString();
-                                if (value == null)
-                                    return null;
-
-                                return System.Text.Json.JsonSerializer.Deserialize<Types.AftersaleService>(value, options);
-                            }
-
-                            throw new System.Text.Json.JsonException();
-                        }
-
-                        public override void Write(System.Text.Json.Utf8JsonWriter writer, Types.AftersaleService? value, System.Text.Json.JsonSerializerOptions options)
-                        {
-                            if (value != null)
-                                writer.WriteStringValue(System.Text.Json.JsonSerializer.Serialize(value, options));
-                            else
-                                writer.WriteNullValue();
-                        }
                     }
                 }
 

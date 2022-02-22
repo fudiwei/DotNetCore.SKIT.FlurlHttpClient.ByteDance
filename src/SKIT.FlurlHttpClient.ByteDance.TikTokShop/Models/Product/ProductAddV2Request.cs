@@ -150,72 +150,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
 
         internal static class Converters
         {
-            internal class NewtonsoftJsonQulificationListConverter : Newtonsoft.Json.JsonConverter<IList<Types.Qualification>?>
+            internal class NewtonsoftJsonQulificationListConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.Qualification>?>
             {
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<Types.Qualification>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<Types.Qualification>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<List<Types.Qualification>>(value);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<Types.Qualification>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None));
-                    else
-                        writer.WriteNull();
-                }
             }
 
-            internal class SystemTextJsonQulificationListConverter : System.Text.Json.Serialization.JsonConverter<IList<Types.Qualification>?>
+            internal class SystemTextJsonQulificationListConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.Qualification>?>
             {
-                public override IList<Types.Qualification>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return System.Text.Json.JsonSerializer.Deserialize<List<Types.Qualification>>(value, options);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<Types.Qualification>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(System.Text.Json.JsonSerializer.Serialize(value, options));
-                    else
-                        writer.WriteNullValue();
-                }
             }
 
             internal class NewtonsoftJsonSpecificationListConverter : Newtonsoft.Json.JsonConverter<IList<Types.Specification>?>
@@ -316,72 +256,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                 }
             }
 
-            internal class NewtonsoftJsonSpecificationPriceListConverter : Newtonsoft.Json.JsonConverter<IList<Types.SpecificationPrice>?>
+            internal class NewtonsoftJsonSpecificationPriceListConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SpecificationPrice>?>
             {
-                public override bool CanRead
-                {
-                    get { return true; }
-                }
-
-                public override bool CanWrite
-                {
-                    get { return true; }
-                }
-
-                public override IList<Types.SpecificationPrice>? ReadJson(Newtonsoft.Json.JsonReader reader, Type objectType, IList<Types.SpecificationPrice>? existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (reader.TokenType == Newtonsoft.Json.JsonToken.Null)
-                    {
-                        return existingValue;
-                    }
-                    else if (reader.TokenType == Newtonsoft.Json.JsonToken.String)
-                    {
-                        string? value = serializer.Deserialize<string>(reader);
-                        if (value == null)
-                            return existingValue;
-
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<List<Types.SpecificationPrice>>(value);
-                    }
-
-                    throw new Newtonsoft.Json.JsonReaderException();
-                }
-
-                public override void WriteJson(Newtonsoft.Json.JsonWriter writer, IList<Types.SpecificationPrice>? value, Newtonsoft.Json.JsonSerializer serializer)
-                {
-                    if (value != null)
-                        writer.WriteValue(Newtonsoft.Json.JsonConvert.SerializeObject(value, Newtonsoft.Json.Formatting.None));
-                    else
-                        writer.WriteNull();
-                }
             }
 
-            internal class SystemTextJsonSpecificationPriceListConverter : System.Text.Json.Serialization.JsonConverter<IList<Types.SpecificationPrice>?>
+            internal class SystemTextJsonSpecificationPriceListConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IList<Types.SpecificationPrice>?>
             {
-                public override IList<Types.SpecificationPrice>? Read(ref System.Text.Json.Utf8JsonReader reader, Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (reader.TokenType == System.Text.Json.JsonTokenType.Null)
-                    {
-                        return null;
-                    }
-                    else if (reader.TokenType == System.Text.Json.JsonTokenType.String)
-                    {
-                        string? value = reader.GetString();
-                        if (value == null)
-                            return null;
-
-                        return System.Text.Json.JsonSerializer.Deserialize<List<Types.SpecificationPrice>>(value, options);
-                    }
-
-                    throw new System.Text.Json.JsonException();
-                }
-
-                public override void Write(System.Text.Json.Utf8JsonWriter writer, IList<Types.SpecificationPrice>? value, System.Text.Json.JsonSerializerOptions options)
-                {
-                    if (value != null)
-                        writer.WriteStringValue(System.Text.Json.JsonSerializer.Serialize(value, options));
-                    else
-                        writer.WriteNullValue();
-                }
             }
         }
 

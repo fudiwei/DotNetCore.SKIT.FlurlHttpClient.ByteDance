@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
         /// <summary>
         /// <para>异步调用 [POST] /logistics/updateOrder 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/784 </para>
+        /// <para>REF: https://op.jinritemai.com/docs/api-docs/16/494 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

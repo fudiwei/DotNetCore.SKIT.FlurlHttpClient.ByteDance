@@ -1,7 +1,7 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /2/file/Video/ad 接口的请求。</para>
+    /// <para>表示 [POST] /2/file/video/ad 接口的请求。</para>
     /// </summary>
     public class FileVideoAdvertisingRequest : OceanEngineRequest
     {

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /oauth2/access_token 接口的请求。</para>
     /// </summary>
-    public class OAuth2RefreshTokenRequest : OceanEngineRequest
+    public class OAuth2AccessTokenRequest : OceanEngineRequest
     {
         /// <summary>
         /// 获取或设置应用 ID。如果不指定将使用构造 <see cref="OceanEngineClient"/> 时的 <see cref="OceanEngineClientOptions.AppId"/> 参数。
@@ -24,13 +24,13 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("grant_type")]
         [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
-        public string GrantType { get; set; } = "refresh_token";
+        public string GrantType { get; set; } = "auth_code";
 
         /// <summary>
-        /// 获取或设置接口刷新令牌。
+        /// 获取或设置授权码。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("refresh_token")]
-        [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; } = string.Empty;
+        [Newtonsoft.Json.JsonProperty("auth_code")]
+        [System.Text.Json.Serialization.JsonPropertyName("auth_code")]
+        public string AuthCode { get; set; } = string.Empty;
     }
 }

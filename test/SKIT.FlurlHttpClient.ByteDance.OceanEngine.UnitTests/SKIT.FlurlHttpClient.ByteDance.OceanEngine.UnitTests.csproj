@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>netcoreapp3.1; net6.0</TargetFrameworks>
@@ -22,7 +22,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+		<PackageReference Include="SKIT.FlurlHttpClient.Tools.CodeAnalyzer" Version="0.1.0-alpha.1" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
             <PrivateAssets>all</PrivateAssets>
@@ -32,7 +33,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\src\SKIT.FlurlHttpClient.ByteDance.OceanEngine\SKIT.FlurlHttpClient.ByteDance.OceanEngine.csproj" />
-        <ProjectReference Include="..\SKIT.FlurlHttpClient.ByteDance.TestTools\SKIT.FlurlHttpClient.ByteDance.TestTools.csproj" />
     </ItemGroup>
 
 </Project>

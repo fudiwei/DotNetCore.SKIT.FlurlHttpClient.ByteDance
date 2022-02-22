@@ -22,8 +22,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
                 TikTokClientSecret = config.GetProperty("ClientSecret").GetString()!;
                 TikTokAccessToken = config.GetProperty("AccessToken").GetString()!;
 
-                ProjectSourceDirectory = json.RootElement.GetProperty("ProjectSourceDirectory").GetString()!;
-                ProjectTestDirectory = json.RootElement.GetProperty("ProjectTestDirectory").GetString()!;
+                WorkDirectoryForSdk = json.RootElement.GetProperty("WorkDirectoryForSdk").GetString()!;
+                WorkDirectoryForTest = json.RootElement.GetProperty("WorkDirectoryForTest").GetString()!;
             }
             catch (Exception ex)
             {
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.UnitTests
         public static readonly string TikTokClientSecret;
         public static readonly string TikTokAccessToken;
 
-        public static readonly string ProjectSourceDirectory;
-        public static readonly string ProjectTestDirectory;
+        public static readonly string WorkDirectoryForSdk;
+        public static readonly string WorkDirectoryForTest;
     }
 }

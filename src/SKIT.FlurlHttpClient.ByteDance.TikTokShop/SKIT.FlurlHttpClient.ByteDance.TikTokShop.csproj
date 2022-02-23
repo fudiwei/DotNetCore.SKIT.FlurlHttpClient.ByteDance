@@ -43,7 +43,7 @@
     </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="SKIT.FlurlHttpClient.Common" Version="2.2.0" />
+		<PackageReference Include="SKIT.FlurlHttpClient.Common" Version="2.3.1" />
 	</ItemGroup>
 
 </Project>

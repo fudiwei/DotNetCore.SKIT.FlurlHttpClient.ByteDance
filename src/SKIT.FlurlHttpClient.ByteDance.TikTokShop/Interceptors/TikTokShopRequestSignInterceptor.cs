@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                     var httpContent = formdataContent.SingleOrDefault(e => Constants.FormDataFields.FORMDATA_PARAM_JSON.Equals(e.Headers.ContentDisposition?.Name?.Trim('\"')));
                     if (httpContent != null)
                     {
-                        body = await httpContent.ReadAsStringAsync().ConfigureAwait(false);
+                        body = await httpContent.ReadAsStringAsync();
                     }
                 }
                 else

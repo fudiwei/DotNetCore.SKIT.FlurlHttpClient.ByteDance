@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                         string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
                         var newFormdataContent = new MultipartFormDataContent(boundary);
 
-                        string paramJson = await oldParamHttpContent.ReadAsStringAsync().ConfigureAwait(false);
+                        string paramJson = await oldParamHttpContent.ReadAsStringAsync();
                         paramJson = Utilities.MarshalJsonUtility.Format(paramJson);
 
                         foreach (var item in oldFormdataContent)

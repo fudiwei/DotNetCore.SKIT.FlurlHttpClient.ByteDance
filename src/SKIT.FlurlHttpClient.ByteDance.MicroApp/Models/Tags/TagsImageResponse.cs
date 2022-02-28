@@ -96,13 +96,6 @@
         public override string? ErrorMessage { get; set; }
 
         /// <summary>
-        /// 获取或设置请求 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("log_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        public string LogId { get; set; } = default!;
-
-        /// <summary>
         /// 获取或设置检测结果列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]

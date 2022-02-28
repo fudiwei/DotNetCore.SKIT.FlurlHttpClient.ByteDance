@@ -63,13 +63,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public virtual int Error { get; set; } = default!;
 
         /// <summary>
-        /// 获取字节小程序 API 返回的错误号。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public virtual int ErrorNumber { get; set; }
-
-        /// <summary>
         /// 获取字节小程序 API 返回的详细错误号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("errcode")]
@@ -84,11 +77,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public virtual string? ErrorMessage { get; set; }
 
         /// <summary>
+        /// 获取字节小程序 API 返回的错误号。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("err_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
+        public virtual int ErrorNumber { get; set; }
+
+        /// <summary>
         /// 获取字节小程序 API 返回的错误提示。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("err_tips")]
         [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
         public virtual string? ErrorTips { get; set; }
+
+        /// <summary>
+        /// 获取字节小程序 API 返回的日志 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("log_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+        public virtual string? LogId { get; set; }
 
         /// <summary>
         /// 获取一个值，该值指示调用字节小程序 API 是否成功（即 HTTP 状态码为 200、且 errcode 值为 0）。

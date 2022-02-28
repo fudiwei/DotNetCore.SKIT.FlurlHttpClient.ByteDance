@@ -9,5 +9,10 @@
         /// 主域名（默认）。
         /// </summary>
         public const string DEFAULT = "https://developer.toutiao.com/api";
+
+        /// <summary>
+        /// 泛知识课程域名。
+        /// </summary>
+        public const string ZIJIEAPI_PRODUCT = "https://developer-product.zijieapi.com/product/api";
     }
 }

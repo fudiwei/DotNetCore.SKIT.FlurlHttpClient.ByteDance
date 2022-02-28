@@ -1,0 +1,115 @@
+﻿{
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": 2021122820424401022524311803123456,
+    "data": {
+        "products": [
+            {
+                "product_on_shelf": {
+                    "common_product_info": {
+                        "appid": "tt77fd0140e89bba1234",
+                        "first_class": 10000,
+                        "second_class": 10100,
+                        "industry_type": 1,
+                        "path_info_lst": [
+                            {
+                                "path": "page/index/index",
+                                "query": {
+                                    "a": "b",
+                                    "c": "d"
+                                }
+                            }
+                        ],
+                        "price_info": {
+                            "price": 10000,
+                            "real_price": 9999,
+                            "unit": "天"
+                        },
+                        "product_detail_lst": [
+                            {
+                                "img_url": "http://abc.def.com/product/resource/abc.png",
+                                "text": "abckdef"
+                            }
+                        ],
+                        "product_fulfillment_lst": [
+                            {
+                                "fulfillment_content": {
+                                    "fulfillment_url": "http://abc.def.com/product/resource/Lesson01.mp3",
+                                    "name": "sample",
+                                    "text": "sample"
+                                },
+                                "fulfillment_type": 2
+                            }
+                        ],
+                        "purchase_precaution": "购物须知",
+                        "qualification_urls": [
+                            "http://abc.def.com/product/resource/qualification1.png"
+                        ],
+                        "title": "商品标题"
+                    },
+                    "course_info": {
+                        "teacher_introduction": "老师介绍"
+                    },
+                    "product_id": 7046681212227681234,
+                    "product_status": {
+                        "reject_reason": "",
+                        "status": 2
+                    },
+                    "product_type": 1
+                },
+                "product_reviewing": {
+                    "common_product_info": {
+                        "appid": "tt77fd0140e89bba1234",
+                        "first_class": 10000,
+                        "second_class": 10100,
+                        "industry_type": 1,
+                        "path_info_lst": [
+                            {
+                                "path": "page/index/index",
+                                "query": {
+                                    "a": "b",
+                                    "c": "d"
+                                }
+                            }
+                        ],
+                        "price_info": {
+                            "price": 10000,
+                            "real_price": 9999,
+                            "unit": "天"
+                        },
+                        "product_detail_lst": [
+                            {
+                                "img_url": "http://abc.def.com/product/resource/abc.png",
+                                "text": "abckdef"
+                            }
+                        ],
+                        "product_fulfillment_lst": [
+                            {
+                                "fulfillment_content": {
+                                    "fulfillment_url": "http://abc.def.com/product/resource/Lesson01.mp3",
+                                    "name": "sample",
+                                    "text": "sample"
+                                },
+                                "fulfillment_type": 2
+                            }
+                        ],
+                        "purchase_precaution": "购物须知",
+                        "qualification_urls": [
+                            "http://abc.def.com/product/resource/qualification1.png"
+                        ],
+                        "title": "商品标题"
+                    },
+                    "course_info": {
+                        "teacher_introduction": "老师介绍"
+                    },
+                    "product_id": 7046681212227681234,
+                    "product_status": {
+                        "reject_reason": "",
+                        "status": 2
+                    },
+                    "product_type": 1
+                }
+            }
+        ]
+    }
+}

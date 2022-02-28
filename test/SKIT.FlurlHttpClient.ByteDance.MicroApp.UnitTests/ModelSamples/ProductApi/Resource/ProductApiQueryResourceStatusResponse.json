@@ -1,0 +1,9 @@
+﻿{
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": 2021122911185801022524315301123456,
+    "data": {
+        "resource_uri": "product/resource/abcd",
+        "status": 2
+    }
+}

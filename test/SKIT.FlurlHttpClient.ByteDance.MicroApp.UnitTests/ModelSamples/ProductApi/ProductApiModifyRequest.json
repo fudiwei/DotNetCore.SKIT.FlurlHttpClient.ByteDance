@@ -1,0 +1,56 @@
+﻿{
+    "access_token": "123456184673546a33314e764a6c3844557a432b6c2b4d6a6e543210",
+    "product_type": 1,
+    "product_id": 7654321888019123456,
+    "product": {
+        "common_product_params": {
+            "appid": "tt77fd0140e89bba1234",
+            "first_class": 10000,
+            "second_class": 10100,
+            "title": "python入门教程",
+            "qualification_uris": [
+                "product/resource/abc.png"
+            ],
+            "purchase_precaution": "购课成功后如何...",
+            "product_fulfillment_lst": [
+                {
+                    "fulfillment_content": {
+                        "fulfillment_uri": "product/resource/abc.png",
+                        "text": "",
+                        "name": "课程1"
+                    },
+                    "fulfillment_type": 3
+                }
+            ],
+            "industry_type": 1,
+            "price_info": {
+                "unit": "天",
+                "price": 5000,
+                "real_price": 4900
+            },
+            "path_info_lst": [
+                {
+                    "path": "page/index/index",
+                    "query": {
+                        "a": "1",
+                        "b": "2"
+                    }
+                }
+            ],
+            "product_detail_lst": [
+                {
+                    "text": "该节课程主要...",
+                    "img_uri": "product/resource/abc.png"
+                }
+            ],
+            "anchor_info": {
+                "video_anchor_info": {
+                    "anchor_title": "视频锚点标题"
+                }
+            }
+        },
+        "course_params": {
+            "teacher_introduction": "张老师..."
+        }
+    }
+}

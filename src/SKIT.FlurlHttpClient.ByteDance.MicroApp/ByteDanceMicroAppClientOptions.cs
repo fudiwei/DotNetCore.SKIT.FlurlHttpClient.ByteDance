@@ -28,6 +28,11 @@
         public string AppSecret { get; set; } = default!;
 
         /// <summary>
+        /// 获取或设置头条服务器推送的 EncodingAESKey。
+        /// </summary>
+        public string? PushEncodingAESKey { get; set; }
+
+        /// <summary>
         /// 获取或设置头条服务器推送的 Token。
         /// </summary>
         public string? PushToken { get; set; }

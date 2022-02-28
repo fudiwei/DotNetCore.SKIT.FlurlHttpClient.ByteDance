@@ -39,7 +39,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("MsgType")]
         [System.Text.Json.Serialization.JsonPropertyName("MsgType")]
-        [System.Xml.Serialization.XmlElement("MsgType", IsNullable = true)]
+        [System.Xml.Serialization.XmlElement("MsgType")]
         public string MessageType { get; set; } = default!;
 
         /// <summary>

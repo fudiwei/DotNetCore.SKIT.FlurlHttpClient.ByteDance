@@ -15,6 +15,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
         public string AppSecret { get; }
 
         /// <summary>
+        /// 初始化客户端时 <see cref="ByteDanceMicroAppClientOptions.PushEncodingAESKey"/> 的副本。
+        /// </summary>
+        public string? PushEncodingAESKey { get; set; }
+
+        /// <summary>
         /// 初始化客户端时 <see cref="ByteDanceMicroAppClientOptions.PushToken"/> 的副本。
         /// </summary>
         public string? PushToken { get; }

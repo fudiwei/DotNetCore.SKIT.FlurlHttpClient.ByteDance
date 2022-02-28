@@ -1,0 +1,8 @@
+﻿{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "UPDATE_AUTHORIZED",
+    "AuthorizationCode": "授权码",
+    "AuthorizationCodeExpiresIn": 3600
+}

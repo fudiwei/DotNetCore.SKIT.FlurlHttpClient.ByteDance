@@ -1,0 +1,15 @@
+﻿{
+    "authorizer_access_token": "08021218466f6f2b4d672f3658783566365448746a7a325679513d3d",
+    "expires_in": 7200,
+    "authorizer_refresh_token": "0740283fdbbc11174807dfcbe9b6b566bc5e7542305b1f0d9cb958eba030488cd1acb22d68a97099843629c77ea21a5cee021a08021218466f6f2b4d672f3658783566365448746a7a3256795133",
+    "refresh_expires_in": 2592000,
+    "authorizer_appid": "xxx",
+    "authorize_permission": [
+        {
+            "id": 1,
+            "category": "开发管理权限",
+            "description": "帮助小程序进行功能开发和开发设置"
+        }
+    ],
+    "share_data": null
+}

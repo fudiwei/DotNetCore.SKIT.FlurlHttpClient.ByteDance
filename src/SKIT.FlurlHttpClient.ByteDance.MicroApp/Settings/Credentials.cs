@@ -35,6 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
 
             AppId = options.AppId;
             AppSecret = options.AppSecret;
+            PushEncodingAESKey = options.PushEncodingAESKey;
             PushToken = options.PushToken;
             ECPaySalt = options.ECPaySalt;
         }

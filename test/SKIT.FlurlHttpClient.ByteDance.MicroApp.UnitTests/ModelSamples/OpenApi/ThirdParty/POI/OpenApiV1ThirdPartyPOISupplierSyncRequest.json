@@ -1,0 +1,21 @@
+﻿{
+    "supplier_ext_id": "test-supplier-1",
+    "address": "测试商铺的地址",
+    "status": 1,
+    "type": 2,
+    "name": "测试商铺",
+    "poi_id": "660113721511851123123",
+    "services": [
+        {
+            "enable": 1,
+            "service_type": 9101,
+            "entry": {
+                "entry_mini_app": {
+                    "params": "{\"id\":43235}",
+                    "path": "pages/goodsDetail/goodsDetail/3",
+                    "app_id": "ttadas123123113"
+                }
+            }
+        }
+    ]
+}

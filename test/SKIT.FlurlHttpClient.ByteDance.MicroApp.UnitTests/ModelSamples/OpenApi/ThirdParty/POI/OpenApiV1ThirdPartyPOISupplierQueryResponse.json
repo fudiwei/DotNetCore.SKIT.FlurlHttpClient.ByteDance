@@ -1,0 +1,30 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "sync_status": {
+            "fail_reason": "",
+            "last_sync_status": 1
+        },
+        "data_detail": {
+            "name": "测试门店",
+            "poi_id": "6601138963681921037",
+            "services": [
+                {
+                    "enable": 1,
+                    "entry": {
+                        "entry_mini_app": {
+                            "app_id": "tt631f15a2fc245243",
+                            "params": "{\"id\":43235}",
+                            "path": "pages/goodsDetail/goodsDetail/3"
+                        }
+                    },
+                    "service_type": 9101
+                }
+            ],
+            "status": 1,
+            "supplier_ext_id": "test-2",
+            "type": 2
+        }
+    }
+}

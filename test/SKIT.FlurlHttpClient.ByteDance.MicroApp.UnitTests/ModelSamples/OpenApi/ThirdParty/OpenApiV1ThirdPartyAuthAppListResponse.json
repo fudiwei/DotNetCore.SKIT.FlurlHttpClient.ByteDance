@@ -1,0 +1,17 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "authAppList": [
+            {
+                "authAppId": "tt123456789123456789",
+                "authTime": 1504790916
+            },
+            {
+                "authAppId": "tt123456789123456789",
+                "authTime": 1504790916
+            }
+        ],
+        "total": 16
+    }
+}

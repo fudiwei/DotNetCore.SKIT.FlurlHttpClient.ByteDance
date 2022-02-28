@@ -1,0 +1,18 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "draft_list": [
+        {
+            "draft_id": 1,
+            "user_version": "2.2.2",
+            "user_desc": "xxx",
+            "create_time": 1488965932
+        },
+        {
+            "draft_id": 2,
+            "user_version": "3.3.3",
+            "user_desc": "xxx",
+            "create_time": 1504790916
+        }
+    ]
+}

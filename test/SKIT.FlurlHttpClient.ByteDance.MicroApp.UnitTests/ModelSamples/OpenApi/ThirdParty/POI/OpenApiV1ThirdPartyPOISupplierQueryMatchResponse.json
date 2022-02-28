@@ -1,0 +1,14 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "match_result_list": [
+            {
+                "poi_id": "6691586459725465604",
+                "status": 2,
+                "supplier_ext_id": "test-supplier-1",
+                "task_id": "123123123123"
+            }
+        ]
+    }
+}

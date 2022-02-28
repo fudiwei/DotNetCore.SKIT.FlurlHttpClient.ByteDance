@@ -1,0 +1,19 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "match_result_list": [
+            {
+                "address": "南山路15号",
+                "city": "",
+                "extra": "南山路15号",
+                "match_status": 3,
+                "mismatch_status_desc": "POI地理位置不合法",
+                "poi_id": "",
+                "poi_name": "",
+                "province": "",
+                "supplier_ext_id": "SC10001"
+            }
+        ]
+    }
+}

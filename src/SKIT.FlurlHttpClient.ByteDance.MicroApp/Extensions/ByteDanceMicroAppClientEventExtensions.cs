@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Xml.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
@@ -17,23 +18,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         {
             [Newtonsoft.Json.JsonProperty("Encrypt")]
             [System.Text.Json.Serialization.JsonPropertyName("Encrypt")]
-            [System.Xml.Serialization.XmlElement("Encrypt")]
             public string EncryptedData { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("TimeStamp")]
             [System.Text.Json.Serialization.JsonPropertyName("TimeStamp")]
             [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
-            [System.Xml.Serialization.XmlElement("TimeStamp")]
             public string TimestampString { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("Nonce")]
             [System.Text.Json.Serialization.JsonPropertyName("Nonce")]
-            [System.Xml.Serialization.XmlElement("Nonce")]
             public string Nonce { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("MsgSignature")]
             [System.Text.Json.Serialization.JsonPropertyName("MsgSignature")]
-            [System.Xml.Serialization.XmlElement("MsgSignature")]
             public string Signature { get; set; } = default!;
         }
 
@@ -106,8 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             try
             {
-                if (callbackJson.Contains("\"Encrypt\"") && 
-                    callbackJson.Contains("\"MsgSignature\""))
+                if (callbackJson.Contains("\"Encrypt\""))
                 {
                     InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(callbackJson);
                     callbackJson = InnerDecryptEventData(sMsgEncrypt: encryptedEvent.EncryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
@@ -133,11 +129,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             try
             {
-                if (callbackXml.Contains("<Encrypt>") && callbackXml.Contains("</Encrypt>") &&
-                    callbackXml.Contains("<MsgSignature>") && callbackXml.Contains("</MsgSignature>"))
+                if (callbackXml.Contains("<Encrypt>") && callbackXml.Contains("</Encrypt>"))
                 {
-                    InnerEncryptedEvent encryptedEvent = Utilities.XmlUtility.Deserialize<InnerEncryptedEvent>(callbackXml);
-                    callbackXml = InnerDecryptEventData(sMsgEncrypt: encryptedEvent.EncryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
+                    string encryptedData = XDocument.Parse(callbackXml).Element("Encrypt").Value;
+                    callbackXml = InnerDecryptEventData(sMsgEncrypt: encryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
                 }
 
                 return Utilities.XmlUtility.Deserialize<TEvent>(callbackXml);

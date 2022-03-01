@@ -39,7 +39,6 @@
             }
         }
 
-
         /// <summary>
         /// <inheritdoc/>
         /// </summary>

@@ -1,0 +1,59 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "audit": {
+            "approvedApps": [ "抖音" ],
+            "attachInfo": {
+                "今日头条": "http://xxxx",
+                "今日头条lite": "http://xxxx"
+            },
+            "categories": [ "服务类-快递、物流-查件" ],
+            "ctime": 1591019952,
+            "developer_avatar": "xxx",
+            "developer_id": "xxx",
+            "developer_name": "xxx",
+            "has_publish": 0,
+            "is_illegal_version": false,
+            "reason": "今日头条: 无法进入小程序;小程序页面存在闪退、卡顿、黑屏等功能异常问题;今日头条lite: 无法进入小程序",
+            "reasonDetail": {
+                "今日头条": [ "无法进入小程序", "小程序页面存在闪退、卡顿、黑屏等功能异常问题" ],
+                "今日头条lite": [ "无法进入小程序" ]
+            },
+            "status": 2,
+            "summary": "今天是5月30日",
+            "version": "1.0.1"
+        },
+        "current": {
+            "approvedApps": [],
+            "attachInfo": {},
+            "categories": [ "xxx-xxx-xxx" ],
+            "ctime": 1585727678,
+            "developer_avatar": null,
+            "developer_id": null,
+            "developer_name": null,
+            "has_down": false,
+            "notApprovedApps": [],
+            "reason": "",
+            "reasonDetail": {},
+            "rollback": {
+                "can_rollback": false,
+                "last_version": ""
+            },
+            "summary": "测试版本1.0.0",
+            "uid": 111,
+            "version": "1.0.0"
+        },
+        "latest": {
+            "categories": [ "xxx-xxx-xxx" ],
+            "ctime": 1590755478,
+            "developer_avatar": "xxx",
+            "developer_id": "xxx",
+            "developer_name": "xxx",
+            "has_audit": 1,
+            "screenshot": "",
+            "summary": "今天是5月30日",
+            "version": "1.0.1"
+        }
+    }
+}

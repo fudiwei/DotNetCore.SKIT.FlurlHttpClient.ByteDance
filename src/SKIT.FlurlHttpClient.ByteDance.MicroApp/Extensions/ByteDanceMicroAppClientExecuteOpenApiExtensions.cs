@@ -524,6 +524,181 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestAsync<Models.OpenApiV1MicroAppUploadMaterialResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/package/upload 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/upload </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageUploadResponse> ExecuteOpenApiV1MicroAppPackageUploadAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageUploadRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "package", "upload")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/package/audit_hosts 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit-hosts </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageAuditHostsResponse> ExecuteOpenApiV1MicroAppPackageAuditHostsAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageAuditHostsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "package", "audit_hosts")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageAuditHostsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/package/audit 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageAuditResponse> ExecuteOpenApiV1MicroAppPackageAuditAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageAuditRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "package", "audit")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageAuditResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/package/revoke_audit 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageRevokeAuditResponse> ExecuteOpenApiV1MicroAppPackageRevokeAuditAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageRevokeAuditRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "package", "revoke_audit")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageRevokeAuditResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/package/release 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageReleaseResponse> ExecuteOpenApiV1MicroAppPackageReleaseAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageReleaseRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "package", "release")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageReleaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/package/rollback 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/rollback </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageRollbackResponse> ExecuteOpenApiV1MicroAppPackageRollbackAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageRollbackRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "package", "rollback")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageRollbackResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/package/versions 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/versions </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppPackageVersionsResponse> ExecuteOpenApiV1MicroAppPackageVersionsAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageVersionsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "package", "versions")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageVersionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
     }
 }

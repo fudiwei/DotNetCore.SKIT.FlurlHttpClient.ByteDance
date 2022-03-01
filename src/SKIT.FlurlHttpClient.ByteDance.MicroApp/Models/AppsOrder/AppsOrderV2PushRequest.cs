@@ -75,6 +75,13 @@
         public int OrderType { get; set; }
 
         /// <summary>
+        /// 获取或设置订单状态。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("order_status")]
+        [System.Text.Json.Serialization.JsonPropertyName("order_status")]
+        public int OrderStatus { get; set; }
+
+        /// <summary>
         /// 获取或设置订单变更时间毫秒级时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("update_time")]
@@ -108,5 +115,12 @@
         [Newtonsoft.Json.JsonProperty("launch_from")]
         [System.Text.Json.Serialization.JsonPropertyName("launch_from")]
         public string? LaunchFrom { get; set; }
+
+        /// <summary>
+        /// 获取或设置担保支付平台订单号。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("payment_order_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("payment_order_no")]
+        public string? PaymentOrderNumber { get; set; }
     }
 }

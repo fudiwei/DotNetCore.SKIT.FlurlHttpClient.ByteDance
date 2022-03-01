@@ -68,6 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/qr-code/create-qr-code </para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/qr-code/create-qr-code </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/getqrcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

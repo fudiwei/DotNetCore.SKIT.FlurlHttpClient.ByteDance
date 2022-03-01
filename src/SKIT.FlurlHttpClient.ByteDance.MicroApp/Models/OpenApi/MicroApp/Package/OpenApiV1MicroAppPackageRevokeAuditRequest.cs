@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /openapi/v1/microapp/package/revoke_audit 接口的请求。</para>

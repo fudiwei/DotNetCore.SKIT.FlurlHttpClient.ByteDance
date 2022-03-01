@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [GET] /openapi/v1/tp/poi/base/query/amap 接口的请求。</para>

@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             if (string.IsNullOrEmpty(encodingAESKey))
                 throw new Exceptions.ByteDanceMicroAppEventSerializationException("Decrypt event failed, because there is no encoding AES key.");
-            
+
             byte[] bCipher = Convert.FromBase64String(sMsgEncrypt);
             byte[] bKey = Convert.FromBase64String(encodingAESKey + "=");
             byte[] bIV = new byte[16];

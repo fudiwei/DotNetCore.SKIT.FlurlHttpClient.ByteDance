@@ -1,0 +1,47 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "app_id": "xxxx",
+        "app_type": 1,
+        "app_state": 1,
+        "app_name": "xxxx",
+        "new_name_audit_info": {
+            "new_name": "",
+            "remaining_times": 0,
+            "new_name_audit_state": 0,
+            "reason": "",
+            "advice": ""
+        },
+        "app_intro": "xxxx",
+        "new_intro_audit_info": {
+            "new_intro": "",
+            "remaining_times": 0,
+            "new_intro_audit_state": 0,
+            "reason": "",
+            "advice": ""
+        },
+        "app_icon": "xxxx",
+        "new_icon_audit_info": {
+            "new_icon": "",
+            "remaining_times": 0,
+            "new_icon_audit_state": 0,
+            "reason": "",
+            "advice": ""
+        },
+        "app_categories_audit_info": [
+            {
+                "app_category": "1,235,250",
+                "app_category_name": "服务类-商业服务-广告/设计",
+                "app_category_audit_state": 2,
+                "reason": ""
+            }
+        ],
+        "subject_audit_info": {
+            "subject_name": "xxx",
+            "subject_type": 1,
+            "subject_audit_state": 2,
+            "reason": ""
+        }
+    }
+}

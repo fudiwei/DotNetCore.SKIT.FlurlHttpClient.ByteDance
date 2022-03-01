@@ -699,6 +699,382 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageVersionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/info 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/setting </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppInfoResponse> ExecuteOpenApiV1MicroAppAppInfoAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "info")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/qrcode 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/qrcode </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppQrcodeResponse> ExecuteOpenApiV1MicroAppAppQrcodeAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppQrcodeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "qrcode")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/check_app_name 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/check-name </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppCheckAppNameResponse> ExecuteOpenApiV1MicroAppAppCheckAppNameAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCheckAppNameRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "check_app_name")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken)
+                .SetQueryParam("app_name", request.AppName);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCheckAppNameResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_name 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/name </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppModifyAppNameResponse> ExecuteOpenApiV1MicroAppAppModifyAppNameAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppNameRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "modify_app_name")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppNameResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_intro 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/intro </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppModifyAppIntroductionResponse> ExecuteOpenApiV1MicroAppAppModifyAppIntroductionAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppIntroductionRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "modify_app_intro")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppIntroductionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_icon 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/icon </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppModifyAppIconResponse> ExecuteOpenApiV1MicroAppAppModifyAppIconAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppIconRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "modify_app_icon")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppIconResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/all_categories 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/all-categories </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppAllCategoriesResponse> ExecuteOpenApiV1MicroAppAppAllCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppAllCategoriesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "all_categories")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppAllCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/categories 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/category-audit-info </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppCategoriesResponse> ExecuteOpenApiV1MicroAppAppCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCategoriesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "categories")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/add_categories 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/add-category </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppAddCategoriesResponse> ExecuteOpenApiV1MicroAppAppAddCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppAddCategoriesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "add_categories")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppAddCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/del_categories 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/delete-category </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppDeleteCategoriesResponse> ExecuteOpenApiV1MicroAppAppDeleteCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppDeleteCategoriesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "del_categories")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppDeleteCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/supply_categories 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/supply-category </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppSupplyCategoriesResponse> ExecuteOpenApiV1MicroAppAppSupplyCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppSupplyCategoriesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "supply_categories")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppSupplyCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_server_domain 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/sever </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppModifyServerDomainResponse> ExecuteOpenApiV1MicroAppAppModifyServerDomainAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyServerDomainRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "modify_server_domain")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyServerDomainResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_webview_domain 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/webview </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppModifyWebviewDomainResponse> ExecuteOpenApiV1MicroAppAppModifyWebviewDomainAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyWebviewDomainRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "app", "modify_webview_domain")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyWebviewDomainResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/quality_rating 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/quality-rating </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppQualityRatingResponse> ExecuteOpenApiV1MicroAppAppQualityRatingAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppQualityRatingRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "quality_rating")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppQualityRatingResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/app/credit_score 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/credit-score </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppAppCreditScoreResponse> ExecuteOpenApiV1MicroAppAppCreditScoreAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCreditScoreRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "app", "credit_score")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCreditScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
     }
 }

@@ -1,0 +1,24 @@
+﻿{
+    "categoryInfo": [
+        {
+            "category": "158,159,259",
+            "categoryCert": [
+                {
+                    "id": "79",
+                    "name": "《信息网络传播视听节目许可证》",
+                    "path": "xxxx/xxxx"
+                },
+                {
+                    "id": "117",
+                    "name": "《网络文化经营许可证》(经营范围含网络表演）",
+                    "path": "xxxx/xxxx"
+                },
+                {
+                    "id": "158",
+                    "name": "《统一社会信用代码证》（适用于政府主体）",
+                    "path": "xxxx/xxxx"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "appCategoryAuditInfo": [
+            {
+                "category": "158,159,259",
+                "categoryName": "社交类-社交-直播",
+                "categoryCertIds": "158,159",
+                "categoryCert": [
+                    {
+                        "id": "158",
+                        "name": "《统一社会信用代码证》（适用于政府主体）",
+                        "path": "xxx"
+                    },
+                    {
+                        "id": "159",
+                        "name": "《情况说明函件》（适用于政府主体）",
+                        "path": "xxx"
+                    }
+                ],
+                "categoryAuditState": 2,
+                "reason": ""
+            }
+        ],
+        "remainingTimes": 3,
+        "categoryChangeLimit": 3,
+        "categoryLimit": 5
+    }
+}

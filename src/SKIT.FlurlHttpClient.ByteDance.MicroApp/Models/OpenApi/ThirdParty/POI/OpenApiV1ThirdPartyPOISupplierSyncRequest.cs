@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                     public class Entry
                     {
                         public static class Types
-                        { 
+                        {
                             public class MiniApp
                             {
                                 /// <summary>

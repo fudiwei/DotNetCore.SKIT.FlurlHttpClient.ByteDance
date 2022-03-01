@@ -102,15 +102,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("related_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("related_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string OrderId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置订单类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("aftersale_order_type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("aftersale_order_type")]
+                                public int OrderType { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置售后单 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aftersale_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aftersale_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string AftersaleId { get; set; } = default!;
 
                                 /// <summary>
@@ -124,9 +131,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// 获取或设置申请时间。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("apply_time")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("apply_time")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 public DateTimeOffset ApplyTime { get; set; }
 
                                 /// <summary>
@@ -140,9 +147,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// 获取或设置超时自动流转截止时间。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("status_deadline")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.UnixTimestampNullableDateTimeOffsetConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("status_deadline")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.UnixTimestampNullableDateTimeOffsetConverter))]
                                 public DateTimeOffset? StatusDeadlineTime { get; set; }
 
                                 /// <summary>
@@ -240,18 +247,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// 获取或设置创建时间。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("create_time")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 public DateTimeOffset CreateTime { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置更新时间。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("update_time")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("update_time")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.UnixTimestampDateTimeOffsetConverter))]
                                 public DateTimeOffset UpdateTime { get; set; }
 
                                 /// <summary>
@@ -331,6 +338,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                                 [System.Text.Json.Serialization.JsonPropertyName("value")]
                                                 public string Value { get; set; } = default!;
                                             }
+
+                                            public class GivenSKUDetail
+                                            {
+                                                /// <summary>
+                                                /// 获取或设置赠品名称。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("product_name")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("product_name")]
+                                                public string ProductName { get; set; } = default!;
+
+                                                /// <summary>
+                                                /// 获取或设置赠品订单号。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("sku_order_id")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("sku_order_id")]
+                                                public string SKUOrderId { get; set; } = default!;
+                                            }
                                         }
 
                                         /// <summary>
@@ -388,6 +412,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                         [Newtonsoft.Json.JsonProperty("sku_spec")]
                                         [System.Text.Json.Serialization.JsonPropertyName("sku_spec")]
                                         public Types.Specification[]? SpecificationList { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置赠品列表。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("given_sku_details")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("given_sku_details")]
+                                        public Types.GivenSKUDetail[]? GivenSKUDetail { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置付款金额（单位：分）。
@@ -585,8 +616,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// 获取或设置操作时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("create_time")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                                public long CreateTimestamp { get; set; }
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                                public DateTimeOffset CreateTime { get; set; }
                             }
                         }
 

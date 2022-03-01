@@ -223,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string? SupplierId { get; set; }
                     }
 

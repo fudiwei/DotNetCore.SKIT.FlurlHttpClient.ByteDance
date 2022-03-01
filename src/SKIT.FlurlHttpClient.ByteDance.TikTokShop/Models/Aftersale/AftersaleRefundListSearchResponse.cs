@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string OrderId { get; set; } = default!;
 
                                 /// <summary>
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string OrderId { get; set; } = default!;
 
                                 /// <summary>
@@ -149,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aftersale_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aftersale_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string AftersaleId { get; set; } = default!;
 
                                 /// <summary>
@@ -259,7 +259,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("pid")]
                         [System.Text.Json.Serialization.JsonPropertyName("pid")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string ShopOrderId { get; set; } = default!;
 
                         /// <summary>
@@ -267,7 +267,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string OrderId { get; set; } = default!;
 
                         /// <summary>
@@ -275,7 +275,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("aftersale_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("aftersale_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string AftersaleId { get; set; } = default!;
 
                         /// <summary>

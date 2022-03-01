@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("after_sale_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("after_sale_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string AftersaleId { get; set; } = default!;
 
                                 /// <summary>
@@ -290,7 +290,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("after_sale_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("after_sale_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string ArbitrateId { get; set; } = default!;
 
                                 /// <summary>
@@ -451,7 +451,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string OrderId { get; set; } = default!;
 
                                 /// <summary>
@@ -459,7 +459,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("after_sale_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("after_sale_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string AftersaleId { get; set; } = default!;
 
                                 /// <summary>
@@ -536,6 +536,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                     public class Specification : AftersaleListResponse.Types.Data.Types.Aftersale.Types.Order.Types.SKUOrder.Types.Specification
                                     {
                                     }
+
+                                    public class GivenSKUDetail : AftersaleListResponse.Types.Data.Types.Aftersale.Types.Order.Types.SKUOrder.Types.GivenSKUDetail
+                                    {
+                                    }
                                 }
 
                                 /// <summary>
@@ -607,6 +611,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                                 [Newtonsoft.Json.JsonProperty("sku_spec")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_spec")]
                                 public Types.Specification[]? SpecificationList { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置赠品列表。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("given_sku_details")]
+                                [System.Text.Json.Serialization.JsonPropertyName("given_sku_details")]
+                                public Types.GivenSKUDetail[]? GivenSKUDetail { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置支付方式。

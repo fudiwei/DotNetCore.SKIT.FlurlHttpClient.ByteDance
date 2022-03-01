@@ -15,7 +15,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("p_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("p_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                 public string ShopOrderId { get; set; } = default!;
 
                 /// <summary>

@@ -72,6 +72,222 @@
                                 [System.Text.Json.Serialization.JsonPropertyName("encrypt_detail")]
                                 public string EncryptedDetail { get; set; } = default!;
                             }
+
+                            public class PromotionDetail
+                            {
+                                public static class Types
+                                {
+                                    public class DiscountDetail
+                                    {
+                                        public static class Types
+                                        {
+                                            public class Coupon
+                                            {
+                                                public static class Types
+                                                {
+                                                    public class ShareDiscountCost
+                                                    {
+                                                        /// <summary>
+                                                        /// 获取或设置平台承担金额（单位：分）。
+                                                        /// </summary>
+                                                        [Newtonsoft.Json.JsonProperty("platform_cost")]
+                                                        [System.Text.Json.Serialization.JsonPropertyName("platform_cost")]
+                                                        public int PlatformCost { get; set; }
+
+                                                        /// <summary>
+                                                        /// 获取或设置商家承担金额（单位：分）。
+                                                        /// </summary>
+                                                        [Newtonsoft.Json.JsonProperty("shop_cost")]
+                                                        [System.Text.Json.Serialization.JsonPropertyName("shop_cost")]
+                                                        public int ShopCost { get; set; }
+                                                    }
+                                                }
+
+                                                /// <summary>
+                                                /// 获取或设置优惠券 ID。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("coupon_id")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("coupon_id")]
+                                                public long CouponId { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置优惠券类型。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("coupon_type")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("coupon_type")]
+                                                public int CouponType { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置券批次 ID。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
+                                                public string CouponMetaId { get; set; } = default!;
+
+                                                /// <summary>
+                                                /// 获取或设置优惠金额（单位：分）。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("coupon_amount")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("coupon_amount")]
+                                                public int CouponAmount { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置券名称。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("coupon_name")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("coupon_name")]
+                                                public string CouponName { get; set; } = default!;
+
+                                                /// <summary>
+                                                /// 获取或设置成本分摊信息。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("share_discount_cost")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("share_discount_cost")]
+                                                public Types.ShareDiscountCost? ShareDiscountCost { get; set; }
+                                            }
+
+                                            public class FullDiscount
+                                            {
+                                                public static class Types
+                                                {
+                                                    public class ShareDiscountCost : Coupon.Types.ShareDiscountCost
+                                                    {
+                                                    }
+                                                }
+
+                                                /// <summary>
+                                                /// 获取或设置活动 ID。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("campaign_id")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("campaign_id")]
+                                                public long CampaignId { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置活动类型。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("campaign_type")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("campaign_type")]
+                                                public int CampaignType { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置活动子类型。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("campaign_sub_type")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("campaign_sub_type")]
+                                                public int CampaignSubType { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置活动金额（单位：分）。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("campaign_amount")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("campaign_amount")]
+                                                public int CampaignAmount { get; set; }
+
+                                                /// <summary>
+                                                /// 获取或设置活动名称。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("campaign_name")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("campaign_name")]
+                                                public string CampaignName { get; set; } = default!;
+
+                                                /// <summary>
+                                                /// 获取或设置成本分摊信息。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("share_discount_cost")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("share_discount_cost")]
+                                                public Types.ShareDiscountCost? ShareDiscountCost { get; set; }
+                                            }
+
+                                            public class Redpack
+                                            {
+                                                /// <summary>
+                                                /// 获取或设置红包汇总 ID。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("redpack_trans_id")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("redpack_trans_id")]
+                                                public string RedpackTransferId { get; set; } = default!;
+
+                                                /// <summary>
+                                                /// 获取或设置红包金额（单位：分）。
+                                                /// </summary>
+                                                [Newtonsoft.Json.JsonProperty("redpack_amount")]
+                                                [System.Text.Json.Serialization.JsonPropertyName("redpack_amount")]
+                                                public int RedpackAmount { get; set; }
+                                            }
+                                        }
+
+                                        /// <summary>
+                                        /// 获取或设置优惠总金额（单位：分）。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("total_amount")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("total_amount")]
+                                        public int TotalAmount { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置券优惠金额（单位：分）。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("coupon_amount")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("coupon_amount")]
+                                        public int CouponAmount { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置活动优惠金额（单位：分）。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("full_discount_amount")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("full_discount_amount")]
+                                        public int FullDiscountAmount { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置红包金额（单位：分）。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("redpack_amount")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("redpack_amount")]
+                                        public int RedpackAmount { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置优惠券列表。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("coupon_info")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("coupon_info")]
+                                        public Types.Coupon[]? CouponList { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置优惠活动列表。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("full_discount_info")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("full_discount_info")]
+                                        public Types.FullDiscount[]? FullDiscountList { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置红包列表。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("redpack_info")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("redpack_info")]
+                                        public Types.Redpack[]? RedpackList { get; set; }
+                                    }
+                                }
+
+                                /// <summary>
+                                /// 获取或设置店铺优惠信息。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("shop_discount_detail")]
+                                [System.Text.Json.Serialization.JsonPropertyName("shop_discount_detail")]
+                                public Types.DiscountDetail? ShopDiscountDetail { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置平台优惠信息。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform_discount_detail")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform_discount_detail")]
+                                public Types.DiscountDetail? PlatformDiscountDetail { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置达人优惠信息。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("kol_discount_detail")]
+                                [System.Text.Json.Serialization.JsonPropertyName("kol_discount_detail")]
+                                public Types.DiscountDetail? KOLDiscountDetail { get; set; }
+                            }
                         }
 
                         /// <summary>
@@ -271,6 +487,20 @@
                         public int PostAmount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置快递费原价（单位：分）。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("post_origin_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("post_origin_amount")]
+                        public int PostOriginAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置快递费优惠金额（单位：分）。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("post_promotion_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("post_promotion_amount")]
+                        public int PostPromotionAmount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置运费险金额（单位：分）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("post_insurance_amount")]
@@ -297,6 +527,13 @@
                         [Newtonsoft.Json.JsonProperty("promotion_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("promotion_amount")]
                         public int PromotionAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置订单优惠详细信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("promotion_detail")]
+                        [System.Text.Json.Serialization.JsonPropertyName("promotion_detail")]
+                        public Types.PromotionDetail? PromotionDetail { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺优惠金额（单位：分）。
@@ -432,7 +669,14 @@
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("product_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                        public long ProductId { get; set; } = default!;
+                                        public long ProductId { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置商品 ID 字符串。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("product_id_str")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("product_id_str")]
+                                        public string ProductIdString { get; set; } = default!;
 
                                         /// <summary>
                                         /// 获取或设置商品名称。
@@ -483,6 +727,37 @@
                                         [System.Text.Json.Serialization.JsonPropertyName("sku_order_id")]
                                         public string SKUOrderId { get; set; } = default!;
                                     }
+
+                                    public class AddedService
+                                    {
+                                        /// <summary>
+                                        /// 获取或设置标签 Key。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("key")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("key")]
+                                        public string Key { get; set; } = default!;
+
+                                        /// <summary>
+                                        /// 获取或设置物流服务名称。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("text")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("text")]
+                                        public string Text { get; set; } = default!;
+
+                                        /// <summary>
+                                        /// 获取或设置抖音大学介绍 URL。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("help_doc")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("help_doc")]
+                                        public string HelpDocumentationUrl { get; set; } = default!;
+
+                                        /// <summary>
+                                        /// 获取或设置业务跳转 URL。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("url")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("url")]
+                                        public string Url { get; set; } = default!;
+                                    }
                                 }
 
                                 /// <summary>
@@ -526,6 +801,13 @@
                                 [Newtonsoft.Json.JsonProperty("product_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_info")]
                                 public Types.Product[] ProductList { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置增值服务列表。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("added_services")]
+                                [System.Text.Json.Serialization.JsonPropertyName("added_services")]
+                                public Types.AddedService[]? AddedServiceList { get; set; }
                             }
 
                             public class OrderPhase
@@ -680,6 +962,30 @@
                                 [System.Text.Json.Serialization.JsonPropertyName("encrypt_id_card_name")]
                                 public string? EncryptedIdCardName { get; set; }
                             }
+
+                            public class ShopOrderTag
+                            {
+                                /// <summary>
+                                /// 获取或设置标签 Key。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("key")]
+                                [System.Text.Json.Serialization.JsonPropertyName("key")]
+                                public string Key { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置标签说明。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("text")]
+                                [System.Text.Json.Serialization.JsonPropertyName("text")]
+                                public string Text { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置帮助文档 URL。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("help_doc")]
+                                [System.Text.Json.Serialization.JsonPropertyName("help_doc")]
+                                public string HelpDocumentationUrl { get; set; } = default!;
+                            }
                         }
 
                         /// <summary>
@@ -716,6 +1022,13 @@
                         [Newtonsoft.Json.JsonProperty("seller_words")]
                         [System.Text.Json.Serialization.JsonPropertyName("seller_words")]
                         public string? SellerWords { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置预约发货时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("appointment_ship_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("appointment_ship_time")]
+                        public long? AppointmentShipTimestamp { get; set; }
 
                         /// <summary>
                         /// 获取或设置物流信息。
@@ -765,6 +1078,13 @@
                         [Newtonsoft.Json.JsonProperty("user_id_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("user_id_info")]
                         public Types.UserIdentification? UserIdentification { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置店铺单标签列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("shop_order_tag_ui")]
+                        [System.Text.Json.Serialization.JsonPropertyName("shop_order_tag_ui")]
+                        public Types.ShopOrderTag[]? ShopOrderTagList { get; set; }
                     }
 
                     public class SKUOrder : OrderBase
@@ -837,6 +1157,41 @@
                                 [Newtonsoft.Json.JsonProperty("refund_status")]
                                 [System.Text.Json.Serialization.JsonPropertyName("refund_status")]
                                 public int RefundStatus { get; set; }
+                            }
+
+                            public class AccountList
+                            {
+                                /// <summary>
+                                /// 获取或设置账号列表。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("account_info")]
+                                [System.Text.Json.Serialization.JsonPropertyName("account_info")]
+                                public AccountItem[] Items { get; set; } = default!;
+                            }
+
+                            public class AccountItem
+                            {
+                                /// <summary>
+                                /// 获取或设置经过加密的账号 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("encrypt_account_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("encrypt_account_id")]
+                                public string EncryptedAccountId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置账号名称。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("account_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("account_name")]
+                                public string AccountName { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置账号类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("account_type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("account_type")]
+                                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                                public int AccountType { get; set; }
                             }
                         }
 
@@ -1055,6 +1410,20 @@
                         public int FourthCategoryId { get; set; }
 
                         /// <summary>
+                        /// 获取或设置赠品绑定类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("given_product_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("given_product_type")]
+                        public string? GivenProductType { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置绑定的主品 SKU 单号。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("master_sku_order_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("master_sku_order_id")]
+                        public string? MasterSKUOrderId { get; set; }
+
+                        /// <summary>
                         /// 获取或设置供应商 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_id")]
@@ -1144,6 +1513,20 @@
                         [Newtonsoft.Json.JsonProperty("after_sale_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("after_sale_info")]
                         public Types.Aftersale? Aftersale { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置账号列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("account_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("account_list")]
+                        public Types.AccountList? AccountList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置广告来源。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("ad_env_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("ad_env_type")]
+                        public string? AdEnvironmentType { get; set; }
                     }
                 }
 

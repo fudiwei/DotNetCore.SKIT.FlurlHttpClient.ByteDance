@@ -77,6 +77,34 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
         public virtual string? ErrorMessage { get; set; }
 
         /// <summary>
+        /// 获取抖店开放平台 API 返回的主返回码。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("code")]
+        [System.Text.Json.Serialization.JsonPropertyName("code")]
+        public virtual string? ReturnCode { get; set; }
+
+        /// <summary>
+        /// 获取抖店开放平台 API 返回的主返回码描述。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("msg")]
+        public virtual string? ReturnMessage { get; set; }
+
+        /// <summary>
+        /// 获取抖店开放平台 API 返回的子返回码。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("sub_code")]
+        [System.Text.Json.Serialization.JsonPropertyName("sub_code")]
+        public virtual string? SubReturnCode { get; set; }
+
+        /// <summary>
+        /// 获取抖店开放平台 API 返回的子返回码描述。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("sub_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("sub_msg")]
+        public virtual string? SubReturnMessage { get; set; }
+
+        /// <summary>
         /// 获取一个值，该值指示调用抖店开放平台 API 是否成功（即 HTTP 状态码为 200、且 errcode 值为 0）。
         /// </summary>
         /// <returns></returns>

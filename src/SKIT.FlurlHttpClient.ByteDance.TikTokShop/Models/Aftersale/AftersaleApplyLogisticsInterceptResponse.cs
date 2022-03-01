@@ -21,9 +21,8 @@
                                 /// 获取或设置商品单号。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_id")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalStringConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string ProductOrderId { get; set; } = default!;
 
                                 /// <summary>

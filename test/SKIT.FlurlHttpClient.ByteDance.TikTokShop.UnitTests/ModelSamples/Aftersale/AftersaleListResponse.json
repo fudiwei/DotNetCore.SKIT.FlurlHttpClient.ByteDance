@@ -3,23 +3,134 @@
         "has_more": "true",
         "items": [
             {
-                "aftersale_info": {},
-                "order_info": {},
+                "aftersale_info": {
+                    "aftersale_id": "\"6986853269519810849\"",
+                    "aftersale_num": "1",
+                    "aftersale_order_type": "1",
+                    "aftersale_status": "11",
+                    "aftersale_type": "0",
+                    "apply_time": 1626753592,
+                    "arbitrate_blame": "1",
+                    "arbitrate_status": "0",
+                    "create_time": 1626753592,
+                    "exchange_logistics_company_name": "韵达快递",
+                    "exchange_sku_info": {
+                        "code": "\"10000\"",
+                        "name": "\"xxx\"",
+                        "num": "1",
+                        "out_sku_id": "\"10000\"",
+                        "out_warehouse_id": "\"10000\"",
+                        "price": "\"100\"",
+                        "sku_id": "\"1709160688834615\"",
+                        "spec_desc": "\"xx/xx/xx\"",
+                        "supplier_id": "\"10000\"",
+                        "url": "\"http://xxxxx\""
+                    },
+                    "got_pkg": "1",
+                    "is_agree_refuse_sign": "1",
+                    "left_urge_sms_count": "0",
+                    "order_logistics": [
+                        {
+                            "company_code": "shunfeng",
+                            "company_name": "顺丰",
+                            "logistics_state": "6",
+                            "logistics_time": "1637586290",
+                            "tracking_no": "SF12345678910"
+                        }
+                    ],
+                    "part_type": "0",
+                    "reason_second_labels": [
+                        {
+                            "code": "1",
+                            "name": "衣服买大"
+                        }
+                    ],
+                    "refund_amount": "20",
+                    "refund_post_amount": "0",
+                    "refund_status": "1",
+                    "refund_tax_amount": "0",
+                    "refund_type": "0",
+                    "related_id": "\"4821780700279174718\"",
+                    "remark": "买家不想要了",
+                    "return_logistics_code": "\"XY123123123\"",
+                    "return_logistics_company_name": "顺丰速运",
+                    "return_promotion_amount": "0",
+                    "risk_decision_code": "0",
+                    "risk_decision_description": "\"\"",
+                    "risk_decision_reason": "\"\"",
+                    "status_deadline": 1626926420,
+                    "update_time": 1626860666
+                },
+                "order_info": {
+                    "order_flag": "0",
+                    "related_order_info": [
+                        {
+                            "aftersale_item_num": "1",
+                            "aftersale_pay_amount": "20",
+                            "aftersale_post_amount": "0",
+                            "aftersale_tax_amount": "0",
+                            "create_time": 1626753467,
+                            "given_sku_order_ids": "4863025593329976686",
+                            "is_oversea_order": "0",
+                            "item_num": "1",
+                            "logistics_code": "\"RABBIT123123\"",
+                            "logistics_company_name": "顺丰速运",
+                            "order_status": "3",
+                            "pay_amount": "20",
+                            "post_amount": "0",
+                            "price": "20",
+                            "product_id": "9999888777666",
+                            "product_image": "https://bytedance.com/image/rabbit.jpg",
+                            "product_name": "小兔子T恤",
+                            "promotion_pay_amount": "0",
+                            "shop_sku_code": "\"\"",
+                            "sku_order_id": "\"4821780700279174718\"",
+                            "sku_spec": [
+                                {
+                                    "name": "颜色",
+                                    "value": "白"
+                                }
+                            ],
+                            "tags": [
+                                {
+                                    "tag_detail": "超级售后",
+                                    "tag_detail_en": "super_after_sale",
+                                    "tag_link_url": "http://what_is_super_after_sale.bytedance.com/faq"
+                                }
+                            ],
+                            "tax_amount": "0"
+                        }
+                    ],
+                    "shop_order_id": "\"4821780700279174718\""
+                },
                 "seller_logs": [
                     {
                         "content": "\"买家觉得小兔子太可爱了，不想要了\"",
-                        "create_time": "1626675161",
+                        "create_time": "2001-01-01 03:04:05",
                         "op_name": "\"兔子店铺CEO\"",
                         "star": "0"
                     }
                 ],
-                "text_part": {}
+                "text_part": {
+                    "aftersale_refund_type_text": "\"保证金\"",
+                    "aftersale_status_text": "\"待商家审核\"",
+                    "aftersale_type_text": "\"退货退款\"",
+                    "arbitrate_status_text": "\"\"",
+                    "bad_item_text": "\"\"",
+                    "logistics_text": "\"已发货\"",
+                    "reason_text": "\"无理由退款\"",
+                    "return_logistics_text": "\"已发货\""
+                }
             }
         ],
-        "page": 0,
-        "size": 10,
-        "total": 1025
+        "page": "0",
+        "size": "10",
+        "total": "1025"
     },
     "err_no": 0,
-    "message": "success"
+    "message": "success",
+    "code": 10000,
+    "msg": "success",
+    "sub_code": "",
+    "sub_msg": ""
 }

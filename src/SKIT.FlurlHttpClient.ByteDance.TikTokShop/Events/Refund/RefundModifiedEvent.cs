@@ -15,7 +15,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("p_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("p_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                 public string ShopOrderId { get; set; } = default!;
 
                 /// <summary>
@@ -23,7 +23,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("s_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("s_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                 public string SKUOrderId { get; set; } = default!;
 
                 /// <summary>
@@ -38,7 +38,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("aftersale_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("aftersale_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                 public string AftersaleId { get; set; } = default!;
 
                 /// <summary>

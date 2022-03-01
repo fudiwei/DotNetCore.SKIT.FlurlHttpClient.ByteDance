@@ -1,0 +1,86 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "online_shop_material": {
+            "status": 1,
+            "biz_licence": {
+                "path": "https://lf3-developer-sign.bytemastatic.com/developer/thirdparty/xxx/xxx/shop_contract/c36ff08137"
+            },
+            "contract": {
+                "path": "xxxxx"
+            },
+            "qual_material": [
+                {
+                    "path": "xxxxx"
+                }
+            ],
+            "additional_qual": [
+                {
+                    "additional_qual_type": 1,
+                    "paths": [
+                        {
+                            "path": "https://xxxxxxxxx"
+                        }
+                    ]
+                },
+                {
+                    "additional_qual_type": 2,
+                    "paths": [
+                        {
+                            "path": "https://xxxxxxxxx"
+                        },
+                        {
+                            "path": "https://xxxxxxxxx"
+                        }
+                    ]
+                }
+            ]
+        },
+        "audit_shop_material": {
+            "biz_licence": {
+                "path": "xxxx",
+                "status": 1
+            },
+            "contract": {
+                "path": "xxxxxxxx",
+                "status": 2
+            },
+            "qual_material": [
+                {
+                    "path": "xxxxx",
+                    "status": 3,
+                    "reason": [
+                        "您好，您所认领的门店名称与门店主体无关，请核对认领门店名称是否正确或提供其他补充材料，谢谢。"
+                    ]
+                }
+            ],
+            "additional_qual": [
+                {
+                    "additional_qual_type": 1,
+                    "paths": [
+                        {
+                            "path": "xxxxx"
+                        }
+                    ],
+                    "status": 3,
+                    "reason": [
+                        "您好，您所认领的门店名称与门店主体无关，请核对认领门店名称是否正确或提供其他补充材料，谢谢。"
+                    ]
+                },
+                {
+                    "additional_qual_type": 2,
+                    "paths": [
+                        {
+                            "path": "xxxxx"
+                        }
+                    ],
+                    "status": 3,
+                    "reason": [
+                        "您好，您所认领的门店名称与门店主体无关，请核对认领门店名称是否正确或提供其他补充材料，谢谢。"
+                    ]
+                }
+            ]
+        }
+    }
+}

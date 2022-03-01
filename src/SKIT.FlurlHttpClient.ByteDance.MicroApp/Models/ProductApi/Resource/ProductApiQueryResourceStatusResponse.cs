@@ -10,11 +10,11 @@
             public class Data
             {
                 /// <summary>
-                /// 获取或设置资源 URI
+                /// 获取或设置资源路径
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("resource_uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("resource_uri")]
-                public string ResourceUri { get; set; } = default!;
+                public string ResourcePath { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置上传状态。

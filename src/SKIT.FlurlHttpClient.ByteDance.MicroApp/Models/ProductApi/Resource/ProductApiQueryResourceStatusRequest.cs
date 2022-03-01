@@ -20,10 +20,10 @@
         public string AppId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置资源文件 URI。
+        /// 获取或设置资源文件路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("resource_uri")]
         [System.Text.Json.Serialization.JsonPropertyName("resource_uri")]
-        public string ResourceUri { get; set; } = string.Empty;
+        public string ResourcePath { get; set; } = string.Empty;
     }
 }

@@ -1352,6 +1352,57 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/operation/add_shop_material 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/add-shop-material </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationAddShopMaterialResponse> ExecuteOpenApiV1MicroAppOperationAddShopMaterialAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationAddShopMaterialRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "operation", "add_shop_material")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationAddShopMaterialResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/operation/query_shop_material 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/query-shop-material </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationQueryShopMaterialResponse> ExecuteOpenApiV1MicroAppOperationQueryShopMaterialAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationQueryShopMaterialRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "operation", "query_shop_material")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken)
+                .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationQueryShopMaterialResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
     }
 }

@@ -93,11 +93,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                         public string? Text { get; set; }
 
                                         /// <summary>
-                                        /// 获取或设置履约文件资源 URI。
+                                        /// 获取或设置履约文件资源路径。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("fulfillment_uri")]
                                         [System.Text.Json.Serialization.JsonPropertyName("fulfillment_uri")]
-                                        public string? FulfillmentUri { get; set; }
+                                        public string? FulfillmentPath { get; set; }
                                     }
                                 }
 
@@ -130,11 +130,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                         public string? String { get; set; }
 
                                         /// <summary>
-                                        /// 获取或设置富文本资源 URI。
+                                        /// 获取或设置富文本资源路径。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("uri")]
                                         [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                                        public string? Uri { get; set; }
+                                        public string? FilePath { get; set; }
                                     }
                                 }
 
@@ -146,11 +146,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 public string? Text { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置图片资源 URI。
+                                /// 获取或设置图片资源路径。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("img_uri")]
                                 [System.Text.Json.Serialization.JsonPropertyName("img_uri")]
-                                public string? ImageUri { get; set; }
+                                public string? ImagePath { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置富文本内容列表。
@@ -213,11 +213,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public string Title { get; set; } = string.Empty;
 
                         /// <summary>
-                        /// 获取或设置商品资质资源 URI 列表。
+                        /// 获取或设置商品资质资源路径列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qualification_uris")]
                         [System.Text.Json.Serialization.JsonPropertyName("qualification_uris")]
-                        public IList<string> QualificationUriList { get; set; } = new List<string>();
+                        public IList<string> QualificationPathList { get; set; } = new List<string>();
 
                         /// <summary>
                         /// 获取或设置购物须知。

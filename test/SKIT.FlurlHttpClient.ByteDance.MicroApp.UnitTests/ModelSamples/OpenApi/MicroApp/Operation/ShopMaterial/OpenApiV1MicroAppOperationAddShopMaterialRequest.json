@@ -1,0 +1,27 @@
+﻿{
+    "client_key": "awxxxxxxxxxxxxxx",
+    "supplier_ext_id": "y0001",
+    "biz_licence_path": "xxxx/xxxx",
+    "contract_path": "xxxx/xxxx",
+    "qual_material": [
+        {
+            "path": "xxxx/xxxx"
+        }
+    ],
+    "additional_qual": [
+        {
+            "additional_qual_type": 1,
+            "paths": [
+                { "path": "tos-xxx-ffffffff/44efddffd1611fdf95" }
+            ]
+        },
+        {
+            "additional_qual_type": 2,
+            "paths": [
+                { "path": "tosxxx8/44efdfadfaf124c4edf95" },
+                { "path": "tosdsdf8/44efsdfafdasfc4e95" }
+            ]
+        }
+    ],
+    "expire_time": "2021-07-22"
+}

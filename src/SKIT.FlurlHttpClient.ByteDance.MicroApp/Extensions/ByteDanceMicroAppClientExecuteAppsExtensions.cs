@@ -238,5 +238,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendRequestWithJsonAsync<Models.AppsConvertOpenItemIdToEncryptIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
+
+        #region CustomerService
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/customer_service/url 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/customer-service </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCustomerServiceUrlResponse> ExecuteAppsCustomerServiceUrlAsync(this ByteDanceMicroAppClient client, Models.AppsCustomerServiceUrlRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "customer_service", "url")
+                .SetQueryParam("appid", request.AppId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("openid", request.OpenId)
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("scene", request.Scene);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        #endregion
     }
 }

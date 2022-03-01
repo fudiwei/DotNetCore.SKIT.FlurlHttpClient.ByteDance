@@ -1,0 +1,20 @@
+﻿{
+    "errno": 0,
+    "message": "success",
+    "data": {
+        "shareTplList": [
+            {
+                "templateId": "4immde7fdnb12sh6et",
+                "title": "分享标题",
+                "description": "分享文案",
+                "imageUrl": "https://xxx",
+                "auditStatus": 3,
+                "isDefault": 0,
+                "ctime": 1618456896,
+                "reason": "[\"xxx\", \"xxx\"]",
+                "mtime": 1618453991
+            }
+        ],
+        "total": 9
+    }
+}

@@ -1225,6 +1225,133 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationPhoneNumberApplicationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/microapp/operation/share_tpl_list 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/shareTplList </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationShareTemplateListResponse> ExecuteOpenApiV1MicroAppOperationShareTemplateListAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationShareTemplateListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "microapp", "operation", "share_tpl_list")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken)
+                .SetQueryParam("page", request.PageNumber)
+                .SetQueryParam("size", request.PageSize);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationShareTemplateListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/operation/add_share_tpl 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/addShareTpl </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationAddShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationAddShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationAddShareTemplateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "operation", "add_share_tpl")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationAddShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/operation/modify_share_tpl 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/modifyShareTpl </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationModifyShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationModifyShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationModifyShareTemplateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "operation", "modify_share_tpl")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationModifyShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/operation/del_share_tpl 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/delShareTpl </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationDeleteShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationDeleteShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationDeleteShareTemplateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "operation", "del_share_tpl")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationDeleteShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/microapp/operation/set_default_share_tpl 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/setDefaultShareTpl </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationSetDefaultShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "operation", "set_default_share_tpl")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("authorizer_access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
     }
 }

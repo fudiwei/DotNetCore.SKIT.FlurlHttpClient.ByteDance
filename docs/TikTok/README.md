@@ -86,4 +86,6 @@ else
 
 -   [如何生成 JSBridge 初始化时所需的参数及签名？](./Advanced_Parameters.md)
 
+-   [如何解密手机号码？](./Advanced_MobileNumberDecryption.md)
+
 -   [如何扩展额外的 API？](./Advanced_Extensions.md)

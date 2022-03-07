@@ -37,12 +37,12 @@
 
 ## 模块
 
-|               名称               |                                                                                                                                                                                          NuGet                                                                                                                                                                                           |                  其他                   |
-| :------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------: |
+|               名称               |                                                                                                                                                                                                 NuGet                                                                                                                                                                                                  |                  其他                   |
+| :------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------: |
 |   字节小程序（小程序、小游戏）   |     [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp)     |  [开发文档](./docs/MicroApp/README.md)  |
 |           抖音开放平台           |         [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTok.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTok) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTok.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTok)         |   [开发文档](./docs/TikTok/README.md)   |
 | 抖店开放平台（今日特卖、放心购） | [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokShop.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokShop) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokShop.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokShop) | [开发文档](./docs/TikTokShop/README.md) |
-|   巨量引擎开放平台（头条广告）   |                                                                                                                                                                                                                                                                                                                                                                                          |                _开发中_                 |
+|   巨量引擎开放平台（头条广告）   |                                                                                                                                                                                                                                                                                                                                                                                                        |                _开发中_                 |
 
 ---
 
@@ -55,3 +55,9 @@
 以上仓库地址同步更新，均可接受 Issue 或 Pull Request。
 
 如何参与贡献请参阅 [CONTRIBUTING](./CONTRIBUTING.md)。
+
+---
+
+## 更新日志
+
+详细更新说明请参阅 [CHANGELOG](./CHANGELOG.md)。

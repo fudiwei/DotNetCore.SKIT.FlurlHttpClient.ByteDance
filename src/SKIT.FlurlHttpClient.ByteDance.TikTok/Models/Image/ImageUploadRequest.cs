@@ -1,4 +1,6 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+﻿using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [POST] /image/upload 接口的请求。</para>
@@ -10,7 +12,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] ImageFileBytes { get; set; } = new byte[0];
+        public byte[] ImageFileBytes { get; set; } = Array.Empty<byte>();
 
         /// <summary>
         /// 获取或设置图片文件名。如果不指定将由系统自动生成。

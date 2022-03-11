@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.MediaFileName == null)
                 request.MediaFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
-            using var fileContent = new ByteArrayContent(request.MediaFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.MediaFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.MediaContentType);
             httpContent.Add(fileContent, "media", request.MediaFileName);
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 request.MediaFileName = Guid.NewGuid().ToString("N").ToLower();
 
             using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new ByteArrayContent(request.MediaFileBytes ?? new byte[0]), "media", request.MediaFileName);
+            httpContent.Add(new ByteArrayContent(request.MediaFileBytes ?? Array.Empty<byte>()), "media", request.MediaFileName);
 
             return await client.SendRequestAsync<Models.EnterpriseMediaTempUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }

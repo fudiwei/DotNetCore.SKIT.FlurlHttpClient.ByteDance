@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
                 if (request.ImageFileHash == null)
-                    request.ImageFileHash = Utilities.MD5Utility.Hash(request.ImageFileBytes);
+                    request.ImageFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.ImageFileBytes)).Replace("-", "");
 
                 if (request.ImageContentType == null)
                     request.ImageContentType = "image/jpeg";
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
                 if (request.ImageFileHash == null)
-                    request.ImageFileHash = Utilities.MD5Utility.Hash(request.ImageFileBytes);
+                    request.ImageFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.ImageFileBytes)).Replace("-", "");
 
                 if (request.ImageContentType == null)
                     request.ImageContentType = "image/jpeg";
@@ -124,7 +124,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".mp4";
 
             if (request.VideoFileHash == null)
-                request.VideoFileHash = Utilities.MD5Utility.Hash(request.VideoFileBytes ?? new byte[0]);
+                request.VideoFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.VideoFileBytes)).Replace("-", "");
 
             if (request.VideoContentType == null)
                 request.VideoContentType = "video/mp4";
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 .WithHeader("Access-Token", request.AccessToken);
 
             using var httpContent = new MultipartFormDataContent();
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video_file", request.VideoFileName);
             httpContent.Add(new StringContent(request.AdvertiserId.ToString()), "advertiser_id");

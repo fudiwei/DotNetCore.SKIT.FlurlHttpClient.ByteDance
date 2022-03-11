@@ -515,7 +515,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
             string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
-            using var fileContent = new ByteArrayContent(request.MaterialFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.MaterialFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent(boundary);
             httpContent.Add(fileContent, "\"material_file\"", $"\"{HttpUtility.UrlEncode(request.MaterialFileName)}\"");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");

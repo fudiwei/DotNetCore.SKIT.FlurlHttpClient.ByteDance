@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.ImageFileName == null)
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
-            using var fileContent = new ByteArrayContent(request.ImageFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.ImageFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.ImageContentType);
             httpContent.Add(fileContent, "image", request.ImageFileName);

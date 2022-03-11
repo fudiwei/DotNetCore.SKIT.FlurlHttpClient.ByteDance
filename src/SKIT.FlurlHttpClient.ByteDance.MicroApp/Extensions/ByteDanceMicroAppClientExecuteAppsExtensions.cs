@@ -180,7 +180,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "upload_live_image");
 
             string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
-            using var fileContent = new ByteArrayContent(request.ImageFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.ImageFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent(boundary);
             httpContent.Add(fileContent, "\"image\"", $"\"{HttpUtility.UrlEncode(request.ImageFileName)}\"");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.AppId)), "app_id");

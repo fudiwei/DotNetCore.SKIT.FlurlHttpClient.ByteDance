@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);
@@ -230,7 +230,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);
@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);
@@ -406,7 +406,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);
@@ -461,7 +461,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? new byte[0]);
+            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
             using var httpContent = new MultipartFormDataContent();
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
             httpContent.Add(fileContent, "video", request.VideoFileName);

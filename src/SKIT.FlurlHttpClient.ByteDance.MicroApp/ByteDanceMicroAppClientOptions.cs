@@ -13,9 +13,9 @@
 
         /// <summary>
         /// 获取或设置字节小程序 API 域名。
-        /// <para>默认值：<see cref="ByteDanceMicroAppEndpoints.DEFAULT"/></para>
+        /// <para>默认值：<see cref="ByteDanceMicroAppEndpoints.API_MINIAPP"/></para>
         /// </summary>
-        public string Endpoints { get; set; } = ByteDanceMicroAppEndpoints.DEFAULT;
+        public string Endpoints { get; set; } = ByteDanceMicroAppEndpoints.API_MINIAPP;
 
         /// <summary>
         /// 获取或设置字节小程序 AppId。

@@ -6,6 +6,13 @@
     public class AppsTokenResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
+        /// 获取或设置错误号。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("error")]
+        [System.Text.Json.Serialization.JsonPropertyName("error")]
+        public int ErrorNumber { get; set; }
+
+        /// <summary>
         /// 获取或设置调用接口的凭证。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("access_token")]
@@ -18,5 +25,10 @@
         [Newtonsoft.Json.JsonProperty("expires_in")]
         [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
         public int ExpiresIn { get; set; }
+
+        public override bool IsSuccessful()
+        {
+            return base.IsSuccessful() && ErrorNumber == 0;
+        }
     }
 }

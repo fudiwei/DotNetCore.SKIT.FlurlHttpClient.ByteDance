@@ -10,13 +10,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("errno")]
         [System.Text.Json.Serialization.JsonPropertyName("errno")]
-        public override int ErrorNumber { get; set; }
-
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("errmsg")]
-        [System.Text.Json.Serialization.JsonPropertyName("errmsg")]
-        public override string? ErrorMessage { get; set; }
+        public override long ErrorCode { get; set; }
     }
 }

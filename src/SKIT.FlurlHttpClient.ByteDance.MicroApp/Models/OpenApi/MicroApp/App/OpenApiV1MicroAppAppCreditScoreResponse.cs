@@ -23,7 +23,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("errno")]
         [System.Text.Json.Serialization.JsonPropertyName("errno")]
-        public override int ErrorNumber { get; set; }
+        public override long ErrorCode { get; set; }
 
         /// <summary>
         /// <inheritdoc/>

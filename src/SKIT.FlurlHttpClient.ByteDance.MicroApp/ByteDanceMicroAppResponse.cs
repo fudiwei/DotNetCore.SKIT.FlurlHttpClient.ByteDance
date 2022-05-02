@@ -56,20 +56,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// 获取字节小程序 API 返回的错误号。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("error")]
-        [System.Text.Json.Serialization.JsonPropertyName("error")]
-        public virtual int Error { get; set; } = default!;
-
-        /// <summary>
-        /// 获取字节小程序 API 返回的错误号。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public virtual int ErrorNumber { get; set; }
-
-        /// <summary>
         /// 获取字节小程序 API 返回的详细错误号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("errcode")]
@@ -82,13 +68,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         [Newtonsoft.Json.JsonProperty("errmsg")]
         [System.Text.Json.Serialization.JsonPropertyName("errmsg")]
         public virtual string? ErrorMessage { get; set; }
-
-        /// <summary>
-        /// 获取字节小程序 API 返回的错误提示。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("err_tips")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
-        public virtual string? ErrorTips { get; set; }
 
         /// <summary>
         /// 获取字节小程序 API 返回的日志 ID。
@@ -104,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 && Error == 0 && ErrorNumber == 0 && ErrorCode == 0;
+            return RawStatus == 200 && ErrorCode == 0;
         }
     }
 }

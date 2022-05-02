@@ -6,6 +6,13 @@
     public class AppsJsCode2SessionResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
+        /// 获取或设置错误号。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("error")]
+        [System.Text.Json.Serialization.JsonPropertyName("error")]
+        public int ErrorNumber { get; set; }
+
+        /// <summary>
         /// 获取或设置会话密钥。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("session_key")]
@@ -32,5 +39,10 @@
         [Newtonsoft.Json.JsonProperty("unionid")]
         [System.Text.Json.Serialization.JsonPropertyName("unionid")]
         public string? UnionId { get; set; }
+
+        public override bool IsSuccessful()
+        {
+            return base.IsSuccessful() && ErrorNumber == 0;
+        }
     }
 }

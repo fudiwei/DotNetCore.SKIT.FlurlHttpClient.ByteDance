@@ -6,9 +6,14 @@
     public static class ByteDanceMicroAppEndpoints
     {
         /// <summary>
-        /// 主域名（默认）。
+        /// 小程序域名（默认）。
         /// </summary>
-        public const string DEFAULT = "https://developer.toutiao.com/api";
+        public const string API_MINIAPP = "https://developer.toutiao.com/api";
+
+        /// <summary>
+        /// 小游戏域名。
+        /// </summary>
+        public const string API_MINIGAME = "https://minigame.zijieapi.com/mgplatform/api";
 
         /// <summary>
         /// 第三方平台接口域名。

@@ -6,6 +6,20 @@
     public class OpenApiV1AuthThirdPartyTokenResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("errno")]
+        [System.Text.Json.Serialization.JsonPropertyName("errno")]
+        public override long ErrorCode { get; set; }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("message")]
+        [System.Text.Json.Serialization.JsonPropertyName("message")]
+        public override string? ErrorMessage { get; set; }
+
+        /// <summary>
         /// 获取或设置第三方平台 AccessToken。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("component_access_token")]

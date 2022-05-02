@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? ByteDanceMicroAppEndpoints.DEFAULT;
+            FlurlClient.BaseUrl = options.Endpoints ?? ByteDanceMicroAppEndpoints.API_MINIAPP;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
         }
 

@@ -6,6 +6,20 @@
     public class OpenApiV1AuthRetrieveResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("errno")]
+        [System.Text.Json.Serialization.JsonPropertyName("errno")]
+        public override long ErrorCode { get; set; }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("message")]
+        [System.Text.Json.Serialization.JsonPropertyName("message")]
+        public override string? ErrorMessage { get; set; }
+
+        /// <summary>
         /// 获取或设置授权码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("authorization_code")]

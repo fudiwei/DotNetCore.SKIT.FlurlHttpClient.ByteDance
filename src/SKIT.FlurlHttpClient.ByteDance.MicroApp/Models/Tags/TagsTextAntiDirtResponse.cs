@@ -82,18 +82,11 @@
         }
 
         /// <summary>
-        /// 获取或设置错误 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("error_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("error_id")]
-        public string? ErrorId { get; set; }
-
-        /// <summary>
         /// <inheritdoc/>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("code")]
         [System.Text.Json.Serialization.JsonPropertyName("code")]
-        public override int Error { get; set; }
+        public override long ErrorCode { get; set; }
 
         /// <summary>
         /// <inheritdoc/>
@@ -103,10 +96,22 @@
         public override string? ErrorMessage { get; set; }
 
         /// <summary>
+        /// 获取或设置错误 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("error_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("error_id")]
+        public string? ErrorId { get; set; }
+
+        /// <summary>
         /// 获取或设置检测结果列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         public Types.Result[] ResultList { get; set; } = default!;
+
+        public override bool IsSuccessful()
+        {
+            return base.IsSuccessful() && string.IsNullOrEmpty(ErrorId);
+        }
     }
 }

@@ -22,6 +22,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.Product.CommonProductInfo.AppId == null)
+                request.Product.CommonProductInfo.AppId = client.Credentials.AppId;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "add");
 
@@ -41,6 +44,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.Product.CommonProductInfo.AppId == null)
+                request.Product.CommonProductInfo.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "modify");
@@ -62,6 +68,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.ProductStatusInfo.AppId == null)
+                request.ProductStatusInfo.AppId = client.Credentials.AppId;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "modify_status");
 
@@ -81,6 +90,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "query");
@@ -103,6 +115,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "upload_resource");
 
@@ -123,10 +138,39 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "product", "api", "query_resource_status");
 
             return await client.SendRequestWithJsonAsync<Models.ProductApiQueryResourceStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Qualification
+        /// <summary>
+        /// <para>异步调用 [POST] /product/api/add_qualification 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/pan-knowledge/product-modify </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/pan-knowledge/qualification-modify </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductApiAddQualificationResponse> ExecuteProductApiAddQualificationAsync(this ByteDanceMicroAppClient client, Models.ProductApiAddQualificationRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "product", "api", "add_qualification");
+
+            return await client.SendRequestWithJsonAsync<Models.ProductApiAddQualificationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

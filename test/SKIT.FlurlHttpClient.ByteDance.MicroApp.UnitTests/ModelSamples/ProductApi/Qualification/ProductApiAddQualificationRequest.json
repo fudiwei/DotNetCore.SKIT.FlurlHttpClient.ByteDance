@@ -1,0 +1,33 @@
+﻿{
+    "access_token": "0801121846742b4c56762b6f5a4a3636527747714c39334950773d3d",
+    "appid": "tt5daf2b12c2857910",
+    "qualification": {
+        "object_type": 2,
+        "institution_qualification_info": {
+            "name": "北京******科技有限公司",
+            "institution_introduction": "****是专注抖音知识付费、内容变现、课程上传、支持短视频直播挂载的小程序",
+            "company_name": "哈哈哈ha",
+            "institution_record_name": "哈哈哈",
+            "institution_scene_type": "线上机构",
+            "institution_subject_type": "企业工商户",
+            "legal_person_name": "张三",
+            "legal_person_ID_number": "110101199003079315",
+            "legal_person_ID_img_uris": [
+                "product/resource/002b47258345646892b517009a473630",
+                "product/resource/002b47258345646892b517009a473630"
+            ],
+            "institution_logo_uri": "product/resource/002b47258345646892b517009a473630",
+            "institution_trade_mark_uri": "product/resource/002b47258345646892b517009a473630",
+            "qualification_info_lst": [
+                {
+                    "type": 1,
+                    "image_uris": [ "product/resource/002b47258345646892b517009a473630" ],
+                    "validity_date": "2022-09-21",
+                    "license_id": "2352WE600099"
+                }
+            ],
+            "img_uri": "tos-boe-i-3rjuffv3j3/710081825fd1dfc9c428fd5e877b0e5e",
+            "nickname": "张三"
+        }
+    }
+}

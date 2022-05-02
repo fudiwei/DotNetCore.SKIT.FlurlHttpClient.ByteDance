@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("seller_uid")]
                 [System.Text.Json.Serialization.JsonPropertyName("seller_uid")]
-                public string? SellerUid { get; set; }
+                public string? SellerMerchantId { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频 ID。

@@ -20,6 +20,13 @@
         public string? AppId { get; set; }
 
         /// <summary>
+        /// 获取或设置门店收款商户号。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("store_uid")]
+        [System.Text.Json.Serialization.JsonPropertyName("store_uid")]
+        public string? StoreMerchantId { get; set; }
+
+        /// <summary>
         /// 获取或设置商户订单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]

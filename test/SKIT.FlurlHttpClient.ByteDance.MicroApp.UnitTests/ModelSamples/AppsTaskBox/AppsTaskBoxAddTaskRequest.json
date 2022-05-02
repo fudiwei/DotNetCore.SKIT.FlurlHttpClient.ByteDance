@@ -1,0 +1,16 @@
+﻿{
+    "task_name": "测试12333",
+    "access_token": "xxxx",
+    "task_settle_type": 1,
+    "appid": "tt933ee5830c062fa6",
+    "start_page": "xxx",
+    "anchor_title": "测试锚点标",
+    "task_icon": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.soutu123.cn%2Felement_origin_min_pic%2F01%2F35%2F26%2F55573bdad4cb2f4.jpg%21%2Ffw%2F700%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.soutu123.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621156196&t=848be9cae3f5bfb86a12d5021cbf9c1f",
+    "task_start_time": 1618285226,
+    "task_end_time": 1620963626,
+    "task_desc": "1. sss <br>2.sss2",
+    "refer_videos": [ "http://boe.v.douyin.com/Z0JRdbe/", "http://boe.v.douyin.com/Z0JFXvp/" ],
+    "task_tags": [ "测试类", "心理" ],
+    "refer_ma_captures": [ "https://static.runoob.com/images/demo/demo1.jpg", "https://static.runoob.com/images/demo/demo2.jpg" ],
+    "refer_video_captures": [ "https://static.runoob.com/images/demo/demo3.jpg" ]
+}

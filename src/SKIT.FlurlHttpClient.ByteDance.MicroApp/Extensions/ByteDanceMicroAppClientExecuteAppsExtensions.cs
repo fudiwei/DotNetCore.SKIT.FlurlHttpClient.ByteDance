@@ -63,6 +63,58 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendRequestWithJsonAsync<Models.AppsJsCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsV2TokenResponse> ExecuteAppsV2TokenAsync(this ByteDanceMicroAppClient client, Models.AppsV2TokenRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.AppSecret == null)
+                request.AppSecret = client.Credentials.AppSecret;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v2", "token");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsV2TokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/jscode2session 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsV2JsCode2SessionResponse> ExecuteAppsV2JsCode2SessionAsync(this ByteDanceMicroAppClient client, Models.AppsV2JsCode2SessionRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.AppSecret == null)
+                request.AppSecret = client.Credentials.AppSecret;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v2", "jscode2session");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsV2JsCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Qrcode
         /// <summary>
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>
@@ -135,7 +187,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Config
         /// <summary>
         /// <para>异步调用 [POST] /apps/share_config 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/live-bg-image </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/ShareConfig </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -266,7 +318,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.AppsCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
-
         #endregion
     }
 }

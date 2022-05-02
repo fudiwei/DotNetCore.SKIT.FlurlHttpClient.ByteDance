@@ -8,8 +8,8 @@
         /// <summary>
         /// 获取或设置素材 ID。
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonProperty("media_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("media_id")]
         public string MediaId { get; set; } = string.Empty;
     }
 }

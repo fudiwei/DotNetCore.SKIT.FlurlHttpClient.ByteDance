@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
@@ -509,18 +507,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request.MaterialFileName == null)
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + (request.MaterialType == 8 ? ".pdf" : ".jpg");
 
+            if (request.MaterialFileContentType == null)
+                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName);
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "microapp", "upload_material")
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
-            using var fileContent = new ByteArrayContent(request.MaterialFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent(boundary);
-            httpContent.Add(fileContent, "\"material_file\"", $"\"{HttpUtility.UrlEncode(request.MaterialFileName)}\"");
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType!, formDataName: "material_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
-            httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data; boundary=" + boundary);
-            fileContent.Headers.ContentLength = request.MaterialFileBytes?.Length;
 
             return await client.SendRequestAsync<Models.OpenApiMicroAppUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }

@@ -27,10 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "sandbox", "webhook", "event", "send")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new StringContent(request.EventType, Encoding.UTF8), "event_type");
-
-            return await client.SendRequestAsync<Models.SandboxWebhookEventSendResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.SandboxWebhookEventSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

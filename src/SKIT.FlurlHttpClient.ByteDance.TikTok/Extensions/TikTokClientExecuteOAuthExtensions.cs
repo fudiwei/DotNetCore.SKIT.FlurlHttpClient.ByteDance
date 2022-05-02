@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -23,16 +22,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.ClientKey == null)
+                request.ClientKey = client.Credentials.ClientKey;
+
+            if (request.ClientSecret == null)
+                request.ClientSecret = client.Credentials.ClientSecret;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "oauth", "access_token");
 
-            using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
-            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
-            httpContent.Add(new StringContent(request.Code, Encoding.UTF8), "code");
-            httpContent.Add(new StringContent(request.GrantType, Encoding.UTF8), "grant_type");
-
-            return await client.SendRequestAsync<Models.OAuthAccessTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OAuthAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -48,14 +47,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.ClientKey == null)
+                request.ClientKey = client.Credentials.ClientKey;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "oauth", "renew_refresh_token");
 
-            using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
-            httpContent.Add(new StringContent(request.RefreshToken, Encoding.UTF8), "refresh_token");
-
-            return await client.SendRequestAsync<Models.OAuthRenewRefreshTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OAuthRenewRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -71,15 +69,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.ClientKey == null)
+                request.ClientKey = client.Credentials.ClientKey;
+
+            if (request.ClientSecret == null)
+                request.ClientSecret = client.Credentials.ClientSecret;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "oauth", "client_token");
 
-            using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
-            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
-            httpContent.Add(new StringContent(request.GrantType, Encoding.UTF8), "grant_type");
-
-            return await client.SendRequestAsync<Models.OAuthClientTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OAuthClientTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -95,15 +94,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            if (request.ClientKey == null)
+                request.ClientKey = client.Credentials.ClientKey;
+
+            if (request.ClientSecret == null)
+                request.ClientSecret = client.Credentials.ClientSecret;
+
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "oauth", "refresh_token");
 
-            using var httpContent = new MultipartFormDataContent();
-            httpContent.Add(new StringContent(client.Credentials.ClientKey, Encoding.UTF8), "client_key");
-            httpContent.Add(new StringContent(client.Credentials.ClientSecret, Encoding.UTF8), "client_secret");
-            httpContent.Add(new StringContent(request.RefreshToken, Encoding.UTF8), "refresh_token");
-
-            return await client.SendRequestAsync<Models.OAuthRefreshTokenResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OAuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         #region User

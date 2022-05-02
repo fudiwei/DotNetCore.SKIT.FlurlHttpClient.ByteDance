@@ -8,8 +8,8 @@
         /// <summary>
         /// 获取或设置需要模拟的事件类型。
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonProperty("event_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("event_type")]
         public string EventType { get; set; } = string.Empty;
     }
 }

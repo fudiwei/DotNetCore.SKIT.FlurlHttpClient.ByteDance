@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -28,17 +27,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (request.VideoContentType == null)
-                request.VideoContentType = "video/mp4";
-
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
+            if (request.VideoContentType == null)
+                request.VideoContentType = "video/mp4";
 
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.VideoUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
@@ -83,17 +78,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
-            if (request.VideoContentType == null)
-                request.VideoContentType = "video/mp4";
-
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
+            if (request.VideoContentType == null)
+                request.VideoContentType = "video/mp4";
 
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.VideoPartUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
@@ -224,17 +215,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (request.VideoContentType == null)
-                request.VideoContentType = "video/mp4";
-
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
+            if (request.VideoContentType == null)
+                request.VideoContentType = "video/mp4";
 
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.ToutiaoVideoUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
@@ -285,11 +272,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
-
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.ToutiaoVideoPartUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
@@ -400,17 +383,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (request.VideoContentType == null)
-                request.VideoContentType = "video/mp4";
-
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
+            if (request.VideoContentType == null)
+                request.VideoContentType = "video/mp4";
 
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.XiguaVideoUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
@@ -455,17 +434,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
-            if (request.VideoContentType == null)
-                request.VideoContentType = "video/mp4";
-
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            using var httpContent = new MultipartFormDataContent();
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video", request.VideoFileName);
+            if (request.VideoContentType == null)
+                request.VideoContentType = "video/mp4";
 
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
             return await client.SendRequestAsync<Models.XiguaVideoPartUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 

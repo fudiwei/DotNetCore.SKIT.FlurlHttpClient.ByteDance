@@ -442,17 +442,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             }
             else
             {
-                string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
-                string filename = "invoice.pdf";
-                using var fileContent = new ByteArrayContent(request.FileBytes);
-                using var paramContent = new StringContent(client.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
-                using var httpContent = new MultipartFormDataContent(boundary);
-                httpContent.Add(fileContent, "\"upload_file\"", $"\"{HttpUtility.UrlEncode(filename)}\"");
-                httpContent.Add(paramContent, Constants.FormDataFields.FORMDATA_PARAM_JSON);
-                httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data; boundary=" + boundary);
-                fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/pdf");
-                fileContent.Headers.ContentLength = request.FileBytes.Length;
-
+                using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: "invoice.pdf", fileBytes: request.FileBytes, fileContentType: "application/pdf", formDataName: "upload_file");
+                httpContent.Add(new StringContent(client.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json"), Constants.FormDataFields.FORMDATA_PARAM_JSON);
+                
                 return await client.SendRequestAsync<Models.OrderInvoiceUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
             }
         }

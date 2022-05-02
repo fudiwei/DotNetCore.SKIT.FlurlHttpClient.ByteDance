@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                         var newFormdataContent = new MultipartFormDataContent(boundary);
 
                         string paramJson = await oldParamHttpContent.ReadAsStringAsync();
-                        paramJson = Utilities.MarshalJsonUtility.Format(paramJson);
+                        paramJson = Utilities.JsonUtility.Format(paramJson);
 
                         foreach (var item in oldFormdataContent)
                         {
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Interceptors
                 else
                 {
                     string paramJson = flurlCall.RequestBody;
-                    paramJson = Utilities.MarshalJsonUtility.Format(flurlCall.RequestBody);
+                    paramJson = Utilities.JsonUtility.Format(flurlCall.RequestBody);
 
                     if (!string.IsNullOrEmpty(paramJson))
                     {

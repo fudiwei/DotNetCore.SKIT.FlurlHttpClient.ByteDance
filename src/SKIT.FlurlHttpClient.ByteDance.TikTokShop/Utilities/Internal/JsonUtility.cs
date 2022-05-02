@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Utilities
 {
-    internal static class MarshalJsonUtility
+    internal static class JsonUtility
     {
         private class MarshalJObjectConverter : JsonConverter
         {

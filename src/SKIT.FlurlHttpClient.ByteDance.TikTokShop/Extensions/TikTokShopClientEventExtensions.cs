@@ -68,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
             try
             {
-                Utilities.MarshalJsonUtility.Format(callbackJson); // 验证是否是有效的 JSON
+                Utilities.JsonUtility.Format(callbackJson); // 验证是否是有效的 JSON
 
                 string plainText = $"{client.Credentials.AppKey}{callbackJson}{client.Credentials.AppSecret}";
                 string signText = Utilities.MD5Utility.Hash(plainText);

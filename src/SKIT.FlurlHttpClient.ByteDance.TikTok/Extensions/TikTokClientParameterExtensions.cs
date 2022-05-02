@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>生成客户端 JSBridge `sdk.config` 所需的参数。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6850443440044410888 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/permission/js/signature </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="jsapiTicket"></param>
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>生成抖音获取授权临时票据的 URL。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848834666171009035 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/douyin-get-permission-code </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>
@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>生成头条获取授权临时票据的 URL。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848834851366275076 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/toutiao-get-permission-code </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>生成抖音获取静默授权临时票据的 URL。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848834666170959883 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/douyin-default-get-permission-code </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>
@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>生成西瓜获取授权临时票据的 URL。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6852243568438822925 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/xigua-get-permission-code </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>

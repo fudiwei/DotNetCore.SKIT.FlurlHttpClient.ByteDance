@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// <para>表示 verify_webhook 事件的数据。</para>
-    /// <para>REF: https://open.douyin.com/platform/doc/6850452582826067975 </para>
+    /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/event-list </para>
     /// </summary>
     public class VerifyWebhookEvent : TikTokEvent<VerifyWebhookEvent.Types.Content>
     {

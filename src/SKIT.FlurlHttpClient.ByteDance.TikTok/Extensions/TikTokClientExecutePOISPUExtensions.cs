@@ -7,7 +7,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
-    public static class TikTokClientExecutePOISPUrExtensions
+    public static class TikTokClientExecutePOISPUExtensions
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/spu/sync 接口。</para>

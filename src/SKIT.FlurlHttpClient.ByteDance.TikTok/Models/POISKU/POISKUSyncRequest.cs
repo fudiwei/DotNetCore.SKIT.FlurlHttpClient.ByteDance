@@ -12,11 +12,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
             public class SKU
             {
                 /// <summary>
-                /// 获取或设置 SKU 属性字段。
+                /// 获取或设置 SKU 属性字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-                public IDictionary<int, object> Attribute { get; set; } = new Dictionary<int, object>();
+                public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
 
                 /// <summary>
                 /// 获取或设置价格（单位：分）。

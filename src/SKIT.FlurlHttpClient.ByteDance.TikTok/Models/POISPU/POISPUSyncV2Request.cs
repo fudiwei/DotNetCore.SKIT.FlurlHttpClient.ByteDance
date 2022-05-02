@@ -150,11 +150,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
         public double? TakeRate { get; set; }
 
         /// <summary>
-        /// 获取或设置 SPU 属性字段。
+        /// 获取或设置 SPU 属性字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("attribute")]
         [System.Text.Json.Serialization.JsonPropertyName("attribute")]
-        public IDictionary<int, object> Attribute { get; set; } = new Dictionary<int, object>();
+        public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
 
         /// <summary>
         /// 获取或设置商品亮点列表。

@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /hotsearch/sentences 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798471810516995 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/hot-video-data/get-current-hot-words </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /hotsearch/trending/sentences 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798471810549763 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/hot-video-data/get-ascending-words </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /hotsearch/videos 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798471810549763 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/hot-video-data/get-ascending-words </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /poi/search/keyword 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806527751555086 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/video-poi </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/query 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798600688830475 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/get-douyin-poi-id </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/base/query/amap 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798579239192588 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-basic-ability/get-douyin-id-by-autoNavi-id </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

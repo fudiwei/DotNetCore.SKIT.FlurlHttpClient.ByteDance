@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region Hotel
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/hotel/order/commit 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806532054812686 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/place-order </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/hotel/order/status 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806510630307854 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/payment-status-notice </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/hotel/order/cancel 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806501990041614 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-order </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region PresaleGroupon
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/presale_groupon/order/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6875919211626121220 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/place-presell-ticket-order </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/presale_groupon/order/commit 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6875919211626072068 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/confirm-presell-ticket-order </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -137,7 +137,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/ext/presale_groupon/order/cancel 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6875919211626022916 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-presell-ticket-order </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

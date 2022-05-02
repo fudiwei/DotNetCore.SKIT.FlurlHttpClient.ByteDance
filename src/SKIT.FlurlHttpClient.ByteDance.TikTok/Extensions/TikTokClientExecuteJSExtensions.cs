@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /js/getticket 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798514798004236 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/tools-ability/jsb-management/get-jsb-ticket </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -9,66 +9,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     {
         public static class Types
         {
-            public class Attribute
-            {
-                public static class Types
-                {
-                    public class DirectDiscountCoupon
-                    {
-                        /// <summary>
-                        /// 获取或设置折扣金额（单位：分）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("reduce_cost")]
-                        [System.Text.Json.Serialization.JsonPropertyName("reduce_cost")]
-                        public int? ReductCost { get; set; }
-                    }
-
-                    public class FullReductionCoupon
-                    {
-                        public static class Types
-                        {
-                            public class FullReductionInfo
-                            {
-                                /// <summary>
-                                /// 获取或设置折扣金额（单位：分）。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("reduce_cost")]
-                                [System.Text.Json.Serialization.JsonPropertyName("reduce_cost")]
-                                public int? ReductCost { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置折扣门槛（单位：分）。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("least_cost")]
-                                [System.Text.Json.Serialization.JsonPropertyName("least_cost")]
-                                public int? LeastCost { get; set; }
-                            }
-                        }
-
-                        /// <summary>
-                        /// 获取或设置阶梯折扣信息列表。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("full_reduction_infos")]
-                        [System.Text.Json.Serialization.JsonPropertyName("full_reduction_infos")]
-                        public IList<Types.FullReductionInfo>? FullReductionInfoList { get; set; }
-                    }
-                }
-
-                /// <summary>
-                /// 获取或设置立减券信息。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("direct_discount_coupon")]
-                [System.Text.Json.Serialization.JsonPropertyName("direct_discount_coupon")]
-                public Types.DirectDiscountCoupon? DirectDiscountCoupon { get; set; }
-
-                /// <summary>
-                /// 获取或设置满减券信息。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("full_reduction_coupon")]
-                [System.Text.Json.Serialization.JsonPropertyName("full_reduction_coupon")]
-                public Types.FullReductionCoupon? FullReductionCoupon { get; set; }
-            }
-
             public class Availability
             {
                 public static class Types
@@ -191,11 +131,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
         public long? ClaimEndTimestamp { get; set; }
 
         /// <summary>
-        /// 获取或设置属性信息。
+        /// 获取或设置优惠券属性字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("attribute")]
         [System.Text.Json.Serialization.JsonPropertyName("attribute")]
-        public Types.Attribute? Attribute { get; set; }
+        public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
 
         /// <summary>
         /// 获取或设置可用列表。

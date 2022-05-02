@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/item 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798450331486212 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-video-status </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/fans 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798450331453444 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-fans-count </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/like 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798450331518980 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-like-number </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/comment 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798450331420676 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-comment-count </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/share 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798471810451459 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-share-count </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -121,7 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/profile 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798450331551748 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/user-data/get-user-home-pv </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

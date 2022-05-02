@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/user/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798256999204876 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/get-user-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/user/detail 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798278490884099 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/get-user-detail </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/user/action/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798278490916867 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/get-user-interaction-record </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/tag/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798256999303180 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/get-tag-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -112,7 +112,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/leads/tag/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798278490785795 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/create-tag </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -133,7 +133,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/leads/tag/update 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798278490851331 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/edit-tag </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/leads/tag/delete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798256999270412 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/delete-tag </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -175,7 +175,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/leads/tag/user/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798278490818563 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/get-tag-user-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -196,7 +196,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/leads/tag/user/update 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798256999237644 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/manage-user/set-tag </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

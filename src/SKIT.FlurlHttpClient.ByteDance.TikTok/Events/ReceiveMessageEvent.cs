@@ -4,7 +4,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Events
 {
     /// <summary>
     /// <para>表示 receive_msg 事件的数据。</para>
-    /// <para>REF: https://open.douyin.com/platform/doc/6850452581433608199 </para>
+    /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/event-list </para>
     /// </summary>
     public class ReceiveMessageEvent : TikTokEvent<ReceiveMessageEvent.Types.Content>
     {

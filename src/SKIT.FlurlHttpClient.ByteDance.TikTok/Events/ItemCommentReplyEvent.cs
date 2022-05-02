@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// <para>表示 item_comment_reply 事件的数据。</para>
-    /// <para>REF: https://open.douyin.com/platform/doc/6923372950938814471 </para>
+    /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/event-list </para>
     /// </summary>
     public class ItemCommentReplyEvent : TikTokEvent<ItemCommentReplyEvent.Types.Content>
     {

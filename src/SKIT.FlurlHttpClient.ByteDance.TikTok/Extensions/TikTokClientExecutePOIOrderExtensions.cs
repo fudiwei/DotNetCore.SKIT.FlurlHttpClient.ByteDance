@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798579239290892 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/client-message-sync/order-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/status 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806501990074382 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/order-status-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/confirm 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6875919211793778699 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-presell-ticket </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/order/bill/token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6898241240786126861 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/get-download-bill-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/order/list/token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6932733054666524685 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/get-download-order-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

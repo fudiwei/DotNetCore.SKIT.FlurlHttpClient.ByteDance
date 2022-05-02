@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /oauth/access_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806493387606024 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/get-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/renew_refresh_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806519174154248 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/refresh-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/client_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806493387573256 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/client-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -84,7 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/refresh_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806497707722765 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/refresh-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region User
         /// <summary>
         /// <para>异步调用 [GET] /oauth/userinfo 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848806527751489550 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-management/get-account-open-info </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

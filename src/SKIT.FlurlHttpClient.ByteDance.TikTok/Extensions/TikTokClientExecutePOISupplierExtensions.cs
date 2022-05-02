@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/supplier/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798600688961547 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/synchronism </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/supplier/query 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798600688928779 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/search </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/supplier/query_all 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/7005578946813184030 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/query-all-shop-info </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/supplier/query_callback 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/7005579747056977928 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/query-shop-all-tasks </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -93,7 +93,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/v2/supplier/query/task 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6948301678441482243 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/task-query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/v2/supplier/query/supplier 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6948302162829101059 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/status-query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/supplier/match 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6948299842175141926 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/shop/poi-sync-task </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

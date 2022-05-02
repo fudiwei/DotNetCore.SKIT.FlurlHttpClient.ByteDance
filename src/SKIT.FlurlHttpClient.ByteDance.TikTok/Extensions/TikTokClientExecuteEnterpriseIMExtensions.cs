@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/message/send 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798087226329100 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/message-management-enterprise/message-to-user </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region Card
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/card/save 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798235528595467 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/create-or-update-message-card </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/im/card/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798235528562699 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/get-message-card-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/card/delete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc/6848798235528529931 </para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/delete-message-card </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

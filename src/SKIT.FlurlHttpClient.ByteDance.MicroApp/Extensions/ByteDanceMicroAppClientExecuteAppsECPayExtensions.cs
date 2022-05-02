@@ -184,7 +184,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1CreateOrderResponse> ExecuteAppsECPayV1CreateOrderAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1CreateOrderRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPayCreateOrderV1Response> ExecuteAppsECPayCreateOrderV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayCreateOrderV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -198,7 +198,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1CreateOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1QueryOrderResponse> ExecuteAppsECPayV1QueryOrderAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1QueryOrderRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPayQueryOrderV1Response> ExecuteAppsECPayQueryOrderV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayQueryOrderV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -223,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1QueryOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1CreateRefundResponse> ExecuteAppsECPayV1CreateRefundAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1CreateRefundRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPayCreateRefundV1Response> ExecuteAppsECPayCreateRefundV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayCreateRefundV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -248,7 +248,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_refund");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1CreateRefundResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1QueryRefundResponse> ExecuteAppsECPayV1QueryRefundAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1QueryRefundRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPayQueryRefundV1Response> ExecuteAppsECPayQueryRefundV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayQueryRefundV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -273,7 +273,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_refund");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1QueryRefundResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1SettleResponse> ExecuteAppsECPayV1SettleAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1SettleRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPaySettleV1Response> ExecuteAppsECPaySettleV1Async(this ByteDanceMicroAppClient client, Models.AppsECPaySettleV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -298,7 +298,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "settle");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1SettleResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPaySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsECPayV1QuerySettleResponse> ExecuteAppsECPayV1QuerySettleAsync(this ByteDanceMicroAppClient client, Models.AppsECPayV1QuerySettleRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsECPayQuerySettleV1Response> ExecuteAppsECPayQuerySettleV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayQuerySettleV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -323,7 +323,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_settle");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayV1QuerySettleResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayQuerySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 

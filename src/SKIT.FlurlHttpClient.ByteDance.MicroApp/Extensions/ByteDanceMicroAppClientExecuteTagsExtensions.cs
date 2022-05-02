@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.TagsTextAntiDirtResponse> ExecuteTagsTextAntiDirtAsync(this ByteDanceMicroAppClient client, Models.TagsTextAntiDirtRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.TagsTextAntiDirtV2Response> ExecuteTagsTextAntiDirtV2Async(this ByteDanceMicroAppClient client, Models.TagsTextAntiDirtV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "v2", "tags", "text", "antidirt")
                 .WithHeader("X-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.TagsTextAntiDirtResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.TagsTextAntiDirtV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.TagsImageResponse> ExecuteTagsImageAsync(this ByteDanceMicroAppClient client, Models.TagsImageRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.TagsImageV2Response> ExecuteTagsImageV2Async(this ByteDanceMicroAppClient client, Models.TagsImageV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "v2", "tags", "image")
                 .WithHeader("X-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.TagsImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.TagsImageV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

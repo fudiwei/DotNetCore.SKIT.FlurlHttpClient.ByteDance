@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1AuthThirdPartyTokenResponse> ExecuteOpenApiV1AuthThirdPartyTokenAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1AuthThirdPartyTokenRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiAuthThirdPartyTokenV1Response> ExecuteOpenApiAuthThirdPartyTokenV1Async(this ByteDanceMicroAppClient client, Models.OpenApiAuthThirdPartyTokenV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appsecret", request.ComponentAppSecret)
                 .SetQueryParam("component_ticket", request.ComponentTicket);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1AuthThirdPartyTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiAuthThirdPartyTokenV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1AuthPreAuthCodeResponse> ExecuteOpenApiV1AuthPreAuthCodeAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1AuthPreAuthCodeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiAuthPreAuthCodeV1Response> ExecuteOpenApiAuthPreAuthCodeV1Async(this ByteDanceMicroAppClient client, Models.OpenApiAuthPreAuthCodeV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1AuthPreAuthCodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiAuthPreAuthCodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV2AuthPreAuthCodeResponse> ExecuteOpenApiV2AuthPreAuthCodeAsync(this ByteDanceMicroAppClient client, Models.OpenApiV2AuthPreAuthCodeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiAuthPreAuthCodeV2Response> ExecuteOpenApiAuthPreAuthCodeV2Async(this ByteDanceMicroAppClient client, Models.OpenApiAuthPreAuthCodeV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV2AuthPreAuthCodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiAuthPreAuthCodeV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1AuthRetrieveResponse> ExecuteOpenApiV1AuthRetrieveAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1AuthRetrieveRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiAuthRetrieveV1Response> ExecuteOpenApiAuthRetrieveV1Async(this ByteDanceMicroAppClient client, Models.OpenApiAuthRetrieveV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("authorization_appid", request.AuthorizerAppId);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1AuthRetrieveResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiAuthRetrieveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1OAuthTokenResponse> ExecuteOpenApiV1OAuthTokenAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1OAuthTokenRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiOAuthTokenV1Response> ExecuteOpenApiOAuthTokenV1Async(this ByteDanceMicroAppClient client, Models.OpenApiOAuthTokenV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -149,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request.AuthorizerRefreshToken != null)
                 flurlReq.SetQueryParam("authorizer_refresh_token", request.AuthorizerRefreshToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1OAuthTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiOAuthTokenV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 
@@ -163,7 +163,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyTemplateGetTemplateListResponse> ExecuteOpenApiV1ThirdPartyTemplateGetTemplateListAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyTemplateGetTemplateListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyTemplateGetTemplateListV1Response> ExecuteOpenApiThirdPartyTemplateGetTemplateListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyTemplateGetTemplateListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyTemplateGetTemplateListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateGetTemplateListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyTemplateGetDraftListResponse> ExecuteOpenApiV1ThirdPartyTemplateGetDraftListAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyTemplateGetDraftListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyTemplateGetDraftListV1Response> ExecuteOpenApiThirdPartyTemplateGetDraftListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyTemplateGetDraftListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -201,7 +201,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyTemplateGetDraftListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateGetDraftListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyTemplateAddTemplateResponse> ExecuteOpenApiV1ThirdPartyTemplateAddTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyTemplateAddTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyTemplateAddTemplateV1Response> ExecuteOpenApiThirdPartyTemplateAddTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyTemplateAddTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -226,7 +226,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyTemplateAddTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateAddTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyTemplateDeleteTemplateResponse> ExecuteOpenApiV1ThirdPartyTemplateDeleteTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyTemplateDeleteTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyTemplateDeleteTemplateV1Response> ExecuteOpenApiThirdPartyTemplateDeleteTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyTemplateDeleteTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -251,7 +251,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyTemplateDeleteTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateDeleteTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyDownloadWebviewFileResponse> ExecuteOpenApiV1ThirdPartyDownloadWebviewFileAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyDownloadWebviewFileRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyDownloadWebviewFileV1Response> ExecuteOpenApiThirdPartyDownloadWebviewFileV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyDownloadWebviewFileV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -276,7 +276,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyDownloadWebviewFileResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyDownloadWebviewFileV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyAuthAppListResponse> ExecuteOpenApiV1ThirdPartyAuthAppListAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyAuthAppListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyAuthAppListV1Response> ExecuteOpenApiThirdPartyAuthAppListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyAuthAppListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -303,7 +303,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyAuthAppListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyAuthAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOISupplierMatchResponse> ExecuteOpenApiV1ThirdPartyPOISupplierMatchAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOISupplierMatchRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOISupplierMatchV1Response> ExecuteOpenApiThirdPartyPOISupplierMatchV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOISupplierMatchV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -328,7 +328,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOISupplierMatchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOISupplierMatchV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -340,7 +340,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOISupplierQueryMatchTaskResponse> ExecuteOpenApiV1ThirdPartyPOISupplierQueryMatchTaskAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOISupplierQueryMatchTaskRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryMatchTaskV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -354,7 +354,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("task_ids", string.Join(",", request.TaskIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOISupplierQueryMatchTaskResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -366,7 +366,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOISupplierQueryMatchResponse> ExecuteOpenApiV1ThirdPartyPOISupplierQueryMatchAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOISupplierQueryMatchRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryMatchV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryMatchV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOISupplierQueryMatchV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -380,7 +380,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("supplier_ext_ids", string.Join(",", request.SupplierExternalIds));
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOISupplierQueryMatchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryMatchV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOISupplierSyncResponse> ExecuteOpenApiV1ThirdPartyPOISupplierSyncAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOISupplierSyncRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOISupplierSyncV1Response> ExecuteOpenApiThirdPartyPOISupplierSyncV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOISupplierSyncV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -405,7 +405,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOISupplierSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOISupplierSyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -417,7 +417,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOISupplierQueryResponse> ExecuteOpenApiV1ThirdPartyPOISupplierQueryAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOISupplierQueryRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOISupplierQueryV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -431,7 +431,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOISupplierQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1ThirdPartyPOIBaseQueryAMapResponse> ExecuteOpenApiV1ThirdPartyPOIBaseQueryAMapAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1ThirdPartyPOIBaseQueryAMapRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiThirdPartyPOIBaseQueryAMapV1Response> ExecuteOpenApiThirdPartyPOIBaseQueryAMapV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyPOIBaseQueryAMapV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -457,7 +457,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("amap_id", request.AMapId);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1ThirdPartyPOIBaseQueryAMapResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyPOIBaseQueryAMapV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 
@@ -471,7 +471,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppCode2SessionResponse> ExecuteOpenApiV1MicroAppCode2SessionAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppCode2SessionRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppCode2SessionV1Response> ExecuteOpenApiMicroAppCode2SessionV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppCode2SessionV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -486,7 +486,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("code", request.Code)
                 .SetQueryParam("anonymous_code", request.AnoymousCode);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppCode2SessionV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -498,7 +498,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppUploadMaterialResponse> ExecuteOpenApiV1MicroAppUploadMaterialAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppUploadMaterialRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppUploadMaterialV1Response> ExecuteOpenApiMicroAppUploadMaterialV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppUploadMaterialV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -522,7 +522,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             httpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data; boundary=" + boundary);
             fileContent.Headers.ContentLength = request.MaterialFileBytes?.Length;
 
-            return await client.SendRequestAsync<Models.OpenApiV1MicroAppUploadMaterialResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendRequestAsync<Models.OpenApiMicroAppUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -534,7 +534,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageUploadResponse> ExecuteOpenApiV1MicroAppPackageUploadAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageUploadRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageUploadV1Response> ExecuteOpenApiMicroAppPackageUploadV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageUploadV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -547,7 +547,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageUploadV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageAuditHostsResponse> ExecuteOpenApiV1MicroAppPackageAuditHostsAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageAuditHostsRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageAuditHostsV1Response> ExecuteOpenApiMicroAppPackageAuditHostsV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageAuditHostsV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -572,7 +572,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageAuditHostsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageAuditHostsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -584,7 +584,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageAuditResponse> ExecuteOpenApiV1MicroAppPackageAuditAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageAuditRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageAuditV1Response> ExecuteOpenApiMicroAppPackageAuditV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageAuditV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -597,7 +597,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageAuditResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -609,7 +609,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageRevokeAuditResponse> ExecuteOpenApiV1MicroAppPackageRevokeAuditAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageRevokeAuditRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageRevokeAuditV1Response> ExecuteOpenApiMicroAppPackageRevokeAuditV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageRevokeAuditV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -622,7 +622,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageRevokeAuditResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageRevokeAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -634,7 +634,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageReleaseResponse> ExecuteOpenApiV1MicroAppPackageReleaseAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageReleaseRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageReleaseV1Response> ExecuteOpenApiMicroAppPackageReleaseV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageReleaseV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -647,7 +647,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageReleaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageReleaseV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -659,7 +659,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageRollbackResponse> ExecuteOpenApiV1MicroAppPackageRollbackAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageRollbackRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageRollbackV1Response> ExecuteOpenApiMicroAppPackageRollbackV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageRollbackV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -672,7 +672,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageRollbackResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageRollbackV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -684,7 +684,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppPackageVersionsResponse> ExecuteOpenApiV1MicroAppPackageVersionsAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppPackageVersionsRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppPackageVersionsV1Response> ExecuteOpenApiMicroAppPackageVersionsV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppPackageVersionsV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -697,7 +697,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppPackageVersionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageVersionsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -709,7 +709,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppInfoResponse> ExecuteOpenApiV1MicroAppAppInfoAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppInfoRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppInfoV1Response> ExecuteOpenApiMicroAppAppInfoV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppInfoV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -722,7 +722,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -734,7 +734,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppQrcodeResponse> ExecuteOpenApiV1MicroAppAppQrcodeAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppQrcodeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppQrcodeV1Response> ExecuteOpenApiMicroAppAppQrcodeV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppQrcodeV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -747,7 +747,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppQrcodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -759,7 +759,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppCheckAppNameResponse> ExecuteOpenApiV1MicroAppAppCheckAppNameAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCheckAppNameRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppCheckAppNameV1Response> ExecuteOpenApiMicroAppAppCheckAppNameV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppCheckAppNameV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -773,7 +773,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("authorizer_access_token", request.AccessToken)
                 .SetQueryParam("app_name", request.AppName);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCheckAppNameResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppCheckAppNameV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -785,7 +785,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppModifyAppNameResponse> ExecuteOpenApiV1MicroAppAppModifyAppNameAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppNameRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppModifyAppNameV1Response> ExecuteOpenApiMicroAppAppModifyAppNameV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppModifyAppNameV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -798,7 +798,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppNameResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppModifyAppNameV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -810,7 +810,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppModifyAppIntroductionResponse> ExecuteOpenApiV1MicroAppAppModifyAppIntroductionAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppIntroductionRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppModifyAppIntroductionV1Response> ExecuteOpenApiMicroAppAppModifyAppIntroductionV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppModifyAppIntroductionV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -823,7 +823,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppIntroductionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppModifyAppIntroductionV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -835,7 +835,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppModifyAppIconResponse> ExecuteOpenApiV1MicroAppAppModifyAppIconAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyAppIconRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppModifyAppIconV1Response> ExecuteOpenApiMicroAppAppModifyAppIconV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppModifyAppIconV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -848,7 +848,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyAppIconResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppModifyAppIconV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -860,7 +860,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppAllCategoriesResponse> ExecuteOpenApiV1MicroAppAppAllCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppAllCategoriesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppAllCategoriesV1Response> ExecuteOpenApiMicroAppAppAllCategoriesV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppAllCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -873,7 +873,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppAllCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppAllCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -885,7 +885,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppCategoriesResponse> ExecuteOpenApiV1MicroAppAppCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCategoriesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppCategoriesV1Response> ExecuteOpenApiMicroAppAppCategoriesV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -898,7 +898,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -910,7 +910,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppAddCategoriesResponse> ExecuteOpenApiV1MicroAppAppAddCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppAddCategoriesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppAddCategoriesV1Response> ExecuteOpenApiMicroAppAppAddCategoriesV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppAddCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -923,7 +923,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppAddCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppAddCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -935,7 +935,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppDeleteCategoriesResponse> ExecuteOpenApiV1MicroAppAppDeleteCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppDeleteCategoriesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppDeleteCategoriesV1Response> ExecuteOpenApiMicroAppAppDeleteCategoriesV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppDeleteCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -948,7 +948,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppDeleteCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppDeleteCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -960,7 +960,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppSupplyCategoriesResponse> ExecuteOpenApiV1MicroAppAppSupplyCategoriesAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppSupplyCategoriesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppSupplyCategoriesV1Response> ExecuteOpenApiMicroAppAppSupplyCategoriesV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppSupplyCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -973,7 +973,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppSupplyCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppSupplyCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -985,7 +985,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppModifyServerDomainResponse> ExecuteOpenApiV1MicroAppAppModifyServerDomainAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyServerDomainRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppModifyServerDomainV1Response> ExecuteOpenApiMicroAppAppModifyServerDomainV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppModifyServerDomainV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -998,7 +998,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyServerDomainResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppModifyServerDomainV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1010,7 +1010,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppModifyWebviewDomainResponse> ExecuteOpenApiV1MicroAppAppModifyWebviewDomainAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppModifyWebviewDomainRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppModifyWebviewDomainV1Response> ExecuteOpenApiMicroAppAppModifyWebviewDomainV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppModifyWebviewDomainV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1023,7 +1023,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppModifyWebviewDomainResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppModifyWebviewDomainV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1035,7 +1035,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppQualityRatingResponse> ExecuteOpenApiV1MicroAppAppQualityRatingAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppQualityRatingRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppQualityRatingV1Response> ExecuteOpenApiMicroAppAppQualityRatingV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppQualityRatingV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1048,7 +1048,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppQualityRatingResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppQualityRatingV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1060,7 +1060,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppAppCreditScoreResponse> ExecuteOpenApiV1MicroAppAppCreditScoreAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppAppCreditScoreRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppAppCreditScoreV1Response> ExecuteOpenApiMicroAppAppCreditScoreV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppAppCreditScoreV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1073,7 +1073,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppAppCreditScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppCreditScoreV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1085,7 +1085,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationVideoApplicationStatusResponse> ExecuteOpenApiV1MicroAppOperationVideoApplicationStatusAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationVideoApplicationStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationVideoApplicationStatusV1Response> ExecuteOpenApiMicroAppOperationVideoApplicationStatusV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationVideoApplicationStatusV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1098,7 +1098,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationVideoApplicationStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationVideoApplicationStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1110,7 +1110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationVideoApplicationResponse> ExecuteOpenApiV1MicroAppOperationVideoApplicationAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationVideoApplicationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationVideoApplicationV1Response> ExecuteOpenApiMicroAppOperationVideoApplicationV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationVideoApplicationV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1123,7 +1123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationVideoApplicationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationVideoApplicationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1135,7 +1135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationLiveApplicationStatusResponse> ExecuteOpenApiV1MicroAppOperationLiveApplicationStatusAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationLiveApplicationStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationLiveApplicationStatusV1Response> ExecuteOpenApiMicroAppOperationLiveApplicationStatusV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationLiveApplicationStatusV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1148,7 +1148,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationLiveApplicationStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationLiveApplicationStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1160,7 +1160,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationLiveApplicationResponse> ExecuteOpenApiV1MicroAppOperationLiveApplicationAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationLiveApplicationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationLiveApplicationV1Response> ExecuteOpenApiMicroAppOperationLiveApplicationV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationLiveApplicationV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1173,7 +1173,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationLiveApplicationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationLiveApplicationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1185,7 +1185,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationPhoneNumberApplicationStatusResponse> ExecuteOpenApiV1MicroAppOperationPhoneNumberApplicationStatusAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationPhoneNumberApplicationStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationPhoneNumberApplicationStatusV1Response> ExecuteOpenApiMicroAppOperationPhoneNumberApplicationStatusV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationPhoneNumberApplicationStatusV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1198,7 +1198,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationPhoneNumberApplicationStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationPhoneNumberApplicationStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1210,7 +1210,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationPhoneNumberApplicationResponse> ExecuteOpenApiV1MicroAppOperationPhoneNumberApplicationAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationPhoneNumberApplicationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationPhoneNumberApplicationV1Response> ExecuteOpenApiMicroAppOperationPhoneNumberApplicationV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationPhoneNumberApplicationV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1223,7 +1223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationPhoneNumberApplicationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationPhoneNumberApplicationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1235,7 +1235,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationShareTemplateListResponse> ExecuteOpenApiV1MicroAppOperationShareTemplateListAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationShareTemplateListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationShareTemplateListV1Response> ExecuteOpenApiMicroAppOperationShareTemplateListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationShareTemplateListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1250,7 +1250,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationShareTemplateListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationShareTemplateListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1262,7 +1262,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationAddShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationAddShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationAddShareTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationAddShareTemplateV1Response> ExecuteOpenApiMicroAppOperationAddShareTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationAddShareTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1275,7 +1275,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationAddShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationAddShareTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1287,7 +1287,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationModifyShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationModifyShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationModifyShareTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationModifyShareTemplateV1Response> ExecuteOpenApiMicroAppOperationModifyShareTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationModifyShareTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1300,7 +1300,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationModifyShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationModifyShareTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1312,7 +1312,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationDeleteShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationDeleteShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationDeleteShareTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationDeleteShareTemplateV1Response> ExecuteOpenApiMicroAppOperationDeleteShareTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationDeleteShareTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1325,7 +1325,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationDeleteShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationDeleteShareTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1337,7 +1337,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateResponse> ExecuteOpenApiV1MicroAppOperationSetDefaultShareTemplateAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationSetDefaultShareTemplateV1Response> ExecuteOpenApiMicroAppOperationSetDefaultShareTemplateV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationSetDefaultShareTemplateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1350,7 +1350,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationSetDefaultShareTemplateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationSetDefaultShareTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1362,7 +1362,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationAddShopMaterialResponse> ExecuteOpenApiV1MicroAppOperationAddShopMaterialAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationAddShopMaterialRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationAddShopMaterialV1Response> ExecuteOpenApiMicroAppOperationAddShopMaterialV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationAddShopMaterialV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1375,7 +1375,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationAddShopMaterialResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationAddShopMaterialV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -1387,7 +1387,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiV1MicroAppOperationQueryShopMaterialResponse> ExecuteOpenApiV1MicroAppOperationQueryShopMaterialAsync(this ByteDanceMicroAppClient client, Models.OpenApiV1MicroAppOperationQueryShopMaterialRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiMicroAppOperationQueryShopMaterialV1Response> ExecuteOpenApiMicroAppOperationQueryShopMaterialV1Async(this ByteDanceMicroAppClient client, Models.OpenApiMicroAppOperationQueryShopMaterialV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -1401,7 +1401,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("authorizer_access_token", request.AccessToken)
                 .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
 
-            return await client.SendRequestWithJsonAsync<Models.OpenApiV1MicroAppOperationQueryShopMaterialResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationQueryShopMaterialV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

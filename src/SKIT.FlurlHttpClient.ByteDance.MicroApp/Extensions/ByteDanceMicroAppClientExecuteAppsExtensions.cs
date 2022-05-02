@@ -36,6 +36,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsTokenV2Response> ExecuteAppsTokenV2Async(this ByteDanceMicroAppClient client, Models.AppsTokenV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.AppSecret == null)
+                request.AppSecret = client.Credentials.AppSecret;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v2", "token");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsTokenV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
         /// <para>异步调用 [GET] /apps/jscode2session 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
@@ -64,32 +90,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AppsV2TokenResponse> ExecuteAppsV2TokenAsync(this ByteDanceMicroAppClient client, Models.AppsV2TokenRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId == null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.AppSecret == null)
-                request.AppSecret = client.Credentials.AppSecret;
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "v2", "token");
-
-            return await client.SendRequestWithJsonAsync<Models.AppsV2TokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
-        /// <summary>
         /// <para>异步调用 [POST] /apps/v2/jscode2session 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsV2JsCode2SessionResponse> ExecuteAppsV2JsCode2SessionAsync(this ByteDanceMicroAppClient client, Models.AppsV2JsCode2SessionRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsJsCode2SessionV2Response> ExecuteAppsJsCode2SessionV2Async(this ByteDanceMicroAppClient client, Models.AppsJsCode2SessionV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -112,7 +112,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "v2", "jscode2session");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsV2JsCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsJsCode2SessionV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         #region Qrcode
@@ -148,7 +148,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsSubscribeNotificationDeveloperV1NotifyResponse> ExecuteAppsSubscribeNotificationDeveloperV1NotifyAsync(this ByteDanceMicroAppClient client, Models.AppsSubscribeNotificationDeveloperV1NotifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsSubscribeNotificationDeveloperNotifyV1Response> ExecuteAppsSubscribeNotificationDeveloperNotifyV1Async(this ByteDanceMicroAppClient client, Models.AppsSubscribeNotificationDeveloperNotifyV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -159,7 +159,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "subscribe_notification", "developer", "v1", "notify");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsSubscribeNotificationDeveloperV1NotifyResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsSubscribeNotificationDeveloperNotifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 

@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsOrderV2PushResponse> ExecuteAppsOrderV2PushAsync(this ByteDanceMicroAppClient client, Models.AppsOrderV2PushRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsOrderPushV2Response> ExecuteAppsOrderPushV2Async(this ByteDanceMicroAppClient client, Models.AppsOrderPushV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "apps", "order", "v2", "push");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsOrderV2PushResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsOrderPushV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

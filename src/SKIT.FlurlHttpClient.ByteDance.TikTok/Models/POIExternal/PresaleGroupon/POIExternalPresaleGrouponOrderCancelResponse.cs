@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /poi/ext/presale_groupon/order/cancel 接口的响应。</para>
     /// </summary>
-    public class POIExternalPresaleGrouponCancelResponse : TikTokResponse<POIExternalPresaleGrouponCancelResponse.Types.Data>
+    public class POIExternalPresaleGrouponOrderCancelResponse : TikTokResponse<POIExternalPresaleGrouponOrderCancelResponse.Types.Data>
     {
         public static class Types
         {

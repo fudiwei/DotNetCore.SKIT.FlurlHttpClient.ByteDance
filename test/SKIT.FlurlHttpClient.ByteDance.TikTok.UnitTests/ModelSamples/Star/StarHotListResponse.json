@@ -8,13 +8,13 @@
         "list": [
             {
                 "follower": 0,
-                "nick_name": "<nil>",
+                "nick_name": "",
                 "rank": 0,
                 "score": 80.6,
                 "tags": [
-                    "<nil>"
+                    ""
                 ],
-                "unique_id": "<nil>"
+                "unique_id": ""
             }
         ]
     },

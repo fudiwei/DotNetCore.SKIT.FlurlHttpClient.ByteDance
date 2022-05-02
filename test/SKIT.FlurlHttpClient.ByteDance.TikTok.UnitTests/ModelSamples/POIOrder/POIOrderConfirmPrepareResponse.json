@@ -1,6 +1,7 @@
 ﻿{
     "data": {
-        "order_ext_id": "<nil>"
+        "confirm_apply_id": "",
+        "order_id": ""
     },
     "description": "",
     "error_code": "0"

@@ -9,5 +9,5 @@
         "refresh_token": "refresh_token",
         "scope": "user_info"
     },
-    "message": "<nil>"
+    "message": ""
 }

@@ -6,8 +6,8 @@
             {
                 "poi_id": "123456",
                 "status": 0,
-                "supplier_ext_id": "<nil>",
-                "task_id": "<nil>"
+                "supplier_ext_id": "",
+                "task_id": ""
             }
         ]
     }

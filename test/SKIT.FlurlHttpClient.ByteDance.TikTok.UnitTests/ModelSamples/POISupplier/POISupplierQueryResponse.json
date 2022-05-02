@@ -6,19 +6,19 @@
                 "1101": [
                     {
                         "code": 1,
-                        "name": "<nil>"
+                        "name": ""
                     }
                 ],
                 "1102": [
                     {
                         "code": 1,
-                        "name": "<nil>"
+                        "name": ""
                     }
                 ],
                 "1103": [
                     {
                         "code": 1,
-                        "name": "<nil>"
+                        "name": ""
                     }
                 ],
                 "1104": {
@@ -28,8 +28,8 @@
                     },
                     "check_in_time": "12:00",
                     "check_out_time": "12:00",
-                    "child": "<nil>",
-                    "pet": "<nil>"
+                    "child": "",
+                    "pet": ""
                 },
                 "1105": "1",
                 "3101": {
@@ -81,7 +81,7 @@
             },
             "contact_phone": "189xxxx8929",
             "contact_tel": "021-58xxxx95",
-            "description": "<nil>",
+            "description": "",
             "images": [
                 "[https://static.dingdandao.com/0ffaf1b5a669ea216a960c97ded9a3b0 https://static.dingdandao.com/9119b617eff7c8fe2be318da0459d4db]"
             ],
@@ -114,7 +114,7 @@
         "description": "",
         "error_code": "0",
         "sync_status": {
-            "fail_reason": "<nil>",
+            "fail_reason": "",
             "last_sync_status": 0
         }
     }

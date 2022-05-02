@@ -6,9 +6,9 @@
         "has_more": false,
         "list": [
             {
-                "address": "<nil>",
-                "name": "<nil>",
-                "poi_id": "<nil>"
+                "address": "",
+                "name": "",
+                "poi_id": ""
             }
         ],
         "total": 0

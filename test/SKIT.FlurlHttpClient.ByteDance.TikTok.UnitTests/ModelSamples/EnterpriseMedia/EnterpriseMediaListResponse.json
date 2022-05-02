@@ -6,10 +6,10 @@
         "has_more": false,
         "medias": [
             {
-                "media_id": "<nil>",
-                "status": "<nil>",
+                "media_id": "",
+                "status": "",
                 "url_list": [
-                    "<nil>"
+                    ""
                 ]
             }
         ]

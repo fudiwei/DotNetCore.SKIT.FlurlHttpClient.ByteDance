@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     /// <summary>
     /// <para>表示 [POST] /poi/ext/presale_groupon/order/cancel 接口的请求。</para>
     /// </summary>
-    public class POIExternalPresaleGrouponCancelRequest : TikTokRequest
+    public class POIExternalPresaleGrouponOrderCancelRequest : TikTokRequest
     {
         /// <summary>
         /// 获取或设置预约券券码列表。

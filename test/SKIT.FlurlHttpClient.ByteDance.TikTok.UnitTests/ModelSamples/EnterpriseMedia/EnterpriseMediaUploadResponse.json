@@ -3,9 +3,9 @@
         "description": "",
         "error_code": "0",
         "media": {
-            "media_id": "<nil>",
+            "media_id": "",
             "url_list": [
-                "<nil>"
+                ""
             ]
         }
     },

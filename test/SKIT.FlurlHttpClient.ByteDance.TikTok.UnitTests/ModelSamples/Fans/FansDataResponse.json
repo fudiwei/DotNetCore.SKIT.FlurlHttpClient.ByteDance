@@ -5,20 +5,20 @@
         "fans_data": {
             "active_days_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ],
             "age_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ],
             "all_fans_num": "10000",
             "device_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ],
@@ -31,19 +31,19 @@
             ],
             "gender_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ],
             "geographical_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ],
             "interest_distributions": [
                 {
-                    "item": "<nil>",
+                    "item": "",
                     "value": 0
                 }
             ]

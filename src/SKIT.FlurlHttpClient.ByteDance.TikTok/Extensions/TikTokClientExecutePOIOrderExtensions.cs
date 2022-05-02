@@ -73,6 +73,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
 
         /// <summary>
+        /// <para>异步调用 [POST] /poi/order/confirm/prepare 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/pre-cancel-presell-ticket </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.POIOrderConfirmPrepareResponse> ExecutePOIOrderConfirmPrepareAsync(this TikTokClient client, Models.POIOrderConfirmPrepareRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "poi", "order", "confirm", "prepare")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.POIOrderConfirmPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /poi/order/confirm/cancel_prepare 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-precancel-presell-ticket </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.POIOrderConfirmCancelPrepareResponse> ExecutePOIOrderConfirmCancelPrepareAsync(this TikTokClient client, Models.POIOrderConfirmCancelPrepareRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "poi", "order", "confirm", "cancel_prepare")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.POIOrderConfirmCancelPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
         /// <para>异步调用 [GET] /poi/order/bill/token 接口。</para>
         /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/get-download-bill-token </para>
         /// </summary>

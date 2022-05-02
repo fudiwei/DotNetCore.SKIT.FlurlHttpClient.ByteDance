@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POIExternalPresaleGrouponCreateResponse> ExecutePOIExternalPresaleGrouponCreateAsync(this TikTokClient client, Models.POIExternalPresaleGrouponCreateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POIExternalPresaleGrouponOrderCreateResponse> ExecutePOIExternalPresaleGrouponOrderCreateAsync(this TikTokClient client, Models.POIExternalPresaleGrouponOrderCreateRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -112,7 +112,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "ext", "presale_groupon", "order", "create")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponOrderCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POIExternalPresaleGrouponCommitResponse> ExecutePOIExternalPresaleGrouponCommitAsync(this TikTokClient client, Models.POIExternalPresaleGrouponCommitRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POIExternalPresaleGrouponOrderCommitResponse> ExecutePOIExternalPresaleGrouponOrderCommitAsync(this TikTokClient client, Models.POIExternalPresaleGrouponOrderCommitRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -132,7 +132,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "ext", "presale_groupon", "order", "commit")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponCommitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponOrderCommitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POIExternalPresaleGrouponCancelResponse> ExecutePOIExternalPresaleGrouponCancelAsync(this TikTokClient client, Models.POIExternalPresaleGrouponCancelRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POIExternalPresaleGrouponOrderCancelResponse> ExecutePOIExternalPresaleGrouponOrderCancelAsync(this TikTokClient client, Models.POIExternalPresaleGrouponOrderCancelRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -152,7 +152,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "ext", "presale_groupon", "order", "cancel")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponCancelResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POIExternalPresaleGrouponOrderCancelResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

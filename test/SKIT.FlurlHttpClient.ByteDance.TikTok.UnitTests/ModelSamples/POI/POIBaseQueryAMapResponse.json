@@ -1,14 +1,14 @@
 ﻿{
     "data": {
-        "address": "<nil>",
-        "amap_id": "<nil>",
-        "city": "<nil>",
+        "address": "",
+        "amap_id": "",
+        "city": "",
         "description": "",
         "error_code": "0",
         "latitude": 0.0,
         "longitude": 0.0,
-        "poi_id": "<nil>",
-        "poi_name": "<nil>"
+        "poi_id": "",
+        "poi_name": ""
     },
     "extra": {
         "description": "",

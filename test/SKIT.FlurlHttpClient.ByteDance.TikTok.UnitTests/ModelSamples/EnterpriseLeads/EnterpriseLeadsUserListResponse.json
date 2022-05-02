@@ -8,7 +8,7 @@
             {
                 "age": 0,
                 "avatar": "url",
-                "city": "<nil>",
+                "city": "",
                 "gender": 0,
                 "is_follow": true,
                 "leads_level": 0,
@@ -17,11 +17,11 @@
                 "tag_list": [
                     {
                         "tag_id": 0,
-                        "tag_name": "<nil>"
+                        "tag_name": ""
                     }
                 ],
-                "telephone": "<nil>",
-                "wechat": "<nil>"
+                "telephone": "",
+                "wechat": ""
             }
         ]
     },

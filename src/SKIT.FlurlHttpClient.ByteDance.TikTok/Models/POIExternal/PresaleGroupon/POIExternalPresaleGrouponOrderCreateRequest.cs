@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /poi/ext/presale_groupon/order/create 接口的请求。</para>
     /// </summary>
-    public class POIExternalPresaleGrouponCreateRequest : TikTokRequest
+    public class POIExternalPresaleGrouponOrderCreateRequest : TikTokRequest
     {
         /// <summary>
         /// 获取或设置用户的 OpenId。

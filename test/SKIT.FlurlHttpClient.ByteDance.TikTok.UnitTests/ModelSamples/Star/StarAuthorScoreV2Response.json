@@ -5,11 +5,11 @@
         "description": "",
         "error_code": "0",
         "growth_score": 80.6,
-        "nick_name": "<nil>",
+        "nick_name": "",
         "shop_score": 80.6,
         "spread_score": 80.6,
         "star_score": 80.6,
-        "unique_id": "<nil>",
+        "unique_id": "",
         "update_timestamp": 1
     },
     "extra": {

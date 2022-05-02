@@ -68,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         [Newtonsoft.Json.JsonProperty("error_code")]
         [System.Text.Json.Serialization.JsonPropertyName("error_code")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-        public virtual int? ErrorCode { get; set; }
+        public virtual int ErrorCode { get; set; }
 
         /// <summary>
         /// 获取抖音开放平台 API 返回的错误描述。
@@ -83,8 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <returns></returns>
         public virtual bool IsSuccessful()
         {
-            return RawStatus == 200 &&
-                ErrorCode.GetValueOrDefault() == 0 &&
+            return RawStatus == 200 && ErrorCode == 0 &&
                 (Extra?.ErrorCode).GetValueOrDefault() == 0 &&
                 (Extra?.SubErrorCode).GetValueOrDefault() == 0;
         }

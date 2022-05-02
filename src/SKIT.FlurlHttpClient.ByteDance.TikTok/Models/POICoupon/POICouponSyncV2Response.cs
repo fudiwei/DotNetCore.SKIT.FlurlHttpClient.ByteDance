@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /poi/v2/coupon/sync/coupon_available 接口的响应。</para>
+    /// <para>表示 [POST] /poi/v2/coupon/sync 接口的响应。</para>
     /// </summary>
-    public class POICouponSyncCouponAvailableResponse : TikTokResponse<POICouponSyncCouponAvailableResponse.Types.Data>
+    public class POICouponSyncV2Response : TikTokResponse<POICouponSyncV2Response.Types.Data>
     {
         public static class Types
         {
@@ -15,6 +15,13 @@
                 [Newtonsoft.Json.JsonProperty("is_suc")]
                 [System.Text.Json.Serialization.JsonPropertyName("is_suc")]
                 public bool IsSucceeded { get; set; }
+
+                /// <summary>
+                /// 获取或设置优惠券 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("coupon_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("coupon_id")]
+                public string? CouponId { get; set; }
             }
         }
     }

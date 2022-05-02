@@ -69,6 +69,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             return await client.SendRequestWithJsonAsync<Models.POIExternalHotelOrderCancelResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /poi/ext/hotel/sku 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/sku-pull </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.POIExternalHotelSKUResponse> ExecutePOIExternalHotelSKUAsync(this TikTokClient client, Models.POIExternalHotelSKURequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "poi", "ext", "hotel", "sku")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("spu_ext_id", request.SPUExternalId)
+                .SetQueryParam("start_date", request.StartDateString)
+                .SetQueryParam("end_date", request.EndDateString);
+
+            return await client.SendRequestWithJsonAsync<Models.POIExternalHotelSKUResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
         #endregion
 
         #region PresaleGroupon

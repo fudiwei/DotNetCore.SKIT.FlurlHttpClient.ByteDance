@@ -1,0 +1,38 @@
+﻿{
+    "entry_info": {
+        "entry_miniApp": {
+            "params": "",
+            "path": "",
+            "app_id": ""
+        },
+        "entry_type": 0,
+        "entry_url": ""
+    },
+    "front_category_tag": [ "" ],
+    "recommend_word": "",
+    "sort_weight": 0,
+    "supplier_ext_id_list": [ "" ],
+    "price": 0,
+    "spu_ext_id": "",
+    "image_list": [ "" ],
+    "mp_settle_type": 0,
+    "origin_price": 0,
+    "take_rate": 0,
+    "attribute": {
+        "101": {},
+        "3001": {},
+        "9001": {},
+        "9101": {}
+    },
+    "highlights": [
+        {
+            "content": "",
+            "priority": 0
+        }
+    ],
+    "name": "",
+    "order_depends_on_date": true,
+    "spu_type": 0,
+    "status": 0,
+    "stock": 0
+}

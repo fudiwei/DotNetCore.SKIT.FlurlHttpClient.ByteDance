@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POISupplierQueryTaskResponse> ExecutePOISupplierQueryTaskAsync(this TikTokClient client, Models.POISupplierQueryTaskRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POISupplierQueryTaskV2Response> ExecutePOISupplierQueryTaskV2Async(this TikTokClient client, Models.POISupplierQueryTaskV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("supplier_task_ids", string.Join(",", request.SupplierTaskIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.POISupplierQueryTaskResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POISupplierQueryTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POISupplierQuerySupplierResponse> ExecutePOISupplierQuerySupplierAsync(this TikTokClient client, Models.POISupplierQuerySupplierRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POISupplierQuerySupplierV2Response> ExecutePOISupplierQuerySupplierV2Async(this TikTokClient client, Models.POISupplierQuerySupplierV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -130,7 +130,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("supplier_ext_id", string.Join(",", request.SupplierExternalIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.POISupplierQuerySupplierResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POISupplierQuerySupplierV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POISupplierMatchResponse> ExecutePOISupplierMatchAsync(this TikTokClient client, Models.POISupplierMatchRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POISupplierMatchV2Response> ExecutePOISupplierMatchV2Async(this TikTokClient client, Models.POISupplierMatchV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -150,7 +150,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "v2", "supplier", "match")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POISupplierMatchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POISupplierMatchV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

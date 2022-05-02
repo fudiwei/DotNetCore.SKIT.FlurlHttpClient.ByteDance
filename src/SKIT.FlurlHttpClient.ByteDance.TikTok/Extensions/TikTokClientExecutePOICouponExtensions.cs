@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POICouponSyncResponse> ExecutePOICouponSyncAsync(this TikTokClient client, Models.POICouponSyncRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POICouponSyncV2Response> ExecutePOICouponSyncV2Async(this TikTokClient client, Models.POICouponSyncV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "v2", "coupon", "sync")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POICouponSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POICouponSyncV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POICouponSyncCouponAvailableResponse> ExecutePOICouponSyncCouponAvailableAsync(this TikTokClient client, Models.POICouponSyncCouponAvailableRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POICouponSyncCouponAvailableV2Response> ExecutePOICouponSyncCouponAvailableV2Async(this TikTokClient client, Models.POICouponSyncCouponAvailableV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "v2", "coupon", "sync", "coupon_available")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POICouponSyncCouponAvailableResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POICouponSyncCouponAvailableV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

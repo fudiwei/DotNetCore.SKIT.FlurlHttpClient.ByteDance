@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     /// <summary>
     /// <para>表示 [POST] /poi/v2/coupon/sync 接口的请求。</para>
     /// </summary>
-    public class POICouponSyncRequest : TikTokRequest
+    public class POICouponSyncV2Request : TikTokRequest
     {
         public static class Types
         {
@@ -134,37 +134,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
             {
                 public static class Types
                 {
-                    public class EntryMiniApp
+                    public class EntryMiniApp : POISupplierSyncRequest.Types.Service.Types.Entry.Types.EntryMiniApp
                     {
-                        /// <summary>
-                        /// 获取或设置小程序 AppId。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("app_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string AppId { get; set; } = string.Empty;
-
-                        /// <summary>
-                        /// 获取或设置小程序页面路径。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("path")]
-                        [System.Text.Json.Serialization.JsonPropertyName("path")]
-                        public string? PagePath { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置服务参数（JSON 格式）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("params")]
-                        [System.Text.Json.Serialization.JsonPropertyName("params")]
-                        public string? ParameterJson { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置是否是测试版。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("is_test")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
-                        [System.Text.Json.Serialization.JsonPropertyName("is_test")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
-                        public bool? IsTest { get; set; }
                     }
                 }
 

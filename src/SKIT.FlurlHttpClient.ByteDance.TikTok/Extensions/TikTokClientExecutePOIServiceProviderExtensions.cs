@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.POIServiceProviderSyncResponse> ExecutePOIServiceProviderSyncAsync(this TikTokClient client, Models.POIServiceProviderSyncRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.POIServiceProviderSyncV2Response> ExecutePOIServiceProviderSyncV2Async(this TikTokClient client, Models.POIServiceProviderSyncV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .CreateRequest(request, HttpMethod.Post, "poi", "v2", "service_provider", "sync")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.POIServiceProviderSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.POIServiceProviderSyncV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

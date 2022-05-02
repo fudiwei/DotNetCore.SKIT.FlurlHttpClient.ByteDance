@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /poi/v2/supplier/match 接口的响应。</para>
     /// </summary>
-    public class POISupplierMatchResponse : TikTokResponse<POISupplierMatchResponse.Types.Data>
+    public class POISupplierMatchV2Response : TikTokResponse<POISupplierMatchV2Response.Types.Data>
     {
         public static class Types
         {

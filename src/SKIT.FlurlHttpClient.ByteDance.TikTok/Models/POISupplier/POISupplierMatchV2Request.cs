@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     /// <summary>
     /// <para>表示 [POST] /poi/v2/supplier/match 接口的请求。</para>
     /// </summary>
-    public class POISupplierMatchRequest : TikTokRequest
+    public class POISupplierMatchV2Request : TikTokRequest
     {
         public static class Types
         {

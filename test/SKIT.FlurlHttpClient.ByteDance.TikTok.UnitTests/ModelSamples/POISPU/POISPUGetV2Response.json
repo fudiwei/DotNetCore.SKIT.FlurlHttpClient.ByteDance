@@ -1,0 +1,362 @@
+﻿{
+    "data": {
+        "description": "",
+        "error_code": "0",
+        "spu_detail": {
+            "attribute": {
+                "101": {
+                    "amend": {
+                        "cancel_amend": {
+                            "type": ""
+                        },
+                        "extra": ""
+                    },
+                    "area": "",
+                    "bed_name": "2*1.5米大床1张+2*1.2米单人床1张",
+                    "breakfast": "",
+                    "expense": {
+                        "breakfast": {
+                            "price": "",
+                            "type": ""
+                        },
+                        "extra": "",
+                        "extra_bed": {
+                            "price": "",
+                            "type": ""
+                        }
+                    },
+                    "facility": [
+                        {
+                            "code": "",
+                            "name": ""
+                        }
+                    ],
+                    "fit_num": "",
+                    "floor": {
+                        "end": "",
+                        "start": ""
+                    },
+                    "smoke": "",
+                    "travel_tips": {
+                        "check_in_time": "12:00",
+                        "check_out_time": "12:00",
+                        "extra": ""
+                    },
+                    "view": "海滩景观",
+                    "wifi": "",
+                    "window": ""
+                },
+                "3001": {
+                    "appointment_info": {
+                        "appointment_days": "",
+                        "appointment_url": "",
+                        "need_appointment": "",
+                        "order_appointment_detail_url": "传入https://xxxxx，入口链接https://xxxxx?code=123456&open_id=123456"
+                    },
+                    "groupon_detail": [
+                        {
+                            "content": "",
+                            "type": ""
+                        }
+                    ],
+                    "groupon_valid_end": "2020-08-01 00:00:00",
+                    "groupon_valid_start": "2020-08-01 00:00:00",
+                    "notification": [
+                        {
+                            "content": "",
+                            "title": ""
+                        }
+                    ],
+                    "order_limit": "",
+                    "order_valid_end": "2020-08-01 00:00:00",
+                    "order_valid_start": "2020-08-01 00:00:00",
+                    "service_phone": [
+                        "[xxx xxx]"
+                    ]
+                },
+                "9001": {
+                    "is_confirm_imme": "",
+                    "is_need_pick": "",
+                    "nearest_order_time": {
+                        "time": "20200304",
+                        "time_type": ""
+                    },
+                    "refund_policy": "",
+                    "ticket_type": ""
+                },
+                "9101": {
+                    "contact_name": "张三",
+                    "discount_price": "",
+                    "groupon_valid_end": "2020-08-01 00:00:00",
+                    "groupon_valid_start": "2020-08-01 00:00:00",
+                    "market_price": "",
+                    "merchant_name": "xxx公司",
+                    "notification": [
+                        {
+                            "content": "",
+                            "title": ""
+                        }
+                    ],
+                    "order_limit": "",
+                    "order_valid_end": "2020-08-01 00:00:00",
+                    "order_valid_start": "2020-08-01 00:00:00",
+                    "pay_item_groups": [
+                        {
+                            "group_name": "",
+                            "item_list": [
+                                {
+                                    "count": "",
+                                    "name": "",
+                                    "price": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "post_purchase_day": "",
+                    "service_phone": [
+                        "[xxx xxx]"
+                    ],
+                    "sub_title": "",
+                    "tag_list": [
+                        {
+                            "name": "",
+                            "type": ""
+                        }
+                    ],
+                    "use_type": ""
+                }
+            },
+            "entry_info": {
+                "entry_miniApp": {
+                    "app_id": "",
+                    "is_test": false,
+                    "params": "",
+                    "path": ""
+                },
+                "entry_type": 0,
+                "entry_url": ""
+            },
+            "front_category_tag": [
+                ""
+            ],
+            "highlights": [
+                {
+                    "content": "",
+                    "priority": 0
+                }
+            ],
+            "image_list": [
+                "url1",
+                "url2"
+            ],
+            "mp_settle_type": 0,
+            "name": "预售券1",
+            "origin_price": 0,
+            "price": 0,
+            "sort_weight": 0,
+            "spu_ext_id": "",
+            "spu_filter_status": [
+                {
+                    "spu_poi_filter_status": [
+                        {
+                            "code": 0,
+                            "filter": false,
+                            "poi_id": "12112",
+                            "reason": ""
+                        }
+                    ],
+                    "supplier_id": ""
+                }
+            ],
+            "spu_id": "",
+            "spu_type": 0,
+            "status": 0,
+            "status_desc": "",
+            "stock": 0,
+            "supplier_ext_id_list": [
+                "y0001",
+                "y0002"
+            ],
+            "take_rate": 100
+        },
+        "spu_draft": [
+            {
+                "attribute": {
+                    "101": {
+                        "amend": {
+                            "cancel_amend": {
+                                "type": ""
+                            },
+                            "extra": ""
+                        },
+                        "area": "",
+                        "bed_name": "2*1.5米大床1张+2*1.2米单人床1张",
+                        "breakfast": "",
+                        "expense": {
+                            "breakfast": {
+                                "price": "",
+                                "type": ""
+                            },
+                            "extra": "",
+                            "extra_bed": {
+                                "price": "",
+                                "type": ""
+                            }
+                        },
+                        "facility": [
+                            {
+                                "code": "",
+                                "name": ""
+                            }
+                        ],
+                        "fit_num": "",
+                        "floor": {
+                            "end": "",
+                            "start": ""
+                        },
+                        "smoke": "",
+                        "travel_tips": {
+                            "check_in_time": "12:00",
+                            "check_out_time": "12:00",
+                            "extra": ""
+                        },
+                        "view": "海滩景观",
+                        "wifi": "",
+                        "window": ""
+                    },
+                    "3001": {
+                        "appointment_info": {
+                            "appointment_days": "",
+                            "appointment_url": "",
+                            "need_appointment": "",
+                            "order_appointment_detail_url": "传入https://xxxxx，入口链接https://xxxxx?code=123456&open_id=123456"
+                        },
+                        "groupon_detail": [
+                            {
+                                "content": "",
+                                "type": ""
+                            }
+                        ],
+                        "groupon_valid_end": "2020-08-01 00:00:00",
+                        "groupon_valid_start": "2020-08-01 00:00:00",
+                        "notification": [
+                            {
+                                "content": "",
+                                "title": ""
+                            }
+                        ],
+                        "order_limit": "",
+                        "order_valid_end": "2020-08-01 00:00:00",
+                        "order_valid_start": "2020-08-01 00:00:00",
+                        "service_phone": [
+                            "[xxx xxx]"
+                        ]
+                    },
+                    "9001": {
+                        "is_confirm_imme": "",
+                        "is_need_pick": "",
+                        "nearest_order_time": {
+                            "time": "20200304",
+                            "time_type": ""
+                        },
+                        "refund_policy": "",
+                        "ticket_type": ""
+                    },
+                    "9101": {
+                        "contact_name": "张三",
+                        "discount_price": "",
+                        "groupon_valid_end": "2020-08-01 00:00:00",
+                        "groupon_valid_start": "2020-08-01 00:00:00",
+                        "market_price": "",
+                        "merchant_name": "xxx公司",
+                        "notification": [
+                            {
+                                "content": "",
+                                "title": ""
+                            }
+                        ],
+                        "order_limit": "",
+                        "order_valid_end": "2020-08-01 00:00:00",
+                        "order_valid_start": "2020-08-01 00:00:00",
+                        "pay_item_groups": [
+                            {
+                                "group_name": "",
+                                "item_list": [
+                                    {
+                                        "count": "",
+                                        "name": "",
+                                        "price": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "post_purchase_day": "",
+                        "service_phone": [
+                            "[xxx xxx]"
+                        ],
+                        "sub_title": "",
+                        "tag_list": [
+                            {
+                                "name": "",
+                                "type": ""
+                            }
+                        ],
+                        "use_type": ""
+                    }
+                },
+                "entry_info": {
+                    "entry_miniApp": {
+                        "app_id": "",
+                        "is_test": false,
+                        "params": "",
+                        "path": ""
+                    },
+                    "entry_type": 0,
+                    "entry_url": ""
+                },
+                "front_category_tag": [
+                    ""
+                ],
+                "highlights": [
+                    {
+                        "content": "",
+                        "priority": 0
+                    }
+                ],
+                "image_list": [
+                    "url1",
+                    "url2"
+                ],
+                "mp_settle_type": 0,
+                "name": "预售券1",
+                "origin_price": 0,
+                "price": 0,
+                "sort_weight": 0,
+                "spu_ext_id": "",
+                "spu_filter_status": [
+                    {
+                        "spu_poi_filter_status": [
+                            {
+                                "code": 0,
+                                "filter": false,
+                                "poi_id": "12112",
+                                "reason": ""
+                            }
+                        ],
+                        "supplier_id": ""
+                    }
+                ],
+                "spu_id": "",
+                "spu_type": 0,
+                "status": 0,
+                "status_desc": "",
+                "stock": 0,
+                "supplier_ext_id_list": [
+                    "y0001",
+                    "y0002"
+                ],
+                "take_rate": 100
+            }
+        ]
+    }
+}

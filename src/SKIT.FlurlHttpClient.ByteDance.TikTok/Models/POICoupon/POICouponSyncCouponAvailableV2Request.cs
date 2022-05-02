@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     /// <summary>
     /// <para>表示 [POST] /poi/v2/coupon/sync/coupon_available 接口的请求。</para>
     /// </summary>
-    public class POICouponSyncCouponAvailableRequest : TikTokRequest
+    public class POICouponSyncCouponAvailableV2Request : TikTokRequest
     {
         public static class Types
         {
@@ -13,11 +13,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
             {
                 public static class Types
                 {
-                    public class SPUExternalInfo : POICouponSyncRequest.Types.Availability.Types.SPUExternalInfo
+                    public class SPUExternalInfo : POICouponSyncV2Request.Types.Availability.Types.SPUExternalInfo
                     {
                     }
 
-                    public class SupplierExternalInfo : POICouponSyncRequest.Types.Availability.Types.SupplierExternalInfo
+                    public class SupplierExternalInfo : POICouponSyncV2Request.Types.Availability.Types.SupplierExternalInfo
                     {
                     }
                 }
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
             {
                 public static class Types
                 {
-                    public class EntryMiniApp : POICouponSyncRequest.Types.Entry.Types.EntryMiniApp
+                    public class EntryMiniApp : POISupplierSyncRequest.Types.Service.Types.Entry.Types.EntryMiniApp
                     {
                     }
                 }

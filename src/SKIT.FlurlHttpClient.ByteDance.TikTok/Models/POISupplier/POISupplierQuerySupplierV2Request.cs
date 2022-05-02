@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
     /// <summary>
     /// <para>表示 [GET] /poi/v2/supplier/query/supplier 接口的请求。</para>
     /// </summary>
-    public class POISupplierQuerySupplierRequest : TikTokRequest
+    public class POISupplierQuerySupplierV2Request : TikTokRequest
     {
         /// <summary>
         /// 获取或设置接入方店铺外部 ID 列表。

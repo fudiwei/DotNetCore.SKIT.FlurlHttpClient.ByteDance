@@ -3,10 +3,7 @@
         "conclusion": {
             "match_conclusion": 1,
             "match_message": "",
-            "can_apply_type_list": [
-                1,
-                2
-            ],
+            "can_apply_type_list": [1, 2],
             "match_success": true
         }
     },

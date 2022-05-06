@@ -3,9 +3,7 @@
     "msgId": "04288XXXXXXX9348874::100:1618990587:68373744XXXXXXX9128",
     "data": {
         "p_id": "xxxxxxx",
-        "s_ids": [
-            "xxxxxxx"
-        ],
+        "s_ids": ["xxxxxxx"],
         "shop_id": 12345,
         "order_status": 5,
         "order_type": 0,

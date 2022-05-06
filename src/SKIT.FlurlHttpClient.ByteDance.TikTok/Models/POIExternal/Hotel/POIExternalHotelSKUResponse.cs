@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                 public int Count
                 {
-                    get { return _list.Count; } 
+                    get { return _list.Count; }
                 }
 
                 public bool IsReadOnly

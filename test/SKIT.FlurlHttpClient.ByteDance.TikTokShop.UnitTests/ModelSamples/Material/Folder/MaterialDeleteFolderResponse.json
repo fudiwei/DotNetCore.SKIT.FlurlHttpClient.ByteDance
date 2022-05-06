@@ -1,8 +1,6 @@
 ﻿{
     "data": {
-        "success_ids": [
-            "123"
-        ],
+        "success_ids": ["123"],
         "failed_map": {
             "7001012973925941548": {
                 "code": 20001,

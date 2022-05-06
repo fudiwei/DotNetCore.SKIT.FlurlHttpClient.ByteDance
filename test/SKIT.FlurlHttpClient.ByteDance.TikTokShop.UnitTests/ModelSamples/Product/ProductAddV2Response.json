@@ -3,16 +3,16 @@
         "product_id": 3472490447010721067,
         "out_product_id": 1617004369,
         "outer_product_id": "1617004369",
-        "create_time": "2021-03-29 15:52:53", 
+        "create_time": "2021-03-29 15:52:53",
         "sku": [
             {
                 "sku_id": 1695459998495774,
-                "out_sku_id": 0, 
-                "outer_sku_id": "", 
-                "code": "", 
-                "spec_detail_id1": 1695459998494734, 
+                "out_sku_id": 0,
+                "outer_sku_id": "",
+                "code": "",
+                "spec_detail_id1": 1695459998494734,
                 "spec_detail_id2": 1695459998494766,
-                "spec_detail_id3": 0 
+                "spec_detail_id3": 0
             },
             {
                 "sku_id": 1695459998495758,

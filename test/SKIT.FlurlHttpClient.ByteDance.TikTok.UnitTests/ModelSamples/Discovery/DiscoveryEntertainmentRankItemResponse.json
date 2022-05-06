@@ -16,12 +16,8 @@
                     "贾冰",
                     "郭京飞"
                 ],
-                "areas": [
-                    "中国"
-                ],
-                "directors": [
-                    "徐峥"
-                ],
+                "areas": ["中国"],
+                "directors": ["徐峥"],
                 "discussion_hot": 789200,
                 "hot": 789200,
                 "id": "6399487713065566465",
@@ -32,9 +28,7 @@
                 "poster": "https://p3-dy.bytecdn.cn/obj/compass/9ac412ae054b57f69c0967a8eb5e25c9",
                 "release_date": "2020-01-25",
                 "search_hot": 684900,
-                "tags": [
-                    "喜剧"
-                ],
+                "tags": ["喜剧"],
                 "topic_hot": 684900,
                 "type": 1
             }

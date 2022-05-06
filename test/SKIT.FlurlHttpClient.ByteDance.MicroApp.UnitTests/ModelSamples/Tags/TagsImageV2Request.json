@@ -1,5 +1,5 @@
 ﻿{
-    "targets": [ "ad", "porn" ],
+    "targets": ["ad", "porn"],
     "tasks": [
         {
             "image": "https://image.url"

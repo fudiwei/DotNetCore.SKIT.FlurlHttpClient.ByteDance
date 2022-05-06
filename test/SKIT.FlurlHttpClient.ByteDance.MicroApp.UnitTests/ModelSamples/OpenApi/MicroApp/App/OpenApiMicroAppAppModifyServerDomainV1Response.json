@@ -2,9 +2,9 @@
     "errno": 0,
     "message": "success",
     "data": {
-        "request": [ "www.xxx.com", "www.xxx.com" ],
-        "socket": [ "www.xxx.com", "www.xxx.com" ],
-        "upload": [ "www.xxx.com", "www.xxx.com" ],
-        "download": [ "www.xxx.com", "www.xxx.com" ]
+        "request": ["www.xxx.com", "www.xxx.com"],
+        "socket": ["www.xxx.com", "www.xxx.com"],
+        "upload": ["www.xxx.com", "www.xxx.com"],
+        "download": ["www.xxx.com", "www.xxx.com"]
     }
 }

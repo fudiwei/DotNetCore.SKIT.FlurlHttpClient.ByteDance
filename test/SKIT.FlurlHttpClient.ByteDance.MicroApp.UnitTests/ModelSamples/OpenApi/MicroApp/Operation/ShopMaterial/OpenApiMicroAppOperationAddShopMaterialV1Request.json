@@ -11,9 +11,7 @@
     "additional_qual": [
         {
             "additional_qual_type": 1,
-            "paths": [
-                { "path": "tos-xxx-ffffffff/44efddffd1611fdf95" }
-            ]
+            "paths": [{ "path": "tos-xxx-ffffffff/44efddffd1611fdf95" }]
         },
         {
             "additional_qual_type": 2,

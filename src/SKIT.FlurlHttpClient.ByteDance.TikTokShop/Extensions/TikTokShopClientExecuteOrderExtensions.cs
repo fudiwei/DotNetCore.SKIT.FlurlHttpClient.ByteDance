@@ -444,7 +444,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop
             {
                 using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: "invoice.pdf", fileBytes: request.FileBytes, fileContentType: "application/pdf", formDataName: "upload_file");
                 httpContent.Add(new StringContent(client.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json"), Constants.FormDataFields.FORMDATA_PARAM_JSON);
-                
+
                 return await client.SendRequestAsync<Models.OrderInvoiceUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
             }
         }

@@ -1,4 +1,4 @@
 ﻿{
     "action": "add",
-    "webview": [ "www.xxx.com" ]
+    "webview": ["www.xxx.com"]
 }

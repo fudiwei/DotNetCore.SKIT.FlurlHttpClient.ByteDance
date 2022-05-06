@@ -2,7 +2,5 @@
     "aftersale_id": "6987272148133888300",
     "start_time": 1626770133,
     "end_time": 1626856525,
-    "order_by": [
-        "status_deadline desc"
-    ]
+    "order_by": ["status_deadline desc"]
 }

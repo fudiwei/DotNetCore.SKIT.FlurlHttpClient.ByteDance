@@ -2,7 +2,7 @@
     "errno": 0,
     "message": "success",
     "data": {
-        "hostNames": [ "toutiao", "douyin", "tt_lite" ],
-        "releasedHostNames": [ "toutiao", "douyin" ]
+        "hostNames": ["toutiao", "douyin", "tt_lite"],
+        "releasedHostNames": ["toutiao", "douyin"]
     }
 }

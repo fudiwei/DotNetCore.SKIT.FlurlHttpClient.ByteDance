@@ -1,6 +1,4 @@
 ﻿{
     "aftersale_id": "123123",
-    "evidence": [
-        "https://xxxx.jpg"
-    ]
+    "evidence": ["https://xxxx.jpg"]
 }

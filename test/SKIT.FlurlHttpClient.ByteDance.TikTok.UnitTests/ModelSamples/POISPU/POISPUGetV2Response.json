@@ -70,9 +70,7 @@
                     "order_limit": "",
                     "order_valid_end": "2020-08-01 00:00:00",
                     "order_valid_start": "2020-08-01 00:00:00",
-                    "service_phone": [
-                        "[xxx xxx]"
-                    ]
+                    "service_phone": ["[xxx xxx]"]
                 },
                 "9001": {
                     "is_confirm_imme": "",
@@ -113,9 +111,7 @@
                         }
                     ],
                     "post_purchase_day": "",
-                    "service_phone": [
-                        "[xxx xxx]"
-                    ],
+                    "service_phone": ["[xxx xxx]"],
                     "sub_title": "",
                     "tag_list": [
                         {
@@ -136,19 +132,14 @@
                 "entry_type": 0,
                 "entry_url": ""
             },
-            "front_category_tag": [
-                ""
-            ],
+            "front_category_tag": [""],
             "highlights": [
                 {
                     "content": "",
                     "priority": 0
                 }
             ],
-            "image_list": [
-                "url1",
-                "url2"
-            ],
+            "image_list": ["url1", "url2"],
             "mp_settle_type": 0,
             "name": "预售券1",
             "origin_price": 0,
@@ -173,10 +164,7 @@
             "status": 0,
             "status_desc": "",
             "stock": 0,
-            "supplier_ext_id_list": [
-                "y0001",
-                "y0002"
-            ],
+            "supplier_ext_id_list": ["y0001", "y0002"],
             "take_rate": 100
         },
         "spu_draft": [
@@ -248,9 +236,7 @@
                         "order_limit": "",
                         "order_valid_end": "2020-08-01 00:00:00",
                         "order_valid_start": "2020-08-01 00:00:00",
-                        "service_phone": [
-                            "[xxx xxx]"
-                        ]
+                        "service_phone": ["[xxx xxx]"]
                     },
                     "9001": {
                         "is_confirm_imme": "",
@@ -291,9 +277,7 @@
                             }
                         ],
                         "post_purchase_day": "",
-                        "service_phone": [
-                            "[xxx xxx]"
-                        ],
+                        "service_phone": ["[xxx xxx]"],
                         "sub_title": "",
                         "tag_list": [
                             {
@@ -314,19 +298,14 @@
                     "entry_type": 0,
                     "entry_url": ""
                 },
-                "front_category_tag": [
-                    ""
-                ],
+                "front_category_tag": [""],
                 "highlights": [
                     {
                         "content": "",
                         "priority": 0
                     }
                 ],
-                "image_list": [
-                    "url1",
-                    "url2"
-                ],
+                "image_list": ["url1", "url2"],
                 "mp_settle_type": 0,
                 "name": "预售券1",
                 "origin_price": 0,
@@ -351,10 +330,7 @@
                 "status": 0,
                 "status_desc": "",
                 "stock": 0,
-                "supplier_ext_id_list": [
-                    "y0001",
-                    "y0002"
-                ],
+                "supplier_ext_id_list": ["y0001", "y0002"],
                 "take_rate": 100
             }
         ]

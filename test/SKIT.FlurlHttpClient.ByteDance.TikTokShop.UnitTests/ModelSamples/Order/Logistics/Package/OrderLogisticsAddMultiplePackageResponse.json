@@ -6,9 +6,7 @@
                 "pack_id": "4705288465508532862",
                 "shipped_order_info": [
                     {
-                        "shipped_item_ids": [
-                            "123123"
-                        ],
+                        "shipped_item_ids": ["123123"],
                         "shipped_num": "1",
                         "shipped_order_id": "123123"
                     }

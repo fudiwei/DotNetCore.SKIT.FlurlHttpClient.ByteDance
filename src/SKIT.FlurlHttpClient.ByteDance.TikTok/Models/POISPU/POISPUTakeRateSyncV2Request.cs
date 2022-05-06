@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [POST] /poi/v2/spu/take_rate/sync 接口的请求。</para>

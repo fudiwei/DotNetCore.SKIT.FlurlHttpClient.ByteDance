@@ -248,10 +248,7 @@
                     }
                 ],
                 "doudian_open_id": "#zuLyd4U4J3p+czzXkwg+ZQ673h7KTcrKOddb5iPGAAE0K3MYJmgXEXof9LDtoScAfMKvdVRqpAL4CEI3SrLwYATIzTF9Qw==",
-                "serial_number_list": [
-                    "546443524543534",
-                    "646443524543534"
-                ],
+                "serial_number_list": ["546443524543534", "646443524543534"],
                 "promotion_redpack_amount": 100,
                 "promotion_redpack_platform_amount": 100,
                 "promotion_redpack_talent_amount": 100,

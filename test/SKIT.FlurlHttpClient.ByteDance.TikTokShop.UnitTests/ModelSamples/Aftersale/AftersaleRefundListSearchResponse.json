@@ -31,9 +31,7 @@
                         "post_amount": 0,
                         "refund_amount": 1,
                         "refund_post_amount": 0,
-                        "aftersale_service": [
-                            "supply_7day_return"
-                        ],
+                        "aftersale_service": ["supply_7day_return"],
                         "sku_spec": [
                             {
                                 "name": "颜色",

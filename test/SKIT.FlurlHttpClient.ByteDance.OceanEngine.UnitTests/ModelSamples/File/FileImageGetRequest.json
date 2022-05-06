@@ -1,8 +1,6 @@
 ﻿{
     "advertiser_id": 0,
     "filtering": {
-        "image_ids": [
-            "xxx"
-        ]
+        "image_ids": ["xxx"]
     }
 }

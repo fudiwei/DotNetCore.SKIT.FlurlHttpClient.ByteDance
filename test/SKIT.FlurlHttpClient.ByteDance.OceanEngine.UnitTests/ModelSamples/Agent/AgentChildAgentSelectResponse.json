@@ -2,9 +2,6 @@
     "message": "OK",
     "code": 0,
     "data": {
-        "child_agent_ids": [
-            1,
-            2
-        ]
+        "child_agent_ids": [1, 2]
     }
 }

@@ -284,42 +284,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokShop.Models
                     public class Logistics
                     {
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("customs_clear_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("customs_clear_type")]
                         public int CustomsClearType { get; set; }
 
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("origin_region_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("origin_region_id")]
                         public int OriginRegionId { get; set; }
 
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("source_region_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("source_region_id")]
                         public int SourceRegionId { get; set; }
 
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("brand_region_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("brand_region_id")]
                         public int BrandRegionId { get; set; }
 
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tax_payer")]
                         [System.Text.Json.Serialization.JsonPropertyName("tax_payer")]
                         public int TaxPayer { get; set; }
 
                         /// <summary>
-                        /// 
+                        ///
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("net_weight_qty")]
                         [System.Text.Json.Serialization.JsonPropertyName("net_weight_qty")]

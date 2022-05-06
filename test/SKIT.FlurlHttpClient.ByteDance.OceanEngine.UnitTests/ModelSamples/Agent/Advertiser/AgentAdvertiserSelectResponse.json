@@ -2,11 +2,7 @@
     "message": "OK",
     "code": 0,
     "data": {
-        "list": [
-            1,
-            2,
-            3
-        ],
+        "list": [1, 2, 3],
         "page_info": {
             "page": 1,
             "page_size": 10,

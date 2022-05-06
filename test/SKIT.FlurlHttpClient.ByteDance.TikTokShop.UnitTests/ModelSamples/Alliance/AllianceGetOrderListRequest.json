@@ -1,7 +1,3 @@
 ﻿{
-    "order_ids": [
-        "id1",
-        "id2",
-        "id3"
-    ]
+    "order_ids": ["id1", "id2", "id3"]
 }

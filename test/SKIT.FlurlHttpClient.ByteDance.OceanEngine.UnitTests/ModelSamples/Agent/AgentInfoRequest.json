@@ -1,10 +1,4 @@
 ﻿{
-    "advertiser_ids": [
-        1,
-        2
-    ],
-    "fields": [
-        "xxx",
-        "xxxx"
-    ]
+    "advertiser_ids": [1, 2],
+    "fields": ["xxx", "xxxx"]
 }

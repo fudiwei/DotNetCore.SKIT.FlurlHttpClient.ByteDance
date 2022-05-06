@@ -7,9 +7,7 @@
             "first_class": 10000,
             "second_class": 10100,
             "title": "python入门教程",
-            "qualification_uris": [
-                "product/resource/abc.png"
-            ],
+            "qualification_uris": ["product/resource/abc.png"],
             "purchase_precaution": "购课成功后如何...",
             "product_fulfillment_lst": [
                 {

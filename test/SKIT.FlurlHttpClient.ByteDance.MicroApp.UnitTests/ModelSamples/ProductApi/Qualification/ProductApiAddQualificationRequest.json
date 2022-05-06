@@ -21,7 +21,9 @@
             "qualification_info_lst": [
                 {
                     "type": 1,
-                    "image_uris": [ "product/resource/002b47258345646892b517009a473630" ],
+                    "image_uris": [
+                        "product/resource/002b47258345646892b517009a473630"
+                    ],
                     "validity_date": "2022-09-21",
                     "license_id": "2352WE600099"
                 }

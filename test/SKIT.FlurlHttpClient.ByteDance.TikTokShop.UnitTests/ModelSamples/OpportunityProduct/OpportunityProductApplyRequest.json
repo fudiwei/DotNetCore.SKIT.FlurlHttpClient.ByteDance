@@ -1,6 +1,6 @@
 ﻿{
     "clue_id": 123,
-    "product_ids": [ 1, 2, 3 ],
+    "product_ids": [1, 2, 3],
     "origin": "ISV",
     "type": "NEW"
 }

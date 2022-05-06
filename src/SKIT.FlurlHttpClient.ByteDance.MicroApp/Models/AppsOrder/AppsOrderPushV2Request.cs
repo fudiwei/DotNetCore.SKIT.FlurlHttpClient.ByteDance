@@ -46,7 +46,7 @@
         [System.Text.Json.Serialization.JsonPropertyName("ext_shop_id")]
         public string ExternalShopId { get; set; } = string.Empty;
 
-        /// <summary>   
+        /// <summary>
         /// 获取或设置字节系 App 名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_name")]

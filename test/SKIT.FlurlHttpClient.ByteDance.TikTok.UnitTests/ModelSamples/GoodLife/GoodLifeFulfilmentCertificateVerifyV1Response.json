@@ -1,0 +1,25 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "verify_results": [
+            {
+                "result": 0,
+                "msg": "验券成功",
+                "code": "CgwIARDhJxjLLyABKAESLgosTYTOIJFLZx8IaWKdO9ISKSWf4XYaqzt8TU1fhbTpYhIAuA5i5fRYfApwNRMaAA==",
+                "verify_id": "7091478021421631519",
+                "certificate_id": "7091180835810052103",
+                "origin_code": "102539929601",
+                "account_id": "123456"
+            }
+        ]
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "xxx",
+        "now": 1651113600
+    }
+}

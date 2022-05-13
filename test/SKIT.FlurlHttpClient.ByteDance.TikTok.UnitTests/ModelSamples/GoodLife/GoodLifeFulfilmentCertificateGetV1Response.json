@@ -1,0 +1,39 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "certificate": {
+            "encrypted_code": "CgwIARDhJxjLLyABKAESLgoscGiCSmZoMBlvG3WxOIxOGTfZHKvwwQD+DInGZEAi/SJsemJO/r+88+w3Th4aAA==",
+            "status": 2,
+            "amount": {
+                "original_amount": 10,
+                "pay_amount": 10,
+                "merchant_ticket_amount": 0
+            },
+            "sku": {
+                "sku_id": "1730440745530376",
+                "title": "测试",
+                "market_price": 19900,
+                "sold_start_time": 1650278040000
+            },
+            "expire_time": 1682265599000,
+            "code": "104930181552",
+            "verify": {
+                "can_cancel": false,
+                "certificate_id": "7091293506194655239",
+                "verifier_unique_id": "开放平台API",
+                "verify_id": "7091644694387591181",
+                "verify_time": 1651152314000,
+                "verify_type": 4
+            }
+        }
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "xxx",
+        "now": 1651194819
+    }
+}

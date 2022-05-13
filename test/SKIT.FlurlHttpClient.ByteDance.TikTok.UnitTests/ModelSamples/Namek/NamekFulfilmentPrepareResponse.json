@@ -1,0 +1,34 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "verify_token": "78a23d74-d0f5-4235-a491-5f68f8c23825",
+        "certificates": [
+            {
+                "encrypted_code": "CgwIARDhJxjLLyABKAESLgospP68K9dbp40hkHacQATyW6TK3vAP7nf0uukDsoDOO5wj5bu1Zt1raI5lH4gaAA==",
+                "expire_time": 1682179199000,
+                "sku": {
+                    "title": "测试",
+                    "account_id": "123456",
+                    "market_price": 19900,
+                    "sku_id": "1730440745530376",
+                    "sold_start_time": 1650278040,
+                    "third_sku_id": ""
+                },
+                "amount": {
+                    "original_amount": 10,
+                    "pay_amount": 10,
+                    "merchant_ticket_amount": 0
+                }
+            }
+        ]
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "xxx",
+        "now": 1651063623
+    }
+}

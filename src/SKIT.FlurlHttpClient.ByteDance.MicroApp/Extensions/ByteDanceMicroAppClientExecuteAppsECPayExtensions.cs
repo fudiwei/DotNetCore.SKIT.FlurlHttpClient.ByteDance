@@ -124,6 +124,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_merchant 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -146,6 +147,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/get_app_merchant 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -171,6 +173,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/app_add_sub_merchant 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-sub-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -192,7 +195,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_sub_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/merchant#%E6%9C%8D%E5%8A%A1%E5%95%86%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BF%9B%E4%BB%B6 </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/sub-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -219,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Order
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_order 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/pay </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -244,7 +248,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_order 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -269,7 +273,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_refund 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/refund </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -294,7 +298,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_refund 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -319,7 +323,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/settle 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/settlement </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -344,7 +348,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_settle 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/server-doc </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -365,6 +369,56 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_settle");
 
             return await client.SendRequestWithJsonAsync<Models.AppsECPayQuerySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/v1/create_return 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/ReturnSettle </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPayCreateReturnV1Response> ExecuteAppsECPayCreateReturnV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayCreateReturnV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_return");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/v1/query_return 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/query </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPayQueryReturnV1Response> ExecuteAppsECPayQueryReturnV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayQueryReturnV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_return");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
 

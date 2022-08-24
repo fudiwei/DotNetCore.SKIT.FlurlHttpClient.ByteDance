@@ -1,0 +1,17 @@
+﻿{
+    "err_no": 0,
+    "err_tips": "success",
+    "return_info": {
+        "cp_extra": "",
+        "fail_reason": "SUCCESS",
+        "finish_time": 1647332403,
+        "merchant_uid": "XCXP_000003087",
+        "out_return_no": "ttcfdbb96650e33350",
+        "out_settle_no": "ot_settle_7067682742942583084_2",
+        "return_amount": 1,
+        "return_no": "7075228873218099500",
+        "return_status": "SUCCESS",
+        "settle_no": "7075237473193855276",
+        "thirdparty_id": "tta4bad2073b9009c7"
+    }
+}

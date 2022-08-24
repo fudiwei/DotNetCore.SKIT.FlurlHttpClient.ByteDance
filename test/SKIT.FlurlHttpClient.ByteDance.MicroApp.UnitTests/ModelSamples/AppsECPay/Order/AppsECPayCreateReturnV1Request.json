@@ -1,0 +1,12 @@
+﻿{
+    "app_id": "tt07e3715e98c9aac0",
+    "out_settle_no": "sd_T220416122114165008287419707173",
+    "settle_no": "7067781639492913452",
+    "out_return_no": "out_return_7067781639492913452",
+    "merchant_uid": "XCXP_000003089",
+    "return_amount": 30,
+    "return_desc": "分账回退demo",
+    "notify_url": "",
+    "cp_extra": "2856",
+    "sign": "d98e6af1c490b36f7b72e2037f81a511"
+}

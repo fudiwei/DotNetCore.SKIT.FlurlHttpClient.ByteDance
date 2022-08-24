@@ -14,7 +14,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance MicroApp 字节 字节小程序 字节跳动 字节跳动小程序 头条 头条小程序 今日头条 今日头条小程序</PackageTags>
-        <Version>1.2.0</Version>
+        <Version>1.3.0</Version>
         <Description>基于 Flurl.Http 的字节小程序 API 客户端。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>

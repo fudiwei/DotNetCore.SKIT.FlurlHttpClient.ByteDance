@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -83,6 +83,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 using IFlurlResponse flurlResponse = await base.SendRequestAsync(flurlRequest, httpContent, cancellationToken);
                 return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
             }
+            catch (FlurlHttpTimeoutException ex)
+            {
+                throw new Exceptions.OceanEngineRequestTimeoutException(ex.Message, ex);
+            }
             catch (FlurlHttpException ex)
             {
                 throw new OceanEngineException(ex.Message, ex);
@@ -106,6 +110,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             {
                 using IFlurlResponse flurlResponse = await base.SendRequestWithJsonAsync(flurlRequest, data, cancellationToken);
                 return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
+            }
+            catch (FlurlHttpTimeoutException ex)
+            {
+                throw new Exceptions.OceanEngineRequestTimeoutException(ex.Message, ex);
             }
             catch (FlurlHttpException ex)
             {

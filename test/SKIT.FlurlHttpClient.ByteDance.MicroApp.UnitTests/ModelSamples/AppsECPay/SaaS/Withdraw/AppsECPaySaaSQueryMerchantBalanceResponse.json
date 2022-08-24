@@ -1,0 +1,15 @@
+﻿{
+    "err_no": 0,
+    "err_tips": "",
+    "account_info": {
+        "online_balance": 20,
+        "withdrawable_balacne": 100000,
+        "freeze_balance": 200000
+    },
+    "settle_info": {
+        "settle_type": 2,
+        "settle_account": "bytedance@163.com",
+        "bankcard_no": "",
+        "bank_name": ""
+    }
+}

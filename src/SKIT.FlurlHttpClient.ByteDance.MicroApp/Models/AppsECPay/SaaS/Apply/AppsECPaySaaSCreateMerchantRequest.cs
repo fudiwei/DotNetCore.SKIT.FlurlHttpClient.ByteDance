@@ -409,7 +409,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("callback_url")]
         [System.Text.Json.Serialization.JsonPropertyName("callback_url")]
-        public string CallbackUrl { get; set; } = string.Empty;
+        public string NotifyUrl { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置进件渠道列表。

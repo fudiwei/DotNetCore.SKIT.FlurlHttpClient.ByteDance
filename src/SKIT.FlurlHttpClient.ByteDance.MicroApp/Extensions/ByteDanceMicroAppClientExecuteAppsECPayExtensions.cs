@@ -58,6 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         #region SaaS
+        #region SaaS - Apply
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/create_merchant 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/create </para>
@@ -120,7 +121,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryMerchantStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
 
+        #region SaaS - PageLinks
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_merchant 接口。</para>
         /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
@@ -218,6 +221,75 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
+
+        #region SaaS - Withdraw
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_balance 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query-balance </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPaySaaSQueryMerchantBalanceResponse> ExecuteAppsECPaySaaSQueryMerchantBalanceAsync(this ByteDanceMicroAppClient client, Models.AppsECPaySaaSQueryMerchantBalanceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_balance");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryMerchantBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/saas/merchant_withdraw 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/merchant-withdraw </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPaySaaSMerchantWithdrawResponse> ExecuteAppsECPaySaaSMerchantWithdrawAsync(this ByteDanceMicroAppClient client, Models.AppsECPaySaaSMerchantWithdrawRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "merchant_withdraw");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSMerchantWithdrawResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/saas/query_withdraw_order 接口。</para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPaySaaSQueryWithdrawOrderResponse> ExecuteAppsECPaySaaSQueryWithdrawOrderAsync(this ByteDanceMicroAppClient client, Models.AppsECPaySaaSQueryWithdrawOrderRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_withdraw_order");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryWithdrawOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
         #endregion
 
         #region Order

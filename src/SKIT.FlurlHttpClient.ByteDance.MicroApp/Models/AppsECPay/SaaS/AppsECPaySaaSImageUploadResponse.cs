@@ -1,9 +1,9 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/ecpay/saas/add_merchant 接口的响应。</para>
+    /// <para>表示 [POST] /apps/ecpay/saas/image_upload 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSAddMerchantResponse : ByteDanceMicroAppResponse
+    public class AppsECPaySaaSImageUploadResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>
@@ -20,17 +20,10 @@
         public override string? ErrorMessage { get; set; }
 
         /// <summary>
-        /// 获取或设置请求页面链接。
+        /// 获取或设置图片 ID。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("url")]
-        [System.Text.Json.Serialization.JsonPropertyName("url")]
-        public string Url { get; set; } = default!;
-
-        /// <summary>
-        /// 获取或设置商户号。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("merchant_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("merchant_id")]
-        public string MerchantId { get; set; } = default!;
+        [Newtonsoft.Json.JsonProperty("image_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("image_id")]
+        public string ImageId { get; set; } = default!;
     }
 }

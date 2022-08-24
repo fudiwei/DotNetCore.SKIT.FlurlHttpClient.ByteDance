@@ -27,7 +27,7 @@
         public string Url { get; set; } = default!;
 
         /// <summary>
-        /// 获取或设置商户 ID。
+        /// 获取或设置商户号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_id")]

@@ -17,7 +17,7 @@
                 public string? ExternalShopId { get; set; }
 
                 /// <summary>
-                /// 获取或设置商户 ID。
+                /// 获取或设置商户号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shop_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("shop_id")]

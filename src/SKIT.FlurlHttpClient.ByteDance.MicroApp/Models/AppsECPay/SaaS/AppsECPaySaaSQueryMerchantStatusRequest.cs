@@ -20,14 +20,14 @@
         public string AppId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置商户 ID。与字段 <see cref="SubMerchantId"/> 二选一。
+        /// 获取或设置商户号。与字段 <see cref="SubMerchantId"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_id")]
         public string MerchantId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置子商户 ID。
+        /// 获取或设置子商户号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sub_merchant_id")]
         [System.Text.Json.Serialization.JsonPropertyName("sub_merchant_id")]

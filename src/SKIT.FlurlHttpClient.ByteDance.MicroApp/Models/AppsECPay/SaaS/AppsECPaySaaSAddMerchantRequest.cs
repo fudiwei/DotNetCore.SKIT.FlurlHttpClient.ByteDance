@@ -17,7 +17,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("component_access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("component_access_token")]
-        public string ComponentAccessToken { get; set; } = default!;
+        public string ComponentAccessToken { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置 URL 类型。

@@ -1,0 +1,74 @@
+﻿{
+    "app_id": "ttcfdbb96650e33350",
+    "access_token": "abc123czxhc84392s123ahdbz9213cdnzujncjznuqh12389834bhdb8bchzj8182jdsjaju123",
+    "thirdparty_id": "",
+    "component_access_token": "",
+    "sub_merchant_id": "test_receive_92",
+    "type": 2,
+    "callback_url": "https://www.bytedance.com/cn",
+    "channels": ["wx"],
+    "merchant_type": 2,
+    "merchant_name": "北京字节跳动有限公司",
+    "merchant_short_name": "字节跳动",
+    "province_code": "110000",
+    "city_code": "110100",
+    "district_code": "110107",
+    "registered_addr": "北京市海淀区北三环西路43号2号楼三层303室",
+    "business_license": {
+        "business_license_type": 3,
+        "business_license_code": "130429199205274617",
+        "business_license_picurl": {
+            "wx": "tos-cn-i-01omznotxb/565352443d7c44b79aa135583ad64d11"
+        },
+        "begin_date": "20211231",
+        "end_date": "99991231",
+        "address": "浙江省杭州市"
+    },
+    "legal_person": {
+        "id_type": 1,
+        "id_no": "13213429731104601X",
+        "name": "张三",
+        "front_pic_url": {
+            "wx": "tos-cn-i-01omznotxb/ad03b8461e48478c980d03f34d611625"
+        },
+        "back_pic_url": {
+            "wx": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c"
+        },
+        "begin_date": "20211231",
+        "exp_date": "99991231",
+        "address": "北京市海淀区北三环西路43号2号楼三层303室"
+    },
+    "merchant_card_info": {
+        "account_name": "北京字节跳动有限公司",
+        "account_no": "110932121411301",
+        "bank_full_name": "招商银行股份有限公司北京首体支行",
+        "settle_type": 2,
+        "card_type": "DC",
+        "settlement_cert_pic": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c",
+        "relation_cert_pic": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c",
+        "other_cert_pics": [
+            "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c",
+            "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c"
+        ]
+    },
+    "merchant_operation_info": {
+        "manage_name": "张三",
+        "manage_mobile": "18388888888",
+        "manage_person_type": 2,
+        "manage_id_no": "110101199003078531",
+        "manage_email": "bytedance@163.com",
+        "shop_name": "字节跳动",
+        "shop_url": "http://www.bytedance.com",
+        "id_type": 1,
+        "id_begin_date": "20211231",
+        "id_exp_date": "99991231",
+        "id_front_pic_url": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c",
+        "id_back_pic_url": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c",
+        "business_authorization_letter": "tos-cn-i-01omznotxb/1e19e6ba8b1e4755a886ab6a7447496c"
+    },
+    "industry_code": ["1520"],
+    "sign": "5ee5474aff4e5623f464fd6bf12322bf",
+    "out_order_id": "s90219201291021920121212x-02",
+    "create_name": "李四",
+    "beneficiary_type": "LEGAL"
+}

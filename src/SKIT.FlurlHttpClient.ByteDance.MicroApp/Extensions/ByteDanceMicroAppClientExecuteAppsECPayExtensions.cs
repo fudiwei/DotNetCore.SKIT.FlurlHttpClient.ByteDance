@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region SaaS
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/merchant#%E6%9C%8D%E5%8A%A1%E5%95%86%E8%BF%9B%E4%BB%B6%E6%8E%A5%E5%8F%A3 </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/get_app_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/merchant#%E6%9C%8D%E5%8A%A1%E5%95%86%E4%BB%A3%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BF%9B%E4%BB%B6 </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -107,7 +107,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/app_add_sub_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/merchant#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BF%9B%E4%BB%B6 </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_status 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/merchant#%E8%BF%9B%E4%BB%B6%E7%8A%B6%E6%80%81%E6%9F%A5%E8%AF%A2 </para>
+        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

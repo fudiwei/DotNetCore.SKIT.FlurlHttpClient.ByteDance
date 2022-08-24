@@ -2,5 +2,30 @@
     "err_no": 0,
     "err_tips": "",
     "wx": 1,
-    "alipay": 1
+    "alipay": 1,
+    "hz": 0,
+    "merchant_status_info": {
+        "alipay": {
+            "status": "SUCCESS",
+            "reject_reason": "",
+            "legal_validation_url": "",
+            "legal_sign_url": "",
+            "merchant_id": "69824283230789983130"
+        },
+        "hz": {
+            "status": "PROCESSING",
+            "reject_reason": "",
+            "legal_validation_url": "",
+            "legal_sign_url": "",
+            "merchant_id": "69824283230789983130"
+        },
+        "wx": {
+            "status": "SUCCESS",
+            "reject_reason": "",
+            "legal_validation_url": "",
+            "legal_sign_url": "",
+            "merchant_id": "69824283230789983130"
+        }
+    },
+    "yeepay": 0
 }

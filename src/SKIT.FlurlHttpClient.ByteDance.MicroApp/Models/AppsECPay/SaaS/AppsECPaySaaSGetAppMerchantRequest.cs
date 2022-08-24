@@ -6,18 +6,18 @@
     public class AppsECPaySaaSGetAppMerchantRequest : ByteDanceMicroAppRequest
     {
         /// <summary>
-        /// 获取或设置字节小程序的 AccessToken。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("component_access_token")]
-        [System.Text.Json.Serialization.JsonPropertyName("component_access_token")]
-        public override string? AccessToken { get; set; }
-
-        /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("thirdparty_id")]
         [System.Text.Json.Serialization.JsonPropertyName("thirdparty_id")]
         public string? ComponentAppId { get; set; }
+
+        /// <summary>
+        /// 获取或设置第三方平台 AccessToken。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("component_access_token")]
+        [System.Text.Json.Serialization.JsonPropertyName("component_access_token")]
+        public string ComponentAccessToken { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置小程序的 AppId。

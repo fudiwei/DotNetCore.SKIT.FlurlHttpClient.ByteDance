@@ -22,16 +22,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "image", "upload")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
-
             if (request.ImageFileName == null)
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.ImageContentType == null)
                 request.ImageContentType = "image/jpeg";
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "image", "upload")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageContentType!, formDataName: "image");
             return await client.SendRequestAsync<Models.ImageUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);

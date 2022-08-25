@@ -1,0 +1,7 @@
+﻿{
+    "access_token": "act.1a4b9d05d9ad1a56294b93b5609cdfbdNzQgbpbUWyFNvhC9QqIvKEjuuPHn",
+    "filters": {
+        "video_ids": ["6948568030997662933", "6935880793298373833"]
+    },
+    "fields": ["id", "title"]
+}

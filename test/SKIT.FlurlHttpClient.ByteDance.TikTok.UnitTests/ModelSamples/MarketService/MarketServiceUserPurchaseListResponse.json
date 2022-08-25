@@ -1,0 +1,35 @@
+﻿{
+    "data": {
+        "error_code": 0,
+        "description": "",
+        "purchase_info_list": [
+            {
+                "service_id": "7021602203591******",
+                "service_name": "服务名称",
+                "service_status": 1,
+                "specification_type": 1,
+                "specification_title": "体验版",
+                "service_mode_id": "free",
+                "remain_service_times": 10
+            },
+            {
+                "service_id": "7021602203591******",
+                "service_name": "服务名称",
+                "service_status": 1,
+                "specification_type": 3,
+                "specification_title": "标准版",
+                "service_mode_id": "standard_1",
+                "effective_time": 1651409686000,
+                "expire_time": 1651841686602
+            }
+        ]
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393
+    }
+}

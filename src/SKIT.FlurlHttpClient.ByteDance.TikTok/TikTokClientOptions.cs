@@ -13,7 +13,7 @@
 
         /// <summary>
         /// 获取或设置抖音开放平台 API 域名。
-        /// <para>默认值：<see cref="TikTokEndpoints.XIGUA"/></para>
+        /// <para>默认值：<see cref="TikTokEndpoints.DEFAULT"/></para>
         /// </summary>
         public string? Endpoints { get; set; }
 

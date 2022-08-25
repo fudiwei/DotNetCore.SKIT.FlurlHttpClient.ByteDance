@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? TikTokEndpoints.XIGUA;
+            FlurlClient.BaseUrl = options.Endpoints ?? TikTokEndpoints.DEFAULT;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
         }
 

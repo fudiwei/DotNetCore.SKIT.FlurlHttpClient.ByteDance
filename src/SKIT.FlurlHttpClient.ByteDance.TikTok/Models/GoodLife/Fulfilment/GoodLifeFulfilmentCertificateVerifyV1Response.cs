@@ -63,18 +63,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                         public string? OriginCode { get; set; }
 
                         /// <summary>
-                        /// 获取或设置企业号商家总店 ID。
+                        /// 获取或设置商家团购账号 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("account_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
                         public string? AccountId { get; set; }
-            }
-        }
+                    }
+                }
 
-        /// <summary>
-        /// 获取或设置核销结果列表。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("verify_results")]
+                /// <summary>
+                /// 获取或设置核销结果列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("verify_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("verify_results")]
                 public Types.VerifyResult[] VerifyResultList { get; set; } = default!;
             }

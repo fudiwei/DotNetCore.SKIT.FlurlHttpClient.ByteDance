@@ -1,0 +1,49 @@
+{
+    "data": {
+        "cursor": "7000000000000000000",
+        "has_more": true,
+        "ledger_records": [
+            {
+                "account_id": "7000000000000000000",
+                "amount": {
+                    "merchant_ticket": 0,
+                    "actual_insured": 0,
+                    "original": 0,
+                    "pay": 0,
+                    "coupon_pay": 0,
+                    "goods": 0
+                },
+                "certificate": {
+                    "certificate_id": "7000000000000000000",
+                    "code": "100000000000"
+                },
+                "goods": {
+                    "group_name": "商品名",
+                    "sku_id": "1000000000000000",
+                    "sold_start_time": 1659921380
+                },
+                "id": "700000000000000000",
+                "item_order_id": "800000000000001449813500000",
+                "ledger_id": "l_r_b0000000000797812254000011945608",
+                "ledger_time": 1661054991,
+                "order_attrribute": {
+                    "room_id": "7000000000000000000",
+                    "source": "livebroadcasting"
+                },
+                "order_id": "8000000000000000000",
+                "poi_id": "6000000000000000000",
+                "receipt_bill_key": "7000000000000000000_202208_0_0",
+                "sku_order_id": "800000000000000000",
+                "status": 2
+            }
+        ]
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "xxx",
+        "now": 1651113600
+    }
+}

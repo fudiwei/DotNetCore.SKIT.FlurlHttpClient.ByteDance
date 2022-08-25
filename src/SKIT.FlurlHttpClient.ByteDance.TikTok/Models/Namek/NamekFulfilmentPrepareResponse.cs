@@ -21,19 +21,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 
                             public class SKU : GoodLifeFulfilmentCertificateGetV1Response.Types.Data.Types.Certificate.Types.SKU
                             {
-                                /// <summary>
-                                /// 获取或设置商家团购账号 ID。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("account_id")]
-                                [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                                public string? AccountId { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置商家自定义团购 SKU ID。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("third_sku_id")]
-                                [System.Text.Json.Serialization.JsonPropertyName("third_sku_id")]
-                                public string? OutSKUId { get; set; }
                             }
                         }
 

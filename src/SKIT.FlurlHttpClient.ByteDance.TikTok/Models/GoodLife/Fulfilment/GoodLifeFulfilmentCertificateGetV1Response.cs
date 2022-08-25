@@ -70,11 +70,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                                 public int MarketPrice { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置售卖开始时间毫秒级时间戳。
+                                /// 获取或设置售卖开始时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sold_start_time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sold_start_time")]
-                                public long StartTimeUnixMilliseconds { get; set; }
+                                public long StartTimestamp { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家团购账号 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("account_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("account_id")]
+                                public string? AccountId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家自定义团购 SKU ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("third_sku_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("third_sku_id")]
+                                public string? OutSKUId { get; set; }
                             }
 
                             public class VerifyResult
@@ -152,11 +166,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
                         public Types.SKU SKU { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置过期时间毫秒级时间戳。
+                        /// 获取或设置过期时间时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("expire_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                        public long ExpireTimeUnixMilliseconds { get; set; }
+                        public long ExpireTimestamp { get; set; }
 
                         /// <summary>
                         /// 获取或设置券码。

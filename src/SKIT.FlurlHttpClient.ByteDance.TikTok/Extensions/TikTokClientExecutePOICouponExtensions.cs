@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/coupon/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/coupon/coupon-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/coupon/coupon-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/coupon/sync/coupon_available 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/coupon/coupon-update </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/coupon/coupon-update </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

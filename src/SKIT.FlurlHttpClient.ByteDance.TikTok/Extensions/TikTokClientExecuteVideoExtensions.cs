@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /video/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/create/upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/part/init 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/create/slice-init-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-init-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/part/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/create/slice-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/part/complete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/create/slice-accomplish-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-accomplish-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -112,7 +112,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/create/create-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/create-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -133,7 +133,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/delete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/delete-video/delete </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/delete-video/delete </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /video/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/account-video-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/account-video-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -177,7 +177,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/data 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/video-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -196,10 +196,31 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
             return await client.SendRequestWithJsonAsync<Models.VideoDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /video/source 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/douyin-video-origin </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoSourceResponse> ExecuteVideoSourceAsync(this TikTokClient client, Models.VideoSourceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "video", "source")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoSourceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Toutiao
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/upload-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/create-video/upload-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -227,7 +248,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/part/init 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-init-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/create-video/slice-init-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -248,7 +269,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/part/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/create-video/slice-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -278,7 +299,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/part/complete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-accomplish-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/create-video/slice-accomplish-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -300,7 +321,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/publish-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/create-video/publish-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -321,7 +342,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /toutiao/video/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/account-video-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/search-video/account-video-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -344,7 +365,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /toutiao/video/data 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/video-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/toutiao/search-video/video-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -367,7 +388,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region Xigua
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/upload-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/create-video/upload-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -395,7 +416,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/part/init 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-init-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/create-video/slice-init-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -416,7 +437,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/part/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/create-video/slice-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -446,7 +467,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/part/complete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/slice-accomplish-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/create-video/slice-accomplish-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -468,7 +489,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/toutiao/create-video/publish-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/create-video/publish-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -489,7 +510,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /xigua/video/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/account-video-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/search-video/account-video-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -512,7 +533,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /xigua/video/data 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/video-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/xigua/search-video/video-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -535,7 +556,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region Search
         /// <summary>
         /// <para>异步调用 [GET] /video/search 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/search-management/keywords-video-list/keywords-video </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/search-management/keywords-video-list/keywords-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -559,7 +580,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /video/search/comment/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/search-management/keywords-video-comment-management/comment-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/search-management/keywords-video-comment-management/comment-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -583,7 +604,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /video/search/comment/reply/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/search-management/keywords-video-comment-management/comment-reply-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/search-management/keywords-video-comment-management/comment-reply-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -608,7 +629,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/search/comment/reply 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/search-management/keywords-video-comment-management/comment-reply </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/search-management/keywords-video-comment-management/comment-reply </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /namek/fulfilment/prepare 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/life.capacity.fulfilment/certificate.prepare </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/tripartite.code/create/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /sandbox/webhook/event/send 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/tools-ability/sandbox-management/mock-webhook-event </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/tools-ability/sandbox-management/mock-webhook-event </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

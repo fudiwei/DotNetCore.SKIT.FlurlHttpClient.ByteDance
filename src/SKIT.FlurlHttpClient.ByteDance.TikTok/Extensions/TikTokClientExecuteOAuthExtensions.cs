@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /oauth/access_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/get-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/get-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/renew_refresh_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/refresh-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/client_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/client-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/client-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/refresh_token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-permission/refresh-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region User
         /// <summary>
         /// <para>异步调用 [GET] /oauth/userinfo 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-management/get-account-open-info </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-account-open-info </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

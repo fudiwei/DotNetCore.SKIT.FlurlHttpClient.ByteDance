@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /image/upload 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/publish-img/upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/publish-img/upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /image/create 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/publish-img/publish </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/publish-img/publish </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

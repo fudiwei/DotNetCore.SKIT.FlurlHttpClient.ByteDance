@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/spu/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/spu-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/goods-repo/spu-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/spu/status_sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/spu-status-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/goods-repo/spu-status-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/spu/stock_update 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/spu-repo-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/goods-repo/spu-repo-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/v2/spu/get 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/spu-info-query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/goods-repo/spu-info-query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/v2/spu/take_rate/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/goods-repo/take-rate </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/goods-repo/take-rate </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

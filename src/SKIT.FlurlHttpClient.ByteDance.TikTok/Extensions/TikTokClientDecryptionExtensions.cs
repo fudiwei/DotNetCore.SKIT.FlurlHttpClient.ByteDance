@@ -10,6 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// 解密手机号码。
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/phone-number-decode-demo </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="encryptedMobileNumber"></param>

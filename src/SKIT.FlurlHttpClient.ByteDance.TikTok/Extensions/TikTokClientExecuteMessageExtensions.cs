@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /message/once/send 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/one-time-subscription-message </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/one-time-subscription-message </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/sync 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/client-message-sync/order-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/client-message-sync/order-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/status 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/order-status-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/order-status-sync </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/confirm 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-presell-ticket </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/cancel-presell-ticket </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/confirm/prepare 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/pre-cancel-presell-ticket </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/pre-cancel-presell-ticket </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /poi/order/confirm/cancel_prepare 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/cancel-precancel-presell-ticket </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/cancel-precancel-presell-ticket </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/order/bill/token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/get-download-bill-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/get-download-bill-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /poi/order/list/token 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/trade-system/get-download-order-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/trade-system/get-download-order-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

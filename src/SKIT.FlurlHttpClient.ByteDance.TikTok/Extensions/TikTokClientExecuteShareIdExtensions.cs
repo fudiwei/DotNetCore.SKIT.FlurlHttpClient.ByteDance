@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /share-id 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/video-management/douyin/search-video/video-share-result </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-share-result </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

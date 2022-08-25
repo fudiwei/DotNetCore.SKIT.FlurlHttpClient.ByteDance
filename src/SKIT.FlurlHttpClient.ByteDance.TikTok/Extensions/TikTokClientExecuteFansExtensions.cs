@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /fans/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-management/get-fans-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-fans-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /following/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-management/get-subscriber-list9 </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-subscriber-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -57,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /fans/check 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/account-management/fans-judge </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/fans-judge </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /fans/data 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/fans-portrait-data/get-user-fans-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/fans-portrait-data/get-user-fans-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

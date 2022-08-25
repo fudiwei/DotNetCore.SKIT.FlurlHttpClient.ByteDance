@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/message/send 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/message-management-enterprise/message-to-user </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/message-management-enterprise/message-to-user </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         #region Card
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/card/save 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/create-or-update-message-card </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/enterprise-messa-card/create-or-update-message-card </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /enterprise/im/card/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/get-message-card-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/enterprise-messa-card/get-message-card-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/im/card/delete 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/enterprise-open-ability/enterprise-messa-card/delete-message-card </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/enterprise-messa-card/delete-message-card </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

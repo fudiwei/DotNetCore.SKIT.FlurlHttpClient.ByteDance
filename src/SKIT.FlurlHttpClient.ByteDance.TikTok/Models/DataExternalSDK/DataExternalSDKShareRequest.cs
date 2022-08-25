@@ -1,8 +1,11 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+﻿using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [GET] /data/external/sdk_share 接口的请求。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2022-08-09 下线。")]
     public class DataExternalSDKShareRequest : TikTokRequest
     {
         /// <summary>

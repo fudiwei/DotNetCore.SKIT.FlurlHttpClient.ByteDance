@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /star/hot_list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-user/comment-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-tops/get-star-author-hot-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /star/author_score 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/star-data/star-author/get-star-author-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /star/author_score_v2 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/star-data/star-author/get-star-author-data-v2 </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data-v2 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

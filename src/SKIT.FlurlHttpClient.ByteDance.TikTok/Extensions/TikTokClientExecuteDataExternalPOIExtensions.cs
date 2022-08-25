@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/base 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/get-poi-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/get-poi-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/user 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/poi-user-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-user-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/service_base 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/poi-service-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/service_user 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/poi-service-user-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-user-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -107,7 +107,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/billboard 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/poi-service-hot-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-hot-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -128,7 +128,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/poi/claim/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/life-service-open-ability/poi-data/poi-claim-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-claim-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

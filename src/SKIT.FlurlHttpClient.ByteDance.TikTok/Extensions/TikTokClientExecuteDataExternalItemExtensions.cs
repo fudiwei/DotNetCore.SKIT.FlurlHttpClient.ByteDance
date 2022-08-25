@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/base 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/video-data/get-basic-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-basic-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/like 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/video-data/get-like-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-like-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/comment 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/video-data/get-comment-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-comment-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/play 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/video-data/get-play-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-play-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /data/external/item/share 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/video-data/get-share-data </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-share-data </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

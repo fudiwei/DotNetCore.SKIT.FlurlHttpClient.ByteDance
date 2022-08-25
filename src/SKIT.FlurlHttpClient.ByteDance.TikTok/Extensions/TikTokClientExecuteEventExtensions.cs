@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /event/status/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/get-event-subscription-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/get-event-subscription-status/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /event/status/update 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/update-event-subscription-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/update-event-subscription-status </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -19,3 +19,13 @@ var request = new Models.JSGetTicketRequest()
 var response = await client.ExecuteJSGetTicketAsync(request);
 var paramMap = client.GenerateParametersForJSBridgeConfig(response.Data.Ticket, "https://example.com");
 ```
+
+---
+
+### 【附】生成参数相关扩展方法速查表：
+
+-   生成客户端 JSBridge `sdk.config` 所需的参数字典：`GenerateParametersForJSBridgeConfig`
+
+-   生成抖音获取授权临时票据的 URL：`GenerateParameterizedUrlForPlatformOAuthConnect`
+
+-   生成抖音获取静默授权临时票据的 URL：`GenerateParameterizedUrlForPlatformOAuthSlientAuth`

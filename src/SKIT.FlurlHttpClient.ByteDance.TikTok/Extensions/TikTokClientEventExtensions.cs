@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>验证 Webhook 事件签名。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/develop/webhooks/summarize </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/summarize </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson">抖音 Webhook 事件中请求正文（JSON 格式）。</param>

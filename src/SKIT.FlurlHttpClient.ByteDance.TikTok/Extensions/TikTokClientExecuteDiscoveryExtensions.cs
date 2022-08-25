@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /discovery/ent/rank/item 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/douyin-tv-tops-data/get-douyin-tv-tops </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/douyin-tv-tops-data/get-douyin-tv-tops </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /discovery/ent/rank/version 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/douyin-tv-tops-data/get-douyin-tv-version </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/douyin-tv-tops-data/get-douyin-tv-version </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

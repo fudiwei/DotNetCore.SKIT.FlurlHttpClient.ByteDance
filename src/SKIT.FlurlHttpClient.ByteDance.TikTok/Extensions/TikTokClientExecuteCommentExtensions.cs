@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
     {
         /// <summary>
         /// <para>异步调用 [GET] /item/comment/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-user/comment-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/comment-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /item/comment/reply/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-user/comment-reply-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/comment-reply-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /item/comment/reply 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-user/video-comment-reply </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/video-comment-reply </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /video/comment/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-enterprise/comment-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/comment-management-enterprise/comment-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [GET] /video/comment/reply/list 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-enterprise/comment-reply-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/comment-management-enterprise/comment-reply-list </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -136,7 +136,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/comment/reply 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-enterprise/video-comment-reply </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/comment-management-enterprise/video-comment-reply </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -157,7 +157,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 
         /// <summary>
         /// <para>异步调用 [POST] /video/comment/top 接口。</para>
-        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/interaction-management/comment-management-enterprise/top-video-comment </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/comment-management-enterprise/top-video-comment </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

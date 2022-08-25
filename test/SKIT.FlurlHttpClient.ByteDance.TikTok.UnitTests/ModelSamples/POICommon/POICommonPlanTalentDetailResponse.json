@@ -1,0 +1,24 @@
+﻿{
+    "extra": {
+        "sub_description": "",
+        "sub_error_code": 0,
+        "description": "",
+        "error_code": 0,
+        "logid": "202204262150540102252431250654F23F",
+        "now": 1650981055
+    },
+    "data": {
+        "data": {
+            "dyvvvvvvvv": {
+                "live_cnt": 0,
+                "short_video_cnt": 80,
+                "talent_commission": 95980,
+                "used_gmv": 5980,
+                "gmv": 495980
+            }
+        },
+        "date": "2022-04-26",
+        "error_code": 0,
+        "description": ""
+    }
+}

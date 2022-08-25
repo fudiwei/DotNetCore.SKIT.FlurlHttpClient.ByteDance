@@ -1,0 +1,25 @@
+﻿{
+    "data": {
+        "page_count": 34,
+        "total": 100,
+        "error_code": 0,
+        "description": "",
+        "data": [
+            {
+                "content_type": 1,
+                "douyin_id": "dyvvvvvvv",
+                "gmv": 541100,
+                "nickname": "XXX达人"
+            }
+        ],
+        "date": "2022-04-26"
+    },
+    "extra": {
+        "now": 1650973203,
+        "sub_description": "",
+        "sub_error_code": 0,
+        "description": "",
+        "error_code": 0,
+        "logid": "202204261940030102252431390E4D92F4"
+    }
+}

@@ -74,7 +74,7 @@
 
 ---
 
-### 模块 `SKIT.FlurlHttpClient.ByteDance.TikTok` 更新日志
+### 模块 `SKIT.FlurlHttpClient.ByteDance.DouyinOpen` 更新日志
 
 <details>
 

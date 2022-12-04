@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             public class UrlLinkInfo
             {
                 /// <summary>
-                /// 获取或设置字节小程序的 AppId。
+                /// 获取或设置小程序的 AppId。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ma_app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("ma_app_id")]

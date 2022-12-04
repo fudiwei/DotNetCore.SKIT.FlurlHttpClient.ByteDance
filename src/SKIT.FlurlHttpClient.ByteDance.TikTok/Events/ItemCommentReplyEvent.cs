@@ -1,8 +1,8 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Events
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Events
 {
     /// <summary>
     /// <para>表示 item_comment_reply 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/event-list </para>
+    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/accept-comment-reply-event </para>
     /// </summary>
     public class ItemCommentReplyEvent : TikTokEvent<ItemCommentReplyEvent.Types.Content>
     {
@@ -18,7 +18,7 @@
                 public string CommentId { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置该条评论发布者 ID。
+                /// 获取或设置评论发布者 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("comment_user_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("comment_user_id")]
@@ -51,6 +51,27 @@
                 [Newtonsoft.Json.JsonProperty("create_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                 public long CreateTimestamp { get; set; }
+
+                /// <summary>
+                /// 获取或设置回复的评论 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("reply_to_comment_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("reply_to_comment_id")]
+                public string? ReplyToCommentId { get; set; }
+
+                /// <summary>
+                /// 获取或设置回复的视频 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("reply_to_item_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("reply_to_item_id")]
+                public string? ReplyToItemId { get; set; }
+
+                /// <summary>
+                /// 获取或设置回复的用户 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("at_user_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("at_user_id")]
+                public string? AtUserId { get; set; }
             }
         }
     }

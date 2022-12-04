@@ -1,4 +1,4 @@
-﻿{
+{
     "event": "item_comment_reply",
     "from_user_id": "",
     "to_user_id": "",
@@ -9,6 +9,9 @@
         "content": "",
         "create_time": 123123,
         "digg_count": 0,
-        "reply_comment_total": 1
+        "reply_comment_total": 1,
+        "reply_to_comment_id": "",
+        "reply_to_item_id": "@9VxT0uuFWsE7M3Koc4olFM791WbsNPGKOp1wrgiiJ1ERbfD060zdRmYqig357zEB1tSgbExoci7R0e1yFxAIMw==",
+        "at_user_id": ""
     }
 }

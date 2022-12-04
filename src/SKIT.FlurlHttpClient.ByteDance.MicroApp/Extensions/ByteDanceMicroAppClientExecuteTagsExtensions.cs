@@ -10,8 +10,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         /// <summary>
         /// <para>异步调用 [POST] /v2/tags/text/antidirt 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/content-security/content-security-detect </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/open-capacity/content-security/content-security-detect </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/content-security/content-security-detect </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/open-capacity/content-security/content-security-detect </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /v2/tags/image 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/open-capacity/content-security/picture-detect </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/open-capacity/content-security/picture-detect </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

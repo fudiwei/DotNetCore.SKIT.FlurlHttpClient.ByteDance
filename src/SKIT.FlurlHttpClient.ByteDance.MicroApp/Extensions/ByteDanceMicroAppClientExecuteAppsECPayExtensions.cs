@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request == null) throw new ArgumentNullException(nameof(request));
 
             /*
-             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/appendix#%E8%AF%B7%E6%B1%82%E7%AD%BE%E5%90%8D%E7%AE%97%E6%B3%95
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/appendix#%E8%AF%B7%E6%B1%82%E7%AD%BE%E5%90%8D%E7%AE%97%E6%B3%95
              */
 
             string json = client.JsonSerializer.Serialize(request);
@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region SaaS - Apply
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/create_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/create </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/create </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/image_upload 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/image-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/image-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_status 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/apply/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -126,8 +126,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region SaaS - PageLinks
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -149,8 +149,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/get_app_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -175,8 +175,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/app_add_sub_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-sub-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-sub-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -198,8 +198,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_sub_merchant 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/sub-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/sub-merchant </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -226,7 +226,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region SaaS - Withdraw
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_balance 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query-balance </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query-balance </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -248,7 +248,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/merchant_withdraw 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/merchant-withdraw </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/merchant-withdraw </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -270,7 +270,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_withdraw_order 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/withdraw/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -295,7 +295,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Order
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_order 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/pay </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/pay </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -320,7 +320,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_order 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/pay-list/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -345,7 +345,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_refund 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/refund </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/refund </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -370,7 +370,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_refund 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/refund-list/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -395,7 +395,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/settle 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/settlement </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/settlement </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -420,7 +420,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_settle 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/settlements/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -445,7 +445,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_return 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/ReturnSettle </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/ReturnSettle </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -470,7 +470,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_return 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/APIlist/return-settle/query </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -496,7 +496,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /apps/bill 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/bill </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/bill </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

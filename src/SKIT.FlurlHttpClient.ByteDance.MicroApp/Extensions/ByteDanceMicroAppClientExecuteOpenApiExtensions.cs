@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Auth
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/auth/tp/token 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/access </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/access </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/auth/pre_auth_code 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/auth </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/auth </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v2/auth/pre_auth_code 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/auth </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/auth </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/auth/retrieve 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/find </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/find </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -119,8 +119,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region OAuth
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/oauth/token 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/voucher </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/update </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/voucher </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/authorization/update </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region ThirdParty
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/template/get_tpl_list 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/template/tpl-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/template/tpl-list </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -179,7 +179,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/template/get_draft_list 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/template/draft-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/template/draft-list </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -204,7 +204,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/template/add_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/template/add </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/template/add </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -229,7 +229,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/template/del_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/template/delete </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/template/delete </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -254,7 +254,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/download/webview_file 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/download </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/download </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -279,7 +279,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/auth_app_list 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/auth-app-list </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/auth-app-list </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -306,7 +306,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/poi/supplier/match 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/supplier-match </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-match </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -331,7 +331,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/poi/supplier/query/match_task 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/query-match-task </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/query-match-task </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -357,7 +357,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/poi/supplier/query/match 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/supplier-query-match </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query-match </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -383,7 +383,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/poi/supplier/sync 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/supplier-sync </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-sync </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -408,7 +408,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/poi/supplier/query 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/supplier-query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -434,7 +434,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/poi/base/query/amap 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/tp/supplier-query </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -462,7 +462,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region MicroApp
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/code2session 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/session </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/session </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -489,7 +489,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/upload_material 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/uploadMaterial </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/uploadMaterial </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -523,7 +523,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/upload 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/upload </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -548,7 +548,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/package/audit_hosts 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit-hosts </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit-hosts </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -573,7 +573,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/audit 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/audit </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -598,7 +598,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/revoke_audit 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -623,7 +623,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/release 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/revoke-audit </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -648,7 +648,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/rollback 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/rollback </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/rollback </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -673,7 +673,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/package/versions 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/package-management/versions </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/versions </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -698,7 +698,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/info 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/setting </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/setting </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -723,7 +723,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/qrcode 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/qrcode </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/qrcode </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -748,7 +748,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/check_app_name 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/check-name </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/check-name </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -774,7 +774,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_name 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/name </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/name </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -799,7 +799,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_intro 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/intro </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/intro </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -824,7 +824,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_app_icon 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/icon </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/icon </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -849,7 +849,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/all_categories 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/all-categories </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/all-categories </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -874,7 +874,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/categories 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/category-audit-info </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/category-audit-info </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -899,7 +899,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/add_categories 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/add-category </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/add-category </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -924,7 +924,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/del_categories 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/delete-category </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/delete-category </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -949,7 +949,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/supply_categories 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/supply-category </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/supply-category </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -974,7 +974,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_server_domain 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/sever </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/sever </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -999,7 +999,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/app/modify_webview_domain 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/webview </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/webview </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1024,7 +1024,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/quality_rating 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/quality-rating </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/quality-rating </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1049,7 +1049,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/credit_score 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/credit-score </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/credit-score </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1074,7 +1074,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/video_application_status 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/video-application-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/video-application-status </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1099,7 +1099,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/video_application 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/video-application </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/video-application </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1124,7 +1124,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/live_application_status 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/live-application-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/live-application-status </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1149,7 +1149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/live_application 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/live-application </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/live-application </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1174,7 +1174,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/phone_number_application_status 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/phone-number-application-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/phone-number-application-status </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1199,7 +1199,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/phone_number_application 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/phone-number-application-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/phone-number-application-status </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1224,7 +1224,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/share_tpl_list 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/shareTplList </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/shareTplList </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1251,7 +1251,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/add_share_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/addShareTpl </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/addShareTpl </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1276,7 +1276,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/modify_share_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/modifyShareTpl </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/modifyShareTpl </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1301,7 +1301,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/del_share_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/delShareTpl </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/delShareTpl </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1326,7 +1326,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/set_default_share_tpl 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/setDefaultShareTpl </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/setDefaultShareTpl </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1351,7 +1351,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/operation/add_shop_material 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/add-shop-material </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/add-shop-material </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>
@@ -1376,7 +1376,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/query_shop_material 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/query-shop-material </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/operation/query-shop-material </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
         /// </summary>
         /// <param name="client"></param>

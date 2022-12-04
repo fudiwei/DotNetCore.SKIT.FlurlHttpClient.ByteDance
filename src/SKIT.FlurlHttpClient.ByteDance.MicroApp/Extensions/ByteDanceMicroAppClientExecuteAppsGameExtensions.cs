@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request == null) throw new ArgumentNullException(nameof(request));
 
             /*
-             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/api/payment/payment-signature-generation-algorithm
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/payment-signature-generation-algorithm
              */
 
             if (request.AppId == null)
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/get_balance 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/api/payment/acquire-mini-game-coin-balance </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/acquire-mini-game-coin-balance </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/game_pay 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/api/payment/mini-game-coin-deduction-interface </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-deduction-interface </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/add_coin 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/api/payment/mini-game-coin-gift-interface </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-gift-interface </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

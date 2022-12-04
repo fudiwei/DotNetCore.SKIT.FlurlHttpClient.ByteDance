@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         /// <summary>
         /// <para>异步调用 [POST] /apps/taskbox/add_task 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/taskbox-task-upload </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/taskbox-task-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

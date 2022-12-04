@@ -1,4 +1,4 @@
-﻿using Flurl;
+using Flurl;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         /// <summary>
         /// <para>生成第三方应用服务商授权 URL。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/authorization/admin </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/authorization/admin </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="preAuthCode"></param>

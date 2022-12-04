@@ -197,7 +197,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/component/message-push-customer-service </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackTimestamp">头条回调通知中的 timestamp 字段。</param>
@@ -220,7 +220,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson"></param>
@@ -249,7 +249,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackXml"></param>

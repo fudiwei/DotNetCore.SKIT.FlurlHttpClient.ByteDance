@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,8 +17,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (sessionKey == null) throw new ArgumentNullException(nameof(sessionKey));
 
             /*
-             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/user-login-sign/
-             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/other/user-login-sign/
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/user-login-sign/
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/other/user-login-sign/
              */
 
             string json = client.JsonSerializer.Serialize(request);
@@ -35,8 +35,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/set_user_storage 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/data-caching/set-user-storage </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/data-caching/set-user-storage </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/set-user-storage </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/data-caching/set-user-storage </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -62,8 +62,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/remove_user_storage 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/data-caching/remove-user-storage </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/data-caching/remove-user-storage </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/remove-user-storage </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/data-caching/remove-user-storage </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

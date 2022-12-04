@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -12,13 +12,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         /// <summary>
         /// <para>异步调用 [GET] /apps/token 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2022-01-05 下线。")]
         public static async Task<Models.AppsTokenResponse> ExecuteAppsTokenAsync(this ByteDanceMicroAppClient client, Models.AppsTokenRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -35,8 +36,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -61,13 +62,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [GET] /apps/jscode2session 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2022-01-05 下线。")]
         public static async Task<Models.AppsJsCode2SessionResponse> ExecuteAppsJsCode2SessionAsync(this ByteDanceMicroAppClient client, Models.AppsJsCode2SessionRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -89,8 +91,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/v2/jscode2session 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -116,9 +118,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Qrcode
         /// <summary>
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/qr-code/create-qr-code </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/qr-code/create-qr-code </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/miniprogram-setting/getqrcode </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/qr-code/create-qr-code </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/qr-code/create-qr-code </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/auth-app/miniprogram-setting/getqrcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -139,8 +141,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region SubscribeNotification
         /// <summary>
         /// <para>异步调用 [POST] /apps/subscribe_notification/developer/v1/notify 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/subscribe-notification/notify </para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-game/develop/server/subscribe-notification/notify </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/notify </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/subscribe-notification/notify </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -164,7 +166,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Message
         /// <summary>
         /// <para>异步调用 [POST] /apps/message/custom/send 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/component/message-push-customer-service#%E5%8F%91%E9%80%81%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A5%E5%8F%A3 </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service#%E5%8F%91%E9%80%81%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A5%E5%8F%A3 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -185,7 +187,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Config
         /// <summary>
         /// <para>异步调用 [POST] /apps/share_config 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/ShareConfig </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/ShareConfig </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -209,7 +211,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Live
         /// <summary>
         /// <para>异步调用 [POST] /apps/upload_live_image 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/live-bg-image </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/live-bg-image </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -242,7 +244,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Video
         /// <summary>
         /// <para>异步调用 [POST] /apps/convert_video_id/video_id_to_open_item_id 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/video-id-convert </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/video-id-convert </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -264,7 +266,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/convert_video_id/open_item_id_to_encrypt_id 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/other/video-id-convert </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/video-id-convert </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -279,35 +281,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "convert_video_id", "open_item_id_to_encrypt_id");
 
             return await client.SendRequestWithJsonAsync<Models.AppsConvertOpenItemIdToEncryptIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-        #endregion
-
-        #region CustomerService
-        /// <summary>
-        /// <para>异步调用 [GET] /apps/customer_service/url 接口。</para>
-        /// <para>REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/thirdparty/API/auth-app/operation/customer-service </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AppsCustomerServiceUrlResponse> ExecuteAppsCustomerServiceUrlAsync(this ByteDanceMicroAppClient client, Models.AppsCustomerServiceUrlRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId == null)
-                request.AppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "customer_service", "url")
-                .SetQueryParam("appid", request.AppId)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("openid", request.OpenId)
-                .SetQueryParam("type", request.Type)
-                .SetQueryParam("scene", request.Scene);
-
-            return await client.SendRequestWithJsonAsync<Models.AppsCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

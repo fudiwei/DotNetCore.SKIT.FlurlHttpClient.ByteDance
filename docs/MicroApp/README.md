@@ -36,6 +36,7 @@ using SKIT.FlurlHttpClient.ByteDance.MicroApp;
 
 var options = new ByteDanceMicroAppClientOptions()
 {
+    Endpoints = ByteDanceMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏、知识库、服务商平台等接口拥有不同的接入点。
     AppId = "字节小程序 AppId",
     AppSecret = "字节小程序 AppSecret",
     ECPaySalt = "担保支付相关服务的密钥，不用则不填"

@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public const string API_MINIGAME = "https://minigame.zijieapi.com/mgplatform/api";
 
         /// <summary>
-        /// 第三方平台接口域名。
+        /// 服务商平台接口域名。
         /// </summary>
         public const string API_OPENAPI = "https://open.microapp.bytedance.com";
 

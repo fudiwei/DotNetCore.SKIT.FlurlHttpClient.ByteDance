@@ -4,6 +4,8 @@
 
 基于 `Flurl.Http` 的抖音开放平台 API 客户端。
 
+**重要提醒**：本项目即将停止维护，请开发者尽快迁移至新项目：SKIT.FlurlHttpClient.ByteDance.DouyinOpen 。
+
 ---
 
 ### 【功能特性】

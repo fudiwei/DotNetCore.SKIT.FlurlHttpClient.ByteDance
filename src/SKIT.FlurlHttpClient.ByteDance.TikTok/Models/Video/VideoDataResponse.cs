@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [POST] /video/data 接口的响应。</para>
@@ -13,6 +13,19 @@
                 {
                     public class Video : VideoListResponse.Types.Data.Types.Video
                     {
+                        public static new class Types
+                        {
+                            public class Statistics : VideoListResponse.Types.Data.Types.Video.Types.Statistics
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置文章 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("statistics")]
+                        [System.Text.Json.Serialization.JsonPropertyName("statistics")]
+                        public new Types.Statistics Statistics { get; set; } = default!;
                     }
                 }
 

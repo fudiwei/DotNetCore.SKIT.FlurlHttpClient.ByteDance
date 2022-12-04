@@ -1,4 +1,4 @@
-﻿{
+{
     "extra": {
         "error_code": 0,
         "description": "",
@@ -25,7 +25,8 @@
                     "share_count": 10
                 },
                 "is_top": false,
-                "is_reviewed": true
+                "is_reviewed": true,
+                "media_type": 2
             }
         ]
     }

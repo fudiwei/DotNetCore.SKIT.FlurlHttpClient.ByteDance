@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
+namespace SKIT.FlurlHttpClient.ByteDance.TikTok.Models
 {
     /// <summary>
     /// <para>表示 [GET] /video/list 接口的响应。</para>
@@ -116,6 +116,13 @@
                         [Newtonsoft.Json.JsonProperty("create_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                         public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置媒体类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("media_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("media_type")]
+                        public int? MediaType { get; set; }
 
                         /// <summary>
                         /// 获取或设置文章 ID。

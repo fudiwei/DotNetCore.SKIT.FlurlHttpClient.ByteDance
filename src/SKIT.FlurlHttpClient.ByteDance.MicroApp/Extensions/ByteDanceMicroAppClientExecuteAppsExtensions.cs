@@ -139,6 +139,41 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region Chat
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/chat/customer_service_url 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/im/customer-service-url </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsChatCustomerServiceUrlResponse> ExecuteAppsChatCustomerServiceUrlAsync(this ByteDanceMicroAppClient client, Models.AppsChatCustomerServiceUrlRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "chat", "customer_service_url")
+                .WithHeader("Access-Token", request.AccessToken)
+                .SetQueryParam("appid", request.AppId)
+                .SetQueryParam("openid", request.OpenId)
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("scene", request.Scene);
+
+            if (request.OrderId != null)
+                flurlReq.SetQueryParam("order_id", request.OrderId);
+
+            if (request.IMType != null)
+                flurlReq.SetQueryParam("im_type", request.IMType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsChatCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
         #region Config
         /// <summary>
         /// <para>异步调用 [POST] /apps/share_config 接口。</para>

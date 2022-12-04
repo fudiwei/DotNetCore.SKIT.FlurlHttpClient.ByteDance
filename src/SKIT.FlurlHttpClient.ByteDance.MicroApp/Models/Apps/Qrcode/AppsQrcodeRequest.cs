@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /apps/qrcode 接口的请求。</para>
@@ -40,7 +40,7 @@
         public override string? AccessToken { get; set; }
 
         /// <summary>
-        /// 获取或设置打开二维码的字节系 App 名称。
+        /// 获取或设置宿主名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("appname")]
         [System.Text.Json.Serialization.JsonPropertyName("appname")]

@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /apps/order/v2/push 接口的请求。</para>
@@ -47,7 +47,7 @@
         public string ExternalShopId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置字节系 App 名称。
+        /// 获取或设置宿主名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_name")]
         [System.Text.Json.Serialization.JsonPropertyName("app_name")]

@@ -1,0 +1,23 @@
+{
+    "access_token": "122131231231*******",
+    "task_id": 112233,
+    "task_name": "测试12333",
+    "task_settle_type": 1,
+    "appid": "tt933ee5830c062fa6",
+    "start_page": "xxx",
+    "anchor_title": "测试锚点标",
+    "task_icon": "xxx",
+    "task_start_time": 1618285226,
+    "task_end_time": 1620963626,
+    "task_desc": "1. sss <br>2.sss2",
+    "refer_videos": [
+        "http://boe.v.douyin.com/Z0JRdbe/",
+        "http://boe.v.douyin.com/Z0JFXvp/"
+    ],
+    "task_tags": [ "测试类", "心理" ],
+    "refer_ma_captures": [
+        "https://static.runoob.com/images/demo/demo1.jpg",
+        "https://static.runoob.com/images/demo/demo2.jpg"
+    ],
+    "refer_video_captures": [ "https://static.runoob.com/images/demo/demo3.jpg" ]
+}

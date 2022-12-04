@@ -1,21 +1,14 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/taskbox/add_task 接口的响应。</para>
+    /// <para>表示 [POST] /apps/taskbox/update_task 接口的响应。</para>
     /// </summary>
-    public class AppsTaskBoxAddTaskResponse : ByteDanceMicroAppResponse
+    public class AppsTaskBoxUpdateTaskResponse : ByteDanceMicroAppResponse
     {
         public static class Types
         {
-            public class Data
+            public class Data : AppsTaskBoxAddTaskResponse.Types.Data
             {
-                /// <summary>
-                /// 获取或设置任务 ID。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("task_id")]
-                [System.Text.Json.Serialization.JsonPropertyName("task_id")]
-                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                public long TaskId { get; set; }
             }
         }
 

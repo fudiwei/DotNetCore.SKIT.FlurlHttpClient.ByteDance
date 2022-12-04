@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,9 +7,35 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTok
 {
-    public static class TikTokClientExecuteDataExternalBillboardExtensions
+    public static class TikTokClientExecuteDataExternalExtensions
     {
-        #region HotVideo
+        #region Anchor
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/anchor/mp_item_click_distribution 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/mini-app-list/get-video-click-distribution </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalAnchorMpItemClickDistributionResponse> ExecuteDataExternalAnchorMpItemClickDistributionAsync(this TikTokClient client, Models.DataExternalAnchorMpItemClickDistributionRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "anchor", "mp_item_click_distribution")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("mp_id", request.MiniAppId)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalAnchorMpItemClickDistributionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Billboard
+        #region Billboard/HotVideo
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/hot_video 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/hot-video-list/hot-video-list </para>
@@ -31,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Sport
+        #region Billboard/Sport
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/sport/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/sports-list/sports-overall-list </para>
@@ -193,7 +219,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Amusement
+        #region Billboard/Amusement
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/amusement/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/funny-list-data/funny-overall-list </para>
@@ -235,7 +261,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Game
+        #region Billboard/Game
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/game/console 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/game-list-data/computer-list </para>
@@ -277,7 +303,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Food
+        #region Billboard/Food
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/food/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/food-list-data/food-overall-list </para>
@@ -359,7 +385,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Drama
+        #region Billboard/Drama
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/drama/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/plot-list-data/plot-overall-list </para>
@@ -381,7 +407,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Car
+        #region Billboard/Car
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/car/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/car-list-data/car-overall-list </para>
@@ -483,7 +509,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Travel
+        #region Billboard/Travel
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/travel/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/tour-list-data/tour-overall-list </para>
@@ -525,7 +551,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Cospa
+        #region Billboard/Cospa
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/cospa/overall 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/anime-list-data/anime-overall-list </para>
@@ -667,7 +693,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Stars
+        #region Billboard/Stars
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/stars 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/entertainment-star-list-data/entertainment-star-list </para>
@@ -689,7 +715,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Live
+        #region Billboard/Live
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/live 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/live-list-data/live-list </para>
@@ -711,7 +737,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Music
+        #region Billboard/Music
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/music/hot 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/music-list-data/hot-songs-list </para>
@@ -773,7 +799,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Topic
+        #region Billboard/Topic
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/topic 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/topic-list-data/topic-list </para>
@@ -795,7 +821,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
         }
         #endregion
 
-        #region Prop
+        #region Billboard/Prop
         /// <summary>
         /// <para>异步调用 [GET] /data/extern/billboard/prop 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/tops-data/prop-list-data/prop-list </para>
@@ -814,6 +840,485 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTok
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.DataExternalBillboardPropResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+        #endregion
+
+        #region Fans
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/fans/source 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/fans-portrait-data/get-user-fans-origin </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalFansSourceResponse> ExecuteDataExternalFansSourceAsync(this TikTokClient client, Models.DataExternalFansSourceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "fans", "source")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalFansSourceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/fans/favourite 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/fans-portrait-data/get-user-fans-like </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalFansFavouriteResponse> ExecuteDataExternalFansFavouriteAsync(this TikTokClient client, Models.DataExternalFansFavouriteRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "fans", "favourite")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalFansFavouriteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/extern/fans/comment 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/fans-portrait-data/get-user-fans-hot-comment </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalFansCommentResponse> ExecuteDataExternalFansCommentAsync(this TikTokClient client, Models.DataExternalFansCommentRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "extern", "fans", "comment")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalFansCommentResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Item
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/item/base 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-basic-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalItemBaseResponse> ExecuteDataExternalItemBaseAsync(this TikTokClient client, Models.DataExternalItemBaseRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "item", "base")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("item_id", request.ItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalItemBaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/item/like 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-like-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalItemLikeResponse> ExecuteDataExternalItemLikeAsync(this TikTokClient client, Models.DataExternalItemLikeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "item", "like")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("item_id", request.ItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalItemLikeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/item/comment 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-comment-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalItemCommentResponse> ExecuteDataExternalItemCommentAsync(this TikTokClient client, Models.DataExternalItemCommentRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "item", "comment")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("item_id", request.ItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalItemCommentResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/item/play 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-play-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalItemPlayResponse> ExecuteDataExternalItemPlayAsync(this TikTokClient client, Models.DataExternalItemPlayRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "item", "play")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("item_id", request.ItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalItemPlayResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/item/share 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/video-data/get-share-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalItemShareResponse> ExecuteDataExternalItemShareAsync(this TikTokClient client, Models.DataExternalItemShareRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "item", "share")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("item_id", request.ItemId);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalItemShareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region POI
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/base 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/get-poi-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIBaseResponse> ExecuteDataExternalPOIBaseAsync(this TikTokClient client, Models.DataExternalPOIBaseRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "base")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("poi_id", request.POIId)
+                .SetQueryParam("begin_date", request.BeginDateString)
+                .SetQueryParam("end_date", request.EndDateString);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIBaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/user 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-user-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIUserResponse> ExecuteDataExternalPOIUserAsync(this TikTokClient client, Models.DataExternalPOIUserRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "user")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("poi_id", request.POIId)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/service_base 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIServiceBaseResponse> ExecuteDataExternalPOIServiceBaseAsync(this TikTokClient client, Models.DataExternalPOIServiceBaseRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "service_base")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("poi_id", request.POIId)
+                .SetQueryParam("begin_date", request.BeginDateString)
+                .SetQueryParam("end_date", request.EndDateString);
+
+            if (request.ServiceType != null)
+                flurlReq.SetQueryParam("service_type", request.ServiceType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIServiceBaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/service_user 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-user-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIServiceUserResponse> ExecuteDataExternalPOIServiceUserAsync(this TikTokClient client, Models.DataExternalPOIServiceUserRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "service_user")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("poi_id", request.POIId)
+                .SetQueryParam("date_type", request.DateType);
+
+            if (request.ServiceType != null)
+                flurlReq.SetQueryParam("service_type", request.ServiceType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIServiceUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/billboard 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-service-hot-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIBillboardResponse> ExecuteDataExternalPOIBillboardAsync(this TikTokClient client, Models.DataExternalPOIBillboardRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "billboard")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("billboard_type", request.BillboardType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIBillboardResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/poi/claim/list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/micro-app/poi-data/poi-claim-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalPOIClaimListResponse> ExecuteDataExternalPOIClaimListAsync(this TikTokClient client, Models.DataExternalPOIClaimListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "poi", "claim", "list")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalPOIClaimListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region SDK
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/sdk_share 接口。</para>
+        /// <para>REF: https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/sdk-share-video-data/get-share-data </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [Obsolete("相关接口或字段于 2022-08-09 下线。")]
+        public static async Task<Models.DataExternalSDKShareResponse> ExecuteDataExternalSDKShareAsync(this TikTokClient client, Models.DataExternalSDKShareRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "sdk_share")
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("begin_date", request.BeginDateString)
+                .SetQueryParam("end_date", request.EndDateString);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalSDKShareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region User
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/item 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-video-status </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserItemResponse> ExecuteDataExternalUserItemAsync(this TikTokClient client, Models.DataExternalUserItemRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "item")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserItemResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/fans 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-fans-count </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserFansResponse> ExecuteDataExternalUserFansAsync(this TikTokClient client, Models.DataExternalUserFansRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "fans")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserFansResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/like 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-like-number </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserLikeResponse> ExecuteDataExternalUserLikeAsync(this TikTokClient client, Models.DataExternalUserLikeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "like")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserLikeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/comment 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-comment-count </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserCommentResponse> ExecuteDataExternalUserCommentAsync(this TikTokClient client, Models.DataExternalUserCommentRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "comment")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserCommentResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/share 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-share-count </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserShareResponse> ExecuteDataExternalUserShareAsync(this TikTokClient client, Models.DataExternalUserShareRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "share")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserShareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /data/external/user/profile 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/user-data/get-user-home-pv </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DataExternalUserProfileResponse> ExecuteDataExternalUserProfileAsync(this TikTokClient client, Models.DataExternalUserProfileRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "data", "external", "user", "profile")
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("date_type", request.DateType);
+
+            return await client.SendRequestWithJsonAsync<Models.DataExternalUserProfileResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

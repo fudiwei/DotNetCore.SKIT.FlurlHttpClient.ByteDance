@@ -1,0 +1,92 @@
+{
+    "data": {
+        "has_more": true,
+        "next_cursor": "4",
+        "products": [
+            {
+                "product": {
+                    "category_full_name": "运动健身·游泳馆·游泳馆",
+                    "out_id": "hch-life-0314-tg09",
+                    "owner_account_id": 7113893944009705516,
+                    "attr_key_value_map": {
+                        "environment_image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038504987084734508?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=TLe6dfqJ0a7i9VA4Zbh3Cu7qAV8%3D\"}]",
+                        "image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505021658382380?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=ygn%2FI0ORgkAJdomj7liPXpK9v3s%3D\"},{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505050439696428?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=QGvp6oDAMSW%2F3xA4L7ASboxnYoM%3D\"}]",
+                        "show_channel": "2",
+                        "use_time": "{\"use_time_type\":1}",
+                        "SortWeight": "0",
+                        "customer_reserved_info": "{\"allow\":true,\"allow_tel\":true,\"allow_name\":true,\"allow_identity\":true,\"require_for_tel\":true,\"need_for_all\":true,\"reserved_reason\":\"留资原因\"}",
+                        "description_rich_text": "[{\"note_type\":1,\"content\":\"其他说明信息-运动健身团购\"}]",
+                        "SupplierExtIdList": "[\"goods_v1_poi_001\"]",
+                        "appointment": "{\"need_appointment\":true,\"external_link\":\"urlxxx\",\"order_appointment_time_url\":\"urlxxx\",\"ahead_time_type\":1,\"ahead_day_num\":1}",
+                        "real_name_info": "{\"enable\":true,\"scene\":1}",
+                        "refund_need_merchant_confirm": "true",
+                        "EntryType": "1",
+                        "Images": "[\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505021658382380\",\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505050439696428\"]",
+                        "IsConfirmImme": "true",
+                        "OrderValidStart": "1638720000",
+                        "RefundPolicy": "2",
+                        "can_no_use_date": "{\"enable\":true,\"days_of_week\":[7,1,2,3,4],\"holidays\":[1,2,3,4,5],\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"holiday_dates\":{\"1\":\"2022.01.01-2022.01.03\"}}",
+                        "use_date": "{\"use_date_type\":1,\"use_start_date\":\"2021-12-06\",\"use_end_date\":\"2033-03-03\"}",
+                        "DateRule": "{\"unavailable_date\":{\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"weekday_list\":[7,1,2,3,4],\"not_available_on_holidays\":true}}",
+                        "Description": "[\"商品描述-运动健身\"]",
+                        "Notification": "[{\"title\":\"标题\",\"content\":\"运动健身1.1\"}]",
+                        "TagList": "标签列表-待填写",
+                        "FrontCategoryTag": "[\"美食套餐\"]",
+                        "OrderValidEnd": "1993478399",
+                        "RecommendWord": "推荐语"
+                    },
+                    "category_id": 3001001,
+                    "product_id": "7119054118261606444",
+                    "biz_line": 1,
+                    "creator_account_id": 7107571250087643180,
+                    "product_type": 1,
+                    "account_name": "lh测试商家",
+                    "pois": [
+                        {
+                            "poi_id": 6601137575719602180,
+                            "supplier_ext_id": "goods_v1_poi_001",
+                            "supplier_id": 7112378515013584941
+                        }
+                    ],
+                    "product_name": "life测试-0223-011",
+                    "sold_end_time": 1799607528,
+                    "sold_start_time": 1646724999
+                },
+                "sku": {
+                    "actual_amount": 996,
+                    "attr_key_value_map": {
+                        "limit_rule": "{\"is_limit\":true,\"total_buy_num\":9}",
+                        "market_price": "1900",
+                        "settle_type": "1",
+                        "use_type": "1",
+                        "code_source_type": "1"
+                    },
+                    "status": 1,
+                    "update_time": 1657769323,
+                    "create_time": 1657694409,
+                    "origin_amount": 1399,
+                    "sku_id": "7119054118261606444",
+                    "sku_name": "我改了",
+                    "stock": {
+                        "limit_type": 1,
+                        "stock_qty": 88
+                    }
+                },
+                "commission_info": {
+                    "platform_take_rate": 0
+                },
+                "online_status": 1
+            }
+        ],
+        "description": "",
+        "error_code": 0
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "now": 1658200058,
+        "logid": "202207191107380102252431250703EA46"
+    }
+}

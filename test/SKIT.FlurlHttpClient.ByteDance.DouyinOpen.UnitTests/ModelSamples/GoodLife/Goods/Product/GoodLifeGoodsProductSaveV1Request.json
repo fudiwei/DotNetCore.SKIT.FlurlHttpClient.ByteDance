@@ -1,0 +1,74 @@
+{
+    "account_id": "7113893944009705516",
+    "product": {
+        "account_name": "lh测试商家",
+        "attr_key_value_map": {
+            "appointment": "{\"need_appointment\":true, \"ahead_time_type\":2, \"ahead_hour_num\":5,\"external_link\":\"urlxxx\", \"order_appointment_time_url\":\"urlxxx\"}",
+            "auto_renew": "true",
+            "bring_out_meal": "false",
+            "can_no_use_date": "{\"enable\": true,\"days_of_week\": [7, 1, 2, 3, 4],\"holidays\": [1, 2, 3, 4, 5],\"date_list\": [\"2022-03-08\", \"2022-03-09\"],\"holiday_dates\": {\"1\": \"2022.01.01-2022.01.03\"}}",
+            "customer_reserved_info": "{\"allow\":false}",
+            "description_rich_text": "[{\"note_type\":1,\"content\":\"其他说明信息-美食团购\"}]",
+            "detail_image_list": "[{\"url\":\"https://aweme-upload-image/7038504987084734508..png\"}]",
+            "dishes_image_list": "[{\"url\":\"https://aweme-upload-image/7038504987084734508.png\"}]",
+            "environment_image_list": "[{\"url\":\"https://aweme-upload-image/7038504987084734508.png\"}]",
+            "free_pack": "true",
+            "FrontCategoryTag": "[\"美食套餐\"]",
+            "image_list": "[{\"url\":\"https://aweme-upload-image/7038505021658382380.png\"},{\"url\":\"https://aweme-upload-image/7038505050439696428.png\"}]",
+            "IndustryType": "其他",
+            "IsConfirmImme": "true",
+            "Notification": "[{\"title\":\"标题\",\"content\":\"内容美食1.1\"}]",
+            "private_room": "true",
+            "real_name_info": "{\"enable\":false,\"scene\":0}",
+            "RecommendWord": "推荐语",
+            "rec_person_num": "99",
+            "rec_person_num_max": "999",
+            "RefundPolicy": "2",
+            "refund_need_merchant_confirm": "true",
+            "show_channel": "2",
+            "SortWeight": "0",
+            "superimposed_discounts": "true",
+            "TagList": "标签列表-待填写",
+            "use_date": "{\"use_date_type\":1,\"use_start_date\":\"2021-12-06\",\"use_end_date\":\"2033-03-03\"}",
+            "use_time": "{\"use_time_type\":1}",
+            "account_name": "lh测试商家",
+            "poi_list": "[{\"poi_id\": \"123123123123\"}]",
+            "product_name": "migrate_openapi_0711_01",
+            "sold_start_time": "1646724999",
+            "sold_end_time": "1745607528"
+        },
+        "biz_line": 1,
+        "category_id": 1001001,
+        "out_id": "migrate_openapi_0711_03",
+        "pois": [
+            {
+                "poi_id": "123123123123"
+            }
+        ],
+        "product_name": "migrate_openapi_0711_03",
+        "product_type": 1,
+        "sold_end_time": 1745607528,
+        "sold_start_time": 1646724999
+    },
+    "sku": {
+        "actual_amount": 996,
+        "attr_key_value_map": {
+            "code_source_type": "1",
+            "commodity": "[{\"group_name\":\"测试0001\",\"total_count\":1,\"option_count\":1,\"item_list\":[{\"name\":\"可乐\",\"price\":1998,\"count\":1,\"unit\":\"份\"}]}]",
+            "limit_rule": "{\"is_limit\":true,\"total_buy_num\":9}",
+            "market_price": "900",
+            "settle_type": "1",
+            "use_type": "1",
+            "actual_amount": "996",
+            "origin_amount": "1998",
+            "stock_info": "{\"limit_type\": 1,\"stock_qty\": 500}"
+        },
+        "origin_amount": 1399,
+        "sku_name": "测试",
+        "status": 1,
+        "stock": {
+            "limit_type": 1,
+            "stock_qty": 500
+        }
+    }
+}

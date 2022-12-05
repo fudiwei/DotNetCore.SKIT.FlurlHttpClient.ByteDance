@@ -1,0 +1,7 @@
+{
+    "account_id": "123",
+    "sku_id": "987665",
+    "third_sku_id": "ab123",
+    "codes": ["x1", "x2"],
+    "expired_time": 1658914935
+}

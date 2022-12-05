@@ -1,0 +1,87 @@
+{
+    "data": {
+        "description": "",
+        "error_code": 0,
+        "has_more": true,
+        "next_cursor": "4",
+        "products": [
+            {
+                "draft_status": 10,
+                "product": {
+                    "pois": [
+                        {
+                            "poi_id": 6601137575719602180,
+                            "supplier_ext_id": "goods_v1_poi_001",
+                            "supplier_id": 7112378515013584941
+                        }
+                    ],
+                    "product_name": "life测试-0223-011",
+                    "account_name": "lh测试商家",
+                    "category_full_name": "运动健身·游泳馆·游泳馆",
+                    "creator_account_id": 7107571250087643180,
+                    "category_id": 3001001,
+                    "product_id": "7119054118278268972",
+                    "product_type": 1,
+                    "attr_key_value_map": {
+                        "Notification": "[{\"title\":\"标题\",\"content\":\"运动健身1.1\"}]",
+                        "RefundPolicy": "2",
+                        "SupplierExtIdList": "[\"goods_v1_poi_001\"]",
+                        "description_rich_text": "[{\"note_type\":1,\"content\":\"其他说明信息-运动健身团购\"}]",
+                        "show_channel": "2",
+                        "RecommendWord": "推荐语",
+                        "TagList": "标签列表-待填写",
+                        "DateRule": "{\"unavailable_date\":{\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"weekday_list\":[7,1,2,3,4],\"not_available_on_holidays\":true}}",
+                        "EntryType": "1",
+                        "FrontCategoryTag": "[\"美食套餐\"]",
+                        "Images": "[\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505021658382380\",\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505050439696428\"]",
+                        "IsConfirmImme": "true",
+                        "OrderValidEnd": "1993478399",
+                        "can_no_use_date": "{\"enable\":true,\"days_of_week\":[7,1,2,3,4],\"holidays\":[1,2,3,4,5],\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"holiday_dates\":{\"1\":\"2022.01.01-2022.01.03\"}}",
+                        "customer_reserved_info": "{\"allow\":true,\"allow_tel\":true,\"allow_name\":true,\"allow_identity\":true,\"require_for_tel\":true,\"need_for_all\":true,\"reserved_reason\":\"留资原因\"}",
+                        "real_name_info": "{\"enable\":true,\"scene\":1}",
+                        "Description": "[\"商品描述-运动健身\"]",
+                        "OrderValidStart": "1638720000",
+                        "SortWeight": "0",
+                        "appointment": "{\"need_appointment\":true,\"external_link\":\"urlxxx\",\"order_appointment_time_url\":\"urlxxx\",\"ahead_time_type\":1,\"ahead_day_num\":1}",
+                        "use_time": "{\"use_time_type\":1}",
+                        "environment_image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038504987084734508?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=TLe6dfqJ0a7i9VA4Zbh3Cu7qAV8%3D\"}]",
+                        "image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505021658382380?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=ygn%2FI0ORgkAJdomj7liPXpK9v3s%3D\"},{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505050439696428?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=QGvp6oDAMSW%2F3xA4L7ASboxnYoM%3D\"}]",
+                        "refund_need_merchant_confirm": "true",
+                        "use_date": "{\"use_date_type\":1,\"use_start_date\":\"2021-12-06\",\"use_end_date\":\"2033-03-03\"}"
+                    },
+                    "biz_line": 1,
+                    "out_id": "hch-life-0314-tg11",
+                    "sold_end_time": 1745607528,
+                    "sold_start_time": 1646724999
+                },
+                "sku": {
+                    "sku_name": "我改了",
+                    "status": 1,
+                    "stock": {
+                        "limit_type": 0,
+                        "stock_qty": 500
+                    },
+                    "actual_amount": 996,
+                    "attr_key_value_map": {
+                        "limit_rule": "{\"is_limit\":true,\"total_buy_num\":9}",
+                        "market_price": "1900",
+                        "settle_type": "1",
+                        "use_type": "1",
+                        "code_source_type": "1"
+                    },
+                    "origin_amount": 1399,
+                    "sku_id": "7119054118278268972"
+                },
+                "audit_msg": ""
+            }
+        ]
+    },
+    "extra": {
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "now": 1658199933,
+        "logid": "202207191105330101742511840402D90D",
+        "error_code": 0
+    }
+}

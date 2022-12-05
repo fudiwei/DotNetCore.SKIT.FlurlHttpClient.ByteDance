@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public Types.SPUPOIFilterStatus[]? SPUPOIFilterStatusList { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置供应商 ID。
+                                /// 获取或设置门店 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("supplier_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
@@ -132,7 +132,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string SPUExternalId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置可用门店外部 ID 列表。
+                        /// 获取或设置门店外部 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id_list")]

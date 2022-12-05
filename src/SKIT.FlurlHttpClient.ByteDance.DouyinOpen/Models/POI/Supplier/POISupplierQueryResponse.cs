@@ -175,7 +175,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public Types.Category? Category { get; set; }
 
                         /// <summary>
-                        /// 获取或设置接入方店铺外部 ID。
+                        /// 获取或设置门店外部 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]

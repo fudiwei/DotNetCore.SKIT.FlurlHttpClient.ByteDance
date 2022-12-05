@@ -1,0 +1,22 @@
+{
+    "BaseResp": {
+        "biz_code": 0,
+        "biz_msg": ""
+    },
+    "data": {
+        "book_id": "123456",
+        "order_id": "0",
+        "status": "0",
+        "book_start_day": "2022-08-08",
+        "book_end_day": "2022-08-08",
+        "book_apply_time": "1660113732",
+        "book_cancel_time": "1660113733",
+        "hotel": {
+            "chain_code": "111",
+            "hotel_code": "1",
+            "rate_plan_code": "1",
+            "room_type_code": "1",
+            "number_of_rooms": "2"
+        }
+    }
+}

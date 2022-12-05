@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                             public class SKU
                             {
                                 /// <summary>
-                                /// 获取或设置团购 SKU ID。
+                                /// 获取或设置 SKU ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]

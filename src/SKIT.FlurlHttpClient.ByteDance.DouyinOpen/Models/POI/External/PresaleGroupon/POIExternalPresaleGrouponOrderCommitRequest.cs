@@ -6,7 +6,7 @@
     public class POIExternalPresaleGrouponOrderCommitRequest : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置外部订单 ID。
+        /// 获取或设置订单外部 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ext_id")]

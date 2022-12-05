@@ -1,0 +1,19 @@
+{
+    "BaseResp": {
+        "StatusCode": 0,
+        "StatusMessage": ""
+    },
+    "data": {
+        "spu_id": "123456",
+        "error_code": 0,
+        "description": ""
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "now": 1654529240,
+        "logid": "xxxxxx"
+    }
+}

@@ -27,7 +27,7 @@
         public string ServiceModeId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置外部开发者单号。
+        /// 获取或设置订单外部单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_trade_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_trade_no")]

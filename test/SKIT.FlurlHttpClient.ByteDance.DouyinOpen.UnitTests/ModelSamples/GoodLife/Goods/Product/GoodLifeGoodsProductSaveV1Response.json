@@ -1,0 +1,15 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "product_id": "111"
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "xxx",
+        "now": 1651113600
+    }
+}

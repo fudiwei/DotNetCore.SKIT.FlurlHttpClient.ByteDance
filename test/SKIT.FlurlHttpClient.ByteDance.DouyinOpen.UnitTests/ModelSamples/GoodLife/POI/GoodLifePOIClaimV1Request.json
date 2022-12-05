@@ -1,0 +1,41 @@
+{
+    "target_type": 0,
+    "datas": [
+        {
+            "account_id": "7000000000066434078",
+            "third_id": "ext_id",
+            "poi_id": "7000000000086100511",
+            "license": {
+                "use_ocr": false,
+                "company_name": "有限公司",
+                "license_id": "91AAAAAAAAAAAAAAAA",
+                "license_urls": ["http://xxxx.jpg"],
+                "license_type": 91,
+                "expiration": "2031-08-10"
+            },
+            "legal_person": {
+                "id_card_expiration": "2031-08-10",
+                "id_card_front_url": "http://yyyyy.jpg",
+                "id_card_back_url": "http://zzzzz.jpg",
+                "id_card_no": "362427198402130839",
+                "name": "法人名字",
+                "use_ocr": false
+            },
+            "industry": {
+                "major_industry_code": "010503",
+                "minor_industry_codes": [],
+                "qualifications": [
+                    {
+                        "qualification_type": 2001,
+                        "qualification_urls": ["http://wwwww.jpg"],
+                        "qualification_expiration": "2022-12-31"
+                    }
+                ]
+            },
+            "owner_info": {
+                "name": "测试",
+                "phone": "13000000000"
+            }
+        }
+    ]
+}

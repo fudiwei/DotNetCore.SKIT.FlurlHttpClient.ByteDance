@@ -64,7 +64,7 @@
         public string? OrderDetailJson { get; set; }
 
         /// <summary>
-        /// 获取或设置外部商家信息。
+        /// 获取或设置商家外部信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_shop_info")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_shop_info")]

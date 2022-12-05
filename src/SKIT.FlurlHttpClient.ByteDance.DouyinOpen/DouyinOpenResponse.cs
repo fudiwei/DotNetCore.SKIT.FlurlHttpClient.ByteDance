@@ -127,6 +127,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("now")]
         [System.Text.Json.Serialization.JsonPropertyName("now")]
+        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
         public long Now { get; set; }
 
         /// <summary>

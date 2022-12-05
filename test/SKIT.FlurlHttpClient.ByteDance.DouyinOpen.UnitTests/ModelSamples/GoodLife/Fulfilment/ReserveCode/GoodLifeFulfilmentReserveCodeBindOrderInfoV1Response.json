@@ -1,0 +1,34 @@
+{
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "logid": "202204270930590102251460630F7BE7F3",
+        "now": 1658921730
+    },
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "order": {
+            "order_id": "123",
+            "sku_id": "456",
+            "third_sku_id": "axxx",
+            "codes": ["x1", "x2"],
+            "create_time": 1658921722,
+            "amount_info": {
+                "original_amount": 110,
+                "pay_amount": 50,
+                "platform_ticket_amount": 5,
+                "merchant_ticket_amount": 5,
+                "fee_amount": 0,
+                "payment_discount_amount": 50
+            },
+            "tourists": [
+                {
+                    "name": "张三",
+                    "phone": "bYlB3dcl8e8rDyAdD7yYCA==",
+                    "id_card": "bYlB3dcl8e8rDyAdD7yYCA=="
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "calendar_amount_group": {
+        "product_out_id": "some-out-product-id",
+        "calendar_amounts": [
+            {
+                "type": 1,
+                "value": {
+                    "values": ["2022-03-01", "2022-04-01"],
+                    "exclude_dates": ["2022-03-05"]
+                },
+                "status": 1,
+                "origin_amount": 100,
+                "actual_amount": 99
+            }
+        ]
+    },
+    "account_id": "12345678"
+}

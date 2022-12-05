@@ -6,7 +6,7 @@
     public class POISupplierQueryRequest : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置接入方店铺外部 ID。
+        /// 获取或设置门店外部 ID。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

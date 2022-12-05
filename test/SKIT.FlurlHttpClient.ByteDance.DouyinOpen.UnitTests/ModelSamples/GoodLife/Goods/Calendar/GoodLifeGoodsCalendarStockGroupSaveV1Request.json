@@ -1,0 +1,27 @@
+{
+    "calendar_stock_group": {
+        "product_out_id": "some-out-product-id",
+        "calendar_stocks": [
+            {
+                "type": 1,
+                "value": {
+                    "values": ["2022-03-01", "2022-04-01"],
+                    "exclude_dates": ["2022-03-05"]
+                },
+                "status": 1,
+                "stock_qty": 100,
+                "stock_qty_limit_type": 1
+            },
+            {
+                "type": 1,
+                "value": {
+                    "values": ["2022-04-01", "2022-05-01"],
+                    "exclude_dates": ["2022-04-05"]
+                },
+                "status": 1,
+                "stock_qty_limit_type": 2
+            }
+        ]
+    },
+    "account_id": "12345678"
+}

@@ -1,0 +1,24 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "",
+        "members": [
+            {
+                "open_id": "aab1c68e-0af7-4863-a25d-643dcba378cb",
+                "union_id": "aaaxxasdsaskhdkahsd"
+            },
+            {
+                "open_id": "xxxxxxx-0af7-4863-a25d-643dcba378cb",
+                "union_id": "shdfasldkasjkajdkjad"
+            }
+        ]
+    },
+    "extra": {
+        "logid": "20220616135636010225243100059D654D",
+        "now": 1655358997504,
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    }
+}

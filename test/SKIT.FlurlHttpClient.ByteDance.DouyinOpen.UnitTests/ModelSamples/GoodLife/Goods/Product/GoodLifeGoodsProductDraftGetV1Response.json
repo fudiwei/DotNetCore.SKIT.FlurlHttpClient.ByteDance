@@ -1,0 +1,93 @@
+{
+    "data": {
+        "error_code": 0,
+        "product_drafts": [
+            {
+                "audit_msg": "",
+                "draft_status": 10,
+                "product": {
+                    "creator_account_id": 7107571250087643180,
+                    "owner_account_id": 7113893944009705516,
+                    "sold_start_time": 1646724999,
+                    "account_name": "lw测试商家",
+                    "pois": [
+                        {
+                            "supplier_ext_id": "goods_v1_poi_001",
+                            "supplier_id": 7112378515013584941,
+                            "poi_id": 6601137575719602180
+                        }
+                    ],
+                    "attr_key_value_map": {
+                        "OrderValidStart": "1638720000",
+                        "SortWeight": "0",
+                        "real_name_info": "{\"enable\":false,\"scene\":0}",
+                        "rec_person_num": "99",
+                        "rec_person_num_max": "999",
+                        "DateRule": "{\"unavailable_date\":{\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"weekday_list\":[7,1,2,3,4],\"not_available_on_holidays\":true}}",
+                        "Images": "[\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505021658382380\",\"http://tosv.boe.byted.org/obj/aweme-upload-image/7038505050439696428\"]",
+                        "RecommendWord": "推荐语",
+                        "description_rich_text": "[{\"note_type\":1,\"content\":\"其他说明信息-美食团购\"}]",
+                        "environment_image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038504987084734508?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=TLe6dfqJ0a7i9VA4Zbh3Cu7qAV8%3D\"}]",
+                        "free_pack": "true",
+                        "use_date": "{\"use_date_type\":1,\"use_start_date\":\"2021-12-06\",\"use_end_date\":\"2033-03-03\"}",
+                        "IndustryType": "其他",
+                        "OrderValidEnd": "1993478399",
+                        "RefundPolicy": "2",
+                        "appointment": "{\"need_appointment\":true,\"external_link\":\"urlxxx\",\"order_appointment_time_url\":\"urlxxx\",\"ahead_time_type\":2,\"ahead_hour_num\":5}",
+                        "customer_reserved_info": "{\"allow\":false}",
+                        "FrontCategoryTag": "[\"美食套餐\"]",
+                        "IsConfirmImme": "true",
+                        "can_no_use_date": "{\"enable\":true,\"days_of_week\":[7,1,2,3,4],\"holidays\":[1,2,3,4,5],\"date_list\":[\"2022-03-08\",\"2022-03-09\"],\"holiday_dates\":{\"1\":\"2022.01.01-2022.01.03\"}}",
+                        "dishes_image_list": "[{\"uri\":\"aweme-upload-image/7038504987084734508\"}]",
+                        "refund_need_merchant_confirm": "true",
+                        "SupplierExtIdList": "[\"goods_v1_poi_001\"]",
+                        "detail_image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038504987084734508?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=TLe6dfqJ0a7i9VA4Zbh3Cu7qAV8%3D\"}]",
+                        "image_list": "[{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505021658382380?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=ygn%2FI0ORgkAJdomj7liPXpK9v3s%3D\"},{\"url\":\"http://p-boe-sign.bytedance.net/obj/aweme-upload-image/7038505050439696428?x-orig-authkey=boeorigin&x-orig-expires=1658221200&x-orig-sign=QGvp6oDAMSW%2F3xA4L7ASboxnYoM%3D\"}]",
+                        "show_channel": "2",
+                        "superimposed_discounts": "true",
+                        "Notification": "[{\"title\":\"标题\",\"content\":\"内容美食1.1\"}]",
+                        "TagList": "标签列表-待填写",
+                        "private_room": "true",
+                        "use_time": "{\"use_time_type\":1}"
+                    },
+                    "biz_line": 1,
+                    "category_full_name": "美食·地方菜·北京菜",
+                    "category_id": 1001001,
+                    "product_id": "7119054118261377068",
+                    "product_name": "migrate_openapi_0711_03",
+                    "out_id": "migrate_openapi_0711_03",
+                    "product_type": 1,
+                    "sold_end_time": 1745607528
+                },
+                "sku": {
+                    "origin_amount": 1998,
+                    "sku_id": "7119054118261377068",
+                    "sku_name": "测试",
+                    "status": 1,
+                    "stock": {
+                        "limit_type": 1,
+                        "stock_qty": 500
+                    },
+                    "actual_amount": 996,
+                    "attr_key_value_map": {
+                        "limit_rule": "{\"is_limit\":true,\"total_buy_num\":9}",
+                        "market_price": "900",
+                        "settle_type": "1",
+                        "use_type": "1",
+                        "code_source_type": "1",
+                        "commodity": "[{\"group_name\":\"测试0001\",\"total_count\":1,\"option_count\":1,\"item_list\":[{\"name\":\"可乐\",\"price\":1998,\"count\":1,\"unit\":\"份\"}]}]"
+                    }
+                }
+            }
+        ],
+        "description": ""
+    },
+    "extra": {
+        "now": 1658199797,
+        "logid": "202207191103170102251451520001D611",
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    }
+}

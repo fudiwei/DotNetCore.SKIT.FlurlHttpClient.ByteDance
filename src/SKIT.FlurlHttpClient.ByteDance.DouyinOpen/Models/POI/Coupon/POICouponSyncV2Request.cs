@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string? SPUExternalId { get; set; }
 
                         /// <summary>
-                        /// 获取或设置可用门店外部 ID 列表。
+                        /// 获取或设置门店外部 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_ids")]
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public IList<string>? SPUExternalIdList { get; set; }
 
                         /// <summary>
-                        /// 获取或设置可用门店外部 ID。
+                        /// 获取或设置门店外部 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]

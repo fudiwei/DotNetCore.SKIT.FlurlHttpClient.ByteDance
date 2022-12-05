@@ -1,0 +1,24 @@
+{
+    "spu": {
+        "spu_name": "房型",
+        "product_type": 13,
+        "biz_line": 1,
+        "out_spu_id": "some-out-spu-id",
+        "pois": [
+            {
+                "supplier_ext_id": "some-supplier-ext-id"
+            }
+        ],
+        "attr_key_value_map": {
+            "Area": "10",
+            "image_list": "[]",
+            "bed_type": "1",
+            "Window": "1",
+            "Floor": "2层~5层",
+            "wifi": "true",
+            "smoke": "1",
+            "FitNum": "2",
+            "common_facilities": "[1]"
+        }
+    }
+}

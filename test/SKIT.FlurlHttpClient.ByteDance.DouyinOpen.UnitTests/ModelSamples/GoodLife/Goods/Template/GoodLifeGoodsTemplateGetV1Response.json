@@ -1,0 +1,370 @@
+{
+    "data": {
+        "product_attrs": [
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "appointment",
+                "name": "预约信息",
+                "value_demo": "",
+                "value_type": "APPOINTMENT"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "auto_renew",
+                "name": "是否开启自动延期",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "bring_out_meal",
+                "name": "是否可以外带餐食",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "can_no_use_date",
+                "name": "不可使用日期",
+                "value_demo": "",
+                "value_type": "CAN_NO_USE_DATE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "customer_reserved_info",
+                "name": "留资规则",
+                "value_demo": "",
+                "value_type": "CUSTOMER_RESERVED_INFO"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": false,
+                "key": "description_rich_text",
+                "name": "其他说明信息",
+                "value_demo": "",
+                "value_type": "NOTE"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": false,
+                "key": "detail_image_list",
+                "name": "长图",
+                "value_demo": "",
+                "value_type": "IMAGE"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": false,
+                "key": "dishes_image_list",
+                "name": "菜品图",
+                "value_demo": "",
+                "value_type": "IMAGE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "EntryType",
+                "name": "入口类型",
+                "value_demo": "1:H5 2:小程序 3:抖音 4:lynx",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": false,
+                "key": "environment_image_list",
+                "name": "环境图",
+                "value_demo": "",
+                "value_type": "IMAGE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "free_pack",
+                "name": "是否可以打包",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": false,
+                "key": "FrontCategoryTag",
+                "name": "前台品类标签",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": true,
+                "key": "image_list",
+                "name": "封面图",
+                "value_demo": "",
+                "value_type": "IMAGE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "IndustryType",
+                "name": "商品行业类型",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "IsConfirmImme",
+                "name": "是否立即确认",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "MpResourceID",
+                "name": "小程序资源id",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "MpSettleType",
+                "name": "小程序分账类型",
+                "value_demo": "1-包销 2-代销",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": true,
+                "key": "Notification",
+                "name": "使用规则",
+                "value_demo": "",
+                "value_type": "NOTIFICATION"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "private_room",
+                "name": "是否可以使用包间",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "real_name_info",
+                "name": "实名信息",
+                "value_demo": "",
+                "value_type": "REAL_NAME_INFO"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "RecommendWord",
+                "name": "推荐语",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "rec_person_num",
+                "name": "建议使用人数",
+                "value_demo": "",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "rec_person_num_max",
+                "name": "最多使用人数",
+                "value_demo": "",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "RefundPolicy",
+                "name": "退款政策",
+                "value_demo": "1-允许退款 2-不可退款 3-有条件退",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "refund_need_merchant_confirm",
+                "name": "退款是否需商家审核",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "release_source",
+                "name": "商品发布渠道",
+                "value_demo": "MERCHANT = 1 // 商家; BD = 2 // BD; FACILITATOR = 3 // 服务商;",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "show_channel",
+                "name": "投放渠道",
+                "value_demo": "1-不限制 2-仅直播间可见",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "SortWeight",
+                "name": "排序权重",
+                "value_demo": "",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "superimposed_discounts",
+                "name": "可以享受店内其他优惠",
+                "value_demo": "",
+                "value_type": "BOOL"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "TagList",
+                "name": "标签列表",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "trade_url",
+                "name": "小程序提单页跳转",
+                "value_demo": "",
+                "value_type": "STRING"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "use_date",
+                "name": "使用日期",
+                "value_demo": "",
+                "value_type": "USE_DATE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "use_time",
+                "name": "使用时间",
+                "value_demo": "",
+                "value_type": "USE_TIME"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "SubTitle",
+                "name": "副标题",
+                "value_demo": "可选标题：过期退；随时退；x日内可退；免预约；提前x日预约；多个副标题以|（英文半角）分隔，不要有空格",
+                "value_type": "STRING"
+            }
+        ],
+        "sku_attrs": [
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "code_source_type",
+                "name": "券码生成方式",
+                "value_demo": "1-抖音码 2-三方码 3-预导码",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": true,
+                "is_required": true,
+                "key": "commodity",
+                "name": "菜品搭配",
+                "value_demo": "",
+                "value_type": "COMMODITY"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "limit_rule",
+                "name": "限制购买",
+                "value_demo": "",
+                "value_type": "LIMIT_RULE"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": false,
+                "key": "market_price",
+                "name": "市场价",
+                "value_demo": "",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "settle_type",
+                "name": "收款方式",
+                "value_demo": "1-总店结算 2-分店结算",
+                "value_type": "INT64"
+            },
+            {
+                "desc": "",
+                "is_multi": false,
+                "is_required": true,
+                "key": "use_type",
+                "name": "团购使用方式",
+                "value_demo": "1-到店核销",
+                "value_type": "INT64"
+            }
+        ],
+        "error_code": 0,
+        "description": ""
+    }
+}

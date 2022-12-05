@@ -1,0 +1,21 @@
+{
+    "calendar_static_attr_group": {
+        "product_out_id": "some-out-product-id",
+        "calendar_static_attrs": [
+            {
+                "type": 1,
+                "value": {
+                    "values": ["2022-03-01", "2022-04-01"],
+                    "exclude_dates": ["2022-03-05"]
+                },
+                "status": 1,
+                "attr_key_value_map": {
+                    "breakfast_num": "1",
+                    "guest_type": "[1]",
+                    "pre_order_rule": "{\"time_type\":1,\"soonest_order_time\":1644066614,\"latest_order_time\":1654066614}"
+                }
+            }
+        ]
+    },
+    "account_id": "12345678"
+}

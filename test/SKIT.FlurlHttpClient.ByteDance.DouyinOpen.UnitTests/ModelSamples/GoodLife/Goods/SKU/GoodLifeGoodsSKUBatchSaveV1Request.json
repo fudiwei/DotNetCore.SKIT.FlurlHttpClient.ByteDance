@@ -1,0 +1,31 @@
+{
+    "out_id": "hch-life-0314-rl03",
+    "sku_list": [
+        {
+            "actual_amount": 1,
+            "attr_key_value_map": {
+                "Date": "20220423"
+            },
+            "origin_amount": 100,
+            "sku_name": "20220423",
+            "status": 1,
+            "stock": {
+                "limit_type": 0,
+                "stock_qty": 500
+            }
+        },
+        {
+            "actual_amount": 1,
+            "attr_key_value_map": {
+                "Date": "20220524"
+            },
+            "origin_amount": 100,
+            "sku_name": "20220524",
+            "status": 1,
+            "stock": {
+                "limit_type": 0,
+                "stock_qty": 500
+            }
+        }
+    ]
+}

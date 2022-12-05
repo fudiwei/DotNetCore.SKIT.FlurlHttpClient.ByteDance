@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string VerifyToken { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置抖音门店 ID。
+        /// 获取或设置门店 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("poi_id")]
         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]

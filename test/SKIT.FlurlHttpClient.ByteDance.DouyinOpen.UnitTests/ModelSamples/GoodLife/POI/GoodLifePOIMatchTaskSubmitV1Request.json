@@ -1,0 +1,14 @@
+{
+    "datas": [
+        {
+            "ext_id": "kaTest1027",
+            "poi_id": "7159188409662000000",
+            "poi_name": "测试POI",
+            "province": "新疆维吾尔自治区",
+            "city": "阿克苏",
+            "address": "庐山路华晨大拇指商业广场5楼",
+            "longitude": "82.582757",
+            "latitude": "40.101899"
+        }
+    ]
+}

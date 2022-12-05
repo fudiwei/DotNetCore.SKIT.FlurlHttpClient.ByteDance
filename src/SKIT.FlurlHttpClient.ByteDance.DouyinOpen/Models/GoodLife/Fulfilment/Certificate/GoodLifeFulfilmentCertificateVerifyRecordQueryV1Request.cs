@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     public class GoodLifeFulfilmentCertificateVerifyRecordQueryV1Request : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置商家团购账号 ID。
+        /// 获取或设置商家 ID。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

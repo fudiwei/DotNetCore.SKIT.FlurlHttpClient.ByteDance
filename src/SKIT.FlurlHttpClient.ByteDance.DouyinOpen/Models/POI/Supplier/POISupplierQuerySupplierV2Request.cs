@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     public class POISupplierQuerySupplierV2Request : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置接入方店铺外部 ID 列表。
+        /// 获取或设置门店外部 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

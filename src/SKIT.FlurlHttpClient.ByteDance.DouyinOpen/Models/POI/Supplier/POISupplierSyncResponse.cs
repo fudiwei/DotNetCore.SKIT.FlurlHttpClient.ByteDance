@@ -10,7 +10,7 @@
             public class Data : DouyinOpenResposneData
             {
                 /// <summary>
-                /// 获取或设置供应商 ID。
+                /// 获取或设置门店 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("supplier_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]

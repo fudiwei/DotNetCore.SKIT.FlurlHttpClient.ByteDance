@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
     {
         public static class Types
         {
-            public class Data : TikTokResposneData
+            public class Data : TikTokResponseData
             {
                 /// <summary>
                 /// 获取或设置错误描述。

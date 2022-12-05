@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.DouyinOpen", "src\SKIT.FlurlHttpClient.ByteDance.DouyinOpen\SKIT.FlurlHttpClient.ByteDance.DouyinOpen.csproj", "{5C10E8B7-B96A-4D3E-889E-3D9DD5FE41EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokShop", "src\SKIT.FlurlHttpClient.ByteDance.TikTokShop\SKIT.FlurlHttpClient.ByteDance.TikTokShop.csproj", "{E2F2ADEC-CD97-4CF9-A835-5F4B76EED1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.DouyinShop", "src\SKIT.FlurlHttpClient.ByteDance.DouyinShop\SKIT.FlurlHttpClient.ByteDance.DouyinShop.csproj", "{E2F2ADEC-CD97-4CF9-A835-5F4B76EED1EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal", "src\SKIT.FlurlHttpClient.ByteDance.TikTokGlobal\SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.csproj", "{73394D58-B93D-4EFF-9583-89DABA1616E3}"
 EndProject
@@ -26,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests\SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests.csproj", "{E77784CF-52D2-4BF9-A5E3-07A15D8962AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests\SKIT.FlurlHttpClient.ByteDance.TikTokShop.UnitTests.csproj", "{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.DouyinShop.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.DouyinShop.UnitTests\SKIT.FlurlHttpClient.ByteDance.DouyinShop.UnitTests.csproj", "{F08FBA3E-BFE1-4A26-822D-260BC2359CB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests", "test\SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests\SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests.csproj", "{1519C220-EDEA-4C66-934A-4AA7064CFEFB}"
 EndProject

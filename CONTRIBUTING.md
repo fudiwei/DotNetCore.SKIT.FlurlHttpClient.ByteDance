@@ -126,7 +126,7 @@
 
         - _microapp_：关于 `SKIT.FlurlHttpClient.ByteDance.MicroApp` 项目的变化；
         - _douyinopen_：关于 `SKIT.FlurlHttpClient.ByteDance.DouyinOpen` 项目的变化；
-        - _tiktokshop_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTokShop` 项目的变化；
+        - _douyinshop_：关于 `SKIT.FlurlHttpClient.ByteDance.DouyinShop` 项目的变化；
         - _tiktokglobal_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTokGlobal` 项目的变化；
         - _oceanengine_：关于 `SKIT.FlurlHttpClient.ByteDance.OceanEngine` 项目的变化；
         - 留空：不属于上述任何情形。

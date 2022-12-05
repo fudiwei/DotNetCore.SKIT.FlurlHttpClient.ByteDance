@@ -7,7 +7,7 @@
     {
         public static class Types
         {
-            public class Data : DouyinOpenResposneData
+            public class Data : DouyinOpenResponseData
             {
                 /// <summary>
                 /// 获取或设置视频来源列表。

@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 public string? StatusMessage { get; set; }
             }
 
-            public class Data : DouyinOpenResposneData
+            public class Data : DouyinOpenResponseData
             {
             }
         }

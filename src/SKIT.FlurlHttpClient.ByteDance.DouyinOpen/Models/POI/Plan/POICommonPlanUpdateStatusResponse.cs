@@ -7,7 +7,7 @@
     {
         public static class Types
         {
-            public class Data : DouyinOpenResposneData
+            public class Data : DouyinOpenResponseData
             {
                 /// <summary>
                 /// 获取或设置更新失败的计划 ID 列表。

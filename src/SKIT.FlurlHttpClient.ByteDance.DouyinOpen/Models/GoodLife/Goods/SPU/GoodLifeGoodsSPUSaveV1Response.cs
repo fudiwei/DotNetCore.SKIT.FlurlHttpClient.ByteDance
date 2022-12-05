@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
             }
 
-            public class Data : DouyinOpenResposneData
+            public class Data : DouyinOpenResponseData
             {
                 /// <summary>
                 /// 获取或设置商品 ID。

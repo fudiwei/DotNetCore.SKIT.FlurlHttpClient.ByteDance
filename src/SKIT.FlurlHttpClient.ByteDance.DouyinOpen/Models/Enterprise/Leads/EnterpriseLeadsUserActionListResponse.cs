@@ -7,7 +7,7 @@
     {
         public static class Types
         {
-            public class Data : DouyinOpenResposneData
+            public class Data : DouyinOpenResponseData
             {
                 public static class Types
                 {

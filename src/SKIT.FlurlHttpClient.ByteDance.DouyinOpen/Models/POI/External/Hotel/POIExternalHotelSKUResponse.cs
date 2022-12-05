@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 public int Stock { get; set; }
             }
 
-            public class Data : DouyinOpenResposneData, IList<SKU>
+            public class Data : DouyinOpenResponseData, IList<SKU>
             {
                 private readonly IList<SKU> _list = new List<SKU>();
 

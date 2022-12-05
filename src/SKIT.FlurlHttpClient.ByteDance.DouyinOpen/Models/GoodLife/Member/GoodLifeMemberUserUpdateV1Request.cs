@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         }
 
         /// <summary>
-        /// 获取或设置商家团购账号 ID。
+        /// 获取或设置商家 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]

@@ -1,0 +1,9 @@
+﻿{
+    "from_user_id": "xxxx",
+    "event": "life_member_join",
+    "client_key": "aaaaaaaa",
+    "content": {
+        "account_id": 123121,
+        "mobile": "111111111111"
+    }
+}

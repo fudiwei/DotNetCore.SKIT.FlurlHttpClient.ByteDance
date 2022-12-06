@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             {
                 if (callbackXml.Contains("<Encrypt>") && callbackXml.Contains("</Encrypt>"))
                 {
-                    string encryptedData = XDocument.Parse(callbackXml).Element("Encrypt").Value;
+                    string encryptedData = XDocument.Parse(callbackXml).Element("Encrypt")!.Value;
                     callbackXml = InnerDecryptEventData(sMsgEncrypt: encryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
                 }
 

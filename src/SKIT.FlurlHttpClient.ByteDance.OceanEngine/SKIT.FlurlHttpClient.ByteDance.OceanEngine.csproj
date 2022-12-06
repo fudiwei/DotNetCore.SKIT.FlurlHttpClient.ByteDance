@@ -14,7 +14,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance OceanEngine 字节 字节跳动 字节广告 字节跳动广告 头条 今日头条 头条广告 今日头条广告 巨量引擎 巨量引擎开放平台 巨量千川 巨量千川开放能力 巨量星图 巨量星图开放能力</PackageTags>
-        <Version>0.1.0-alpha</Version>
+        <Version>0.0.0</Version>
         <Description>基于 Flurl.Http 的巨量引擎开放平台 API 客户端。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>

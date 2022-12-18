@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Utilities
                     }
 
                     long i = (long)d;
-                    if (Math.Abs(i - d) == 0)
+                    if (Math.Abs(i - d) < double.Epsilon)
                     {
                         writer.WriteValue(i);
                         return;

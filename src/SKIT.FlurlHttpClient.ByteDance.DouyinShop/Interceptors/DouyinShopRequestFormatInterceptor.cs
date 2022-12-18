@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -18,28 +18,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Interceptors
             {
                 if (flurlCall.HttpRequestMessage.Content is MultipartFormDataContent)
                 {
-                    var oldFormdataContent = (MultipartFormDataContent)flurlCall.HttpRequestMessage.Content;
-                    var oldParamHttpContent = oldFormdataContent.SingleOrDefault(e => Constants.FormDataFields.FORMDATA_PARAM_JSON.Equals(e.Headers.ContentDisposition?.Name?.Trim('\"')));
+                    MultipartFormDataContent oldFormdataContent = (MultipartFormDataContent)flurlCall.HttpRequestMessage.Content;
+                    HttpContent? oldParamHttpContent = oldFormdataContent.SingleOrDefault(e => Constants.FormDataFields.FORMDATA_PARAM_JSON.Equals(e.Headers.ContentDisposition?.Name?.Trim('\"')));
                     if (oldParamHttpContent != null)
                     {
-                        string boundary = "--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x");
-                        var newFormdataContent = new MultipartFormDataContent(boundary);
+                        string paramJson = Utilities.JsonUtility.Format(await oldParamHttpContent.ReadAsStringAsync());
 
-                        string paramJson = await oldParamHttpContent.ReadAsStringAsync();
-                        paramJson = Utilities.JsonUtility.Format(paramJson);
-
-                        foreach (var item in oldFormdataContent)
+                        MultipartFormDataContent newFormdataContent = new MultipartFormDataContent("--BOUNDARY--" + DateTimeOffset.Now.Ticks.ToString("x"));
+                        foreach (HttpContent formdataItem in oldFormdataContent)
                         {
-                            if (item == oldParamHttpContent)
+                            if (formdataItem == oldParamHttpContent)
                                 continue;
 
-                            if (string.IsNullOrEmpty(item.Headers.ContentDisposition!.FileName))
-                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name!);
+                            if (string.IsNullOrEmpty(formdataItem.Headers.ContentDisposition!.FileName))
+                                newFormdataContent.Add(formdataItem, formdataItem.Headers.ContentDisposition.Name!);
                             else
-                                newFormdataContent.Add(item, item.Headers.ContentDisposition.Name!, item.Headers.ContentDisposition.FileName!);
+                                newFormdataContent.Add(formdataItem, formdataItem.Headers.ContentDisposition.Name!, formdataItem.Headers.ContentDisposition.FileName!);
                         }
 
-                        var newParamHttpContent = new StringContent(paramJson, Encoding.UTF8, "application/json");
+                        HttpContent newParamHttpContent = new StringContent(paramJson, Encoding.UTF8, "application/json");
                         newFormdataContent.Add(newParamHttpContent, Constants.FormDataFields.FORMDATA_PARAM_JSON);
                         flurlCall.HttpRequestMessage.Content = newFormdataContent;
 
@@ -48,14 +45,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Interceptors
                 }
                 else
                 {
-                    string paramJson = flurlCall.RequestBody;
-                    paramJson = Utilities.JsonUtility.Format(flurlCall.RequestBody);
+                    string paramJson = Utilities.JsonUtility.Format(flurlCall.RequestBody);
 
                     if (!string.IsNullOrEmpty(paramJson))
                     {
-                        var oldParamHttpContent = flurlCall.HttpRequestMessage.Content;
+                        HttpContent oldParamHttpContent = flurlCall.HttpRequestMessage.Content;
 
-                        var newParamHttpContent = new ByteArrayContent(Encoding.UTF8.GetBytes(paramJson));
+                        HttpContent newParamHttpContent = new ByteArrayContent(Encoding.UTF8.GetBytes(paramJson));
                         newParamHttpContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json; charset=UTF-8");
                         flurlCall.HttpRequestMessage.Content = newParamHttpContent;
 

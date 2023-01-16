@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置订单 ID。
+        /// 获取或设置订单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]

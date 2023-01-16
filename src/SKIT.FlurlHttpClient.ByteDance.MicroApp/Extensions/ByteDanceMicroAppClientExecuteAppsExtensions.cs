@@ -256,6 +256,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// <para>异步调用 [POST] /apps/order/v2/push 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/order/push </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/payment/pushOrder </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

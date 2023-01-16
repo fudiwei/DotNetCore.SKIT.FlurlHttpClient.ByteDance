@@ -1,0 +1,23 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "PACKAGE_AUDIT",
+    "AuditResults": [
+        {
+            "hostName": "toutiao",
+            "reason": [ "", "" ],
+            "status": 1,
+            "auditDetail": [
+                {
+                    "reason": "xxx",
+                    "modifyGuide": {
+                        "name": "xxx",
+                        "link": "xxx"
+                    },
+                    "detailFile": "xxx"
+                }
+            ]
+        }
+    ]
+}

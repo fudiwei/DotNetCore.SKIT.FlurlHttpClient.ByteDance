@@ -4,7 +4,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
     /// <para>表示 PUSH.Ticket 事件的数据。</para>
     /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentticket </para>
     /// </summary>
-    public class ComponentTicketEvent : ByteDanceMicroAppEvent, ByteDanceMicroAppEvent.Serialization.IJsonSerializable, ByteDanceMicroAppEvent.Serialization.IXmlSerializable
+    public class ComponentPushTicketEvent : ByteDanceMicroAppEvent, ByteDanceMicroAppEvent.Serialization.IJsonSerializable, ByteDanceMicroAppEvent.Serialization.IXmlSerializable
     {
         /// <summary>
         /// 获取或设置验证票据。

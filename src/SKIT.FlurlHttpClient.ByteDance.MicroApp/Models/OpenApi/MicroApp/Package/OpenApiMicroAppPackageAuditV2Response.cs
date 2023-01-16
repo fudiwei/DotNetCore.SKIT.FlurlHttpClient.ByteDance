@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /openapi/v1/microapp/package/audit 接口的响应。</para>
+    /// <para>表示 [POST] /openapi/v2/microapp/package/audit 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppPackageAuditV1Response : ByteDanceMicroAppResponse
+    public class OpenApiMicroAppPackageAuditV2Response : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

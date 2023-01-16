@@ -1,22 +1,22 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /openapi/v2/auth/pre_auth_code 接口的请求。</para>
     /// </summary>
-    public class OpenApiAuthPreAuthCodeV2Request : OpenApiAuthPreAuthCodeV1Request
+    public class OpenApiAuthPreAuthCodeV2Request : ByteDanceMicroAppRequest
     {
         /// <summary>
-        /// 获取或设置服务商的分账比例上限（范围：0～30）。
+        /// 获取或设置第三方应用 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("share_ratio")]
-        [System.Text.Json.Serialization.JsonPropertyName("share_ratio")]
-        public int? ShareRatio { get; set; }
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? ComponentAppId { get; set; }
 
         /// <summary>
-        /// 获取或设置服务商的分账金额上限（范围：0～50）。
+        /// 获取或设置第三方平台 AccessToken。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("share_amount")]
-        [System.Text.Json.Serialization.JsonPropertyName("share_amount")]
-        public int? ShareAmount { get; set; }
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string ComponentAccessToken { get; set; } = string.Empty;
     }
 }

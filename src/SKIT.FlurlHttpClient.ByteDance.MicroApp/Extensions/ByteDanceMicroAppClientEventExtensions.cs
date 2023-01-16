@@ -220,7 +220,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson"></param>
@@ -249,7 +249,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/overview-guide/encryption/ </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption/ </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackXml"></param>

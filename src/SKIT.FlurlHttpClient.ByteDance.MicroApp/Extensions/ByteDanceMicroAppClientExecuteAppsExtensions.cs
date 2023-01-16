@@ -119,7 +119,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// <para>异步调用 [POST] /apps/censor/image 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/content-security/picture-detect-v2 </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/auth-app/package-management/picture-detect </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/develop/picture-detect </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -278,7 +278,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/qr-code/create-qr-code </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/qr-code/create-qr-code </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/auth-app/miniprogram-setting/getqrcode </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/getqrcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -17,6 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2022-11-30 下线。")]
         public static async Task<Models.FansListResponse> ExecuteFansListAsync(this DouyinOpenClient client, Models.FansListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -40,6 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2022-11-30 下线。")]
         public static async Task<Models.FollowingListResponse> ExecuteFollowingListAsync(this DouyinOpenClient client, Models.FollowingListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

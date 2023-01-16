@@ -1,0 +1,28 @@
+{
+    "errno": 0,
+    "message": "success",
+    "tpl_app_list": [
+        {
+            "tpl_app_id": "ttxxxxxxxxx3",
+            "app_name": "模板小程序3"
+        },
+        {
+            "tpl_app_id": "ttxxxxxxxxx2",
+            "app_name": "模板小程序2",
+            "nick_name": "小李",
+            "user_version": "2.2.2",
+            "user_desc": "xxx",
+            "draft_id": 2,
+            "create_time": 1488965933
+        },
+        {
+            "tpl_app_id": "ttxxxxxxxxx1",
+            "app_name": "模板小程序1",
+            "nick_name": "小王",
+            "user_version": "1.1.1",
+            "user_desc": "xxx",
+            "draft_id": 1,
+            "create_time": 1488965932
+        }
+    ]
+}

@@ -179,6 +179,31 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/tp/template/get_tpl_app_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/tpl-app-list </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Response> ExecuteOpenApiThirdPartyTemplateGetTemplateAppListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "tp", "template", "get_tpl_app_list")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("component_access_token", request.ComponentAccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/template/add_tpl 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/add </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>

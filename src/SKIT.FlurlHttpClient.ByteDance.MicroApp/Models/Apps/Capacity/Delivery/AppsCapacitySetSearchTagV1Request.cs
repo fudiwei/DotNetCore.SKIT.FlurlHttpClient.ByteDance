@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/set_search_tag 接口的请求。</para>
     /// </summary>
-    public class AppsCapacitySetSearchTagRequest : ByteDanceMicroAppRequest
+    public class AppsCapacitySetSearchTagV1Request : ByteDanceMicroAppRequest
     {
         public static class Types
         {

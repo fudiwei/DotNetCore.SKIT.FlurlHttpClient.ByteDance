@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/capacity/apply_capacity 接口的请求。</para>
+    /// <para>表示 [POST] /apps/v1/capacity/bind_self_mount_user 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityApplyCapacityRequest : ByteDanceMicroAppRequest
+    public class AppsCapacityBindSelfMountUserV1Request : ByteDanceMicroAppRequest
     {
         /// <summary>
         /// 获取或设置挂载能力标识。
@@ -13,10 +13,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string CapacityKey { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置申请原因。
+        /// 获取或设置抖音号。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("apply_reason")]
-        [System.Text.Json.Serialization.JsonPropertyName("apply_reason")]
-        public string ApplyReason { get; set; } = string.Empty;
+        [Newtonsoft.Json.JsonProperty("aweme_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("aweme_id")]
+        public string AwemeId { get; set; } = string.Empty;
     }
 }

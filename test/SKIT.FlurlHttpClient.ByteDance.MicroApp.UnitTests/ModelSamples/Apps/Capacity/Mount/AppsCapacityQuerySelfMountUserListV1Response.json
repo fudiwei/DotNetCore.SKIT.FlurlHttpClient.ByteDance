@@ -1,0 +1,16 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "total_count": 10,
+        "list": [
+            {
+                "aweme_id": "2012xxxx",
+                "user_name": "xxx",
+                "account_type": 1,
+                "bind_status": 1,
+                "unbind_reason": ""
+            }
+        ]
+    }
+}

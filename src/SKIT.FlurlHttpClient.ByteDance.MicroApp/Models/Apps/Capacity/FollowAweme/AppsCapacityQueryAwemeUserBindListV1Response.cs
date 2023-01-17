@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/capacity/query_self_mount_user_list 接口的响应。</para>
+    /// <para>表示 [GET] /apps/v1/capacity/query_aweme_user_bind_list 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQuerySelfMountUserListResponse : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAwemeUserBindListV1Response : ByteDanceMicroAppResponse
     {
         public static class Types
         {
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("unbind_reason")]
                         [System.Text.Json.Serialization.JsonPropertyName("unbind_reason")]
-                        public string? UnbindReason { get; set; }   
+                        public string? UnbindReason { get; set; }
                     }
                 }
 

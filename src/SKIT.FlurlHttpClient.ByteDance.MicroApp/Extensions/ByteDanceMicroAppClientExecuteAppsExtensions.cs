@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityAddAliasResponse> ExecuteAppsCapacityAddAliasAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityAddAliasRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityAddAliasV1Response> ExecuteAppsCapacityAddAliasV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityAddAliasV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_alias")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityAddAliasResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityAddAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityQueryAliasListResponse> ExecuteAppsCapacityQueryAliasListAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAliasListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityQueryAliasListV1Response> ExecuteAppsCapacityQueryAliasListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAliasListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_alias_list")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAliasListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAliasListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityModifyAliasResponse> ExecuteAppsCapacityModifyAliasAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityModifyAliasRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityModifyAliasV1Response> ExecuteAppsCapacityModifyAliasV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityModifyAliasV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -174,7 +174,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "modify_alias")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityModifyAliasResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityModifyAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityDeleteAliasResponse> ExecuteAppsCapacityDeleteAliasAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityDeleteAliasRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityDeleteAliasV1Response> ExecuteAppsCapacityDeleteAliasV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityDeleteAliasV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -194,7 +194,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_alias")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityDeleteAliasResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityDeleteAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacitySetSearchTagResponse> ExecuteAppsCapacitySetSearchTagAsync(this ByteDanceMicroAppClient client, Models.AppsCapacitySetSearchTagRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacitySetSearchTagV1Response> ExecuteAppsCapacitySetSearchTagV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacitySetSearchTagV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -214,7 +214,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "set_search_tag")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacitySetSearchTagResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacitySetSearchTagV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityQuerySearchTagListResponse> ExecuteAppsCapacityQuerySearchTagListAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQuerySearchTagListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityQuerySearchTagListV1Response> ExecuteAppsCapacityQuerySearchTagListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQuerySearchTagListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -234,8 +234,95 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_search_tag_list")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQuerySearchTagListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQuerySearchTagListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
+
+        #region Capacity/FollowAweme
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/bind_aweme_user 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/follow-aweme/bind-aweme-user </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityBindAwemeUserV1Response> ExecuteAppsCapacityBindAwemeUserV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityBindAwemeUserV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_aweme_user")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityBindAwemeUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/unbind_aweme_user_bind 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/follow-aweme/unbind-aweme-user </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUnbindAwemeUserV1Response> ExecuteAppsCapacityUnbindAwemeUserV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityUnbindAwemeUserV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_aweme_user_bind")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityUnbindAwemeUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/get_aweme_user_bind_qrcode 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/follow-aweme/get-aweme-user-bind-qrcode </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityGetAwemeUserBindQrcodeV1Response> ExecuteAppsCapacityGetAwemeUserBindQrcodeV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityGetAwemeUserBindQrcodeV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_aweme_user_bind_qrcode")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("type", request.BindType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityGetAwemeUserBindQrcodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_aweme_user_bind_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/follow-aweme/query-aweme-user-bind-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAwemeUserBindListV1Response> ExecuteAppsCapacityQueryAwemeUserBindListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAwemeUserBindListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_user_bind_list")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("type", request.BindType)
+                .SetQueryParam("page_num", request.Page)
+                .SetQueryParam("page_size", request.Limit);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAwemeUserBindListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #endregion
 
         #region Capacity/Mount
@@ -249,7 +336,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityApplyCapacityResponse> ExecuteAppsCapacityApplyCapacityAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityApplyCapacityRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityApplyCapacityV1Response> ExecuteAppsCapacityApplyCapacityV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityApplyCapacityV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -258,7 +345,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "apply_capacity")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityApplyCapacityResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityApplyCapacityV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -271,7 +358,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityQueryApplyStatusResponse> ExecuteAppsCapacityQueryApplyStatusAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryApplyStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityQueryApplyStatusV1Response> ExecuteAppsCapacityQueryApplyStatusV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryApplyStatusV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -281,7 +368,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("capacity_key", request.CapacityKey);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryApplyStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryApplyStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -292,7 +379,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityBindSelfMountUserResponse> ExecuteAppsCapacityBindSelfMountUserAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityBindSelfMountUserRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityBindSelfMountUserV1Response> ExecuteAppsCapacityBindSelfMountUserV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityBindSelfMountUserV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -301,7 +388,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_self_mount_user")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityBindSelfMountUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityBindSelfMountUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -312,7 +399,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityUnbindSelfMountUserResponse> ExecuteAppsCapacityUnbindSelfMountUserAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityUnbindSelfMountUserRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityUnbindSelfMountUserV1Response> ExecuteAppsCapacityUnbindSelfMountUserV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityUnbindSelfMountUserV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -321,7 +408,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_self_mount_user")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityUnbindSelfMountUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityUnbindSelfMountUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -332,7 +419,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityGetSelfMountBindQrcodeResponse> ExecuteAppsCapacityGetSelfMountBindQrcodeAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityGetSelfMountBindQrcodeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityGetSelfMountBindQrcodeV1Response> ExecuteAppsCapacityGetSelfMountBindQrcodeV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityGetSelfMountBindQrcodeV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -342,7 +429,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("capacity_key", request.CapacityKey);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityGetSelfMountBindQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityGetSelfMountBindQrcodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -353,7 +440,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityQuerySelfMountUserListResponse> ExecuteAppsCapacityQuerySelfMountUserListAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQuerySelfMountUserListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityQuerySelfMountUserListV1Response> ExecuteAppsCapacityQuerySelfMountUserListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQuerySelfMountUserListV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -365,7 +452,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("page_num", request.Page)
                 .SetQueryParam("page_size", request.Limit);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQuerySelfMountUserListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQuerySelfMountUserListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
         #endregion

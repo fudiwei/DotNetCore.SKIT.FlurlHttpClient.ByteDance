@@ -1,16 +1,16 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/capacity/bind_self_mount_user 接口的请求。</para>
+    /// <para>表示 [POST] /apps/v1/capacity/bind_aweme_user 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityBindSelfMountUserRequest : ByteDanceMicroAppRequest
+    public class AppsCapacityBindAwemeUserV1Request : ByteDanceMicroAppRequest
     {
         /// <summary>
-        /// 获取或设置挂载能力标识。
+        /// 获取或设置绑定类型。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("capacity_key")]
-        [System.Text.Json.Serialization.JsonPropertyName("capacity_key")]
-        public string CapacityKey { get; set; } = string.Empty;
+        [Newtonsoft.Json.JsonProperty("type")]
+        [System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string BindType { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置抖音号。

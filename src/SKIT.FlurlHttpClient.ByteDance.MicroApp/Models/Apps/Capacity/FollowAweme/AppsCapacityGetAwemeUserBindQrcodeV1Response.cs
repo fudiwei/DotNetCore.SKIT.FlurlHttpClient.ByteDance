@@ -1,27 +1,27 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/capacity/query_apply_status 接口的响应。</para>
+    /// <para>表示 [GET] /apps/v1/capacity/get_aweme_user_bind_qrcode 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryApplyStatusResponse : ByteDanceMicroAppResponse
+    public class AppsCapacityGetAwemeUserBindQrcodeV1Response : ByteDanceMicroAppResponse
     {
         public static class Types
         {
             public class Data
             {
                 /// <summary>
-                /// 获取或设置能力状态。
+                /// 获取或设置二维码图片 URL。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("status")]
-                [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public int Status { get; set; }
+                [Newtonsoft.Json.JsonProperty("qrcode_url")]
+                [System.Text.Json.Serialization.JsonPropertyName("qrcode_url")]
+                public string QrcodeUrl { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置审核拒绝原因。
+                /// 获取或设置二维码数据字符串。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("reason")]
-                [System.Text.Json.Serialization.JsonPropertyName("reason")]
-                public string? RejectReason { get; set; }
+                [Newtonsoft.Json.JsonProperty("qrcode_parse_content")]
+                [System.Text.Json.Serialization.JsonPropertyName("qrcode_parse_content")]
+                public string QrcodeDataString { get; set; } = default!;
             }
         }
 

@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/capacity/query_search_tag_list 接口的响应。</para>
+    /// <para>表示 [GET] /apps/v1/capacity/query_alias_list 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQuerySearchTagListResponse : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAliasListV1Response : ByteDanceMicroAppResponse
     {
         public static class Types
         {
@@ -11,14 +11,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             {
                 public static class Types
                 {
-                    public class TagItem
+                    public class AliasItem
                     {
                         /// <summary>
-                        /// 获取或设置搜索标签。
+                        /// 获取或设置小程序别名。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("search_tag")]
-                        [System.Text.Json.Serialization.JsonPropertyName("search_tag")]
-                        public string Tag { get; set; } = default!;
+                        [Newtonsoft.Json.JsonProperty("alias")]
+                        [System.Text.Json.Serialization.JsonPropertyName("alias")]
+                        public string Alias { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -33,29 +33,43 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("audit_reason")]
                         [System.Text.Json.Serialization.JsonPropertyName("audit_reason")]
                         public string? RejectReason { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置创建时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("ctime")]
+                        [System.Text.Json.Serialization.JsonPropertyName("ctime")]
+                        public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置更新时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("utime")]
+                        [System.Text.Json.Serialization.JsonPropertyName("utime")]
+                        public long UpdateTimestamp { get; set; }
                     }
                 }
 
                 /// <summary>
-                /// 获取或设置本月还剩余修改次数。
+                /// 获取或设置本周还剩余修改次数。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("month_available_times")]
-                [System.Text.Json.Serialization.JsonPropertyName("month_available_times")]
-                public int MonthAvailableTimes { get; set; }
+                [Newtonsoft.Json.JsonProperty("week_available_times")]
+                [System.Text.Json.Serialization.JsonPropertyName("week_available_times")]
+                public int WeekAvailableTimes { get; set; }
 
                 /// <summary>
-                /// 获取或设置每月总共可修改次数。
+                /// 获取或设置每周总共可修改次数。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("month_total_times")]
-                [System.Text.Json.Serialization.JsonPropertyName("month_total_times")]
-                public int MonthTotalTimes { get; set; }
+                [Newtonsoft.Json.JsonProperty("week_total_times")]
+                [System.Text.Json.Serialization.JsonPropertyName("week_total_times")]
+                public int WeekTotalTimes { get; set; }
 
                 /// <summary>
-                /// 获取或设置搜索标签列表。
+                /// 获取或设置别名列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("search_tag_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("search_tag_list")]
-                public Types.TagItem[] TagList { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("alias_list")]
+                [System.Text.Json.Serialization.JsonPropertyName("alias_list")]
+                public Types.AliasItem[] AliasList { get; set; } = default!;
             }
         }
 

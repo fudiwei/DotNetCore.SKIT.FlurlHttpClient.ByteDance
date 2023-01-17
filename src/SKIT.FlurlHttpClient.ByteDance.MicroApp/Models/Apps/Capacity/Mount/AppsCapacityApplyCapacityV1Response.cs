@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/capacity/delete_alias 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/capacity/apply_capacity 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityDeleteAliasResponse : ByteDanceMicroAppResponse
+    public class AppsCapacityApplyCapacityV1Response : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

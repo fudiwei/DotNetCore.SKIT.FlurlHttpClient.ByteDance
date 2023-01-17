@@ -115,6 +115,139 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendRequestWithJsonAsync<Models.AppsJsCode2SessionV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        #region Capacity
+        #region Capacity/Mount
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/apply_capacity 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/apply-self-mount </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/apply-live-self-mount </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/apply-video-talent-mount </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityApplyCapacityResponse> ExecuteAppsCapacityApplyCapacityAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityApplyCapacityRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "apply_capacity")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityApplyCapacityResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_apply_status 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-video-self-mount </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-live-self-mount </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-video-talent-mount </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryApplyStatusResponse> ExecuteAppsCapacityQueryApplyStatusAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryApplyStatusRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_apply_status")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("capacity_key", request.CapacityKey);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryApplyStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/bind_self_mount_user 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/bind-self-mount-user </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityBindSelfMountUserResponse> ExecuteAppsCapacityBindSelfMountUserAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityBindSelfMountUserRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_self_mount_user")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityBindSelfMountUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/unbind_self_mount_user 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/unbind-self-mount-user </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUnbindSelfMountUserResponse> ExecuteAppsCapacityUnbindSelfMountUserAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityUnbindSelfMountUserRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_self_mount_user")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityUnbindSelfMountUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/get_self_mount_bind_qrcode 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/get-self-mount-bind-qrcode </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityGetSelfMountBindQrcodeResponse> ExecuteAppsCapacityGetSelfMountBindQrcodeAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityGetSelfMountBindQrcodeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_self_mount_bind_qrcode")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("capacity_key", request.CapacityKey);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityGetSelfMountBindQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_self_mount_user_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-self-mount-user-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQuerySelfMountUserListResponse> ExecuteAppsCapacityQuerySelfMountUserListAsync(this ByteDanceMicroAppClient client, Models.AppsCapacityQuerySelfMountUserListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_self_mount_user_list")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("capacity_key", request.CapacityKey)
+                .SetQueryParam("page_num", request.Page)
+                .SetQueryParam("page_size", request.Limit);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQuerySelfMountUserListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+        #endregion
+
         #region Censor
         /// <summary>
         /// <para>异步调用 [POST] /apps/censor/image 接口。</para>
@@ -193,7 +326,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "apps", "customer_service", "url")
-                .WithHeader("Access-Token", request.AccessToken)
+                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("appid", request.AppId)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("type", request.Type)
@@ -273,7 +406,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "message", "custom", "send");
+                .CreateRequest(request, HttpMethod.Post, "apps", "message", "custom", "send")
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.AppsMessageCustomSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -295,7 +429,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "order", "v2", "push");
+                .CreateRequest(request, HttpMethod.Post, "apps", "order", "v2", "push")
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.AppsOrderPushV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -314,7 +449,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "order", "delete");
+                .CreateRequest(request, HttpMethod.Post, "apps", "order", "delete")
+                .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.AppsOrderDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

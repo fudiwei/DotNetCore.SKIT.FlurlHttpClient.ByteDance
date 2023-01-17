@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     /// <summary>
     /// 字节小程序 API 请求的基类。

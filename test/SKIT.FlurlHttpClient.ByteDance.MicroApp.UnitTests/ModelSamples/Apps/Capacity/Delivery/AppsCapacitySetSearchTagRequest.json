@@ -1,0 +1,10 @@
+{
+    "add_tag_list": [ "AB电影票" ],
+    "delete_tag_list": [ "电影票" ],
+    "modify_tag_list": [
+        {
+            "before_tag": "AB",
+            "search_tag": "AB票"
+        }
+    ]
+}

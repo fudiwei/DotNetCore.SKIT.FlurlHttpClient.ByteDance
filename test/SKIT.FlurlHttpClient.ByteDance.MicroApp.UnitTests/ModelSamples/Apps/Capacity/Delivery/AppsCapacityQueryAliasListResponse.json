@@ -1,0 +1,17 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "week_available_times": 1,
+        "week_total_times": 5,
+        "alias_list": [
+            {
+                "alias": "别名",
+                "audit_status": 1,
+                "audit_reason": "",
+                "ctime": 1671615573,
+                "utime": 1671615573
+            }
+        ]
+    }
+}

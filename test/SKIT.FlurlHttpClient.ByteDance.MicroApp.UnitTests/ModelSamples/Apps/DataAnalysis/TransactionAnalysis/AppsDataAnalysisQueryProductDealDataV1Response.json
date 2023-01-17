@@ -1,0 +1,16 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "total": 1,
+        "deal_data_list": [
+            {
+                "product_id": 12356,
+                "product_name": "产品名称",
+                "pay_amount": 4,
+                "pay_product_cnt": 2,
+                "pay_user_cnt": 1
+            }
+        ]
+    }
+}

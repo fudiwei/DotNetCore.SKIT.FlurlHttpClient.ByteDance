@@ -1,0 +1,27 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "deal_overview_data": {
+            "create_order_count": 3,
+            "pay_order_count": 1,
+            "create_order_amount": 3,
+            "pay_order_amount": 1,
+            "success_user_cnt": 1,
+            "refund_order_cnt": 0,
+            "sale_product_cnt": 1
+        },
+        "deal_data_list": [
+            {
+                "time": "2022-12-27",
+                "create_order_count": 3,
+                "pay_order_count": 1,
+                "create_order_amount": 3,
+                "pay_order_amount": 1,
+                "success_user_cnt": 1,
+                "refund_order_cnt": 0,
+                "sale_product_cnt": 1
+            }
+        ]
+    }
+}

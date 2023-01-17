@@ -1,0 +1,23 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "behaviors": [
+            {
+                "time": "00:00:00",
+                "active_user_num": 15,
+                "open_time": 18
+            },
+            {
+                "time": "01:00:00",
+                "active_user_num": 10,
+                "open_time": 16
+            },
+            {
+                "time": "02:00:00",
+                "active_user_num": 10,
+                "open_time": 16
+            }
+        ]
+    }
+}

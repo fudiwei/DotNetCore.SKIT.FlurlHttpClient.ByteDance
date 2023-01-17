@@ -1,0 +1,23 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "video_deal_overview_data": {
+            "video_play_cnt": 6005,
+            "mp_show_pv": 5026,
+            "mp_click_pv": 25,
+            "create_order_cnt": 0,
+            "pay_order_cnt": 0
+        },
+        "video_deal_data_list": [
+            {
+                "time": "2022-12-27",
+                "video_play_cnt": 6005,
+                "mp_show_pv": 5026,
+                "mp_click_pv": 25,
+                "create_order_cnt": 0,
+                "pay_order_cnt": 0
+            }
+        ]
+    }
+}

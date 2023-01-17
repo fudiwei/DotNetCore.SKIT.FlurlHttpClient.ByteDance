@@ -1,0 +1,46 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "app_version": [
+            {
+                "name": "23.7.0",
+                "value": 370
+            },
+            {
+                "name": "23.6.0",
+                "value": 101
+            }
+        ],
+        "brand": [
+            {
+                "name": "苹果",
+                "value": 256
+            },
+            {
+                "name": "华为",
+                "value": 90
+            }
+        ],
+        "lib_version": [
+            {
+                "name": "2.77.1.0",
+                "value": 511
+            },
+            {
+                "name": "2.76.0.10",
+                "value": 34
+            }
+        ],
+        "model": [
+            {
+                "name": "iphone14,5",
+                "value": 42
+            },
+            {
+                "name": "iphone12,1",
+                "value": 36
+            }
+        ]
+    }
+}

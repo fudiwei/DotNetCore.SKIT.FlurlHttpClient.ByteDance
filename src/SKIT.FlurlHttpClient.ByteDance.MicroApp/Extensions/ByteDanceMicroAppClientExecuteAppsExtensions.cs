@@ -545,6 +545,369 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region DataAnalysis
+        #region DataAnalysis/TransactionAnalysis
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_deal_overview_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/overview-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryDealOverviewDataV1Response> ExecuteAppsDataAnalysisQueryDealOverviewDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryDealOverviewDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_deal_overview_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryDealOverviewDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_video_deal_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/video-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryVideoDealDataV1Response> ExecuteAppsDataAnalysisQueryVideoDealDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryVideoDealDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_video_deal_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryVideoDealDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_live_room 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/query-live-room </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryLiveRoomV1Response> ExecuteAppsDataAnalysisQueryLiveRoomV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryLiveRoomV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_room")
+                .WithHeader("access-token", request.AccessToken);
+
+            if (request.AnchorName != null)
+                flurlReq.SetQueryParam("anchor_name", request.AnchorName);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryLiveRoomV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_live_room_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/live-room-data-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryLiveRoomDataV1Response> ExecuteAppsDataAnalysisQueryLiveRoomDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryLiveRoomDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_room_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("live_room_id", request.LiveRoomId);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryLiveRoomDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_live_deal_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/live-deal-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryLiveDealDataV1Response> ExecuteAppsDataAnalysisQueryLiveDealDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryLiveDealDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_deal_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("live_room_id", request.LiveRoomId);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryLiveDealDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_product_deal_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/product-deal-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryProductDealDataV1Response> ExecuteAppsDataAnalysisQueryProductDealDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryProductDealDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_product_deal_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp)
+                .SetQueryParam("page_num", request.Page)
+                .SetQueryParam("page_size", request.Limit);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryProductDealDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region DataAnalysis/UserAnalysis
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_behavior_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/behavior-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryBehaviorDataV1Response> ExecuteAppsDataAnalysisQueryBehaviorDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryBehaviorDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_behavior_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.OS != null)
+                flurlReq.SetQueryParam("os", request.OS);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryBehaviorDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_real_time_user_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/realtime-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryRealTimeUserDataV1Response> ExecuteAppsDataAnalysisQueryRealTimeUserDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryRealTimeUserDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_real_time_user_data")
+                .WithHeader("access-token", request.AccessToken);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryRealTimeUserDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_retention_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/retention-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryRetentionDataV1Response> ExecuteAppsDataAnalysisQueryRetentionDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryRetentionDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_retention_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.UserType != null)
+                flurlReq.SetQueryParam("user_type", request.UserType);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.OS != null)
+                flurlReq.SetQueryParam("os", request.OS);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryRetentionDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_scene_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/scene-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQuerySceneDataV1Response> ExecuteAppsDataAnalysisQuerySceneDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQuerySceneDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_scene_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQuerySceneDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_user_portrait_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/user-portrait-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryUserPortraitDataV1Response> ExecuteAppsDataAnalysisQueryUserPortraitDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryUserPortraitDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_user_portrait_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.UserType != null)
+                flurlReq.SetQueryParam("user_type", request.UserType);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryUserPortraitDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_client_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/client-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryClientDataV1Response> ExecuteAppsDataAnalysisQueryClientDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryClientDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_client_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.UserType != null)
+                flurlReq.SetQueryParam("user_type", request.UserType);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryClientDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/data_analysis/query_page_data 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/page-analysis </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsDataAnalysisQueryPageDataV1Response> ExecuteAppsDataAnalysisQueryPageDataV1Async(this ByteDanceMicroAppClient client, Models.AppsDataAnalysisQueryPageDataV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_page_data")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            if (request.OS != null)
+                flurlReq.SetQueryParam("os", request.OS);
+
+            if (request.VersionType != null)
+                flurlReq.SetQueryParam("version_type", request.VersionType);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsDataAnalysisQueryPageDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+        #endregion
+
         #region Live
         /// <summary>
         /// <para>异步调用 [POST] /apps/upload_live_image 接口。</para>

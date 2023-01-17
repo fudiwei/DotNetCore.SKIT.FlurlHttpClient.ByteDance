@@ -1,0 +1,24 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "live_data_overview": {
+            "cumulative_audience_count": 100,
+            "online_user_count": 50,
+            "per_capita_time": 60000,
+            "increased_fans_count": 4,
+            "comment_count": 40,
+            "share_count": 10,
+            "like_times": 300
+        },
+        "live_data_list": [
+            {
+                "time": "2006-01-02 15:04:05",
+                "cumulative_audience_count": 100,
+                "comment_count": 10,
+                "share_count": 5,
+                "like_times": 10
+            }
+        ]
+    }
+}

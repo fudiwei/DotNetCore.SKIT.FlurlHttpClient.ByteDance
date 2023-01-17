@@ -1,0 +1,51 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "total_user": 485,
+        "province": [
+            {
+                "name": "广东",
+                "value": 74
+            },
+            {
+                "name": "江苏",
+                "value": 54
+            }
+        ],
+        "city": [
+            {
+                "name": "深圳",
+                "value": 21
+            },
+            {
+                "name": "北京",
+                "value": 20
+            }
+        ],
+        "gender": [
+            {
+                "name": "male",
+                "value": 378
+            },
+            {
+                "name": "female",
+                "value": 225
+            }
+        ],
+        "age": [
+            {
+                "name": "-18",
+                "value": 20
+            },
+            {
+                "name": "18-23",
+                "value": 136
+            },
+            {
+                "name": "24-30",
+                "value": 188
+            }
+        ]
+    }
+}

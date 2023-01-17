@@ -1,0 +1,22 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "current_live_room": [
+            {
+                "anchor_name": "主播名称A",
+                "live_room_id": 111,
+                "live_room_name": "直播间名称A",
+                "create_time": 1671620183
+            }
+        ],
+        "history_live_room": [
+            {
+                "anchor_name": "主播名称A",
+                "live_room_id": 222,
+                "live_room_name": "直播间名称B",
+                "create_time": 1671610183
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "page_list": [
+            {
+                "page": "pages/index/index",
+                "page_avg_stay_time": 12552,
+                "page_pv": 1311,
+                "page_share_time": 3,
+                "page_uv": 582
+            }
+        ]
+    }
+}

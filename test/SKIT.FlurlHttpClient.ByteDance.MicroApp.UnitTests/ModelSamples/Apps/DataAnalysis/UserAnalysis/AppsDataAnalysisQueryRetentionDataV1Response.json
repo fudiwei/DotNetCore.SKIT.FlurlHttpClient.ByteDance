@@ -1,0 +1,50 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "retention_data_list": [
+            {
+                "time": "2022-12-21",
+                "active_user_num": 28,
+                "retention_rate_list": [
+                    {
+                        "day": 1,
+                        "rate": 0.1422
+                    },
+                    {
+                        "day": 2,
+                        "rate": 0.0596
+                    },
+                    {
+                        "day": 3,
+                        "rate": 0.0458
+                    },
+                    {
+                        "day": 4,
+                        "rate": 0.0275
+                    },
+                    {
+                        "day": 5,
+                        "rate": 0.0871
+                    },
+                    {
+                        "day": 6,
+                        "rate": 0.0642
+                    },
+                    {
+                        "day": 7,
+                        "rate": 0
+                    },
+                    {
+                        "day": 14,
+                        "rate": 0
+                    },
+                    {
+                        "day": 30,
+                        "rate": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

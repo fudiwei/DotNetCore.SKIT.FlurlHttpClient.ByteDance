@@ -97,9 +97,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.ClientKey == null)
                 request.ClientKey = client.Credentials.ClientKey;
 
-            if (request.ClientSecret == null)
-                request.ClientSecret = client.Credentials.ClientSecret;
-
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "oauth", "refresh_token");
 

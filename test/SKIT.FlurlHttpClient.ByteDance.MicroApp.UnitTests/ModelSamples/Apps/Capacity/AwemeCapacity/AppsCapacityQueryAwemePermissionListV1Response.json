@@ -1,0 +1,29 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "list": [
+            {
+                "permission_category": "视频权限",
+                "permission_list": [
+                    {
+                        "permission_name": "关键词视频管理",
+                        "permission_key": "open.video.search",
+                        "permission_desc": "包含通过关键词获取抖音视频及该视频下评论，并进行回复的能力",
+                        "can_apply": 0,
+                        "status": 1,
+                        "reject_reason_list": [],
+                        "scope_list": [
+                            {
+                                "scope": "video.search"
+                            },
+                            {
+                                "scope": "video.search.comment"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

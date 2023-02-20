@@ -1,0 +1,15 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "total_count": 1,
+        "keyword_list": [
+            {
+                "keyword_id": "xxx",
+                "keyword": "xxx",
+                "status": 0,
+                "reject_reason_list": [ "xxx" ]
+            }
+        ]
+    }
+}

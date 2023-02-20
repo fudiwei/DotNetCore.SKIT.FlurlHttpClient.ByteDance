@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("charge_remain")]
                         [System.Text.Json.Serialization.JsonPropertyName("charge_remain")]
-                        public int ChargeRemainQuota { get; set; }
+                        public int ChargeRemainingQuota { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否可以申请提升额度。

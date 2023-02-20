@@ -128,6 +128,61 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region ThirdParty
         /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/tp/auth_app_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/authapplist </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiThirdPartyAuthAppListV1Response> ExecuteOpenApiThirdPartyAuthAppListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyAuthAppListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "tp", "auth_app_list")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("component_access_token", request.ComponentAccessToken)
+                .SetQueryParam("page", request.PageNumber)
+                .SetQueryParam("size", request.PageSize);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyAuthAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /openapi/v1/tp/upload_pic_material 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/upload-pic-material </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiThirdPartyUploadPictureMaterialV1Response> ExecuteOpenApiThirdPartyUploadPictureMaterialV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyUploadPictureMaterialV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.MaterialFileName == null)
+                request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "openapi", "v1", "tp", "upload_pic_material")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("component_access_token", request.ComponentAccessToken);
+
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: "image/jpeg", formDataName: "material_file");
+            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
+
+            return await client.SendRequestAsync<Models.OpenApiThirdPartyUploadPictureMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+        }
+
+        #region ThirdParty/Template
+        /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/tp/template/get_tpl_list 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/tpl-list </para>
         /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
@@ -252,59 +307,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyTemplateDeleteTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
 
-        /// <summary>
-        /// <para>异步调用 [GET] /openapi/v1/tp/download/webview_file 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/domain/download </para>
-        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyDownloadWebviewFileV1Response> ExecuteOpenApiThirdPartyDownloadWebviewFileV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyDownloadWebviewFileV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.ComponentAppId == null)
-                request.ComponentAppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "tp", "download", "webview_file")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyDownloadWebviewFileV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /openapi/v1/tp/auth_app_list 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/authapplist </para>
-        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyAuthAppListV1Response> ExecuteOpenApiThirdPartyAuthAppListV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyAuthAppListV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.ComponentAppId == null)
-                request.ComponentAppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "tp", "auth_app_list")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("page", request.PageNumber)
-                .SetQueryParam("size", request.PageSize);
-
-            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyAuthAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
+        #region ThirdParty/POI
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/tp/poi/supplier/match 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-match </para>
@@ -460,6 +465,34 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region ThirdParty/Domain
+        /// <summary>
+        /// <para>异步调用 [GET] /openapi/v1/tp/download/webview_file 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/domain/download </para>
+        /// <para><i>（请注意调用此接口需在构造 <see cref="ByteDanceMicroAppClient" /> 时指定特殊的 <see cref="ByteDanceMicroAppClientOptions.Endpoints"/>。）</i></para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.OpenApiThirdPartyDownloadWebviewFileV1Response> ExecuteOpenApiThirdPartyDownloadWebviewFileV1Async(this ByteDanceMicroAppClient client, Models.OpenApiThirdPartyDownloadWebviewFileV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.ComponentAppId == null)
+                request.ComponentAppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "openapi", "v1", "tp", "download", "webview_file")
+                .SetQueryParam("component_appid", request.ComponentAppId)
+                .SetQueryParam("component_access_token", request.ComponentAccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.OpenApiThirdPartyDownloadWebviewFileV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+        #endregion
+
         #region MicroApp
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/code2session 接口。</para>
@@ -522,6 +555,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendRequestAsync<Models.OpenApiMicroAppUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
         }
 
+        #region MicroApp/Package
         /// <summary>
         /// <para>异步调用 [POST] /openapi/v1/microapp/package/upload 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/develop/upload-code </para>
@@ -696,7 +730,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppPackageVersionsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
 
+        #region MicroApp/App
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/app/info 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/info </para>
@@ -1072,7 +1108,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppAppCreditScoreV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
 
+        #region MicroApp/Operation
         /// <summary>
         /// <para>异步调用 [GET] /openapi/v1/microapp/operation/video_application_status 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/video-application-status </para>
@@ -1400,6 +1438,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.OpenApiMicroAppOperationQueryShopMaterialV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+        #endregion
         #endregion
     }
 }

@@ -20,7 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string? AppId { get; set; }
 
         /// <summary>
-        /// 获取或设置图片 URL。与字段 <see cref="ImageData"/> 二选一。
+        /// 获取或设置图片 URL。与字段 <see cref="EncodingImageData"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image")]
         [System.Text.Json.Serialization.JsonPropertyName("image")]
@@ -31,6 +31,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_data")]
         [System.Text.Json.Serialization.JsonPropertyName("image_data")]
-        public string? ImageData { get; set; }
+        public string? EncodingImageData { get; set; }
     }
 }

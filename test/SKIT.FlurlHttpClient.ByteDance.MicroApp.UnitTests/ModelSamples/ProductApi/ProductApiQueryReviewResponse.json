@@ -1,0 +1,30 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "202204271324260102252431250D04BCE0",
+    "data": {
+        "products_review": {
+            "7147951881074049062": {
+                "course": {
+                    "latest_audit_id": "KNC111100000000001505787915",
+                    "reject_reason": "{\"fail_reason\":\"通过;\",\"position\":\"画面\"}",
+                    "status": 2
+                },
+                "fulfillment": [
+                    {
+                        "latest_audit_id": "KNV111100000000001505787915",
+                        "reject_reason": "",
+                        "fulfillment_uri": "product/resource/111",
+                        "status": 1
+                    },
+                    {
+                        "latest_audit_id": "KNV111100000000001505787915",
+                        "reject_reason": "{\"fail_reason\":\"禁入课程:非课程教学,封建迷信,线下履约;课程质量:货不对板,授课教师不符;;\",\"position\":\"标题,封面,画面,音频\"}",
+                        "fulfillment_uri": "product/resource/222",
+                        "status": 3
+                    }
+                ]
+            }
+        }
+    }
+}

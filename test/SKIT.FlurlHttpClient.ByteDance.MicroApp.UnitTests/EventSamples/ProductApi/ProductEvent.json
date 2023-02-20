@@ -1,0 +1,12 @@
+{
+    "developer_flag": "1234abc",
+    "notice_type": 1,
+    "produce_examine_res": false,
+    "produce_id": 1,
+    "produce_name": "produce1",
+    "produce_status": -1,
+    "callback_data": "aabb1",
+    "reason": {
+        "商品上传失败": [ "课程存在违法信息", "课程价格不合理" ]
+    }
+}

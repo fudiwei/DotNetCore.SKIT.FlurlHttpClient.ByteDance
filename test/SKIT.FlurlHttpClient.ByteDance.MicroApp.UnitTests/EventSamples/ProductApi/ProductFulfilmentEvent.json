@@ -1,0 +1,11 @@
+{
+    "developer_flag": "1234abc",
+    "notice_type": 31,
+    "produce_id": "35424324",
+    "produce_name": "produce1",
+    "resource_uri": "product/resource/2342312",
+    "audit_status": 2,
+    "callback_data": "aabb1",
+    "reason": "禁入课程",
+    "position": "音频"
+}

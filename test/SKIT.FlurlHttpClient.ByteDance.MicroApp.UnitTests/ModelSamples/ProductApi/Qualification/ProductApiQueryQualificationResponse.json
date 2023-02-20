@@ -1,0 +1,71 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "202205201747090102100881591fceaf5c",
+    "data": {
+        "qualifications": [
+            {
+                "qualification_on_shelf": {
+                    "third_class": 0,
+                    "object_type": 2,
+                    "object_id": "I1099005343589662723",
+                    "status": 1,
+                    "object_name": "****",
+                    "nick_name": "昵称",
+                    "first_class": 0,
+                    "second_class": 0,
+                    "fail_reason": "xxx"
+                },
+                "qualification_reviewing": {
+                    "object_id": "I1099005343589662723",
+                    "status": 12,
+                    "object_name": "****",
+                    "nick_name": "昵称",
+                    "first_class": 0,
+                    "second_class": 0,
+                    "third_class": 0,
+                    "object_type": 2,
+                    "fail_reason": "xxx"
+                }
+            },
+            {
+                "qualification_on_shelf": {},
+                "qualification_reviewing": {
+                    "first_class": 70000,
+                    "second_class": 70500,
+                    "third_class": 0,
+                    "object_type": 1,
+                    "object_id": "T7096818881041448963",
+                    "status": 13,
+                    "object_name": "陈*",
+                    "nick_name": "老陈",
+                    "fail_reason": "xxx"
+                }
+            },
+            {
+                "qualification_on_shelf": {
+                    "first_class": 50000,
+                    "second_class": 50300,
+                    "third_class": 0,
+                    "object_type": 1,
+                    "object_id": "T1097099402908663821",
+                    "status": 1,
+                    "object_name": "邓**",
+                    "nick_name": "老邓",
+                    "fail_reason": "xxx"
+                },
+                "qualification_reviewing": {
+                    "nick_name": "老邓",
+                    "first_class": 50000,
+                    "second_class": 50300,
+                    "third_class": 0,
+                    "object_type": 1,
+                    "object_id": "T1097099402908663821",
+                    "status": 12,
+                    "object_name": "邓**",
+                    "fail_reason": "xxx"
+                }
+            }
+        ]
+    }
+}

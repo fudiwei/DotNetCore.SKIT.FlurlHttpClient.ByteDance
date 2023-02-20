@@ -1,0 +1,12 @@
+{
+    "developer_flag": "1234abc",
+    "notice_type": 11,
+    "produce_examine_res": false,
+    "object_id": "T243252323423",
+    "object_name": "老师",
+    "produce_status": -1,
+    "callback_data": "aabb1",
+    "reason": {
+        "教师资质认证失败": [ "教师关键信息缺失" ]
+    }
+}

@@ -24,15 +24,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// 服务商平台接口域名。
         /// </summary>
         public const string API_OPENAPI = "https://open.microapp.bytedance.com";
-
-        /// <summary>
-        /// 泛知识课程接口域名。
-        /// </summary>
-        public const string API_PRODUCT = "https://developer-product.zijieapi.com/product/api";
-
-        /// <summary>
-        /// 泛知识课程接口沙盒环境域名。
-        /// </summary>
-        public const string API_PRODUCT_SANDBOX = "https://open-sandbox.douyin.com/product/api";
     }
 }

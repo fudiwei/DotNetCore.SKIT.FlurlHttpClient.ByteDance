@@ -1,6 +1,7 @@
-﻿{
+{
     "access_token": "0801121846735561486f5a48744d744157456a554a68446d52773d3d",
     "appid": "tt77fd0140e89bba8401",
     "resource_type": 1,
-    "resource_url": "https://via.placeholder.com/150"
+    "resource_url": "https://via.placeholder.com/150",
+    "callback_data": "xxx"
 }

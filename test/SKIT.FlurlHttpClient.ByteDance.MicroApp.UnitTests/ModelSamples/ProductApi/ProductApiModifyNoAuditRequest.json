@@ -1,0 +1,24 @@
+{
+    "access_token": "0801121846766a374933674b534a6c59746c4a62423049785a413d3d",
+    "product_id": 7107287179797495852,
+    "product_type": 1,
+    "product": {
+        "appid": "ttcfdbb96650e33350",
+        "path_info_lst": [
+            {
+                "path": "CHEN25/tabApi/tabApi",
+                "query": {
+                    "course_id": "jpxdbmge1234",
+                    "key": "velit eiusmod irure ipsum dolore"
+                }
+            },
+            {
+                "path": "CHEN25/tabApi/tabApi",
+                "query": {
+                    "course_id": "jpxdbmge1234",
+                    "key": "velit eiusmod "
+                }
+            }
+        ]
+    }
+}

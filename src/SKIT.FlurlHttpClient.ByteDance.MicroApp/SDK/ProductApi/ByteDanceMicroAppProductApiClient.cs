@@ -4,12 +4,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using Flurl.Http;
 
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
 {
     /// <summary>
-    /// 一个字节小程序 API HTTP 客户端。
+    /// 一个字节小程序泛知识课程库 API HTTP 客户端。
     /// </summary>
-    public class ByteDanceMicroAppClient : CommonClientBase, ICommonClient
+    public class ByteDanceMicroAppProductApiClient : CommonClientBase, ICommonClient
     {
         /// <summary>
         /// 获取当前客户端使用的字节小程序凭证。
@@ -17,27 +17,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public Settings.Credentials Credentials { get; }
 
         /// <summary>
-        /// 用指定的配置项初始化 <see cref="ByteDanceMicroAppClient"/> 类的新实例。
+        /// 用指定的配置项初始化 <see cref="ByteDanceMicroAppProductApiClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
-        public ByteDanceMicroAppClient(ByteDanceMicroAppClientOptions options)
+        public ByteDanceMicroAppProductApiClient(ByteDanceMicroAppProductApiClientOptions options)
             : base()
         {
             if (options == null) throw new ArgumentNullException(nameof(options));
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? ByteDanceMicroAppEndpoints.API_MINIAPP;
+            FlurlClient.BaseUrl = options.Endpoints ?? ByteDanceMicroAppProductApiEndpoints.DEFAULT;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
         }
 
         /// <summary>
-        /// 用指定的字节小程序 AppId、字节小程序 AppSecret 初始化 <see cref="ByteDanceMicroAppClient"/> 类的新实例。
+        /// 用指定的字节小程序 AppId、字节小程序 AppSecret 初始化 <see cref="ByteDanceMicroAppProductApiClient"/> 类的新实例。
         /// </summary>
-        /// <param name="appId">字节小程序应用 AppId。</param>
+        /// <param name="appId">字节小程序 AppId。</param>
         /// <param name="appSecret">字节小程序 AppSecret。</param>
-        public ByteDanceMicroAppClient(string appId, string appSecret)
-            : this(new ByteDanceMicroAppClientOptions() { AppId = appId, AppSecret = appSecret })
+        public ByteDanceMicroAppProductApiClient(string appId, string appSecret)
+            : this(new ByteDanceMicroAppProductApiClientOptions() { AppId = appId, AppSecret = appSecret })
         {
         }
 
@@ -48,13 +48,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="method"></param>
         /// <param name="urlSegments"></param>
         /// <returns></returns>
-        public IFlurlRequest CreateRequest(ByteDanceMicroAppRequest request, HttpMethod method, params object[] urlSegments)
+        public IFlurlRequest CreateRequest(ByteDanceMicroAppProductApiRequest request, HttpMethod method, params object[] urlSegments)
         {
             IFlurlRequest flurlRequest = FlurlClient.Request(urlSegments).WithVerb(method);
 
             if (request.Timeout != null)
             {
                 flurlRequest.WithTimeout(TimeSpan.FromMilliseconds(request.Timeout.Value));
+            }
+
+            if (request.AppId == null)
+            {
+                request.AppId = Credentials.AppId;
             }
 
             return flurlRequest;
@@ -69,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
-            where T : ByteDanceMicroAppResponse, new()
+            where T : ByteDanceMicroAppProductApiResponse, new()
         {
             if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
 
@@ -97,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
-            where T : ByteDanceMicroAppResponse, new()
+            where T : ByteDanceMicroAppProductApiResponse, new()
         {
             if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
 

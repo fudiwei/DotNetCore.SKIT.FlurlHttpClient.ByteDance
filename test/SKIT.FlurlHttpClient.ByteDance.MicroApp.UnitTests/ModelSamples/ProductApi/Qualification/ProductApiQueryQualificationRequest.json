@@ -1,0 +1,34 @@
+{
+    "access_token": "080112184676444244166471506b427341456a414e5646744d773d3d",
+    "appid": "tt053873859a00623001",
+    "object_id_with_classifications": [
+        {
+            "object_type": 1,
+            "object_id": "i7099005143589662723",
+            "first_class": 0,
+            "second_class": 0,
+            "third_class": 0
+        },
+        {
+            "object_type": 1,
+            "object_id": "t7096818881041442963",
+            "first_class": 70000,
+            "second_class": 70500,
+            "third_class": 0
+        },
+        {
+            "object_type": 1,
+            "object_id": "t7097099402900663821",
+            "first_class": 50000,
+            "second_class": 50300,
+            "third_class": 0
+        },
+        {
+            "object_type": 1,
+            "object_id": "t7080104044114242600",
+            "first_class": 30000,
+            "second_class": 30100,
+            "third_class": 0
+        }
+    ]
+}

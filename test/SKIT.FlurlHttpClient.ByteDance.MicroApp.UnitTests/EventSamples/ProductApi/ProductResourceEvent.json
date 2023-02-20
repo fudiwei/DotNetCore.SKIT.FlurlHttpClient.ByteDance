@@ -1,0 +1,13 @@
+{
+    "developer_flag": "123abc",
+    "notice_type": 4,
+    "produce_source_examine_res": false,
+    "produce_source_status": -1,
+    "resource_tos_uri": "product/app1/source1",
+    "callback_data": "aabb1",
+    "reason": {
+        "商品资源上传失败": [
+            "资源存在违法信息"
+        ]
+    }
+}

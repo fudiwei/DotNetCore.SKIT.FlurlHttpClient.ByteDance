@@ -1,0 +1,24 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "data": {
+        "page_count": 100,
+        "capcut_template_list": [
+            {
+                "template_id": 100,
+                "template_title": "",
+                "template_desc": "",
+                "template_video_url": "",
+                "template_audit_status": 1,
+                "template_status": 1,
+                "template_audit_reason": [
+                    {
+                        "audit_reason": "xxx",
+                        "audit_advice": "xxxx"
+                    }
+                ],
+                "template_ctime": 12004545
+            }
+        ]
+    }
+}

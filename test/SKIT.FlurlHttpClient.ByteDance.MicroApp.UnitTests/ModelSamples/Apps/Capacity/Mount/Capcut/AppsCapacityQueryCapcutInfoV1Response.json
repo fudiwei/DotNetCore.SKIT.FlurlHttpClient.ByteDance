@@ -1,0 +1,9 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "capcut_id": "xxx",
+        "capcut_name": "xxx",
+        "capcut_avatar": "xxx"
+    }
+}

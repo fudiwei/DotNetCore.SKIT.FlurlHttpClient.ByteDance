@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/subscribe_notification/developer/v1/notify 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/capacity/delete_app_subscribe_notification_tpl 接口的响应。</para>
     /// </summary>
-    public class AppsSubscribeNotificationDeveloperNotifyV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityDeleteAppSubscribeNotificationTemplateV1Response : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>
@@ -15,8 +15,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("err_tips")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
+        [Newtonsoft.Json.JsonProperty("err_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public override string? ErrorMessage { get; set; }
     }
 }

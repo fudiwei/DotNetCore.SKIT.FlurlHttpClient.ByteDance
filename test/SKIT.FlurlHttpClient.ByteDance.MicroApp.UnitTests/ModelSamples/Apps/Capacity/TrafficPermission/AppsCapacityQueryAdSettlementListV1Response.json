@@ -1,0 +1,16 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "settlement_list": [
+            {
+                "settlement_serial": "xxxxx",
+                "settlement_name": "xxx",
+                "settlement_period": "2023-01",
+                "tax_rate": 0,
+                "settlement_total_amount": 21199998,
+                "status": 0
+            }
+        ]
+    }
+}

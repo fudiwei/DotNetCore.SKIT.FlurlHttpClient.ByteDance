@@ -883,6 +883,159 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region TrafficPermission
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_traffic_permission_status 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-status </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryTrafficPermissionStatusV1Response> ExecuteAppsCapacityQueryTrafficPermissionStatusV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryTrafficPermissionStatusV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_traffic_permission_status")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryTrafficPermissionStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/open_traffic_permission 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/open-traffic-permission </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityOpenTrafficPermissionV1Response> ExecuteAppsCapacityOpenTrafficPermissionV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityOpenTrafficPermissionV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "open_traffic_permission")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityOpenTrafficPermissionV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_ad_placement_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-placement-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAdPlacementListV1Response> ExecuteAppsCapacityQueryAdPlacementListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAdPlacementListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_placement_list")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAdPlacementListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/add_ad_placement 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/add-ad-placement </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityAddAdPlacementV1Response> ExecuteAppsCapacityAddAdPlacementV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityAddAdPlacementV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_ad_placement")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityAddAdPlacementV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/update_ad_placement_status 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/update-ad-placement-status </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUpdateAdPlacementStatusV1Response> ExecuteAppsCapacityUpdateAdPlacementStatusV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityUpdateAdPlacementStatusV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_ad_placement_status")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityUpdateAdPlacementStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_ad_income 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-income </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAdIncomeV1Response> ExecuteAppsCapacityQueryAdIncomeV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAdIncomeV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_income")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_date", request.StartDateString)
+                .SetQueryParam("end_date", request.EndDateString);
+
+            if (request.HostName != null)
+                flurlReq.SetQueryParam("host_name", request.HostName);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAdIncomeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_ad_settlement_list 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-settlement-list </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAdSettlementListV1Response> ExecuteAppsCapacityQueryAdSettlementListV1Async(this ByteDanceMicroAppClient client, Models.AppsCapacityQueryAdSettlementListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_settlement_list")
+                .WithHeader("access-token", request.AccessToken);
+
+            if (request.PeriodString != null)
+                flurlReq.SetQueryParam("month", request.PeriodString);
+
+            if (request.Status != null)
+                flurlReq.SetQueryParam("status", request.Status);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCapacityQueryAdSettlementListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/upload_material 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/upload-material </para>

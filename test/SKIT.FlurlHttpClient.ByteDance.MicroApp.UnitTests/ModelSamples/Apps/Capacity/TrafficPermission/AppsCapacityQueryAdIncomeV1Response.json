@@ -1,0 +1,16 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "income_list": [
+            {
+                "date": "2023-01-04",
+                "income": 0
+            },
+            {
+                "date": "2023-01-05",
+                "income": 0
+            }
+        ]
+    }
+}

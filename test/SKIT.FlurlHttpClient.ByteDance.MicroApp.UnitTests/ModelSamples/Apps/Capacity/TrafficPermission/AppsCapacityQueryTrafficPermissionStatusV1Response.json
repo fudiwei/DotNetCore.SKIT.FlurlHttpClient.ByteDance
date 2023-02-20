@@ -1,0 +1,8 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "status": 1,
+        "can_open": 1
+    }
+}

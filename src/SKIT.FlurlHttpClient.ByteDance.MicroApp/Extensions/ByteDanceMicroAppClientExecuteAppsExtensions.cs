@@ -11,30 +11,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class ByteDanceMicroAppClientExecuteAppsExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /apps/token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [Obsolete("相关接口或字段于 2022-01-05 下线。")]
-        public static async Task<Models.AppsTokenResponse> ExecuteAppsTokenAsync(this ByteDanceMicroAppClient client, Models.AppsTokenRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "token")
-                .SetQueryParam("appid", client.Credentials.AppId)
-                .SetQueryParam("secret", client.Credentials.AppSecret)
-                .SetQueryParam("grant_type", request.GrantType);
-
-            return await client.SendRequestWithJsonAsync<Models.AppsTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
-        /// <summary>
         /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token </para>
@@ -58,35 +34,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateRequest(request, HttpMethod.Post, "apps", "v2", "token");
 
             return await client.SendRequestWithJsonAsync<Models.AppsTokenV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /apps/jscode2session 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/log-in/code-2-session </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/log-in/code-2-session </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [Obsolete("相关接口或字段于 2022-01-05 下线。")]
-        public static async Task<Models.AppsJsCode2SessionResponse> ExecuteAppsJsCode2SessionAsync(this ByteDanceMicroAppClient client, Models.AppsJsCode2SessionRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "jscode2session")
-                .SetQueryParam("appid", client.Credentials.AppId)
-                .SetQueryParam("secret", client.Credentials.AppSecret);
-
-            if (request.Code != null)
-                flurlReq.SetQueryParam("code", request.Code);
-
-            if (request.AnoymousCode != null)
-                flurlReq.SetQueryParam("anonymous_code", request.AnoymousCode);
-
-            return await client.SendRequestWithJsonAsync<Models.AppsJsCode2SessionResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -477,6 +424,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/apply-live-self-mount </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/apply-video-talent-mount </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/capcut-video-template/apply-capacity </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/page-layout-custom/apply-capacity </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -500,6 +448,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-live-self-mount </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/query-video-talent-mount </para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/capcut-video-template/query-status </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/page-layout-custom/query-capacity-status </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

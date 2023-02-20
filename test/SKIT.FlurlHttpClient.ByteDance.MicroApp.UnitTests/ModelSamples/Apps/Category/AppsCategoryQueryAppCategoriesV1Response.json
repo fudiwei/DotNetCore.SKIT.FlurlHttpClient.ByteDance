@@ -1,0 +1,25 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "data": {
+        "appCategoryAuditInfo": [
+            {
+                "category": "8,9,12",
+                "categoryName": "教育-教育-驾校培训",
+                "categoryCertIds": "8",
+                "categoryCert": [
+                    {
+                        "id": "8",
+                        "name": "《道路运输经营许可证》且其中须有“驾驶员培训”项目",
+                        "pathList": [ "xxx" ]
+                    }
+                ],
+                "categoryAuditState": 1,
+                "reason": ""
+            }
+        ],
+        "remainingTimes": 5,
+        "categoryChangeLimit": 5,
+        "categoryLimit": 5
+    }
+}

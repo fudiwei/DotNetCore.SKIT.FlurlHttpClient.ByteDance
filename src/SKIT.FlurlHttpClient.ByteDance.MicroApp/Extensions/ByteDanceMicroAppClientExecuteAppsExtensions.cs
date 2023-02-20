@@ -457,6 +457,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
+        #region Category
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/category/query_app_categories 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/category/query-app-categories </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCategoryQueryAppCategoriesV1Response> ExecuteAppsCategoryQueryAppCategoriesV1Async(this ByteDanceMicroAppClient client, Models.AppsCategoryQueryAppCategoriesV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "apps", "v1", "category", "query_app_categories")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.AppsCategoryQueryAppCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
         #region Censor
         /// <summary>
         /// <para>异步调用 [POST] /apps/censor/image 接口。</para>
@@ -500,7 +522,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "apps", "chat", "customer_service_url")
-                .WithHeader("Access-Token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("appid", request.AppId)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("type", request.Type)

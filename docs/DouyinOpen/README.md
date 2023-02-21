@@ -31,7 +31,6 @@
 ### 初始化：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance;
 using SKIT.FlurlHttpClient.ByteDance.DouyinOpen;
 
 var options = new DouyinOpenClientOptions()

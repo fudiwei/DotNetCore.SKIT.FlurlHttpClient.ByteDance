@@ -31,17 +31,41 @@
 ### 初始化：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance;
+/* 以基础 API 为例 */
 using SKIT.FlurlHttpClient.ByteDance.MicroApp;
 
 var options = new ByteDanceMicroAppClientOptions()
 {
-    Endpoints = ByteDanceMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏、知识库、服务商平台等接口拥有不同的接入点。
+    Endpoints = ByteDanceMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏拥有不同的接入点。
     AppId = "字节小程序 AppId",
     AppSecret = "字节小程序 AppSecret",
     ECPaySalt = "担保支付相关服务的密钥，不用则不填"
 };
 var client = new ByteDanceMicroAppClient(options);
+
+
+
+/* 以泛知识课程库 API 为例 */
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi;
+
+var options = new ByteDanceMicroAppProductApiClientOptions()
+{
+    AppId = "字节小程序 AppId",
+    AppSecret = "字节小程序 AppSecret"
+};
+var client = new ByteDanceMicroAppProductApiClient(options);
+
+
+
+/* 以服务商平台 API 为例 */
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi;
+
+var options = new ByteDanceMicroAppOpenApiClientOptions()
+{
+    ComponentAppId = "字节小程序第三方应用 AppId",
+    ComponentAppSecret = "字节小程序第三方应用 AppSecret"
+};
+var client = new ByteDanceMicroAppOpenApiClient(options);
 ```
 
 ### 请求 & 响应：

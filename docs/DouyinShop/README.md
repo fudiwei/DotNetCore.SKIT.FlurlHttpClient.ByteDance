@@ -43,7 +43,6 @@
 ### 初始化：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance;
 using SKIT.FlurlHttpClient.ByteDance.DouyinShop;
 
 var options = new DouyinShopClientOptions()

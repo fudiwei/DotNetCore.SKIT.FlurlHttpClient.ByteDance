@@ -1,0 +1,8 @@
+{
+    "order_id": "8000001745679682306",
+    "out_after_sale_id": "1234567",
+    "refund_reason": {
+        "reason_code": [ 501, 502 ],
+        "desc": "不想要了"
+    }
+}

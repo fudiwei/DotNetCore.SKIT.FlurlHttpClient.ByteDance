@@ -1,0 +1,57 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "ledger_records": {
+            "11224112312": {
+                "ledger_id": "7064492324109305863",
+                "verify_id": "7064491846000592903",
+                "certificate_id": "7064423012048865293",
+                "order_id": "7062268392329758757",
+                "verify_time": 1644830204,
+                "status": 2,
+                "code": "100566718260",
+                "amount": {
+                    "original": 50,
+                    "pay": 45,
+                    "merchant_ticket": 0,
+                    "goods": 50,
+                    "talent_commission": 0
+                },
+                "goods": {
+                    "sku_id": "1721554180176909",
+                    "title": "测试结算中台分店",
+                    "market_price": 500,
+                    "sold_start_time": 1641801900
+                }
+            }
+        },
+        "ledger_second_records": {
+            "11224112312": {
+                "ledger_id": "7064492324109305863",
+                "verify_id": "7064491846000592903",
+                "order_id": "7062268392329758757",
+                "verify_time": 1644830204,
+                "status": 2,
+                "amount": {
+                    "merchant_freight": 50,
+                    "merchant_tip": 45,
+                    "merchant_cancel_freight": 0,
+                    "platform_duty_freight": 50,
+                    "platform_duty_tip": 0
+                },
+                "goods": {
+                    "sku_id": "1721554180176909",
+                    "title": "测试结算中台分店",
+                    "market_price": 500,
+                    "sold_start_time": 1641801900
+                }
+            }
+        }
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "success",
+        "logid": "xxxxxxxxxxxxxx"
+    }
+}

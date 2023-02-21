@@ -34,6 +34,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public int PayAmount { get; set; }
 
                                 /// <summary>
+                                /// 获取或设置支付手续费（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("pay_handling")]
+                                [System.Text.Json.Serialization.JsonPropertyName("pay_handling")]
+                                public int PayHandlingAmount { get; set; }
+
+                                /// <summary>
                                 /// 获取或设置支付渠道优惠金额（单位：分）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("pay_discount")]
@@ -123,6 +130,55 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 [Newtonsoft.Json.JsonProperty("total_operation_agent")]
                                 [System.Text.Json.Serialization.JsonPropertyName("total_operation_agent")]
                                 public int OperationAgentTotalAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家出配送费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("merchant_freight")]
+                                [System.Text.Json.Serialization.JsonPropertyName("merchant_freight")]
+                                public int MerchantFreightAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家出小费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("merchant_tip")]
+                                [System.Text.Json.Serialization.JsonPropertyName("merchant_tip")]
+                                public int MerchantTipAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家出取消费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("merchant_cancel_freight")]
+                                [System.Text.Json.Serialization.JsonPropertyName("merchant_cancel_freight")]
+                                public int MerchantCancelFreightAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置平台责配送费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform_duty_freight")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform_duty_freight")]
+                                public int PlatformDutyFreightAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置平台责小费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform_duty_tip")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform_duty_tip")]
+                                public int PlatformDutyTipAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商家对用户补贴（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("user_deliv_merchant_subsidy")]
+                                [System.Text.Json.Serialization.JsonPropertyName("user_deliv_merchant_subsidy")]
+                                public int UserDeliveryMerchantSubsidyAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置用户实付配送费（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("user_deliv_coupon_pay")]
+                                [System.Text.Json.Serialization.JsonPropertyName("user_deliv_coupon_pay")]
+                                public int UserDeliveryCouponPayAmount { get; set; }
                             }
 
                             public class Certificate
@@ -159,6 +215,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public string Title { get; set; } = default!;
 
                                 /// <summary>
+                                /// 获取或设置团购市场价（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("market_price")]
+                                [System.Text.Json.Serialization.JsonPropertyName("market_price")]
+                                public int MarketPrice { get; set; }
+
+                                /// <summary>
                                 /// 获取或设置售卖开始时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sold_start_time")]
@@ -173,13 +236,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         [Newtonsoft.Json.JsonProperty("account_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
                         public string AccountId { get; set; } = string.Empty;
-
-                        /// <summary>
-                        /// 获取或设置券信息。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("certificate")]
-                        [System.Text.Json.Serialization.JsonPropertyName("certificate")]
-                        public Types.Certificate Certificate { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置数据唯一标识。
@@ -222,6 +278,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         [Newtonsoft.Json.JsonProperty("sku_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_order_id")]
                         public string? SKUOrderId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置券信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("certificate")]
+                        [System.Text.Json.Serialization.JsonPropertyName("certificate")]
+                        public Types.Certificate Certificate { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置分账状态。

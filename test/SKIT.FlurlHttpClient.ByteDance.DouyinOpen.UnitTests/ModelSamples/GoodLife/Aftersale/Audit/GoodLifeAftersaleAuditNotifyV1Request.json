@@ -1,0 +1,9 @@
+{
+    "after_sale_id": "8000001745679682306",
+    "out_after_sale_id": "7073845037515147278",
+    "is_approved": false,
+    "reject_reason": {
+        "reason_code": [ 101, 102 ],
+        "desc": "商家已出餐"
+    }
+}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text.Json;
 
@@ -18,9 +18,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 using var json = JsonDocument.Parse(stream);
 
                 var config = json.RootElement.GetProperty("TestConfig");
-                MicroAppId = config.GetProperty("AppId").GetString()!;
-                MicroAppSecret = config.GetProperty("AppSecret").GetString()!;
-                MicroAppAccessToken = config.GetProperty("AccessToken").GetString()!;
+                ByteDanceMicroAppId = config.GetProperty("AppId").GetString()!;
+                ByteDanceMicroAppSecret = config.GetProperty("AppSecret").GetString()!;
+                ByteDanceMicroAppAccessToken = config.GetProperty("AccessToken").GetString()!;
 
                 WorkDirectoryForSdk = json.RootElement.GetProperty("WorkDirectoryForSdk").GetString()!;
                 WorkDirectoryForTest = json.RootElement.GetProperty("WorkDirectoryForTest").GetString()!;
@@ -31,9 +31,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             }
         }
 
-        public static readonly string MicroAppId;
-        public static readonly string MicroAppSecret;
-        public static readonly string MicroAppAccessToken;
+        public static readonly string ByteDanceMicroAppId;
+        public static readonly string ByteDanceMicroAppSecret;
+        public static readonly string ByteDanceMicroAppAccessToken;
 
         public static readonly string WorkDirectoryForSdk;
         public static readonly string WorkDirectoryForTest;

@@ -1,0 +1,71 @@
+{
+    "data": {
+        "product_commissions": [
+            {
+                "latest_commission_record_item": {
+                    "audit_commission_ratio": "5501",
+                    "commission_audit_status": 301,
+                    "commission_ratio_before": "5501",
+                    "item_id": "7174621650796906552",
+                    "merchant_ack_time": 1670476152,
+                    "product_id": "1738315637900350"
+                },
+                "product": {
+                    "product_id": "1738315637900350",
+                    "product_name": "服务商发布商品02",
+                    "product_status": 2,
+                    "actual_price": "10",
+                    "effective_commission_ratio": "5501",
+                    "product_commission_status": 1
+                }
+            },
+            {
+                "latest_commission_record_item": {
+                    "audit_commission_ratio": "2200",
+                    "commission_audit_status": 301,
+                    "commission_ratio_before": "4401",
+                    "item_id": "7174621650796890168",
+                    "merchant_ack_time": 1670476152,
+                    "product_id": "1738323521145982"
+                },
+                "product": {
+                    "effective_commission_ratio": "4401",
+                    "product_commission_status": 1,
+                    "product_id": "1738323521145982",
+                    "product_name": "服务商发布商品04",
+                    "product_status": 2,
+                    "actual_price": "10"
+                }
+            },
+            {
+                "latest_commission_record_item": {
+                    "commission_audit_status": 301,
+                    "commission_ratio_before": "3301",
+                    "item_id": "7174621650796873784",
+                    "merchant_ack_time": 1670476152,
+                    "product_id": "1743305630547982",
+                    "audit_commission_ratio": "3301"
+                },
+                "product": {
+                    "effective_commission_ratio": "3301",
+                    "product_commission_status": 1,
+                    "product_id": "1743305630547982",
+                    "product_name": "测试服务商02",
+                    "product_status": 2,
+                    "actual_price": "20"
+                }
+            }
+        ],
+        "total": 5,
+        "error_code": 0,
+        "description": "success"
+    },
+    "extra": {
+        "sub_error_code": 0,
+        "description": "success",
+        "error_code": 0,
+        "logid": "202212081440100101351601491F0002B8",
+        "now": 1670481611,
+        "sub_description": ""
+    }
+}

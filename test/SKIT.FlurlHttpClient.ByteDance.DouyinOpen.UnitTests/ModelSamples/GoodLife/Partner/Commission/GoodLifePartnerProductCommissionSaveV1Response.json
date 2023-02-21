@@ -1,0 +1,22 @@
+{
+    "data": {
+        "invalid_commission_product_list": [
+            {
+                "alliance_commission_ratio": "2300",
+                "commission_ratio": "2200",
+                "product_id": "1738323521145982"
+            }
+        ],
+        "record_id": "0",
+        "error_code": 0,
+        "description": "success"
+    },
+    "extra": {
+        "logid": "202212081438260101501680961F17FD40",
+        "now": 1670481506,
+        "sub_description": "",
+        "sub_error_code": 0,
+        "description": "success",
+        "error_code": 0
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "data": {
+        "commission_record_items": [
+            {
+                "audit_commission_ratio": "5000",
+                "commission_audit_status": 1,
+                "effective_commission_ratio": "5555",
+                "item_id": "7174615031286597688",
+                "merchant_ack_time": 1670470591,
+                "product_id": "1738315637900350"
+            },
+            {
+                "effective_commission_ratio": "4444",
+                "item_id": "7174615031286581304",
+                "merchant_ack_time": 1670470591,
+                "product_id": "1738323521145982",
+                "audit_commission_ratio": "4000",
+                "commission_audit_status": 1
+            },
+            {
+                "product_id": "1743305630547982",
+                "audit_commission_ratio": "3000",
+                "commission_audit_status": 1,
+                "effective_commission_ratio": "3333",
+                "item_id": "7174615031286564920",
+                "merchant_ack_time": 1670470591
+            },
+            {
+                "audit_commission_ratio": "2000",
+                "commission_audit_status": 1,
+                "effective_commission_ratio": "2222",
+                "item_id": "7174615031286548536",
+                "merchant_ack_time": 1670470591,
+                "product_id": "1741293139936271"
+            },
+            {
+                "commission_audit_status": 1,
+                "effective_commission_ratio": "1111",
+                "item_id": "7174615031286532152",
+                "merchant_ack_time": 1670470591,
+                "product_id": "1738313718124563",
+                "audit_commission_ratio": "1000"
+            }
+        ],
+        "error_code": 0,
+        "description": "success"
+    },
+    "extra": {
+        "now": 1670470921,
+        "sub_description": "",
+        "sub_error_code": 0,
+        "description": "success",
+        "error_code": 0,
+        "logid": "202212081142010102090950973000736C"
+    }
+}

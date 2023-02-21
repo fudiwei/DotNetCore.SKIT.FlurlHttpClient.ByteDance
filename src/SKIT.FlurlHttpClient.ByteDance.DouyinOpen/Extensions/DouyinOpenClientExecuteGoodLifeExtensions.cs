@@ -605,6 +605,180 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
         #endregion
 
+        #region Partner
+        #region Partner/Commission
+        /// <summary>
+        /// <para>异步调用 [POST] /goodlife/v1/partner/product_commission/save 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionsave </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerProductCommissionSaveV1Response> ExecuteGoodLifePartnerProductCommissionSaveV1Async(this DouyinOpenClient client, Models.GoodLifePartnerProductCommissionSaveV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "product_commission", "save")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerProductCommissionSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /goodlife/v1/partner/product_commission/query 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionquery </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerProductCommissionQueryV1Response> ExecuteGoodLifePartnerProductCommissionQueryV1Async(this DouyinOpenClient client, Models.GoodLifePartnerProductCommissionQueryV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "product_commission", "query")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("page", request.PageNumber)
+                .SetQueryParam("size", request.PageSize);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerProductCommissionQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /goodlife/v1/partner/commission_record/query 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordquery </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerCommissionRecordQueryV1Response> ExecuteGoodLifePartnerCommissionRecordQueryV1Async(this DouyinOpenClient client, Models.GoodLifePartnerCommissionRecordQueryV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "query")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("page", request.PageNumber)
+                .SetQueryParam("size", request.PageSize);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerCommissionRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /goodlife/v1/partner/commission_record/get 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordget </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerCommissionRecordGetV1Response> ExecuteGoodLifePartnerCommissionRecordGetV1Async(this DouyinOpenClient client, Models.GoodLifePartnerCommissionRecordGetV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "get")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("record_id", request.RecordId);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerCommissionRecordGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
+        #region Partner/Order
+        /// <summary>
+        /// <para>异步调用 [POST] /goodlife/v1/partner/order/create 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/create </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerOrderCreateV1Response> ExecuteGoodLifePartnerOrderCreateV1Async(this DouyinOpenClient client, Models.GoodLifePartnerOrderCreateV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "order", "create")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /goodlife/v1/partner/order/query 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderquery </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerOrderQueryV1Response> ExecuteGoodLifePartnerOrderQueryV1Async(this DouyinOpenClient client, Models.GoodLifePartnerOrderQueryV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "query")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("page", request.PageNumber)
+                .SetQueryParam("size", request.PageSize)
+                .SetQueryParam("is_asc", request.IsSortByAsc.GetValueOrDefault() ? "true" : "false");
+
+            if (request.AccountId != null)
+                flurlReq.SetQueryParam("account_id", request.AccountId);
+
+            if (request.CooperationContentType != null)
+                flurlReq.SetQueryParam("cooperation_contents", request.CooperationContentType.Value);
+
+            if (request.StartTimestamp != null)
+                flurlReq.SetQueryParam("start_time", request.StartTimestamp.Value);
+
+            if (request.EndTimestamp != null)
+                flurlReq.SetQueryParam("end_time", request.EndTimestamp.Value);
+
+            if (request.Status != null)
+                flurlReq.SetQueryParam("status", request.Status.Value);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /goodlife/v1/partner/order/get 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderget </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePartnerOrderGetV1Response> ExecuteGoodLifePartnerOrderGetV1Async(this DouyinOpenClient client, Models.GoodLifePartnerOrderGetV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "get")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("without_product_items", request.IsWithoutProductItems.GetValueOrDefault() ? "true" : "false");
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+        #endregion
+
         #region POI
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/poi/sync 接口。</para>

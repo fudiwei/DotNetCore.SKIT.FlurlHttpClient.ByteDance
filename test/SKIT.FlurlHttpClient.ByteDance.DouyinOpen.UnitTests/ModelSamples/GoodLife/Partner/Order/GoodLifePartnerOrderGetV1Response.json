@@ -1,0 +1,56 @@
+{
+    "data": {
+        "product_items": [
+            {
+                "actual_price": "10",
+                "commission_ratio": "1900",
+                "product_id": "1738315637900350",
+                "product_status": 1
+            },
+            {
+                "actual_price": "10",
+                "commission_ratio": "1800",
+                "product_id": "1738323521145982",
+                "product_status": 1
+            },
+            {
+                "actual_price": "20",
+                "commission_ratio": "1700",
+                "product_id": "1743305630547982",
+                "product_status": 1
+            },
+            {
+                "actual_price": "30",
+                "commission_ratio": "1689",
+                "product_id": "1741293139936271",
+                "product_status": 1
+            },
+            {
+                "actual_price": "10",
+                "commission_ratio": "1001",
+                "product_id": "1738313718124563",
+                "product_status": 1
+            }
+        ],
+        "product_name": "代运营（开环）",
+        "start_time": 1670469925,
+        "status": 302,
+        "description": "success",
+        "account_id": "7102357172037617678",
+        "charge_type": 2,
+        "end_time": 1695787164,
+        "merchant_name": "测试服务商5",
+        "error_code": 0,
+        "cooperation_content": 5,
+        "create_time": 1670469397,
+        "id": "7174603230893279290"
+    },
+    "extra": {
+        "now": 1670470067,
+        "sub_description": "",
+        "sub_error_code": 0,
+        "description": "success",
+        "error_code": 0,
+        "logid": "202212081127470101410451500305053E"
+    }
+}

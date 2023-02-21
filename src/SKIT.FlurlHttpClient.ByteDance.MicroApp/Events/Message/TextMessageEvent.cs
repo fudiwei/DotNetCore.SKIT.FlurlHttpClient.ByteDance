@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
 {
     /// <summary>
     /// <para>表示 text 事件的数据。</para>

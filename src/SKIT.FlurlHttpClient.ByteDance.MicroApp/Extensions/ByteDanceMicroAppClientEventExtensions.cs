@@ -18,19 +18,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         {
             [Newtonsoft.Json.JsonProperty("Encrypt")]
             [System.Text.Json.Serialization.JsonPropertyName("Encrypt")]
+            [System.Xml.Serialization.XmlElement("Encrypt")]
             public string EncryptedData { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("TimeStamp")]
             [System.Text.Json.Serialization.JsonPropertyName("TimeStamp")]
             [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+            [System.Xml.Serialization.XmlElement("TimeStamp")]
             public string TimestampString { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("Nonce")]
             [System.Text.Json.Serialization.JsonPropertyName("Nonce")]
+            [System.Xml.Serialization.XmlElement("Nonce")]
             public string Nonce { get; set; } = default!;
 
             [Newtonsoft.Json.JsonProperty("MsgSignature")]
             [System.Text.Json.Serialization.JsonPropertyName("MsgSignature")]
+            [System.Xml.Serialization.XmlElement("MsgSignature")]
             public string Signature { get; set; } = default!;
         }
 
@@ -220,7 +224,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption/ </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson"></param>
@@ -249,7 +253,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption/ </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackXml"></param>

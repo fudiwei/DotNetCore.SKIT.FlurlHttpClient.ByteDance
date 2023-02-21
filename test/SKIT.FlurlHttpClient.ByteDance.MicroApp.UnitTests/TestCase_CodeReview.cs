@@ -45,6 +45,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 analyzer.Assert();
                 analyzer.Flush();
             }));
+
+            Assert.Null(Record.Exception(() =>
+            {
+                CodeAnalyzerOptions options = new CodeAnalyzerOptions()
+                {
+                    AssemblyName = "SKIT.FlurlHttpClient.ByteDance.MicroApp",
+                    TargetSdkApiModelNamespaceUnderAssemblyIdentifier = "SDK.OpenApi.Models",
+                    TargetSdkApiEventNamespaceUnderAssemblyIdentifier = "SDK.OpenApi.Events",
+                    //TargetSdkApiMethodNamespaceUnderAssemblyIdentifier = "SDK.OpenApi",
+                    WorkDirectoryForSourceCode = TestConfigs.WorkDirectoryForSdk,
+                    WorkDirectoryForTestSample = TestConfigs.WorkDirectoryForTest,
+                    WorkSubDirectoryForApiMethods = "SDK/OpenApi/Extensions",
+                    WorkSubDirectoryForApiModels = "SDK/OpenApi/Models",
+                    WorkSubDirectoryForApiEvents = "SDK/OpenApi/Events",
+                    WorkSubDirectoryForApiModelSamples = "ModelSamples/OpenApi",
+                    WorkSubDirectoryForApiEventSamples = "EventSamples/OpenApi"
+                };
+                CodeAnalyzer analyzer = new CodeAnalyzer(options);
+                analyzer.Start();
+                analyzer.Assert();
+                analyzer.Flush();
+            }));
         }
     }
 }

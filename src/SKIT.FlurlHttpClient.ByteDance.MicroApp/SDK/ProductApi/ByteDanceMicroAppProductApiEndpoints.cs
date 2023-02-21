@@ -8,11 +8,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
         /// <summary>
         /// 泛知识课程接口域名（默认）。
         /// </summary>
-        public const string DEFAULT = "https://developer-product.zijieapi.com";
+        public const string DEFAULT = "https://developer-product.zijieapi.com/product/api";
 
         /// <summary>
         /// 泛知识课程接口沙盒环境域名。
         /// </summary>
-        public const string SANDBOX = "https://open-sandbox.douyin.com";
+        public const string SANDBOX = "https://open-sandbox.douyin.com/product/api";
     }
 }

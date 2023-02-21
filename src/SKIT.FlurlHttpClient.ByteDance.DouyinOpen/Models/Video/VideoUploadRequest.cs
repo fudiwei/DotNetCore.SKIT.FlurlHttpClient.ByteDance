@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
@@ -7,6 +7,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     /// </summary>
     public class VideoUploadRequest : DouyinOpenRequest
     {
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string OpenId { get; set; } = string.Empty;
+
         /// <summary>
         /// 获取或设置视频文件字节数组。
         /// </summary>

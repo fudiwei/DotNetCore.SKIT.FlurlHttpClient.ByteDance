@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
@@ -8,18 +8,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     public class POIOrderConfirmPrepareRequest : DouyinOpenRequest
     {
         /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("open_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public override string? OpenId { get; set; }
-
-        /// <summary>
         /// 获取或设置订单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
         public string OrderId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("open_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
+        public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置券码 ID 列表。

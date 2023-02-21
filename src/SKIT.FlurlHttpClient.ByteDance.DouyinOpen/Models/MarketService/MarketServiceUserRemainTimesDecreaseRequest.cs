@@ -1,17 +1,10 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [POST] /market/service/user/remaintimes/decr 接口的请求。</para>
     /// </summary>
     public class MarketServiceUserRemainTimesDecreaseRequest : DouyinOpenRequest
     {
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("open_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public override string? OpenId { get; set; }
-
         /// <summary>
         /// 获取或设置服务 ID。
         /// </summary>
@@ -32,6 +25,13 @@
         [Newtonsoft.Json.JsonProperty("out_trade_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_trade_no")]
         public string OutTradeNumber { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("open_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
+        public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置扣减次数。

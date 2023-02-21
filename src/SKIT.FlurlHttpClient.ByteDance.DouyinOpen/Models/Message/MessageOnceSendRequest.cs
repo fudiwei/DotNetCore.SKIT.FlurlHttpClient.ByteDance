@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
@@ -24,6 +24,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         [Newtonsoft.Json.JsonProperty("client_msg_id")]
         [System.Text.Json.Serialization.JsonPropertyName("client_msg_id")]
         public string? ClientMessageId { get; set; }
+
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置消息的接收方 OpenId。

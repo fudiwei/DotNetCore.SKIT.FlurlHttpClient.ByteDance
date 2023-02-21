@@ -43,6 +43,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string? OrderExternalId { get; set; }
 
         /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? OpenId { get; set; }
+
+        /// <summary>
         /// 获取或设置订单状态。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]

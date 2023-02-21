@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [POST] /poi/ext/presale_groupon/order/create 接口的请求。</para>
@@ -6,18 +6,18 @@
     public class POIExternalPresaleGrouponOrderCreateRequest : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置用户的 OpenId。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("open_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public override string? OpenId { get; set; }
-
-        /// <summary>
         /// 获取或设置订单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
         public string? OrderId { get; set; }
+
+        /// <summary>
+        /// 获取或设置用户唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("open_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("open_id")]
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置达人抖音号。

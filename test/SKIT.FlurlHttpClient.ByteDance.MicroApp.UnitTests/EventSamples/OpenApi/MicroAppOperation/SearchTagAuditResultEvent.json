@@ -1,0 +1,11 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "SEARCH_TAG_AUDIT_RESULT",
+    "EventContent": {
+        "search_tag": "搜索标签",
+        "status": 1,
+        "reason": "xxx"
+    }
+}

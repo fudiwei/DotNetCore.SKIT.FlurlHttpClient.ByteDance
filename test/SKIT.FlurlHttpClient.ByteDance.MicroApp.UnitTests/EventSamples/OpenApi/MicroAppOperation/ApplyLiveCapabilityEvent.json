@@ -1,0 +1,10 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "APPLY_LIVE_CAPABILITY",
+    "ApplyLiveCapabilityResults": {
+        "status": 0,
+        "reason": "xxx"
+    }
+}

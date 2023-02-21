@@ -1,0 +1,12 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "SELT_MOUNT_BIND",
+    "EventContent": {
+        "capacity_key": "能力key",
+        "aweme_id": "抖音号",
+        "user_name": "抖音用户昵称",
+        "bind_status": 1
+    }
+}

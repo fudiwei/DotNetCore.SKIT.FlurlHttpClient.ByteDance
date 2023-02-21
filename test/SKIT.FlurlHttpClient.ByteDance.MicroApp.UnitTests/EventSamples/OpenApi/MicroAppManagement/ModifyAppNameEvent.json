@@ -1,0 +1,11 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "MODIFY_APP_NAME",
+    "ModifyAppNameResults": {
+        "advice": "",
+        "reason": "小程序名称格式不符合规范",
+        "status": 0
+    }
+}

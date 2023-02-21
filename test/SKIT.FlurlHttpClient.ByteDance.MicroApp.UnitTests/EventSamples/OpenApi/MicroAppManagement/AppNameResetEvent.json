@@ -1,0 +1,7 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "APP_NAME_RESET_NOTIFICATION",
+    "AppNameResetNotification": "您好，您管理的小程序「%s」由于长时间未提交版本审核，名称已经被重置为「名称过期%s」。如需修改，请前往配置页面重新填写名称。"
+}

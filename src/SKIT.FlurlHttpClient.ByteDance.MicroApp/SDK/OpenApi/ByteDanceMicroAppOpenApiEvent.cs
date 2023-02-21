@@ -19,14 +19,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         }
 
         /// <summary>
-        /// 获取或设置事件类型。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("Event")]
-        [System.Text.Json.Serialization.JsonPropertyName("Event")]
-        [System.Xml.Serialization.XmlElement("Event", IsNullable = true)]
-        public virtual string? Event { get; set; }
-
-        /// <summary>
         /// 获取或设置第三方平台 AppId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("TpAppId")]
@@ -41,6 +33,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         [System.Text.Json.Serialization.JsonPropertyName("AppId")]
         [System.Xml.Serialization.XmlElement("AppId", IsNullable = true)]
         public virtual string? AuthorizerAppId { get; set; }
+
+        /// <summary>
+        /// 获取或设置事件类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("Event")]
+        [System.Text.Json.Serialization.JsonPropertyName("Event")]
+        [System.Xml.Serialization.XmlElement("Event", IsNullable = true)]
+        public virtual string? Event { get; set; }
 
         /// <summary>
         /// 获取或设置事件产生时间字符串（格式：yyyy-MM-dd HH:mm:ss）。

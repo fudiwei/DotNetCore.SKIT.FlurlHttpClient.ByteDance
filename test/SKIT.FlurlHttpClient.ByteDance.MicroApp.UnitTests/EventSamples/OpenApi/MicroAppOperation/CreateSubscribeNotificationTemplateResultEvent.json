@@ -1,0 +1,12 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "CREATE_SUBSCRIBE_NOTIFICATION_TEMPLATE_RESULT",
+    "EventContent": {
+        "title": "xxx",
+        "keyword_list": [ "xx", "xxx" ],
+        "status": 1,
+        "reject_reason_list": [ "xxx", "xxx" ]
+    }
+}

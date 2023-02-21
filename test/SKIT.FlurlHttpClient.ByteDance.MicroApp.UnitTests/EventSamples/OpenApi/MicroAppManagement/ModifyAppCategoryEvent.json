@@ -1,0 +1,14 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "MODIFY_APP_CATEGORY",
+    "ModifyAppCategoryResults": [
+        {
+            "category": "158,159,259",
+            "categoryName": "社交类-社交-直播",
+            "status": 1,
+            "reason": ""
+        }
+    ]
+}

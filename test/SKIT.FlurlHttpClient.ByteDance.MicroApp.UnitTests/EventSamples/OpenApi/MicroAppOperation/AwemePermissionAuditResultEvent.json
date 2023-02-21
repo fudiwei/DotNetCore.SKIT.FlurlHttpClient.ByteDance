@@ -1,0 +1,11 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "AWEME_PERMISSION_AUDIT_RESULT",
+    "EventContent": {
+        "permission_key": "权限key",
+        "status": 1,
+        "reject_reason_list": [ "xxx" ]
+    }
+}

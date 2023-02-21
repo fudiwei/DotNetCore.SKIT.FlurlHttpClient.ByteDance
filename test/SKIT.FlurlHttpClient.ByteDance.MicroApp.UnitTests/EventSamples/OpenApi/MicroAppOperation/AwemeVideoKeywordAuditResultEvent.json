@@ -1,0 +1,11 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "AWEME_VIDEO_KEYWORD_AUDIT_RESULT",
+    "EventContent": {
+        "keyword": "关键词名称",
+        "status": 1,
+        "reject_reason_list": [ "" ]
+    }
+}

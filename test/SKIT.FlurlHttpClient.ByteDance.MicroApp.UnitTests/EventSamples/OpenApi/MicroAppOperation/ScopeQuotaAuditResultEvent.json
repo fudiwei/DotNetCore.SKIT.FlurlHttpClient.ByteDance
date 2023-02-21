@@ -1,0 +1,14 @@
+{
+    "AppId": "授权小程序的appid",
+    "TpAppId": "第三方小程序应用appid",
+    "EventTime": "2019-01-14 12:45:10",
+    "Event": "SCOPE_QUOTA_AUDIT_RESULT",
+    "EventContent": {
+        "scope": "scope名称",
+        "start_date": "2006-01-02",
+        "end_date": "2006-01-02",
+        "apply_quota": 100,
+        "status": 1,
+        "reject_reason_list": [ "" ]
+    }
+}

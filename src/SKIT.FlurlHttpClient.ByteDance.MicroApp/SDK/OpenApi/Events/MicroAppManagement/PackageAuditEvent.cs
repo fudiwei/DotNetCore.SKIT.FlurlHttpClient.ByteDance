@@ -1,10 +1,10 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
 {
     /// <summary>
-    /// <para>表示 PUSH.Ticket 事件的数据。</para>
+    /// <para>表示 EVENT.PACKAGE_AUDIT 事件的数据。</para>
     /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/develop/audit-code </para>
     /// </summary>
-    public class ComponentPackageAuditEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IJsonSerializable, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable
+    public class PackageAuditEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IJsonSerializable, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable
     {
         public static class Types
         {

@@ -1,0 +1,14 @@
+{
+    "account_id": "71409826xxxx",
+    "poi_id": "660113xxxx",
+    "crowds": [
+        {
+            "crowd_type": 1,
+            "height_condition": {
+                "upper_bound": 120,
+                "upper_bound_type": 1
+            },
+            "note": "儿童测试"
+        }
+    ]
+}

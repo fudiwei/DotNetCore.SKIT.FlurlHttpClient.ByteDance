@@ -768,6 +768,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             return await client.SendRequestWithJsonAsync<Models.GoodLifePOIMatchRelationQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        #region Goods/Crowd
+        /// <summary>
+        /// <para>异步调用 [POST] /goodlife/v1/poi/crowd/save 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/crowdsave </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.GoodLifePOICrowdSaveV1Response> ExecuteGoodLifePOICrowdSaveV1Async(this DouyinOpenClient client, Models.GoodLifePOICrowdSaveV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "crowd", "save")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendRequestWithJsonAsync<Models.GoodLifePOICrowdSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
         #endregion
 
         #region Settle

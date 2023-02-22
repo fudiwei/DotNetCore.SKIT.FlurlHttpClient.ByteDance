@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
         public byte[] MaterialFileBytes { get; set; } = Array.Empty<byte>();
 
         /// <summary>
-        /// 获取或设置封面图片文件名。如果不指定将由系统自动生成。
+        /// 获取或设置资源文件文件名。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

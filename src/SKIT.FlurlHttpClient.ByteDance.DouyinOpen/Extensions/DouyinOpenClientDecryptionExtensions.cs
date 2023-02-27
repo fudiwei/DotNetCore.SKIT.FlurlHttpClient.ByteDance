@@ -9,16 +9,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientDecryptionExtensions
     {
         /// <summary>
-        /// 解密手机号码。
+        /// 解密用户公开信息中的手机号码。
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/phone-number-decode-demo </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="encryptedMobileNumber"></param>
         /// <returns></returns>
-        public static string DecryptMobileNumber(this DouyinOpenClient client, string encryptedMobileNumber)
+        public static string DecryptOAuthUserInfoMobileNumber(this DouyinOpenClient client, string encryptedMobileNumber)
         {
             if (client == null) throw new ArgumentNullException(nameof(client));
-            if (string.IsNullOrEmpty(encryptedMobileNumber)) throw new ArgumentNullException(encryptedMobileNumber);
+            if (encryptedMobileNumber == null) throw new ArgumentNullException(encryptedMobileNumber);
 
             byte[] keyBytes = Encoding.UTF8.GetBytes(client.Credentials.ClientSecret);
             byte[] ivBytes = new byte[16]; Array.Copy(keyBytes, 0, ivBytes, 0, 16);

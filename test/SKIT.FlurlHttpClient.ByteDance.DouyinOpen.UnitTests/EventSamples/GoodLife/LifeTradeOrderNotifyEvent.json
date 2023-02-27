@@ -1,0 +1,7 @@
+{
+    "event": "life_trade_order_notify",
+    "client_key": "axxxxxxxxxxxxx",
+    "from_user_id": "f6e35c98-1e53-4943-ad6d-f476f869deab",
+    "content": "{\"action\": \"pay_success\",\"msg_time\": 1665991178,\"order\": {\"order_id\": \"123\",\"pay_amount\": 1,  \"original_amount\": 1, \"account_id\": \"123\",\"create_time\": 1665991178,\"pay_time\": 1665991178}}",
+    "log_id": "202210101930530102281180650970B5AF"
+}

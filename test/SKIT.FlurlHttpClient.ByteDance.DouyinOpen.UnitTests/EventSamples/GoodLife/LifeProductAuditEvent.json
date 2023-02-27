@@ -1,0 +1,6 @@
+{
+    "event": "life_product_audit",
+    "client_key": "axxxxxxxxxxxxx",
+    "content": "{\"product_id\":\"6993730008241948703\",\"reason\":\"\",\"status\":\"PASS\"}",
+    "log_id": "202210101930530102281180650970B5AF"
+}

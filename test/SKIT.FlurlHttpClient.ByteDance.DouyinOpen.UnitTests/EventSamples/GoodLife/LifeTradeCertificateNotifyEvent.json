@@ -1,0 +1,7 @@
+{
+    "event": "life_trade_certificate_notify",
+    "client_key": "axxxxxxxxxxxxx",
+    "from_user_id": "f6e35c98-1e53-4943-ad6d-f476f869deab",
+    "content": "{\"action\": \"verify\",\"msg_time\": 1665991178,\"certificate\": {\"certificate_id\": \"456\",\"order_id\": \"123\",\"account_id\": \"1234\"}}",
+    "log_id": "202210101930530102281180650970B5AF"
+}

@@ -1,4 +1,6 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
+using System.Collections.Generic;
+
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
     /// <para>表示 life_member_join 事件的数据。</para>
@@ -26,5 +28,25 @@
                 public string MobileNumber { get; set; } = default!;
             }
         }
+
+        internal static class Converters
+        {
+            internal class EventPropertyContentNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
+            {
+            }
+
+            internal class EventPropertyContentSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
+            {
+            }
+        }
+
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("content")]
+        [Newtonsoft.Json.JsonConverter(typeof(Converters.EventPropertyContentNewtonsoftJsonConverter))]
+        [System.Text.Json.Serialization.JsonPropertyName("content")]
+        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.EventPropertyContentSystemTextJsonConverter))]
+        public override Types.Content EventContent { get; set; } = default!;
     }
 }

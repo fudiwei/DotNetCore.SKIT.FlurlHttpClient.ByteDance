@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("from_user_id")]
         [System.Text.Json.Serialization.JsonPropertyName("from_user_id")]
-        public virtual string FromUserId { get; set; } = default!;
+        public virtual string? FromUserId { get; set; }
 
         /// <summary>
         /// 获取或设置事件接收者用户 ID。

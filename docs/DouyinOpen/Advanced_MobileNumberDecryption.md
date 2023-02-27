@@ -1,4 +1,4 @@
-﻿## 如何解密手机号码？
+﻿## 如何解密用户公开信息中的手机号码？
 
 ---
 
@@ -11,5 +11,5 @@
 此外，本库还封装了直接解密的扩展方法，下面给出一个示例：
 
 ```csharp
-string rawMobileNumber = client.DecryptMobileNumber("加密过的手机号");
+string rawMobileNumber = client.DecryptOAuthUserInfoMobileNumber("加密过的手机号");
 ```

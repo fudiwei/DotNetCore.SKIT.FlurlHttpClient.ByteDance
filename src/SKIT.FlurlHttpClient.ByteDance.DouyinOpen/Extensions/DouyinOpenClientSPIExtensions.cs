@@ -11,9 +11,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/beforeinsert/signruleintroduce/ </para>
         /// </summary>
         /// <param name="client"></param>
-        /// <param name="requestTimestamp">抖音 SPI 接口中的 timestamp 字段。</param>
-        /// <param name="requestBody">抖音 SPI 接口中请求正文（JSON 格式）。</param>
-        /// <param name="requestSignature">抖音 SPI 接口中的 X-Life-Sign 字段。</param>
+        /// <param name="requestTimestamp">抖音 SPI 接口中的 timestamp 查询参数。</param>
+        /// <param name="requestBody">抖音 SPI 接口中请求正文。</param>
+        /// <param name="requestSignature">抖音 SPI 接口中的 X-Life-Sign 请求标头。</param>
         /// <returns></returns>
         public static bool VerifySPIRequestSignature(this DouyinOpenClient client, string requestTimestamp, string requestBody, string requestSignature)
         {
@@ -48,6 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (encodingCipherText == null) throw new ArgumentNullException(encodingCipherText);
 
             const int KEY_SIZE = 32;
+            const int KEY_IV_OFFSET = 16;
             string key = client.Credentials.ClientSecret ?? string.Empty;
 
             // 不足位填充
@@ -70,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             }
 
             byte[] keyBytes = Encoding.UTF8.GetBytes(key);
-            byte[] ivBytes = Encoding.UTF8.GetBytes(key.Substring(16));
+            byte[] ivBytes = Encoding.UTF8.GetBytes(key.Substring(KEY_IV_OFFSET));
             byte[] cipherBytes = Convert.FromBase64String(encodingCipherText);
             byte[] plainBytes = Utilities.AESUtility.DecryptWithCBC(keyBytes, ivBytes, cipherBytes);
             return Encoding.UTF8.GetString(plainBytes);

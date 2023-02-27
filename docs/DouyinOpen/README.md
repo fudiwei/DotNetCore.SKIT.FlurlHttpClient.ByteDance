@@ -8,7 +8,7 @@
 
 -   基于抖音开放平台 API 封装。
 
--   提供了抖音开放平台 API 所需的 HMAC-SHA-256、SHA-1、MD5 等算法工具类。
+-   提供了抖音开放平台 API 所需的 HMAC-SHA-256、SHA-1、SHA-256、MD5、AES 等算法工具类。
 
 -   提供了生成授权链接、生成 JSBridge 签名、解析回调通知事件等扩展方法。
 
@@ -84,6 +84,8 @@ else
 
 -   [如何生成 JSBridge 初始化时所需的参数及签名？](./Advanced_Parameters.md)
 
--   [如何解密手机号码？](./Advanced_MobileNumberDecryption.md)
+-   [如何解密用户公开信息中的手机号码？](./Advanced_MobileNumberDecryption.md)
+
+-   [如何解密抖音生活服务 SPI 接口中的加密字段？](./Advanced_GoodLifeSPIDecryption.md)
 
 -   [如何扩展额外的 API？](./Advanced_Extensions.md)

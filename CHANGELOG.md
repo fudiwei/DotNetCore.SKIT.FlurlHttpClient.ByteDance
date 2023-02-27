@@ -119,6 +119,14 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.2.0
+
+    -   **新增**：新增部分抖音生活服务相关 Webhook 事件模型。
+
+    -   **新增**：新增抖音生活服务 SPI 验签及解密相关扩展方法。
+
+    -   **变更**：重命名扩展方法 `DouyinOpenClient.DecryptMobileNumber` 为 `DouyinOpenClient.DecryptOAuthUserInfoMobileNumber`。
+
 -   Release 2.1.0
 
     -   **新增**：新增物料配置相关接口。

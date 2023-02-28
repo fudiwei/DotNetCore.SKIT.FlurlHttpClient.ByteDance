@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson">抖音 Webhook 事件中请求正文（JSON 格式）。</param>
-        /// <param name="callbackSignature">抖音 Webhook 事件中的 X-Douyin-Signature 请求标头。</param>
+        /// <param name="callbackSignature">抖音 Webhook 事件中的 "X-Douyin-Signature" 请求标头。</param>
         /// <returns></returns>
         public static bool VerifyEventSignature(this DouyinOpenClient client, string callbackJson, string callbackSignature)
         {

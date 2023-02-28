@@ -204,10 +204,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service </para>
         /// </summary>
         /// <param name="client"></param>
-        /// <param name="callbackTimestamp">头条回调通知中的 timestamp 字段。</param>
-        /// <param name="callbackNonce">头条回调通知中的 nonce 字段。</param>
-        /// <param name="callbackMessage">头条回调通知中的 msg 字段。</param>
-        /// <param name="callbackSignature">头条回调通知中的 signature 字段。</param>
+        /// <param name="callbackTimestamp">头条回调通知中的 "timestamp" 查询参数。</param>
+        /// <param name="callbackNonce">头条回调通知中的 "nonce" 查询参数。</param>
+        /// <param name="callbackMessage">头条回调通知中的 "msg" 查询参数。</param>
+        /// <param name="callbackSignature">头条回调通知中的 "signature" 查询参数。</param>
         /// <returns></returns>
         public static bool VerifyEventSignatureForEcho(this ByteDanceMicroAppClient client, string callbackTimestamp, string callbackNonce, string callbackMessage, string callbackSignature)
         {
@@ -217,8 +217,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (callbackMessage == null) throw new ArgumentNullException(nameof(callbackMessage));
             if (callbackSignature == null) throw new ArgumentNullException(nameof(callbackSignature));
 
-            ISet<string> set = new SortedSet<string>(StringComparer.Ordinal) { client.Credentials.PushToken!, callbackTimestamp, callbackNonce, callbackMessage };
-            string sign = Utilities.SHA1Utility.Hash(string.Concat(set));
+            List<string> lstParams = new List<string>() { client.Credentials.PushToken!, callbackTimestamp, callbackNonce, callbackMessage };
+            lstParams.Sort(StringComparer.Ordinal);
+
+            string sign = Utilities.SHA1Utility.Hash(string.Concat(lstParams));
             return string.Equals(sign, callbackSignature, StringComparison.OrdinalIgnoreCase);
         }
 

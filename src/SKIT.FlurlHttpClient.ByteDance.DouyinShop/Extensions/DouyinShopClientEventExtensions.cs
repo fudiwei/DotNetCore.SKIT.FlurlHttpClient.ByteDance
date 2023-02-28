@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
 {
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson">抖店回调通知中请求正文（JSON 格式）。</param>
-        /// <param name="callbackSignature">抖店回调通知中的 event-sign 字段。</param>
+        /// <param name="callbackSignature">抖店回调通知中的 "event-sign" 请求标头。</param>
         /// <returns></returns>
         public static bool VerifyEventSignature(this DouyinShopClient client, string callbackJson, string callbackSignature)
         {

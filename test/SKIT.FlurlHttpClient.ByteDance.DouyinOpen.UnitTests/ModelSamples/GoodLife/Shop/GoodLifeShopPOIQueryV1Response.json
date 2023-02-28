@@ -5,11 +5,25 @@
         "total": 1,
         "pois": [
             {
-                "poi_id": "111111",
-                "address": "西路二区111号门面",
-                "latitude": 21.328037,
-                "longitude": 20.363777,
-                "poi_name": "西店"
+                "account": {
+                    "parent_account": {
+                        "account_id": "1231241656",
+                        "account_name": "",
+                        "account_type": "Trademark"
+                    },
+                    "poi_account": {
+                        "account_id": "8791273891",
+                        "account_name": "",
+                        "account_type": "Shop"
+                    }
+                },
+                "poi": {
+                    "poi_id": "111111",
+                    "address": "西路二区111号门面",
+                    "latitude": 21.328037,
+                    "longitude": 20.363777,
+                    "poi_name": "西店"
+                }
             }
         ]
     },

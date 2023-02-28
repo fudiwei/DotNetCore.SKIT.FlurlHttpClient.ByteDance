@@ -119,6 +119,10 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.2.1
+
+    -   **修复**：修复生活服务开放能力门店信息查询接口响应模型定义错误。（_via_ [Gitee #I6IG50](https://gitee.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/issues/I6IG50)）
+
 -   Release 2.2.0
 
     -   **新增**：新增部分抖音生活服务相关 Webhook 事件模型。

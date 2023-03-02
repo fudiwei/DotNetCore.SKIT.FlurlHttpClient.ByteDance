@@ -6,11 +6,11 @@
 
 ## 简体中文 / Simplified Chinese
 
-基于 `Flurl.Http` 的 TikTok（抖音国际版开发者平台）API 客户端。
+基于 `Flurl.Http` 的 TikTok Developer HTTP API SDK。
 
 ### 【功能特性】
 
--   基于 TikTok（抖音国际版开发者平台）API 封装。
+-   基于 TikTok Developer API 封装。
 
 ### 【开发文档】
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 英文文档 / English
+## 英文 / English
 
 The TikTok SDK for .NET.
 

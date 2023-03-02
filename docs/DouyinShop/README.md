@@ -1,6 +1,6 @@
 ﻿# SKIT.FlurlHttpClient.ByteDance.DouyinShop
 
-基于 `Flurl.Http` 的[抖店开放平台](https://op.jinritemai.com/) API 客户端。
+基于 `Flurl.Http` 的[抖店开放平台](https://op.jinritemai.com/) HTTP API SDK。
 
 ---
 
@@ -15,18 +15,14 @@
 ## 功能
 
 -   基于抖店开放平台 API 封装。
-
 -   支持商家自研、软件服务商两种模式。
-
 -   请求时自动生成签名，无需开发者手动干预。
-
--   提供了抖店开放平台 API 所需的 HMAC-SHA-256、MD5 等算法工具类。
-
+-   提供了抖店开放平台 API 所需的 MD5、HMAC-SHA-256 等算法工具类。
 -   提供了解析回调通知事件等扩展方法。
 
 ---
 
-## 基础用法
+## 快速入门
 
 ### 安装：
 
@@ -79,18 +75,22 @@ else
 
 ---
 
-## 高级技巧
+## 基础用法
 
--   [如何快速找到需要调用的 API 模型类名 / 方法名？](./Advanced_ModelDefinition.md)
+-   [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
+
+-   [如何解析回调通知事件？](./Basic_EventDeserialization.md)
+
+-   [如何验证回调通知事件签名？](./Basic_EventSignatureVerification.md)
+
+-   [如何自定义额外的 API 接口？](./Basic_Extensions.md)
+
+---
+
+## 高级技巧
 
 -   [如何在 ASP.NET Core 中与 `IHttpClientFactory` 集成？](./Advanced_IHttpClientFactory.md)
 
 -   [如何指定 JSON 序列化器？](./Advanced_JsonSerializer.md)
 
 -   [如何使用拦截器？](./Advanced_Interceptor.md)
-
--   [如何解析回调通知事件？](./Advanced_EventDataDeserialization.md)
-
--   [如何验证回调通知事件签名？](./Advanced_EventDataSignatureVerification.md)
-
--   [如何扩展额外的 API？](./Advanced_Extensions.md)

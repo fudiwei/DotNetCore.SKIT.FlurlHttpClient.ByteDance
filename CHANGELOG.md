@@ -193,6 +193,10 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.1.0
+
+    -   支持 v2 API。
+
 -   Release 2.0.0
 
     -   首次发布。

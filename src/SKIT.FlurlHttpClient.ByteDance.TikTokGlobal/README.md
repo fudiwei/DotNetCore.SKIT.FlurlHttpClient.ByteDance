@@ -24,9 +24,7 @@
 
 ## 英文 / English
 
-The TikTok SDK for .NET.
-
-> https://developers.tiktok.com/
+The TikTok SDK for .NET. (Offical Website: https://developers.tiktok.com/)
 
 ### Documentation
 

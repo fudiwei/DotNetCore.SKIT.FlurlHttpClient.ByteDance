@@ -1,0 +1,18 @@
+{
+    "data": {
+        "videos": [
+            {
+                "cover_image_url": "https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/979e93dbc5df40198f7ac935fb3e3342~tplv-noop.image?x-expires=1659000367&x-signature=EZIo1pVYVGYh%2FaNNaHHlbWEvw%2BM%3D",
+                "id": "7058060640279383343",
+                "title": "Video Title"
+            }
+        ],
+        "cursor": 1643332803000,
+        "has_more": false
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "20220829194722CBE87ED59D524E727021"
+    }
+}

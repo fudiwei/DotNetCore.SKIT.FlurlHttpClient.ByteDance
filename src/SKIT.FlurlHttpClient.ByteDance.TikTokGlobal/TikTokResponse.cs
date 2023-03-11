@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public virtual TikTokResponseError Error { get; set; } = default!;
 
         /// <summary>
-        /// 获取一个值，该值指示调用 TikTok API 是否成功（即 HTTP 状态码为 200、且 `Error.Code` 值为 0）。
+        /// 获取一个值，该值指示调用 TikTok API 是否成功（即 HTTP 状态码为 200、且 "error.code" 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()
@@ -121,7 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
     }
 
     /// <summary>
-    /// TikTok API 响应的扩展信息字段。
+    /// TikTok API 响应的错误信息字段。
     /// </summary>
     public sealed class TikTokResponseError
     {

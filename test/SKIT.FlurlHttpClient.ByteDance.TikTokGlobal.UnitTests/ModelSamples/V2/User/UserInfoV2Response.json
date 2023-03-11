@@ -1,0 +1,14 @@
+{
+    "data": {
+        "user": {
+            "avatar_url": "https://p19-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/b17f0e4b3a4f4a50993cf72cda8b88b8~c5_168x168.jpeg",
+            "open_id": "723f24d7-e717-40f8-a2b6-cb8464cd23b4",
+            "union_id": "c9c60f44-a68e-4f5d-84dd-ce22faeb0ba1"
+        }
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "20220829194722CBE87ED59D524E727021"
+    }
+}

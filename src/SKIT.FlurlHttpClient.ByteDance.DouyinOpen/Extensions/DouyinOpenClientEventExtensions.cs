@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             }
             catch (Exception ex)
             {
-                throw new Exceptions.DouyinOpenEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
+                throw new Exceptions.DouyinOpenEventSerializationException("Failed to deserialize event data. Please see the inner exception for more details.", ex);
             }
         }
 

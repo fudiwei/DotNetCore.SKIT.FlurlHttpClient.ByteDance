@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? DouyinShopEndpoints.DEFAULT;
+            FlurlClient.BaseUrl = options.Endpoint ?? DouyinShopEndpoints.DEFAULT;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
 
             Interceptors.Add(new Interceptors.DouyinShopRequestFormatInterceptor());

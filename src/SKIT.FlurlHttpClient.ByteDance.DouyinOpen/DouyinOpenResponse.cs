@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         public virtual string? ErrorDescription { get; set; }
 
         /// <summary>
-        /// 获取一个值，该值指示调用抖音开放平台 API 是否成功（即 HTTP 状态码为 200、且 `error_code` 值为 0）。
+        /// 获取一个值，该值指示调用抖音开放平台 API 是否成功（即 HTTP 状态码为 200、且 "error_code" 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()

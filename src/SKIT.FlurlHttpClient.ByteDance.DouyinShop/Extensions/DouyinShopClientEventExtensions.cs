@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
             }
             catch (Exception ex)
             {
-                throw new Exceptions.DouyinShopEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
+                throw new Exceptions.DouyinShopEventSerializationException("Failed to deserialize event data. Please see the inner exception for more details.", ex);
             }
         }
 
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
             }
             catch (Exception ex)
             {
-                throw new Exceptions.DouyinShopEventSerializationException("Deserialize event failed. Please see the `InnerException` for more details.", ex);
+                throw new Exceptions.DouyinShopEventSerializationException("Failed to deserialize event. Please see the inner exception for more details.", ex);
             }
         }
 

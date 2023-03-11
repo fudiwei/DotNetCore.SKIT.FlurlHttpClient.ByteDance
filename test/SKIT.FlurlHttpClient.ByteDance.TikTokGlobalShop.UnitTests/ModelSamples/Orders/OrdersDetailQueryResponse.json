@@ -1,0 +1,248 @@
+{
+    "code": 0,
+    "data": {
+        "order_list": [
+            {
+                "buyer_message": "abcde",
+                "buyer_uid": "7021436810468230477",
+                "cancel_order_sla": "1619621355",
+                "cancel_reason": "Pricing error",
+                "cancel_user": "SELLER",
+                "cod_risk_reason": [],
+                "cod_risk_type": 0,
+                "create_time": "1619611561674",
+                "delivery_option": "STANDARD",
+                "delivery_option_description": "",
+                "delivery_option_id": "",
+                "delivery_option_type": 0,
+                "delivery_sla": 0,
+                "district_info_list": [
+                    {
+                        "address_level_name": "",
+                        "address_name": ""
+                    }
+                ],
+                "ext_status": "101",
+                "fulfillment_type": "0",
+                "is_cod": true,
+                "item_list": [
+                    {
+                        "product_id": "1729382476852921560",
+                        "product_name": "test cart 50 sku",
+                        "quantity": "5",
+                        "seller_sku": "X-123",
+                        "sku_cancel_reason": "",
+                        "sku_cancel_user": "",
+                        "sku_display_status": 0,
+                        "sku_ext_status": 101,
+                        "sku_id": "2729382476852921560",
+                        "sku_image": "https://p19-oec-sg.ibyteimg.com/tos-maliva-i-o3syd03w52-us/12345670c5480408aa668",
+                        "sku_name": "white,128g",
+                        "sku_original_price": "5000",
+                        "sku_platform_discount": "500",
+                        "sku_platform_discount_total": 500,
+                        "sku_rts_time": 0,
+                        "sku_sale_price": "5000",
+                        "sku_seller_discount": "500",
+                        "sku_small_order_fee": 5000,
+                        "sku_type": 0
+                    }
+                ],
+                "order_id": "576461413038785752",
+                "order_line_list": [
+                    {
+                        "cancel_reason": "",
+                        "cancel_user": "",
+                        "display_status": 0,
+                        "ext_status": 0,
+                        "order_line_id": "",
+                        "original_price": 0,
+                        "package_freeze_status": 0,
+                        "package_id": "",
+                        "package_status": 0,
+                        "platform_discount": 0,
+                        "product_id": "",
+                        "product_name": "",
+                        "rts_time": 0,
+                        "sale_price": 0,
+                        "seller_discount": 0,
+                        "seller_sku": "",
+                        "shipping_provider_id": "",
+                        "shipping_provider_name": "",
+                        "sku_id": "2729382476852921560",
+                        "sku_image": "",
+                        "sku_name": "",
+                        "sku_type": 0,
+                        "tracking_number": ""
+                    }
+                ],
+                "order_status": 100,
+                "package_list": [
+                    {
+                        "package_id": "2882335594258860015"
+                    }
+                ],
+                "paid_time": 1619611563,
+                "payment_info": {
+                    "currency": "IDR",
+                    "original_shipping_fee": 5000,
+                    "original_total_product_price": 5000,
+                    "platform_discount": 5000,
+                    "seller_discount": 5000,
+                    "shipping_fee": 5000,
+                    "shipping_fee_platform_discount": 5000,
+                    "shipping_fee_seller_discount": 5000,
+                    "small_order_fee": 5000,
+                    "sub_total": 5000,
+                    "taxes": 5000,
+                    "total_amount": 5000
+                },
+                "payment_method": "BANK_CARD",
+                "payment_method_name": "",
+                "payment_method_type": 0,
+                "receiver_address_updated": 0,
+                "recipient_address": {
+                    "address_detail": "unit one building 8",
+                    "address_line_list": [
+                        "",
+                        ""
+                    ],
+                    "city": "Central Bangka Regency",
+                    "district": "Koba",
+                    "full_address": "Indonesia, Bangka Belitung Province, Central Bangka Regency, Koba, Arung Dalam, ",
+                    "name": "zay",
+                    "phone": "(+86)12345678980",
+                    "region": "Indonesia",
+                    "region_code": "ID",
+                    "state": "Bangka Belitung Province",
+                    "town": "Arung Dalam",
+                    "zipcode": "23683"
+                },
+                "rts_sla": "1619611688",
+                "rts_time": 1619611563,
+                "seller_note": "seller note",
+                "shipping_provider": "TT Virtual express",
+                "shipping_provider_id": "6617675021119438849",
+                "split_or_combine_tag": "combined",
+                "tracking_number": "JX12345",
+                "tts_sla": "1619611761",
+                "update_time": "1619621355",
+                "warehouse_id": ""
+            },
+            {
+                "order_id": "576461413038785752",
+                "order_status": 100,
+                "payment_method": "BANK_CARD",
+                "delivery_option": "STANDARD",
+                "shipping_provider": "TT Virtual express",
+                "shipping_provider_id": "6617675021119438849",
+                "create_time": "1619611561674",
+                "paid_time": 1619611563,
+                "buyer_message": "abcde",
+                "payment_info": {
+                    "currency": "IDR",
+                    "sub_total": 5000,
+                    "shipping_fee": 170685,
+                    "seller_discount": 0,
+                    "total_amount": 175685,
+                    "original_total_product_price": 10,
+                    "original_shipping_fee": 10,
+                    "shipping_fee_seller_discount": 0,
+                    "shipping_fee_platform_discount": 0
+                },
+                "recipient_address": {
+                    "full_address": "Indonesia, Bangka Belitung Province, Central Bangka Regency, Koba, Arung Dalam, babba",
+                    "region": "Indonesia",
+                    "state": "Bangka Belitung Province",
+                    "city": "Central Bangka Regency",
+                    "district": "Koba",
+                    "town": "Arung Dalam",
+                    "phone": "(+86)12345678980",
+                    "name": "zay",
+                    "zipcode": "23683",
+                    "address_detail": "babba",
+                    "address_line_list": [
+                        "Street name Test",
+                        "Hourse name Test"
+                    ]
+                },
+                "tracking_number": "Jx12345",
+                "item_list": [
+                    {
+                        "sku_id": "1729389661993665752",
+                        "product_id": "1729388199855555800",
+                        "sku_name": "-",
+                        "quantity": 1,
+                        "seller_sku": "",
+                        "product_name": "iphone max 11111",
+                        "sku_image": "https://asdfghj",
+                        "sku_original_price": 20000,
+                        "sku_sale_price": 20000,
+                        "sku_platform_discount": 0,
+                        "sku_seller_discount": 0,
+                        "sku_ext_status": 0,
+                        "sku_display_status": 112,
+                        "sku_rts_time": 1649817943
+                    },
+                    {
+                        "sku_id": "1729388495591146712",
+                        "product_id": "1729388495591081176",
+                        "sku_name": "blue",
+                        "quantity": 1,
+                        "seller_sku": "test_seller_sku",
+                        "product_name": "presale",
+                        "sku_image": "https://asdfghj",
+                        "sku_original_price": 501,
+                        "sku_sale_price": 501,
+                        "sku_platform_discount": 0,
+                        "sku_seller_discount": 0,
+                        "sku_ext_status": 0,
+                        "sku_display_status": 112,
+                        "sku_rts_time": 1649817943
+                    },
+                    {
+                        "sku_id": "1729389552620045528",
+                        "product_id": "1729389456828105944",
+                        "sku_name": "TT",
+                        "quantity": 1,
+                        "seller_sku": "",
+                        "product_name": "test product",
+                        "sku_image": "https://asdfghj",
+                        "sku_original_price": 1000,
+                        "sku_sale_price": 1000,
+                        "sku_platform_discount": 0,
+                        "sku_seller_discount": 0,
+                        "sku_ext_status": 203,
+                        "sku_display_status": 140,
+                        "sku_cancel_reason": "Wrong delivery information",
+                        "sku_cancel_user": "BUYER"
+                    }
+                ],
+                "rts_time": 1619611563,
+                "rts_sla": 1619611688,
+                "tts_sla": 1619611761,
+                "cancel_order_sla": 1619621355,
+                "receiver_address_updated": 0,
+                "update_time": 1619621355,
+                "buyer_uid": "7493990569595471353",
+                "fulfillment_type": 0,
+                "order_line_list": [
+                    {
+                        "order_line_id": "576465323303339224",
+                        "sku_id": "1729389661993665752"
+                    },
+                    {
+                        "order_line_id": "576465323303404760",
+                        "sku_id": "1729388495591146712"
+                    },
+                    {
+                        "order_line_id": "576465323303470296",
+                        "sku_id": "1729389552620045528"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

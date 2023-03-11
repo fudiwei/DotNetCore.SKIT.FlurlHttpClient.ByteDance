@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Interceptors
             }
             catch (Exception ex)
             {
-                throw new Exceptions.DouyinShopRequestSignatureException("Generate signature of request failed. Please see the `InnerException` for more details.", ex);
+                throw new Exceptions.DouyinShopRequestSignatureException("Failed to generate signature of request. Please see the inner exception for more details.", ex);
             }
 
             flurlCall.Request.SetQueryParam("app_key", _appKey);

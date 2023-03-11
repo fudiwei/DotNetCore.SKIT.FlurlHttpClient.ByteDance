@@ -41,6 +41,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public TikTokClientV2(string clientKey, string clientSecret)
             : this(new TikTokClientOptionsV2() { ClientKey = clientKey, ClientSecret = clientSecret })
         {
+            if (clientKey == null) throw new ArgumentNullException(nameof(clientKey));
+            if (clientSecret == null) throw new ArgumentNullException(nameof(clientSecret));
         }
 
         /// <summary>

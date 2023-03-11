@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Interceptors
             }
             catch (Exception ex)
             {
-                throw new Exceptions.DouyinShopRequestMarshalException("Marshal request failed. Please see the `InnerException` for more details.", ex);
+                throw new Exceptions.DouyinShopRequestMarshalException("Failed to marshal request data. Please see the inner exception for more details.", ex);
             }
         }
     }

@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "active_shops": [
+            {
+                "shop_id": "",
+                "shop_region": ""
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

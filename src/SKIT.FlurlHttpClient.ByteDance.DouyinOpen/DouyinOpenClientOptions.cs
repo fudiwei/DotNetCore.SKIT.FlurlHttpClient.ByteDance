@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// 获取或设置抖音开放平台 API 域名。
         /// <para>默认值：<see cref="DouyinOpenEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; }
+        public string Endpoints { get; set; } = DouyinOpenEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置抖音开放平台应用 Key。

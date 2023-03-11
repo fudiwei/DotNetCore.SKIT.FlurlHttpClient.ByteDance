@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         /// 获取或设置 TikTok API v2 域名。
         /// <para>默认值：<see cref="TikTokEndpointsV2.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; }
+        public string Endpoints { get; set; } = TikTokEndpointsV2.DEFAULT;
 
         /// <summary>
         /// 获取或设置 TikTok 应用 Key。

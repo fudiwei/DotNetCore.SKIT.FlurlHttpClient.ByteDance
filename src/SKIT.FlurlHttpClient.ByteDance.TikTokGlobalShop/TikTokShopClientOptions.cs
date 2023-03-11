@@ -12,13 +12,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置 TikTok API 域名。
+        /// 获取或设置 TikTok API 入口点。
         /// <para>默认值：<see cref="TikTokShopEndpoints.DEFAULT"/></para>
         /// </summary>
         public string Endpoint { get; set; } = TikTokShopEndpoints.DEFAULT;
 
         /// <summary>
-        /// 获取或设置 TikTok Auth API 域名。
+        /// 获取或设置 TikTok Auth API 入口点。
         /// <para>默认值：<see cref="TikTokShopEndpoints.API_AUTH"/></para>
         /// </summary>
         public string EndpointForAuthAPI { get; set; } = TikTokShopEndpoints.API_AUTH;

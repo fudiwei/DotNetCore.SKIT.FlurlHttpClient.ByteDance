@@ -12,10 +12,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置抖店开放平台 API 域名。
+        /// 获取或设置抖店开放平台 API 入口点。
         /// <para>默认值：<see cref="DouyinShopEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoint { get; set; }
+        public string Endpoint { get; set; } = DouyinShopEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置抖店开放平台应用 Key。

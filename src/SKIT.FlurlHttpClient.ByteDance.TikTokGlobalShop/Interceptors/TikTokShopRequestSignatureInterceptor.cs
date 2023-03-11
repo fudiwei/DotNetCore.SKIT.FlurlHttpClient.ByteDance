@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
 
             try
             {
-                var queryParams = new QueryParamCollection(flurlCall.HttpRequestMessage.RequestUri.Query);
+                var queryParams = new QueryParamCollection(flurlCall.HttpRequestMessage.RequestUri!.Query);
                 queryParams.Remove("access_token");
                 queryParams.Remove("sign");
 

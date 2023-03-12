@@ -6,7 +6,7 @@
 
 ## 简体中文 / Simplified Chinese
 
-基于 `Flurl.Http` 的 TikTok Shop HTTP API SDK。
+基于 `Flurl.Http` 的 TikTok Shop Open Platform HTTP API SDK。
 
 ### 【功能特性】
 

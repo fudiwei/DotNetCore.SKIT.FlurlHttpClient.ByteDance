@@ -180,8 +180,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// 获取或设置退款金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_total")]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_total")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                         public decimal RefundAmount { get; set; }
 
                         /// <summary>

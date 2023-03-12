@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                     {
                         public static class Types
                         {
-                            public class Payment
+                            public class PaymentInfo
                             {
                                 /// <summary>
                                 /// 获取或设置币种。
@@ -28,77 +28,99 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// 获取或设置总金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("total_amount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("total_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal TotalAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 总金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sub_total")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sub_total")]
-                                public decimal SubTotalAmount { get; set; }
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                public decimal SubtotalAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal ShippingFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置卖家优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("seller_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SellerDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal PlatformDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品原价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("original_total_product_price")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("original_total_product_price")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal OriginalTotalProductPrice { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运费原价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("original_shipping_fee")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("original_shipping_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal OriginalShippingFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运费卖家优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_seller_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_seller_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal ShippingFeeSellerDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运费平台优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_platform_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_platform_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal ShippingFeePlatformDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置税费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("taxes")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("taxes")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal Taxes { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置小额订单费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("small_order_fee")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("small_order_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SmallOrderFee { get; set; }
                             }
 
@@ -251,42 +273,54 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// 获取或设置原价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_original_price")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_original_price")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal OriginalPrice { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置售价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_sale_price")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_sale_price")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SalePrice { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_platform_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_platform_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal PlatformDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置卖家优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_seller_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_seller_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SellerDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台优惠总金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_platform_discount_total")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_platform_discount_total")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal TotalPlatformDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置小额订单费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_small_order_fee")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_small_order_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SmallOrderFee { get; set; }
 
                                 /// <summary>
@@ -421,28 +455,36 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// 获取或设置原价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("original_price")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("original_price")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal OriginalPrice { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置售价。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sale_price")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sale_price")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SalePrice { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal PlatformDiscount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置卖家优惠金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("seller_discount")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_discount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
                                 public decimal SellerDiscount { get; set; }
 
                                 /// <summary>
@@ -558,7 +600,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("payment_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("payment_info")]
-                        public Types.Payment Payment { get; set; } = default!;
+                        public Types.PaymentInfo PaymentInfo { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置 SKU 列表。

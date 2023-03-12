@@ -1,0 +1,64 @@
+{
+    "code": 0,
+    "message": "Success",
+    "request_id": "202202230611580102452480140FA71BBF",
+    "data": {
+        "settlement_list": [
+            {
+                "sku_id": "0",
+                "sku_name": "",
+                "product_name": "",
+                "sett_status": 4,
+                "settlement_info": {
+                    "settlement_time": 1634009699,
+                    "currency": "IDR",
+                    "user_pay": "300",
+                    "platform_promotion": "29600",
+                    "refund": "0",
+                    "payment_fee": "3",
+                    "platform_commission": "0",
+                    "affiliate_commission": "0",
+                    "vat": "0",
+                    "shipping_fee": "17342",
+                    "settlement_amount": "12558"
+                },
+                "unique_key": 7017041842550081282
+            },
+            {
+                "product_name": "",
+                "sett_status": "4",
+                "settlement_info": {
+                    "affiliate_commission": "0",
+                    "affiliate_partner_commission": "0",
+                    "charge_back": "0",
+                    "currency": "",
+                    "customer_service_compensation": "0",
+                    "flat_fee": "0",
+                    "gst": "0",
+                    "other_adjustment": "0",
+                    "payment_fee": "0",
+                    "platform_commission": "0",
+                    "platform_promotion": "0",
+                    "promotion_adjustment": "0",
+                    "refund": "0",
+                    "refund_subtotal_after_seller_discounts": "0",
+                    "sales_fee": "0",
+                    "settlement_amount": "0",
+                    "settlement_time": 1635984000,
+                    "sfp_service_fee": "0",
+                    "shipping_fee": "0",
+                    "shipping_fee_adjustment": "0",
+                    "shipping_fee_subsidy": "0",
+                    "small_order_fee": "0",
+                    "subtotal_after_seller_discounts": "0",
+                    "transaction_fee": "0",
+                    "user_pay": "0",
+                    "vat": "0"
+                },
+                "sku_id": "",
+                "sku_name": "",
+                "unique_key": "123123"
+            }
+        ]
+    }
+}

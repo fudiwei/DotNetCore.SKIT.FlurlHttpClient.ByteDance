@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>SKIT.FlurlHttpClient.ByteDance.TikTokShop</PackageId>
+        <PackageId>SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop</PackageId>
         <PackageIcon>LOGO.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

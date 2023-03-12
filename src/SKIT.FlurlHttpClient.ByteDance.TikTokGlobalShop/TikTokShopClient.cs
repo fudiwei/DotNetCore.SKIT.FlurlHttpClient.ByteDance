@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             Credentials = new Settings.Credentials(options);
             Endpoint = options.Endpoint ?? TikTokShopEndpoints.DEFAULT;
-            EndpointForAuthAPI = options.EndpointForAuthAPI ?? TikTokShopEndpoints.API_AUTH;
+            EndpointForAuthAPI = options.EndpointForAuthAPI ?? TikTokShopAuthApiEndpoints.DEFAULT;
 
             FlurlClient.BaseUrl = Endpoint;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));

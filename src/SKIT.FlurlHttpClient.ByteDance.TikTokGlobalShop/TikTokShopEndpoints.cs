@@ -16,13 +16,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         public const string SANDBOX = "https://open-api-sandbox.tiktokglobalshop.com/api";
 
         /// <summary>
-        /// Auth API 域名。
+        /// 美国域名。
         /// </summary>
-        public const string API_AUTH = "https://auth.tiktok-shops.com/api/v2";
+        public const string REGION_US = "https://open-api.us.tiktokglobalshop.com/api";
+    }
+
+    /// <summary>
+    /// TikTok Shop Auth API 接口域名。
+    /// </summary>
+    public static class TikTokShopAuthApiEndpoints
+    {
+        /// <summary>
+        /// 主域名（默认）。
+        /// </summary>
+        public const string DEFAULT = "https://auth.tiktok-shops.com/api/v2";
 
         /// <summary>
-        /// Auth API 沙箱域名。
+        /// 沙箱域名。
         /// </summary>
-        public const string API_AUTH_SANDBOX = "https://auth-sandbox.tiktok-shops.com/api/v2";
+        public const string SANDBOX = "https://auth-sandbox.tiktok-shops.com/api/v2";
     }
 }

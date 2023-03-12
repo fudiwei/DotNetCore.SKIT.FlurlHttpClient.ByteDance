@@ -19,9 +19,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
         /// <summary>
         /// 获取或设置 TikTok Auth API 入口点。
-        /// <para>默认值：<see cref="TikTokShopEndpoints.API_AUTH"/></para>
+        /// <para>默认值：<see cref="TikTokShopAuthApiEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string EndpointForAuthAPI { get; set; } = TikTokShopEndpoints.API_AUTH;
+        public string EndpointForAuthAPI { get; set; } = TikTokShopAuthApiEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置 TikTok Shop AppKey。

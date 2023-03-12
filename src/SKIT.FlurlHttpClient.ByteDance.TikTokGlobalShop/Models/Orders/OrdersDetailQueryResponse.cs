@@ -729,7 +729,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public string? SplitOrCombineTag { get; set; }
 
                         /// <summary>
-                        /// 获取或设置履约类型。
+                        /// 获取或设置配送类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("fulfillment_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("fulfillment_type")]

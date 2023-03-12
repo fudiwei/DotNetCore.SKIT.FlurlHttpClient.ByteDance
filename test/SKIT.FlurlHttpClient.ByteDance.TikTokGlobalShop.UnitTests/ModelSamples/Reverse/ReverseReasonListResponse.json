@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+        "reverse_reason_list": [
+            {
+                "available_order_status_list": [ "200" ],
+                "reverse_reason": "Pricing error",
+                "reverse_reason_key": "seller_cancel_reason_wrong_price_uk"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

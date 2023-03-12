@@ -12,10 +12,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置抖音开放平台 API 域名。
+        /// 获取或设置抖音开放平台 API 入口点。
         /// <para>默认值：<see cref="DouyinOpenEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; }
+        public string Endpoint { get; set; } = DouyinOpenEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置抖音开放平台应用 Key。

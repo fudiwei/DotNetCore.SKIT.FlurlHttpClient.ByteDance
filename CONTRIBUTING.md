@@ -129,6 +129,7 @@
         - _douyinshop_：关于 `SKIT.FlurlHttpClient.ByteDance.DouyinShop` 项目的变化；
         - _oceanengine_：关于 `SKIT.FlurlHttpClient.ByteDance.OceanEngine` 项目的变化；
         - _tiktok_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTokGlobal` 项目的变化；
+        - _tiktokshop_：关于 `SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop` 项目的变化；
         - 留空：不属于上述任何情形。
 
     - **建议**：提交记录应遵循最小化原则，避免修改或新增了几十处、却混杂在一起提交，以免为日后搜索查询造成困扰。

@@ -1,0 +1,70 @@
+{
+    "code": 0,
+    "message": "Success",
+    "request_id": "20211105101202010245248014063F9014",
+    "data": {
+        "more": false,
+        "next_cursor": "aThUdHhKcDZjRmxLYkJDS3JMRm9MbUQ1VE1mZWovVUh1ejZXUVFQS2wzTkFyL289",
+        "settlement_list": [
+            {
+                "unique_key": 7024412596837025542,
+                "order_id": "576462919350519044",
+                "adjustment_id": "0",
+                "related_order_id": "576462919350519044",
+                "sku_id": "0",
+                "sku_name": "",
+                "product_name": "",
+                "settlement_info": {
+                    "settlement_time": 1635984000,
+                    "currency": "IDR",
+                    "user_pay": "1000",
+                    "platform_promotion": "0",
+                    "refund": "1000",
+                    "payment_fee": "0",
+                    "platform_commission": "0",
+                    "affiliate_commission": "0",
+                    "vat": "0",
+                    "shipping_fee": "0",
+                    "settlement_amount": "0"
+                }
+            },
+            {
+                "unique_key": 7024412596837025542,
+                "order_id": "576462772652640213",
+                "adjustment_id": "576462772652640213",
+                "related_order_id": "576462772652640213",
+                "sku_id": "0",
+                "sku_name": "",
+                "product_name": "",
+                "settlement_info": {
+                    "affiliate_commission": "0",
+                    "affiliate_partner_commission": "0",
+                    "charge_back": "0",
+                    "currency": "",
+                    "customer_service_compensation": "0",
+                    "flat_fee": "0",
+                    "gst": "0",
+                    "other_adjustment": "0",
+                    "payment_fee": "0",
+                    "platform_commission": "0",
+                    "platform_promotion": "0",
+                    "promotion_adjustment": "0",
+                    "refund": "0",
+                    "refund_subtotal_after_seller_discounts": "100",
+                    "sales_fee": "0",
+                    "seller_reason_fund_deduction": "0",
+                    "settlement_amount": "0",
+                    "settlement_time": 1635984000,
+                    "sfp_service_fee": "0",
+                    "shipping_fee": "0",
+                    "shipping_fee_adjustment": "0",
+                    "shipping_fee_subsidy": "0",
+                    "small_order_fee": "0",
+                    "subtotal_after_seller_discounts": "100",
+                    "transaction_fee": "0",
+                    "user_pay": "0"
+                }
+            }
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public virtual string? RequestId { get; set; }
 
         /// <summary>
-        /// 获取一个值，该值指示调用巨量引擎开放平台 API 是否成功（即 HTTP 状态码为 200、且 code 值为 0）。
+        /// 获取一个值，该值指示调用巨量引擎开放平台 API 是否成功（即 HTTP 状态码为 200、且 "code" 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()

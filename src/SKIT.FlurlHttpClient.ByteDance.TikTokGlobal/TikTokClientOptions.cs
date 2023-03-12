@@ -12,10 +12,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置 TikTok API 域名。
+        /// 获取或设置 TikTok API 入口点。
         /// <para>默认值：<see cref="TikTokEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; }
+        public string Endpoint { get; set; } = TikTokEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置 TikTok 应用 Key。

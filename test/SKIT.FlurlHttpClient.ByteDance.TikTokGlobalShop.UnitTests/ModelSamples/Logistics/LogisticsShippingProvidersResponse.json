@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "data": {
+        "delivery_option_list": [
+            {
+                "delivery_option_id": "6955034615128000261",
+                "delivery_option_name": "JNT_ID_Service",
+                "item_dimension_limit": {
+                    "height": 100,
+                    "length": 100,
+                    "width": 100
+                },
+                "item_weight_limit": {
+                    "max_weight": 100,
+                    "min_weight": 0
+                },
+                "shipping_provider_list": [
+                    {
+                        "shipping_provider_id": "696535255529134669",
+                        "shipping_provider_name": "JX Express\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

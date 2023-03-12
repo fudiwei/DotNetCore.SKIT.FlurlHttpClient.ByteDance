@@ -1,0 +1,31 @@
+{
+    "package": [
+        {
+            "create_time": "2022/12/30 22:11:00",
+            "delivery_option_name": "someway",
+            "hand_over_time": "2022/12/30 22:11:00",
+            "height": 34,
+            "length": 12,
+            "length_unit": 1,
+            "package_id": "28427944530283",
+            "provider_warehouse_code": "7475973290484254255",
+            "shipped_city": "CityA",
+            "shipped_time": "2022/12/30 22:11:00",
+            "shipping_provider_id": "4223428734891739173",
+            "shipping_provider_name": "ProviderA",
+            "sku_list": [
+                {
+                    "quantity": "100",
+                    "sku_id": "423734897294"
+                }
+            ],
+            "time_zone": "UTC+8",
+            "tracking_number": "da64tg8gd982f",
+            "weight": 45,
+            "weight_unit": 1,
+            "width": 23,
+            "wms_order_no": "97654980395865490820"
+        }
+    ],
+    "warehouse_provider_id": "7342984797904049750"
+}

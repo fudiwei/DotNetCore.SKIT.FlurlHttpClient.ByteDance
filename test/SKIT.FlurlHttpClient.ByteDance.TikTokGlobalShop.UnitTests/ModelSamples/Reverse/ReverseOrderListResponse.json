@@ -1,0 +1,43 @@
+{
+    "code": 0,
+    "data": {
+        "more": true,
+        "reverse_list": [
+            {
+                "currency": "IDR",
+                "order_id": "576461302937453663",
+                "refund_total": "5000",
+                "return_item_list": [
+                    {
+                        "product_images": "",
+                        "return_product_id": "",
+                        "return_product_name": "",
+                        "return_quantity": "0",
+                        "seller_sku": "",
+                        "sku_id": "",
+                        "sku_name": ""
+                    }
+                ],
+                "return_reason": "Package wasn't received",
+                "return_tracking_id": "E0h1y0j4l1F8G3U6X7p8",
+                "return_type": "0",
+                "reverse_order_id": "4035225888722551903",
+                "reverse_record_list": [
+                    {
+                        "additional_image_list": [],
+                        "additional_message": "I want to return",
+                        "description": "",
+                        "reason_text": "Package wasn't received",
+                        "update_time": 1527955200
+                    }
+                ],
+                "reverse_request_time": 1527955200,
+                "reverse_status_value": 1,
+                "reverse_type": 2,
+                "reverse_update_time": 1527955200
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

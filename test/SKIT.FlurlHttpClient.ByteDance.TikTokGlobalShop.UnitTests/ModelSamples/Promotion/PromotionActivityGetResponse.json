@@ -1,0 +1,35 @@
+{
+    "code": 0,
+    "data": {
+        "begin_time": 1661756811,
+        "create_time": 1661750811,
+        "end_time": 1661856811,
+        "product_list": [
+            {
+                "discount": "",
+                "num_limit": "-1",
+                "product_id": "7136011254174631686",
+                "promotion_price": "",
+                "sku_list": [
+                    {
+                        "discount": "2",
+                        "num_limit": -1,
+                        "product_id": "7136011254174631686",
+                        "promotion_price": "",
+                        "sku_id": "7136382541418366725",
+                        "user_limit": -1
+                    }
+                ],
+                "user_limit": "-1"
+            }
+        ],
+        "product_type": 2,
+        "promotion_id": "7136104309380384514",
+        "promotion_type": 2,
+        "status": "0",
+        "title": "FlashSale XX",
+        "update_time": 1661750811
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

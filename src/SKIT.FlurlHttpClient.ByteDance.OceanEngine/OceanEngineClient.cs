@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoints ?? OceanEngineEndpoints.DEFAULT;
+            FlurlClient.BaseUrl = options.Endpoint ?? OceanEngineEndpoints.DEFAULT;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
         }
 

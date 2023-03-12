@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "data": {
+        "shop_list": [
+            {
+                "region": "GB",
+                "shop_id": "7000714532876273420",
+                "shop_name": "Maomao beauty shop",
+                "type": 1
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

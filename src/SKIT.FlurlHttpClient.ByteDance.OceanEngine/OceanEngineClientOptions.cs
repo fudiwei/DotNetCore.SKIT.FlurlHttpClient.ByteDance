@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
     /// 一个用于构造 <see cref="OceanEngineClient"/> 时使用的配置项。
@@ -12,10 +12,10 @@
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置巨量引擎开放平台 API 域名。
+        /// 获取或设置巨量引擎开放平台 API 入口点。
         /// <para>默认值：<see cref="OceanEngineEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string? Endpoints { get; set; }
+        public string Endpoint { get; set; } = OceanEngineEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置巨量引擎开放平台应用 ID。

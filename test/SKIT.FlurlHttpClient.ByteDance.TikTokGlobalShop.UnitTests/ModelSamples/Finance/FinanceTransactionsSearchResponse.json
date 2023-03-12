@@ -1,0 +1,18 @@
+{
+    "code": 0,
+    "data": {
+        "more": false,
+        "total": 1,
+        "transaction_list": [
+            {
+                "transaction_amount": "10",
+                "transaction_currency": "IDR",
+                "transaction_status": 1,
+                "transaction_time": 1639483861,
+                "transaction_type": 3
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

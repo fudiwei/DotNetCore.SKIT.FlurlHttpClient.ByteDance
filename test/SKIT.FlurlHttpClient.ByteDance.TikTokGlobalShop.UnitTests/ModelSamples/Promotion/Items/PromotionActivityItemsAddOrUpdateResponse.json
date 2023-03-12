@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "item_count": 1,
+        "promotion_id": "7136104309380417282",
+        "request_serial_no": "b57be407-6344-4942-bef6-3ef63d81d5b1",
+        "status": 2,
+        "title": "DiscountPromotion",
+        "update_time": 1661756811
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

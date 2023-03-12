@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public virtual string? LogId { get; set; }
 
         /// <summary>
-        /// 获取一个值，该值指示调用字节小程序 API 是否成功（即 HTTP 状态码为 200、且 `errcode` 值为 0）。
+        /// 获取一个值，该值指示调用字节小程序 API 是否成功（即 HTTP 状态码为 200、且 "errcode" 值为 0）。
         /// </summary>
         /// <returns></returns>
         public virtual bool IsSuccessful()

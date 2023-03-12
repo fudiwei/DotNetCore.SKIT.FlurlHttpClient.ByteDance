@@ -8,18 +8,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     public class FinanceTransactionsSearchRequest : TikTokShopRequest
     {
         /// <summary>
-        /// 获取或设置请求时间范围起始时间戳。
+        /// 获取或设置结算时间范围起始时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("request_time_from")]
         [System.Text.Json.Serialization.JsonPropertyName("request_time_from")]
-        public long? RequestTimestampFrom { get; set; }
+        public long? SettlementTimestampFrom { get; set; }
 
         /// <summary>
-        /// 获取或设置请求时间范围截止时间戳。
+        /// 获取或设置结算时间范围截止时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("request_time_to")]
         [System.Text.Json.Serialization.JsonPropertyName("request_time_to")]
-        public long? RequestTimestampTo { get; set; }
+        public long? SettlementTimestampTo { get; set; }
 
         /// <summary>
         /// 获取或设置交易类型列表。

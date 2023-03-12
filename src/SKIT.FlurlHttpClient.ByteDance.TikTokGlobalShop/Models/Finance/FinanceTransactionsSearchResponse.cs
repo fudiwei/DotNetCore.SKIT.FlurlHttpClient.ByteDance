@@ -38,9 +38,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// 获取或设置退款金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("transaction_amount")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("transaction_amount")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                         public decimal Amount { get; set; }
 
                         /// <summary>

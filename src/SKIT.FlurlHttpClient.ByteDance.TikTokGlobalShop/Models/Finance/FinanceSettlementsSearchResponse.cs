@@ -28,225 +28,200 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// 获取或设置用户支付金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("user_pay")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("user_pay")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal UserPaidAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台促销金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_promotion")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_promotion")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal PlatformPromotionAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置退款金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("refund")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("refund")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal RefundAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置支付服务费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("payment_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("payment_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal PaymentFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置交易服务费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("transaction_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("transaction_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal TransactionFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置固定费用。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("flat_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("flat_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal FlatFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置销售费用。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sales_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sales_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SalesFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SFP 服务费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sfp_service_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("sfp_service_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SFPServiceFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运输费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal ShippingFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置小额订单费。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("small_order_fee")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("small_order_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SmallOrderFee { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台佣金。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_commission")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_commission")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal PlatformCommission { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置联盟佣金。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("affiliate_commission")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("affiliate_commission")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal AffiliateCommission { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置联盟服务商佣金。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("affiliate_partner_commission")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("affiliate_partner_commission")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal AffiliatePartnerCommission { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置增值税。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("vat")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("vat")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal VAT { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品及服务税。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("gst")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("gst")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal GST { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运输补贴金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_subsidy")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_subsidy")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal ShippingFeeSubsidyAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置卖方原因扣除金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("seller_reason_fund_deduction")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_reason_fund_deduction")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SellerReasonFundDeductionAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运费调整金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_adjustment")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_adjustment")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal ShippingFeeAdjustmentAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置促销调整金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("promotion_adjustment")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("promotion_adjustment")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal PromotionAdjustmentAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置其他调整金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("other_adjustment")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("other_adjustment")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal OtherAdjustmentAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置冲正金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("charge_back")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("charge_back")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal ChargeBackAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置客服补偿金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("customer_service_compensation")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("customer_service_compensation")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal CustomerServiceCompensationAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置扣除卖家优惠后小计金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("subtotal_after_seller_discounts")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("subtotal_after_seller_discounts")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SubtotalAfterSellerDiscountAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置去除卖家优惠后退款小计金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("refund_subtotal_after_seller_discounts")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("refund_subtotal_after_seller_discounts")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SubtotalAfterSellerDiscountRefundAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置结算金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("settlement_amount")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.CurrencyDecimalConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("settlement_amount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.CurrencyDecimalConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
                                 public decimal SettlementAmount { get; set; }
 
                                 /// <summary>

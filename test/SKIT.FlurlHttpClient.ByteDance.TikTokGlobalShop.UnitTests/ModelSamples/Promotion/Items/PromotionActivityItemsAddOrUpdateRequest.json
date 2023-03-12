@@ -1,0 +1,23 @@
+{
+    "product_list": [
+        {
+            "discount": "5",
+            "num_limit": -1,
+            "product_id": "7135427619356477189",
+            "promotion_price": "4.5",
+            "sku_list": [
+                {
+                    "discount": "10",
+                    "num_limit": -1,
+                    "product_id": "7135427619356477189",
+                    "promotion_price": "6.5",
+                    "sku_id": "7125688837187176194",
+                    "user_limit": 10
+                }
+            ],
+            "user_limit": -1
+        }
+    ],
+    "promotion_id": "7136104309380418000",
+    "request_serial_no": "b57be407-6344-4942-bef6-3ef63d81d5b1"
+}

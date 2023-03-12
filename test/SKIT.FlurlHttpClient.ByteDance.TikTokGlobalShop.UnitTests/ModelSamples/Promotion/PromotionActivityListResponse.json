@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": {
+        "promotion_list": [
+            {
+                "begin_time": 1661756811,
+                "create_time": 1661756811,
+                "end_time": 1661766811,
+                "product_type": 2,
+                "promotion_id": "7136104309380351746",
+                "promotion_type": 1,
+                "status": 1,
+                "title": "Discount Title001",
+                "update_time": 1661756811
+            }
+        ],
+        "total": 120
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

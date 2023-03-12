@@ -1,0 +1,25 @@
+{
+    "code": 0,
+    "data": {
+        "attributes": [
+            {
+                "attribute_type": 3,
+                "id": "100392",
+                "input_type": {
+                    "is_customized": true,
+                    "is_mandatory": true,
+                    "is_multiple_selected": true
+                },
+                "name": "Occasion",
+                "values": [
+                    {
+                        "id": "1001533",
+                        "name": "Birthday"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

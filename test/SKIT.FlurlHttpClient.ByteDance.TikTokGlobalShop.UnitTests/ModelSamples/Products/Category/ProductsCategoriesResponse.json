@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "data": {
+        "category_list": [
+            {
+                "id": "600001",
+                "is_leaf": false,
+                "local_display_name": "Home Supplies",
+                "parent_id": "0"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

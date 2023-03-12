@@ -1,0 +1,25 @@
+{
+    "code": 0,
+    "data": {
+        "category_rules": [
+            {
+                "exemption_of_identifier_code": {
+                    "support_identifier_code_exemption": true
+                },
+                "is_size_chart_mandatory": false,
+                "product_certifications": [
+                    {
+                        "id": "123456",
+                        "is_mandatory": true,
+                        "name": "product_cert_name",
+                        "sample": "example"
+                    }
+                ],
+                "support_cod": false,
+                "support_size_chart": true
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

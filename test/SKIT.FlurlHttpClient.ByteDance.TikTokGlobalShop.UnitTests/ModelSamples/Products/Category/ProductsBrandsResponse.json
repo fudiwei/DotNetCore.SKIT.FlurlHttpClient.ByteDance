@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "data": {
+        "brand_list": [
+            {
+                "authorized_status": 2,
+                "id": "7082427311584347905",
+                "name": "TestCase-Authorization"
+            }
+        ],
+        "total_num": 10000
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

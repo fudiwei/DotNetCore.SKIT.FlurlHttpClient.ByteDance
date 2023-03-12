@@ -172,11 +172,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public string PhoneNumber { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置姓名。
+                                /// 获取或设置联系人姓名。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string ContactName { get; set; } = default!;
 
                                 /// <summary>
                                 /// 获取或设置邮编。
@@ -502,14 +502,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public long? ReadyToShipTimestamp { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置运输供应商 ID。
+                                /// 获取或设置运输服务商 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_provider_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_id")]
                                 public string? ShippingProviderId { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置运输供应商名称。
+                                /// 获取或设置运输服务商名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_provider_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_name")]
@@ -589,28 +589,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public Types.SKU[] SKUList { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置发货方式。
+                        /// 获取或设置配送方式。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_option")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_option")]
                         public string DeliveryOption { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置发货方式类型。
+                        /// 获取或设置配送方式类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_option_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_type")]
                         public int DeliveryOptionType { get; set; }
 
                         /// <summary>
-                        /// 获取或设置发货方式描述。
+                        /// 获取或设置配送方式描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_option_description")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_description")]
                         public string? DeliveryOptionDescription { get; set; }
 
                         /// <summary>
-                        /// 获取或设置发货方式 ID。
+                        /// 获取或设置配送方式 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_option_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_id")]
@@ -624,14 +624,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public long? DeliverySLATimestamp { get; set; }
 
                         /// <summary>
-                        /// 获取或设置运输供应商。
+                        /// 获取或设置运输服务商。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shipping_provider")]
                         [System.Text.Json.Serialization.JsonPropertyName("shipping_provider")]
                         public string? ShippingProvider { get; set; }
 
                         /// <summary>
-                        /// 获取或设置运输供应商 ID。
+                        /// 获取或设置运输服务商 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shipping_provider_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_id")]

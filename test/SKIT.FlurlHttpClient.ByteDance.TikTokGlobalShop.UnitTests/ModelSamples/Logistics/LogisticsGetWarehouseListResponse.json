@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "data": {
+        "warehouse_list": [
+            {
+                "is_default": true,
+                "warehouse_address": {
+                    "city": "Aceh Jaya",
+                    "contact_person": "wbx",
+                    "district": "Panga",
+                    "full_address": "",
+                    "phone": "6966507629925778438",
+                    "region": "Republic of Indonesia",
+                    "region_code": "ID",
+                    "state": "Aceh",
+                    "town": "Alue Pande",
+                    "zipcode": "23683"
+                },
+                "warehouse_effect_status": 1,
+                "warehouse_id": "7000714532876273410",
+                "warehouse_name": "Maomao beauty shop",
+                "warehouse_status": 1,
+                "warehouse_sub_type": 1,
+                "warehouse_type": 1
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

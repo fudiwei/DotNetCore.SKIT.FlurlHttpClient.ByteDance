@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public int? OrderStatus { get; set; }
 
         /// <summary>
-        /// 获取或设置发货方式类型。
+        /// 获取或设置配送方式类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("delivery_option_type")]
         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_type")]

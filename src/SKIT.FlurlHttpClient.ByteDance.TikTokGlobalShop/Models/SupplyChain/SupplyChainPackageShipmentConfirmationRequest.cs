@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public string TrackingNumber { get; set; } = string.Empty;
 
                 /// <summary>
-                /// 获取或设置发货方式名称。
+                /// 获取或设置配送方式名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("delivery_option_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("delivery_option_name")]

@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "data": {
+        "warehouse_list": [
+            {
+                "warehouse_delivery": [
+                    {
+                        "delivery_option": 1,
+                        "service_id": "",
+                        "service_name": "LSV-Standard-PH"
+                    }
+                ],
+                "warehouse_id": "7000714532876273410"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

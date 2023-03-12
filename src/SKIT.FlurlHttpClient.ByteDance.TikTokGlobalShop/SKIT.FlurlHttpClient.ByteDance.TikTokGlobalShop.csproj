@@ -13,7 +13,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
-        <PackageTags>Flurl.Http ByteDance TikTok TikTokShop 字节 字节跳动 抖音国际版 抖音国际版电商 抖音跨境电商</PackageTags>
+        <PackageTags>Flurl.Http ByteDance TikTok TikTokShop TikTokShopPartner TikTokShopOpenPlatform TikTokShopOpenAPI TTS TTSPartner TTSOpenPlatform TTSOpenAPI 字节 字节跳动 抖音国际版 抖音国际版电商 抖音跨境电商 抖音跨境电商开放平台</PackageTags>
         <Description>
             基于 Flurl.Http 的 TikTok Shop OpenAPI 客户端。
             The TikTok Shop OpenAPI SDK for .NET. (Offical Website: https://partner.tiktokshop.com/)

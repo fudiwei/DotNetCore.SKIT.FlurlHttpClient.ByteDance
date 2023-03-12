@@ -7,7 +7,7 @@
 [![Vistors](https://visitor-badge.laobi.icu/badge?page_id=fudiwei.DotNetCore.SKIT.FlurlHttpClient.ByteDance&title=Visitors)](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance)
 [![License](https://img.shields.io/github/license/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance?label=License)](https://mit-license.org/)
 
-基于 `Flurl.Http` 的字节跳动 HTTP API SDK，目前已包含字节小程序开放平台、抖音开放平台、抖店开放平台、巨量引擎开放平台、TikTok Developer、TikTok Shop 等模块。
+基于 `Flurl.Http` 的字节跳动 HTTP API SDK，目前已包含字节小程序开放平台、抖音开放平台、抖店开放平台、巨量引擎开放平台、TikTok Developer、TikTok Shop Open Platform 等模块。
 
 > 更多 SKIT.FlurlHttpClient 系列开发工具包请[点此查看](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient)。
 
@@ -35,7 +35,7 @@
 |   抖店开放平台（今日特卖、放心购）   |                                                                                                                                                                                                  _已停止维护_                                                                                                                                                                                                  |    [开发文档](./docs/DouyinShop/README.md)     |
 |     巨量引擎开放平台（头条广告）     |                                                                                                                                                                                                    _开发中_                                                                                                                                                                                                    |                                                |
 |           TikTok Developer           | [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal) | [Documentation](./docs/TikTokGlobal/README.md) |
-|             TikTok Shop              |                                                                                                                                                                                                    _开发中_                                                                                                                                                                                                    |                                                |
+|      TikTok Shop Open Platform       |                                                                                                                                                                                                  _On the way_                                                                                                                                                                                                  |                                                |
 
 ---
 

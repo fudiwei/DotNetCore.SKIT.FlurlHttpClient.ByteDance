@@ -10,9 +10,9 @@
 
 ### 【功能特性】
 
--   基于 TikTok Shop OpenAPI 封装。
+-   基于 TikTok Shop Open Platform API 封装。
 -   请求时自动生成签名，无需开发者手动干预。
--   提供了 TikTok Shop 所需的 HMAC-SHA-256 等算法工具类。
+-   提供了 HMAC-SHA-256 等算法工具类。
 
 ### 【开发文档】
 

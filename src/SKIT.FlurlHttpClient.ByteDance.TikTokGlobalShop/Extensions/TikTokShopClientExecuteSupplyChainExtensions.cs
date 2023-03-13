@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.SupplyChainPackageShipmentConfirmationResponse> ExecuteSupplyChainPackageShipmentConfirmationAsync(this TikTokShopClient client, Models.SupplyChainPackageShipmentConfirmationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.SupplyChainSyncPackageFulfillmentDataResponse> ExecuteSupplyChainSyncPackageFulfillmentDataAsync(this TikTokShopClient client, Models.SupplyChainSyncPackageFulfillmentDataRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.SupplyChainPackageShipmentConfirmationResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.SupplyChainSyncPackageFulfillmentDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

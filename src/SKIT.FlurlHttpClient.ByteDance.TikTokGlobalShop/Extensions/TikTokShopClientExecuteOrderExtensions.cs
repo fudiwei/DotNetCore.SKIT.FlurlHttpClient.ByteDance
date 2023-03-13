@@ -7,76 +7,74 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
-    public static class TikTokShopClientExecuteFinanceExtensions
+    public static class TikTokShopClientExecuteOrderExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /finance/transactions/search 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262881 </para>
+        /// <para>异步调用 [POST] /orders/search 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262815 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.FinanceSearchTransactionsResponse> ExecuteFinanceSearchTransactionsAsync(this TikTokShopClient client, Models.FinanceSearchTransactionsRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OrderSearchOrdersResponse> ExecuteOrderSearchOrdersAsync(this TikTokShopClient client, Models.OrderSearchOrdersRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "finance", "transactions", "search")
+                .CreateRequest(request, HttpMethod.Post, "orders", "search")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.FinanceSearchTransactionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OrderSearchOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /finance/settlements/search 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262880 </para>
+        /// <para>异步调用 [POST] /orders/detail/query 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262814 </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.FinanceSearchSettlementsResponse> ExecuteFinanceSearchSettlementsAsync(this TikTokShopClient client, Models.FinanceSearchSettlementsRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OrderGetOrderDetailResponse> ExecuteOrderGetOrderDetailAsync(this TikTokShopClient client, Models.OrderGetOrderDetailRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "finance", "settlements", "search")
+                .CreateRequest(request, HttpMethod.Post, "orders", "detail", "query")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.FinanceSearchSettlementsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OrderGetOrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /finance/order/settlements 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262880 </para>
+        /// <para>异步调用 [POST] /orders/rts 接口。</para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.FinanceGetOrderSettlementListResponse> ExecuteFinanceGetOrderSettlementListAsync(this TikTokShopClient client, Models.FinanceGetOrderSettlementListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OrderShipOrderResponse> ExecuteOrderShipOrderAsync(this TikTokShopClient client, Models.OrderShipOrderRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "finance", "order", "settlements")
+                .CreateRequest(request, HttpMethod.Post, "orders", "rts")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
-                .SetQueryParam("order_id", request.OrderId);
+                .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.FinanceGetOrderSettlementListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.OrderShipOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthTokenGetResponse> ExecuteAuthTokenGetAsync(this TikTokShopClient client, Models.AuthTokenGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthGetTokenResponse> ExecuteAuthGetTokenAsync(this TikTokShopClient client, Models.AuthGetTokenRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("grant_type", request.GrantType)
                 .SetQueryParam("auth_code", request.AuthorizedCode);
 
-            return await client.SendRequestWithJsonAsync<Models.AuthTokenGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AuthGetTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthTokenRefreshResponse> ExecuteAuthTokenRefreshAsync(this TikTokShopClient client, Models.AuthTokenRefreshRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthRefreshTokenResponse> ExecuteAuthRefreshTokenAsync(this TikTokShopClient client, Models.AuthRefreshTokenRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("grant_type", request.GrantType)
                 .SetQueryParam("refresh_token", request.RefreshToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AuthTokenRefreshResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.AuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

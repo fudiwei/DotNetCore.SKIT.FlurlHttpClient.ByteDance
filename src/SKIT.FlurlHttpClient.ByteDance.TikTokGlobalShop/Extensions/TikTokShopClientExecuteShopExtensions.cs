@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ShopGetAuthorizedShopResponse> ExecuteShopGetAuthorizedShopAsync(this TikTokShopClient client, Models.ShopGetAuthorizedShopRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ShopGetAuthorizedShopListResponse> ExecuteShopGetAuthorizedShopListAsync(this TikTokShopClient client, Models.ShopGetAuthorizedShopListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.ShopGetAuthorizedShopResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ShopGetAuthorizedShopListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

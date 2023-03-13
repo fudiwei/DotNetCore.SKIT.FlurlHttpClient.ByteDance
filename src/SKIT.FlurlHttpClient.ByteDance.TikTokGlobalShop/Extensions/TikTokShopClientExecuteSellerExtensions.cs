@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.SellerGlobalActiveShopsResponse> ExecuteSellerGlobalActiveShopsAsync(this TikTokShopClient client, Models.SellerGlobalActiveShopsRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.SellerGetGlobalActiveShopListResponse> ExecuteSellerGetGlobalActiveShopListAsync(this TikTokShopClient client, Models.SellerGetGlobalActiveShopListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.SellerGlobalActiveShopsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.SellerGetGlobalActiveShopListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.SellerManageGlobalProductCheckResponse> ExecuteSellerManageGlobalProductCheckAsync(this TikTokShopClient client, Models.SellerManageGlobalProductCheckRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.SellerCheckGlobalProductModeResponse> ExecuteSellerCheckGlobalProductModeAsync(this TikTokShopClient client, Models.SellerCheckGlobalProductModeRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.SellerManageGlobalProductCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.SellerCheckGlobalProductModeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

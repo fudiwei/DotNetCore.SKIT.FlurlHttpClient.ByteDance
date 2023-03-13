@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ReverseOrderListResponse> ExecuteReverseOrderListAsync(this TikTokShopClient client, Models.ReverseOrderListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ReverseSearchReverseOrdersResponse> ExecuteReverseSearchReverseOrdersAsync(this TikTokShopClient client, Models.ReverseSearchReverseOrdersRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseOrderListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ReverseSearchReverseOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ReverseRequestConfirmResponse> ExecuteReverseRequestConfirmAsync(this TikTokShopClient client, Models.ReverseRequestConfirmRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ReverseConfirmReverseRequestResponse> ExecuteReverseConfirmReverseRequestAsync(this TikTokShopClient client, Models.ReverseConfirmReverseRequestRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseRequestConfirmResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ReverseConfirmReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ReverseRequestRejectResponse> ExecuteReverseRequestRejectAsync(this TikTokShopClient client, Models.ReverseRequestRejectRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ReverseRejectReverseRequestResponse> ExecuteReverseRejectReverseRequestAsync(this TikTokShopClient client, Models.ReverseRejectReverseRequestRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseRequestRejectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ReverseRejectReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ReverseOrderCancelResponse> ExecuteReverseOrderCancelAsync(this TikTokShopClient client, Models.ReverseOrderCancelRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ReverseCancelOrderResponse> ExecuteReverseCancelOrderAsync(this TikTokShopClient client, Models.ReverseCancelOrderRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseOrderCancelResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ReverseCancelOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ReverseReasonListResponse> ExecuteReverseReasonListAsync(this TikTokShopClient client, Models.ReverseReasonListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ReverseGetRejectReasonListResponse> ExecuteReverseGetRejectReasonListAsync(this TikTokShopClient client, Models.ReverseGetRejectReasonListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -130,7 +130,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request.FulfillmentStatus != null)
                 flurlReq.SetQueryParam("fulfillment_status", request.FulfillmentStatus.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseReasonListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ReverseGetRejectReasonListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
     }
 }

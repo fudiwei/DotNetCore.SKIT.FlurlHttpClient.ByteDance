@@ -44,11 +44,11 @@ using SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop;
 using SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models;
 
 /* Example: Get Order List */
-var request = new OrdersSearchRequest()
+var request = new OrderSearchOrdersRequest()
 {
     ShopId = "${SHOP_ID}"
 };
-var response = await client.ExecuteOrdersSearchAsync(request);
+var response = await client.ExecuteOrderSearchOrdersAsync(request);
 if (response.IsSuccessful())
 {
     Console.WriteLine("Orders: " + response.Data.OrderList);

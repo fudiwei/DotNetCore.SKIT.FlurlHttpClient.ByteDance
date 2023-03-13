@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityListResponse> ExecutePromotionActivityListAsync(this TikTokShopClient client, Models.PromotionActivityListRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionSearchActivitiesResponse> ExecutePromotionSearchActivitiesAsync(this TikTokShopClient client, Models.PromotionSearchActivitiesRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionSearchActivitiesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityGetResponse> ExecutePromotionActivityGetAsync(this TikTokShopClient client, Models.PromotionActivityGetRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionGetActivityDetailResponse> ExecutePromotionGetActivityDetailAsync(this TikTokShopClient client, Models.PromotionGetActivityDetailRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("promotion_id", request.PromotionId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionGetActivityDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityCreateResponse> ExecutePromotionActivityCreateAsync(this TikTokShopClient client, Models.PromotionActivityCreateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionCreateActivityResponse> ExecutePromotionCreateActivityAsync(this TikTokShopClient client, Models.PromotionCreateActivityRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionCreateActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityUpdateResponse> ExecutePromotionActivityUpdateAsync(this TikTokShopClient client, Models.PromotionActivityUpdateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionUpdateActivityResponse> ExecutePromotionUpdateActivityAsync(this TikTokShopClient client, Models.PromotionUpdateActivityRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionUpdateActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityDeactivateResponse> ExecutePromotionActivityDeactivateAsync(this TikTokShopClient client, Models.PromotionActivityDeactivateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionDeactivateActivityResponse> ExecutePromotionDeactivateActivityAsync(this TikTokShopClient client, Models.PromotionDeactivateActivityRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -122,7 +122,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityDeactivateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionDeactivateActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         #region Items
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityItemsAddOrUpdateResponse> ExecutePromotionActivityItemsAddOrUpdateAsync(this TikTokShopClient client, Models.PromotionActivityItemsAddOrUpdateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionAddOrUpdateActivityItemsResponse> ExecutePromotionAddOrUpdateActivityItemsAsync(this TikTokShopClient client, Models.PromotionAddOrUpdateActivityItemsRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -146,7 +146,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityItemsAddOrUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionAddOrUpdateActivityItemsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.PromotionActivityItemsRemoveResponse> ExecutePromotionActivityItemsRemoveAsync(this TikTokShopClient client, Models.PromotionActivityItemsRemoveRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.PromotionRemoveActivityItemsResponse> ExecutePromotionRemoveActivityItemsAsync(this TikTokShopClient client, Models.PromotionRemoveActivityItemsRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -169,7 +169,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId);
 
-            return await client.SendRequestWithJsonAsync<Models.PromotionActivityItemsRemoveResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.PromotionRemoveActivityItemsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
         #endregion
     }

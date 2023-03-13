@@ -9,6 +9,240 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
     public static class TikTokShopClientExecuteProductsExtensions
     {
+        /// <summary>
+        /// <para>异步调用 [POST] /products/search 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262788 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsSearchResponse> ExecuteProductsSearchAsync(this TikTokShopClient client, Models.ProductsSearchRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products", "search")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsSearchResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /products/details 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262789 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsDetailsResponse> ExecuteProductsDetailsAsync(this TikTokShopClient client, Models.ProductsDetailsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Get, "products", "details")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId)
+                .SetQueryParam("product_id", request.ProductId);
+
+            if (request.RequireAuditVersion != null)
+                flurlReq.SetQueryParam("need_audit_version", request.RequireAuditVersion.Value ? "true" : "false");
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsDetailsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /products 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262784 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsCreateResponse> ExecuteProductsCreateAsync(this TikTokShopClient client, Models.ProductsCreateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [PUT] /products 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262784 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsUpdateResponse> ExecuteProductsUpdateAsync(this TikTokShopClient client, Models.ProductsUpdateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Put, "products")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [PUT] /products/stocks 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262787 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsStocksResponse> ExecuteProductsStocksAsync(this TikTokShopClient client, Models.ProductsStocksRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Put, "products", "stocks")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsStocksResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [PUT] /products/prices 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262793 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsPricesResponse> ExecuteProductsPricesAsync(this TikTokShopClient client, Models.ProductsPricesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Put, "products", "prices")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsPricesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [DELETE] /products 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262785 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsDeleteResponse> ExecuteProductsDeleteAsync(this TikTokShopClient client, Models.ProductsDeleteRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Delete, "products")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /products/recover 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262792 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsRecoverResponse> ExecuteProductsRecoverAsync(this TikTokShopClient client, Models.ProductsRecoverRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products", "recover")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsRecoverResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /products/activate 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262791 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsActivateResponse> ExecuteProductsActivateAsync(this TikTokShopClient client, Models.ProductsActivateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products", "activate")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsActivateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /products/inactivated_products 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262790 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductsDeactivateResponse> ExecuteProductsDeactivateAsync(this TikTokShopClient client, Models.ProductsDeactivateRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products", "inactivated_products")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductsDeactivateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Upload
         /// <summary>
         /// <para>异步调用 [POST] /products/upload_files 接口。</para>

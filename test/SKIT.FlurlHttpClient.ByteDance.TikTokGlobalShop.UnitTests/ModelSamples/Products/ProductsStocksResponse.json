@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "failed_skus": [
+            {
+                "failed_warehouse_ids": [ "7068517275539719942" ],
+                "id": "1729592969712207013"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

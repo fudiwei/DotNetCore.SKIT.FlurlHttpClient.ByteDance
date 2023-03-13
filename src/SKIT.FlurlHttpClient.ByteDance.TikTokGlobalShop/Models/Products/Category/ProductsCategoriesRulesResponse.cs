@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public bool IsSizeChartMandatory { get; set; }
 
                         /// <summary>
-                        /// 获取或设置 GTIN 信息。
+                        /// 获取或设置产品标识码豁免信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("exemption_of_identifier_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("exemption_of_identifier_code")]

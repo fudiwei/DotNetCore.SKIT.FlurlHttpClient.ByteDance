@@ -1,0 +1,38 @@
+{
+    "code": 0,
+    "data": {
+        "products": [
+            {
+                "create_time": 1234567890,
+                "global_sync_failed_reasons": [],
+                "id": "1729592969712207008",
+                "name": "product xxaa",
+                "sale_regions": [
+                    "ID"
+                ],
+                "skus": [
+                    {
+                        "id": "1729592969712207012",
+                        "price": {
+                            "currency": "USD",
+                            "original_price": "9999",
+                            "price_include_vat": "10000"
+                        },
+                        "seller_sku": "seller sku xxaa",
+                        "stock_infos": [
+                            {
+                                "available_stock": 999,
+                                "warehouse_id": "7068517275539719942"
+                            }
+                        ]
+                    }
+                ],
+                "status": 4,
+                "update_time": 1234567800
+            }
+        ],
+        "total": 10000
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": {
+        "failed_product_ids": [
+            "1234567890"
+        ],
+        "failed_reasons": [
+            {
+                "product_id": "1234567890",
+                "status": [
+                    {
+                        "reason": "product open platform internal error",
+                        "status_code": 12019000
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

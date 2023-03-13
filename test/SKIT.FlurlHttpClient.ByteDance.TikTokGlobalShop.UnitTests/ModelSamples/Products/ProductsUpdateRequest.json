@@ -1,0 +1,88 @@
+{
+    "brand_id": "7082427311584347905",
+    "category_id": "600001",
+    "delivery_service_ids": [ "1729592969712203232" ],
+    "description": "<p>test</p>",
+    "exemption_of_identifier_code": {
+        "exemption_reason": "1"
+    },
+    "images": [
+        {
+            "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        }
+    ],
+    "is_cod_open": true,
+    "outer_product_id": "172959296971220004",
+    "package_dimension_unit": "metric",
+    "package_height": 11,
+    "package_length": 10,
+    "package_weight": "1",
+    "package_width": 12,
+    "product_attributes": [
+        {
+            "attribute_id": "100392",
+            "attribute_values": [
+                {
+                    "value_id": "1001533",
+                    "value_name": "Birthday"
+                }
+            ]
+        }
+    ],
+    "product_certifications": [
+        {
+            "files": [
+                {
+                    "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                    "name": "xxx.PDF",
+                    "type": "PDF"
+                }
+            ],
+            "id": "123456",
+            "images": [
+                {
+                    "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                }
+            ]
+        }
+    ],
+    "product_id": "1729592969712207008",
+    "product_name": "Title-xxaa",
+    "product_video": {
+        "video_id": "v09e40f40000cfu0ovhc77ub7fl97k4w"
+    },
+    "size_chart": {
+        "img_id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+    },
+    "skus": [
+        {
+            "id": "1729592969712207013",
+            "original_price": "999",
+            "outer_sku_id": "1729592969712207012",
+            "product_identifier_code": {
+                "identifier_code": "12345678901234",
+                "identifier_code_type": 1
+            },
+            "sales_attributes": [
+                {
+                    "attribute_id": "100089",
+                    "attribute_name": "Specification",
+                    "custom_value": "XL",
+                    "sku_img": {
+                        "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                    },
+                    "value_id": "1729592969712207000"
+                }
+            ],
+            "seller_sku": "seller sku xxaa",
+            "stock_infos": [
+                {
+                    "available_stock": 999,
+                    "warehouse_id": "7068517275539719942"
+                }
+            ]
+        }
+    ],
+    "warranty_period": 1,
+    "warranty_policy": "warranty policy xxaa"
+}

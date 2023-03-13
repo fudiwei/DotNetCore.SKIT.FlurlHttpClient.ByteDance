@@ -137,11 +137,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public int? Weight { get; set; }
 
                 /// <summary>
-                /// 获取或设置长度单位。
+                /// 获取或设置尺寸单位。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("length_unit")]
                 [System.Text.Json.Serialization.JsonPropertyName("length_unit")]
-                public int? LengthUnit { get; set; }
+                public int? DimensionUnit { get; set; }
 
                 /// <summary>
                 /// 获取或设置重量单位。

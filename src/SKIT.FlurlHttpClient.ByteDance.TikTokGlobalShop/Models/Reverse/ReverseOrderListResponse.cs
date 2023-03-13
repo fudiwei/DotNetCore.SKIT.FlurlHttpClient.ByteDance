@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public string SKUName { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置卖家 SKU 快照。
+                                /// 获取或设置卖家 SKU 信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("seller_sku")]
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_sku")]

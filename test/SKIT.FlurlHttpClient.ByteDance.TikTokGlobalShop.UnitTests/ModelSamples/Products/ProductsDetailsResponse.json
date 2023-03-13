@@ -1,0 +1,159 @@
+{
+    "code": 0,
+    "data": {
+        "brand": {
+            "id": "7082427311584347905",
+            "name": "brand xxx aaa",
+            "status": 1
+        },
+        "category_list": [
+            {
+                "id": "600001",
+                "is_leaf": false,
+                "local_display_name": "category xxx aaa",
+                "parent_id": "0"
+            }
+        ],
+        "create_time": 1234567890,
+        "delivery_services": [
+            {
+                "delivery_option_name": "delivery xxaa",
+                "delivery_service_id": 1729592969712203300,
+                "delivery_service_status": true
+            }
+        ],
+        "description": "",
+        "exemption_of_identifier_code": {
+            "exemption_reason": "1"
+        },
+        "images": [
+            {
+                "height": 600,
+                "id": "",
+                "thumb_url_list": [ "" ],
+                "url_list": [ "" ],
+                "width": 600
+            }
+        ],
+        "is_cod_open": true,
+        "package_dimension_unit": "metric",
+        "package_height": "0",
+        "package_length": "0",
+        "package_weight": "0",
+        "package_width": "0",
+        "product_attributes": [
+            {
+                "id": "100392",
+                "name": "xxx xxx",
+                "values": [
+                    {
+                        "id": "1001533",
+                        "name": "Birthday"
+                    }
+                ]
+            }
+        ],
+        "product_certifications": [
+            {
+                "files": [
+                    {
+                        "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                        "list": [ "http:xxx.xxx.xxx" ],
+                        "name": "xxx.PDF",
+                        "type": "PDF"
+                    }
+                ],
+                "id": "123456",
+                "images": [
+                    {
+                        "height": 600,
+                        "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                        "thumb_url_list": [ "http:xxx.xxx.xxx" ],
+                        "url_list": [ "http:xxx.xxx.xxx" ],
+                        "width": 600
+                    }
+                ],
+                "title": "product certification xxxxxx"
+            }
+        ],
+        "product_id": "1729592969712207008",
+        "product_name": "Title-xxaa",
+        "product_status": 4,
+        "qc_reasons": [
+            {
+                "reason": "reason xxx xxx",
+                "sub_reasons": [ "sub reason xxx xxx" ]
+            }
+        ],
+        "size_chart": {
+            "height": 600,
+            "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+            "thumb_url_list": [ "http:xxx.xxx.xxx" ],
+            "url_list": [ "http:xxx.xxx.xxx" ],
+            "width": 600
+        },
+        "skus": [
+            {
+                "id": "",
+                "price": {
+                    "currency": "",
+                    "original_price": "0",
+                    "price_include_vat": "0"
+                },
+                "product_identifier_code": {
+                    "identifier_code": "",
+                    "identifier_code_type": "0"
+                },
+                "sales_attributes": [
+                    {
+                        "id": "",
+                        "name": "",
+                        "sku_img": {
+                            "height": "0",
+                            "id": "",
+                            "thumb_url_list": [ "" ],
+                            "url_list": [ "" ],
+                            "width": "0"
+                        },
+                        "value_id": "",
+                        "value_name": ""
+                    }
+                ],
+                "seller_sku": "",
+                "stock_infos": [
+                    {
+                        "available_stock": "0",
+                        "warehouse_id": ""
+                    }
+                ]
+            }
+        ],
+        "update_time": 1234567899,
+        "video": {
+            "duration": "0",
+            "id": "",
+            "media_type": "",
+            "post_url": "",
+            "video_infos": [
+                {
+                    "backup_url": "",
+                    "bitrate": "0",
+                    "file_hash": "",
+                    "format": "",
+                    "height": "0",
+                    "main_url": "",
+                    "size": "0",
+                    "url_expire": "0",
+                    "width": "0"
+                }
+            ]
+        },
+        "warranty_period": {
+            "warranty_description": "",
+            "warranty_id": ""
+        },
+        "warranty_policy": ""
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

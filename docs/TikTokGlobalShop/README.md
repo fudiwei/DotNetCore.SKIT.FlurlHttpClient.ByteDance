@@ -60,3 +60,9 @@ else
     Console.WriteLine("ErrorMessage: " + response.ErrorMessage);
 }
 ```
+
+---
+
+## Basic Usage
+
+-   [API Reference Manual.](./Basic_ModelDefinition.md)

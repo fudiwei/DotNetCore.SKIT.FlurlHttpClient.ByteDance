@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/bill 接口的响应。</para>
+    /// <para>表示 [GET] /apps/fund/bills 接口的响应。</para>
     /// </summary>
-    public class AppsBillResponse : ByteDanceMicroAppResponse
+    public class AppsFundBillsResponse : ByteDanceMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

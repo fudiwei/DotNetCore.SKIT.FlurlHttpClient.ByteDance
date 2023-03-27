@@ -1,11 +1,17 @@
-﻿/* @codestyle-disable no-jsonable-property-in-get */
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/bill 接口的请求。</para>
+    /// <para>表示 [GET] /apps/fund/bills 接口的请求。</para>
     /// </summary>
-    public class AppsBillRequest : ByteDanceMicroAppRequest
+    public class AppsFundBillsRequest : ByteDanceMicroAppRequest
     {
+        /// <summary>
+        /// 获取或设置小程序第三方平台应用 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? ComponentAppId { get; set; }
+
         /// <summary>
         /// 获取或设置小程序 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
@@ -21,25 +27,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string MerchantId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置开始时间字符串（格式：yyyyMMdd）。
+        /// 获取或设置账单日期字符串（格式：yyyyMMdd）。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string StartDateString { get; set; } = string.Empty;
+        public string DateString { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置结束时间字符串（格式：yyyyMMdd）。
+        /// 获取或设置账户类型。
+        /// <para>默认值：ALL</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string EndDateString { get; set; } = string.Empty;
+        public string AccountType { get; set; } = "ALL";
 
         /// <summary>
-        /// 获取或设置账单类型。
+        /// 获取或设置收支类型。
+        /// <para>默认值：ALL</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public int BillType { get; set; }
+        public string PaymentType { get; set; } = "ALL";
+
+        /// <summary>
+        /// 获取或设置交易类型。
+        /// <para>默认值：ALL</para>
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string TradeType { get; set; } = "ALL";
 
         /// <summary>
         /// 获取或设置签名。如果不指定将由系统自动生成。

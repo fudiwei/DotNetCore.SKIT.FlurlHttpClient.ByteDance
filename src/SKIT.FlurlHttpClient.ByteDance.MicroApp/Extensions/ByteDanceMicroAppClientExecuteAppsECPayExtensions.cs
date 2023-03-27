@@ -18,22 +18,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request == null) throw new ArgumentNullException(nameof(request));
 
             /*
-             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/appendix#%E8%AF%B7%E6%B1%82%E7%AD%BE%E5%90%8D%E7%AE%97%E6%B3%95
+             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/TE/#%E4%B8%89%E3%80%81%E7%AD%BE%E5%90%8D-demo
              */
 
             string json = client.JsonSerializer.Serialize(request);
             IList<string> tempList = new List<string>() { client.Credentials.ECPaySalt! };
             IDictionary<string, string> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(json)!;
 
-            foreach (var item in paramMap)
+            foreach (KeyValuePair<string, string> item in paramMap)
             {
                 string key = item.Key;
                 string? value = item.Value?.Trim();
 
-                if ("other_settle_params".Equals(key) ||
-                    "app_id".Equals(key) ||
+                if ("app_id".Equals(key) ||
                     "thirdparty_id".Equals(key) ||
-                    "sign".Equals(key))
+                    "sign".Equals(key) ||
+                    "other_settle_params".Equals(key))
                 {
                     continue;
                 }
@@ -51,8 +51,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 tempList.Add(value!);
             }
 
-            var tempArray = tempList.ToArray();
+            string[] tempArray = tempList.ToArray();
             Array.Sort(tempArray, StringComparer.Ordinal);
+
             string plainText = string.Join("&", tempArray);
             return Utilities.MD5Utility.Hash(plainText).ToLower();
         }

@@ -1,0 +1,25 @@
+{
+    "code": 0,
+    "data": {
+        "confirm_result_list": [
+            {
+                "confirm_result": true,
+                "pre_split_pkg_id": "123"
+            }
+        ],
+        "fail_list": [
+            {
+                "fail_reason": "fulfill unit freeze1",
+                "pre_split_pkg_id": "123"
+            }
+        ],
+        "success_list": [
+            {
+                "package_id": 223362377512830200,
+                "pre_split_pkg_id": "123"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "data": {
+        "more": false,
+        "next_cursor": "aDV5MXEyV1ZaVTlKUkdSTDlDdUlhc2xCNDhFVDMzMmpwdC8vZnJJblFkQzhHSUk9",
+        "pre_combine_pkg_list": [
+            {
+                "order_id_list": [
+                    "123",
+                    "233"
+                ],
+                "pre_combine_pkg_id": "1241251"
+            }
+        ],
+        "total": 10
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

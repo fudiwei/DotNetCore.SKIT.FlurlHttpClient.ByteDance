@@ -1,0 +1,18 @@
+{
+    "code": 0,
+    "data": {
+        "drop_off_point_url": "www.j&t.com",
+        "is_drop_off": true,
+        "is_pick_up": true,
+        "is_van_collection": true,
+        "pick_up_time_list": [
+            {
+                "avaliable": true,
+                "end_time": "1623812678",
+                "start_time": "1623812664"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

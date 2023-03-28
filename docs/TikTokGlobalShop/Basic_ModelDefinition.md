@@ -44,6 +44,23 @@ Naming Policies:
     -   Get Order Detail: `OrderGetOrderDetail`
     -   Get Order List: `OrderSearchOrders`
     -   Ship Order: `OrderShipOrder`
+-   Fulfillment
+    -   Verify Order Split: `FulfillmentVerifyOrderSplit`
+    -   Confirm Order Split: `FulfillmentConfirmOrderSplit`
+    -   Search Pre Combine Package: `FulfillmentSearchPreCombinePackages`
+    -   Get Package Shipping Document: `FulfillmentGetShippingDocument`
+    -   Update Package Shipping Info: `FulfillmentUpdateShippingInfo`
+    -   Get Package Shipping Info: `FulfillmentGetShippingInfo`
+    -   Search Package: `FulfillmentSearchPackages`
+    -   Ship Package: `FulfillmentShipPackage`
+    -   Get Package Pickup Config: `FulfillmentGetPackagePickupConfigList`
+    -   Remove Package Order: `FulfillmentRemovePackageOrders`
+    -   Confirm Precombine Package: `FulfillmentConfirmPreCombinePackage`
+    -   Get Package Detail: `FulfillmentGetPackageDetail`
+    -   Fulfillment Upload Image: `FulfillmentUploadImage`
+    -   Update Package Delivery Status: `FulfillmentUpdatePackageDeliveryStatus`
+    -   Fulfillment Upload File: `FulfillmentUploadFile`
+    -   Batch Ship Packages: `FulfillmentBatchShipPackage`
 -   Logistics
     -   Get Subscribed Delivery Options: `LogisticsGetSubscribedDeliveryOptions`
     -   Update Shipping Info: `LogisticsUpdateShippingInfo`

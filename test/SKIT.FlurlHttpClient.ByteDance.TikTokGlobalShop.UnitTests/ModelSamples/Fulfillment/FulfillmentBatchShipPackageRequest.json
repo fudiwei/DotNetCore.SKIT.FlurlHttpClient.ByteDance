@@ -1,0 +1,16 @@
+{
+    "package_list": [
+        {
+            "package_id": "1232131231243123213",
+            "pick_up": {
+                "pick_up_end_time": 1623812664,
+                "pick_up_start_time": 1623812664
+            },
+            "pick_up_type": 1,
+            "self_shipment": {
+                "shipping_provider_id": "6617675021119438849",
+                "tracking_number": "JX12345"
+            }
+        }
+    ]
+}

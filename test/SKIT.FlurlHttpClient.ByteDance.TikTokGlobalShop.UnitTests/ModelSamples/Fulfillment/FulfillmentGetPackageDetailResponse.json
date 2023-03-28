@@ -1,0 +1,40 @@
+{
+    "code": 0,
+    "data": {
+        "cancel_because_logistic_issue": 1,
+        "create_time": 1635338186,
+        "delivery_option": 1,
+        "note_tag": 1,
+        "order_info_list": [
+            {
+                "order_id": "123456",
+                "sku_list": [
+                    {
+                        "quantity": "5",
+                        "sku_id": "2729382476852921560",
+                        "sku_image": "https://p19-oec-sg.ibyteimg.com/tos-maliva-i-o3syd03w52-us/12345670c5480408aa668",
+                        "sku_name": "white,128g"
+                    }
+                ]
+            }
+        ],
+        "order_line_id_list": [
+            "1729382476852921560"
+        ],
+        "package_freeze_status": 100,
+        "package_id": 123456,
+        "package_status": 1,
+        "pick_up_end_time": 1635338186,
+        "pick_up_start_time": 1635338186,
+        "pick_up_type": 1,
+        "print_tag": 1,
+        "sc_tag": 1,
+        "shipping_provider": "TT Virtual express",
+        "shipping_provider_id": "6617675021119438849",
+        "sku_tag": 1,
+        "tracking_number": "6617675021119438849",
+        "update_time": 1635338186
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

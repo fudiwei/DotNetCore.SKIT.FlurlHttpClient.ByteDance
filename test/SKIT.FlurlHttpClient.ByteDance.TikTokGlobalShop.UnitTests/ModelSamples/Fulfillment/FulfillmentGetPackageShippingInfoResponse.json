@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "tracking_info_list": [
+            {
+                "description": "Your order was placed.",
+                "update_time": 1623812664
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "failed_package_list": [
+            {
+                "code": 21011010,
+                "message": "invalid pre-combine pkg",
+                "package_id": "123123123"
+            }
+        ],
+        "package_list": [
+            {
+                "order_id_list": [
+                    "123",
+                    "233"
+                ],
+                "package_id": "123123123"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

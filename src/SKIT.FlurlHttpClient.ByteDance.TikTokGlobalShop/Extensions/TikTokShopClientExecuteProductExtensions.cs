@@ -243,6 +243,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             return await client.SendRequestWithJsonAsync<Models.ProductDeactivateProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /products/save_draft 接口。</para>
+        /// <para>REF: https://partner.tiktokshop.com/doc/page/262808 </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductSaveProductDraftResponse> ExecuteProductSaveProductDraftAsync(this TikTokShopClient client, Models.ProductSaveProductDraftRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "products", "save_draft")
+                .SetQueryParam("app_key", client.Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId);
+
+            return await client.SendRequestWithJsonAsync<Models.ProductSaveProductDraftResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Upload
         /// <summary>
         /// <para>异步调用 [POST] /products/upload_files 接口。</para>

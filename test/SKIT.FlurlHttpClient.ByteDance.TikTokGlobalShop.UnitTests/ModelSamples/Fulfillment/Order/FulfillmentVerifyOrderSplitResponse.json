@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "data": {
+        "fail_list": [
+            {
+                "fail_reason": "fulfill unit freeze",
+                "order_id": "576462377512830168"
+            }
+        ],
+        "result_list": [
+            {
+                "order_id": "576462377512830168",
+                "verify_order_result": true
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

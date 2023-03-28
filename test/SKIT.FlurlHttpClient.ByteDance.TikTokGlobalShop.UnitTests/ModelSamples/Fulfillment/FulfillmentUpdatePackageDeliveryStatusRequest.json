@@ -1,0 +1,11 @@
+{
+    "delivery_packages": [
+        {
+            "delivery_type": 1,
+            "file_type": 1,
+            "file_url": "https://maellane.bytedance.net/wsos_v2/oec_fulfillment_doc_tts/o",
+            "package_id": "1152959872340240647",
+            "reason": 100
+        }
+    ]
+}

@@ -86,6 +86,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         }
 
         /// <summary>
+        /// 使用当前客户端生成一个新的 <see cref="IFlurlRequest"/> 对象，并添加公共查询参数。
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="method"></param>
+        /// <param name="urlSegments"></param>
+        /// <returns></returns>
+        protected internal IFlurlRequest CreateRequestWithCommonQueryParameters(TikTokShopRequest request, HttpMethod method, params object[] urlSegments)
+        {
+            return CreateRequest(request, method, urlSegments)
+                .SetQueryParam("app_key", Credentials.AppKey)
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("timestamp", request.Timestamp)
+                .SetQueryParam("shop_id", request.ShopId)
+                .SetQueryParam("version", request.ApiVersion);
+        }
+
+        /// <summary>
         /// 异步发起请求。
         /// </summary>
         /// <typeparam name="T"></typeparam>

@@ -1,0 +1,11 @@
+{
+    "pre_combine_pkg_list": [
+        {
+            "order_id_list": [
+                "123",
+                "233"
+            ],
+            "pre_combine_pkg_id": "123"
+        }
+    ]
+}

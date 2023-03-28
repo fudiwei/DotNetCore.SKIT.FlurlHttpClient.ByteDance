@@ -13,13 +13,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         public virtual int? Timeout { get; set; }
 
         /// <summary>
-        /// 获取或设置店铺 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public virtual string? ShopId { get; set; }
-
-        /// <summary>
         /// 获取或设置接口调用凭证。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
@@ -32,5 +25,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public virtual long? Timestamp { get; set; }
+
+        /// <summary>
+        /// 获取或设置店铺 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual string? ShopId { get; set; }
+
+        /// <summary>
+        /// 获取或设置 API 版本号。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public virtual int? ApiVersion { get; set; }
     }
 }

@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+        "fail_packages_list": [
+            {
+                "fail_code": 10007014,
+                "fail_reason": "fulfillment not allow rts",
+                "package_id": "1231231231231313123132"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

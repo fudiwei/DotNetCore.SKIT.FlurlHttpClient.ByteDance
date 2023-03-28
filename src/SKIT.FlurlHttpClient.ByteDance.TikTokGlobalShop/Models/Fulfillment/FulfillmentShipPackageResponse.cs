@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /supply_chain/package_shipment_confirmation 接口的响应。</para>
+    /// <para>表示 [POST] /fulfillment/rts 接口的响应。</para>
     /// </summary>
-    public class SupplyChainSyncPackageFulfillmentDataResponse : TikTokShopResponse<SupplyChainSyncPackageFulfillmentDataResponse.Types.Data>
+    public class FulfillmentShipPackageResponse : TikTokShopResponse<FulfillmentShipPackageResponse.Types.Data>
     {
         public static class Types
         {
@@ -22,6 +22,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public string PackageId { get; set; } = default!;
 
                         /// <summary>
+                        /// 获取或设置失败原因编码。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("fail_code")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fail_code")]
+                        public int FailReasonCode { get; set; }
+
+                        /// <summary>
                         /// 获取或设置失败原因。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("fail_reason")]
@@ -31,18 +38,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
 
                 /// <summary>
-                /// 获取或设置导入失败的包裹列表。
+                /// 获取或设置失败包裹列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("failed_package_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("failed_package_list")]
+                [Newtonsoft.Json.JsonProperty("fail_packages")]
+                [System.Text.Json.Serialization.JsonPropertyName("fail_packages")]
                 public Types.FailedPackage[] FailedPackageList { get; set; } = default!;
-
-                /// <summary>
-                /// 获取或设置导入成功的包裹 ID 列表。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("success_package_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("success_package_list")]
-                public string[] SucceededPackageList { get; set; } = default!;
             }
         }
     }

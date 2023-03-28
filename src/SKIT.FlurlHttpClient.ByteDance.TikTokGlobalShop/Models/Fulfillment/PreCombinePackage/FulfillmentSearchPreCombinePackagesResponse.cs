@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /orders/search 接口的响应。</para>
+    /// <para>表示 [GET] /fulfillment/pre_combine_pkg/list 接口的响应。</para>
     /// </summary>
-    public class OrderSearchOrdersResponse : TikTokShopResponse<OrderSearchOrdersResponse.Types.Data>
+    public class FulfillmentSearchPreCombinePackagesResponse : TikTokShopResponse<FulfillmentSearchPreCombinePackagesResponse.Types.Data>
     {
         public static class Types
         {
@@ -11,38 +11,31 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class Order
+                    public class PreCombinePackage
                     {
                         /// <summary>
-                        /// 获取或设置订单 ID。
+                        /// 获取或设置预合包 ID。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_id")]
+                        [Newtonsoft.Json.JsonProperty("pre_combine_pkg_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("pre_combine_pkg_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
-                        public string OrderId { get; set; } = default!;
+                        public string PreCombinePackageId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置订单状态。
+                        /// 获取或设置订单 ID 列表。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_status")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                        public int OrderStatus { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置更新时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("update_time")]
-                        [System.Text.Json.Serialization.JsonPropertyName("update_time")]
-                        public long UpdateTimestamp { get; set; }
+                        [Newtonsoft.Json.JsonProperty("order_id_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("order_id_list")]
+                        public string[] OrderIdList { get; set; } = default!;
                     }
                 }
 
                 /// <summary>
-                /// 获取或设置订单列表。
+                /// 获取或设置预合包列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("order_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("order_list")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("pre_combine_pkg_list")]
+                [System.Text.Json.Serialization.JsonPropertyName("pre_combine_pkg_list")]
+                public Types.PreCombinePackage[] PreCombinePackageList { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置总数量。

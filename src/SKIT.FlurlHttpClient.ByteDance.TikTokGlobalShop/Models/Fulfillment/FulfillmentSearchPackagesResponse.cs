@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /orders/search 接口的响应。</para>
+    /// <para>表示 [POST] /fulfillment/search 接口的响应。</para>
     /// </summary>
-    public class OrderSearchOrdersResponse : TikTokShopResponse<OrderSearchOrdersResponse.Types.Data>
+    public class FulfillmentSearchPackagesResponse : TikTokShopResponse<FulfillmentSearchPackagesResponse.Types.Data>
     {
         public static class Types
         {
@@ -11,22 +11,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class Order
+                    public class Package
                     {
                         /// <summary>
-                        /// 获取或设置订单 ID。
+                        /// 获取或设置包裹 ID。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_id")]
+                        [Newtonsoft.Json.JsonProperty("package_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("package_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
-                        public string OrderId { get; set; } = default!;
+                        public string PackageId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置订单状态。
+                        /// 获取或设置包裹状态。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_status")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                        public int OrderStatus { get; set; }
+                        [Newtonsoft.Json.JsonProperty("package_status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("package_status")]
+                        public int PackageStatus { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置创建时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("create_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("create_time")]
+                        public long CreateTimestamp { get; set; }
 
                         /// <summary>
                         /// 获取或设置更新时间戳。
@@ -38,11 +45,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
 
                 /// <summary>
-                /// 获取或设置订单列表。
+                /// 获取或设置包裹列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("order_list")]
-                [System.Text.Json.Serialization.JsonPropertyName("order_list")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("package_list")]
+                [System.Text.Json.Serialization.JsonPropertyName("package_list")]
+                public Types.Package[] PackageList { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置总数量。

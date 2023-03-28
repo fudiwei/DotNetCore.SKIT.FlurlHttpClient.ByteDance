@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [PUT] /products/prices 接口的响应。</para>
     /// </summary>
-    public class ProductUpdateProductPricesResponse : TikTokShopResponse<ProductUpdateProductPricesResponse.Types.Data>
+    public class ProductUpdateProductPriceResponse : TikTokShopResponse<ProductUpdateProductPriceResponse.Types.Data>
     {
         public static class Types
         {

@@ -1,0 +1,16 @@
+{
+    "global_product_id": "1729592969712208000",
+    "publishable_shops": [
+        {
+            "global_product_sku": [
+                {
+                    "available_stock": 100,
+                    "id": "1729592969712207400",
+                    "original_price": 1000,
+                    "warehouse_id": "6943575270695766000"
+                }
+            ],
+            "region": "ID"
+        }
+    ]
+}

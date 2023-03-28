@@ -1,0 +1,74 @@
+{
+    "category_id": "600006",
+    "description": "<p>test</p>",
+    "exemption_of_identifier_code": {
+        "exemption_reason": "1"
+    },
+    "global_product_id": "1729592969712208000",
+    "images": [
+        {
+            "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        }
+    ],
+    "package_height": 12,
+    "package_length": 10,
+    "package_weight": "1",
+    "package_width": 11,
+    "product_attributes": [
+        {
+            "attribute_id": "100392",
+            "attribute_values": [
+                {
+                    "value_id": "1001533",
+                    "value_name": "Birthday"
+                }
+            ]
+        }
+    ],
+    "product_certifications": [
+        {
+            "files": [
+                {
+                    "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                    "name": "xxx.PDF",
+                    "type": "PDF"
+                }
+            ],
+            "id": "6956745487312517000",
+            "images": [
+                {
+                    "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                }
+            ]
+        }
+    ],
+    "product_name": "xxx xxx",
+    "size_chart": {
+        "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+    },
+    "skus": [
+        {
+            "available_stock": 100,
+            "id": "1729592969712207400",
+            "product_identifier_code": {
+                "identifier_code": "12345678901234",
+                "identifier_code_type": 1
+            },
+            "sales_attributes": [
+                {
+                    "attribute_id": "100089",
+                    "attribute_name": "Specification",
+                    "custom_value": "XL",
+                    "sku_img": {
+                        "id": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                    },
+                    "value_id": "1729592969712207000"
+                }
+            ],
+            "seller_sku": "xxx xxx xxx",
+            "sku_price": "1000"
+        }
+    ],
+    "warranty_period": 1,
+    "warranty_policy": "xxx"
+}

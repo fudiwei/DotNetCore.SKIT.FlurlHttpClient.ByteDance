@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [PUT] /products/stocks 接口的响应。</para>
     /// </summary>
-    public class ProductUpdateProductStocksResponse : TikTokShopResponse<ProductUpdateProductStocksResponse.Types.Data>
+    public class ProductUpdateProductStockResponse : TikTokShopResponse<ProductUpdateProductStockResponse.Types.Data>
     {
         public static class Types
         {
@@ -18,6 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string SKUId { get; set; } = default!;
 
                         /// <summary>

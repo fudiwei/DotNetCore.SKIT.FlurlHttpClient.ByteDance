@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "failed_skus": [
+            {
+                "failed_code": 12019209,
+                "failed_msg": "sync local price error",
+                "global_sku_id": 1729592969712207400,
+                "local_sku_id": 1729592969712207400,
+                "region": "ID"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

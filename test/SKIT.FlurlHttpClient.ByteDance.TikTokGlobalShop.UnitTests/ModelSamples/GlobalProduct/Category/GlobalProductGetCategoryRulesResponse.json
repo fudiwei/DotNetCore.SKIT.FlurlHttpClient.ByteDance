@@ -1,0 +1,29 @@
+{
+    "code": 0,
+    "data": {
+        "category_rules": [
+            {
+                "product_certifications": [
+                    {
+                        "id": 6956745487312517000,
+                        "is_mandatory": true,
+                        "mandatory_regions": [
+                            "MY"
+                        ],
+                        "name": "xxx",
+                        "optional_regions": [
+                            "SG"
+                        ],
+                        "sample": "xxxxxxxxxxxxx"
+                    }
+                ],
+                "size_chart_rule": {
+                    "is_size_chart_mandatory": true
+                },
+                "support_size_chart": true
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

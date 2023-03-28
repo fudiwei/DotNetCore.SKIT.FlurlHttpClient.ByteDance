@@ -22,6 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("attribute_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string AttributeId { get; set; } = default!;
 
                                 /// <summary>
@@ -29,6 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("value_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("value_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                                 public string ValueId { get; set; } = default!;
                             }
                         }
@@ -45,14 +47,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string SKUId { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置销售属性列表。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("sales_attributes")]
-                        [System.Text.Json.Serialization.JsonPropertyName("sales_attributes")]
-                        public Types.SalesAttribute[] SalesAttributeList { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置卖家 SKU 信息。
@@ -60,6 +56,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("seller_sku")]
                         [System.Text.Json.Serialization.JsonPropertyName("seller_sku")]
                         public string? SellerSKU { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置销售属性列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("sales_attributes")]
+                        [System.Text.Json.Serialization.JsonPropertyName("sales_attributes")]
+                        public Types.SalesAttribute[] SalesAttributeList { get; set; } = default!;
                     }
                 }
 
@@ -68,6 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                 public string ProductId { get; set; } = default!;
 
                 /// <summary>

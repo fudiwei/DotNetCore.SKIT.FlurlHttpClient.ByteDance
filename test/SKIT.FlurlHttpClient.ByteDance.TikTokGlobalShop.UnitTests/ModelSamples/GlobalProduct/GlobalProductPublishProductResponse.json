@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "data": {
+        "publish_list": [
+            {
+                "local_product_id": 1729592969712208000,
+                "local_product_publish_result": 1,
+                "shop_id": 7494566841246124000,
+                "shop_region": "ID",
+                "skus": [
+                    {
+                        "global_sku_id": 1729592969712207400,
+                        "local_sale_attributes": [
+                            {
+                                "attribute_id": 100089,
+                                "value_id": 1729592969712207000
+                            }
+                        ],
+                        "local_seller_sku": "xxx xxx xxx",
+                        "local_sku_id": 1729592969712207400
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

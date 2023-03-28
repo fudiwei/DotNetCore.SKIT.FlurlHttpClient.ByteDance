@@ -1,0 +1,20 @@
+{
+    "code": 0,
+    "data": {
+        "global_product_id": 1729592969712207000,
+        "skus": [
+            {
+                "global_sku_id": 1729592969712207000,
+                "sales_attributes": [
+                    {
+                        "attribute_id": 100089,
+                        "value_id": 1729592969712207000
+                    }
+                ],
+                "seller_sku": "seller sku xxaa"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

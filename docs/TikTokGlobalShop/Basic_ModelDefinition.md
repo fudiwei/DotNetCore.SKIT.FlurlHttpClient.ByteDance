@@ -28,13 +28,13 @@ Naming Policies:
     -   Create Product: `ProductCreateProduct`
     -   Delete Product: `ProductDeleteProducts`
     -   Edit Product: `ProductUpdateProduct`
-    -   Update Stock: `ProductUpdateProductStocks`
+    -   Update Stock: `ProductUpdateProductStock`
     -   Get Product List: `ProductSearchProducts`
     -   Get Product Detail: `ProductGetProductDetail`
     -   Deactivate Product: `ProductDeactivateProducts`
     -   Activate Product: `ProductActivateProducts`
     -   Recover Deleted Product: `ProductRecoverProducts`
-    -   Update Price: `ProductUpdateProductPrices`
+    -   Update Price: `ProductUpdateProductPrice`
     -   Get Categories: `ProductGetCategoryList`
     -   Get Brands: `ProductGetBrandList`
     -   Get Attributes: `ProductGetAttributeList`
@@ -78,6 +78,17 @@ Naming Policies:
     -   Get Settlements: `FinanceSearchSettlements`
     -   Get Transactions: `FinanceSearchTransactions`
     -   Get Order Settlements: `FinanceGetOrderSettlementList`
+-   Global Product
+    -   Create Global Product: `GlobalProductCreateProduct`
+    -   Get Global Product List: `GlobalProductSearchProducts`
+    -   Get Global Product Detail: `GlobalProductGetProductDetail`
+    -   Publish Global Product: `GlobalProductPublishProduct`
+    -   Update Global Product Price: `GlobalProductUpdateProductPrice`
+    -   Get Global Categories: `GlobalProductGetCategoryList`
+    -   Edit Global Product: `GlobalProductUpdateProduct`
+    -   Get Global Attributes: `GlobalProductGetAttributeList`
+    -   Get Global Category Rule: `GlobalProductGetCategoryRules`
+    -   Delete Global Product: `GlobalProductDeleteProducts`
 -   Promotion
     -   Update Basic Information: `PromotionUpdateActivity`
     -   Get Promotion List: `PromotionSearchActivities`

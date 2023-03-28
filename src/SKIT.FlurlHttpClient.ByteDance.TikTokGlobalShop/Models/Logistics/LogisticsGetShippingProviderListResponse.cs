@@ -79,6 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_option_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
                         public string DeliveryOptionId { get; set; } = default!;
 
                         /// <summary>

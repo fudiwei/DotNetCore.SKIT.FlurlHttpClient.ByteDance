@@ -1,0 +1,29 @@
+{
+    "code": 0,
+    "data": {
+        "local_product_info": [
+            {
+                "local_product_edit_result": 1,
+                "local_product_id": 1729592969712207000,
+                "local_product_region": "GB"
+            }
+        ],
+        "product_id": "1729592969712207922",
+        "skus": [
+            {
+                "global_sku_id": 1729592969712207400,
+                "seller_sku": "xxx xxx xxx",
+                "sku_property": [
+                    {
+                        "id": 100089,
+                        "name": "Specification",
+                        "value_id": 1729592969712207000,
+                        "value_name": "XL"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

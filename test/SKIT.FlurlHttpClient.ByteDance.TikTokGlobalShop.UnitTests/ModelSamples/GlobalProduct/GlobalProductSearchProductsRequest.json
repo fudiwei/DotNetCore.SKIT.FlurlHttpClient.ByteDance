@@ -1,0 +1,12 @@
+{
+    "create_time_from": 1234567880,
+    "create_time_to": 1234567889,
+    "page_number": 1,
+    "page_size": 100,
+    "seller_sku_list": [
+        "seller sku xxaa"
+    ],
+    "status": 1,
+    "update_time_from": 1234567890,
+    "update_time_to": 1234567899
+}

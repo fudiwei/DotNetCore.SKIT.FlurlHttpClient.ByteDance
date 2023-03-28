@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "global_products": [
+            {
+                "create_time": 1234567890,
+                "id": "1729592969712207008",
+                "name": "global product xxaa",
+                "skus": [
+                    {
+                        "id": "1729592969712207012",
+                        "seller_sku": "seller sku xxaa"
+                    }
+                ],
+                "status": 1,
+                "update_time": 1234567899
+            }
+        ],
+        "total": 9999
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

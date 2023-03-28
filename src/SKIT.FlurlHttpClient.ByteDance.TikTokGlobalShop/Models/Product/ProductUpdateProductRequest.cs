@@ -21,34 +21,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
             }
 
-            public class ProductCertification : ProductCreateProductRequest.Types.ProductCertification
-            {
-                public static new class Types
-                {
-                    public class Image : ProductCreateProductRequest.Types.ProductCertification.Types.Image
-                    {
-                    }
-
-                    public class File : ProductCreateProductRequest.Types.ProductCertification.Types.File
-                    {
-                    }
-                }
-
-                /// <summary>
-                /// 获取或设置图片列表。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("images")]
-                [System.Text.Json.Serialization.JsonPropertyName("images")]
-                public new IList<Types.Image>? ImageList { get; set; }
-
-                /// <summary>
-                /// 获取或设置文件列表。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("files")]
-                [System.Text.Json.Serialization.JsonPropertyName("files")]
-                public new IList<Types.File>? FileList { get; set; }
-            }
-
             public class SKU : ProductCreateProductRequest.Types.SKU
             {
                 public static new class Types
@@ -106,6 +78,34 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("product_identifier_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_identifier_code")]
                 public new Types.IdentifierCodeInfo? IdentifierCodeInfo { get; set; }
+            }
+
+            public class ProductCertification : ProductCreateProductRequest.Types.ProductCertification
+            {
+                public static new class Types
+                {
+                    public class Image : ProductCreateProductRequest.Types.ProductCertification.Types.Image
+                    {
+                    }
+
+                    public class File : ProductCreateProductRequest.Types.ProductCertification.Types.File
+                    {
+                    }
+                }
+
+                /// <summary>
+                /// 获取或设置图片列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("images")]
+                [System.Text.Json.Serialization.JsonPropertyName("images")]
+                public new IList<Types.Image>? ImageList { get; set; }
+
+                /// <summary>
+                /// 获取或设置文件列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("files")]
+                [System.Text.Json.Serialization.JsonPropertyName("files")]
+                public new IList<Types.File>? FileList { get; set; }
             }
 
             public class ProductAttribute : ProductCreateProductRequest.Types.ProductAttribute

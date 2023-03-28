@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductUpdateProductStocksResponse> ExecuteProductUpdateProductStocksAsync(this TikTokShopClient client, Models.ProductUpdateProductStocksRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductUpdateProductStockResponse> ExecuteProductUpdateProductStockAsync(this TikTokShopClient client, Models.ProductUpdateProductStockRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Put, "products", "stocks");
 
-            return await client.SendRequestWithJsonAsync<Models.ProductUpdateProductStocksResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ProductUpdateProductStockResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductUpdateProductPricesResponse> ExecuteProductUpdateProductPricesAsync(this TikTokShopClient client, Models.ProductUpdateProductPricesRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductUpdateProductPriceResponse> ExecuteProductUpdateProductPriceAsync(this TikTokShopClient client, Models.ProductUpdateProductPriceRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -124,7 +124,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Put, "products", "prices");
 
-            return await client.SendRequestWithJsonAsync<Models.ProductUpdateProductPricesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendRequestWithJsonAsync<Models.ProductUpdateProductPriceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
@@ -326,10 +326,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "products", "attributes");
-
-            if (request.CategoryId != null)
-                flurlReq.SetQueryParam("category_id", request.CategoryId);
+                .CreateRequest(request, HttpMethod.Get, "products", "attributes")
+                .SetQueryParam("category_id", request.CategoryId);
 
             return await client.SendRequestWithJsonAsync<Models.ProductGetAttributeListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

@@ -20,4 +20,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// </summary>
         public const string API_MINIGAME = "https://minigame.zijieapi.com/mgplatform/api";
     }
+
+    /// <summary>
+    /// 字节小程序直播小玩法 API 接口域名。
+    /// </summary>
+    public static class ByteDanceMicroAppWebcastEndpoints
+    {
+        /// <summary>
+        /// 主域名（默认）。
+        /// </summary>
+        public const string DEFAULT = "https://webcast.bytedance.com/api";
+    }
 }

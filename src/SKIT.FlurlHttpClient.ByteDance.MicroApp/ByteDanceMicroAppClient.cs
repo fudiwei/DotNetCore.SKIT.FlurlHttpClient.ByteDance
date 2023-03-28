@@ -17,6 +17,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public Settings.Credentials Credentials { get; }
 
         /// <summary>
+        /// 获取当前客户端使用的字节小程序 API 接入点。
+        /// </summary>
+        protected internal string Endpoint { get; }
+
+        /// <summary>
+        /// 获取当前客户端使用的字节小程序直播小玩法 API 接入点。
+        /// </summary>
+        protected internal string EndpointForWebcastAPI { get; }
+
+        /// <summary>
         /// 用指定的配置项初始化 <see cref="ByteDanceMicroAppClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
@@ -26,6 +36,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (options == null) throw new ArgumentNullException(nameof(options));
 
             Credentials = new Settings.Credentials(options);
+            Endpoint = options.Endpoint;
+            EndpointForWebcastAPI = options.EndpointForWebcastAPI;
 
             FlurlClient.BaseUrl = options.Endpoint ?? ByteDanceMicroAppEndpoints.API_MINIAPP;
             FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));

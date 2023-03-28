@@ -1,0 +1,22 @@
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "base_info": {
+        "link_id": "",
+        "total_count": 0,
+        "free_count": 0
+    },
+    "user_list": [
+        {
+            "open_id": "",
+            "sec_avatar_url": "",
+            "sec_nick_name": "",
+            "link_state": 1,
+            "link_position": 1,
+            "disable_microphone": 1,
+            "microphone_state": 1,
+            "disable_camera": 1,
+            "camera_state": 1
+        }
+    ]
+}

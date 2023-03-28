@@ -1,0 +1,5 @@
+{
+    "room_id": "123456",
+    "app_id": "your_app_id",
+    "sec_gift_id_list": [ "aa", "bb" ]
+}

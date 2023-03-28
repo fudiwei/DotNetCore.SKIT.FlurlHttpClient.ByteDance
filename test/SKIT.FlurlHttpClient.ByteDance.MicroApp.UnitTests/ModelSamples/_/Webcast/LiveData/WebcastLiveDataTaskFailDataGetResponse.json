@@ -1,0 +1,16 @@
+{
+    "err_no": 0,
+    "err_msg": "ok",
+    "logid": "20220927122238291",
+    "data": {
+        "page_num": 1,
+        "total_count": 100,
+        "data_list": [
+            {
+                "roomid": "12345",
+                "msg_type": "live_gift",
+                "payload": "[]"
+            }
+        ]
+    }
+}

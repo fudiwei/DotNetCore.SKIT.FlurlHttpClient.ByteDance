@@ -1,0 +1,7 @@
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "data": {
+        "success_top_gift_id_list": [ "aa", "bb" ]
+    }
+}

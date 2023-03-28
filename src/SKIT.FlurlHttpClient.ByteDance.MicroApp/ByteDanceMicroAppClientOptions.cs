@@ -18,6 +18,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public string Endpoint { get; set; } = ByteDanceMicroAppEndpoints.API_MINIAPP;
 
         /// <summary>
+        /// 获取或设置字节小程序直播小玩法 API 入口点。
+        /// <para>默认值：<see cref="ByteDanceMicroAppWebcastEndpoints.DEFAULT"/></para>
+        /// </summary>
+        public string EndpointForWebcastAPI { get; set; } = ByteDanceMicroAppWebcastEndpoints.DEFAULT;
+
+        /// <summary>
         /// 获取或设置字节小程序 AppId。
         /// </summary>
         public string AppId { get; set; } = default!;

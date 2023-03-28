@@ -23,11 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "search")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "search");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentSearchPackagesResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -47,10 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "fulfillment", "detail")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("package_id", request.PackageId);
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentGetPackageDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -71,10 +63,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "fulfillment", "shipping_info")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("package_id", request.PackageId);
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentGetPackageShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -95,10 +83,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "fulfillment", "shipping_document")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("package_id", request.PackageId)
                 .SetQueryParam("document_type", request.DocumentType);
 
@@ -122,11 +106,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "rts")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "rts");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentShipPackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -145,11 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "batch_rts")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "batch_rts");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentBatchShipPackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -169,10 +145,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "fulfillment", "package_pickup_config", "list")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("package_id", request.PackageId);
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentGetPackagePickupConfigResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -192,11 +164,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "shipping_info", "update")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "shipping_info", "update");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentUpdatePackageShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -215,11 +183,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "delivery")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "delivery");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentUpdatePackageDeliveryStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -239,11 +203,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "order_split", "verify")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "order_split", "verify");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentVerifyOrderSplitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -262,11 +222,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "order_split", "confirm")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "order_split", "confirm");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentConfirmOrderSplitResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -285,11 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "package", "remove")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "package", "remove");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentRemovePackageOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -311,10 +263,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "fulfillment", "pre_combine_pkg", "list")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("page_size", request.PageSize);
 
@@ -335,11 +283,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "pre_combine_pkg", "confirm")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "pre_combine_pkg", "confirm");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentConfirmPreCombinePackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -360,11 +304,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "uploadimage")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "uploadimage");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentUploadImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -383,11 +323,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "fulfillment", "uploadfile")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "fulfillment", "uploadfile");
 
             return await client.SendRequestWithJsonAsync<Models.FulfillmentUploadFileResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

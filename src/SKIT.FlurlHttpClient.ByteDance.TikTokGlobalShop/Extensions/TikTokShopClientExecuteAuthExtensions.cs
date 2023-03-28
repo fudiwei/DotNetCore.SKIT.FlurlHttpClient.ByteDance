@@ -25,6 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "token", "get")
                 .WithUrl($"{client.EndpointForAuthAPI}/token/get")
+                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)
@@ -50,6 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "token", "refresh")
                 .WithUrl($"{client.EndpointForAuthAPI}/token/refresh")
+                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)

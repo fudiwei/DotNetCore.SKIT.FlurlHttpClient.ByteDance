@@ -2,7 +2,6 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
@@ -23,11 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "supply_chain", "package_shipment_confirmation")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "supply_chain", "package_shipment_confirmation");
 
             return await client.SendRequestWithJsonAsync<Models.SupplyChainSyncPackageFulfillmentDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

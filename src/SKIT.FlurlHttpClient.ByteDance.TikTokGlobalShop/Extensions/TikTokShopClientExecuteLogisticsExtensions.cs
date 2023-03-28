@@ -23,11 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "logistics", "get_warehouse_list")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Get, "logistics", "get_warehouse_list");
 
             return await client.SendRequestWithJsonAsync<Models.LogisticsGetWarehouseListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -46,11 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "logistics", "get_subscribed_deliveryoptions")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "logistics", "get_subscribed_deliveryoptions");
 
             return await client.SendRequestWithJsonAsync<Models.LogisticsGetSubscribedDeliveryOptionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -69,11 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "logistics", "shipping_providers")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Get, "logistics", "shipping_providers");
 
             return await client.SendRequestWithJsonAsync<Models.LogisticsGetShippingProviderListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -93,10 +81,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "logistics", "shipping_document")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("order_id", request.OrderId)
                 .SetQueryParam("document_type", request.DocumentType);
 
@@ -121,10 +105,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "logistics", "ship", "get")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("order_id", request.OrderId);
 
             return await client.SendRequestWithJsonAsync<Models.LogisticsGetShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
@@ -145,10 +125,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Post, "logistics", "tracking")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("order_id", request.OrderId);
 
             return await client.SendRequestWithJsonAsync<Models.LogisticsUpdateShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);

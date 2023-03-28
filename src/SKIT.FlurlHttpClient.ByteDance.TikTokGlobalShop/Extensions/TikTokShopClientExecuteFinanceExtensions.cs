@@ -23,11 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "finance", "transactions", "search")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "finance", "transactions", "search");
 
             return await client.SendRequestWithJsonAsync<Models.FinanceSearchTransactionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -46,11 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "finance", "settlements", "search")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "finance", "settlements", "search");
 
             return await client.SendRequestWithJsonAsync<Models.FinanceSearchSettlementsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -70,10 +62,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "finance", "order", "settlements")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("order_id", request.OrderId);
 
             return await client.SendRequestWithJsonAsync<Models.FinanceGetOrderSettlementListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);

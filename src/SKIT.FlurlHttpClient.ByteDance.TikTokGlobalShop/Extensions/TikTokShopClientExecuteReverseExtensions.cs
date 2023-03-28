@@ -23,11 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_order", "list")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_order", "list");
 
             return await client.SendRequestWithJsonAsync<Models.ReverseSearchReverseOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -46,11 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "confirm")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "confirm");
 
             return await client.SendRequestWithJsonAsync<Models.ReverseConfirmReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -69,11 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "reject")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "reject");
 
             return await client.SendRequestWithJsonAsync<Models.ReverseRejectReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -92,11 +80,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "order", "cancel")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Post, "reverse", "order", "cancel");
 
             return await client.SendRequestWithJsonAsync<Models.ReverseCancelOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
@@ -115,11 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list")
-                .SetQueryParam("app_key", client.Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId);
+                .CreateRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list");
 
             if (request.ActionType != null)
                 flurlReq.SetQueryParam("reverse_action_type", request.ActionType.Value);

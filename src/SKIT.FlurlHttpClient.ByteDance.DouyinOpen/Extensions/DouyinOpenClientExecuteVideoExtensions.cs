@@ -153,7 +153,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /video/list 接口。</para>
+        /// <para>异步调用 [GET] /api/douyin/v1/video/video_list/ 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/account-video-list </para>
         /// </summary>
         /// <param name="client"></param>
@@ -166,7 +166,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "video", "list")
+                .CreateRequest(request, HttpMethod.Get, "api", "douyin", "v1", "video", "video_list/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /video/data 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/video_data/ 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-data </para>
         /// </summary>
         /// <param name="client"></param>
@@ -189,7 +189,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "data")
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "video_data/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 

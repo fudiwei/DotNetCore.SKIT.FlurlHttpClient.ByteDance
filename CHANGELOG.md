@@ -125,6 +125,14 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.3.0
+
+    -   **新增**：新增互动管理场景跳转相关接口。
+
+    -   **新增**：随官方更新查询授权账号视频列表、查询特定视频的视频数据、获取用户粉丝数据等接口地址。
+
+    -   **变更**：移除头条视频、西瓜视频相关接口。
+
 -   Release 2.2.1
 
     -   **修复**：修复生活服务开放能力门店信息查询接口响应模型定义错误。（_via_ [Gitee #I6IG50](https://gitee.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/issues/I6IG50)）

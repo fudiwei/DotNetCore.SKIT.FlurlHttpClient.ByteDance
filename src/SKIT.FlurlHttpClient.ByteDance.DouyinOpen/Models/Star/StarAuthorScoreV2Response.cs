@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [GET] /star/author_score_v2 接口的响应。</para>
@@ -14,7 +14,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("unique_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("unique_id")]
-                public string UniqueId { get; set; } = default!;
+                public string DouyinId { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置昵称。

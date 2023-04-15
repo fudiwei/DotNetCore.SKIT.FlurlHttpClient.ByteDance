@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("extra")]
         [System.Text.Json.Serialization.JsonPropertyName("extra")]
-        public virtual DouyinOpenResponseExtra Extra { get; set; } = default!;
+        public virtual DouyinOpenResponseExtra? Extra { get; set; }
 
         /// <summary>
         /// 获取抖音开放平台 API 返回的错误码。

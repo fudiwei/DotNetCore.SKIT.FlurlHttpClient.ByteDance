@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [POST] /poi/order/sync 接口的请求。</para>
@@ -24,7 +24,7 @@
                 public string? ShopId { get; set; }
             }
 
-            public class MiniApp
+            public class MicroApp
             {
                 /// <summary>
                 /// 获取或设置小程序 AppId。
@@ -75,6 +75,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("mini_app")]
         [System.Text.Json.Serialization.JsonPropertyName("mini_app")]
-        public Types.MiniApp? MiniApp { get; set; }
+        public Types.MicroApp? MicroApp { get; set; }
     }
 }

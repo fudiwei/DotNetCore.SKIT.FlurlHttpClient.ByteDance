@@ -1,0 +1,20 @@
+{
+    "client_ticket": "#N8vMF6eko0RZRN/c4KWBMG7YaFjDqQkx+bwU6gpO428lz6ad+NNKlTDCr7v3Vthje7ToUT/xGxxxxx",
+    "expire_at": 1684116049,
+    "hashtag_list": [
+        "hashtag1",
+        "hashtag2",
+        "hashtag3"
+    ],
+    "micro_app_info": {
+        "app_id": "ttef9b992670bxxxx",
+        "app_title": "小程序title",
+        "app_url": "pages/movie/index?utm_source=share_wxapp&cityId=10&cityName=%E4%B8%8A%E6%B5%B7",
+        "description": "小程序描述语"
+    },
+    "poi_id": "6678492553072936971",
+    "share_to_publish": 0,
+    "state": "1759435947641859",
+    "title": "测试视频",
+    "video_path": "https://xxxxx/over40M.mp4"
+}

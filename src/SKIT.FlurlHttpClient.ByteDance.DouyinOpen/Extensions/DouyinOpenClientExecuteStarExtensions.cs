@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "star", "author_score_v2")
-                .SetQueryParam("unique_id", request.UniqueId)
+                .SetQueryParam("unique_id", request.DouyinId)
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendRequestWithJsonAsync<Models.StarAuthorScoreV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);

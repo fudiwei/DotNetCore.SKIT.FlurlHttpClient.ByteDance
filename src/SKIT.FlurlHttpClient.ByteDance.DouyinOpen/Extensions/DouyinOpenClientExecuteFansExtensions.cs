@@ -80,7 +80,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /fans/data 接口。</para>
+        /// <para>异步调用 [GET] /api/douyin/v1/user/fans_data/ 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/fans-portrait-data/get-user-fans-data </para>
         /// </summary>
         /// <param name="client"></param>
@@ -93,9 +93,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "fans", "data")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateRequest(request, HttpMethod.Get, "api", "douyin", "v1", "user", "fans_data/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendRequestWithJsonAsync<Models.FansDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }

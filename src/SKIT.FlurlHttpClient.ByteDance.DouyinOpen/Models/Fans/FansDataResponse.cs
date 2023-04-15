@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /fans/data 接口的响应。</para>
+    /// <para>表示 [GET] /api/douyin/v1/user/fans_data/ 接口的响应。</para>
     /// </summary>
     public class FansDataResponse : DouyinOpenResponse<FansDataResponse.Types.Data>
     {

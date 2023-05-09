@@ -18,6 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseIMMessageSendResponse> ExecuteEnterpriseIMMessageSendAsync(this DouyinOpenClient client, Models.EnterpriseIMMessageSendRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -108,6 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsUserListResponse> ExecuteEnterpriseLeadsUserListAsync(this DouyinOpenClient client, Models.EnterpriseLeadsUserListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -137,6 +139,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsUserDetailResponse> ExecuteEnterpriseLeadsUserDetailAsync(this DouyinOpenClient client, Models.EnterpriseLeadsUserDetailRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -159,6 +162,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsUserActionListResponse> ExecuteEnterpriseLeadsUserActionListAsync(this DouyinOpenClient client, Models.EnterpriseLeadsUserActionListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -186,6 +190,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagListResponse> ExecuteEnterpriseLeadsTagListAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -209,6 +214,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagCreateResponse> ExecuteEnterpriseLeadsTagCreateAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagCreateRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -230,6 +236,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagUpdateResponse> ExecuteEnterpriseLeadsTagUpdateAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagUpdateRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -251,6 +258,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagDeleteResponse> ExecuteEnterpriseLeadsTagDeleteAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagDeleteRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -272,6 +280,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagUserListResponse> ExecuteEnterpriseLeadsTagUserListAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagUserListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -293,6 +302,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseLeadsTagUserUpdateResponse> ExecuteEnterpriseLeadsTagUserUpdateAsync(this DouyinOpenClient client, Models.EnterpriseLeadsTagUserUpdateRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

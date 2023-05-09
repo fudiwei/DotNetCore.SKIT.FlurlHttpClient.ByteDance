@@ -37,6 +37,7 @@ Naming Policies:
     -   Update Price: `ProductUpdateProductPrice`
     -   Get Categories: `ProductGetCategoryList`
     -   Get Brands: `ProductGetBrandList`
+    -   Create Brand: `ProductCreateBrand`
     -   Get Attributes: `ProductGetAttributeList`
     -   Get Category Rule: `ProductGetCategoryRules`
     -   Category Recommended: `ProductRecommendCategory`

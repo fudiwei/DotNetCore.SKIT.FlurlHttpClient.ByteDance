@@ -10,8 +10,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteVideoExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /video/upload 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/upload </para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/upload-video </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,9 +23,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "upload")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             if (request.VideoFileName == null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
@@ -38,8 +38,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /video/part/init 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-init-upload </para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/init_video_part_upload 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-part-upload-init </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -51,16 +51,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "part", "init")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "init_video_part_upload")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendRequestWithJsonAsync<Models.VideoPartInitializeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /video/part/upload 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-upload </para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video_part 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-part-upload </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -72,9 +72,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "part", "upload")
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video_part")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("upload_id", request.UploadId)
                 .SetQueryParam("part_number", request.PartNumber);
 
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /video/part/complete 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/complete_video_part_upload 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-accomplish-upload </para>
         /// </summary>
         /// <param name="client"></param>
@@ -102,17 +102,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "part", "complete")
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "complete_video_part_upload")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("upload_id", request.UploadId);
 
             return await client.SendRequestWithJsonAsync<Models.VideoPartCompleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /video/create 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/create-video </para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/create_video 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-create </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -124,32 +124,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "create")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_video")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendRequestWithJsonAsync<Models.VideoCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /video/delete 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/delete-video/delete </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.VideoDeleteResponse> ExecuteVideoDeleteAsync(this DouyinOpenClient client, Models.VideoDeleteRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "delete")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
-
-            return await client.SendRequestWithJsonAsync<Models.VideoDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
         /// <summary>

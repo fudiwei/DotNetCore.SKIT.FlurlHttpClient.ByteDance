@@ -40,6 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <summary>
         /// <para>生成抖音获取授权临时票据的 URL。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/web/permission </para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/douyin-get-permission-code </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>

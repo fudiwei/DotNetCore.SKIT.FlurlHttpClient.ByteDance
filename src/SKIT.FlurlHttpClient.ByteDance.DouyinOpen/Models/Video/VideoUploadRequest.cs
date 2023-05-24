@@ -3,7 +3,7 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /video/upload 接口的请求。</para>
+    /// <para>表示 [POST] /api/douyin/v1/video/upload_video 接口的请求。</para>
     /// </summary>
     public class VideoUploadRequest : DouyinOpenRequest
     {

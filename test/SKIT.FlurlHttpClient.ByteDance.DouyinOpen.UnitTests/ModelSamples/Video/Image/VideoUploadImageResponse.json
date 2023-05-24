@@ -1,0 +1,19 @@
+{
+    "extra": {
+        "logid": "202008121419360101980821035705926A",
+        "now": 1597213176393,
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    },
+    "data": {
+        "error_code": 0,
+        "description": "",
+        "image": {
+            "image_id": "@9VxVx/WTUc8oLGK3atFqTs7912buPvyEOpZwrGXicBIOPa/hjm3hclsVqTXHgl5uWzLAjmUFIYZSiYbeTyfjDHzZ0eB8qg8IAutr00Zd/EHaEc/kgyuawGEDO1******",
+            "width": 360,
+            "height": 360
+        }
+    }
+}

@@ -196,6 +196,57 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             return await client.SendRequestWithJsonAsync<Models.VideoSourceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        #region Image
+        /// <summary>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_image 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-image-text/image-upload </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoUploadImageResponse> ExecuteVideoUploadImageAsync(this DouyinOpenClient client, Models.VideoUploadImageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_image")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
+
+            if (request.ImageFileName == null)
+                request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".png";
+
+            if (request.ImageContentType == null)
+                request.ImageContentType = "image/png";
+
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageContentType!, formDataName: "image");
+            return await client.SendRequestAsync<Models.VideoUploadImageResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/create_image_text 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-image-text/create-image-text </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.VideoCreateImageTextResponse> ExecuteVideoCreateImageTextAsync(this DouyinOpenClient client, Models.VideoCreateImageTextRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_image_text")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
+
+            return await client.SendRequestWithJsonAsync<Models.VideoCreateImageTextResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+        #endregion
+
         #region Search
         /// <summary>
         /// <para>异步调用 [GET] /video/search 接口。</para>

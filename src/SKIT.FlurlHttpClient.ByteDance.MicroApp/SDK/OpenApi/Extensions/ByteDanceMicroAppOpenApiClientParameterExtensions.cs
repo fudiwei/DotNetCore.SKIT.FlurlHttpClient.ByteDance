@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
     {
         /// <summary>
         /// <para>生成第三方应用服务商授权 URL。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/authorization/admin </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/createlink </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="preAuthCode"></param>

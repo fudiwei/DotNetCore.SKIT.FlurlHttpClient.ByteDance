@@ -78,8 +78,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /v1/auth/retrieve 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/findauthorizationcode </para>
+        /// <para>异步调用 [POST] /v1/auth/retrieve 接口。</para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/findauthorizationcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "v1", "auth", "retrieve")
+                .CreateRequest(request, HttpMethod.Post, "v1", "auth", "retrieve")
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("authorization_appid", request.AuthorizerAppId);

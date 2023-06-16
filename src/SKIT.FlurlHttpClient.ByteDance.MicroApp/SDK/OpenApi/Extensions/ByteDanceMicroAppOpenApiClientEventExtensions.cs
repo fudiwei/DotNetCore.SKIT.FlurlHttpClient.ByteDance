@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Linq;
@@ -51,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             byte[] bIV = new byte[16];
             Array.Copy(bKey, bIV, 16);
 
-            using var aes = Aes.Create();
+            using Aes aes = Aes.Create();
             aes.KeySize = 256;
             aes.BlockSize = 128;
             aes.Mode = CipherMode.CBC;
@@ -59,31 +57,37 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             aes.Key = bKey;
             aes.IV = bIV;
 
-            using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
-            using (var ms = new MemoryStream())
-            using (var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Write))
+            using ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+            byte[] decryptedBytes = decryptor.TransformFinalBlock(bCipher, 0, bCipher.Length);
+
+            byte[] bytes = Decode(decryptedBytes);
+            const int RANDOM_BYTES_POS = 32;
+            // byte数组的第32、33、34、35个元素代表了消息体的真实字符个数，也就是长度
+            // 取32至35转大端序
+            var lengthArray = bytes.AsSpan().Slice(RANDOM_BYTES_POS, 4).ToArray().Reverse().ToArray();
+            // 将四个byte解析为一个32位的数字，数字的值也就是消息体的String格式下的长度
+            int msgLength = BitConverter.ToInt32(lengthArray, 0);
+
+            // 根据解析出来的消息体长度值，截取真实的消息体
+            byte[] contentBytes = new byte[msgLength];
+            int msgStartIndex = RANDOM_BYTES_POS + 4;
+            Array.Copy(bytes, msgStartIndex, contentBytes, 0, msgLength);
+            string content = Encoding.UTF8.GetString(contentBytes);
+            return content;
+        }
+
+        private static byte[] Decode(byte[] decrypted)
+        {
+            int pad = decrypted[decrypted.Length - 1];
+            if (pad < 1 || pad > 32)
             {
-                byte[] bTmp1 = new byte[bCipher.Length + 32 - bCipher.Length % 32];
-                Array.Copy(bCipher, bTmp1, bCipher.Length);
-                cs.Write(bCipher, 0, bCipher.Length);
-
-                byte[] bTmp2 = ms.ToArray();
-
-                int pad = bTmp2[bTmp2.Length - 1];
-                pad = (pad < 1 || pad > 32) ? 0 : pad;
-                byte[] bTmp3 = new byte[bTmp2.Length - pad];
-                Array.Copy(bTmp2, 0, bTmp3, 0, bTmp2.Length - pad);
-
-                const int RANDOM_BYTES_POS = 32;
-                byte[] bPos = new byte[4];
-                Array.Copy(bTmp3, RANDOM_BYTES_POS, bPos, 0, 4);
-
-                int len = BitConverter.ToInt32(bPos, 16);
-                len = IPAddress.NetworkToHostOrder(len);
-                byte[] bMsg = new byte[len];
-                Array.Copy(bTmp3, RANDOM_BYTES_POS + 4, bMsg, 0, len);
-                return Encoding.UTF8.GetString(bMsg);
+                pad = 0;
             }
+            int length = decrypted.Length - pad;
+            var destinationArray = new byte[length];
+            Array.Copy(decrypted, destinationArray, length);
+
+            return destinationArray;
         }
 
         private static bool InnerVerifyEventSignature(string sToken, string sTimestamp, string sNonce, string sMsgEncrypt, string sMsgSign)

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
 {
@@ -9,6 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
     {
         /// <summary>
         /// 获取或设置执行动作。
+        /// add 添加，delete 删除，set 覆盖，get 获取
         /// <para>默认值：get</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("action")]

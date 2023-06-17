@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/package/upload 接口的请求。</para>
@@ -24,7 +24,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("user_desc")]
-        public string UserDesccription { get; set; } = string.Empty;
+        public string UserDescription { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置配置的 JSON 字符串。

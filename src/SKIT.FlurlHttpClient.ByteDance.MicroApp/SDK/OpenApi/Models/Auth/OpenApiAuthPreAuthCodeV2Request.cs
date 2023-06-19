@@ -7,11 +7,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
     {
         /// <summary>
         /// 获取或设置预授权码类型。
-        /// <para>默认值：1</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pre_auth_code_type")]
         [System.Text.Json.Serialization.JsonPropertyName("pre_auth_code_type")]
-        public int PreAuthCodeType { get; set; } = 1;
+        public int? PreAuthCodeType { get; set; }
 
         /// <summary>
         /// 获取或设置代创建的小程序名称。
@@ -21,10 +20,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
         public string? AppName { get; set; }
 
         /// <summary>
-        /// 获取或设置代创建的小程序图标。
+        /// 获取或设置代创建的小程序图标路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_icon")]
         [System.Text.Json.Serialization.JsonPropertyName("app_icon")]
-        public string? AppIcon { get; set; }
+        public string? AppIconPath { get; set; }
     }
 }

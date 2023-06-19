@@ -72,7 +72,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
 
                 /// <summary>
                 /// 获取或设置审核结果。
-                /// 0 代表不通过，1 代表通过
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]

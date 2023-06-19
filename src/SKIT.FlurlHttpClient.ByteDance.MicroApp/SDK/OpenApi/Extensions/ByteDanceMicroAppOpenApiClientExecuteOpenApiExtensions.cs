@@ -449,7 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         #region MicroApp
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/code2session 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/login/code2session </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/login/code2session </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -463,7 +463,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "v1", "microapp", "code2session")
                 .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("access_token", request.AuthorizerAccessToken)
+                .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("code", request.Code)
                 .SetQueryParam("anonymous_code", request.AnoymousCode);
 

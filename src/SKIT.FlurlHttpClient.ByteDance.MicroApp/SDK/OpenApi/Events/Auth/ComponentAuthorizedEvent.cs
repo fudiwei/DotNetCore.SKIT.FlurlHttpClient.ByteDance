@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
         public long AuthCodeExpiresIn { get; set; }
 
         /// <summary>
-        /// 代创建的小程序名称
+        /// 获取或设置代创建的小程序名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("AppName")]
         [System.Text.Json.Serialization.JsonPropertyName("AppName")]
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
         public string AppName { get; set; } = default!;
 
         /// <summary>
-        /// 代创建的小程序图标
+        /// 获取或设置代创建的小程序图标。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("AppIcon")]
         [System.Text.Json.Serialization.JsonPropertyName("AppIcon")]
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
         public string AppIcon { get; set; } = default!;
 
         /// <summary>
-        /// 代创建的小程序公司主体名称
+        /// 获取或设置代创建的小程序公司主体名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("CompanyName")]
         [System.Text.Json.Serialization.JsonPropertyName("CompanyName")]
@@ -47,21 +47,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
         public string CompanyName { get; set; } = default!;
 
         /// <summary>
-        /// 代创建的小程序超管掩码邮箱
+        /// 获取或设置代创建的小程序超管掩码邮箱。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("AppSuperAdminEmail")]
         [System.Text.Json.Serialization.JsonPropertyName("AppSuperAdminEmail")]
         [System.Xml.Serialization.XmlElement("AppSuperAdminEmail")]
-        public string AppSuperAdminEmail { get; set; } = default!;
+        public string SuperAdminEmail { get; set; } = default!;
 
         /// <summary>
-        /// 代创建的小程序超管掩码手机号
+        /// 获取或设置代创建的小程序超管掩码手机号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("AppSuperAdminMobile")]
         [System.Text.Json.Serialization.JsonPropertyName("AppSuperAdminMobile")]
         [System.Xml.Serialization.XmlElement("AppSuperAdminMobile")]
-        public string AppSuperAdminMobile { get; set; } = default!;
-
+        public string SuperAdminMobileNumber { get; set; } = default!;
     }
-
 }

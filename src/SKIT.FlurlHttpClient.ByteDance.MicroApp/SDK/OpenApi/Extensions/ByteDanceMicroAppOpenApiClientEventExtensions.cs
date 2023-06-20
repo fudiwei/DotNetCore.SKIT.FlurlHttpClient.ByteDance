@@ -38,10 +38,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         private static string InnerDecryptEventData(string sMsgEncrypt, string encodingAESKey)
         {
-            if (string.IsNullOrEmpty(sMsgEncrypt))
+            if (string.IsNullOrWhiteSpace(sMsgEncrypt))
                 throw new Exceptions.ByteDanceMicroAppEventSerializationException("Decrypt event failed, because of empty encrypted data.");
 
-            if (string.IsNullOrEmpty(encodingAESKey))
+            if (string.IsNullOrWhiteSpace(encodingAESKey))
                 throw new Exceptions.ByteDanceMicroAppEventSerializationException("Decrypt event failed, because there is no encoding AES key.");
 
             byte[] bCipher = Convert.FromBase64String(sMsgEncrypt);
@@ -92,11 +92,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         private static bool InnerVerifyEventSignature(string sToken, string sTimestamp, string sNonce, string sMsgEncrypt, string sMsgSign)
         {
-            ISet<string> set = new SortedSet<string>(StringComparer.Ordinal);
-            set.Add(sToken);
-            set.Add(sTimestamp);
-            set.Add(sNonce);
-            set.Add(sMsgEncrypt);
+            ISet<string> set = new SortedSet<string>(StringComparer.Ordinal)
+            {
+                sToken,
+                sTimestamp,
+                sNonce,
+                sMsgEncrypt
+            };
 
             string raw = string.Join(string.Empty, set.ToArray());
             string sign = Utilities.SHA1Utility.Hash(raw);
@@ -118,32 +120,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
                 }
 
                 return client.JsonSerializer.Deserialize<TEvent>(callbackJson);
-            }
-            catch (ByteDanceMicroAppException)
-            {
-                throw;
-            }
-            catch (Exception ex)
-            {
-                throw new Exceptions.ByteDanceMicroAppEventSerializationException("Failed to deserialize event data. Please see the inner exception for more details.", ex);
-            }
-        }
-
-        private static TEvent InnerDeserializeEventFromXml<TEvent>(ByteDanceMicroAppOpenApiClient client, string callbackXml)
-            where TEvent : ByteDanceMicroAppOpenApiEvent
-        {
-            if (client == null) throw new ArgumentNullException(nameof(client));
-            if (string.IsNullOrEmpty(callbackXml)) throw new ArgumentNullException(callbackXml);
-
-            try
-            {
-                if (callbackXml.Contains("<Encrypt>") && callbackXml.Contains("</Encrypt>"))
-                {
-                    string encryptedData = XDocument.Parse(callbackXml).Element("Encrypt")!.Value;
-                    callbackXml = InnerDecryptEventData(sMsgEncrypt: encryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
-                }
-
-                return Utilities.XmlUtility.Deserialize<TEvent>(callbackXml);
             }
             catch (ByteDanceMicroAppException)
             {
@@ -180,30 +156,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         }
 
         /// <summary>
-        /// <para>从 XML 反序列化得到 <see cref="ByteDanceMicroAppOpenApiEvent"/> 对象。</para>
-        /// </summary>
-        /// <typeparam name="TEvent"></typeparam>
-        /// <param name="client"></param>
-        /// <param name="callbackXml"></param>
-        /// <returns></returns>
-        public static TEvent DeserializeEventFromXml<TEvent>(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
-            where TEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable, new()
-        {
-            return InnerDeserializeEventFromXml<TEvent>(client, callbackXml);
-        }
-
-        /// <summary>
-        /// <para>从 XML 反序列化得到 <see cref="ByteDanceMicroAppOpenApiEvent"/> 对象。</para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="callbackXml"></param>
-        /// <returns></returns>
-        public static ByteDanceMicroAppOpenApiEvent DeserializeEventFromXml(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
-        {
-            return InnerDeserializeEventFromXml<ByteDanceMicroAppOpenApiEvent>(client, callbackXml);
-        }
-
-        /// <summary>
         /// <para>验证回调通知事件签名。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
         /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
@@ -219,36 +171,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             try
             {
                 InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(callbackJson);
-                return InnerVerifyEventSignature(
-                    sToken: client.Credentials.PushToken!,
-                    sTimestamp: encryptedEvent.TimestampString,
-                    sNonce: encryptedEvent.Nonce,
-                    sMsgEncrypt: encryptedEvent.EncryptedData,
-                    sMsgSign: encryptedEvent.Signature
-                );
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
-        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="callbackXml"></param>
-        /// <returns></returns>
-        public static bool VerifyEventSignatureFromXml(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
-        {
-            if (client == null) throw new ArgumentNullException(nameof(client));
-            if (callbackXml == null) throw new ArgumentNullException(nameof(callbackXml));
-
-            try
-            {
-                InnerEncryptedEvent encryptedEvent = Utilities.XmlUtility.Deserialize<InnerEncryptedEvent>(callbackXml);
                 return InnerVerifyEventSignature(
                     sToken: client.Credentials.PushToken!,
                     sTimestamp: encryptedEvent.TimestampString,

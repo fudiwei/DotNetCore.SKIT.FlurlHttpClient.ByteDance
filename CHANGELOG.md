@@ -33,6 +33,12 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.4.1
+
+    -   **修复**：修复部分服务商授权相关接口模型定义错误。（_via_ [GitHub #11](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/11)）
+
+    -   **修复**：修复回调通知事件验证签名错误。（_via_ [GitHub #11](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/11)）
+
 -   Release 2.4.0
 
     -   **新增**：新增担保支付账单相关接口。

@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Xml.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
@@ -36,90 +32,47 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             public string Signature { get; set; } = default!;
         }
 
-        private static string InnerDecryptEventData(string sMsgEncrypt, string encodingAESKey)
-        {
-            if (string.IsNullOrWhiteSpace(sMsgEncrypt))
-                throw new Exceptions.ByteDanceMicroAppEventSerializationException("Decrypt event failed, because of empty encrypted data.");
-
-            if (string.IsNullOrWhiteSpace(encodingAESKey))
-                throw new Exceptions.ByteDanceMicroAppEventSerializationException("Decrypt event failed, because there is no encoding AES key.");
-
-            byte[] bCipher = Convert.FromBase64String(sMsgEncrypt);
-            byte[] bKey = Convert.FromBase64String(encodingAESKey + "=");
-            byte[] bIV = new byte[16];
-            Array.Copy(bKey, bIV, 16);
-
-            using Aes aes = Aes.Create();
-            aes.KeySize = 256;
-            aes.BlockSize = 128;
-            aes.Mode = CipherMode.CBC;
-            aes.Padding = PaddingMode.None;
-            aes.Key = bKey;
-            aes.IV = bIV;
-
-            using ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-            byte[] decryptedBytes = decryptor.TransformFinalBlock(bCipher, 0, bCipher.Length);
-
-            byte[] bytes = Decode(decryptedBytes);
-            const int RANDOM_BYTES_POS = 32;
-            // byte数组的第32、33、34、35个元素代表了消息体的真实字符个数，也就是长度
-            // 取32至35转大端序
-            var lengthArray = bytes.AsSpan().Slice(RANDOM_BYTES_POS, 4).ToArray().Reverse().ToArray();
-            // 将四个byte解析为一个32位的数字，数字的值也就是消息体的String格式下的长度
-            int msgLength = BitConverter.ToInt32(lengthArray, 0);
-
-            // 根据解析出来的消息体长度值，截取真实的消息体
-            byte[] contentBytes = new byte[msgLength];
-            int msgStartIndex = RANDOM_BYTES_POS + 4;
-            Array.Copy(bytes, msgStartIndex, contentBytes, 0, msgLength);
-            string content = Encoding.UTF8.GetString(contentBytes);
-            return content;
-        }
-
-        private static byte[] Decode(byte[] decrypted)
-        {
-            int pad = decrypted[decrypted.Length - 1];
-            if (pad < 1 || pad > 32)
-            {
-                pad = 0;
-            }
-            int length = decrypted.Length - pad;
-            var destinationArray = new byte[length];
-            Array.Copy(decrypted, destinationArray, length);
-
-            return destinationArray;
-        }
-
-        private static bool InnerVerifyEventSignature(string sToken, string sTimestamp, string sNonce, string sMsgEncrypt, string sMsgSign)
-        {
-            ISet<string> set = new SortedSet<string>(StringComparer.Ordinal)
-            {
-                sToken,
-                sTimestamp,
-                sNonce,
-                sMsgEncrypt
-            };
-
-            string raw = string.Join(string.Empty, set.ToArray());
-            string sign = Utilities.SHA1Utility.Hash(raw);
-            return string.Equals(sign, sMsgSign, StringComparison.OrdinalIgnoreCase);
-        }
-
         private static TEvent InnerDeserializeEventFromJson<TEvent>(ByteDanceMicroAppOpenApiClient client, string callbackJson)
             where TEvent : ByteDanceMicroAppOpenApiEvent
         {
             if (client == null) throw new ArgumentNullException(nameof(client));
-            if (string.IsNullOrEmpty(callbackJson)) throw new ArgumentNullException(callbackJson);
+            if (callbackJson == null) throw new ArgumentNullException(callbackJson);
 
             try
             {
                 if (callbackJson.Contains("\"Encrypt\""))
                 {
                     InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(callbackJson);
-                    callbackJson = InnerDecryptEventData(sMsgEncrypt: encryptedEvent.EncryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!);
+                    callbackJson = Utilities.TtMsgCryptor.AESDecrypt(cipherText: encryptedEvent.EncryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!, out _);
                 }
 
                 return client.JsonSerializer.Deserialize<TEvent>(callbackJson);
+            }
+            catch (ByteDanceMicroAppException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new Exceptions.ByteDanceMicroAppEventSerializationException("Failed to deserialize event data. Please see the inner exception for more details.", ex);
+            }
+        }
+
+        private static TEvent InnerDeserializeEventFromXml<TEvent>(ByteDanceMicroAppOpenApiClient client, string callbackXml)
+            where TEvent : ByteDanceMicroAppOpenApiEvent
+        {
+            if (client == null) throw new ArgumentNullException(nameof(client));
+            if (callbackXml == null) throw new ArgumentNullException(callbackXml);
+
+            try
+            {
+                if (callbackXml.Contains("<Encrypt>") && callbackXml.Contains("</Encrypt>"))
+                {
+                    string encryptedData = XDocument.Parse(callbackXml).Root!.Element("Encrypt")!.Value;
+                    callbackXml = Utilities.TtMsgCryptor.AESDecrypt(cipherText: encryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!, out _);
+                }
+
+                return Utilities.XmlUtility.Deserialize<TEvent>(callbackXml);
             }
             catch (ByteDanceMicroAppException)
             {
@@ -156,8 +109,31 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         }
 
         /// <summary>
+        /// <para>从 XML 反序列化得到 <see cref="ByteDanceMicroAppOpenApiEvent"/> 对象。</para>
+        /// </summary>
+        /// <typeparam name="TEvent"></typeparam>
+        /// <param name="client"></param>
+        /// <param name="callbackXml"></param>
+        /// <returns></returns>
+        public static TEvent DeserializeEventFromXml<TEvent>(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
+            where TEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable, new()
+        {
+            return InnerDeserializeEventFromXml<TEvent>(client, callbackXml);
+        }
+
+        /// <summary>
+        /// <para>从 XML 反序列化得到 <see cref="ByteDanceMicroAppOpenApiEvent"/> 对象。</para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="callbackXml"></param>
+        /// <returns></returns>
+        public static ByteDanceMicroAppOpenApiEvent DeserializeEventFromXml(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
+        {
+            return InnerDeserializeEventFromXml<ByteDanceMicroAppOpenApiEvent>(client, callbackXml);
+        }
+
+        /// <summary>
         /// <para>验证回调通知事件签名。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
         /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
         /// </summary>
         /// <param name="client"></param>
@@ -171,12 +147,41 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             try
             {
                 InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(callbackJson);
-                return InnerVerifyEventSignature(
+                return Utilities.TtMsgCryptor.VerifySignature(
                     sToken: client.Credentials.PushToken!,
                     sTimestamp: encryptedEvent.TimestampString,
                     sNonce: encryptedEvent.Nonce,
                     sMsgEncrypt: encryptedEvent.EncryptedData,
                     sMsgSign: encryptedEvent.Signature
+                );
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// <para>验证回调通知事件签名。</para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/overview-guide/smallprogram/encryption </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="callbackXml"></param>
+        /// <returns></returns>
+        public static bool VerifyEventSignatureFromXml(this ByteDanceMicroAppOpenApiClient client, string callbackXml)
+        {
+            if (client == null) throw new ArgumentNullException(nameof(client));
+            if (callbackXml == null) throw new ArgumentNullException(nameof(callbackXml));
+
+            try
+            {
+                XDocument xdoc = XDocument.Parse(callbackXml);
+                return Utilities.TtMsgCryptor.VerifySignature(
+                    sToken: client.Credentials.PushToken!,
+                    sTimestamp: xdoc.Root!.Element("TimeStamp")!.Value,
+                    sNonce: xdoc.Root!.Element("Nonce")!.Value,
+                    sMsgEncrypt: xdoc.Root!.Element("Encrypt")!.Value,
+                    sMsgSign: xdoc.Root!.Element("MsgSignature")!.Value
                 );
             }
             catch

@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /v1/auth/retrieve 接口的响应。</para>
+    /// <para>表示 [POST] /v1/auth/retrieve 接口的响应。</para>
     /// </summary>
     public class OpenApiAuthRetrieveV1Response : ByteDanceMicroAppOpenApiResponse
     {

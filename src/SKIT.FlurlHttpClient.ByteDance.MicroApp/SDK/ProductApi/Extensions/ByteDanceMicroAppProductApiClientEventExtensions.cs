@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
             where TEvent : ByteDanceMicroAppProductApiEvent
         {
             if (client == null) throw new ArgumentNullException(nameof(client));
-            if (string.IsNullOrEmpty(callbackJson)) throw new ArgumentNullException(callbackJson);
+            if (callbackJson == null) throw new ArgumentNullException(callbackJson);
 
             try
             {

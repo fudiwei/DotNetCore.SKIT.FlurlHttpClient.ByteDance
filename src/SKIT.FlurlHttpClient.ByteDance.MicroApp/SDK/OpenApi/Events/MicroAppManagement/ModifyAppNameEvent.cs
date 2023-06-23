@@ -2,7 +2,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
 {
     /// <summary>
     /// <para>表示 EVENT.MODIFY_APP_NAME 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-name </para>
+    /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-name </para>
     /// </summary>
     public class ModifyAppNameEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IJsonSerializable, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable
     {

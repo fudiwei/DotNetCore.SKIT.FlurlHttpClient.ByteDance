@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         #region Auth
         /// <summary>
         /// <para>异步调用 [GET] /v1/auth/tp/token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentaccesstoken </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentaccesstoken </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         /// <summary>
         /// <para>异步调用 [POST] /v2/auth/pre_auth_code 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/preauthcode </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/preauthcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         /// <summary>
         /// <para>异步调用 [POST] /v2/auth/gen_link 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/genlink </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/genlink </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -78,8 +78,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /v1/auth/retrieve 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/findauthorizationcode </para>
+        /// <para>异步调用 [POST] /v1/auth/retrieve 接口。</para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/findauthorizationcode </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "v1", "auth", "retrieve")
+                .CreateRequest(request, HttpMethod.Post, "v1", "auth", "retrieve")
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken)
                 .SetQueryParam("authorization_appid", request.AuthorizerAppId);
@@ -158,7 +158,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         /// <summary>
         /// <para>异步调用 [POST] /v1/tp/upload_pic_material 接口。</para>
         /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/upload-pic-material </para>
-/// </summary>
+        /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -449,7 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         #region MicroApp
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/code2session 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/login/code2session </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/login/code2session </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -463,7 +463,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "v1", "microapp", "code2session")
                 .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("access_token", request.AuthorizerAccessToken)
+                .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("code", request.Code)
                 .SetQueryParam("anonymous_code", request.AnoymousCode);
 
@@ -472,7 +472,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         /// <summary>
         /// <para>异步调用 [POST] /v1/microapp/upload_material 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/uploadMaterial </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/uploadMaterial </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -545,7 +545,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/app/check_app_name 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/check-name </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/check-name </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -567,7 +567,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
 
         /// <summary>
         /// <para>异步调用 [POST] /v1/microapp/app/modify_app_name 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-name </para>
+        /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-name </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

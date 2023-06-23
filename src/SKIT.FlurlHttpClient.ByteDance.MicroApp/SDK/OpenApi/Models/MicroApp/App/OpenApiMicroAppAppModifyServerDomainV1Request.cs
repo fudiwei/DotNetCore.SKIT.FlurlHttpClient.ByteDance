@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Models
 {

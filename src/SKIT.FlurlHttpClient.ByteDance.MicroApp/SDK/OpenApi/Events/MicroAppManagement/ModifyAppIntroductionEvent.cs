@@ -2,7 +2,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi.Events
 {
     /// <summary>
     /// <para>表示 EVENT.MODIFY_APP_INTRO 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-intro </para>
+    /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-intro </para>
     /// </summary>
     public class ModifyAppIntroductionEvent : ByteDanceMicroAppOpenApiEvent, ByteDanceMicroAppOpenApiEvent.Serialization.IJsonSerializable, ByteDanceMicroAppOpenApiEvent.Serialization.IXmlSerializable
     {

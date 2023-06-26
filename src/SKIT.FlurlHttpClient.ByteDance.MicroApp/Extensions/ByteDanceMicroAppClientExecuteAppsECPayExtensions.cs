@@ -493,6 +493,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/ecpay/v1/query_platform_order 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/auto-settle/query </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsECPayQueryPlatformOrderV1Response> ExecuteAppsECPayQueryPlatformOrderV1Async(this ByteDanceMicroAppClient client, Models.AppsECPayQueryPlatformOrderV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            if (request.Signature == null)
+                request.Signature = client.GenerateRequestSignature(request);
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_platform_order");
+
+            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryPlatformOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #endregion
 
         /// <summary>

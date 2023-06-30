@@ -21,11 +21,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutTradeNumber { get; set; } = string.Empty;
+        public string? OutTradeNumber { get; set; }
 
         /// <summary>
-        /// 查询类型枚举。
-        /// 默认 1：自动分账
+        /// 获取或设置查询类型。
+        /// <para>默认值：1</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("query_type")]
         [System.Text.Json.Serialization.JsonPropertyName("query_type")]

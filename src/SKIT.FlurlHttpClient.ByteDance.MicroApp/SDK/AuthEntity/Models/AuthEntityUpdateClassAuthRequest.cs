@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_expiretime")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_expiretime")]
-                public string MaterialExpireTime { get; set; }
+                public string MaterialExpireTime { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料链接，字符串数组
@@ -61,49 +61,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("record_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("record_name")]
-                public string RecordName { get; set; }
+                public string RecordName { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 机构场景类型（仅可填写"线上机构"或"线下机构"）
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("scene_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("scene_type")]
-                public string SceneType { get; set; }
+                public string SceneType { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 机构主体类型（仅可填"企业工商户"或"个体工商户"）
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("subject_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("subject_type")]
-                public string SubjectType { get; set; }
+                public string SubjectType { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 机构Logo图片uri，需要调用上传资源接口后获得
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("logo_uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("logo_uri")]
-                public string LogoUri { get; set; }
+                public string LogoUri { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 商标注册证图片uri，若机构名称与机构logo一致性差，则需提供，需要调用上传后获得
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("trademark_uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("trademark_uri")]
-                public string TrademarkUri { get; set; }
+                public string TrademarkUri { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 机构介绍，字符长度限制12<=len<= 200(汉字占 2 字符)
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                public string Desc { get; set; }
+                public string Desc { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 机构合作老师信息
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("employee")]
                 [System.Text.Json.Serialization.JsonPropertyName("employee")]
-                public Employee Employee { get; set; }
+                public Employee? Employee { get; set; }
             }
 
             public class Employee
@@ -113,7 +113,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("employee_material")]
                 [System.Text.Json.Serialization.JsonPropertyName("employee_material")]
-                public Individual EmployeeMaterial { get; set; }
+                public Individual? EmployeeMaterial { get; set; }
 
                 /// <summary>
                 /// 机构和员工合作协议
@@ -130,32 +130,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string Name { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证号码
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("id_number")]
-                public string IdNumber { get; set; }
+                public string IdNumber { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证有效期
                 /// <example>长期有效；2034-01-09</example>
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expire_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                public string ExpireTime { get; set; }
+                public string ExpireTime { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证正面链接,人像面
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("front_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("front_path")]
-                public string FrontPath { get; set; }
+                public string FrontPath { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份反面链接,国徽面
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("back_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("back_path")]
-                public string BackPath { get; set; }
+                public string BackPath { get; set; } = string.Empty;
             }
 
             public class Partner
@@ -165,14 +165,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("company_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("company_type")]
-                public string? CompanyType { get; set; }
+                public string CompanyType { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 企业工商户/个体工商户
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("company_addr")]
                 [System.Text.Json.Serialization.JsonPropertyName("company_addr")]
-                public string? CompanyAddr { get; set; }
+                public string CompanyAddr { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料链接，字符串数组。 合作案例资料图片。
@@ -190,14 +190,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("partner_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("partner_entity_id")]
-        public string? PartnerEntityId { get; set; }
+        public string PartnerEntityId { get; set; } = string.Empty;
 
         /// <summary>
         /// 机构添加类目认证时必填；老师角色实体必填
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_entity_id")]
-        public string? MerchantEntityId { get; set; }
+        public string MerchantEntityId { get; set; } = string.Empty;
         /// <summary>
         /// 行业code，10000:泛知识
         /// </summary>

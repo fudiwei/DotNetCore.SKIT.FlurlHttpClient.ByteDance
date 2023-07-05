@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_expiretime")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_expiretime")]
-                public string MaterialExpireTime { get; set; }
+                public string MaterialExpireTime { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料链接，字符串数组
@@ -37,14 +37,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("partner_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("partner_entity_id")]
-        public string PartnerEntityId { get; set; }
+        public string PartnerEntityId { get; set; } = string.Empty;
 
         /// <summary>
         /// 被授权实体
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_entity_id")]
-        public string MerchantEntityId { get; set; }
+        public string MerchantEntityId { get; set; } = string.Empty;
 
         /// <summary>
         /// 行业编码，泛知识10000
@@ -65,21 +65,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("nick")]
         [System.Text.Json.Serialization.JsonPropertyName("nick")]
-        public string Nick { get; set; }
+        public string Nick { get; set; } = string.Empty;
 
         /// <summary>
         /// 老师或机构在小程序内头像（需要使用上传资质材料接口）
         /// </summary>
         [Newtonsoft.Json.JsonProperty("icon")]
         [System.Text.Json.Serialization.JsonPropertyName("icon")]
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
 
         /// <summary>
         /// 老师或机构在小程序描述 1<=len<=2000 (中文占2个字符)
         /// </summary>
         [Newtonsoft.Json.JsonProperty("desc")]
         [System.Text.Json.Serialization.JsonPropertyName("desc")]
-        public string Desc { get; set; }
+        public string Desc { get; set; } = string.Empty;
 
         /// <summary>
         /// 授权实体角色类型（1：老师 2：机构 3：服务商）

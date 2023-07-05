@@ -17,32 +17,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string Name { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证号码
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("id_number")]
-                public string IdNumber { get; set; }
+                public string IdNumber { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证有效期
                 /// <example>长期有效；2034-01-09</example>
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expire_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                public string ExpireTime { get; set; }
+                public string ExpireTime { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份证正面链接,人像面
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("front_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("front_path")]
-                public string FrontPath { get; set; }
+                public string FrontPath { get; set; } = string.Empty;
                 /// <summary>
                 /// 身份反面链接,国徽面
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("back_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("back_path")]
-                public string BackPath { get; set; }
+                public string BackPath { get; set; } = string.Empty;
             }
 
             public class CertificateMaterial
@@ -59,14 +59,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_expiretime")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_expiretime")]
-                public int MaterialExpiretime { get; set; }
+                public int MaterialExpireTime { get; set; }
 
                 /// <summary>
                 /// 资质材料链接，字符串数组
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_paths")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_paths")]
-                public List<string> MaterialPaths { get; set; }
+                public List<string>? MaterialPaths { get; set; }
             }
             public class Enterprise
             {
@@ -75,20 +75,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("certificate_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                public string CertificateId { get; set; }
+                public string CertificateId { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料信息
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("certificate_materials")]
                 [System.Text.Json.Serialization.JsonPropertyName("certificate_materials")]
-                public List<CertificateMaterial> CertificateMaterials { get; set; }
+                public List<CertificateMaterial>? CertificateMaterials { get; set; }
                 /// <summary>
                 /// 法人信息
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("legal_person")]
                 [System.Text.Json.Serialization.JsonPropertyName("legal_person")]
-                public Individual LegalPerson { get; set; }
+                public Individual? LegalPerson { get; set; }
             }
         }
 
@@ -104,14 +104,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_entity_id")]
-        public string MerchantEntityId { get; set; }
+        public string MerchantEntityId { get; set; } = string.Empty;
 
         /// <summary>
         /// 实体名称
         /// </summary>
         [Newtonsoft.Json.JsonProperty("entity_name")]
         [System.Text.Json.Serialization.JsonPropertyName("entity_name")]
-        public string EntityName { get; set; }
+        public string EntityName { get; set; } = string.Empty;
 
         /// <summary>
         /// 个人实体基础认证信息

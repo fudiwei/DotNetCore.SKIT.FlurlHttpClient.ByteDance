@@ -7,6 +7,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("class_auth_taskid")]
         [System.Text.Json.Serialization.JsonPropertyName("class_auth_taskid")]
-        public string? ClassAuthTaskId { get; set; }
+        public string ClassAuthTaskId { get; set; } = string.Empty;
     }
 }

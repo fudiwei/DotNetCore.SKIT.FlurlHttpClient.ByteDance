@@ -34,14 +34,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("partner_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("partner_entity_id")]
-        public string? PartnerEntityId { get; set; }
+        public string PartnerEntityId { get; set; } = string.Empty;
 
         /// <summary>
         /// 机构添加类目认证时必填；老师角色实体必填
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_entity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_entity_id")]
-        public string? MerchantEntityId { get; set; }
+        public string MerchantEntityId { get; set; } = string.Empty;
         /// <summary>
         /// 行业code，10000:泛知识
         /// </summary>

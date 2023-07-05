@@ -16,9 +16,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         public int MaterialType { get; set; }
 
 
-        public string? FileName { get; set; }
-        public byte[] FileBytes { get; set; }
-        public string? FileContentType { get; set; }
+        public string FileName { get; set; } = string.Empty;
+        public byte[]? FileBytes { get; set; }
+        public string FileContentType { get; set; } = string.Empty;
         // public  Stream MaterialFile { get; set; }
 
     }

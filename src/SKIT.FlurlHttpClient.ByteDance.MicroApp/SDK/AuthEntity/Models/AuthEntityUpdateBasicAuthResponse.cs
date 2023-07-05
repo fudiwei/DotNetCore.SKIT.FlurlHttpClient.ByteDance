@@ -13,6 +13,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("basic_auth_taskid")]
         [System.Text.Json.Serialization.JsonPropertyName("basic_auth_taskid")]
-        public string BasicAuthTaskid { get; set; }
+        public string BasicAuthTaskid { get; set; } = string.Empty;
     }
 }

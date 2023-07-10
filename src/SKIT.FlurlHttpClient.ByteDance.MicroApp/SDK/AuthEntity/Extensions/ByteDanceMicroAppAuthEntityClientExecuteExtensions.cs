@@ -14,6 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// 该接口用于上传资质材料。在审核资质之前需要需要先使用该接口上传资质。如果需要大批量上传资质材料，请保证上传 QPS 不大于 10。
         /// 上传资源后会立即得到一个 uri，该 uri 是作为上传资质接口中材料的 path 参数。
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/upload-qualification-materials </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -45,6 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于服务商帮助老师或机构入驻，调用成功过后，基础认证资质和角色下类目认证资质(服务商没有该信息)都会进审，接口返回实体的唯一标识 entity_id 以及审核 ID，审核通过后资质生效。
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/partner-help-teacher-institution-join </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -70,6 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于服务商/机构的入驻，调用成功过后，基础认证资质和角色下类目认证资质(服务商没有该信息)都会进审，接口返回实体的唯一标识 entity_id 以及审核 ID，审核通过后资质生效
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/institution-partner-join </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -98,6 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// - 已有代运营服务商角色要新增机构角色。
         /// - 已有机构角色实体要新增代运营服务商角色。
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/add-role </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -125,6 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于获取实体基础认证资质信息
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-basic-qualification </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -153,6 +158,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// a) 服务商实体/机构实体自主更新实体
         /// b) 服务商帮助老师更新实体基础认证信息
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/update-basic-qualification </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -179,6 +185,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于查询实体类目认证资质信息
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-category-qualification </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -205,6 +212,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于更新实体类目认证资质
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/update-category-qualification </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -231,6 +239,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于服务商代(老师/代运营模式机构)添加类目；自营模式机构添加类目
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/add-category-qualification </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -257,6 +266,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于根据审核任务类型和任务 ID 获取审核任务详情接口
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/get-audit-task-details </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -284,6 +294,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// 该接口用于角色绑定小程序，是认领小程序的过程。只有拥有小程序的角色才可以调用绑定接口认领小程序。
         /// 仅代运营服务商和自营模式机构需要调用该接口
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/miniapp-binding-role </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -310,6 +321,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于角色解除绑定小程序
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/miniapp-unbinding-role </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -336,6 +348,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于查询小程序绑定的角色
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-miniapp-bound-role </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -362,6 +375,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于角色授权小程序，某角色将运营的权限授予给某个小程序。
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/role-authorization-miniapp </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -388,6 +402,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于解除商家实体和小程序之间的授权关系
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/deauthorization-miniapp </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -414,6 +429,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于查询授权小程序信息
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-authorization-applet </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -440,6 +456,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于更新授权小程序授权函
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/update-authorization-letter-of-miniapp </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -468,6 +485,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// 该接口用于激活泛知识存量商户号
         /// 泛知识商家实体业务场景下只有绑定了老师角色实体 ID 的商户号才能用于泛知识小程序的收款，该接口提供给泛知识开发者可以将存量商户号迁移到新逻辑下。
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/merchant-account-activation </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -494,6 +512,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
         /// <summary>
         /// 该接口用于查询激活泛知识存量商户号的状态
         /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-merchant-account-activation-state </para>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -517,6 +536,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Extensions
 
         }
 
+        /// <summary>
+        /// 该接口用于根据营业执照/个人身份证号查询角色系统的实体 ID
+        /// </summary>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-entity-id </para>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static async Task<Models.AuthEntityQueryEntityInfoResponse> ExecuteAuthEntityQueryEntityInfoAsync(this ByteDanceMicroAppAuthEntityClient client, Models.AuthEntityQueryEntityInfoRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

@@ -33,15 +33,4 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
         [System.Text.Json.Serialization.JsonPropertyName("merchant_code")]
         public string MerchantCode { get; set; } = string.Empty;
     }
-
-
-    public class AuthEntityActivateMerchantCodeResponse : ByteDanceMicroAppAuthEntityResponse
-    {
-
-    }
-
-
-
-
-
 }

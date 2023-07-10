@@ -1,0 +1,20 @@
+{
+    "appid": "tt427e34c3dd07777601",
+    "access_token": "08011218463077394777xa45363371682f48762f4cxxx6974513d3d",
+    "partner_entity_id": "E_7208933888470106156",
+    "merchant_entity_id": "E_7208933889593688108",
+    "industry_code": 10000,
+    "merchant_industry_role": 2,
+    "auth_letters": [
+        {
+            "material_type": 1006,
+            "material_expiretime": "2036-06-06",
+            "material_paths": [
+                "certification/resource/eb7722dc38afa5c6503053c6d1efa51f"
+            ]
+        }
+    ],
+    "desc": "你好啊",
+    "icon": "certification/resource/eb7722dc38afa5c6503053c6d1efa51f",
+    "nick": "好好好"
+}

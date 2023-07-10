@@ -1,0 +1,59 @@
+{
+    "appid": "ttcfc4b97950f8484801",
+    "access_token": "08011218463241356a4a3557314770326a6d7459645257624e673d3d",
+    "entity_id": "E_7230706235463548989",
+    "industry_role": 2,
+    "partner_role_info": {
+        "partner_info": {
+            "company_type": "",
+            "company_addr": "",
+            "cooperation_cases": [
+                {
+                    "material_type": 0,
+                    "material_expiretime": "",
+                    "material_paths": [""]
+                }
+            ]
+        }
+    },
+    "institution_role_info": {
+        "institution_info": {
+            "record_name": "三九小飞棍来喽",
+            "scene_type": "线上机构",
+            "subject_type": "企业工商户",
+            "logo_uri": "certification/resource/e0882488978ce1eb808636028d52b107",
+            "trademark_uri": "certification/resource/e0882488978ce1eb808636028d52b107",
+            "desc": "这个简介也必须是十二个字符才可以吗"
+        },
+        "institution_class_info": {
+            "industry_class": {
+                "first_class": 40000,
+                "second_class": 40600,
+                "third_class": 0
+            },
+            "employee": {
+                "employee_material": {
+                    "name": "花玲玲",
+                    "id_number": "320XXXXXXXXXXXXXXX",
+                    "expire_time": "2030-05-05",
+                    "front_path": "certification/resource/e0882488978ce1eb808636028d52b107",
+                    "back_path": "certification/resource/e0882488978ce1eb808636028d52b107"
+                },
+                "cooperation_agreement": {
+                    "material_type": 1005,
+                    "material_expiretime": "2031-06-06",
+                    "material_paths": [
+                        "certification/resource/e0882488978ce1eb808636028d52b107"
+                    ]
+                }
+            },
+            "class_material": {
+                "material_type": 1001,
+                "material_expiretime": "2030-04-04",
+                "material_paths": [
+                    "certification/resource/e0882488978ce1eb808636028d52b107"
+                ]
+            }
+        }
+    }
+}

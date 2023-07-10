@@ -1,0 +1,46 @@
+{
+    "appid": "tt81xxxxx9801",
+    "access_token": "yyyy",
+    "partner_entity_id": "",
+    "merchant_entity_id": "I_7177356117591244844",
+    "industry_code": 10000,
+    "class": {
+        "first_class": 40000,
+        "second_class": 40600,
+        "third_class": 0
+    },
+    "industry_role": 2,
+    "merchant_qualifications": [
+        {
+            "material_type": 1003,
+            "material_expiretime": "",
+            "material_paths": [
+                "certification/resource/74ed50a56eaa6782d96a55f157974720"
+            ]
+        }
+    ],
+    "institution": {
+        "record_name": "xxx合作优先公司",
+        "scene_type": "线上机构",
+        "subject_type": "企业工商户",
+        "logo_uri": "certification/resource/74ed50a56eaa6782d96a55f15xxx",
+        "trademark_uri": "certification/resource/74ed50a56eaa6782d96a55f1579yyy",
+        "desc": "机构描述",
+        "employee": {
+            "employee_material": {
+                "name": "王xx",
+                "id_number": "411938171723773",
+                "expire_time": "2033-10-10",
+                "front_path": "certification/resource/74ed50a56eaa6782d96a55f15xxxx",
+                "back_path": "certification/resource/74ed50a56eaa6782d96a55f157xxxxx"
+            },
+            "cooperation_agreement": {
+                "material_type": 1005,
+                "material_expiretime": "2023-10-10",
+                "material_paths": [
+                    "certification/resource/74ed50a56eaa6782d96xxxxf157xxxxx"
+                ]
+            }
+        }
+    }
+}

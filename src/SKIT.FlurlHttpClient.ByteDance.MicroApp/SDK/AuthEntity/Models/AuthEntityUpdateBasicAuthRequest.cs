@@ -54,12 +54,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 [Newtonsoft.Json.JsonProperty("material_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_type")]
                 public int MaterialType { get; set; }
+
                 /// <summary>
                 /// 资料过期时间，示例：2029-09-10
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_expiretime")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_expiretime")]
-                public int MaterialExpireTime { get; set; }
+                public string MaterialExpireTime { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料链接，字符串数组

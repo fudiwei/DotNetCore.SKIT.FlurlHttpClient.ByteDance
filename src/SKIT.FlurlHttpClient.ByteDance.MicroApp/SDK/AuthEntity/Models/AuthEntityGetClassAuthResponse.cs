@@ -202,12 +202,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 [Newtonsoft.Json.JsonProperty("material_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_type")]
                 public int MaterialType { get; set; }
+
                 /// <summary>
                 /// 资料过期时间，示例：2029-09-10
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_expiretime")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_expiretime")]
-                public int MaterialExpireTime { get; set; }
+                public string MaterialExpireTime { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 资质材料链接，字符串数组
@@ -248,13 +249,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.AuthEntity.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("audit_taskid")]
                 [System.Text.Json.Serialization.JsonPropertyName("audit_taskid")]
-                public int AuditTaskId { get; set; }
+                public string AuditTaskId { get; set; } = string.Empty;
                 /// <summary>
                 /// 资质审核状态 1：审核中 2：审核成功 3：审核失败
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("audit_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("audit_status")]
-                public string AuditStatus { get; set; } = string.Empty;
+                public int AuditStatus { get; set; }
                 /// <summary>
                 /// 审核失败时原因
                 /// </summary>

@@ -161,6 +161,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
             return await client.SendRequestWithJsonAsync<Models.ProductApiQueryTemplateInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /query_class_info 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/product/queryClassInfo </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductApiQueryClassInfoResponse> ExecuteProductApiQueryClassInfoAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryClassInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "query_class_info");
+
+            return await client.SendRequestWithJsonAsync<Models.ProductApiQueryClassInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
+
+
         #region Resource
         /// <summary>
         /// <para>异步调用 [POST] /upload_resource 接口。</para>

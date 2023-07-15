@@ -1,0 +1,14 @@
+{
+    "bind_info_list": [
+        {
+            "appid": "tt81e9f7541e8e239801",
+            "industry_code": 10000,
+            "industry_role": 3,
+            "merchant_entity_id": "E_7198139xxxx104789548"
+        }
+    ],
+    "err": {
+        "err_code": 0,
+        "err_msg": ""
+    }
+}

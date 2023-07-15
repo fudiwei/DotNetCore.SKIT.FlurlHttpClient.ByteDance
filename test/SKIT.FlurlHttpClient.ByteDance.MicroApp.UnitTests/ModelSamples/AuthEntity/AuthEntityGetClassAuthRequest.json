@@ -1,0 +1,13 @@
+{
+    "appid": "ttxxxxxxxx",
+    "access_token": "xxxxxxxx",
+    "partner_entity_id": "",
+    "merchant_entity_id": "E_787907892525941398",
+    "industry_code": 10000,
+    "industry_class": {
+        "first_class": 70000,
+        "second_class": 70500,
+        "third_class": 0
+    },
+    "industry_role": 2
+}

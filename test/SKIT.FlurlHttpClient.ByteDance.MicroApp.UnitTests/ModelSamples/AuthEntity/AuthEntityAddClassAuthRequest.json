@@ -1,0 +1,54 @@
+{
+    "appid": "ttxxxxxxxx",
+    "access_token": "xxxxxxxx",
+    "partner_entity_id": "E_7178703725253394476",
+    "merchant_entity_id": "I_7179078906694139948",
+    "industry_code": 10000,
+    "industry_class":
+    {
+        "first_class": 70000,
+        "second_class": 70500,
+        "third_class": 0
+    },
+    "industry_role": 1,
+    "merchant_qualifications":
+    [
+        {
+            "material_type": 1002,
+            "material_expiretime": "2033-01-01",
+            "material_paths":
+            [
+                "certification/resource/b6b0ffee0ae2a9cfe723aad140dbd521"
+            ]
+        }
+    ],
+    "institution":
+    {
+        "record_name": "泛知识机构九",
+        "scene_type": "线上机构",
+        "subject_type": "企业工商户",
+        "logo_uri": "certification/resource/94699056669e84341b488570bdbe87d5",
+        "trademark_uri": "certification/resource/94699056669e84341b488570bdbe87d5",
+        "desc": "这是简介简介必须是不得少于12个字符",
+        "employee":
+        {
+            "employee_material":
+            {
+                "name": "花玲玲",
+                "id_number": "320682198608139122",
+                "expire_time": "2030-05-05",
+                "front_path": "certification/resource/cd29412b2392d0f1c488bd9aa1e650b7",
+                "back_path": "certification/resource/d797a08e8d542cd5db0f84a1710900c0"
+            },
+            "cooperation_agreement":
+            {
+                "material_type": 1005,
+                "material_expiretime": "2031-06-06",
+                "material_paths":
+                [
+                    "certification/resource/722460c5bca1bac5f76ba9ac10f5d030"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "appid": "ttxxxxxxxx",
+    "access_token": "xxxxxxxx",
+    "partner_entity_id": "",
+    "merchant_entity_id": "E_7178703725253394476",
+    "entity_name": "泛知识机构六",
+    "enterprise": {
+        "certificate_id": "911120220831140392",
+        "certificate_materials": [
+            {
+                "material_type": 1007,
+                "material_expiretime": "2025-02-02",
+                "material_paths": [
+                    "certification/resource/4c23f6490a4b65b1c537abdd765b1907"
+                ]
+            }
+        ],
+        "legal_person": {
+            "name": "刘成国",
+            "id_number": "210219195912106418",
+            "expire_time": "2027-03-03",
+            "front_path": "certification/resource/1f3ac1c1966a19d83e7607bfb3d38ce9",
+            "back_path": "certification/resource/11dd877fb32b439c4609f25f76ab05c1"
+        }
+    }
+}

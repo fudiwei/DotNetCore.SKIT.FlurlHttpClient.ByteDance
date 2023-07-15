@@ -1,0 +1,23 @@
+{
+    "err": {
+        "err_code": 0,
+        "err_msg": ""
+    },
+    "qualifications": [
+        {
+            "audit_reason": "",
+            "audit_status": 1,
+            "audit_taskid": "Role_7178703725253885996",
+            "expire_time": "2033-01-02",
+            "qualifications": [
+                {
+                    "material_expiretime": "2033-01-02",
+                    "material_paths": [
+                        "certification/resource/01d86c188a9a6ba4e4bbbe3385ccf1f2"
+                    ],
+                    "material_type": 1001
+                }
+            ]
+        }
+    ]
+}

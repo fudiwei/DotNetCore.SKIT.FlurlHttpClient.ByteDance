@@ -1,0 +1,65 @@
+{
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "202204271324260102252431250D04BCE0",
+    "data": {
+        "product_class_info_list": [
+            {
+                "class_info_detail_list": [
+                    {
+                        "class_definition": "对家长实施的教育孩子成长的课程，包括教育子女方法、理念课程。受众为家长，课程为传授家长（成人）教育子女方法、理念，例如：如何与孩子相处、提高孩子情商的方法、某某的育儿之道 孕产育儿，工具课程等",
+                        "document_link": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/operation/industry-norm/pan-knowledge/control-management-norms/",
+                        "professional_certification": "与所选二级分类相关的专业认证，包含但不仅限于以下专业认证   - 孤残儿童护理员职业资格证 - 育婴员职业资格证- 保育员职业资格证- 公共营养师（人社部历史认证）- 心理咨询师（人社部历史认证）- 学校外聘老师证书/证明/聘书- 蒙特梭利AMI/CoRT思维训练课程/瑞吉欧/华德福等- 国际泌乳顾问认证- 萨提亚模式心理咨询师认证- 报考机构签约教师",
+                        "professional_education": "本科及以上教育学、心理学等相关专业学历*海外院校毕业以教育部留学服务中心认证通过的学历为准。",
+                        "qualification_tip": "行业资质至少一项：教师资格证、专业性学历、专业认证",
+                        "second_class_id": 10100,
+                        "second_class_name": "家长教育",
+                        "special_tip": "受众人群：家长、父母",
+                        "teacher_qualification_certificate": ""
+                    },
+                    {
+                        "class_definition": "通过编程游戏启蒙、可视化图形编程等课程，培养学生的计算思维和创新解难能力。",
+                        "document_link": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/operation/industry-norm/pan-knowledge/control-management-norms/",
+                        "professional_certification": "与所选二级分类相关的专业认证，包含但不仅限于以下专业认证   - 知名编程相关大赛获奖证书（如：ACM算法大赛、世界机器人大赛等）- 编程培训师资认证- 少儿编程培训机构签约老师，任教超过三年，以机构提供的在职证明为准（需注明任教时间）",
+                        "professional_education": "专本及以上计算机科学与技术及相关专业学历*海外院校毕业以教育部留学服务中心认证通过的学历为准。",
+                        "qualification_tip": "必要资质无犯罪记录证明，其他行业资质至少一项：教师资格证、专业性学历、专业认证",
+                        "second_class_id": 10300,
+                        "second_class_name": "少儿编程",
+                        "special_tip": "受众范围为6-18岁，不包含学龄前儿童。必要资质带公章的无犯罪记录证明，上传到专业认证栏",
+                        "teacher_qualification_certificate": ""
+                    }
+                ],
+                "first_class_id": 10000,
+                "first_class_name": "少儿成长"
+            },
+            {
+                "class_info_detail_list": [
+                    {
+                        "class_definition": "以英语学习为目的的一类培训内容（大学英语四六级、专四专八；托福、雅思、GRE、SAT、A-level、口译、笔译、BEC、托业、口语课程等）",
+                        "document_link": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/operation/industry-norm/pan-knowledge/control-management-norms/",
+                        "professional_certification": "与所选二级分类相关的专业认证，包含但不仅限于以下专业认证 - 翻译专业资格证 - 英语专业四级/八级证书 - 剑桥商务英语证书 BEC Higher C1级别证书 - 托福100分以上成绩证明 - 雅思7.5分以上成绩证明 - GRE320+4.0以上成绩证明 - 剑桥成人英语教学证书（CELTA）- 高等院校外国语相关院系特聘讲师/教授/研究员",
+                        "professional_education": "",
+                        "qualification_tip": "行业资质至少一项：教师资格证、专业认证",
+                        "second_class_id": 30100,
+                        "second_class_name": "英语",
+                        "special_tip": "",
+                        "teacher_qualification_certificate": ""
+                    },
+                    {
+                        "class_definition": "以汉语学习为目的的一类培训，对外汉语内容（不包含语文学科课程）",
+                        "document_link": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/operation/industry-norm/pan-knowledge/control-management-norms/",
+                        "professional_certification": "与所选二级分类相关的专业认证，包含但不仅限于以下专业认证 - 翻译专业资格证 - 高等院校文学系/外国语系/国际教育相关院系特聘讲师/教授/研究员",
+                        "professional_education": "",
+                        "qualification_tip": "行业资质至少一项：教师资格证&专业认证（资格证书、职称证书）",
+                        "second_class_id": 30200,
+                        "second_class_name": "汉语学习",
+                        "special_tip": "",
+                        "teacher_qualification_certificate": ""
+                    }
+                ],
+                "first_class_id": 30000,
+                "first_class_name": "语言培训"
+            }
+        ]
+    }
+}

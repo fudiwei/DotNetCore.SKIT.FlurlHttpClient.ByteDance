@@ -48,7 +48,20 @@
             }
         },
         "course_params": {
-            "teacher_introduction": "张老师..."
+            "teacher_id": "T7283947392973",
+            "institution_id": "I1039473947393",
+            "course_num": 637,
+            "refund_label": {
+                "type": 1,
+                "day_before_use_info": {
+                    "day": 7
+                }
+            },
+            "use_label": {
+                "valid_date": "2022-12-01"
+            },
+            "start_timestamp": 1649662751000,
+            "end_timestamp": 1681198751000
         }
     }
 }

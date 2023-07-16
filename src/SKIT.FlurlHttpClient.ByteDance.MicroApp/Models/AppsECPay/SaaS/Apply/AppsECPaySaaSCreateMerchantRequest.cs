@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
@@ -496,7 +496,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public Types.MerchantOperationInfo MerchantOperationInfo { get; set; } = new Types.MerchantOperationInfo();
 
         /// <summary>
-        /// 获取或设置行业类型列表。
+        /// 获取或设置行业编码列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("industry_code")]
         [System.Text.Json.Serialization.JsonPropertyName("industry_code")]

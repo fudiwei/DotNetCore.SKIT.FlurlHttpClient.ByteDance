@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置字节小程序 API 域名。
+        /// 获取或设置字节小程序服务商平台 API 域名。
         /// <para>默认值：<see cref="ByteDanceMicroAppOpenApiEndpoints.DEFAULT"/></para>
         /// </summary>
         public string Endpoints { get; set; } = ByteDanceMicroAppOpenApiEndpoints.DEFAULT;

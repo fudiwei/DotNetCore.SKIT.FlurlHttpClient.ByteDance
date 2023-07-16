@@ -269,80 +269,69 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi.Models
                         public Types.AnchorInfo? AnchorInfo { get; set; }
 
                         /// <summary>
-                        /// 开发者回调，<= 1024byte
+                        /// 获取或设置开发者回调数据。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("callback_data")]
                         [System.Text.Json.Serialization.JsonPropertyName("callback_data")]
                         public string? CallbackData { get; set; }
 
                         /// <summary>
-                        /// 课程图片uri, 需要调用资源上传接口获取，开头为"tos-cn-i-b2i6zad4el/"（资源类型编码：31）
+                        /// 获取或设置图片文件资源路径。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_img_uri")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_img_uri")]
-                        public string ProductImgUri { get; set; } = string.Empty;
+                        public string? ProductImagePath { get; set; }
                     }
 
                     public class CourseInfo
                     {
-                        // /// <summary>
-                        // /// 获取或设置老师介绍。
-                        // /// </summary>
-                        // [Newtonsoft.Json.JsonProperty("teacher_introduction")]
-                        // [System.Text.Json.Serialization.JsonPropertyName("teacher_introduction")]
-                        // public string? TeacherIntroduction { get; set; }
-
                         public static class Types
                         {
                             public class RefundLabel
                             {
                                 /// <summary>
-                                /// 退款标签类型，枚举值，建议选择3
+                                /// 获取或设置退款标签类型。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
                                 public int Type { get; set; } = 3;
 
                                 /// <summary>
-                                ///「xx天未学可退」标签，其中「xx」为填写的天数，0 < day <= 100
+                                /// 获取或设置「xx天未学可退」标签信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("day_before_use_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("day_before_use_info")]
                                 public DayBeforeUseInfo? DayBeforeUseInfo { get; set; }
 
                                 /// <summary>
-                                /// 「学习进度不足xx%可退」标签，
-                                /// 0 <= rest_percent <= 100，当rest_percent=0或100时标签和其他情况不同:
-                                /// 0: 「不支持退款」
-                                /// 100: 「随时可退」
+                                /// 获取或设置「学习进度不足xx%可退」标签信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rest_not_learn_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("rest_not_learn_info")]
                                 public RestNotLearnInfo? RestNotLearnInfo { get; set; }
 
                                 /// <summary>
-                                /// 固定退款标签id，可以通过查询可选择的退款标签接口查询退款标签的id
+                                /// 获取或设置固定退款标签 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("fixed")]
                                 [System.Text.Json.Serialization.JsonPropertyName("fixed")]
-                                public int Fixed { get; set; }
+                                public int FixedId { get; set; }
                             }
 
                             public class UseLabel
                             {
                                 /// <summary>
-                                /// 过期时间
+                                /// 获取或设置有效期字符串（格式：yyyy-MM-dd）。
                                 /// </summary>
-                                /// <example>"2022-12-01"</example>
                                 [Newtonsoft.Json.JsonProperty("valid_date")]
                                 [System.Text.Json.Serialization.JsonPropertyName("valid_date")]
-                                public string? ValidDate { get; set; }
+                                public string? ValidDateString { get; set; }
                             }
 
                             public class DayBeforeUseInfo
                             {
                                 /// <summary>
-                                /// 天数
+                                /// 获取或设置天数。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("day")]
                                 [System.Text.Json.Serialization.JsonPropertyName("day")]
@@ -352,9 +341,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi.Models
                             public class RestNotLearnInfo
                             {
                                 /// <summary>
-                                /// 0 <= rest_percent <= 100，当rest_percent=0或100时标签和其他情况不同:
-                                /// 0: 「不支持退款」
-                                /// 100: 「随时可退」
+                                /// 获取或设置比例（范围：0～100）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rest_percent")]
                                 [System.Text.Json.Serialization.JsonPropertyName("rest_percent")]
@@ -363,56 +350,53 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi.Models
                         }
 
                         /// <summary>
-                        /// 老师id，需要调用添加资质接口获取，老师id必须过审后才能使用
+                        /// 获取或设置老师 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("teacher_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("teacher_id")]
                         public string? TeacherId { get; set; }
 
-
                         /// <summary>
-                        /// 机构id，需要调用添加资质接口获取，老师id必须过审后才能使用
+                        /// 获取或设置机构 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("institution_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("institution_id")]
                         public string? InstitutionId { get; set; }
 
                         /// <summary>
-                        /// 课程节数，0 < course_num <= 10000
+                        /// 获取或设置课程节数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("course_num")]
                         [System.Text.Json.Serialization.JsonPropertyName("course_num")]
-                        public int CourseNum { get; set; }
+                        public int CourseCount { get; set; }
 
                         /// <summary>
-                        /// 退款标签
+                        /// 获取或设置退款标签信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_label")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_label")]
                         public Types.RefundLabel? RefundLabel { get; set; }
 
-
                         /// <summary>
-                        /// 使用标签，若不填则默认为「购买后永久有效」
+                        /// 获取或设置使用标签信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("use_label")]
                         [System.Text.Json.Serialization.JsonPropertyName("use_label")]
                         public Types.UseLabel? UseLabel { get; set; }
 
                         /// <summary>
-                        /// 课程开始时间，毫秒时间戳，0 < start_timestamp < end_timestamp
+                        /// 获取或设置课程开始时间毫秒级时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("start_timestamp")]
                         [System.Text.Json.Serialization.JsonPropertyName("start_timestamp")]
-                        public long? StartTimestamp { get; set; }
+                        public long? StartTimeMilliseconds { get; set; }
 
                         /// <summary>
-                        /// 课程结束时间，毫秒时间戳，0 < start_timestamp < end_timestamp
+                        /// 获取或设置课程结束时间毫秒级时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("end_timestamp")]
                         [System.Text.Json.Serialization.JsonPropertyName("end_timestamp")]
-                        public long? EndTimestamp { get; set; }
-
+                        public long? EndTimeMilliseconds { get; set; }
                     }
                 }
 

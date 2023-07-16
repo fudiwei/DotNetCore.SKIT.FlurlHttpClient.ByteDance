@@ -1,0 +1,71 @@
+{
+    "appid":"tt5ed3286ec1exxxb801",
+    "access_token":"{{accesstoken}}",
+    "entity_id":"E_720848123xxx5589309",
+    "basic_auth":{
+        "entity_type":2,
+        "entity_name":"企业老师第三阶段内部测试三",
+        "certificate_type":2,
+        "enterprise":{
+            "certificate_id":"91112022083xxx0762",
+            "certificate_materials":[
+                {
+                    "material_type":1007,
+                    "material_expiretime":"2025-01-01",
+                    "material_paths":[
+                        "certification/resource/13084f5b17978a5c0f37a1aa9f37e45a"
+                    ]
+                }
+            ],
+            "legal_person":{
+                "name":"花x玲",
+                "id_number":"3206821xxx08139122",
+                "expire_time":"2033-03-04",
+                "front_path":"certification/resource/175e18a5d45fefd6fe4289bc23c1cfe5",
+                "back_path":"certification/resource/e6195fa78c5d125f54348734206417c6"
+            }
+        }
+    },
+    "class_auth": {
+        "industry_code": 10000,
+        "industry_class": {
+            "first_class": 40000,
+            "second_class": 40600,
+            "third_class": 0
+        },
+        "industry_role": 2,
+        "qualifications": [
+            {
+                "material_type": 1001,
+                "material_expiretime": "2033-01-02",
+                "material_paths": [
+                    "certification/resource/41130372b6128175610a417317a398ba"
+                ]
+            }
+        ],
+        "institution": {
+            "record_name": "内部测试麻烦审核通过",
+            "scene_type": "线上机构",
+            "subject_type": "企业工商户",
+            "logo_uri": "certification/resource/5b3f3a85b6121e4f0439b3d5fb91fbdd",
+            "trademark_uri": "certification/resource/b6fa447d3c7fdf9f99b5421b791c038f",
+            "desc": "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+            "employee": {
+                "employee_material": {
+                    "name": "花x玲",
+                    "id_number": "3206821xxx08139122",
+                    "expire_time": "2033-01-02",
+                    "front_path": "certification/resource/175e18a5d45fefd6fe4289bc23c1cfe5",
+                    "back_path": "certification/resource/e6195fa78c5d125f54348734206417c6"
+                },
+                "cooperation_agreement": {
+                    "material_type": 1005,
+                    "material_expiretime": "2040-02-08",
+                    "material_paths": [
+                        "certification/resource/41130372b6128175610a417317a398ba"
+                    ]
+                }
+            }
+        }
+    }
+}

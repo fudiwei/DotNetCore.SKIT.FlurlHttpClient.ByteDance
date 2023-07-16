@@ -1,9 +1,9 @@
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.RoleApi
 {
     /// <summary>
-    /// 一个用于构造 <see cref="ByteDanceMicroAppProductApiClient"/> 时使用的配置项。
+    /// 一个用于构造 <see cref="ByteDanceMicroAppRoleApiClient"/> 时使用的配置项。
     /// </summary>
-    public class ByteDanceMicroAppProductApiClientOptions
+    public class ByteDanceMicroAppRoleApiClientOptions
     {
         /// <summary>
         /// 获取或设置请求超时时间（单位：毫秒）。
@@ -12,10 +12,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置字节小程序泛知识课程库 API 域名。
-        /// <para>默认值：<see cref="ByteDanceMicroAppProductApiEndpoints.DEFAULT"/></para>
+        /// 获取或设置字节小程序泛知识角色系统 API 域名。
+        /// <para>默认值：<see cref="ByteDanceMicroAppRoleApiEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string Endpoints { get; set; } = ByteDanceMicroAppProductApiEndpoints.DEFAULT;
+        public string Endpoints { get; set; } = ByteDanceMicroAppRoleApiEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置字节小程序 AppId。

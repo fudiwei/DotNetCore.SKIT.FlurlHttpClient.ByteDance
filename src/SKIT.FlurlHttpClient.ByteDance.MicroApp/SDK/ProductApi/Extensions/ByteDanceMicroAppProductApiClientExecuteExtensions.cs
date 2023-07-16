@@ -180,8 +180,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi
             return await client.SendRequestWithJsonAsync<Models.ProductApiQueryClassInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
-
-
         #region Resource
         /// <summary>
         /// <para>异步调用 [POST] /upload_resource 接口。</para>

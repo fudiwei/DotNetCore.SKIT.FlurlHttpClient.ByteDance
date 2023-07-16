@@ -119,7 +119,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("query_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("query_type")]
-                public string QueryType { get; set; }
+                public string QueryType { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置自动结算明细列表。

@@ -51,6 +51,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 CodeAnalyzerOptions options = new CodeAnalyzerOptions()
                 {
                     AssemblyName = "SKIT.FlurlHttpClient.ByteDance.MicroApp",
+                    TargetSdkApiModelNamespaceUnderAssemblyIdentifier = "SDK.RoleApi.Models",
+                    TargetSdkApiEventNamespaceUnderAssemblyIdentifier = "SDK.RoleApi.Events",
+                    //TargetSdkApiMethodNamespaceUnderAssemblyIdentifier = "SDK.RoleApi",
+                    WorkDirectoryForSourceCode = TestConfigs.WorkDirectoryForSdk,
+                    WorkDirectoryForTestSample = TestConfigs.WorkDirectoryForTest,
+                    WorkSubDirectoryForApiMethods = "SDK/RoleApi/Extensions",
+                    WorkSubDirectoryForApiModels = "SDK/RoleApi/Models",
+                    WorkSubDirectoryForApiEvents = "SDK/RoleApi/Events",
+                    WorkSubDirectoryForApiModelSamples = "ModelSamples/RoleApi",
+                    WorkSubDirectoryForApiEventSamples = "EventSamples/RoleApi",
+                    AllowNotFoundEventTypes = true,
+                    AllowNotFoundEventSamples = true
+                };
+                CodeAnalyzer analyzer = new CodeAnalyzer(options);
+                analyzer.Start();
+                analyzer.Assert();
+                analyzer.Flush();
+            }));
+
+            Assert.Null(Record.Exception(() =>
+            {
+                CodeAnalyzerOptions options = new CodeAnalyzerOptions()
+                {
+                    AssemblyName = "SKIT.FlurlHttpClient.ByteDance.MicroApp",
                     TargetSdkApiModelNamespaceUnderAssemblyIdentifier = "SDK.OpenApi.Models",
                     TargetSdkApiEventNamespaceUnderAssemblyIdentifier = "SDK.OpenApi.Events",
                     //TargetSdkApiMethodNamespaceUnderAssemblyIdentifier = "SDK.OpenApi",

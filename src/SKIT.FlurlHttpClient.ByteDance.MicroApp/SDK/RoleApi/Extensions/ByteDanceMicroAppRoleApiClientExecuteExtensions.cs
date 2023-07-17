@@ -62,6 +62,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.RoleApi.Extensions
             return await client.SendRequestWithJsonAsync<Models.AuthEntityQueryEntityInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /enable_mountscope 接口。</para>
+        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/enable-mountscope </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityEnableMountScopeResponse> ExecuteAuthEntityEnableMountScopeAsync(this ByteDanceMicroAppRoleApiClient client, Models.AuthEntityEnableMountScopeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId == null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateRequest(request, HttpMethod.Post, "enable_mountscope");
+
+            return await client.SendRequestWithJsonAsync<Models.AuthEntityEnableMountScopeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+        }
+
         #region Auth
         /// <summary>
         /// <para>异步调用 [POST] /bypartner 接口。</para>

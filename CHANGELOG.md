@@ -33,6 +33,14 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 2.5.0
+
+    -   **新增**：新增担保支付自动结算结果查询接口。（_via_ [GitHub #12](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/12)）
+
+    -   **新增**：新增泛知识角色系统相关接口。（_via_ [GitHub #16](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/16)）
+
+    -   **新增**：随官方更新泛知识课程库添加和修改泛课程接口模型。（_via_ [GitHub #18](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/18)）
+
 -   Release 2.4.1
 
     -   **修复**：修复部分服务商授权相关接口模型定义错误。（_via_ [GitHub #11](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/pull/11)）

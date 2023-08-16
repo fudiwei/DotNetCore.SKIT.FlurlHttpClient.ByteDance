@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class ByteDanceMicroAppClientExecuteAppsECPayExtensions
     {
-        private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request)
+        public static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request)
             where TRequest : ByteDanceMicroAppRequest
         {
             if (client == null) throw new ArgumentNullException(nameof(client));

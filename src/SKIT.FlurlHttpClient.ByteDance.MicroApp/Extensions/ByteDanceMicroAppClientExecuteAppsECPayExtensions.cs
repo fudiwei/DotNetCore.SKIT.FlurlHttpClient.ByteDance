@@ -32,7 +32,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             string json = client.JsonSerializer.Serialize(request);
             IList<string> tempList = new List<string>() { client.Credentials.ECPaySalt! };
-            IDictionary<string, string> paramMap = signMap ?? Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(json)!;
+            IDictionary<string, string> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(json)!;
+
+            if (signMap != null)
+            {
+                foreach (var kv in signMap)
+                {
+                    paramMap[kv.Key] = kv.Value;
+                }
+            }
 
             foreach (KeyValuePair<string, string> item in paramMap)
             {

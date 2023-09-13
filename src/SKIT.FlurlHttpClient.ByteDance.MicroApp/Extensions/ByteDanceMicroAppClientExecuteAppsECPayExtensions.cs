@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class ByteDanceMicroAppClientExecuteAppsECPayExtensions
     {
-        private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request)
+        private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request, Dictionary<string, string?>? extraParamMap = null)
             where TRequest : ByteDanceMicroAppRequest
         {
             if (client == null) throw new ArgumentNullException(nameof(client));
@@ -23,9 +23,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             string json = client.JsonSerializer.Serialize(request);
             IList<string> tempList = new List<string>() { client.Credentials.ECPaySalt! };
-            IDictionary<string, string> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(json)!;
+            IDictionary<string, string?> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string?>>(json)!;
 
-            foreach (KeyValuePair<string, string> item in paramMap)
+            if (extraParamMap != null)
+            {
+                foreach (KeyValuePair<string, string?> item in extraParamMap)
+                {
+                    paramMap[item.Key] = item.Value;
+                }
+            }
+
+            foreach (KeyValuePair<string, string?> item in paramMap)
             {
                 string key = item.Key;
                 string? value = item.Value?.Trim();
@@ -538,7 +546,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             if (request.Signature == null)
-                request.Signature = client.GenerateRequestSignature(request);
+            {
+                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
+                {
+                    { "merchant_id" , request.MerchantId },
+                    { "bill_date" , request.DateString },
+                    { "bill_type" , request.BillType }
+                });
+            }
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "apps", "bills")
@@ -571,7 +586,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             if (request.Signature == null)
-                request.Signature = client.GenerateRequestSignature(request);
+            {
+                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
+                {
+                    { "merchant_id" , request.MerchantId },
+                    { "bill_date" , request.DateString },
+                    { "account_type" , request.AccountType },
+                    { "payment_type" , request.PaymentType },
+                    { "trade_type" , request.TradeType },
+                });
+            }
 
             IFlurlRequest flurlReq = client
                 .CreateRequest(request, HttpMethod.Get, "apps", "fund", "bills")

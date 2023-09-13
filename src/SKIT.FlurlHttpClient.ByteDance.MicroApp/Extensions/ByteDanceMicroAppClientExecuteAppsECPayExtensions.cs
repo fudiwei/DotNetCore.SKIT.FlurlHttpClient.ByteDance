@@ -11,16 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class ByteDanceMicroAppClientExecuteAppsECPayExtensions
     {
-        /// <summary>
-        /// 生成请求签名
-        /// </summary>
-        /// <typeparam name="TRequest"></typeparam>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="signMap">指定签名字段</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        public static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request, Dictionary<string, string>? signMap = null)
+        private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request, Dictionary<string, string?>? extraParamMap = null)
             where TRequest : ByteDanceMicroAppRequest
         {
             if (client == null) throw new ArgumentNullException(nameof(client));
@@ -32,17 +23,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             string json = client.JsonSerializer.Serialize(request);
             IList<string> tempList = new List<string>() { client.Credentials.ECPaySalt! };
-            IDictionary<string, string> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(json)!;
+            IDictionary<string, string?> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string?>>(json)!;
 
-            if (signMap != null)
+            if (extraParamMap != null)
             {
-                foreach (var kv in signMap)
+                foreach (KeyValuePair<string, string?> item in extraParamMap)
                 {
-                    paramMap[kv.Key] = kv.Value;
+                    paramMap[item.Key] = item.Value;
                 }
             }
 
-            foreach (KeyValuePair<string, string> item in paramMap)
+            foreach (KeyValuePair<string, string?> item in paramMap)
             {
                 string key = item.Key;
                 string? value = item.Value?.Trim();
@@ -556,13 +547,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             if (request.Signature == null)
             {
-                var signMap = new Dictionary<string, string>()
+                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
                 {
                     { "merchant_id" , request.MerchantId },
                     { "bill_date" , request.DateString },
                     { "bill_type" , request.BillType }
-                };
-                request.Signature = client.GenerateRequestSignature(request, signMap);
+                });
             }
 
             IFlurlRequest flurlReq = client
@@ -597,15 +587,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             if (request.Signature == null)
             {
-                var signMap = new Dictionary<string, string>()
+                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
                 {
                     { "merchant_id" , request.MerchantId },
                     { "bill_date" , request.DateString },
                     { "account_type" , request.AccountType },
                     { "payment_type" , request.PaymentType },
                     { "trade_type" , request.TradeType },
-                };
-                request.Signature = client.GenerateRequestSignature(request, signMap);
+                });
             }
 
             IFlurlRequest flurlReq = client

@@ -120,12 +120,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                             }
                         }
 
-                        /// <summary>
-                        /// 券id。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("certificate_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                        public string CertificateId { get; set; } = default!;
+                        ///// <summary>
+                        ///// 券id。
+                        ///// </summary>
+                        //[Newtonsoft.Json.JsonProperty("certificate_id")]
+                        //[System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
+                        //public long CertificateId { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置加密券码。

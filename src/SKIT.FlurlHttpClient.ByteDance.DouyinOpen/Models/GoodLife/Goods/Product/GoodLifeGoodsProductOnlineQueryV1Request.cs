@@ -13,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string? AccountId { get; set; }
 
         /// <summary>
-        /// 获取或设置上线状态。过滤在线状态 1-在线 2-下线 3-封禁
+        /// 获取或设置上线状态。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public int? PageCursor { get; set; }
 
         /// <summary>
-        /// 获取或设置分页每页数量。分页数量，不传默认为5，最大上限50
+        /// 获取或设置分页每页数量。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

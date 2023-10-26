@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public int OriginalAmount { get; set; }
 
                                 /// <summary>
-                                /// 券划线价金额，单位分。
+                                /// 获取或设置券划线价金额（单位：分）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("list_market_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("list_market_amount")]
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public int PayAmount { get; set; }
 
                                 /// <summary>
-                                /// 券实付金额（=用户实付金额+支付优惠金额），单位分
+                                /// 获取或设置券实付金额（单位：分）
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("coupon_pay_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("coupon_pay_amount")]
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public int PaymentDiscountAmount { get; set; }
 
                                 /// <summary>
-                                /// 平台优惠金额，单位分。
+                                /// 获取或设置平台优惠金额（单位：分）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_discount_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_discount_amount")]
@@ -112,20 +112,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public string? OutSKUId { get; set; }
 
                                 /// <summary>
-                                /// 商家团购账号id。
+                                /// 获取或设置券商家团购账号 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("account_id")]
                                 public string? AccountId { get; set; }
                             }
                         }
-
-                        ///// <summary>
-                        ///// 券id。
-                        ///// </summary>
-                        //[Newtonsoft.Json.JsonProperty("certificate_id")]
-                        //[System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                        //public long CertificateId { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置加密券码。
@@ -172,7 +165,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 public string VerifyToken { get; set; } = default!;
 
                 /// <summary>
-                /// 抖音订单id
+                /// 获取或设置抖音订单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]

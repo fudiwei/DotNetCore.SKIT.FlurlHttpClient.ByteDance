@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /storage/notifySaleReturnStatus 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/50/538 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/api-docs/50/538 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,8 +11,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /token/create 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/9/21 </para>
-        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/9/22 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/guide-docs/9/21 ]]> <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/guide-docs/9/22 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -32,8 +35,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
 
         /// <summary>
         /// <para>异步调用 [POST] /token/refresh 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/9/21 </para>
-        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/9/22 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/guide-docs/9/21 ]]> <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/guide-docs/9/22 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

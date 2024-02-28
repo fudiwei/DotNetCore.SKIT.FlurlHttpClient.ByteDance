@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /alliance/getOrderList 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/46/469 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/api-docs/46/469 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -32,7 +35,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
         #region MaterialsProducts
         /// <summary>
         /// <para>异步调用 [POST] /alliance/materialsProductsSearch 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/61/924 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/api-docs/61/924 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -52,7 +58,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
 
         /// <summary>
         /// <para>异步调用 [POST] /alliance/materialsProductsDetails 接口。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/api-docs/61/1356 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/api-docs/61/1356 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>

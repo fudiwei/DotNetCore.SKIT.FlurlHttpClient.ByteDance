@@ -1,8 +1,11 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Events
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop.Events
 {
     /// <summary>
     /// <para>表示 doudian_trade_TradeCreate 消息的数据。</para>
-    /// <para>REF: https://op.jinritemai.com/docs/message-docs/30/109 </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://op.jinritemai.com/docs/message-docs/30/109 ]]>
+    /// </para>
     /// </summary>
     public class TradeCreateEvent : DouyinShopEvent<TradeCreateEvent.Types.Data>
     {

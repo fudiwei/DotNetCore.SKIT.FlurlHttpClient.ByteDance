@@ -10,7 +10,7 @@
 
 ### 【功能特性】
 
--   基于 TikTok Developer API 封装。
+-   基于 TikTok Developer v2 API 封装。
 
 ### 【开发文档】
 

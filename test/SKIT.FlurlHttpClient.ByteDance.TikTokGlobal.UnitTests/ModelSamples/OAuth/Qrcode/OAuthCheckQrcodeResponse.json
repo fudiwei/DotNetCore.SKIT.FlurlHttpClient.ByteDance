@@ -1,0 +1,8 @@
+{
+    "client_ticket": "",
+    "status": "confirmed",
+    "redirect_uri": "https://example.com?code=example_code",
+    "error": "invalid_request",
+    "error_description": "The request parameters are malformed.",
+    "log_id": "202206221854370101130062072500FFA2"
+}

@@ -1,0 +1,7 @@
+{
+    "client_key": "CLIENT_KEY",
+    "client_secret": "CLIENT_SECRET",
+    "code": "CODE",
+    "grant_type": "authorization_code",
+    "redirect_uri": "REDIRECT_URI"
+}

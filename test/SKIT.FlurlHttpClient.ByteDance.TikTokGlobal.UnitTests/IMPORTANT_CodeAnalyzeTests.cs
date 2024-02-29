@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
             {
                 var options = new TypeDeclarationAnalyzerOptions()
                 {
-                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokClient))!,
+                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokV2Client))!,
                     SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
                     SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
                     SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal",
@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
 
                 var options = new SourceFileAnalyzerOptions()
                 {
-                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokClient))!,
+                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokV2Client))!,
                     SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
                     SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
                     SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Events",

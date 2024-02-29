@@ -1,0 +1,19 @@
+{
+    "post_info": {
+        "title": "funny cat",
+        "description": "this will be a #funny photomode on your @tiktok #fyp",
+        "disable_comment": true,
+        "privacy_level": "PUBLIC_TO_EVERYONE",
+        "auto_add_music": true
+    },
+    "source_info": {
+        "source": "PULL_FROM_URL",
+        "photo_cover_index": 1,
+        "photo_images": [
+            "https://tiktokcdn.com/obj/example-image-01.webp",
+            "https://tiktokcdn.com/obj/example-image-02.webp"
+        ]
+    },
+    "post_mode": "DIRECT_POST",
+    "media_type": "PHOTO"
+}

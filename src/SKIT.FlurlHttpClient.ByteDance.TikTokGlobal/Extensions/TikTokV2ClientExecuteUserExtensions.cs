@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
                 .CreateFlurlRequest(request, HttpMethod.Get, "user", "info", "")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
-            return await client.SendFlurlRequestAsync<Models.UserInfoResponse>(flurlReq, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.UserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -1,60 +1,10 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     /// <summary>
     /// TikTok API v2 响应的基类。
     /// </summary>
-    public abstract class TikTokResponseV2 : ICommonResponse
+    public abstract class TikTokResponseV2 : CommonResponseBase, ICommonResponse
     {
-        /// <summary>
-        ///
-        /// </summary>
-        int ICommonResponse.RawStatus { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        IDictionary<string, string> ICommonResponse.RawHeaders { get; set; } = default!;
-
-        /// <summary>
-        ///
-        /// </summary>
-        byte[] ICommonResponse.RawBytes { get; set; } = default!;
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应状态码。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public int RawStatus
-        {
-            get { return ((ICommonResponse)this).RawStatus; }
-            internal set { ((ICommonResponse)this).RawStatus = value; }
-        }
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应表头集合。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public IDictionary<string, string> RawHeaders
-        {
-            get { return ((ICommonResponse)this).RawHeaders; }
-            internal set { ((ICommonResponse)this).RawHeaders = value; }
-        }
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应正文。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] RawBytes
-        {
-            get { return ((ICommonResponse)this).RawBytes; }
-            internal set { ((ICommonResponse)this).RawBytes = value; }
-        }
-
         /// <summary>
         /// 获取 TikTok API 返回的错误信息。
         /// </summary>
@@ -63,12 +13,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public virtual TikTokResponseV2Error Error { get; set; } = default!;
 
         /// <summary>
-        /// 获取一个值，该值指示调用 TikTok API 是否成功（即 HTTP 状态码为 200、且 "error.code" 值为 "ok"）。
+        /// 获取一个值，该值指示调用 TikTok API 是否成功。
+        /// <para>
+        ///（即 HTTP 状态码为 200，且 <see cref="Error.Code"/> 值为 "ok"）
+        /// </para>
         /// </summary>
         /// <returns></returns>
-        public virtual bool IsSuccessful()
+        public override bool IsSuccessful()
         {
-            return RawStatus == 200 && (string.IsNullOrEmpty(Error?.Code) || "ok".Equals(Error?.Code));
+            return GetRawStatus() == 200 && (string.IsNullOrEmpty(Error?.Code) || "ok".Equals(Error?.Code));
         }
     }
 

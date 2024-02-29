@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
     {
         /// <summary>
         /// <para>异步调用 [POST] /user/info/ 接口。</para>
-        /// <para>REF: https://developers.tiktok.com/doc/tiktok-api-v1-user-info/ </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-api-v1-user-info/ ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,9 +25,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "user", "info/");
+                .CreateFlurlRequest(request, HttpMethod.Post, "user", "info/");
 
-            return await client.SendRequestWithJsonAsync<Models.UserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.UserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
     {
         /// <summary>
         /// <para>异步调用 [POST] /share/video/upload/ 接口。</para>
-        /// <para>REF: https://developers.tiktok.com/doc/web-video-kit-with-web/ </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/web-video-kit-with-web/ ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -21,19 +24,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.VideoFileName == null)
+            if (request.VideoFileName is null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToLower() + ".mp4";
 
-            if (request.VideoContentType == null)
+            if (request.VideoContentType is null)
                 request.VideoContentType = "video/mp4";
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "share", "video", "upload/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "share", "video", "upload/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("access_token", request.AccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType!, formDataName: "video");
-            return await client.SendRequestAsync<Models.ShareVideoUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsync<Models.ShareVideoUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

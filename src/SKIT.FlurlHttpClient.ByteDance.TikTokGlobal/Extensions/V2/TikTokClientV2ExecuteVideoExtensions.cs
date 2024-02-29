@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
     {
         /// <summary>
         /// <para>异步调用 [POST] /video/list/ 接口。</para>
-        /// <para>REF: https://developers.tiktok.com/doc/tiktok-api-v2-video-list/ </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-api-v2-video-list/ ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,15 +25,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "list/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "video", "list/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
-            return await client.SendRequestWithJsonAsync<Models.VideoListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.VideoListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /video/query/ 接口。</para>
-        /// <para>REF: https://developers.tiktok.com/doc/tiktok-api-v2-video-query/ </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-api-v2-video-query/ ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -42,11 +48,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "video", "query/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "video", "query/")
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
-            return await client.SendRequestWithJsonAsync<Models.VideoQueryV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.VideoQueryV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Settings
 
         internal Credentials(TikTokClientOptions options)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
+            if (options is null) throw new ArgumentNullException(nameof(options));
 
             ClientKey = options.ClientKey;
             ClientSecret = options.ClientSecret;
@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Settings
 
         internal Credentials(TikTokClientOptionsV2 options)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
+            if (options is null) throw new ArgumentNullException(nameof(options));
 
             ClientKey = options.ClientKey;
             ClientSecret = options.ClientSecret;

@@ -1,0 +1,19 @@
+{
+    "data": {
+        "apply_time": 1703186989,
+        "category_selection_list": [
+            "profile",
+            "video",
+            "direct_messages"
+        ],
+        "collect_time": 1703187862,
+        "data_format": "text",
+        "request_id": 123451234512345,
+        "status": "downloading"
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "2023242526272829300000000000001111"
+    }
+}

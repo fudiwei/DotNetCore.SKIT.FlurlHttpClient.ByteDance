@@ -33,5 +33,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         [Newtonsoft.Json.JsonProperty("filters")]
         [System.Text.Json.Serialization.JsonPropertyName("filters")]
         public Types.Filters Filters { get; set; } = new Types.Filters();
+        
+        public VideoQueryRequest SetCompleteFields()
+        {
+            FieldList ??= new List<string>();
+            FieldList.Clear();
+            FieldList.Add("id");
+            FieldList.Add("create_time");
+            FieldList.Add("cover_image_url");
+            FieldList.Add("share_url");
+            FieldList.Add("video_description");
+            FieldList.Add("duration");
+            FieldList.Add("height");
+            FieldList.Add("width");
+            FieldList.Add("title");
+            FieldList.Add("embed_html");
+            FieldList.Add("embed_link");
+            FieldList.Add("like_count");
+            FieldList.Add("comment_count");
+            FieldList.Add("share_count");
+            FieldList.Add("view_count");
+            return this;
+        }
     }
 }

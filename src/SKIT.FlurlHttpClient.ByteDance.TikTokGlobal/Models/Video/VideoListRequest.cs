@@ -27,5 +27,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         [Newtonsoft.Json.JsonProperty("max_count")]
         [System.Text.Json.Serialization.JsonPropertyName("max_count")]
         public int? PageSize { get; set; }
+
+        public VideoListRequest SetCompleteFields()
+        {
+            FieldList ??= new List<string>();
+            FieldList.Clear();
+            FieldList.Add("id");
+            FieldList.Add("create_time");
+            FieldList.Add("cover_image_url");
+            FieldList.Add("share_url");
+            FieldList.Add("video_description");
+            FieldList.Add("duration");
+            FieldList.Add("height");
+            FieldList.Add("width");
+            FieldList.Add("title");
+            FieldList.Add("embed_html");
+            FieldList.Add("embed_link");
+            FieldList.Add("like_count");
+            FieldList.Add("comment_count");
+            FieldList.Add("share_count");
+            FieldList.Add("view_count");
+            return this;
+        }
     }
 }

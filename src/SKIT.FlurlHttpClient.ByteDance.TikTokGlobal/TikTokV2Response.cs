@@ -13,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public virtual string? ErrorCode { get; set; }
 
         /// <summary>
-        /// 获取 TikTok API 返回的错误信息。
+        /// 获取 TikTok API 返回的错误描述。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("error_description")]
         [System.Text.Json.Serialization.JsonPropertyName("error_description")]
@@ -44,13 +44,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
     /// </summary>
     public abstract class TikTokV2Response<TData> : TikTokV2Response
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// <i>（保留字段，无实际意义）</i>
+        /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public override string? ErrorCode
         {
             get { return base.ErrorCode; }
             set { base.ErrorCode = value; }
+        }
+
+        /// <summary>
+        /// <i>（保留字段，无实际意义）</i>
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public override string? ErrorDescription
+        {
+            get { return base.ErrorDescription; }
+            set { base.ErrorDescription = value; }
         }
 
         /// <summary>

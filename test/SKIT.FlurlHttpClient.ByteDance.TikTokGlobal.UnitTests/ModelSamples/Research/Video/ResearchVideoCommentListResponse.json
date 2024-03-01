@@ -1,0 +1,22 @@
+{
+    "data": {
+        "comments": [
+            {
+                "text": "AWEEEEEE 🥰🥰🥰",
+                "video_id": 1234563451201523412,
+                "create_time": 1671491598,
+                "id": 12345616934634134,
+                "like_count": 50,
+                "parent_comment_id": 1234561201524010,
+                "reply_count": 10
+            }
+        ],
+        "has_more": true,
+        "cursor": 300
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "202207280326050102231031430C7E754E"
+    }
+}

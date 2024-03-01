@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /video/list/ 接口的响应。</para>
+    /// <para>表示 [POST] /research/user/liked_videos/ 接口的响应。</para>
     /// </summary>
-    public class VideoListResponse : TikTokV2Response<VideoListResponse.Types.Data>
+    public class ResearchUserLikedVideosResponse : TikTokV2Response<ResearchUserLikedVideosResponse.Types.Data>
     {
         public static class Types
         {
@@ -18,28 +18,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string VideoId { get; set; } = default!;
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public long VideoId { get; set; }
 
                         /// <summary>
-                        /// 获取或设置封面图片 URL。
+                        /// 获取或设置作者用户名。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("cover_image_url")]
-                        [System.Text.Json.Serialization.JsonPropertyName("cover_image_url")]
-                        public string CoverImageUrl { get; set; } = default!;
+                        [Newtonsoft.Json.JsonProperty("username")]
+                        [System.Text.Json.Serialization.JsonPropertyName("username")]
+                        public string Username { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置分享链接 URL。
+                        /// 获取或设置地区代码。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("share_url")]
-                        [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置视频标题。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("title")]
-                        [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        [Newtonsoft.Json.JsonProperty("region_code")]
+                        [System.Text.Json.Serialization.JsonPropertyName("region_code")]
+                        public string RegionCode { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置视频描述。
@@ -49,46 +43,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         public string Description { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置视频时长（单位：秒）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("duration")]
-                        [System.Text.Json.Serialization.JsonPropertyName("duration")]
-                        public int Duration { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置视频高度（单位：像素）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("height")]
-                        [System.Text.Json.Serialization.JsonPropertyName("height")]
-                        public int Height { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置视频宽度（单位：像素）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("width")]
-                        [System.Text.Json.Serialization.JsonPropertyName("width")]
-                        public int Width { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置内嵌 HTML。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("embed_html")]
-                        [System.Text.Json.Serialization.JsonPropertyName("embed_html")]
-                        public string EmbedHtml { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置内嵌链接。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("embed_link")]
-                        [System.Text.Json.Serialization.JsonPropertyName("embed_link")]
-                        public string EmbedLink { get; set; } = default!;
-
-                        /// <summary>
                         /// 获取或设置点赞次数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("like_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("like_count")]
-                        public long LikeCount { get; set; } = default!;
+                        public long LikeCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置评论次数。
@@ -117,14 +76,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         [Newtonsoft.Json.JsonProperty("create_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                         public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置音乐 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("music_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("music_id")]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public long? MusicId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置话题标签列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("hashtag_names")]
+                        [System.Text.Json.Serialization.JsonPropertyName("hashtag_names")]
+                        public string[]? HashtagNameList { get; set; }
                     }
                 }
 
                 /// <summary>
                 /// 获取或设置视频列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("videos")]
-                [System.Text.Json.Serialization.JsonPropertyName("videos")]
+                [Newtonsoft.Json.JsonProperty("user_liked_videos")]
+                [System.Text.Json.Serialization.JsonPropertyName("user_liked_videos")]
                 public Types.Video[] VideoList { get; set; } = default!;
 
                 /// <summary>

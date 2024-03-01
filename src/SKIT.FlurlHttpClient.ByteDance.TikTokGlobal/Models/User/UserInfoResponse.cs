@@ -32,35 +32,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
-                        public string? AvatarUrl { get; set; }
+                        public string AvatarUrl { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置用户 100×100 尺寸头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar_url_100")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar_url_100")]
-                        public string? Avatar100Url { get; set; }
+                        public string Avatar100Url { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置用户高清头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar_large_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar_large_url")]
-                        public string? AvatarLargeUrl { get; set; }
+                        public string AvatarLargeUrl { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置用户展示名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("display_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("display_name")]
-                        public string? DisplayName { get; set; }
+                        public string DisplayName { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置用户个人描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("bio_description")]
                         [System.Text.Json.Serialization.JsonPropertyName("bio_description")]
-                        public string? BioDescription { get; set; }
+                        public string BioDescription { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置用户个人资料页 DeepLink 地址。

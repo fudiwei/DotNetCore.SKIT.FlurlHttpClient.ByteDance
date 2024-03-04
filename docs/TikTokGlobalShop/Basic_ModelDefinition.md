@@ -8,7 +8,7 @@ Naming Policies:
 
 ---
 
-### API Functions
+### APIs
 
 <details>
 

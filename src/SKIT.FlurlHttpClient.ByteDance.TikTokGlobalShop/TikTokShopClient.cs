@@ -19,64 +19,55 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <summary>
         /// 获取当前客户端使用的 TikTok Shop API 接入点。
         /// </summary>
-        protected internal string Endpoint { get; }
+        protected internal string EndpointForDefault { get; }
 
         /// <summary>
         /// 获取当前客户端使用的 TikTok Shop Auth API 接入点。
         /// </summary>
-        protected internal string EndpointForAuthAPI { get; }
+        protected internal string EndpointForAuth { get; }
 
         /// <summary>
         /// 用指定的配置项初始化 <see cref="TikTokShopClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
         public TikTokShopClient(TikTokShopClientOptions options)
-            : base()
+            : this(options, null)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
-
-            Credentials = new Settings.Credentials(options);
-            Endpoint = options.Endpoint ?? TikTokShopEndpoints.DEFAULT;
-            EndpointForAuthAPI = options.EndpointForAuthAPI ?? TikTokShopAuthApiEndpoints.DEFAULT;
-
-            FlurlClient.BaseUrl = Endpoint;
-            FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
-
-            Interceptors.Add(new Interceptors.TikTokShopRequestSignatureInterceptor(
-                baseUrl: Endpoint,
-                appSecret: options.AppSecret
-            ));
         }
 
         /// <summary>
-        /// 用指定的 TikTok Shop AppKey、TikTok Shop AppSecret 初始化 <see cref="TikTokShopClient"/> 类的新实例。
+        /// 
         /// </summary>
-        /// <param name="appKey">TikTok Shop AppKey。</param>
-        /// <param name="appSecret">TikTok Shop AppSecret。</param>
-        public TikTokShopClient(string appKey, string appSecret)
-            : this(new TikTokShopClientOptions() { AppKey = appKey, AppSecret = appSecret })
+        /// <param name="options"></param>
+        /// <param name="httpClient"></param>
+        /// <param name="disposeClient"></param>
+        internal protected TikTokShopClient(TikTokShopClientOptions options, HttpClient? httpClient, bool disposeClient = true)
+            : base(httpClient, disposeClient)
         {
-            if (appKey == null) throw new ArgumentNullException(nameof(appKey));
-            if (appSecret == null) throw new ArgumentNullException(nameof(appSecret));
+            if (options is null) throw new ArgumentNullException(nameof(options));
+
+            Credentials = new Settings.Credentials(options);
+            EndpointForDefault = options.Endpoint ?? TikTokShopEndpoints.DEFAULT;
+            EndpointForAuth = options.EndpointForAuthAPI ?? TikTokShopAuthApiEndpoints.DEFAULT;
+
+            FlurlClient.BaseUrl = EndpointForDefault;
+            FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
+
+            Interceptors.Add(new Interceptors.TikTokShopRequestSigningInterceptor(baseUrl: EndpointForDefault, appSecret: options.AppSecret));
         }
 
         /// <summary>
         /// 使用当前客户端生成一个新的 <see cref="IFlurlRequest"/> 对象。
         /// </summary>
         /// <param name="request"></param>
-        /// <param name="method"></param>
+        /// <param name="httpMethod"></param>
         /// <param name="urlSegments"></param>
         /// <returns></returns>
-        public IFlurlRequest CreateRequest(TikTokShopRequest request, HttpMethod method, params object[] urlSegments)
+        public IFlurlRequest CreateFlurlRequest(TikTokShopRequest request, HttpMethod httpMethod, params object[] urlSegments)
         {
-            IFlurlRequest flurlRequest = FlurlClient.Request(urlSegments).WithVerb(method);
+            IFlurlRequest flurlRequest = base.CreateFlurlRequest(request, httpMethod, urlSegments);
 
-            if (request.Timeout != null)
-            {
-                flurlRequest.WithTimeout(TimeSpan.FromMilliseconds(request.Timeout.Value));
-            }
-
-            if (request.Timestamp == null)
+            if (request.Timestamp is null)
             {
                 request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
             }
@@ -97,24 +88,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="httpContent"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<T> SendRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
+        public async Task<T> SendFlurlRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
             where T : TikTokShopResponse, new()
         {
-            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
+            if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 
-            try
-            {
-                using IFlurlResponse flurlResponse = await base.SendRequestAsync(flurlRequest, httpContent, cancellationToken);
-                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
-            }
-            catch (FlurlHttpTimeoutException ex)
-            {
-                throw new Exceptions.TikTokShopRequestTimeoutException(ex.Message, ex);
-            }
-            catch (FlurlHttpException ex)
-            {
-                throw new TikTokShopException(ex.Message, ex);
-            }
+            using IFlurlResponse flurlResponse = await base.SendFlurlRequestAsync(flurlRequest, httpContent, cancellationToken).ConfigureAwait(false);
+            return await WrapFlurlResponseAsJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -125,30 +105,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
+        public async Task<T> SendFlurlRequesAsJsontAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
             where T : TikTokShopResponse, new()
         {
-            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
+            if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 
-            try
-            {
-                bool isSimpleRequest = data == null ||
-                    flurlRequest.Verb == HttpMethod.Get ||
-                    flurlRequest.Verb == HttpMethod.Head ||
-                    flurlRequest.Verb == HttpMethod.Options;
-                using IFlurlResponse flurlResponse = isSimpleRequest ?
-                    await base.SendRequestAsync(flurlRequest, null, cancellationToken) :
-                    await base.SendRequestWithJsonAsync(flurlRequest, data, cancellationToken);
-                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
-            }
-            catch (FlurlHttpTimeoutException ex)
-            {
-                throw new Exceptions.TikTokShopRequestTimeoutException(ex.Message, ex);
-            }
-            catch (FlurlHttpException ex)
-            {
-                throw new TikTokShopException(ex.Message, ex);
-            }
+            bool isSimpleRequest = data is null ||
+                flurlRequest.Verb == HttpMethod.Get ||
+                flurlRequest.Verb == HttpMethod.Head ||
+                flurlRequest.Verb == HttpMethod.Options;
+            using IFlurlResponse flurlResponse = isSimpleRequest ?
+                await base.SendFlurlRequestAsync(flurlRequest, null, cancellationToken).ConfigureAwait(false) :
+                await base.SendFlurlRequestAsJsonAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);
+            return await WrapFlurlResponseAsJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
         }
     }
 }

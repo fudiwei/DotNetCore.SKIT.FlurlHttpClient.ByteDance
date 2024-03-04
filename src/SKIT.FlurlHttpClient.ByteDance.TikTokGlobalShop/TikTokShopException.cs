@@ -3,9 +3,9 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
     /// <summary>
-    /// TikTok Shop API 出错时引发的异常。
+    /// 调用 TikTok Shop API 出错时引发的异常。
     /// </summary>
-    public class TikTokShopException : CommonExceptionBase
+    public class TikTokShopException : CommonException
     {
         /// <inheritdoc/>
         public TikTokShopException()

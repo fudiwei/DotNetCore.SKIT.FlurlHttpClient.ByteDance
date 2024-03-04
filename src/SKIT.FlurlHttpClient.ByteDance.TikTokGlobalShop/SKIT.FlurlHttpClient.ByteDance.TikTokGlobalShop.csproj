@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFrameworks>net461; netstandard2.0; net6.0</TargetFrameworks>
-        <LangVersion>8.0</LangVersion>
+        <LangVersion>10.0</LangVersion>
         <Nullable>enable</Nullable>
         <NullableReferenceTypes>true</NullableReferenceTypes>
     </PropertyGroup>
@@ -14,7 +14,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance TikTok TikTokShop TikTokShopPartner TikTokShopOpenPlatform TikTokShopOpenAPI TTS TTSPartner TTSOpenPlatform TTSOpenAPI 字节 字节跳动 抖音国际版 抖音国际版电商 抖音跨境电商 抖音跨境电商开放平台</PackageTags>
-        <Version>2.1.0</Version>
+        <Version>3.0.0-preview.1</Version>
         <Description>
             基于 Flurl.Http 的 TikTok Shop Open Platform API 客户端。
             The TikTok Shop Open Platform API SDK for .NET. (Offical Website: https://partner.tiktokshop.com/)
@@ -43,7 +43,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="2.6.0" />
+        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="3.0.0" />
     </ItemGroup>
 
 </Project>

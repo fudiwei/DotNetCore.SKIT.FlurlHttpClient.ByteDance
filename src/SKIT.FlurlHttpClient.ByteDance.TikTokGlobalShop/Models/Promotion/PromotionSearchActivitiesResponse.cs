@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("promotion_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("promotion_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                         public string PromotionId { get; set; } = default!;
 
                         /// <summary>
@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// 获取或设置创建时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("create_time")]
-                        [System.Text.Json.Serialization.JsonPropertyName("updatcreate_timee_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                         public long CreateTimestamp { get; set; }
 
                         /// <summary>

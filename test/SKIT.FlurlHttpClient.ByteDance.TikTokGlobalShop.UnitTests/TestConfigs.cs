@@ -17,13 +17,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                 using var stream = File.OpenRead("appsettings.local.json");
                 using var json = JsonDocument.Parse(stream);
 
-                var config = json.RootElement.GetProperty("TestConfig");
+                var config = json.RootElement.GetProperty("TestConfigs");
                 TikTokShopAppKey = config.GetProperty("AppKey").GetString()!;
                 TikTokShopAppSecret = config.GetProperty("AppSecret").GetString()!;
                 TikTokShopAccessToken = config.GetProperty("AccessToken").GetString()!;
-
-                WorkDirectoryForSdk = json.RootElement.GetProperty("WorkDirectoryForSdk").GetString()!;
-                WorkDirectoryForTest = json.RootElement.GetProperty("WorkDirectoryForTest").GetString()!;
             }
             catch (Exception ex)
             {
@@ -34,8 +31,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
         public static readonly string TikTokShopAppKey;
         public static readonly string TikTokShopAppSecret;
         public static readonly string TikTokShopAccessToken;
-
-        public static readonly string WorkDirectoryForSdk;
-        public static readonly string WorkDirectoryForTest;
     }
 }

@@ -1,0 +1,10 @@
+{
+    "filters": {
+        "ad_published_date_range": {
+            "min": "20230102",
+            "max": "20230109"
+        },
+        "country_code": "ALL",
+        "advertiser_business_ids": [ 21836478203048, 3484763562784 ]
+    }
+}

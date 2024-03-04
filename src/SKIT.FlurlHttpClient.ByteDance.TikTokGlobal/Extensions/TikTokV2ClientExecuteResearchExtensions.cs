@@ -8,6 +8,123 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     public static class TikTokV2ClientExecuteResearchExtensions
     {
+        #region Adlib
+        /// <summary>
+        /// <para>异步调用 [POST] /research/adlib/ad/query/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/commercial-content-api-query-ads ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchAdlibAdQueryResponse> ExecuteResearchAdlibAdQueryAsync(this TikTokV2Client client, Models.ResearchAdlibAdQueryRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "query", "")
+                .SetQueryParam("fields", string.Join(",", request.FieldList));
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/adlib/ad/detail/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/commercial-content-api-get-ad-details ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchAdlibAdDetailResponse> ExecuteResearchAdlibAdDetailAsync(this TikTokV2Client client, Models.ResearchAdlibAdDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "detail", "")
+                .SetQueryParam("fields", string.Join(",", request.FieldList));
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/adlib/ad/report/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/commercial-content-api-get-ad-report ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchAdlibAdReportResponse> ExecuteResearchAdlibAdReportAsync(this TikTokV2Client client, Models.ResearchAdlibAdReportRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "report", "")
+                .SetQueryParam("fields", string.Join(",", request.FieldList));
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdReportResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/adlib/advertiser/query/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/commercial-content-api-query-advertisers ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchAdlibAdvertiserQueryResponse> ExecuteResearchAdlibAdvertiserQueryAsync(this TikTokV2Client client, Models.ResearchAdlibAdvertiserQueryRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "advertiser", "query", "")
+                .SetQueryParam("fields", string.Join(",", request.FieldList));
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdvertiserQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/adlib/commercial_content/query/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/commercial-content-api-query-commercial-content ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchAdlibCommercialContentQueryResponse> ExecuteResearchAdlibCommercialContentQueryAsync(this TikTokV2Client client, Models.ResearchAdlibCommercialContentQueryRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "commercial_content", "query", "")
+                .SetQueryParam("fields", string.Join(",", request.FieldList));
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibCommercialContentQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region User
         /// <summary>
         /// <para>异步调用 [POST] /research/user/info/ 接口。</para>

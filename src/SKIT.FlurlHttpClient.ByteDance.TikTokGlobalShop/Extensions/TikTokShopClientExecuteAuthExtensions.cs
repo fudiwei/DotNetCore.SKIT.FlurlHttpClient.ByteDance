@@ -28,11 +28,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "token", "get")
                 .WithUrl($"{client.EndpointForAuth}/token/get")
-                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)
-                .SetQueryParam("auth_code", request.AuthorizedCode);
+                .SetQueryParam("auth_code", request.AuthorizedCode)
+                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.AuthGetTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -57,11 +57,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "token", "refresh")
                 .WithUrl($"{client.EndpointForAuth}/token/refresh")
-                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)
-                .SetQueryParam("refresh_token", request.RefreshToken);
+                .SetQueryParam("refresh_token", request.RefreshToken)
+                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.AuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -26,7 +26,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products", "search");
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products", "search")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductSearchProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -49,7 +50,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", "global_products")
-                .SetQueryParam("product_id", request.GlobalProductId);
+                .SetQueryParam("product_id", request.GlobalProductId)
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductGetProductDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -71,7 +73,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products");
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductCreateProductResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -93,7 +96,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Put, "product", "global_products");
+                .CreateFlurlRequest(request, HttpMethod.Put, "product", "global_products")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductUpdateProductResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -115,7 +119,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Put, "product", "global_products", "prices");
+                .CreateFlurlRequest(request, HttpMethod.Put, "product", "global_products", "prices")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductUpdateProductPriceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -137,7 +142,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products", "publish");
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", "global_products", "publish")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductPublishProductResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -159,7 +165,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Delete, "product", "global_products");
+                .CreateFlurlRequest(request, HttpMethod.Delete, "product", "global_products")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductDeleteProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -182,7 +189,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "product", "global_products", "categories");
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", "global_products", "categories")
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductGetCategoryListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -205,7 +213,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", "global_products", "attributes")
-                .SetQueryParam("category_id", request.CategoryId);
+                .SetQueryParam("category_id", request.CategoryId)
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductGetAttributeListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -228,7 +237,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", "global_products", "categories", "rules")
-                .SetQueryParam("category_id", request.CategoryId);
+                .SetQueryParam("category_id", request.CategoryId)
+                .RemoveQueryParam("shop_cipher");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.GlobalProductGetCategoryRulesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

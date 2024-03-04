@@ -468,16 +468,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public Types.ProductAttributeValue[] ValueList { get; set; } = default!;
                     }
 
-                    public class ExemptionOfIdentifierCode
-                    {
-                        /// <summary>
-                        /// 获取或设置 GTIN 豁免原因类型。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("exemption_reason")]
-                        [System.Text.Json.Serialization.JsonPropertyName("exemption_reason")]
-                        public int? ExemptionReasonType { get; set; }
-                    }
-
                     public class QCReason
                     {
                         /// <summary>
@@ -643,13 +633,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("product_attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_attributes")]
                 public Types.ProductAttribute[]? ProductAttributeList { get; set; }
-
-                /// <summary>
-                /// 获取或设置产品标识码豁免信息。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("exemption_of_identifier_code")]
-                [System.Text.Json.Serialization.JsonPropertyName("exemption_of_identifier_code")]
-                public Types.ExemptionOfIdentifierCode? ExemptionOfIdentifierCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置 QC 原因列表。

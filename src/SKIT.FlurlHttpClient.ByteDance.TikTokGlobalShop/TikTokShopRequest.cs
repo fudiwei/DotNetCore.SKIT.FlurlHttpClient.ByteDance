@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         public virtual string? ShopCipher { get; set; }
 
         /// <summary>
-        /// 获取或设置 API 版本号。
+        /// 获取或设置 API 版本号。如果不指定将使用系统所支持的最高版本号。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

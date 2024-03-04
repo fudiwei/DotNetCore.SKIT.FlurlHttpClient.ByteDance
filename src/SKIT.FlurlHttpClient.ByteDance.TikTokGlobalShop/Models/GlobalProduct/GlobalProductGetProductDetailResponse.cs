@@ -248,10 +248,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [System.Text.Json.Serialization.JsonPropertyName("attribute_values")]
                         public Types.ProductAttributeValue[] ValueList { get; set; } = default!;
                     }
-
-                    public class ExemptionOfIdentifierCode : ProductGetProductDetailResponse.Types.Data.Types.ExemptionOfIdentifierCode
-                    {
-                    }
                 }
 
                 /// <summary>
@@ -381,13 +377,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("product_attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_attributes")]
                 public Types.ProductAttribute[]? ProductAttributeList { get; set; }
-
-                /// <summary>
-                /// 获取或设置产品标识码豁免信息。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("exemption_of_identifier_code")]
-                [System.Text.Json.Serialization.JsonPropertyName("exemption_of_identifier_code")]
-                public Types.ExemptionOfIdentifierCode? ExemptionOfIdentifierCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。

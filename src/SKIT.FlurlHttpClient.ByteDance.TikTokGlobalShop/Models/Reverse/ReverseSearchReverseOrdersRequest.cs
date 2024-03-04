@@ -5,6 +5,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// </summary>
     public class ReverseSearchReverseOrdersRequest : TikTokShopRequest
     {
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public override string? ApiVersion { get; set; } = "202307";
+
         /// <summary>
         /// 获取或设置更新时间范围起始时间戳。
         /// </summary>

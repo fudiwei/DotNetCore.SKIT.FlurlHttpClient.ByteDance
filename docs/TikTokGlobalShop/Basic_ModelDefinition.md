@@ -31,6 +31,7 @@ Naming Policies:
     -   Update Stock: `ProductUpdateProductStock`
     -   Get Product List: `ProductSearchProducts`
     -   Get Product Detail: `ProductGetProductDetail`
+    -   Get Product Stock: `ProductGetProductStocks`
     -   Deactivate Product: `ProductDeactivateProducts`
     -   Activate Product: `ProductActivateProducts`
     -   Recover Deleted Product: `ProductRecoverProducts`

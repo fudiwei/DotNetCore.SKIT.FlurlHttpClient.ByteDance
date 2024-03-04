@@ -1,0 +1,42 @@
+{
+    "code": 0,
+    "data": {
+        "product_stocks": [
+            {
+                "product_id": "1729592969712207008",
+                "skus": [
+                    {
+                        "seller_sku": "6919959100928",
+                        "sku_id": "1729388324987897824",
+                        "total_available_stock": 50,
+                        "total_available_stock_distribution": {
+                            "campaign_stock": [
+                                {
+                                    "available_stock": 25,
+                                    "campaign_name": "Big Sale"
+                                }
+                            ],
+                            "creator_stock": [
+                                {
+                                    "available_stock": 10,
+                                    "creator_name": "username_123"
+                                }
+                            ],
+                            "in_shop_stock": 15
+                        },
+                        "total_committed_stock": 14,
+                        "warehouse_stock_infos": [
+                            {
+                                "available_stock": 50,
+                                "committed_stock": 14,
+                                "warehouse_id": "7054915283043174149"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

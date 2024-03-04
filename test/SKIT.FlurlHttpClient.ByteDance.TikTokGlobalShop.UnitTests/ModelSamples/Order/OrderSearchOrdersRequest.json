@@ -1,8 +1,9 @@
 {
+    "buyer_uid": "7213489962827123654",
     "create_time_from": 1623812664,
     "create_time_to": 1623812664,
     "cursor": "6AsPQsUMvH3RkchNUPPh22NROHkE0D8pmq/N5M1kHYcZmtRyv9aVrNv65W7Q6tFA+7D1ud64MPNz5OaT",
-    "delivery_option_type": null,
+    "delivery_option_type": 1,
     "order_status": 100,
     "page_size": 20,
     "sort_by": "CREATE_TIME",

@@ -48,6 +48,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public int? DeliveryOptionType { get; set; }
 
         /// <summary>
+        /// 获取或设置买家用户 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("buyer_uid")]
+        [System.Text.Json.Serialization.JsonPropertyName("buyer_uid")]
+        public string? BuyerUserId { get; set; }
+
+        /// <summary>
         /// 获取或设置排序字段。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sort_by")]

@@ -1,0 +1,4 @@
+{
+    "scan_qrcode_url": "aweme://authorize?authType=100&client_key=abcd1234&client_ticket=tobefilled&...",
+    "token": "VJ5JCKGJGRSWNMFWHQH4W5NKY943Q97D..."
+}

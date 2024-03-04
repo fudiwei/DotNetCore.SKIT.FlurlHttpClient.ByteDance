@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     {
         /// <summary>
         /// <para>异步调用 [POST] /oauth2/access_token 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710505596940 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710505596940 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -21,21 +24,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.AppSecret == null)
+            if (request.AppSecret is null)
                 request.AppSecret = client.Credentials.AppSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth2", "access_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth2", "access_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuth2AccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuth2AccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth2/refresh_token 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710506097679 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710506097679 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -46,21 +52,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.AppSecret == null)
+            if (request.AppSecret is null)
                 request.AppSecret = client.Credentials.AppSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth2", "refresh_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth2", "refresh_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuth2RefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuth2RefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /oauth2/advertiser/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710506574848 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710506574848 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -71,21 +80,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.AppSecret == null)
+            if (request.AppSecret is null)
                 request.AppSecret = client.Credentials.AppSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "oauth2", "advertiser", "get");
+                .CreateFlurlRequest(request, HttpMethod.Get, "oauth2", "advertiser", "get");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuth2AdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuth2AdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth2/app_access_token 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1713655428885516 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1713655428885516 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -96,16 +108,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.AppSecret == null)
+            if (request.AppSecret is null)
                 request.AppSecret = client.Credentials.AppSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth2", "app_access_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth2", "app_access_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuth2AppAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuth2AppAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

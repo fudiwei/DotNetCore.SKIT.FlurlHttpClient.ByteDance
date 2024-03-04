@@ -35,91 +35,91 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("balance")]
                 [System.Text.Json.Serialization.JsonPropertyName("balance")]
-                public double TotalBalance { get; set; }
+                public decimal TotalBalance { get; set; }
 
                 /// <summary>
                 /// 获取或设置账户可用余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("valid_balance")]
                 [System.Text.Json.Serialization.JsonPropertyName("valid_balance")]
-                public double ValidBalance { get; set; }
+                public decimal ValidBalance { get; set; }
 
                 /// <summary>
                 /// 获取或设置现金余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cash")]
                 [System.Text.Json.Serialization.JsonPropertyName("cash")]
-                public double TotalCash { get; set; }
+                public decimal TotalCash { get; set; }
 
                 /// <summary>
                 /// 获取或设置现金余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("valid_cash")]
                 [System.Text.Json.Serialization.JsonPropertyName("valid_cash")]
-                public double ValidCash { get; set; }
+                public decimal ValidCash { get; set; }
 
                 /// <summary>
                 /// 获取或设置赠款余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("grant")]
-                public double TotalGrant { get; set; }
+                public decimal TotalGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置默认广告位可用赠款余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("default_grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("default_grant")]
-                public double DefaultGrant { get; set; }
+                public decimal DefaultGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置通用广告位可用赠款余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("common_grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("common_grant")]
-                public double CommonGrant { get; set; }
+                public decimal CommonGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置搜索广告位可用赠款余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("search_grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("search_grant")]
-                public double SearchGrant { get; set; }
+                public decimal SearchGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置穿山甲广告位可用赠款余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("union_grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("union_grant")]
-                public double UnionGrant { get; set; }
+                public decimal UnionGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置赠款可用余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("valid_grant")]
                 [System.Text.Json.Serialization.JsonPropertyName("valid_grant")]
-                public double ValidGrant { get; set; }
+                public decimal ValidGrant { get; set; }
 
                 /// <summary>
                 /// 获取或设置返货余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_goods_abs")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_goods_abs")]
-                public double? TotalReturnGoodsABS { get; set; }
+                public decimal? TotalReturnGoodsABS { get; set; }
 
                 /// <summary>
                 /// 获取或设置返货可用余额（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("valid_return_goods_abs")]
                 [System.Text.Json.Serialization.JsonPropertyName("valid_return_goods_abs")]
-                public double? ValidReturnGoodsABS { get; set; }
+                public decimal? ValidReturnGoodsABS { get; set; }
 
                 /// <summary>
                 /// 获取或设置返货支出（单位：元）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_goods_cost")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_goods_cost")]
-                public double? TotalReturnGoodsCost { get; set; }
+                public decimal? TotalReturnGoodsCost { get; set; }
             }
         }
     }

@@ -1,0 +1,21 @@
+{
+    "data": {
+        "advertisers": [
+            {
+                "business_id": 1755645247067185,
+                "business_name": "Awesome Food Co.",
+                "country_code": "US"
+            },
+            {
+                "business_id": 183746395837294,
+                "business_name": "Awesome Drink Co.",
+                "country_code": "CA"
+            }
+        ]
+    },
+    "error": {
+        "code": "ok",
+        "log_id": "202207280326050102231031430C7E754E",
+        "message": ""
+    }
+}

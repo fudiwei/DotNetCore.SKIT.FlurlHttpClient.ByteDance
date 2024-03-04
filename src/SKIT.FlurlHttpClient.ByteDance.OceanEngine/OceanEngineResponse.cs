@@ -1,60 +1,10 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
     /// 巨量引擎开放平台 API 响应的基类。
     /// </summary>
-    public abstract class OceanEngineResponse : ICommonResponse
+    public abstract class OceanEngineResponse : CommonResponseBase, ICommonResponse
     {
-        /// <summary>
-        ///
-        /// </summary>
-        int ICommonResponse.RawStatus { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        IDictionary<string, string> ICommonResponse.RawHeaders { get; set; } = default!;
-
-        /// <summary>
-        ///
-        /// </summary>
-        byte[] ICommonResponse.RawBytes { get; set; } = default!;
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应状态码。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public int RawStatus
-        {
-            get { return ((ICommonResponse)this).RawStatus; }
-            internal set { ((ICommonResponse)this).RawStatus = value; }
-        }
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应表头集合。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public IDictionary<string, string> RawHeaders
-        {
-            get { return ((ICommonResponse)this).RawHeaders; }
-            internal set { ((ICommonResponse)this).RawHeaders = value; }
-        }
-
-        /// <summary>
-        /// 获取原始的 HTTP 响应正文。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] RawBytes
-        {
-            get { return ((ICommonResponse)this).RawBytes; }
-            internal set { ((ICommonResponse)this).RawBytes = value; }
-        }
-
         /// <summary>
         /// 获取巨量引擎开放平台 API 返回的错误码。
         /// </summary>
@@ -78,12 +28,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         public virtual string? RequestId { get; set; }
 
         /// <summary>
-        /// 获取一个值，该值指示调用巨量引擎开放平台 API 是否成功（即 HTTP 状态码为 200、且 "code" 值为 0）。
+        /// 获取一个值，该值指示调用巨量引擎开放平台 API 是否成功。
+        /// <para>
+        ///（即 HTTP 状态码为 200，且 <see cref="ErrorCode"/> 值为 0）
+        /// </para>
         /// </summary>
         /// <returns></returns>
-        public virtual bool IsSuccessful()
+        public override bool IsSuccessful()
         {
-            return RawStatus == 200 && ErrorCode == 0;
+            return GetRawStatus() == 200 && ErrorCode == 0;
         }
     }
 

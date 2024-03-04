@@ -227,9 +227,17 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 3.0.0
+
+    -   **新增**：新增内容发布（Content Posting）、个人数据可携带权（Data Portability）、调研（Research）、商业化内容（Commercial Content）等相关接口。
+
+    -   **变更**：升级公共组件至 v3.0.0。完整变更说明请参阅迁移指南。
+
+    -   **变更**：移除原 v1 版 API 客户端。
+
 -   Release 2.1.0
 
-    -   支持 v2 API。
+    -   **新增**：支持 OAuth、用户等相关的 v2 版 API。
 
 -   Release 2.0.0
 

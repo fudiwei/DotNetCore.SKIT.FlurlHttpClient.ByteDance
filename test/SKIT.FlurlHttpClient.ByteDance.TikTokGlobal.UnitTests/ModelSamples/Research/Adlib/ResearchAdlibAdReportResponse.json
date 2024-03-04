@@ -1,0 +1,31 @@
+{
+    "data": {
+        "count_time_series_by_country": {
+            "IT": [
+                {
+                    "date": "20210109",
+                    "count": 45
+                },
+                {
+                    "date": "20210108",
+                    "count": 24
+                }
+            ],
+            "ES": [
+                {
+                    "date": "20210109",
+                    "count": 48
+                },
+                {
+                    "date": "20210108",
+                    "count": 22
+                }
+            ]
+        }
+    },
+    "error": {
+        "code": "ok",
+        "log_id": "202207280326050102231031430C7E754E",
+        "message": ""
+    }
+}

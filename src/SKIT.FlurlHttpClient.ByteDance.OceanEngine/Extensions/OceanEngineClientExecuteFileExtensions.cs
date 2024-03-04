@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     {
         /// <summary>
         /// <para>异步调用 [POST] /2/file/image/advertiser 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710599659532 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710599659532 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,20 +25,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ImageFileBytes != null)
+            if (request.ImageFileBytes is not null)
             {
-                if (request.ImageFileName == null)
+                if (request.ImageFileName is null)
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
-                if (request.ImageFileHash == null)
+                if (request.ImageFileHash is null)
                     request.ImageFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.ImageFileBytes)).Replace("-", "");
 
-                if (request.ImageContentType == null)
+                if (request.ImageContentType is null)
                     request.ImageContentType = "image/jpeg";
             }
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "image", "advertiser")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "image", "advertiser")
                 .WithHeader("Access-Token", request.AccessToken);
 
             using var httpContent = new MultipartFormDataContent();
@@ -43,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             httpContent.Add(new StringContent(request.UploadType), "upload_type");
             httpContent.Add(new StringContent(request.UploadTo), "upload_to");
 
-            if (request.ImageFileBytes != null)
+            if (request.ImageFileBytes is not null)
             {
                 using var fileContent = new ByteArrayContent(request.ImageFileBytes);
                 fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.ImageContentType);
@@ -55,12 +58,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 httpContent.Add(new StringContent(request.ImageUrl!), "image_url");
             }
 
-            return await client.SendRequestAsync<Models.FileImageAdvertiserResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsync<Models.FileImageAdvertiserResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/file/image/ad 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600176640 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600176640 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -71,20 +77,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ImageFileBytes != null)
+            if (request.ImageFileBytes is not null)
             {
-                if (request.ImageFileName == null)
+                if (request.ImageFileName is null)
                     request.ImageFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".jpg";
 
-                if (request.ImageFileHash == null)
+                if (request.ImageFileHash is null)
                     request.ImageFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.ImageFileBytes)).Replace("-", "");
 
-                if (request.ImageContentType == null)
+                if (request.ImageContentType is null)
                     request.ImageContentType = "image/jpeg";
             }
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "image", "ad")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "image", "ad")
                 .WithHeader("Access-Token", request.AccessToken);
 
             using var httpContent = new MultipartFormDataContent();
@@ -92,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             httpContent.Add(new StringContent(request.UploadType), "upload_type");
             httpContent.Add(new StringContent(request.ImageFileName!), "filename");
 
-            if (request.ImageFileBytes != null)
+            if (request.ImageFileBytes is not null)
             {
                 using var fileContent = new ByteArrayContent(request.ImageFileBytes);
                 fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.ImageContentType);
@@ -104,12 +110,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
                 httpContent.Add(new StringContent(request.ImageUrl!), "image_url");
             }
 
-            return await client.SendRequestAsync<Models.FileImageAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsync<Models.FileImageAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/file/video/ad 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -120,17 +129,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.VideoFileName == null)
+            if (request.VideoFileName is null)
                 request.VideoFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".mp4";
 
-            if (request.VideoFileHash == null)
+            if (request.VideoFileHash is null)
                 request.VideoFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.VideoFileBytes)).Replace("-", "");
 
-            if (request.VideoContentType == null)
+            if (request.VideoContentType is null)
                 request.VideoContentType = "video/mp4";
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "video", "ad")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "video", "ad")
                 .WithHeader("Access-Token", request.AccessToken);
 
             using var httpContent = new MultipartFormDataContent();
@@ -141,12 +150,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             httpContent.Add(new StringContent(request.VideoFileHash), "video_signature");
             httpContent.Add(new StringContent(request.VideoFileName), "filename");
 
-            return await client.SendRequestAsync<Models.FileVideoAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsync<Models.FileVideoAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/file/image/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -158,15 +170,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "file", "image", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "file", "image", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileImageGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileImageGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/file/video/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710601820172 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710601820172 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -178,15 +193,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "file", "video", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "file", "video", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileVideoGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileVideoGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/file/image/ad/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710600730639 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -198,15 +216,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "file", "image", "ad", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "file", "image", "ad", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileImageAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileImageAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/file/video/ad/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710603509772 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710603509772 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -218,15 +239,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "file", "video", "ad", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "file", "video", "ad", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileVideoAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileVideoAdvertiserGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/file/video/delete 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605373455 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605373455 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -238,15 +262,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "video", "delete")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "video", "delete")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileVideoDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileVideoDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/file/video/update 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605909004 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710605909004 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -258,15 +285,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "video", "update")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "video", "update")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileVideoUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileVideoUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/file/material/bind 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710604852236 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710604852236 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -278,10 +308,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "file", "material", "bind")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "material", "bind")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.FileMaterialBindResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.FileMaterialBindResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

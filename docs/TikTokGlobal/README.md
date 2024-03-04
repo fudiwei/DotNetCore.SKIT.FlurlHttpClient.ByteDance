@@ -1,16 +1,19 @@
 ﻿# SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 
-A HTTP API SDK for [TikTok Developer](https://developers.tiktok.com/) based on `Flurl.Http`.
+A HTTP API SDK for [TikTok Developer API](https://developers.tiktok.com/) based on `Flurl.Http`.
 
 ---
 
 ## Features
 
--   Based on TikTok Developer Open API.
+-   Based on TikTok Developer API.
 
 ---
 
 ## Get Started
+
+> [!IMPORTANT]
+> The documents are applicable to version 3.x of this SDK. If you are using version 2.x, please move to the archived branches on GitHub/Gitee.
 
 ### Installation:
 
@@ -27,12 +30,12 @@ A HTTP API SDK for [TikTok Developer](https://developers.tiktok.com/) based on `
 ```csharp
 using SKIT.FlurlHttpClient.ByteDance.TikTokGlobal;
 
-var options = new TikTokClientOptions()
+var options = new TikTokV2ClientOptions()
 {
     ClientKey = "${CLIENT_KEY}",
     ClientSecret = "${CLIENT_SECRET}}"
 };
-var client = new TikTokClient(options);
+var client = TikTokV2ClientBuilder.Create(options).Build();
 ```
 
 ### Requests & Responses:
@@ -44,7 +47,7 @@ using SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models;
 /* Example: Fetch Access Token Using Authorization Code */
 var request = new OAuthAccessTokenRequest()
 {
-    Code = "${AUTHORIZATION_CODE}"
+    Code = "AUTHORIZATION_CODE"
 };
 var response = await client.ExecuteOAuthAccessTokenAsync(request);
 if (response.IsSuccessful())
@@ -54,7 +57,13 @@ if (response.IsSuccessful())
 }
 else
 {
-    Console.WriteLine("ErrorCode: " + response.Error?.ErrorCode);
-    Console.WriteLine("ErrorMessage: " + response.Error?.ErrorMessage);
+    Console.WriteLine("Error: " + response.ErrorCode);
+    Console.WriteLine("ErrorDescription: " + response.ErrorDescription);
 }
 ```
+
+---
+
+## Basic Usage
+
+-   [API Reference Manual](./Basic_ModelDefinition.md)

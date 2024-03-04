@@ -55,7 +55,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinShop
 
         /// <summary>
         /// <para>验证消息推送事件签名。</para>
-        /// <para>REF: https://op.jinritemai.com/docs/guide-docs/153/99 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://op.jinritemai.com/docs/guide-docs/153/99 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="callbackJson">抖店回调通知中请求正文（JSON 格式）。</param>

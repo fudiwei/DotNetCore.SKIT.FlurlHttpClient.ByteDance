@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     {
         /// <summary>
         /// <para>异步调用 [GET] /2/ad/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710535150604 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710535150604 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,16 +25,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "ad", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "ad", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/create 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701607421369355 </para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710535694348 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701607421369355 ]]> <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710535694348 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -43,16 +49,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "ad", "create")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "ad", "create")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 </para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710536211456 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 ]]> <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710536211456 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -64,15 +73,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "ad", "update")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "ad", "update")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/status 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1701620468172800 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -84,15 +96,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "ad", "update", "status")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "ad", "update", "status")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingUpdateStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/budget 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537225231 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537225231 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -104,15 +119,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "ad", "update", "budget")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "ad", "update", "budget")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateBudgetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingUpdateBudgetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/ad/update/bid 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -124,15 +142,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "ad", "update", "bid")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "ad", "update", "bid")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingUpdateBidResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingUpdateBidResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/ad/reject_reason 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710537746444 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -144,15 +165,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "ad", "reject_reason")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "ad", "reject_reason")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingRejectReasonResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingRejectReasonResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/ad/cost_protect_status/get 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1697193170177032 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1697193170177032 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -164,10 +188,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "ad", "cost_protect_status", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "ad", "cost_protect_status", "get")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AdvertisingCostProtectStatusGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AdvertisingCostProtectStatusGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

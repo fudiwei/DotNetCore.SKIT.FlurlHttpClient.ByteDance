@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Settings
 
         internal Credentials(OceanEngineClientOptions options)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
+            if (options is null) throw new ArgumentNullException(nameof(options));
 
             AppId = options.AppId;
             AppSecret = options.AppSecret;

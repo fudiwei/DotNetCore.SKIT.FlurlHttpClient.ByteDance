@@ -1,0 +1,27 @@
+{
+    "query": {
+        "and": [
+            {
+                "operation": "IN",
+                "field_name": "region_code",
+                "field_values": [ "JP", "US" ]
+            },
+            {
+                "operation": "EQ",
+                "field_name": "hashtag_name",
+                "field_values": [ "animal" ]
+            }
+        ],
+        "not": [
+            {
+                "operation": "EQ",
+                "field_name": "video_length",
+                "field_values": [ "SHORT" ]
+            }
+        ]
+    },
+    "max_count": 100,
+    "cursor": 0,
+    "start_date": "20230101",
+    "end_date": "20230115"
+}

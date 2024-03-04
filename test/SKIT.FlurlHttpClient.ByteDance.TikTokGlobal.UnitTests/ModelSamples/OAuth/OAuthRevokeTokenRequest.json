@@ -1,0 +1,5 @@
+{
+    "client_key": "CLIENT_KEY",
+    "client_secret": "CLIENT_SECRET",
+    "token": "ACCESS_TOKEN"
+}

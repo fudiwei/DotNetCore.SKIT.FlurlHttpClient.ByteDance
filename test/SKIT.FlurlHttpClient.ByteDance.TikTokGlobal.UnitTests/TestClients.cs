@@ -4,13 +4,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
     {
         static TestClients()
         {
-            Instance = new TikTokClient(new TikTokClientOptions()
+            Instance = new TikTokV2Client(new TikTokV2ClientOptions()
             {
                 ClientKey = TestConfigs.TikTokClientKey,
                 ClientSecret = TestConfigs.TikTokClientSecret
             });
         }
 
-        public static readonly TikTokClient Instance;
+        public static readonly TikTokV2Client Instance;
     }
 }

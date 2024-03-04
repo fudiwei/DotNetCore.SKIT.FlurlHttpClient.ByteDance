@@ -1,0 +1,6 @@
+{
+    "client_key": "CLIENT_KEY",
+    "client_secret": "CLIENT_SECRET",
+    "grant_type": "refresh_token",
+    "refresh_token": "REFRESH_TOKEN"
+}

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "publish_id": "v_inbox_file~v2.123456789",
+        "upload_url": "https://open-upload.tiktokapis.com/video/?upload_id=12345&upload_token=Xza123"
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "202210112248442CB9319E1FB30C1073F3"
+    }
+}

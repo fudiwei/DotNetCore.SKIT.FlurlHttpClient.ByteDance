@@ -1,0 +1,9 @@
+{
+    "filters": {
+        "content_published_date_range": {
+            "min": "20210102",
+            "max": "20210109"
+        },
+        "creator_country_code": "FR"
+    }
+}

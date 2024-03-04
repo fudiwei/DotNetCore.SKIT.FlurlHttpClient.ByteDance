@@ -1,0 +1,25 @@
+{
+    "data": {
+        "has_more": true,
+        "user_following": [
+            {
+                "display_name": "test user",
+                "username": "test_username"
+            },
+            {
+                "display_name": "test user 2",
+                "username": "test_username2"
+            },
+            {
+                "display_name": "test user 3",
+                "username": "test_username3"
+            }
+        ],
+        "cursor": 1650642422
+    },
+    "error": {
+        "code": "ok",
+        "message": "ok",
+        "log_id": "202499999999999999999999999999999"
+    }
+}

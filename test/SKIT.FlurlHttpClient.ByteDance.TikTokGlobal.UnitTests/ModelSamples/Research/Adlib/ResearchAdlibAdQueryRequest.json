@@ -1,0 +1,15 @@
+{
+    "filters": {
+        "advertiser_business_ids": [ 3847236290405, 319282903829 ],
+        "ad_published_date_range": {
+            "min": "20210102",
+            "max": "20210109"
+        },
+        "country_code": "FR",
+        "unique_users_seen_size_range": {
+            "min": "10K",
+            "max": "1M"
+        }
+    },
+    "search_term": "mobile games"
+}

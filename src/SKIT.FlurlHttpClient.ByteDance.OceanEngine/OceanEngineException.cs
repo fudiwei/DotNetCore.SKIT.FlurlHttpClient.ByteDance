@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
-    /// 巨量引擎开放平台 API 出错时引发的异常。
+    /// 调用巨量引擎开放平台 API 出错时引发的异常。
     /// </summary>
-    public class OceanEngineException : CommonExceptionBase
+    public class OceanEngineException : CommonException
     {
         /// <inheritdoc/>
         public OceanEngineException()

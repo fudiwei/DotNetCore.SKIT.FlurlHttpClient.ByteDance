@@ -31,7 +31,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("budget")]
         [System.Text.Json.Serialization.JsonPropertyName("budget")]
-        public double? Budget { get; set; }
+        public decimal? Budget { get; set; }
 
         /// <summary>
         /// 获取或设置广告组预算类型。

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     {
         /// <summary>
         /// <para>异步调用 [GET] /2/majordomo/advertiser/select 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710519607296 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710519607296 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,10 +25,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "majordomo", "advertiser", "select")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "majordomo", "advertiser", "select")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.MajordomoAdvertiserSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.MajordomoAdvertiserSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

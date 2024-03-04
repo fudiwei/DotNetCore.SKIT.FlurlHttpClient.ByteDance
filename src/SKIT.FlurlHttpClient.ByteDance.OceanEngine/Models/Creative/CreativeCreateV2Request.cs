@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
@@ -194,9 +194,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// 获取或设置是否将视频的封面和标题同步到图片创意。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("derive_poster_cid")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("derive_poster_cid")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
                 public bool? IsDerivePosterCreativeId { get; set; }
 
                 /// <summary>
@@ -358,18 +358,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// 获取或设置是否自动生成视频素材。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("is_presented_video")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("is_presented_video")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsPresentedVideo { get; set; }
 
         /// <summary>
         /// 获取或设置是否开启衍生计划。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("generate_derived_ad")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("generate_derived_ad")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsGenerateDerivedAd { get; set; }
 
         /// <summary>
@@ -418,18 +418,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// 获取或设置是否主页作品列表显示广告内容。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("is_feed_and_fav_see")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("is_feed_and_fav_see")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsFeedAndFavoritesVisible { get; set; }
 
         /// <summary>
         /// 获取或设置是否开启自动生成素材。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("creative_auto_generate_switch")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("creative_auto_generate_switch")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsCreativeAutoGenerate { get; set; }
 
         /// <summary>
@@ -471,9 +471,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// 获取或设置是否关闭评论。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("is_comment_disable")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("is_comment_disable")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsDisableComment { get; set; }
 
         /// <summary>

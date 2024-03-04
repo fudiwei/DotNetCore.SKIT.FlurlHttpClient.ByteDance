@@ -4,9 +4,9 @@ using System.Reflection;
 using SKIT.FlurlHttpClient.Tools.CodeAnalyzer;
 using Xunit;
 
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
-    public class CodeAnalyzeTests
+    public class IMPORTANT_CodeAnalyzeTests
     {
         // NOTICE:
         //   如果 Visual Studio 遇到 “缺少 SKIT.FlurlHttpClient.Tools.CodeAnalyzer 包” 的错误，
@@ -19,10 +19,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
             {
                 var options = new TypeDeclarationAnalyzerOptions()
                 {
-                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokV2Client))!,
-                    SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
-                    SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
-                    SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal",
+                    SdkAssembly = Assembly.GetAssembly(typeof(OceanEngineClient))!,
+                    SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models",
+                    SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models",
+                    SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.OceanEngine",
                     ThrowOnNotFoundRequestModelTypes = true,
                     ThrowOnNotFoundResponseModelTypes = true,
                     ThrowOnNotFoundExecutingExtensionTypes = true
@@ -37,11 +37,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests
 
                 var options = new SourceFileAnalyzerOptions()
                 {
-                    SdkAssembly = Assembly.GetAssembly(typeof(TikTokV2Client))!,
-                    SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
-                    SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models",
-                    ProjectSourceRootDirectory = Path.Combine(projdir, "./src/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal/"),
-                    ProjectTestRootDirectory = Path.Combine(projdir, "./test/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.UnitTests/"),
+                    SdkAssembly = Assembly.GetAssembly(typeof(OceanEngineClient))!,
+                    SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models",
+                    SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models",
+                    ProjectSourceRootDirectory = Path.Combine(projdir, "./src/SKIT.FlurlHttpClient.ByteDance.OceanEngine/"),
+                    ProjectTestRootDirectory = Path.Combine(projdir, "./test/SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests/"),
                     ThrowOnNotFoundRequestModelClassCodeFiles = true,
                     ThrowOnNotFoundResponseModelClassCodeFiles = true,
                     ThrowOnNotFoundExecutingExtensionClassCodeFiles = true,

@@ -31,6 +31,6 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("amount")]
         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

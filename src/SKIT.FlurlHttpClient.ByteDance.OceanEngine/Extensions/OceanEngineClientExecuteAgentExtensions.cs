@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
     {
         /// <summary>
         /// <para>异步调用 [GET] /2/agent/info 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710518158351 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710518158351 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,15 +25,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "agent", "info")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "agent", "info")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /2/agent/child_agent/select 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710517693452 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710517693452 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -42,16 +48,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "agent", "child_agent", "select")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "agent", "child_agent", "select")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentChildAgentSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentChildAgentSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         #region Advertiser
         /// <summary>
         /// <para>异步调用 [GET] /2/agent/advertiser/select 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710516003852 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710516003852 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -63,15 +72,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "2", "agent", "advertiser", "select")
+                .CreateFlurlRequest(request, HttpMethod.Get, "2", "agent", "advertiser", "select")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentAdvertiserSelectResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/agent/advertiser/create_v2 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710516003852 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710516003852 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -83,15 +95,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "create_v2")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "create_v2")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserCreateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentAdvertiserCreateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/agent/advertiser/update 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710517205007 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710517205007 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -103,15 +118,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "update")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "update")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentAdvertiserUpdateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/agent/advertiser/recharge 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710527687680 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710527687680 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -123,15 +141,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "recharge")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "recharge")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserRechargeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentAdvertiserRechargeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /2/agent/advertiser/refund 接口。</para>
-        /// <para>REF: https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710528174095 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://open.oceanengine.com/doc/index.html?key=ad&type=api&id=1696710528174095 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -143,10 +164,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "refund")
+                .CreateFlurlRequest(request, HttpMethod.Post, "2", "agent", "advertiser", "refund")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.AgentAdvertiserRefundResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AgentAdvertiserRefundResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("attachment_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attachment_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
                                 public string AttachmentId { get; set; } = default!;
 
                                 /// <summary>
@@ -75,9 +75,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置审核时间。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("audit_time")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("audit_time")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                         public DateTimeOffset? AuditTime { get; set; }
 
                         /// <summary>

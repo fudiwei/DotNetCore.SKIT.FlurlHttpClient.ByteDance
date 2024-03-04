@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
@@ -33,9 +33,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置创建时间。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("create_time")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                         public DateTimeOffset CreateTime { get; set; }
 
                         /// <summary>
@@ -43,35 +43,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public double Amount { get; set; }
+                        public decimal Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置现金总金额（单位：元）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cash")]
                         [System.Text.Json.Serialization.JsonPropertyName("cash")]
-                        public double TotalCash { get; set; }
+                        public decimal TotalCash { get; set; }
 
                         /// <summary>
                         /// 获取或设置赠款总金额（单位：元）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("grant")]
                         [System.Text.Json.Serialization.JsonPropertyName("grant")]
-                        public double TotalGrant { get; set; }
+                        public decimal TotalGrant { get; set; }
 
                         /// <summary>
                         /// 获取或设置返货总金额（单位：元）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("return_goods")]
                         [System.Text.Json.Serialization.JsonPropertyName("return_goods")]
-                        public double TotalReturnGoods { get; set; }
+                        public decimal TotalReturnGoods { get; set; }
 
                         /// <summary>
                         /// 获取或设置交易流水号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("transaction_seq")]
                         [System.Text.Json.Serialization.JsonPropertyName("transaction_seq")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
                         public string TransactionSequenceNumber { get; set; } = default!;
 
                         /// <summary>
@@ -93,7 +93,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dealbase")]
                         [System.Text.Json.Serialization.JsonPropertyName("dealbase")]
-                        public double Dealbase { get; set; }
+                        public decimal Dealbase { get; set; }
                     }
                 }
 

@@ -14,7 +14,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("transaction_seq")]
                 [System.Text.Json.Serialization.JsonPropertyName("transaction_seq")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
                 public string TransactionSequenceNumber { get; set; } = default!;
             }
         }

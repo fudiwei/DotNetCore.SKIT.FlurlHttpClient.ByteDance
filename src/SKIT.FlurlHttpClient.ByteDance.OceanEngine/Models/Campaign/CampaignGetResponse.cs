@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("budget")]
                         [System.Text.Json.Serialization.JsonPropertyName("budget")]
-                        public double? Budget { get; set; }
+                        public decimal? Budget { get; set; }
 
                         /// <summary>
                         /// 获取或设置广告组预算类型。
@@ -75,18 +75,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// 获取或设置创建时间。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("campaign_create_time")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("campaign_create_time")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                         public DateTimeOffset? CreateTime { get; set; }
 
                         /// <summary>
                         /// 获取或设置修改时间。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("campaign_modify_time")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("campaign_modify_time")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                         public DateTimeOffset? UpdateTime { get; set; }
 
                         /// <summary>

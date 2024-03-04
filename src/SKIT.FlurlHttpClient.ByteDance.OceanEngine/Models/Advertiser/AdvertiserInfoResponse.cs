@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
@@ -134,9 +134,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// 获取或设置注册时间。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("create_time")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularNullableDateTimeOffsetConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                 public DateTimeOffset? CreateTime { get; set; }
             }
         }

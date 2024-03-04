@@ -38,6 +38,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public virtual int? ApiVersion { get; set; }
+        public virtual string? ApiVersion { get; set; }
     }
 }

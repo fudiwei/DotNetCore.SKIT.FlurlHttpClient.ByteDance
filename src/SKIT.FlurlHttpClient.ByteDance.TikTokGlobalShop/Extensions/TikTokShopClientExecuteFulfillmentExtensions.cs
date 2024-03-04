@@ -215,6 +215,50 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentUpdatePackageDeliveryStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /fulfillment/shipping_service/get 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/6470501b9fe1f7028441a3be ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.FulfillmentGetShippingServiceResponse> ExecuteFulfillmentGetShippingServiceAsync(this TikTokShopClient client, Models.FulfillmentGetShippingServiceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", "shipping_service", "get");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentGetShippingServiceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /fulfillment/create_label 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/6470501b9fe1f7028441a3c3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.FulfillmentCreateLabelResponse> ExecuteFulfillmentCreateLabelAsync(this TikTokShopClient client, Models.FulfillmentCreateLabelRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", "create_label");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentCreateLabelResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
         #region Order
         /// <summary>
         /// <para>异步调用 [POST] /fulfillment/order_split/verify 接口。</para>

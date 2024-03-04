@@ -64,6 +64,8 @@ Naming Policies:
     -   Update Package Delivery Status: `FulfillmentUpdatePackageDeliveryStatus`
     -   Fulfillment Upload File: `FulfillmentUploadFile`
     -   Batch Ship Packages: `FulfillmentBatchShipPackage`
+    -   Get Shipping Service: `FulfillmentGetShippingService`
+    -   Create Label: `FulfillmentCreateLabel`
 -   Logistics
     -   Get Subscribed Delivery Options: `LogisticsGetSubscribedDeliveryOptions`
     -   Update Shipping Info: `LogisticsUpdateShippingInfo`

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
     /// <summary>
     /// <para>表示 [POST] /oauth/revoke/ 接口的请求。</para>
     /// </summary>
-    public class OAuthRevokeRequest : TikTokV2Request
+    public class OAuthRevokeTokenRequest : TikTokV2Request
     {
         /// <summary>
         /// 获取或设置 TikTok ClientKey。如果不指定将使用构造 <see cref="TikTokV2Client"/> 时的 <see cref="TikTokV2ClientOptions.ClientKey"/> 参数。

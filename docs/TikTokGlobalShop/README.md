@@ -65,4 +65,4 @@ else
 
 ## Basic Usage
 
--   [API Reference Manual.](./Basic_ModelDefinition.md)
+-   [API Reference Manual](./Basic_ModelDefinition.md)

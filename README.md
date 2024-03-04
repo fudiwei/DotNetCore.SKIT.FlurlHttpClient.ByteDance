@@ -15,8 +15,8 @@
 
 ## 特性
 
--   基于 `Flurl.Http`，可与 `IHttpClientFactory` 集成。
--   支持 .NET Framework 4.6.1+、.NET Standard 2.0+、.NET Core 2.0+、.NET 5+。
+-   基于 `Flurl.Http`。
+-   支持 .NET Framework 4.6.2+、.NET Standard 2.0+、.NET Core 2.0+、.NET 5.0+ 多目标框架。
 -   支持 Windows / Linux / macOS 多平台部署。
 -   支持 `System.Text.Json`（默认）和 `Newtonsoft.Json` 两种序列化方式。
 -   强类型接口模型。
@@ -34,7 +34,7 @@
 |             抖音开放平台             |             [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.DouyinOpen.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.DouyinOpen) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.DouyinOpen.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.DouyinOpen)             |      [开发文档](./docs/DouyinOpen/README.md)       |
 |   抖店开放平台（今日特卖、放心购）   |                                                                                                                                                                                                          _已停止维护_                                                                                                                                                                                                          |      [开发文档](./docs/DouyinShop/README.md)       |
 |     巨量引擎开放平台（头条广告）     |                                                                                                                                                                                                            _开发中_                                                                                                                                                                                                            |                                                    |
-|           TikTok Developer           |         [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal)         |   [Documentation](./docs/TikTokGlobal/README.md)   |
+|         TikTok Developer API         |         [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobal)         |   [Documentation](./docs/TikTokGlobal/README.md)   |
 |      TikTok Shop Open Platform       | [![NuGet Version](https://img.shields.io/nuget/v/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.svg?label=NuGet)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop) <br> [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop) | [Documentation](./docs/TikTokGlobalShop/README.md) |
 
 ---

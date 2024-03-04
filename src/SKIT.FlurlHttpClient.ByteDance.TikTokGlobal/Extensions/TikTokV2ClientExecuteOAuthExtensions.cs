@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OAuthRevokeResponse> ExecuteOAuthRevokeAsync(this TikTokV2Client client, Models.OAuthRevokeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OAuthRevokeTokenResponse> ExecuteOAuthRevokeTokenAsync(this TikTokV2Client client, Models.OAuthRevokeTokenRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "revoke", "");
 
-            return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthRevokeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthRevokeTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         #region Qrcode

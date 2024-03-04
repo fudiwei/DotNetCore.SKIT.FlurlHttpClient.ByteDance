@@ -42,6 +42,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("is_leaf")]
                         [System.Text.Json.Serialization.JsonPropertyName("is_leaf")]
                         public bool IsLeaf { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置状态列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("status")]
+                        public int[] StatusList { get; set; } = default!;
                     }
                 }
 

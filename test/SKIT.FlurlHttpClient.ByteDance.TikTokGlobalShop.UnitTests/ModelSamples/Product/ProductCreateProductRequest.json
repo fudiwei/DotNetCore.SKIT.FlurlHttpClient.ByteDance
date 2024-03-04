@@ -1,8 +1,10 @@
 {
     "brand_id": "7082427311584347905",
     "category_id": "600001",
-    "delivery_service_ids": [ "1729592969712203232" ],
-    "description": "<p>test</p>",
+    "delivery_service_ids": [
+        "1729592969712203232"
+    ],
+    "description": "\\<p\\>test\\<\\/p\\>",
     "exemption_of_identifier_code": {
         "exemption_reason": "1"
     },
@@ -80,7 +82,5 @@
                 }
             ]
         }
-    ],
-    "warranty_period": 1,
-    "warranty_policy": "warranty policy xxaa"
+    ]
 }

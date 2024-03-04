@@ -6,7 +6,10 @@
                 "category_name": "Home Supplies",
                 "id": 600001,
                 "is_leaf": false,
-                "parent_id": 0
+                "parent_id": 0,
+                "status": [
+                    1
+                ]
             }
         ]
     },

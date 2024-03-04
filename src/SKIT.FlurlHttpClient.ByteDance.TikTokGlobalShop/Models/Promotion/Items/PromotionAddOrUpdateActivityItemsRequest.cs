@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("promotion_price")]
                         [System.Text.Json.Serialization.JsonPropertyName("promotion_price")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal? PromotionPrice { get; set; }
 
                         /// <summary>
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("discount")]
                         [System.Text.Json.Serialization.JsonPropertyName("discount")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualDecimalReadOnlyConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal? Discount { get; set; }
 
                         /// <summary>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("promotion_price")]
                 [System.Text.Json.Serialization.JsonPropertyName("promotion_price")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualNullableDecimalReadOnlyConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                 public decimal? PromotionPrice { get; set; }
 
                 /// <summary>
@@ -85,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("discount")]
                 [System.Text.Json.Serialization.JsonPropertyName("discount")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.TextualNullableDecimalReadOnlyConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                 public decimal? Discount { get; set; }
 
                 /// <summary>

@@ -27,25 +27,72 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class SalesAttribute : ProductCreateProductRequest.Types.SKU.Types.SalesAttribute
+                    public class SalesAttribute
                     {
-                        public static new class Types
+                        public static class Types
                         {
-                            public class Image : GlobalProductCreateProductRequest.Types.Image
+                            public class Image : ProductCreateProductRequest.Types.SKU.Types.SalesAttribute.Types.Image
                             {
                             }
                         }
+
+                        /// <summary>
+                        /// 获取或设置属性 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("attribute_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+                        public string AttributeId { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置属性名称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("attribute_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("attribute_name")]
+                        public string? AttributeName { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置属性值 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("value_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("value_id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+                        public string? ValueId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置自定义属性值。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("custom_value")]
+                        [System.Text.Json.Serialization.JsonPropertyName("custom_value")]
+                        public string? CustomValue { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_img")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_img")]
-                        public new Types.Image? Image { get; set; }
+                        public Types.Image? Image { get; set; }
                     }
 
                     public class IdentifierCodeInfo : ProductCreateProductRequest.Types.SKU.Types.IdentifierCodeInfo
                     {
+                    }
+
+                    public class StockInfo
+                    {
+                        /// <summary>
+                        /// 获取或设置仓库 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("warehouse_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("warehouse_id")]
+                        public string WarehouseId { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置可用库存。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("available_stock")]
+                        [System.Text.Json.Serialization.JsonPropertyName("available_stock")]
+                        public int AvailableStock { get; set; }
                     }
                 }
 
@@ -78,6 +125,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public IList<Types.SalesAttribute>? SalesAttributeList { get; set; }
 
                 /// <summary>
+                /// 获取或设置库存信息列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("stock_infos")]
+                [System.Text.Json.Serialization.JsonPropertyName("stock_infos")]
+                public IList<Types.StockInfo>? StockInfoList { get; set; }
+
+                /// <summary>
                 /// 获取或设置产品标识码信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_identifier_code")]
@@ -85,9 +139,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public Types.IdentifierCodeInfo? IdentifierCodeInfo { get; set; }
             }
 
-            public class ProductAttribute : ProductCreateProductRequest.Types.ProductAttribute
+            public class ProductAttribute
             {
-                public static new class Types
+                public static class Types
                 {
                     public class ProductAttributeValue : ProductCreateProductRequest.Types.ProductAttribute.Types.ProductAttributeValue
                     {
@@ -95,18 +149,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
 
                 /// <summary>
+                /// 获取或设置属性 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("attribute_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
+                public string AttributeId { get; set; } = string.Empty;
+
+                /// <summary>
                 /// 获取或设置属性值列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attribute_values")]
                 [System.Text.Json.Serialization.JsonPropertyName("attribute_values")]
-                public new IList<Types.ProductAttributeValue> ValueList { get; set; } = new List<Types.ProductAttributeValue>();
+                public IList<Types.ProductAttributeValue> ValueList { get; set; } = new List<Types.ProductAttributeValue>();
             }
 
-            public class ProductCertification : ProductCreateProductRequest.Types.ProductCertification
+            public class ProductCertification 
             {
-                public static new class Types
+                public static class Types
                 {
-                    public class Image : GlobalProductCreateProductRequest.Types.Image
+                    public class Image : ProductCreateProductRequest.Types.ProductCertification.Types.Image
                     {
                     }
 
@@ -116,18 +177,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
 
                 /// <summary>
+                /// 获取或设置商品认证 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("id")]
+                [System.Text.Json.Serialization.JsonPropertyName("id")]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+                public string CertificationId { get; set; } = string.Empty;
+
+                /// <summary>
                 /// 获取或设置图片列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("images")]
                 [System.Text.Json.Serialization.JsonPropertyName("images")]
-                public new IList<Types.Image>? ImageList { get; set; }
+                public IList<Types.Image>? ImageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置文件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("files")]
                 [System.Text.Json.Serialization.JsonPropertyName("files")]
-                public new IList<Types.File>? FileList { get; set; }
+                public IList<Types.File>? FileList { get; set; }
             }
 
             public class ExemptionOfIdentifierCode
@@ -160,6 +229,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_id")]
         [System.Text.Json.Serialization.JsonPropertyName("category_id")]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
         public string CategoryId { get; set; } = string.Empty;
 
         /// <summary>

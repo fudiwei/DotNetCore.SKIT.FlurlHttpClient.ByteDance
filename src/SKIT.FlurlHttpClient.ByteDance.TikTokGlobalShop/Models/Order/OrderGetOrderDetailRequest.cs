@@ -7,6 +7,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// </summary>
     public class OrderGetOrderDetailRequest : TikTokShopRequest
     {
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public override string? ApiVersion { get; set; } = "202305";
+
         /// <summary>
         /// 获取或设置订单 ID 列表。
         /// </summary>

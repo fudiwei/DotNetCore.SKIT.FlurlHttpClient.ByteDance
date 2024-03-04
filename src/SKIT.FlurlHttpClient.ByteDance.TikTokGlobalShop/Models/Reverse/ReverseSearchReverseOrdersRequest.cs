@@ -5,6 +5,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// </summary>
     public class ReverseSearchReverseOrdersRequest : TikTokShopRequest
     {
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public override string? ApiVersion { get; set; } = "202307";
+
         /// <summary>
         /// 获取或设置更新时间范围起始时间戳。
         /// </summary>
@@ -38,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
         public string? OrderId { get; set; }
 
         /// <summary>
@@ -46,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reverse_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("reverse_order_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
         public string? ReverseOrderId { get; set; }
 
         /// <summary>

@@ -14,6 +14,9 @@ A HTTP API SDK for [TikTok Shop Open Platform](https://partner.tiktokshop.com/) 
 
 ## Get Started
 
+> [!IMPORTANT]
+> The documents are applicable to version 3.x of this SDK. If you are using version 2.x, please move to the archived branches on GitHub/Gitee.
+
 ### Installation:
 
 ```shell
@@ -34,7 +37,7 @@ var options = new TikTokShopClientOptions()
     AppKey = "${APP_KEY}",
     AppSecret = "${APP_SECRET}}"
 };
-var client = new TikTokShopClient(options);
+var client = new TikTokShopClientBuilder.Create(options).Build();
 ```
 
 ### Requests & Responses:

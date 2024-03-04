@@ -4,9 +4,6 @@
         "category_id": 600006,
         "create_time": 123456789,
         "description": "<p>test</p>",
-        "exemption_of_identifier_code": {
-            "exemption_reason": "1"
-        },
         "global_product_id": 1729592969712208000,
         "images": [
             {

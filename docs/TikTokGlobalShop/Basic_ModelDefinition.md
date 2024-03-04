@@ -8,7 +8,7 @@ Naming Policies:
 
 ---
 
-### API Functions
+### APIs
 
 <details>
 
@@ -31,6 +31,7 @@ Naming Policies:
     -   Update Stock: `ProductUpdateProductStock`
     -   Get Product List: `ProductSearchProducts`
     -   Get Product Detail: `ProductGetProductDetail`
+    -   Get Product Stock: `ProductGetProductStocks`
     -   Deactivate Product: `ProductDeactivateProducts`
     -   Activate Product: `ProductActivateProducts`
     -   Recover Deleted Product: `ProductRecoverProducts`
@@ -41,6 +42,7 @@ Naming Policies:
     -   Get Attributes: `ProductGetAttributeList`
     -   Get Category Rule: `ProductGetCategoryRules`
     -   Category Recommended: `ProductRecommendCategory`
+    -   Pre-check for Operating Product: `ProductPrecheck`
 -   Order
     -   Get Order Detail: `OrderGetOrderDetail`
     -   Get Order List: `OrderSearchOrders`
@@ -62,6 +64,8 @@ Naming Policies:
     -   Update Package Delivery Status: `FulfillmentUpdatePackageDeliveryStatus`
     -   Fulfillment Upload File: `FulfillmentUploadFile`
     -   Batch Ship Packages: `FulfillmentBatchShipPackage`
+    -   Get Shipping Service: `FulfillmentGetShippingService`
+    -   Create Label: `FulfillmentCreateLabel`
 -   Logistics
     -   Get Subscribed Delivery Options: `LogisticsGetSubscribedDeliveryOptions`
     -   Update Shipping Info: `LogisticsUpdateShippingInfo`

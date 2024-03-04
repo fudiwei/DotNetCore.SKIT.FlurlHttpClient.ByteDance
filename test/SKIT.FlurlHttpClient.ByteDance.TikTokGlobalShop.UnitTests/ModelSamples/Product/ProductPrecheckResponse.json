@@ -1,0 +1,20 @@
+{
+    "code": 0,
+    "data": {
+        "shop_info": {
+            "gne_info": {
+                "product_quantity_limit": "{\\\"id\\\":\\\"product_quantity_limit\\\",\\\"name\\\":\\\"product_quantity_limit\\\",\\\"check_result\\\":{\\\"is_failed\\\":false}}"
+            },
+            "logistics_info": {
+                "delivery_warehouse": "{\\\"id\\\":\\\"delivery_warehouse\\\",\\\"name\\\":\\\"delivery_warehouse\\\",\\\"check_result\\\":{\\\"is_failed\\\":false}}",
+                "logistics_service": "{\\\"id\\\":\\\"logistics_service\\\",\\\"name\\\":\\\"logistics_service\\\",\\\"check_result\\\":{\\\"is_failed\\\":true,\\\"fail_reasons\\\":[\\\"Cannot add products because the warehouse didn't set logistics service. You can check in the shipping option page\\\"]}}",
+                "return_warehouse": "{\\\"id\\\":\\\"return_warehouse\\\",\\\"name\\\":\\\"return_warehouse\\\",\\\"check_result\\\":{\\\"is_failed\\\":true,\\\"fail_reasons\\\":[\\\"Couldn't publish this product as you haven't set the return warehouse for your shop. Add the return warehouse information on TikTok Shop Seller Center first and try again.\\\"]}}",
+                "shipping_template": "{\\\"id\\\":\\\"shipping_template\\\",\\\"name\\\":\\\"shipping_template\\\",\\\"check_result\\\":{\\\"is_failed\\\":false}}"
+            },
+            "shop_status": "{\\\"id\\\":\\\"shop_status\\\",\\\"name\\\":\\\"shop_status\\\",\\\"check_result\\\":{\\\"is_failed\\\":false}}",
+            "tax_info": "{\\\"id\\\":\\\"tax_info\\\",\\\"name\\\":\\\"tax_info\\\",\\\"check_result\\\":{\\\"is_failed\\\":true,\\\"fail_reasons\\\":[\\\"This seller is not able to create or edit product. Check if the seller has a valid tax number.\\\"]}}"
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

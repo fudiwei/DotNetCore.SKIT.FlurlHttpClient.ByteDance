@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /reverse/reverse_order/list 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262870 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262870 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,14 +26,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_order", "list");
+                .CreateFlurlRequest(request, HttpMethod.Post, "reverse", "reverse_order", "list");
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseSearchReverseOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ReverseSearchReverseOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /reverse/reverse_request/confirm 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262871 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262871 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -42,14 +48,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "confirm");
+                .CreateFlurlRequest(request, HttpMethod.Post, "reverse", "reverse_request", "confirm");
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseConfirmReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ReverseConfirmReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /reverse/reverse_request/reject 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262869 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262869 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -61,14 +70,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "reverse_request", "reject");
+                .CreateFlurlRequest(request, HttpMethod.Post, "reverse", "reverse_request", "reject");
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseRejectReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ReverseRejectReverseRequestResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /reverse/order/cancel 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262872 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262872 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -80,14 +92,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "reverse", "order", "cancel");
+                .CreateFlurlRequest(request, HttpMethod.Post, "reverse", "order", "cancel");
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseCancelOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ReverseCancelOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /reverse/reverse_reason/list 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262873 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262873 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -99,18 +114,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list");
+                .CreateFlurlRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list");
 
-            if (request.ActionType != null)
+            if (request.ActionType is not null)
                 flurlReq.SetQueryParam("reverse_action_type", request.ActionType.Value);
 
-            if (request.ReasonType != null)
+            if (request.ReasonType is not null)
                 flurlReq.SetQueryParam("reason_type", request.ReasonType.Value);
 
-            if (request.FulfillmentStatus != null)
+            if (request.FulfillmentStatus is not null)
                 flurlReq.SetQueryParam("fulfillment_status", request.FulfillmentStatus.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.ReverseGetRejectReasonListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ReverseGetRejectReasonListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
-    /// 调用巨量引擎开放平台 API 出错时引发的异常。
+    /// 当调用巨量引擎开放平台 API 出错时引发的异常。
     /// </summary>
     public class OceanEngineException : CommonException
     {

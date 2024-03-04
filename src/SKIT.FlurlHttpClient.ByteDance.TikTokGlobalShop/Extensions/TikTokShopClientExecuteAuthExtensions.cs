@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
     {
         /// <summary>
         /// <para>异步调用 [GET] /token/get 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/261250 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/261250 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,21 +26,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "token", "get")
-                .WithUrl($"{client.EndpointForAuthAPI}/token/get")
-                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
+                .CreateFlurlRequest(request, HttpMethod.Get, "token", "get")
+                .WithUrl($"{client.EndpointForAuth}/token/get")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)
-                .SetQueryParam("auth_code", request.AuthorizedCode);
+                .SetQueryParam("auth_code", request.AuthorizedCode)
+                .RemoveQueryParams("access_token", "timestamp", "shop_id", "shop_cipher", "version");
 
-            return await client.SendRequestWithJsonAsync<Models.AuthGetTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.AuthGetTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /token/refresh 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/261250 </para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262967 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/261250 ]]> <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262967 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -49,15 +55,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "token", "refresh")
-                .WithUrl($"{client.EndpointForAuthAPI}/token/refresh")
-                .RemoveQueryParams("app_key", "access_token", "timestamp", "shop_id", "version")
+                .CreateFlurlRequest(request, HttpMethod.Get, "token", "refresh")
+                .WithUrl($"{client.EndpointForAuth}/token/refresh")
                 .SetQueryParam("app_key", client.Credentials.AppKey)
                 .SetQueryParam("app_secret", client.Credentials.AppSecret)
                 .SetQueryParam("grant_type", request.GrantType)
-                .SetQueryParam("refresh_token", request.RefreshToken);
+                .SetQueryParam("refresh_token", request.RefreshToken)
+                .RemoveQueryParams("access_token", "timestamp", "shop_id", "shop_cipher", "version");
 
-            return await client.SendRequestWithJsonAsync<Models.AuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.AuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
     {
         /// <summary>
         /// <para>异步调用 [POST] /orders/search 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262815 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262815 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,14 +25,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "orders", "search");
+                .CreateFlurlRequest(request, HttpMethod.Post, "orders", "search");
 
-            return await client.SendRequestWithJsonAsync<Models.OrderSearchOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.OrderSearchOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /orders/detail/query 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262814 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262814 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -41,9 +47,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "orders", "detail", "query");
+                .CreateFlurlRequest(request, HttpMethod.Post, "orders", "detail", "query");
 
-            return await client.SendRequestWithJsonAsync<Models.OrderGetOrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.OrderGetOrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -59,9 +65,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "orders", "rts");
+                .CreateFlurlRequest(request, HttpMethod.Post, "orders", "rts");
 
-            return await client.SendRequestWithJsonAsync<Models.OrderShipOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.OrderShipOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

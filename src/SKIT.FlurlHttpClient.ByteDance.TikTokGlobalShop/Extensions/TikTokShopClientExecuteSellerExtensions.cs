@@ -10,7 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
     {
         /// <summary>
         /// <para>异步调用 [GET] /seller/global/active_shops 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262743 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262743 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,14 +25,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "seller", "global", "active_shops");
+                .CreateFlurlRequest(request, HttpMethod.Get, "seller", "global", "active_shops");
 
-            return await client.SendRequestWithJsonAsync<Models.SellerGetGlobalActiveShopListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.SellerGetGlobalActiveShopListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /seller/manage_global_product/check 接口。</para>
-        /// <para>REF: https://partner.tiktokshop.com/doc/page/262744 </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/doc/page/262744 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -41,9 +47,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "seller", "manage_global_product", "check");
+                .CreateFlurlRequest(request, HttpMethod.Get, "seller", "manage_global_product", "check");
 
-            return await client.SendRequestWithJsonAsync<Models.SellerCheckGlobalProductModeResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequesAsJsontAsync<Models.SellerCheckGlobalProductModeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

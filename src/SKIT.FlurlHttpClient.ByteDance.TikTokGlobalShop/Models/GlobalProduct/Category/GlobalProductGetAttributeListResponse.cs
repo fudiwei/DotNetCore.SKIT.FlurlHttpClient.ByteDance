@@ -11,9 +11,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class Attribute : ProductGetAttributeListResponse.Types.Data.Types.Attribute
+                    public class Attribute
                     {
-                        public static new class Types
+                        public static class Types
                         {
                             public class IntputSettings : ProductGetAttributeListResponse.Types.Data.Types.Attribute.Types.IntputSettings
                             {
@@ -31,18 +31,40 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         }
 
                         /// <summary>
+                        /// 获取或设置属性 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("id")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                        public string AttributeId { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置属性名称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("name")]
+                        public string AttributeName { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置属性类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("attribute_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("attribute_type")]
+                        public int AttributeType { get; set; }
+
+                        /// <summary>
                         /// 获取或设置输入配置信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("input_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("input_type")]
-                        public new Types.IntputSettings IntputSettings { get; set; } = default!;
+                        public Types.IntputSettings IntputSettings { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置属性值列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("values")]
                         [System.Text.Json.Serialization.JsonPropertyName("values")]
-                        public new Types.AttributeValue[] ValueList { get; set; } = default!;
+                        public Types.AttributeValue[] ValueList { get; set; } = default!;
                     }
                 }
 

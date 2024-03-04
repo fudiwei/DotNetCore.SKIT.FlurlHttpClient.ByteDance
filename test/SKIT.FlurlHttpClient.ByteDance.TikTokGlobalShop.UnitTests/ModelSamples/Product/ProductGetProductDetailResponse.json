@@ -23,9 +23,6 @@
             }
         ],
         "description": "",
-        "exemption_of_identifier_code": {
-            "exemption_reason": "1"
-        },
         "images": [
             {
                 "height": 600,

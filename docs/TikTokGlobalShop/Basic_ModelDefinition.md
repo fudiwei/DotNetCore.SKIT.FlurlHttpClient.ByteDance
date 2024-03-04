@@ -42,6 +42,7 @@ Naming Policies:
     -   Get Attributes: `ProductGetAttributeList`
     -   Get Category Rule: `ProductGetCategoryRules`
     -   Category Recommended: `ProductRecommendCategory`
+    -   Pre-check for Operating Product: `ProductPrecheck`
 -   Order
     -   Get Order Detail: `OrderGetOrderDetail`
     -   Get Order List: `OrderSearchOrders`

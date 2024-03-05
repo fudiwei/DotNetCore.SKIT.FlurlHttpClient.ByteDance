@@ -10,66 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecuteAppsExtensions
     {
-        /// <summary>
-        /// <para>异步调用 [POST] /apps/v2/token 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/interface-request-credential/get-access-token ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/interface-request-credential/get-access-token ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/interaction/develop/server/interface-request-credential/get-access-token ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AppsTokenV2Response> ExecuteAppsTokenV2Async(this DouyinMicroAppClient client, Models.AppsTokenV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.AppSecret is null)
-                request.AppSecret = client.Credentials.AppSecret;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "token");
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsTokenV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /apps/v2/jscode2session 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/log-in/code-2-session ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/log-in/code-2-session ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/interaction/develop/server/log-in/code-2-session ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AppsJsCode2SessionV2Response> ExecuteAppsJsCode2SessionV2Async(this DouyinMicroAppClient client, Models.AppsJsCode2SessionV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.AppSecret is null)
-                request.AppSecret = client.Credentials.AppSecret;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "jscode2session");
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsJsCode2SessionV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
         #region Capacity
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/upload_material 接口。</para>
@@ -1869,27 +1809,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Qrcode
         /// <summary>
-        /// <para>异步调用 [POST] /apps/qrcode 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/qrcode/create 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/qr-code/create-qr-code ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/qr-code/create-qr-code ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/getqrcode ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/qrcode/create-qr-code-v2 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsQrcodeResponse> ExecuteAppsQrcodeAsync(this DouyinMicroAppClient client, Models.AppsQrcodeRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsQrcodeCreateV1Response> ExecuteAppsQrcodeCreateV1Async(this DouyinMicroAppClient client, Models.AppsQrcodeCreateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "qrcode");
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "qrcode", "create")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsQrcodeCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
@@ -2075,7 +2017,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region UrlLink
+        #region UrlSchema
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/url_link/generate 接口。</para>
         /// <para>
@@ -2152,6 +2094,86 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkQueryQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region UrlLink
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/url/generate_schema 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/generate-schema-v2 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsUrlGenerateSchemaV1Response> ExecuteAppsUrlGenerateSchemaV1Async(this DouyinMicroAppClient client, Models.AppsUrlGenerateSchemaV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "generate_schema")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlGenerateSchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/url/query_schema 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-v2 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsUrlQuerySchemaV1Response> ExecuteAppsUrlQuerySchemaV1Async(this DouyinMicroAppClient client, Models.AppsUrlQuerySchemaV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/url/query_schema_quota 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-quota-v2 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsUrlQuerySchemaQuotaV1Response> ExecuteAppsUrlQuerySchemaQuotaV1Async(this DouyinMicroAppClient client, Models.AppsUrlQuerySchemaQuotaV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema_quota")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 

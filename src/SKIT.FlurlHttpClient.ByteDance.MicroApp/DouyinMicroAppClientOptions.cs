@@ -18,6 +18,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public string Endpoint { get; set; } = DouyinMicroAppEndpoints.DEFAULT;
 
         /// <summary>
+        /// 获取或设置抖音小程序旧版 API 入口点。
+        /// <para>默认值：<see cref="DouyinMicroAppEndpoints.LEGACY_DEFAULT"/></para>
+        /// </summary>
+        public string EndpointForLegacy { get; set; } = DouyinMicroAppEndpoints.LEGACY_DEFAULT;
+
+        /// <summary>
         /// 获取或设置抖音小程序 AppId。
         /// </summary>
         public string AppId { get; set; } = default!;

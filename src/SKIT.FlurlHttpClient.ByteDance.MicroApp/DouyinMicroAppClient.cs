@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             EndpointForDefault = options.Endpoint;
             EndpointForWebcast = options.EndpointForWebcastAPI;
 
-            FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppEndpoints.API_MINIAPP;
+            FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppEndpoints.DEFAULT;
             FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
         }
 

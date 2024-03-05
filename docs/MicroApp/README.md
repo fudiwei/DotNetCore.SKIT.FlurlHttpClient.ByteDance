@@ -2,6 +2,8 @@
 
 基于 `Flurl.Http` 的[抖音小程序开放平台](https://microapp.bytedance.com/) HTTP API SDK。
 
+本模块仅支持抖音小程序专属的 API，如需接入与抖音开放平台共享的 API，请移步 [`SKIT.FlurlHttpClient.ByteDance.DouyinOpen`](../DouyinOpen/README.md) 模块。
+
 ---
 
 ## 功能
@@ -36,7 +38,6 @@ using SKIT.FlurlHttpClient.ByteDance.MicroApp;
 
 var options = new DouyinMicroAppClientOptions()
 {
-    Endpoints = DouyinMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏拥有不同的接入点。
     AppId = "抖音小程序 AppId",
     AppSecret = "抖音小程序 AppSecret",
     ECPaySalt = "担保支付相关服务的密钥，不用则不填"

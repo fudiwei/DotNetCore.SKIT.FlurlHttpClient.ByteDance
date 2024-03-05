@@ -13,9 +13,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         /// <summary>
         /// 获取或设置抖音小程序 API 入口点。
-        /// <para>默认值：<see cref="DouyinMicroAppEndpoints.API_MINIAPP"/></para>
+        /// <para>默认值：<see cref="DouyinMicroAppEndpoints.DEFAULT"/></para>
         /// </summary>
-        public string Endpoint { get; set; } = DouyinMicroAppEndpoints.API_MINIAPP;
+        public string Endpoint { get; set; } = DouyinMicroAppEndpoints.DEFAULT;
 
         /// <summary>
         /// 获取或设置抖音小程序直播小玩法 API 入口点。

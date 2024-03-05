@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/data_analysis/query_user_portrait_data 接口的请求。</para>
     /// </summary>
-    public class AppsDataAnalysisQueryUserPortraitDataV1Request : ByteDanceMicroAppRequest
+    public class AppsDataAnalysisQueryUserPortraitDataV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置开始时间戳。

@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /update_authletter 接口的请求。</para>
     /// </summary>
-    public class AuthEntityUpdateAuthLetterRequest : ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityUpdateAuthLetterRequest : DouyinMicroAppRoleApiRequest
     {
         public static class Types
         {

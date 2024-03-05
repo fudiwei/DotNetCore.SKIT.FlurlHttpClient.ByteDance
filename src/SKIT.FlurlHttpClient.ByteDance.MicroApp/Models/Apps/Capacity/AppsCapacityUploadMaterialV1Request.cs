@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/upload_material 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityUploadMaterialV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityUploadMaterialV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置上传的文件类型。

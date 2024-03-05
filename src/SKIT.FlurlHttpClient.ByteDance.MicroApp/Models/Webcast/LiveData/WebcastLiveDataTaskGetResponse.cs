@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /live_data/task/get 接口的响应。</para>
     /// </summary>
-    public class WebcastLiveDataTaskGetResponse : ByteDanceMicroAppResponse
+    public class WebcastLiveDataTaskGetResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

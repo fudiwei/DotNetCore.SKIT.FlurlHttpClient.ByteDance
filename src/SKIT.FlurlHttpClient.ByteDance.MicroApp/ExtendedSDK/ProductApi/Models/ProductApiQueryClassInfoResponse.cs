@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /query_class_info 接口的响应。</para>
     /// </summary>
-    public class ProductApiQueryClassInfoResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiQueryClassInfoResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

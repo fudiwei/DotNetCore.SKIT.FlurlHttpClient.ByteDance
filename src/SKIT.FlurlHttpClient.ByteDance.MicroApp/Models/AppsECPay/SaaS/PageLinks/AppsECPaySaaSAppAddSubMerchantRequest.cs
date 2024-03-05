@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/app_add_sub_merchant 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSAppAddSubMerchantRequest : ByteDanceMicroAppRequest
+    public class AppsECPaySaaSAppAddSubMerchantRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置小程序的 AppId。

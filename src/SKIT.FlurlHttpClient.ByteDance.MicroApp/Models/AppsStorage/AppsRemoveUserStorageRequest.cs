@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/remove_user_storage 接口的请求。</para>
     /// </summary>
-    public class AppsRemoveUserStorageRequest : ByteDanceMicroAppRequest
+    public class AppsRemoveUserStorageRequest : DouyinMicroAppRequest
     {
         public static class Types
         {

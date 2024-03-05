@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/notify ]]>
     /// </para>
     /// </summary>
-    public class ComponentAuthorizedEvent : ByteDanceMicroAppOpenApiEvent
+    public class ComponentAuthorizedEvent : DouyinMicroAppOpenApiEvent
     {
         /// <summary>
         /// 获取或设置授权码。

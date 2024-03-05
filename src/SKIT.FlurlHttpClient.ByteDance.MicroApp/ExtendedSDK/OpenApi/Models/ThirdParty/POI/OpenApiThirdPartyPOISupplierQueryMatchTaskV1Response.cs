@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/poi/supplier/query/match_task 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /enable_mountscope 接口的请求。</para>
     /// </summary>
-    public class AuthEntityEnableMountScopeRequest : ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityEnableMountScopeRequest : DouyinMicroAppRoleApiRequest
     {
         public static class Types
         {

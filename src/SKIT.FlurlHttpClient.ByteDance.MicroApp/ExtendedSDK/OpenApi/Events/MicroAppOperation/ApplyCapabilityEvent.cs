@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/capcut-video-template-capacity ]]>
     /// </para>
     /// </summary>
-    public class ApplyCapabilityEvent : ByteDanceMicroAppOpenApiEvent
+    public class ApplyCapabilityEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

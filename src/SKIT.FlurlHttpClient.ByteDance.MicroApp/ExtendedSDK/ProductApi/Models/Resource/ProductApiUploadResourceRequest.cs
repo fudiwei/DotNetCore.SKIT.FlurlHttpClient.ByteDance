@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /upload_resource 接口的请求。</para>
     /// </summary>
-    public class ProductApiUploadResourceRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiUploadResourceRequest : DouyinMicroAppProductApiRequest
     {
         /// <summary>
         /// 获取或设置资源类型。

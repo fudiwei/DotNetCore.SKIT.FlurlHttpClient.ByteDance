@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /modify_qualification 接口的响应。</para>
     /// </summary>
-    public class ProductApiModifyQualificationResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiModifyQualificationResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

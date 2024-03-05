@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/data_analysis/query_live_room 接口的响应。</para>
     /// </summary>
-    public class AppsDataAnalysisQueryLiveRoomV1Response : ByteDanceMicroAppResponse
+    public class AppsDataAnalysisQueryLiveRoomV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

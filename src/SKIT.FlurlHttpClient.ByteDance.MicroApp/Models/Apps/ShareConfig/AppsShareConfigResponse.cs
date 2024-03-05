@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/share_config 接口的响应。</para>
     /// </summary>
-    public class AppsShareConfigResponse : ByteDanceMicroAppResponse
+    public class AppsShareConfigResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

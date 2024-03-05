@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_self_mount_user_list 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQuerySelfMountUserListV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityQuerySelfMountUserListV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

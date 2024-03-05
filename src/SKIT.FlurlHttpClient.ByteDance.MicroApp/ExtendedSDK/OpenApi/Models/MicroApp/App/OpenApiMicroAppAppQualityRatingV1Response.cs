@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/app/quality_rating 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppQualityRatingV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppQualityRatingV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

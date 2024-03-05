@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /query_qualification 接口的请求。</para>
     /// </summary>
-    public class ProductApiQueryQualificationRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiQueryQualificationRequest : DouyinMicroAppProductApiRequest
     {
         public static class Types
         {

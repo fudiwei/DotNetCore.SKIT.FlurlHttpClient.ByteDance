@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/modify_alias 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityModifyAliasV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityModifyAliasV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置修改前小程序别名。

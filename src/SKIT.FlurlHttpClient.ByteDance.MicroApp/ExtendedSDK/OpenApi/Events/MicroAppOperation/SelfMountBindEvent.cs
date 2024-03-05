@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/self-mount ]]>
     /// </para>
     /// </summary>
-    public class SelfMountBindEvent : ByteDanceMicroAppOpenApiEvent
+    public class SelfMountBindEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

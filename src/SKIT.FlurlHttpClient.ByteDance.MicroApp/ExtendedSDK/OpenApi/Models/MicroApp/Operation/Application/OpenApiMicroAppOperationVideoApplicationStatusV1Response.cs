@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/video_application_status 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationVideoApplicationStatusV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppOperationVideoApplicationStatusV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

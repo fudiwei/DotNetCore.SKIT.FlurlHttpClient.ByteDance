@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /query_resource_status 接口的请求。</para>
     /// </summary>
-    public class ProductApiQueryResourceStatusRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiQueryResourceStatusRequest : DouyinMicroAppProductApiRequest
     {
         /// <summary>
         /// 获取或设置资源文件路径。

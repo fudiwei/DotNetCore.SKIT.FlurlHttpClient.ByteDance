@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/game/wallet/get_balance 接口的响应。</para>
     /// </summary>
-    public class AppsGameWalletGetBalanceResponse : ByteDanceMicroAppResponse
+    public class AppsGameWalletGetBalanceResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// 获取或设置游戏币数量。

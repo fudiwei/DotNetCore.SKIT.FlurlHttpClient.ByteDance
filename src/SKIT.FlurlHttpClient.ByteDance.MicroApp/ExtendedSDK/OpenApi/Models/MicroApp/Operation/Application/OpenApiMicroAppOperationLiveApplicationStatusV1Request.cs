@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/live_application_status 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationLiveApplicationStatusV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppOperationLiveApplicationStatusV1Request : DouyinMicroAppOpenApiRequest
     {
     }
 }

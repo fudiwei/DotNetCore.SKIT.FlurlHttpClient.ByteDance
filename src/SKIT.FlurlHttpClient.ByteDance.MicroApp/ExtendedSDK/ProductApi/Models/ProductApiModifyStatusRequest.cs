@@ -3,14 +3,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /modify_status 接口的请求。</para>
     /// </summary>
-    public class ProductApiModifyStatusRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiModifyStatusRequest : DouyinMicroAppProductApiRequest
     {
         public static class Types
         {
             public class ProductStatusInfo
             {
                 /// <summary>
-                /// 获取或设置小程序 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
+                /// 获取或设置小程序 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("appid")]
                 [System.Text.Json.Serialization.JsonPropertyName("appid")]

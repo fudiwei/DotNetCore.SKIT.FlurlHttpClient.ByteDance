@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /get_basic_auth 接口的响应。</para>
     /// </summary>
-    public class AuthEntityGetBasicAuthResponse: ByteDanceMicroAppRoleApiResponse
+    public class AuthEntityGetBasicAuthResponse: DouyinMicroAppRoleApiResponse
     {
         public static class Types
         {

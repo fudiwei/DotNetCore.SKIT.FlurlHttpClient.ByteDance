@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/all/scope-quota ]]>
     /// </para>
     /// </summary>
-    public class ScopeQuotaAuditResultEvent : ByteDanceMicroAppOpenApiEvent
+    public class ScopeQuotaAuditResultEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

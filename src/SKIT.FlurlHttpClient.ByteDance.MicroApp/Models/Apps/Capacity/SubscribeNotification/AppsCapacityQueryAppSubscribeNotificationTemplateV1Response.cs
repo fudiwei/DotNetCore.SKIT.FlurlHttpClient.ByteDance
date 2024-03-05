@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_app_subscribe_notification_tpl 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryAppSubscribeNotificationTemplateV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAppSubscribeNotificationTemplateV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/category/query_app_categories 接口的响应。</para>
     /// </summary>
-    public class AppsCategoryQueryAppCategoriesV1Response : ByteDanceMicroAppResponse
+    public class AppsCategoryQueryAppCategoriesV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

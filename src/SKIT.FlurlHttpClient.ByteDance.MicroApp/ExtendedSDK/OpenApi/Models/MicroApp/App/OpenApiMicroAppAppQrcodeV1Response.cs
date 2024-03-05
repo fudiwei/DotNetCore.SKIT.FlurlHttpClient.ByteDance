@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/qrcode 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppQrcodeV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppQrcodeV1Response : DouyinMicroAppOpenApiResponse
     {
         public override bool IsSuccessful()
         {

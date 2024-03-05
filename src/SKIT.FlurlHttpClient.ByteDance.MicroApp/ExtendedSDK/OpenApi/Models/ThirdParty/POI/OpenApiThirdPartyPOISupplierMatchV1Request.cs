@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/tp/poi/supplier/match 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOISupplierMatchV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiThirdPartyPOISupplierMatchV1Request : DouyinMicroAppOpenApiRequest
     {
         public static class Types
         {

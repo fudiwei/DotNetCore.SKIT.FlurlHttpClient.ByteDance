@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/operation/modify_share_tpl 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationModifyShareTemplateV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppOperationModifyShareTemplateV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置模板 ID。

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/get_aweme_user_bind_qrcode 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityGetAwemeUserBindQrcodeV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityGetAwemeUserBindQrcodeV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置绑定类型。

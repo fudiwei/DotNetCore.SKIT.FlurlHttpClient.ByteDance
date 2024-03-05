@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/settle/apply 接口的请求。</para>
     /// </summary>
-    public class OpenApiSettleApplyV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiSettleApplyV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置手机号码。

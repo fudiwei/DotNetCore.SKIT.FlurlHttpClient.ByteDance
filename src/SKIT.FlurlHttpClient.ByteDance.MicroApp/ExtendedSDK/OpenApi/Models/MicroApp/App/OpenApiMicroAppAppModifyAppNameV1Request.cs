@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/modify_app_name 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppAppModifyAppNameV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppAppModifyAppNameV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置准备修改的小程序名称。

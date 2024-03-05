@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/remove_user_storage 接口的响应。</para>
     /// </summary>
-    public class AppsRemoveUserStorageResponse : ByteDanceMicroAppResponse
+    public class AppsRemoveUserStorageResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// 获取或设置错误代号。

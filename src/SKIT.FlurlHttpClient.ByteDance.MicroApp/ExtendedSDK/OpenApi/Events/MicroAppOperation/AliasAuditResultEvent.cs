@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/alias-search-tag ]]>
     /// </para>
     /// </summary>
-    public class AliasAuditResultEvent : ByteDanceMicroAppOpenApiEvent
+    public class AliasAuditResultEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

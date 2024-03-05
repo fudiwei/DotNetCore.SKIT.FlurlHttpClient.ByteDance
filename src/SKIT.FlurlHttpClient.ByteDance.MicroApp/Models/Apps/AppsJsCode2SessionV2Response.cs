@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/v2/jscode2session 接口的响应。</para>
     /// </summary>
-    public class AppsJsCode2SessionV2Response : ByteDanceMicroAppResponse
+    public class AppsJsCode2SessionV2Response : DouyinMicroAppResponse
     {
         public static class Types
         {

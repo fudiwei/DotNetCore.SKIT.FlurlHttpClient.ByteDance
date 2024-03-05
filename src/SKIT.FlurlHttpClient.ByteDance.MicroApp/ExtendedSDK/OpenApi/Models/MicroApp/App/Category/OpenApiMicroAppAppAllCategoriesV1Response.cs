@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/app/all_categories 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppAllCategoriesV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppAllCategoriesV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

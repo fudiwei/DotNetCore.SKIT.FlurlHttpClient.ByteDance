@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/auth/retrieve 接口的请求。</para>
     /// </summary>
-    public class OpenApiAuthRetrieveV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiAuthRetrieveV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// <inheritdoc/>

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/query_merchant_balance 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSQueryMerchantBalanceResponse : ByteDanceMicroAppResponse
+    public class AppsECPaySaaSQueryMerchantBalanceResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

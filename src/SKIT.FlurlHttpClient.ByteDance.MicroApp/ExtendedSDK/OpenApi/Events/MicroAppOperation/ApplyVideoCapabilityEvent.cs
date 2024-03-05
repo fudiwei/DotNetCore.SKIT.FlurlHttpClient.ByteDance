@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/video-application ]]>
     /// </para>
     /// </summary>
-    public class ApplyVideoCapabilityEvent : ByteDanceMicroAppOpenApiEvent
+    public class ApplyVideoCapabilityEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

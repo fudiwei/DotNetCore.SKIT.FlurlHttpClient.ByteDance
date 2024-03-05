@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/update_capcut_template_status 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityUpdateCapcutTemplateStatusV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityUpdateCapcutTemplateStatusV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置模版 ID。

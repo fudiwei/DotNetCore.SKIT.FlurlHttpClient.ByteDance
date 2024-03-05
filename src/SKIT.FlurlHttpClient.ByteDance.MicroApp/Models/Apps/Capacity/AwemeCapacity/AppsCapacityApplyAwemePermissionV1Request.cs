@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/apply_aweme_permission 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityApplyAwemePermissionV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityApplyAwemePermissionV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置权限 Key。

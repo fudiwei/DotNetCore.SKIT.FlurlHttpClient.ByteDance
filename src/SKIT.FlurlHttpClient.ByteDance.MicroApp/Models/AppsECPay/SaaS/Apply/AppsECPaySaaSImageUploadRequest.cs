@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/image_upload 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSImageUploadRequest : ByteDanceMicroAppRequest
+    public class AppsECPaySaaSImageUploadRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置小程序 AppId。与字段 <see cref="ComponentAppId"/> 二选一。

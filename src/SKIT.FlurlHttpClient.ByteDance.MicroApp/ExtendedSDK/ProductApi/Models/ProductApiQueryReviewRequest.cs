@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /query_review 接口的请求。</para>
     /// </summary>
-    public class ProductApiQueryReviewRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiQueryReviewRequest : DouyinMicroAppProductApiRequest
     {
         /// <summary>
         /// 获取或设置商品 ID 列表。

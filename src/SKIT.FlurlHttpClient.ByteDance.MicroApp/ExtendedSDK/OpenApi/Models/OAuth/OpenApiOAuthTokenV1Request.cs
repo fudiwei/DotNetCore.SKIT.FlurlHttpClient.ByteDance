@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/oauth/token 接口的请求。</para>
     /// </summary>
-    public class OpenApiOAuthTokenV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiOAuthTokenV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置授权码。与字段 <see cref="AuthorizerRefreshToken"/> 二选一。

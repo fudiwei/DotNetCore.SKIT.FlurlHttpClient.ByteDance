@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/tp/template/add_tpl 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyTemplateAddTemplateV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiThirdPartyTemplateAddTemplateV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置草稿 ID。

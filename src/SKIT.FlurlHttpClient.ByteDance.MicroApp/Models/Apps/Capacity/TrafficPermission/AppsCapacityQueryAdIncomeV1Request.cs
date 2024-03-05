@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_ad_income 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityQueryAdIncomeV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityQueryAdIncomeV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置开始日期字符串（格式：yyyy-MM-dd）。

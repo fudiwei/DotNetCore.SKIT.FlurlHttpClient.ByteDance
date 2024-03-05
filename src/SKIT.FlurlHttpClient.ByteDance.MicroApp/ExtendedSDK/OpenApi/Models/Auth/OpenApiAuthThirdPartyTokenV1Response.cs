@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/auth/tp/token 接口的响应。</para>
     /// </summary>
-    public class OpenApiAuthThirdPartyTokenV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiAuthThirdPartyTokenV1Response : DouyinMicroAppOpenApiResponse
     {
         /// <summary>
         /// 获取或设置第三方平台 AccessToken。

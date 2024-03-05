@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/v1/query_platform_order 接口的响应。</para>
     /// </summary>
-    public class AppsECPayQueryPlatformOrderV1Response : ByteDanceMicroAppResponse
+    public class AppsECPayQueryPlatformOrderV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/auth_app_list 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyAuthAppListV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiThirdPartyAuthAppListV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置分页页数。

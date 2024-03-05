@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/game/wallet/game_pay 接口的响应。</para>
     /// </summary>
-    public class AppsGameWalletGamePayResponse : ByteDanceMicroAppResponse
+    public class AppsGameWalletGamePayResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// 获取或设置订单号。

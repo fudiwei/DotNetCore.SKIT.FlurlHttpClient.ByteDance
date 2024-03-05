@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/modifyShareTpl ]]>
     /// </para>
     /// </summary>
-    public class ApplyShareTemplateEvent : ByteDanceMicroAppOpenApiEvent
+    public class ApplyShareTemplateEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

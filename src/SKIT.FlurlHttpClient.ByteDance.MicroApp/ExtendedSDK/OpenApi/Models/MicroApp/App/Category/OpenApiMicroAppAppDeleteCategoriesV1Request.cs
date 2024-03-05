@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/del_categories 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppAppDeleteCategoriesV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppAppDeleteCategoriesV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置服务类目 ID 字符串（以逗号分隔）列表。

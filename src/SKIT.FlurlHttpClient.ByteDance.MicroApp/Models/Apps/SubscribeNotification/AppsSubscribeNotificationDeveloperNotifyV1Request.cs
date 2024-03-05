@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/subscribe_notification/developer/v1/notify 接口的请求。</para>
     /// </summary>
-    public class AppsSubscribeNotificationDeveloperNotifyV1Request : ByteDanceMicroAppRequest
+    public class AppsSubscribeNotificationDeveloperNotifyV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// <inheritdoc/>
@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public override string? AccessToken { get; set; }
 
         /// <summary>
-        /// 获取或设置小程序的 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
+        /// 获取或设置小程序的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_id")]
         [System.Text.Json.Serialization.JsonPropertyName("app_id")]

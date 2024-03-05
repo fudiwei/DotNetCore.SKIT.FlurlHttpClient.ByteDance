@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/taskbox/update/status 接口的响应。</para>
     /// </summary>
-    public class AppsTaskBoxUpdateStatusResponse : ByteDanceMicroAppResponse
+    public class AppsTaskBoxUpdateStatusResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

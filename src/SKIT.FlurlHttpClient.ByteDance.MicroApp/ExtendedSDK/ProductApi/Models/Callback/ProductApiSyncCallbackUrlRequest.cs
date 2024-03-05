@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /sync_callback_url 接口的请求。</para>
     /// </summary>
-    public class ProductApiSyncCallbackUrlRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiSyncCallbackUrlRequest : DouyinMicroAppProductApiRequest
     {
         /// <summary>
         /// 获取或设置接受通知的 URL。

@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/follow-aweme ]]>
     /// </para>
     /// </summary>
-    public class BindAwemeUserEvent : ByteDanceMicroAppOpenApiEvent
+    public class BindAwemeUserEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

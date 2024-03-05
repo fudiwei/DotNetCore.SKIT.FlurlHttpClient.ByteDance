@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/game/wallet/add_coin 接口的响应。</para>
     /// </summary>
-    public class AppsGameWalletAddCoinResponse : ByteDanceMicroAppResponse
+    public class AppsGameWalletAddCoinResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// 获取或设置赠送游戏币的订单号。

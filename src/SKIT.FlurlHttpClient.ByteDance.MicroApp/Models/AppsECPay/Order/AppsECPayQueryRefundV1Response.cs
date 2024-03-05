@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/v1/query_refund 接口的响应。</para>
     /// </summary>
-    public class AppsECPayQueryRefundV1Response : ByteDanceMicroAppResponse
+    public class AppsECPayQueryRefundV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

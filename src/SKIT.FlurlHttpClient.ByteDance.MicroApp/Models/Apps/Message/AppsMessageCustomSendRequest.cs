@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/message/custom/send 接口的请求。</para>
     /// </summary>
-    public class AppsMessageCustomSendRequest : ByteDanceMicroAppRequest
+    public class AppsMessageCustomSendRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置用户的 OpenId。

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/open_traffic_permission 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityOpenTrafficPermissionV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityOpenTrafficPermissionV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置纳税人性质类型。

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /upload_resource 接口的响应。</para>
     /// </summary>
-    public class ProductApiUploadResourceResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiUploadResourceResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

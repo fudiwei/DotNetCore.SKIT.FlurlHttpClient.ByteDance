@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v2/auth/pre_auth_code 接口的响应。</para>
     /// </summary>
-    public class OpenApiAuthPreAuthCodeV2Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiAuthPreAuthCodeV2Response : DouyinMicroAppOpenApiResponse
     {
         /// <summary>
         /// 获取或设置预授权码。

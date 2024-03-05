@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/query_withdraw_order 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSQueryWithdrawOrderResponse : ByteDanceMicroAppResponse
+    public class AppsECPaySaaSQueryWithdrawOrderResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

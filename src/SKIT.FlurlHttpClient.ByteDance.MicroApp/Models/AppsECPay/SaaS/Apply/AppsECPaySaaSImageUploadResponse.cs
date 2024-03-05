@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/image_upload 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSImageUploadResponse : ByteDanceMicroAppResponse
+    public class AppsECPaySaaSImageUploadResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/qrcode 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppAppQrcodeV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppAppQrcodeV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置新名称。

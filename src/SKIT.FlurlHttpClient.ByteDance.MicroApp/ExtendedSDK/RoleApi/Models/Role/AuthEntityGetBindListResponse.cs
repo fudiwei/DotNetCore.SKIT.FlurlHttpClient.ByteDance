@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /get_bind_list 接口的响应。</para>
     /// </summary>
-    public class AuthEntityGetBindListResponse : ByteDanceMicroAppRoleApiResponse
+    public class AuthEntityGetBindListResponse : DouyinMicroAppRoleApiResponse
     {
         public static class Types
         {

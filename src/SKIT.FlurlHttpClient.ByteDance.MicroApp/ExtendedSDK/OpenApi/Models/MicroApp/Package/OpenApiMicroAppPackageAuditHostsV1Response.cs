@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/package/audit_hosts 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppPackageAuditHostsV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppPackageAuditHostsV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

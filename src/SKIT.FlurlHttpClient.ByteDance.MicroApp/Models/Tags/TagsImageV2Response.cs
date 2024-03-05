@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v2/tags/image 接口的响应。</para>
     /// </summary>
-    public class TagsImageV2Response : ByteDanceMicroAppResponse
+    public class TagsImageV2Response : DouyinMicroAppResponse
     {
         public static class Types
         {

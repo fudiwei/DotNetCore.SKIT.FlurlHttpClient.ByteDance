@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v2/microapp/package/audit 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppPackageAuditV2Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppPackageAuditV2Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置本次提审的宿主端列表。

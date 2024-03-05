@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/sync-callback-url ]]>
     /// </para>
     /// </summary>
-    public class ProductEvent : ByteDanceMicroAppProductApiEvent
+    public class ProductEvent : DouyinMicroAppProductApiEvent
     {
         /// <summary>
         /// 获取或设置商品 ID。

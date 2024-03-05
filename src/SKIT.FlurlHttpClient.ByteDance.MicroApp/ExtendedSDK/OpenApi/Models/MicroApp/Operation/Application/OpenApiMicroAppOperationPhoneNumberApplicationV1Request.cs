@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/operation/phone_number_application 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationPhoneNumberApplicationV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppOperationPhoneNumberApplicationV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置申请原因。

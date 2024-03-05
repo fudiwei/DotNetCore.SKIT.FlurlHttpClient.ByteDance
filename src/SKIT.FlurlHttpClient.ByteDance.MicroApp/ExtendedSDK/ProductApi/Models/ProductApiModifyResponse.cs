@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /modify 接口的响应。</para>
     /// </summary>
-    public class ProductApiModifyResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiModifyResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

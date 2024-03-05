@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/oauth/token 接口的响应。</para>
     /// </summary>
-    public class OpenApiOAuthTokenV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiOAuthTokenV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

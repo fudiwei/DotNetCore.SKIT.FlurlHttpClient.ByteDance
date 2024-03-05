@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/query_shop_material 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationQueryShopMaterialV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppOperationQueryShopMaterialV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

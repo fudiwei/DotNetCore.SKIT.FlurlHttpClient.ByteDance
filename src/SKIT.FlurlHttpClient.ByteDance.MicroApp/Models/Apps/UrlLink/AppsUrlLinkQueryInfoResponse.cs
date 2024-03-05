@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/url_link/query_info 接口的响应。</para>
     /// </summary>
-    public class AppsUrlLinkQueryInfoResponse : ByteDanceMicroAppResponse
+    public class AppsUrlLinkQueryInfoResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

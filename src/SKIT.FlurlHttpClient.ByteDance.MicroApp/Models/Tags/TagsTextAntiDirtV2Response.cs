@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v2/tags/text/antidirt 接口的响应。</para>
     /// </summary>
-    public class TagsTextAntiDirtV2Response : ByteDanceMicroAppResponse
+    public class TagsTextAntiDirtV2Response : DouyinMicroAppResponse
     {
         public static class Types
         {

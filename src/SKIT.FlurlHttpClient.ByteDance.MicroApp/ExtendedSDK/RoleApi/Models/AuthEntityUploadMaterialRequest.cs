@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /upload_material 接口的请求。</para>
     /// </summary>
-    public class AuthEntityUploadMaterialRequest: ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityUploadMaterialRequest: DouyinMicroAppRoleApiRequest
     {
         /// <summary>
         /// 获取或设置文件类型。

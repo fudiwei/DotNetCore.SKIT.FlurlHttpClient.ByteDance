@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/subscribe-notification-template ]]>
     /// </para>
     /// </summary>
-    public class CreateSubscribeNotificationTemplateResultEvent : ByteDanceMicroAppOpenApiEvent
+    public class CreateSubscribeNotificationTemplateResultEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

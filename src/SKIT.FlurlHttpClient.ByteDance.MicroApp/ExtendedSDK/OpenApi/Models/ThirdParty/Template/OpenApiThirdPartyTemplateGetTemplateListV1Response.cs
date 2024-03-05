@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/template/get_tpl_list 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyTemplateGetTemplateListV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyTemplateGetTemplateListV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

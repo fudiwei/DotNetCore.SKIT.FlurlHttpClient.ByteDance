@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/settle/get_apply_status 接口的响应。</para>
     /// </summary>
-    public class OpenApiSettleGetApplyStatusV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiSettleGetApplyStatusV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

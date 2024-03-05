@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/bind_aweme_user 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityBindAwemeUserV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityBindAwemeUserV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置绑定类型。

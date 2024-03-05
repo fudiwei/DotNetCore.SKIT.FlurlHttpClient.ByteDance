@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/poi/base/query/amap 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOIBaseQueryAMapV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiThirdPartyPOIBaseQueryAMapV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置高德 POI ID。

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/apply_scope_quota 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityApplyScopeQuotaV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityApplyScopeQuotaV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置权限 Key。

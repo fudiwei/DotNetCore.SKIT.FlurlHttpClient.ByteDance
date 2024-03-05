@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /gift/top_gift 接口的响应。</para>
     /// </summary>
-    public class WebcastGiftTopGiftResponse : ByteDanceMicroAppResponse
+    public class WebcastGiftTopGiftResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

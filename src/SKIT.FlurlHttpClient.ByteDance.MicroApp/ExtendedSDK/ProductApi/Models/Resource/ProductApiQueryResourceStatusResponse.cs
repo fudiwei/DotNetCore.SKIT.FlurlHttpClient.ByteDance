@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /query_resource_status 接口的响应。</para>
     /// </summary>
-    public class ProductApiQueryResourceStatusResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiQueryResourceStatusResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/poi/supplier/query 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOISupplierQueryV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyPOISupplierQueryV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

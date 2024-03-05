@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/convert_video_id/open_item_id_to_encrypt_id 接口的请求。</para>
     /// </summary>
-    public class AppsConvertOpenItemIdToEncryptIdRequest : ByteDanceMicroAppRequest
+    public class AppsConvertOpenItemIdToEncryptIdRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置访问密钥。

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_aweme_user_bind_list 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryAwemeUserBindListV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAwemeUserBindListV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

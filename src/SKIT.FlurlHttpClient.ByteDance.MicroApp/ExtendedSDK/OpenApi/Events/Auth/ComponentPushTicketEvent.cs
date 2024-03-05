@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentticket ]]>
     /// </para>
     /// </summary>
-    public class ComponentPushTicketEvent : ByteDanceMicroAppOpenApiEvent
+    public class ComponentPushTicketEvent : DouyinMicroAppOpenApiEvent
     {
         /// <summary>
         /// 获取或设置消息发送方账号。

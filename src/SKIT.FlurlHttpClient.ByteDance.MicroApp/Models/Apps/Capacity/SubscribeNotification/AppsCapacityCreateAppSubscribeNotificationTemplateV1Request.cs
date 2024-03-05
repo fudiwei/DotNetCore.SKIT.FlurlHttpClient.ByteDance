@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/create_subscribe_notification_tpl 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityCreateAppSubscribeNotificationTemplateV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityCreateAppSubscribeNotificationTemplateV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置订阅消息类型。

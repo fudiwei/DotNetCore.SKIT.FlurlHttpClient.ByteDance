@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/base-info/modify-name ]]>
     /// </para>
     /// </summary>
-    public class AppNameResetEvent : ByteDanceMicroAppOpenApiEvent
+    public class AppNameResetEvent : DouyinMicroAppOpenApiEvent
     {
         /// <summary>
         /// 获取或设置名称重置通知。

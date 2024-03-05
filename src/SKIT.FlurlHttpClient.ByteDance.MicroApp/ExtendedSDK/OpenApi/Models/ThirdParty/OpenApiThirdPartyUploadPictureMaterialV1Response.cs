@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/tp/upload_pic_material 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyUploadPictureMaterialV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyUploadPictureMaterialV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

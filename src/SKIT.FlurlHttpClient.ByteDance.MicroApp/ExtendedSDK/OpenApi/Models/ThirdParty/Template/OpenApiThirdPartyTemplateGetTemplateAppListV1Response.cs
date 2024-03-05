@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/tp/template/get_tpl_app_list 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyTemplateGetTemplateAppListV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyTemplateGetTemplateAppListV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /modify_no_audit 接口的响应。</para>
     /// </summary>
-    public class ProductApiModifyNoAuditResponse : ByteDanceMicroAppProductApiResponse
+    public class ProductApiModifyNoAuditResponse : DouyinMicroAppProductApiResponse
     {
         public static class Types
         {

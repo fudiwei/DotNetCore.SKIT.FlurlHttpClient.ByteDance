@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/app/quality_rating 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppAppQualityRatingV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppAppQualityRatingV1Request : DouyinMicroAppOpenApiRequest
     {
     }
 }

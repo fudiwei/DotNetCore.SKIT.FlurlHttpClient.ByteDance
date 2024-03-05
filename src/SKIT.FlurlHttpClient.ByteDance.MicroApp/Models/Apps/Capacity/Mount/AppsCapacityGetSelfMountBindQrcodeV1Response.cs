@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/get_self_mount_bind_qrcode 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityGetSelfMountBindQrcodeV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityGetSelfMountBindQrcodeV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/upload_material 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityUploadMaterialV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityUploadMaterialV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

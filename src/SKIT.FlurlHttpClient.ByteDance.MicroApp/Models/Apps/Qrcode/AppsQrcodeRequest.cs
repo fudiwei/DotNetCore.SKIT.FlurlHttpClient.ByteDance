@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/qrcode 接口的请求。</para>
     /// </summary>
-    public class AppsQrcodeRequest : ByteDanceMicroAppRequest
+    public class AppsQrcodeRequest : DouyinMicroAppRequest
     {
         public static class Types
         {

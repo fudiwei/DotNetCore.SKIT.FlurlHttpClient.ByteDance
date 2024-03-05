@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_aweme_video_keyword_list 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryAwemeVideoKeywordListV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAwemeVideoKeywordListV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

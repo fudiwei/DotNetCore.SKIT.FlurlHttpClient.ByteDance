@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/tp/template/del_tpl 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyTemplateDeleteTemplateV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiThirdPartyTemplateDeleteTemplateV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置模板 ID。

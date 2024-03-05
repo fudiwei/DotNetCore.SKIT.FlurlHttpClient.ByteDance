@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/set_user_storage 接口的响应。</para>
     /// </summary>
-    public class AppsSetUserStorageResponse : ByteDanceMicroAppResponse
+    public class AppsSetUserStorageResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// 获取或设置错误代号。

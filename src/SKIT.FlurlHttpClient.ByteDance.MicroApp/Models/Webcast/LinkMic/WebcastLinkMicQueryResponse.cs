@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /linkmic/query 接口的响应。</para>
     /// </summary>
-    public class WebcastLinkMicQueryResponse : ByteDanceMicroAppResponse
+    public class WebcastLinkMicQueryResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

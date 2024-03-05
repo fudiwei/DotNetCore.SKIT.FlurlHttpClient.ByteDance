@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/update_ad_placement_status 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityUpdateAdPlacementStatusV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityUpdateAdPlacementStatusV1Response : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

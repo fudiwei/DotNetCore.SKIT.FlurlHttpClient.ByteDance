@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /activate_merchantcode 接口的请求。</para>
     /// </summary>
-    public class AuthEntityActivateMerchantCodeRequest : ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityActivateMerchantCodeRequest : DouyinMicroAppRoleApiRequest
     {
         /// <summary>
         /// 获取或设置证件号码。

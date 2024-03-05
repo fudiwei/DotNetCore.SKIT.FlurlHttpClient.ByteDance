@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/query_shop_material 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationQueryShopMaterialV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppOperationQueryShopMaterialV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置接入方店铺 ID。

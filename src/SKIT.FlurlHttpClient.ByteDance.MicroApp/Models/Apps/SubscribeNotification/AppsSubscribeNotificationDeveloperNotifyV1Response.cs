@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/subscribe_notification/developer/v1/notify 接口的响应。</para>
     /// </summary>
-    public class AppsSubscribeNotificationDeveloperNotifyV1Response : ByteDanceMicroAppResponse
+    public class AppsSubscribeNotificationDeveloperNotifyV1Response : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

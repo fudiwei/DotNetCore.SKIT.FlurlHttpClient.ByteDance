@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/get_app_merchant 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSGetAppMerchantResponse : ByteDanceMicroAppResponse
+    public class AppsECPaySaaSGetAppMerchantResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

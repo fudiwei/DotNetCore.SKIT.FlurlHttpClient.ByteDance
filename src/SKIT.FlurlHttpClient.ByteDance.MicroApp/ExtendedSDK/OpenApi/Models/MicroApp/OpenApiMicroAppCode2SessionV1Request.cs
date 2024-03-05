@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/code2session 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppCode2SessionV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppCode2SessionV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置登录 Code。

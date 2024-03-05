@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/add_categories 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppAppAddCategoriesV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppAppAddCategoriesV1Request : DouyinMicroAppOpenApiRequest
     {
         public static class Types
         {

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/taskbox/query_task_video_data 接口的响应。</para>
     /// </summary>
-    public class AppsTaskBoxQueryTaskVideoDataResponse : ByteDanceMicroAppResponse
+    public class AppsTaskBoxQueryTaskVideoDataResponse : DouyinMicroAppResponse
     {
         public static class Types
         {

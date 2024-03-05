@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/phone-number-application ]]>
     /// </para>
     /// </summary>
-    public class ApplyPhoneNumberCapabilityEvent : ByteDanceMicroAppOpenApiEvent
+    public class ApplyPhoneNumberCapabilityEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

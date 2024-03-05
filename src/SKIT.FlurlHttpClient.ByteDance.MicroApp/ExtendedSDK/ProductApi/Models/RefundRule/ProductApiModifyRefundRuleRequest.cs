@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
     /// <summary>
     /// <para>表示 [POST] /modify_refund_rule 接口的请求。</para>
     /// </summary>
-    public class ProductApiModifyRefundRuleRequest : ByteDanceMicroAppProductApiRequest
+    public class ProductApiModifyRefundRuleRequest : DouyinMicroAppProductApiRequest
     {
         /// <summary>
         /// 获取或设置商品 ID 以及对应的规则 ID 字典。

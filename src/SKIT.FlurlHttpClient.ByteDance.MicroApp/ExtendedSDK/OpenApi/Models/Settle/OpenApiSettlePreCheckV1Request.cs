@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/settle/pre_check 接口的请求。</para>
     /// </summary>
-    public class OpenApiSettlePreCheckV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiSettlePreCheckV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置主体类型。

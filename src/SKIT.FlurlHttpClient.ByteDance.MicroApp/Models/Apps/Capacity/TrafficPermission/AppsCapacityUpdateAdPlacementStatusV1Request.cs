@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/update_ad_placement_status 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityUpdateAdPlacementStatusV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityUpdateAdPlacementStatusV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置广告位 ID。

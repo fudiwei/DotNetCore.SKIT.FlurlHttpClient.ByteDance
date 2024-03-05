@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/live-application ]]>
     /// </para>
     /// </summary>
-    public class ApplyLiveCapabilityEvent : ByteDanceMicroAppOpenApiEvent
+    public class ApplyLiveCapabilityEvent : DouyinMicroAppOpenApiEvent
     {
         public static class Types
         {

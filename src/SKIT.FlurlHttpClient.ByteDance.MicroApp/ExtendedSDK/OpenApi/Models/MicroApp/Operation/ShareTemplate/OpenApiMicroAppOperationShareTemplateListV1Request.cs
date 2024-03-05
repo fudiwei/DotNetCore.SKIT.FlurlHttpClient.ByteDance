@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/share_tpl_list 接口的请求。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationShareTemplateListV1Request : ByteDanceMicroAppOpenApiRequest
+    public class OpenApiMicroAppOperationShareTemplateListV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置分页页数。

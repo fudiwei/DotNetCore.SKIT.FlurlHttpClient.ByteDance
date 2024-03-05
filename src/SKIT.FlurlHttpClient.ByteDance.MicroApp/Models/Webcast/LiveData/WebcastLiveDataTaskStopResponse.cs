@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /live_data/task/stop 接口的响应。</para>
     /// </summary>
-    public class WebcastLiveDataTaskStopResponse : ByteDanceMicroAppResponse
+    public class WebcastLiveDataTaskStopResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

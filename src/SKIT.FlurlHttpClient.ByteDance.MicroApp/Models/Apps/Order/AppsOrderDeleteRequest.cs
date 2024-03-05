@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/order/delete 接口的请求。</para>
     /// </summary>
-    public class AppsOrderDeleteRequest : ByteDanceMicroAppRequest
+    public class AppsOrderDeleteRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// <inheritdoc/>

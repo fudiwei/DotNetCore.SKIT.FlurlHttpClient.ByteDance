@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /add_role 接口的请求。</para>
     /// </summary>
-    public class AuthEntityAddRoleRequest : ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityAddRoleRequest : DouyinMicroAppRoleApiRequest
     {
         public static class Types
         {

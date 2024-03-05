@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/upload_material 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppUploadMaterialV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppUploadMaterialV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

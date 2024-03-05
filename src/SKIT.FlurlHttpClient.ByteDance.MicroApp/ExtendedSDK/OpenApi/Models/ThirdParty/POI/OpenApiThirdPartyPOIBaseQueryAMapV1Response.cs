@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [GET] /v1/tp/poi/base/query/amap 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOIBaseQueryAMapV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyPOIBaseQueryAMapV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {

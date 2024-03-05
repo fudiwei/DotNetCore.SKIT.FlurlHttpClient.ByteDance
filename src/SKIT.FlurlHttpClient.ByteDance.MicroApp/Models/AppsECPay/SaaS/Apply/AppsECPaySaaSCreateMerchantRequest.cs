@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/create_merchant 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSCreateMerchantRequest : ByteDanceMicroAppRequest
+    public class AppsECPaySaaSCreateMerchantRequest : DouyinMicroAppRequest
     {
         public static class Types
         {

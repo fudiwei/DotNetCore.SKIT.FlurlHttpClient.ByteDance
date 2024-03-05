@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/saas/merchant_withdraw 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSMerchantWithdrawRequest : ByteDanceMicroAppRequest
+    public class AppsECPaySaaSMerchantWithdrawRequest : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。

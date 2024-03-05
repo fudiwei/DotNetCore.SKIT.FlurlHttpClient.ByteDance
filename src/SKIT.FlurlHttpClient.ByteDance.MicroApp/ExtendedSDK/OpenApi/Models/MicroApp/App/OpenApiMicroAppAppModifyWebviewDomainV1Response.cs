@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/modify_webview_domain 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppModifyWebviewDomainV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppModifyWebviewDomainV1Response : DouyinMicroAppOpenApiResponse
     {
         /// <summary>
         /// 获取或设置 Webview 域名列表。

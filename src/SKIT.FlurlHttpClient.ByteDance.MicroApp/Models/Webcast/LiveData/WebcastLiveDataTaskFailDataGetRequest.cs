@@ -3,10 +3,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /live_data/task/fail_data/get 接口的请求。</para>
     /// </summary>
-    public class WebcastLiveDataTaskFailDataGetRequest : ByteDanceMicroAppRequest
+    public class WebcastLiveDataTaskFailDataGetRequest : DouyinMicroAppRequest
     {
         /// <summary>
-        /// 获取或设置小玩法的 AppId。如果不指定将使用构造 <see cref="ByteDanceMicroAppClient"/> 时的 <see cref="ByteDanceMicroAppClientOptions.AppId"/> 参数。
+        /// 获取或设置小玩法的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

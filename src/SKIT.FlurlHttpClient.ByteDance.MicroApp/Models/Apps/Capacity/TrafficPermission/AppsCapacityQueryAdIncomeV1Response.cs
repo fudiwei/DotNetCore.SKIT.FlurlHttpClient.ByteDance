@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /apps/v1/capacity/query_ad_income 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryAdIncomeV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityQueryAdIncomeV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {

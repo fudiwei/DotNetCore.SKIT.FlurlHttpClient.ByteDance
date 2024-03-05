@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
     /// <summary>
     /// <para>表示 [POST] /bind_role 接口的请求。</para>
     /// </summary>
-    public class AuthEntityBindRoleRequest : ByteDanceMicroAppRoleApiRequest
+    public class AuthEntityBindRoleRequest : DouyinMicroAppRoleApiRequest
     {
         /// <summary>
         /// 获取或设置商户实体 ID。

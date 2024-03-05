@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/v2/token 接口的响应。</para>
     /// </summary>
-    public class AppsTokenV2Response : ByteDanceMicroAppResponse
+    public class AppsTokenV2Response : DouyinMicroAppResponse
     {
         public static class Types
         {

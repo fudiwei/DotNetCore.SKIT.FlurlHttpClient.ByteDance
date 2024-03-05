@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/tp/download/webview_file 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyDownloadWebviewFileV1Response : ByteDanceMicroAppOpenApiResponse
+    public class OpenApiThirdPartyDownloadWebviewFileV1Response : DouyinMicroAppOpenApiResponse
     {
         public override bool IsSuccessful()
         {

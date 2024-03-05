@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 {
                     var options = new TypeDeclarationAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Models",
                         SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp",
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 
                     var options = new SourceFileAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Models",
                         SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Events",
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 {
                     var options = new TypeDeclarationAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models",
                         SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi",
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 
                     var options = new SourceFileAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppOpenApiClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppOpenApiClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models",
                         SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events",
@@ -121,7 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 {
                     var options = new TypeDeclarationAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppProductApiClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppProductApiClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models",
                         SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi",
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 
                     var options = new SourceFileAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppProductApiClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppProductApiClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models",
                         SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Events",
@@ -171,7 +171,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 {
                     var options = new TypeDeclarationAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppRoleApiClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppRoleApiClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models",
                         SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi",
@@ -189,7 +189,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 
                     var options = new SourceFileAnalyzerOptions()
                     {
-                        SdkAssembly = Assembly.GetAssembly(typeof(ByteDanceMicroAppRoleApiClient))!,
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppRoleApiClient))!,
                         SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models",
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models",
                         ProjectSourceRootDirectory = Path.Combine(projdir, "./src/SKIT.FlurlHttpClient.ByteDance.MicroApp/"),

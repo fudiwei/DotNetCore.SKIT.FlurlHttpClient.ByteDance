@@ -3,7 +3,7 @@
     /// <summary>
     /// <para>表示 [POST] /apps/upload_live_image 接口的响应。</para>
     /// </summary>
-    public class AppsUploadLiveImageResponse : ByteDanceMicroAppResponse
+    public class AppsUploadLiveImageResponse : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

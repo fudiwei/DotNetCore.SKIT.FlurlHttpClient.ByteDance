@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/open_traffic_permission 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityOpenTrafficPermissionV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityOpenTrafficPermissionV1Response : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiAddResponse> ExecuteProductApiAddAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiAddRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiAddResponse> ExecuteProductApiAddAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiAddRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiModifyResponse> ExecuteProductApiModifyAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiModifyRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiModifyResponse> ExecuteProductApiModifyAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiModifyRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiModifyStatusResponse> ExecuteProductApiModifyStatusAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiModifyStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiModifyStatusResponse> ExecuteProductApiModifyStatusAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiModifyStatusRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiModifyNoAuditResponse> ExecuteProductApiModifyNoAuditAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiModifyNoAuditRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiModifyNoAuditResponse> ExecuteProductApiModifyNoAuditAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiModifyNoAuditRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryResponse> ExecuteProductApiQueryAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryResponse> ExecuteProductApiQueryAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -149,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryReviewResponse> ExecuteProductApiQueryReviewAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryReviewRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryReviewResponse> ExecuteProductApiQueryReviewAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryReviewRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -171,7 +171,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryTemplateInfoResponse> ExecuteProductApiQueryTemplateInfoAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryTemplateInfoRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryTemplateInfoResponse> ExecuteProductApiQueryTemplateInfoAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryTemplateInfoRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -193,7 +193,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryClassInfoResponse> ExecuteProductApiQueryClassInfoAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryClassInfoRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryClassInfoResponse> ExecuteProductApiQueryClassInfoAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryClassInfoRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -216,7 +216,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiUploadResourceResponse> ExecuteProductApiUploadResourceAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiUploadResourceRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiUploadResourceResponse> ExecuteProductApiUploadResourceAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiUploadResourceRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -238,7 +238,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryResourceStatusResponse> ExecuteProductApiQueryResourceStatusAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryResourceStatusRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryResourceStatusResponse> ExecuteProductApiQueryResourceStatusAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryResourceStatusRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -262,7 +262,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiAddQualificationResponse> ExecuteProductApiAddQualificationAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiAddQualificationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiAddQualificationResponse> ExecuteProductApiAddQualificationAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiAddQualificationRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiModifyQualificationResponse> ExecuteProductApiModifyQualificationAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiModifyQualificationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiModifyQualificationResponse> ExecuteProductApiModifyQualificationAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiModifyQualificationRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -308,7 +308,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryQualificationResponse> ExecuteProductApiQueryQualificationAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryQualificationRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryQualificationResponse> ExecuteProductApiQueryQualificationAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryQualificationRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -332,7 +332,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiQueryRefundRuleMetaResponse> ExecuteProductApiQueryRefundRuleMetaAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiQueryRefundRuleMetaRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiQueryRefundRuleMetaResponse> ExecuteProductApiQueryRefundRuleMetaAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiQueryRefundRuleMetaRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -355,7 +355,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiModifyRefundRuleResponse> ExecuteProductApiModifyRefundRuleAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiModifyRefundRuleRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiModifyRefundRuleResponse> ExecuteProductApiModifyRefundRuleAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiModifyRefundRuleRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -380,7 +380,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductApiSyncCallbackUrlResponse> ExecuteProductApiSyncCallbackUrlAsync(this ByteDanceMicroAppProductApiClient client, Models.ProductApiSyncCallbackUrlRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductApiSyncCallbackUrlResponse> ExecuteProductApiSyncCallbackUrlAsync(this DouyinMicroAppProductApiClient client, Models.ProductApiSyncCallbackUrlRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/bind_self_mount_user 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityBindSelfMountUserV1Request : ByteDanceMicroAppRequest
+    public class AppsCapacityBindSelfMountUserV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置挂载能力标识。

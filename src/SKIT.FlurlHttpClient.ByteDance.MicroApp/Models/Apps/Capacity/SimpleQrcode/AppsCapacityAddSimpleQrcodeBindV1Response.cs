@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /apps/v1/capacity/add_simple_qr_bind 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityAddSimpleQrcodeBindV1Response : ByteDanceMicroAppResponse
+    public class AppsCapacityAddSimpleQrcodeBindV1Response : DouyinMicroAppResponse
     {
         /// <summary>
         /// <inheritdoc/>

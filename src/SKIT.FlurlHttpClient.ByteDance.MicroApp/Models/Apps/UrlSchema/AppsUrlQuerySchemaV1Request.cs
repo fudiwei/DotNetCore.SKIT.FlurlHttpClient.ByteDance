@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/url_link/query_info 接口的请求。</para>
+    /// <para>表示 [POST] /apps/v1/url/query_schema 接口的请求。</para>
     /// </summary>
-    public class AppsUrlLinkQueryInfoV1Request : DouyinMicroAppRequest
+    public class AppsUrlQuerySchemaV1Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置小程序的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
@@ -15,8 +15,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// <summary>
         /// 获取或设置链接。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("url_link")]
-        [System.Text.Json.Serialization.JsonPropertyName("url_link")]
-        public string UrlLink { get; set; } = string.Empty;
+        [Newtonsoft.Json.JsonProperty("schema")]
+        [System.Text.Json.Serialization.JsonPropertyName("schema")]
+        public string UrlSchema { get; set; } = string.Empty;
     }
 }

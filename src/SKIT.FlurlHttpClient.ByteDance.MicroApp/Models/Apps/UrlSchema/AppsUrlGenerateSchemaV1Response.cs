@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/url_link/generate 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/url/generate_schema 接口的响应。</para>
     /// </summary>
-    public class AppsUrlLinkGenerateV1Response : DouyinMicroAppResponse
+    public class AppsUrlGenerateSchemaV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {
@@ -12,9 +12,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// <summary>
                 /// 获取或设置链接。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("url_link")]
-                [System.Text.Json.Serialization.JsonPropertyName("url_link")]
-                public string UrlLink { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("schema")]
+                [System.Text.Json.Serialization.JsonPropertyName("schema")]
+                public string UrlSchema { get; set; } = default!;
             }
         }
 

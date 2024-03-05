@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
@@ -21,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && RawBytes?.Length > 0;
+            return base.IsSuccessful() && GetRawBytes().Any();
         }
     }
 }

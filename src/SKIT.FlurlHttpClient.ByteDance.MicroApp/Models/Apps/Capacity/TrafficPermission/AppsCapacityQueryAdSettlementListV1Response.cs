@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tax_rate")]
                         [System.Text.Json.Serialization.JsonPropertyName("tax_rate")]
-                        public double TaxRate { get; set; }
+                        public decimal TaxRate { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算金额（单位：分）。

@@ -33,7 +33,7 @@
                         [Newtonsoft.Json.JsonProperty("prob")]
                         [System.Text.Json.Serialization.JsonPropertyName("prob")]
                         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                        public double Probability { get; set; }
+                        public decimal Probability { get; set; }
 
                         /// <summary>
                         /// 获取或设置置信度结果。

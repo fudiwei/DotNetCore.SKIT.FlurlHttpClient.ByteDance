@@ -20,9 +20,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// 获取或设置是否可以开通。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("can_open")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalBooleanConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("can_open")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalBooleanConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
                 public bool CanOpen { get; set; }
             }
         }

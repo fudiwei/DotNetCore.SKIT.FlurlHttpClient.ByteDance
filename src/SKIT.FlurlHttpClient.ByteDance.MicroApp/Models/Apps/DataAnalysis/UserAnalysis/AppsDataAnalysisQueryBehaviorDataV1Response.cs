@@ -67,21 +67,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("per_user_open_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("per_user_open_time")]
-                        public double OpenTimesPerUser { get; set; }
+                        public decimal OpenTimesPerUser { get; set; }
 
                         /// <summary>
                         /// 获取或设置人均停留时长（单位：毫秒）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("per_user_stay_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("per_user_stay_time")]
-                        public double StayTimePerUser { get; set; }
+                        public decimal StayTimePerUser { get; set; }
 
                         /// <summary>
                         /// 获取或设置次均停留时长（单位：毫秒）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avg_stay_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("avg_stay_time")]
-                        public double AverageStayTime { get; set; }
+                        public decimal AverageStayTime { get; set; }
                     }
                 }
 

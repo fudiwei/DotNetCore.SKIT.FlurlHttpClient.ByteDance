@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     /// <summary>
-    /// 字节小程序 API 出错时引发的异常。
+    /// 当调用字节小程序 API 出错时引发的异常。
     /// </summary>
-    public class ByteDanceMicroAppException : CommonExceptionBase
+    public class ByteDanceMicroAppException : CommonException
     {
         /// <inheritdoc/>
         public ByteDanceMicroAppException()

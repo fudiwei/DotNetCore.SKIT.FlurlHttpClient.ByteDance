@@ -19,55 +19,51 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// 获取当前客户端使用的字节小程序 API 接入点。
         /// </summary>
-        protected internal string Endpoint { get; }
+        protected internal string EndpointForDefault { get; }
 
         /// <summary>
         /// 获取当前客户端使用的字节小程序直播小玩法 API 接入点。
         /// </summary>
-        protected internal string EndpointForWebcastAPI { get; }
+        protected internal string EndpointForWebcast { get; }
 
         /// <summary>
         /// 用指定的配置项初始化 <see cref="ByteDanceMicroAppClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
         public ByteDanceMicroAppClient(ByteDanceMicroAppClientOptions options)
-            : base()
+            : this(options, null)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
-
-            Credentials = new Settings.Credentials(options);
-            Endpoint = options.Endpoint;
-            EndpointForWebcastAPI = options.EndpointForWebcastAPI;
-
-            FlurlClient.BaseUrl = options.Endpoint ?? ByteDanceMicroAppEndpoints.API_MINIAPP;
-            FlurlClient.WithTimeout(TimeSpan.FromMilliseconds(options.Timeout));
         }
 
         /// <summary>
-        /// 用指定的字节小程序 AppId、字节小程序 AppSecret 初始化 <see cref="ByteDanceMicroAppClient"/> 类的新实例。
+        /// 
         /// </summary>
-        /// <param name="appId">字节小程序应用 AppId。</param>
-        /// <param name="appSecret">字节小程序 AppSecret。</param>
-        public ByteDanceMicroAppClient(string appId, string appSecret)
-            : this(new ByteDanceMicroAppClientOptions() { AppId = appId, AppSecret = appSecret })
+        /// <param name="options"></param>
+        /// <param name="httpClient"></param>
+        /// <param name="disposeClient"></param>
+        internal protected ByteDanceMicroAppClient(ByteDanceMicroAppClientOptions options, HttpClient? httpClient, bool disposeClient = true)
+            : base(httpClient, disposeClient)
         {
+            if (options is null) throw new ArgumentNullException(nameof(options));
+
+            Credentials = new Settings.Credentials(options);
+            EndpointForDefault = options.Endpoint;
+            EndpointForWebcast = options.EndpointForWebcastAPI;
+
+            FlurlClient.BaseUrl = options.Endpoint ?? ByteDanceMicroAppEndpoints.API_MINIAPP;
+            FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
         }
 
         /// <summary>
         /// 使用当前客户端生成一个新的 <see cref="IFlurlRequest"/> 对象。
         /// </summary>
         /// <param name="request"></param>
-        /// <param name="method"></param>
+        /// <param name="httpMethod"></param>
         /// <param name="urlSegments"></param>
         /// <returns></returns>
-        public IFlurlRequest CreateRequest(ByteDanceMicroAppRequest request, HttpMethod method, params object[] urlSegments)
+        public IFlurlRequest CreateFlurlRequest(ByteDanceMicroAppRequest request, HttpMethod httpMethod, params object[] urlSegments)
         {
-            IFlurlRequest flurlRequest = FlurlClient.Request(urlSegments).WithVerb(method);
-
-            if (request.Timeout != null)
-            {
-                flurlRequest.WithTimeout(TimeSpan.FromMilliseconds(request.Timeout.Value));
-            }
+            IFlurlRequest flurlRequest = base.CreateFlurlRequest(request, httpMethod, urlSegments);
 
             return flurlRequest;
         }
@@ -80,24 +76,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="httpContent"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<T> SendRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
+        public async Task<T> SendFlurlRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
             where T : ByteDanceMicroAppResponse, new()
         {
-            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
+            if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 
-            try
-            {
-                using IFlurlResponse flurlResponse = await base.SendRequestAsync(flurlRequest, httpContent, cancellationToken);
-                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
-            }
-            catch (FlurlHttpTimeoutException ex)
-            {
-                throw new Exceptions.ByteDanceMicroAppRequestTimeoutException(ex.Message, ex);
-            }
-            catch (FlurlHttpException ex)
-            {
-                throw new ByteDanceMicroAppException(ex.Message, ex);
-            }
+            using IFlurlResponse flurlResponse = await base.SendFlurlRequestAsync(flurlRequest, httpContent, cancellationToken).ConfigureAwait(false);
+            return await WrapFlurlResponseAsJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -108,30 +93,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="data"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<T> SendRequestWithJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
+        public async Task<T> SendFlurlRequestAsJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
             where T : ByteDanceMicroAppResponse, new()
         {
-            if (flurlRequest == null) throw new ArgumentNullException(nameof(flurlRequest));
+            if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 
-            try
-            {
-                bool isSimpleRequest = data == null ||
-                    flurlRequest.Verb == HttpMethod.Get ||
-                    flurlRequest.Verb == HttpMethod.Head ||
-                    flurlRequest.Verb == HttpMethod.Options;
-                using IFlurlResponse flurlResponse = isSimpleRequest ?
-                    await base.SendRequestAsync(flurlRequest, null, cancellationToken) :
-                    await base.SendRequestWithJsonAsync(flurlRequest, data, cancellationToken);
-                return await WrapResponseWithJsonAsync<T>(flurlResponse, cancellationToken);
-            }
-            catch (FlurlHttpTimeoutException ex)
-            {
-                throw new Exceptions.ByteDanceMicroAppRequestTimeoutException(ex.Message, ex);
-            }
-            catch (FlurlHttpException ex)
-            {
-                throw new ByteDanceMicroAppException(ex.Message, ex);
-            }
+            bool isSimpleRequest = data is null ||
+                flurlRequest.Verb == HttpMethod.Get ||
+                flurlRequest.Verb == HttpMethod.Head ||
+                flurlRequest.Verb == HttpMethod.Options;
+            using IFlurlResponse flurlResponse = isSimpleRequest ?
+                await base.SendFlurlRequestAsync(flurlRequest, null, cancellationToken) :
+                await base.SendFlurlRequestAsJsonAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);
+            return await WrapFlurlResponseAsJsonAsync<T>(flurlResponse, cancellationToken).ConfigureAwait(false);
         }
     }
 }

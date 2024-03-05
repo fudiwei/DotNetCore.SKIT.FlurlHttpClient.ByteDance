@@ -55,9 +55,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// 获取或设置是否可以申请。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("can_apply")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalBooleanConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("can_apply")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalBooleanConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
                                 public bool CanApply { get; set; }
 
                                 /// <summary>

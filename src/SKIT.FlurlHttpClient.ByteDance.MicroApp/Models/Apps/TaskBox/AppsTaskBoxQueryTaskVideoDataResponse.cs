@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expected_profit")]
                 [System.Text.Json.Serialization.JsonPropertyName("expected_profit")]
-                public double ExpectedProfit { get; set; }
+                public decimal ExpectedProfit { get; set; }
             }
         }
 

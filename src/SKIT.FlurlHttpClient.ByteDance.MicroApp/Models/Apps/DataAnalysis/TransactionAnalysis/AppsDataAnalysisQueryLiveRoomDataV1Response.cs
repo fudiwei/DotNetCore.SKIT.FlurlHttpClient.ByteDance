@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("per_capita_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("per_capita_time")]
-                        public double AudienceTimePerUser { get; set; }
+                        public decimal AudienceTimePerUser { get; set; }
 
                         /// <summary>
                         /// 获取或设置新增粉丝数。

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -14,19 +14,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, ref TRequest request, string method, string reqLoc)
             where TRequest : Models.AppsGameWalletRequestBase
         {
-            if (client == null) throw new ArgumentNullException(nameof(client));
-            if (request == null) throw new ArgumentNullException(nameof(request));
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
 
             /*
              * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/payment-signature-generation-algorithm
              */
 
-            if (request.AppId == null)
+            if (request.AppId is null)
             {
                 request.AppId = client.Credentials.AppId;
             }
 
-            if (request.Timestamp == null)
+            if (request.Timestamp is null)
             {
                 request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
             }
@@ -46,12 +46,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             string plainText = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))
                 + $"&org_loc={reqLoc}"
                 + $"&method={method.ToUpper()}";
-            return Utilities.HMACUtility.HashWithSHA256(client.Credentials.ECPaySalt ?? string.Empty, plainText).ToLower();
+            return Utilities.HMACUtility.HashWithSHA256(client.Credentials.ECPaySalt ?? string.Empty, plainText).Value!.ToLower();
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/get_balance 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/acquire-mini-game-coin-balance </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/acquire-mini-game-coin-balance ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -62,18 +65,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/get_balance");
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "game", "wallet", "get_balance");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "get_balance");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsGameWalletGetBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletGetBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/game_pay 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-deduction-interface </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-deduction-interface ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -84,18 +90,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/game_pay");
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "game", "wallet", "game_pay");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "game_pay");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsGameWalletGamePayResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletGamePayResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/game/wallet/add_coin 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-gift-interface </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/mini-game-coin-gift-interface ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -106,13 +115,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(ref request, HttpMethod.Post.Method, "/api/apps/game/wallet/add_coin");
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "game", "wallet", "add_coin");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "add_coin");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsGameWalletAddCoinResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletAddCoinResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

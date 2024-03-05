@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rate")]
                                 [System.Text.Json.Serialization.JsonPropertyName("rate")]
-                                public double Rate { get; set; }
+                                public decimal Rate { get; set; }
                             }
                         }
 

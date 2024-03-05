@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("page_avg_stay_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("page_avg_stay_time")]
-                        public double AverageStayTime { get; set; }
+                        public decimal AverageStayTime { get; set; }
 
                         /// <summary>
                         /// 获取或设置分享次数。

@@ -1,4 +1,6 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+using System.Linq;
+
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /apps/qrcode 接口的响应。</para>
@@ -7,7 +9,7 @@
     {
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && RawBytes?.Length > 0;
+            return base.IsSuccessful() && GetRawBytes().Any();
         }
     }
 }

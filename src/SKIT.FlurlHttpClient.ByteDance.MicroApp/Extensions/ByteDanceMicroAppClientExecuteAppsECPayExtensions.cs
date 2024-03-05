@@ -14,8 +14,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         private static string GenerateRequestSignature<TRequest>(this ByteDanceMicroAppClient client, TRequest request, Dictionary<string, string?>? extraParamMap = null)
             where TRequest : ByteDanceMicroAppRequest
         {
-            if (client == null) throw new ArgumentNullException(nameof(client));
-            if (request == null) throw new ArgumentNullException(nameof(request));
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
 
             /*
              * REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/TE/#%E4%B8%89%E3%80%81%E7%AD%BE%E5%90%8D-demo
@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IList<string> tempList = new List<string>() { client.Credentials.ECPaySalt! };
             IDictionary<string, string?> paramMap = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string?>>(json)!;
 
-            if (extraParamMap != null)
+            if (extraParamMap is not null)
             {
                 foreach (KeyValuePair<string, string?> item in extraParamMap)
                 {
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                     continue;
                 }
 
-                if (value != null && value.StartsWith("\"") && value.EndsWith("\""))
+                if (value is not null && value.StartsWith("\"") && value.EndsWith("\""))
                 {
                     value = value.Substring(1, value.Length - 1).Trim();
                 }
@@ -63,14 +63,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             Array.Sort(tempArray, StringComparer.Ordinal);
 
             string plainText = string.Join("&", tempArray);
-            return Utilities.MD5Utility.Hash(plainText).ToLower();
+            return Utilities.MD5Utility.Hash(plainText).Value!.ToLower();
         }
 
         #region SaaS
         #region SaaS - Apply
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/create_merchant 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/create </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/create ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -82,17 +85,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "create_merchant");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "create_merchant");
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSCreateMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSCreateMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/image_upload 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/image-upload </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/image-upload ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -104,14 +110,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "image_upload");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "image_upload");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSImageUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSImageUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_status 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/apply/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -122,21 +131,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_status");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_status");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryMerchantStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryMerchantStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region SaaS - PageLinks
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_merchant 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/merchant </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/merchant ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/merchant ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -147,19 +159,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ComponentAppId == null)
+            if (request.ComponentAppId is null)
                 request.ComponentAppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_merchant");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_merchant");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSAddMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAddMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/get_app_merchant 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-merchant </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/app-merchant ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-merchant ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -170,22 +185,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ComponentAppId == null)
+            if (request.ComponentAppId is null)
                 request.ComponentAppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "get_app_merchant");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "get_app_merchant");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSGetAppMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSGetAppMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/app_add_sub_merchant 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-sub-merchant </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/app-sub-merchant ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -196,19 +214,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "app_add_sub_merchant");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "app_add_sub_merchant");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSAppAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAppAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/add_sub_merchant 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/sub-merchant </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/apply/sub-merchant ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/page-links/withdraw/sub-merchant ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -219,23 +240,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ComponentAppId == null)
+            if (request.ComponentAppId is null)
                 request.ComponentAppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_sub_merchant");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_sub_merchant");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region SaaS - Withdraw
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_merchant_balance 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query-balance </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query-balance ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -246,18 +270,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_balance");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_balance");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryMerchantBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryMerchantBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/merchant_withdraw 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/merchant-withdraw </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/merchant-withdraw ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -268,18 +295,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "merchant_withdraw");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "merchant_withdraw");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSMerchantWithdrawResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSMerchantWithdrawResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/saas/query_withdraw_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -290,13 +320,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_withdraw_order");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_withdraw_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySaaSQueryWithdrawOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryWithdrawOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -304,7 +334,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #region Order
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/pay-list/pay </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/pay-list/pay ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -315,21 +348,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_order");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/pay-list/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/pay-list/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -340,21 +376,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_order");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_refund 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/refund-list/refund </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/refund-list/refund ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -365,21 +404,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_refund");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_refund");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_refund 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/refund-list/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/refund-list/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -390,21 +432,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_refund");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_refund");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/settle 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/settlement </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/settlement ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -415,21 +460,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "settle");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "settle");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPaySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_settle 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -440,21 +488,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_settle");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_settle");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayQuerySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQuerySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/create_return 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/return-settle/ReturnSettle </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/return-settle/ReturnSettle ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -465,21 +516,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_return");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_return");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayCreateReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_return 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/return-settle/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/return-settle/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -490,21 +544,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_return");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_return");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /apps/ecpay/v1/query_platform_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/auto-settle/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/settlements/auto-settle/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -515,23 +572,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
                 request.Signature = client.GenerateRequestSignature(request);
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_platform_order");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_platform_order");
 
-            return await client.SendRequestWithJsonAsync<Models.AppsECPayQueryPlatformOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryPlatformOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         #endregion
 
         /// <summary>
         /// <para>异步调用 [GET] /apps/bills 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/bills/bill </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/bills/bill ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -542,12 +602,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
             {
-                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
+                request.Signature = client.GenerateRequestSignature(request, new ()
                 {
                     { "merchant_id" , request.MerchantId },
                     { "bill_date" , request.DateString },
@@ -556,22 +616,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             }
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "bills")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "bills")
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
                 .SetQueryParam("bill_type", request.BillType)
                 .SetQueryParam("sign", request.Signature);
 
-            if (request.ComponentAppId != null)
+            if (request.ComponentAppId is not null)
                 flurlReq.SetQueryParam("thirdparty_id", request.ComponentAppId);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /apps/fund/bills 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/bills/fundbill </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/bills/fundbill ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -582,12 +645,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId == null)
+            if (request.AppId is null)
                 request.AppId = client.Credentials.AppId;
 
-            if (request.Signature == null)
+            if (request.Signature is null)
             {
-                request.Signature = client.GenerateRequestSignature(request, new Dictionary<string, string>()
+                request.Signature = client.GenerateRequestSignature(request, new()
                 {
                     { "merchant_id" , request.MerchantId },
                     { "bill_date" , request.DateString },
@@ -598,7 +661,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             }
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "apps", "fund", "bills")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "fund", "bills")
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
@@ -607,10 +670,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("trade_type", request.TradeType)
                 .SetQueryParam("sign", request.Signature);
 
-            if (request.ComponentAppId != null)
+            if (request.ComponentAppId is not null)
                 flurlReq.SetQueryParam("thirdparty_id", request.ComponentAppId);
 
-            return await client.SendRequestWithJsonAsync<Models.AppsFundBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsFundBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

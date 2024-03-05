@@ -2,7 +2,8 @@ using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
-    using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi;
+    using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi;
+    using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events;
 
     public class TestCase_EventVerificationTests
     {
@@ -49,8 +50,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                     PushToken = "QDG6eK"
                 };
                 var client = new ByteDanceMicroAppOpenApiClient(options);
-                var eventModel1 = client.DeserializeEventFromJson<SDK.OpenApi.Events.ComponentPushTicketEvent>(callbackRawJson);
-                var eventModel2 = client.DeserializeEventFromJson<SDK.OpenApi.Events.ComponentPushTicketEvent>(callbackSecretJson);
+                var eventModel1 = client.DeserializeEventFromJson<ComponentPushTicketEvent>(callbackRawJson);
+                var eventModel2 = client.DeserializeEventFromJson<ComponentPushTicketEvent>(callbackSecretJson);
 
                 Assert.True(client.VerifyEventSignatureFromJson(callbackSecretJson));
                 Assert.Equal("ByteDanceMicroApp", eventModel1.FromUserName);
@@ -109,8 +110,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                     PushToken = "QDG6eK"
                 };
                 var client = new ByteDanceMicroAppOpenApiClient(options);
-                var eventModel1 = client.DeserializeEventFromXml<SDK.OpenApi.Events.ComponentPushTicketEvent>(callbackRawXml);
-                var eventModel2 = client.DeserializeEventFromXml<SDK.OpenApi.Events.ComponentPushTicketEvent>(callbackSecretXml);
+                var eventModel1 = client.DeserializeEventFromXml<ComponentPushTicketEvent>(callbackRawXml);
+                var eventModel2 = client.DeserializeEventFromXml<ComponentPushTicketEvent>(callbackSecretXml);
                 
                 Assert.True(client.VerifyEventSignatureFromXml(callbackSecretXml));
                 Assert.Equal("ByteDanceMicroApp", eventModel1.FromUserName);

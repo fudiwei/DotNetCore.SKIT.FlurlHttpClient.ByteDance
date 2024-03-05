@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("scene_avg_stay_time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("scene_avg_stay_time")]
-                                public double AverageStayTime { get; set; }
+                                public decimal AverageStayTime { get; set; }
                             }
 
                             public class SceneUVData
@@ -155,7 +155,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_avg_stay_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_avg_stay_time")]
-                        public double AverageStayTime { get; set; }
+                        public decimal AverageStayTime { get; set; }
 
                         /// <summary>
                         /// 获取或设置次均停留时长数据列表。

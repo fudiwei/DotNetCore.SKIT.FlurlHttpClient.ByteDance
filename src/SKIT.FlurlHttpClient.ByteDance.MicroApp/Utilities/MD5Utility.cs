@@ -1,39 +1,44 @@
-﻿using System;
+using System;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
 {
+    using SKIT.FlurlHttpClient.Primitives;
+
     /// <summary>
     /// MD5 算法工具类。
     /// </summary>
     public static class MD5Utility
     {
         /// <summary>
-        /// 获取 MD5 信息摘要。
+        /// 计算 MD5 哈希值。
         /// </summary>
-        /// <param name="bytes">信息字节数组。</param>
-        /// <returns>信息摘要字节数组。</returns>
-        public static byte[] Hash(byte[] bytes)
+        /// <param name="messageBytes">要计算哈希值的信息字节数组。</param>
+        /// <returns>哈希值字节数组。</returns>
+        public static byte[] Hash(byte[] messageBytes)
         {
-            if (bytes == null) throw new ArgumentNullException(nameof(bytes));
+            if (messageBytes is null) throw new ArgumentNullException(nameof(messageBytes));
 
+#if NET5_0_OR_GREATER
+            return MD5.HashData(messageBytes);
+#else
             using MD5 md5 = MD5.Create();
-            return md5.ComputeHash(bytes);
+            return md5.ComputeHash(messageBytes);
+#endif
         }
 
         /// <summary>
-        /// 获取 MD5 信息摘要。
+        /// 计算 MD5 哈希值。
         /// </summary>
-        /// <param name="message">文本信息。</param>
-        /// <returns>信息摘要。</returns>
-        public static string Hash(string message)
+        /// <param name="messageData">要计算哈希值的信息。</param>
+        /// <returns>经过十六进制编码的哈希值。</returns>
+        public static EncodedString Hash(string messageData)
         {
-            if (message == null) throw new ArgumentNullException(nameof(message));
+            if (messageData is null) throw new ArgumentNullException(nameof(messageData));
 
-            byte[] msgBytes = Encoding.UTF8.GetBytes(message);
-            byte[] hashBytes = Hash(msgBytes);
-            return BitConverter.ToString(hashBytes).Replace("-", "");
+            byte[] messageBytes = EncodedString.FromLiteralString(messageData);
+            byte[] hashBytes = Hash(messageBytes);
+            return EncodedString.ToHexString(hashBytes);
         }
     }
 }

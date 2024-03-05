@@ -3,21 +3,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     /// <summary>
     /// 表示字节小程序 API 消息推送事件的基类。
     /// </summary>
-    public class ByteDanceMicroAppEvent
+    [Newtonsoft.Json.JsonObject]
+    [System.Xml.Serialization.XmlRoot("xml")]
+    public class ByteDanceMicroAppEvent : ICommonWebhookEvent
     {
-        public static class Serialization
-        {
-            [Newtonsoft.Json.JsonObject]
-            public interface IJsonSerializable
-            {
-            }
-
-            [System.Xml.Serialization.XmlRoot("xml")]
-            public interface IXmlSerializable
-            {
-            }
-        }
-
         /// <summary>
         /// 获取或设置消息接收方账号。
         /// </summary>

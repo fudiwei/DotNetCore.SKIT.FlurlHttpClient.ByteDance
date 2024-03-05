@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /apps/ecpay/v1/create_order 接口的请求。</para>
@@ -86,9 +86,9 @@
         /// 获取或设置是否屏蔽担保支付的推送消息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("disable_msg")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalNullableBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("disable_msg")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalNullableBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
         public bool? IsMessageDisabled { get; set; }
 
         /// <summary>

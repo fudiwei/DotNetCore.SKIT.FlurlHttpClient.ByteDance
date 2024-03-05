@@ -8,11 +8,11 @@
 
 再有，每个对象的命名与官方文档的接口地址大体保持一致。例如刚刚提到的发送订阅消息，它的接口地址是 `[POST] /apps/message/custom/send`，将其中的反斜杠去掉、并以大驼峰命名法的方式调整它，就可以得到前文提到的几个对象了。如果路由中带有版本信息，那么版本号一般都在结尾处，例如接口 `[POST] /v2/tags/image` 对应的是 `TagsImageV2`。
 
-完整的模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.Api/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/ProductApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/OpenApi/Models_ 目录。
+完整的模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.Api/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/OpenApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/ProductApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/RoleApi/Models_ 目录。
 
 ---
 
-### 字节小程序开放平台 API 支持情况：
+### 抖音小程序开放平台 API 支持情况：
 
 #### 1. 小程序
 
@@ -20,7 +20,7 @@
 
 <summary>[展开查看]</summary>
 
-|     |                字节 API                |         备注         |
+|     |                抖音 API                |         备注         |
 | :-: | :------------------------------------: | :------------------: |
 |  √  |              接口调用凭证              |                      |
 |  √  |                  登录                  |                      |
@@ -50,7 +50,7 @@
 
 <summary>[展开查看]</summary>
 
-|     |   字节 API   | 备注 |
+|     |   抖音 API   | 备注 |
 | :-: | :----------: | :--: |
 |  √  | 接口调用凭证 |      |
 |  √  |     登录     |      |
@@ -66,7 +66,7 @@
 
 <summary>[展开查看]</summary>
 
-|     |        字节 API        | 备注 |
+|     |        抖音 API        | 备注 |
 | :-: | :--------------------: | :--: |
 |  √  |      授权相关接口      |      |
 |  √  |      域名相关接口      |      |

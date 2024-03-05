@@ -1,18 +1,21 @@
 ﻿# SKIT.FlurlHttpClient.ByteDance.MicroApp
 
-基于 `Flurl.Http` 的[字节小程序开放平台](https://microapp.bytedance.com/) HTTP API SDK。
+基于 `Flurl.Http` 的[抖音小程序开放平台](https://microapp.bytedance.com/) HTTP API SDK。
 
 ---
 
 ## 功能
 
--   基于字节小程序开放平台 API 封装。
--   提供了字节小程序所需的 AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
+-   基于抖音小程序开放平台 API 封装。
+-   提供了抖音小程序所需的 AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
 -   提供了解析回调通知事件等扩展方法。
 
 ---
 
 ## 快速入门
+
+> [!IMPORTANT]
+> 此目录下的文档适用于 v3.x 版本的模块。如果你正在使用 2.x 版本，请移步至 GitHub/Gitee 的已归档分支。
 
 ### 安装：
 
@@ -29,41 +32,16 @@
 ### 初始化：
 
 ```csharp
-/* 以基础 API 为例 */
 using SKIT.FlurlHttpClient.ByteDance.MicroApp;
 
-var options = new ByteDanceMicroAppClientOptions()
+var options = new DouyinMicroAppClientOptions()
 {
-    Endpoints = ByteDanceMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏拥有不同的接入点。
-    AppId = "字节小程序 AppId",
-    AppSecret = "字节小程序 AppSecret",
+    Endpoints = DouyinMicroAppEndpoints.API_MINIAPP, // 指定接入点。需注意小程序、小游戏拥有不同的接入点。
+    AppId = "抖音小程序 AppId",
+    AppSecret = "抖音小程序 AppSecret",
     ECPaySalt = "担保支付相关服务的密钥，不用则不填"
 };
-var client = new ByteDanceMicroAppClient(options);
-
-
-
-/* 以泛知识课程库 API 为例 */
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi;
-
-var options = new ByteDanceMicroAppProductApiClientOptions()
-{
-    AppId = "字节小程序 AppId",
-    AppSecret = "字节小程序 AppSecret"
-};
-var client = new ByteDanceMicroAppProductApiClient(options);
-
-
-
-/* 以服务商平台 API 为例 */
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi;
-
-var options = new ByteDanceMicroAppOpenApiClientOptions()
-{
-    ComponentAppId = "字节小程序第三方应用 AppId",
-    ComponentAppSecret = "字节小程序第三方应用 AppSecret"
-};
-var client = new ByteDanceMicroAppOpenApiClient(options);
+var client = DouyinMicroAppClientBuilder.Create(options).Build();
 ```
 
 ### 请求 & 响应：
@@ -92,11 +70,56 @@ else
 }
 ```
 
+### 独立的（服务商平台、泛知识课程库、泛知识角色系统等）扩展客户端：
+
+部分 API 的接入点、接口模型公共参数等配置项与基础 API 完全不同，需要使用独立的扩展客户端。
+
+-   服务商平台：
+
+```csharp
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi;
+
+var options = new DouyinMicroAppOpenApiClientOptions()
+{
+    ComponentAppId = "第三方应用 AppId",
+    ComponentAppSecret = "第三方应用 AppSecret"
+};
+var client = DouyinMicroAppOpenApiClientBuilder.Create(options).Build();
+```
+
+-   泛知识课程库：
+
+```csharp
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi;
+
+var options = new DouyinMicroAppProductApiClientOptions()
+{
+    AppId = "抖音小程序 AppId",
+    AppSecret = "抖音小程序 AppSecret"
+};
+var client = DouyinMicroAppProductApiClientBuilder.Create(options).Build();
+```
+
+-   泛知识角色系统：
+
+```csharp
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.RoleApi;
+
+var options = new DouyinMicroAppRoleApiClientOptions()
+{
+    AppId = "抖音小程序 AppId",
+    AppSecret = "抖音小程序 AppSecret"
+};
+var client = DouyinMicroAppRoleApiClientBuilder.Create(options).Build();
+```
+
+这些扩展客户端在用法上基础客户端完全相同，只需引入各自的命名空间即可。
+
 ---
 
 ## 基础用法
 
--   [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
+-   ⭐ [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
 
 -   [如何解析回调通知事件？](./Basic_EventDeserialization.md)
 
@@ -106,9 +129,11 @@ else
 
 ---
 
-## 快速高级技巧入门
+## 高级技巧
 
--   [如何在 ASP.NET Core 中与 `IHttpClientFactory` 集成？](./Advanced_IHttpClientFactory.md)
+-   [如何销毁客户端？](./Advanced_Dispose.md)
+
+-   [如何与 `IHttpClientFactory` 集成？](./Advanced_IHttpClientFactory.md)
 
 -   [如何指定 JSON 序列化器？](./Advanced_JsonSerializer.md)
 

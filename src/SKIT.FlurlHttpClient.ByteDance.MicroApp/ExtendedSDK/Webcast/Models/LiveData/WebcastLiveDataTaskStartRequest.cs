@@ -1,9 +1,9 @@
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /live_data/task/stop 接口的请求。</para>
+    /// <para>表示 [POST] /live_data/task/start 接口的请求。</para>
     /// </summary>
-    public class WebcastLiveDataTaskStopRequest : DouyinMicroAppRequest
+    public class WebcastLiveDataTaskStartRequest : DouyinMicroAppWebcastRequest
     {
         /// <summary>
         /// 获取或设置小玩法的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。

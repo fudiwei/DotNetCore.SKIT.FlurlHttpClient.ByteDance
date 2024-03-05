@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
     /// <para>表示 [POST] /gift/top_gift 接口的请求。</para>
     /// </summary>
-    public class WebcastGiftTopGiftRequest : DouyinMicroAppRequest
+    public class WebcastGiftTopGiftRequest : DouyinMicroAppWebcastRequest
     {
         /// <summary>
         /// 获取或设置小玩法的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。

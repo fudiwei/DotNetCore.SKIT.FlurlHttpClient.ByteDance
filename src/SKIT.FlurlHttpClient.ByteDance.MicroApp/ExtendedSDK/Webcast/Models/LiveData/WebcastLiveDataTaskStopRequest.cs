@@ -1,29 +1,29 @@
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /live_data/task/get 接口的请求。</para>
+    /// <para>表示 [POST] /live_data/task/stop 接口的请求。</para>
     /// </summary>
-    public class WebcastLiveDataTaskGetRequest : DouyinMicroAppRequest
+    public class WebcastLiveDataTaskStopRequest : DouyinMicroAppWebcastRequest
     {
         /// <summary>
         /// 获取或设置小玩法的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonProperty("appid")]
+        [System.Text.Json.Serialization.JsonPropertyName("appid")]
         public string? AppId { get; set; }
 
         /// <summary>
         /// 获取或设置直播间 ID。
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonProperty("roomid")]
+        [System.Text.Json.Serialization.JsonPropertyName("roomid")]
         public string RoomId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置直播间消息类型。
         /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonProperty("msg_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("msg_type")]
         public string? MessageType { get; set; }
     }
 }

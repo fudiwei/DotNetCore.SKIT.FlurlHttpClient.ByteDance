@@ -71,7 +71,7 @@ else
 }
 ```
 
-### 独立的（服务商平台、泛知识课程库、泛知识角色系统等）扩展客户端：
+### 独立的扩展客户端（服务商平台、泛知识课程库、泛知识角色系统、直播小玩法等）：
 
 部分 API 的接入点、接口模型公共参数等配置项与基础 API 完全不同，需要使用独立的扩展客户端。
 
@@ -112,6 +112,19 @@ var options = new DouyinMicroAppRoleApiClientOptions()
     AppSecret = "抖音小程序 AppSecret"
 };
 var client = DouyinMicroAppRoleApiClientBuilder.Create(options).Build();
+```
+
+-   直播小玩法：
+
+```csharp
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.Webcast;
+
+var options = new DouyinMicroAppWebcastClientOptions()
+{
+    AppId = "抖音小程序 AppId",
+    AppSecret = "抖音小程序 AppSecret"
+};
+var client = DouyinMicroAppWebcastClientBuilder.Create(options).Build();
 ```
 
 这些扩展客户端在用法上基础客户端完全相同，只需引入各自的命名空间即可。

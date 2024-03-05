@@ -9,6 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
     using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi;
     using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi;
     using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi;
+    using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast;
 
     public class CodeAnalyzeTests
     {
@@ -201,6 +202,51 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                         ProjectTestRequestModelSerializationSampleSubDirectory = "ModelSamples/RoleApi/",
                         ProjectTestResponseModelSerializationSampleSubDirectory = "ModelSamples/RoleApi/",
                         ProjectTestWebhookEventSerializationSampleSubDirectory = "EventSamples/RoleApi/",
+                        ThrowOnNotFoundRequestModelClassCodeFiles = true,
+                        ThrowOnNotFoundResponseModelClassCodeFiles = true,
+                        ThrowOnNotFoundExecutingExtensionClassCodeFiles = true,
+                        ThrowOnNotFoundRequestModelSerializationSampleFiles = true,
+                        ThrowOnNotFoundResponseModelSerializationSampleFiles = true
+                    };
+                    new SourceFileAnalyzer(options).AssertNoIssues();
+                }))
+            );
+
+            Assert.Multiple(
+                () => Assert.Null(Record.Exception(() =>
+                {
+                    var options = new TypeDeclarationAnalyzerOptions()
+                    {
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppWebcastClient))!,
+                        SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models",
+                        SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models",
+                        SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast",
+                        ThrowOnNotFoundRequestModelTypes = true,
+                        ThrowOnNotFoundResponseModelTypes = true,
+                        ThrowOnNotFoundExecutingExtensionTypes = true
+                    };
+                    new TypeDeclarationAnalyzer(options).AssertNoIssues();
+                })),
+
+                () => Assert.Null(Record.Exception(() =>
+                {
+                    string workdir = Environment.CurrentDirectory;
+                    string projdir = Path.Combine(workdir, "../../../../../");
+
+                    var options = new SourceFileAnalyzerOptions()
+                    {
+                        SdkAssembly = Assembly.GetAssembly(typeof(DouyinMicroAppWebcastClient))!,
+                        SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models",
+                        SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models",
+                        ProjectSourceRootDirectory = Path.Combine(projdir, "./src/SKIT.FlurlHttpClient.ByteDance.MicroApp/"),
+                        ProjectSourceRequestModelClassCodeSubDirectory = "ExtendedSDK/Webcast/Models/",
+                        ProjectSourceResponseModelClassCodeSubDirectory = "ExtendedSDK/Webcast/Models/",
+                        ProjectSourceExecutingExtensionClassCodeSubDirectory = "ExtendedSDK/Webcast/Extensions/",
+                        ProjectSourceWebhookEventClassCodeSubDirectory = "ExtendedSDK/Webcast/Events/",
+                        ProjectTestRootDirectory = Path.Combine(projdir, "./test/SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests/"),
+                        ProjectTestRequestModelSerializationSampleSubDirectory = "ModelSamples/Webcast/",
+                        ProjectTestResponseModelSerializationSampleSubDirectory = "ModelSamples/Webcast/",
+                        ProjectTestWebhookEventSerializationSampleSubDirectory = "EventSamples/Webcast/",
                         ThrowOnNotFoundRequestModelClassCodeFiles = true,
                         ThrowOnNotFoundResponseModelClassCodeFiles = true,
                         ThrowOnNotFoundExecutingExtensionClassCodeFiles = true,

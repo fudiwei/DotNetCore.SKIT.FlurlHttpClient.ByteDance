@@ -1,9 +1,9 @@
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
     /// <para>表示 [GET] /live_data/task/fail_data/get 接口的响应。</para>
     /// </summary>
-    public class WebcastLiveDataTaskFailDataGetResponse : DouyinMicroAppResponse
+    public class WebcastLiveDataTaskFailDataGetResponse : DouyinMicroAppWebcastResponse
     {
         public static class Types
         {
@@ -59,26 +59,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             }
         }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_no")]
         [System.Text.Json.Serialization.JsonPropertyName("err_no")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_msg")]
         [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public override string? ErrorMessage { get; set; }
 
         /// <summary>
-        /// <inheritdoc/>
+        /// 获取或设置请求日志 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("logid")]
         [System.Text.Json.Serialization.JsonPropertyName("logid")]
-        public override string? LogId { get; set; }
+        public string? LogId { get; set; }
 
         /// <summary>
         /// 获取或设置返回数据。

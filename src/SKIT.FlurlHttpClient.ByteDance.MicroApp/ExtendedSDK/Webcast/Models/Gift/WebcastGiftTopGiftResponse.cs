@@ -1,9 +1,9 @@
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
     /// <para>表示 [POST] /gift/top_gift 接口的响应。</para>
     /// </summary>
-    public class WebcastGiftTopGiftResponse : DouyinMicroAppResponse
+    public class WebcastGiftTopGiftResponse : DouyinMicroAppWebcastResponse
     {
         public static class Types
         {

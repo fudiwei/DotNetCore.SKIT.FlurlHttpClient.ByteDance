@@ -4,12 +4,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using Flurl.Http;
 
-namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 {
     /// <summary>
-    /// 一个抖音小程序 API HTTP 客户端。
+    /// 一个抖音小程序直播小玩法 API HTTP 客户端。
     /// </summary>
-    public class DouyinMicroAppClient : CommonClientBase, ICommonClient
+    public class DouyinMicroAppWebcastClient : CommonClientBase, ICommonClient
     {
         /// <summary>
         /// 获取当前客户端使用的抖音小程序凭证。
@@ -17,10 +17,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public Settings.Credentials Credentials { get; }
 
         /// <summary>
-        /// 用指定的配置项初始化 <see cref="DouyinMicroAppClient"/> 类的新实例。
+        /// 用指定的配置项初始化 <see cref="DouyinMicroAppWebcastClient"/> 类的新实例。
         /// </summary>
         /// <param name="options">配置项。</param>
-        public DouyinMicroAppClient(DouyinMicroAppClientOptions options)
+        public DouyinMicroAppWebcastClient(DouyinMicroAppWebcastClientOptions options)
             : this(options, null)
         {
         }
@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="options"></param>
         /// <param name="httpClient"></param>
         /// <param name="disposeClient"></param>
-        internal protected DouyinMicroAppClient(DouyinMicroAppClientOptions options, HttpClient? httpClient, bool disposeClient = true)
+        internal protected DouyinMicroAppWebcastClient(DouyinMicroAppWebcastClientOptions options, HttpClient? httpClient, bool disposeClient = true)
             : base(httpClient, disposeClient)
         {
             if (options is null) throw new ArgumentNullException(nameof(options));
 
             Credentials = new Settings.Credentials(options);
 
-            FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppEndpoints.DEFAULT;
+            FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppWebcastEndpoints.DEFAULT;
             FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
         }
 
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="httpMethod"></param>
         /// <param name="urlSegments"></param>
         /// <returns></returns>
-        public IFlurlRequest CreateFlurlRequest(DouyinMicroAppRequest request, HttpMethod httpMethod, params object[] urlSegments)
+        public IFlurlRequest CreateFlurlRequest(DouyinMicroAppWebcastRequest request, HttpMethod httpMethod, params object[] urlSegments)
         {
             IFlurlRequest flurlRequest = base.CreateFlurlRequest(request, httpMethod, urlSegments);
 
@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendFlurlRequestAsync<T>(IFlurlRequest flurlRequest, HttpContent? httpContent = null, CancellationToken cancellationToken = default)
-            where T : DouyinMicroAppResponse, new()
+            where T : DouyinMicroAppWebcastResponse, new()
         {
             if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<T> SendFlurlRequestAsJsonAsync<T>(IFlurlRequest flurlRequest, object? data = null, CancellationToken cancellationToken = default)
-            where T : DouyinMicroAppResponse, new()
+            where T : DouyinMicroAppWebcastResponse, new()
         {
             if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
 

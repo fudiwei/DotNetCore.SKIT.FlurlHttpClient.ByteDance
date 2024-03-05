@@ -7,7 +7,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         /// <summary>
         /// 获取或设置抖音小程序的 AccessToken。
-        /// <para>注意：部分第三方平台的接口中该字段表示授权方的 AuthorizerAccessToken。</para>
+        /// <para>
+        /// 注意：部分第三方平台的接口中该字段表示授权方的 AuthorizerAccessToken。
+        /// </para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

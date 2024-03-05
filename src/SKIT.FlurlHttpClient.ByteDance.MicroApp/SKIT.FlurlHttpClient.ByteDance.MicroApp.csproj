@@ -39,7 +39,8 @@
         <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net461'" />
     </ItemGroup>
 
-	<ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="BouncyCastle.Cryptography" Version="2.2.1" />
         <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="3.0.0" />
 	</ItemGroup>
 

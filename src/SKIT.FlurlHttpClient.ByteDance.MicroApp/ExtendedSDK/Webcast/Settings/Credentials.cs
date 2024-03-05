@@ -14,12 +14,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Settings
         /// </summary>
         public string AppSecret { get; }
 
+        /// <summary>
+        /// 初始化客户端时 <see cref="DouyinMicroAppWebcastClientOptions.PlatformPublicKey"/> 的副本。
+        /// </summary>
+        public string PlatformPublicKey { get; set; } = default!;
+
         internal Credentials(DouyinMicroAppWebcastClientOptions options)
         {
             if (options is null) throw new ArgumentNullException(nameof(options));
 
             AppId = options.AppId;
             AppSecret = options.AppSecret;
+            PlatformPublicKey = options.PlatformPublicKey;
         }
     }
 }

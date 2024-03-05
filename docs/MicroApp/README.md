@@ -122,7 +122,10 @@ using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.Webcast;
 var options = new DouyinMicroAppWebcastClientOptions()
 {
     AppId = "抖音小程序 AppId",
-    AppSecret = "抖音小程序 AppSecret"
+    AppSecret = "抖音小程序 AppSecret",
+    ApplicationPublicKeyVersion = "应用密钥公钥版本号",
+    ApplicationPrivateKey = "应用密钥私钥",
+    PlatformPublicKey = "平台密钥公钥"
 };
 var client = DouyinMicroAppWebcastClientBuilder.Create(options).Build();
 ```

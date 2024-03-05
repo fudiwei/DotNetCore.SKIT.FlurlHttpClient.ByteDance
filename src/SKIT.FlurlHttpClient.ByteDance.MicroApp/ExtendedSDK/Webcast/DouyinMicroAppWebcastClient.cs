@@ -39,7 +39,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
             Credentials = new Settings.Credentials(options);
 
             FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppWebcastEndpoints.DEFAULT;
+            FlurlClient.WithHeader(HttpHeaders.Accept, MimeTypes.Json);
             FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
+
+            Interceptors.Add(new Interceptors.DouyinMicroAppWebcastRequestSigningInterceptor(
+                appId: options.AppId,
+                pkVersion: options.ApplicationPublicKeyVersion,
+                pkPem: options.ApplicationPrivateKey
+            ));
         }
 
         /// <summary>

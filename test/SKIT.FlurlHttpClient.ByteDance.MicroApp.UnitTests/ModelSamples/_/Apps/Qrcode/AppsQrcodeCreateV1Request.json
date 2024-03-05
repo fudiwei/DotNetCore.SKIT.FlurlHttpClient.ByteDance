@@ -1,0 +1,17 @@
+{
+    "app_name": "douyin",
+    "appid": "tt**********",
+    "path": "{}",
+    "width": 1000,
+    "line_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+    },
+    "background": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+    },
+    "set_icon": false
+}

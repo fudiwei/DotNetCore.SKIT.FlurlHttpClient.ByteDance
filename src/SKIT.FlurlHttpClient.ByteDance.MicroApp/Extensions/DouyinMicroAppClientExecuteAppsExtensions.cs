@@ -2077,17 +2077,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region UrlLink
         /// <summary>
-        /// <para>异步调用 [POST] /apps/url_link/generate 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url_link/generate 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/url-link-generate ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/link/url-link-generate ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsUrlLinkGenerateResponse> ExecuteAppsUrlLinkGenerateAsync(this DouyinMicroAppClient client, Models.AppsUrlLinkGenerateRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsUrlLinkGenerateV1Response> ExecuteAppsUrlLinkGenerateV1Async(this DouyinMicroAppClient client, Models.AppsUrlLinkGenerateV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -2096,23 +2096,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "url_link", "generate");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url_link", "generate")
+                .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkGenerateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkGenerateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/url_link/query_info 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url_link/query_info 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/url-link-query ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/link/url-link-query-v2 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsUrlLinkQueryInfoResponse> ExecuteAppsUrlLinkQueryInfoAsync(this DouyinMicroAppClient client, Models.AppsUrlLinkQueryInfoRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsUrlLinkQueryInfoV1Response> ExecuteAppsUrlLinkQueryInfoV1Async(this DouyinMicroAppClient client, Models.AppsUrlLinkQueryInfoV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -2121,23 +2122,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "url_link", "query_info");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url_link", "query_info")
+                .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkQueryInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkQueryInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/url_link/query_quota 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url_link/query_quota 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/url-link-query-quota ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/link/url-link-query-quota-v2 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsUrlLinkQueryQuotaResponse> ExecuteAppsUrlLinkQueryQuotaAsync(this DouyinMicroAppClient client, Models.AppsUrlLinkQueryQuotaRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsUrlLinkQueryQuotaV1Response> ExecuteAppsUrlLinkQueryQuotaV1Async(this DouyinMicroAppClient client, Models.AppsUrlLinkQueryQuotaV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -2146,9 +2148,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "url_link", "query_quota");
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url_link", "query_quota")
+                .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkQueryQuotaResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlLinkQueryQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 

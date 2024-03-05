@@ -1,20 +1,15 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/url_link/query_info 接口的请求。</para>
+    /// <para>表示 [POST] /apps/v1/url_link/query_info 接口的请求。</para>
     /// </summary>
-    public class AppsUrlLinkQueryInfoRequest : DouyinMicroAppRequest
+    public class AppsUrlLinkQueryInfoV1Request : DouyinMicroAppRequest
     {
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("access_token")]
-        [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-        public override string? AccessToken { get; set; }
-
         /// <summary>
         /// 获取或设置小程序的 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("ma_app_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("ma_app_id")]
+        [Newtonsoft.Json.JsonProperty("app_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("app_id")]
         public string? AppId { get; set; }
 
         /// <summary>
@@ -22,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("url_link")]
         [System.Text.Json.Serialization.JsonPropertyName("url_link")]
-        public string? UrlLink { get; set; }
+        public string UrlLink { get; set; } = string.Empty;
     }
 }

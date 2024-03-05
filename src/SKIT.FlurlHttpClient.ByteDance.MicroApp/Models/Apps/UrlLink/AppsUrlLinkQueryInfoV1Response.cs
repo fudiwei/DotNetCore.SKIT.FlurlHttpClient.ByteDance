@@ -1,27 +1,20 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/url_link/query_info 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/url_link/query_info 接口的响应。</para>
     /// </summary>
-    public class AppsUrlLinkQueryInfoResponse : DouyinMicroAppResponse
+    public class AppsUrlLinkQueryInfoV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {
-            public class UrlLinkInfo
+            public class Data
             {
                 /// <summary>
                 /// 获取或设置小程序的 AppId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("ma_app_id")]
-                [System.Text.Json.Serialization.JsonPropertyName("ma_app_id")]
+                [Newtonsoft.Json.JsonProperty("app_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("app_id")]
                 public string AppId { get; set; } = default!;
-
-                /// <summary>
-                /// 获取或设置分享链接。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("url_link")]
-                [System.Text.Json.Serialization.JsonPropertyName("url_link")]
-                public string UrlLink { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置宿主名称。
@@ -60,21 +53,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             }
         }
 
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public override long ErrorCode { get; set; }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_tips")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
-        public override string? ErrorMessage { get; set; }
-
         /// <summary>
-        /// 获取或设置分享链接信息。
+        /// 获取或设置返回数据。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("url_link_info")]
-        [System.Text.Json.Serialization.JsonPropertyName("url_link_info")]
-        public Types.UrlLinkInfo UrlLinkInfo { get; set; } = default!;
+        [Newtonsoft.Json.JsonProperty("data")]
+        [System.Text.Json.Serialization.JsonPropertyName("data")]
+        public Types.Data Data { get; set; } = default!;
     }
 }

@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
     public abstract class DouyinMicroAppWebcastResponse : CommonResponseBase, ICommonResponse
     {
         /// <summary>
-        /// 获取抖音小程序 API 返回的详细错误号。
+        /// 获取抖音小程序 API 返回的错误码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("errcode")]
         [System.Text.Json.Serialization.JsonPropertyName("errcode")]

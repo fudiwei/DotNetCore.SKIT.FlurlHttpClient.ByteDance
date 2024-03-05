@@ -1,0 +1,28 @@
+{
+    "data": {
+        "list": [
+            {
+                "title": "题目1",
+                "options": [
+                    "选项1",
+                    "选项2",
+                    "选项3",
+                    "选项4"
+                ],
+                "answer": 1,
+                "id": "EYDnokrgyVeOeFa"
+            },
+            {
+                "title": "题目2",
+                "options": [
+                    "选项1",
+                    "选项2",
+                    "选项3",
+                    "选项4"
+                ],
+                "answer": 4,
+                "id": "TlL6LwvWapkoBMv"
+            }
+        ]
+    }
+}

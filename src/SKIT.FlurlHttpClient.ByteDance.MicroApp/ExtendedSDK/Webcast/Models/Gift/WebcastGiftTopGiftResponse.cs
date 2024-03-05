@@ -19,20 +19,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         }
 
         /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("errcode")]
-        [System.Text.Json.Serialization.JsonPropertyName("errcode")]
-        public override long ErrorCode { get; set; }
-
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("errmsg")]
-        [System.Text.Json.Serialization.JsonPropertyName("errmsg")]
-        public override string? ErrorMessage { get; set; }
-
-        /// <summary>
         /// 获取或设置返回数据。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]

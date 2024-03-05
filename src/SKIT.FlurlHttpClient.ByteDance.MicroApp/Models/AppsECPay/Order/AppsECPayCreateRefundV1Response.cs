@@ -5,16 +5,12 @@
     /// </summary>
     public class AppsECPayCreateRefundV1Response : DouyinMicroAppResponse
     {
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_no")]
         [System.Text.Json.Serialization.JsonPropertyName("err_no")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_tips")]
         [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
         public override string? ErrorMessage { get; set; }

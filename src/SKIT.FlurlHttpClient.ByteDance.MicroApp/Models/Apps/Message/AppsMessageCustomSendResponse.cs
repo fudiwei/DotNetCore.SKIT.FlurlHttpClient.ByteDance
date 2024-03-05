@@ -5,9 +5,7 @@
     /// </summary>
     public class AppsMessageCustomSendResponse : DouyinMicroAppResponse
     {
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("errno")]
         [System.Text.Json.Serialization.JsonPropertyName("errno")]
         public override long ErrorCode { get; set; }

@@ -5,16 +5,12 @@
     /// </summary>
     public class AppsOrderPushV2Response : DouyinMicroAppResponse
     {
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_code")]
         [System.Text.Json.Serialization.JsonPropertyName("err_code")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_msg")]
         [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public override string? ErrorMessage { get; set; }

@@ -74,16 +74,12 @@
             }
         }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("code")]
         [System.Text.Json.Serialization.JsonPropertyName("code")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("exception")]
         [System.Text.Json.Serialization.JsonPropertyName("exception")]
         public override string? ErrorMessage { get; set; }

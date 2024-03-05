@@ -25,16 +25,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             }
         }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("error")]
         [System.Text.Json.Serialization.JsonPropertyName("error")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("message")]
         [System.Text.Json.Serialization.JsonPropertyName("message")]
         public override string? ErrorMessage { get; set; }

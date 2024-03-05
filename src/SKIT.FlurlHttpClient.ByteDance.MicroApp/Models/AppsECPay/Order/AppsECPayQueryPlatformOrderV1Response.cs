@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 [Newtonsoft.Json.JsonProperty("amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("amount")]
                                 public int Amount { get; set; }
-                
+
                                 /// <summary>
                                 /// 获取或设置分账方商户号。
                                 /// </summary>
@@ -34,63 +34,63 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 public string MerchantUid { get; set; } = default!;
                             }
                         }
-                        
+
                         /// <summary>
                         /// 获取或设置自动结算单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("out_settle_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("out_settle_no")]
                         public string OutSettleNumber { get; set; } = default!;
-        
+
                         /// <summary>
                         /// 获取或设置小程序分账单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_no")]
                         public string SettleNumber { get; set; } = default!;
-        
+
                         /// <summary>
                         /// 获取或设置分账参数列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_param_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_param_list")]
                         public Types.SettleParameter[]? SettleParameterList { get; set; }
-        
+
                         /// <summary>
                         /// 获取或设置结算渠道。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_way")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_way")]
                         public string SettleWay { get; set; } = default!;
-                        
+
                         /// <summary>
                         /// 获取或设置分账状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_status")]
                         public string SettleStatus { get; set; } = default!;
-        
+
                         /// <summary>
                         /// 获取或设置 CPS 佣金（单位：分）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cps")]
                         [System.Text.Json.Serialization.JsonPropertyName("cps")]
                         public int CPS { get; set; }
-        
+
                         /// <summary>
                         /// 获取或设置技术服务费（单位：分）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_charge")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_charge")]
                         public int ServiceCharge { get; set; }
-        
+
                         /// <summary>
                         /// 获取或设置结算创建时间字符串（格式：yyyy-MM-dd HH:mm:ss）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("created_at")]
                         [System.Text.Json.Serialization.JsonPropertyName("created_at")]
                         public string CreateTimeString { get; set; } = default!;
-        
+
                         /// <summary>
                         /// 获取或设置结算完成时间字符串（格式：yyyy-MM-dd HH:mm:ss）。
                         /// </summary>
@@ -99,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public string? SettleTimeString { get; set; }
                     }
                 }
-                
+
                 /// <summary>
                 /// 获取或设置小程序 AppId。
                 /// </summary>
@@ -130,16 +130,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             }
         }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_no")]
         [System.Text.Json.Serialization.JsonPropertyName("err_no")]
         public override long ErrorCode { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("err_tips")]
         [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
         public override string? ErrorMessage { get; set; }

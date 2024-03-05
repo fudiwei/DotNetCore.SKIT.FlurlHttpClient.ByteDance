@@ -5,9 +5,7 @@
     /// </summary>
     public class AppsShareConfigRequest : DouyinMicroAppRequest
     {
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("access_token")]
         public override string? AccessToken { get; set; }

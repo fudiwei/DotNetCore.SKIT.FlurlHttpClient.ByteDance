@@ -72,6 +72,112 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsJsCode2SessionV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
+        #region Capacity
+        #region Capacity/ClueComponent
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/create_clue_component_info 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/clue-component-info/create ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityCreateClueComponentInfoV1Response> ExecuteAppsCapacityCreateClueComponentInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityCreateClueComponentInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_clue_component_info")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/create_clue_component_info")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_clue_component_info 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/clue-component-info/query ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryClueComponentInfoV1Response> ExecuteAppsCapacityQueryClueComponentInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryClueComponentInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_clue_component_info")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_clue_component_info")
+                .WithHeader("access-token", request.AccessToken);
+
+            if (request.PageNumber is not null)
+                flurlReq.SetQueryParam("page_no", request.PageNumber.Value);
+
+            if (request.PageSize is not null)
+                flurlReq.SetQueryParam("page_size", request.PageSize.Value);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/update_clue_component_info 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/clue-component-info/update ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUpdateClueComponentInfoV1Response> ExecuteAppsCapacityUpdateClueComponentInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityUpdateClueComponentInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_clue_component_info")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_clue_component_info")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [DELETE] /apps/v1/capacity/delete_clue_component_info 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/clue-component-info/delete ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityDeleteClueComponentInfoV1Response> ExecuteAppsCapacityDeleteClueComponentInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityDeleteClueComponentInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Delete, "apps", "v1", "capacity", "delete_clue_component_info")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/delete_clue_component_info")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+        #endregion
+
         #region Qrcode
         /// <summary>
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>

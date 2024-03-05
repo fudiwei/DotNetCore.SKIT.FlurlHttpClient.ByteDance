@@ -39,10 +39,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (options is null) throw new ArgumentNullException(nameof(options));
 
             Credentials = new Settings.Credentials(options);
-            _BASEURL_LEGACY = options.EndpointForLegacy ?? DouyinMicroAppEndpoints.LEGACY_DEFAULT;
 
             FlurlClient.BaseUrl = options.Endpoint ?? DouyinMicroAppEndpoints.DEFAULT;
             FlurlClient.WithTimeout(options.Timeout <= 0 ? Timeout.InfiniteTimeSpan : TimeSpan.FromMilliseconds(options.Timeout));
+
+            _BASEURL_LEGACY = options.EndpointForLegacy ?? DouyinMicroAppEndpoints.LEGACY_DEFAULT;
         }
 
         /// <summary>

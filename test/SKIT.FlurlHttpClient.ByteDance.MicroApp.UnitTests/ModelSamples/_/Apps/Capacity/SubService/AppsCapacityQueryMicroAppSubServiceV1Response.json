@@ -1,0 +1,37 @@
+{
+    "data": {
+        "has_more": false,
+        "ma_sub_service_info_list": [
+            {
+                "create_time": "2023-12-21 15:43:02",
+                "micro_app_icon": "******",
+                "micro_app_id": "******",
+                "search_key_word": [
+                    "******",
+                    "******"
+                ],
+                "start_page_url": "******",
+                "sub_service_id": "******",
+                "sub_service_name": "******",
+                "approval_state": 0
+            },
+            {
+                "sub_service_id": "*****",
+                "sub_service_name": "*****",
+                "approval_state": 0,
+                "create_time": "2023-12-20 14:20:55",
+                "micro_app_icon": "",
+                "micro_app_id": "******",
+                "search_key_word": [
+                    "*****1",
+                    "*****2"
+                ],
+                "start_page_url": "*****"
+            }
+        ],
+        "total": 2
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202311231517488305C037A785Dxxxxx"
+}

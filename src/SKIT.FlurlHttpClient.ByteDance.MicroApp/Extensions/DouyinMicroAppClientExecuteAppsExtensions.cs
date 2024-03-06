@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecuteAppsExtensions
     {
-        #region Capacity
+        #region TODO: Capacity
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/upload_material 接口。</para>
         /// <para>
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendFlurlRequestAsync<Models.AppsCapacityUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-        #region Capacity/AwemeCapacity
+        #region TODO: Capacity/AwemeCapacity
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_aweme_permission_list 接口。</para>
         /// <para>
@@ -205,7 +205,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Capacity/Delivery
+        #region TODO: Capacity/Delivery
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/add_alias 接口。</para>
         /// <para>
@@ -345,7 +345,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Capacity/FollowAweme
+        #region TODO: Capacity/FollowAweme
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/bind_aweme_user 接口。</para>
         /// <para>
@@ -444,7 +444,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #endregion
 
-        #region Capacity/Mount
+        #region TODO: Capacity/Mount
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/apply_capacity 接口。</para>
         /// <para>
@@ -670,7 +670,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
-        #region Capacity/SimpleQrcode
+        #region TODO: Capacity/SimpleQrcode
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_simple_qr_bind_list 接口。</para>
         /// <para>
@@ -789,7 +789,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Capacity/SubscribeNotification
+        #region TODO: Capacity/SubscribeNotification
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_subscribe_notification_tpl_list 接口。</para>
         /// <para>
@@ -973,7 +973,58 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region TrafficPermission
+        #region Capcity/SubService
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/create_ma_sub_service/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/search/create-ma-sub-service ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityCreateMicroAppSubServiceV1Response> ExecuteAppsCapacityCreateMicroAppSubServiceV1Async(this DouyinMicroAppClient client, Models.AppsCapacityCreateMicroAppSubServiceV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_ma_sub_service", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateMicroAppSubServiceV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_ma_sub_service/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/search/query-ma-sub-service ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryMicroAppSubServiceV1Response> ExecuteAppsCapacityQueryMicroAppSubServiceV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryMicroAppSubServiceV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ma_sub_service", "")
+                .SetQueryParam("page_no", request.PageNumber)
+                .SetQueryParam("page_size", request.PageSize)
+                .SetQueryParam("approval_state", request.ApprovalState)
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryMicroAppSubServiceV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region TODO: TrafficPermission
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_traffic_permission_status 接口。</para>
         /// <para>
@@ -1148,7 +1199,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
-        #region Category
+        #region TODO: Category
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/category/query_app_categories 接口。</para>
         /// <para>
@@ -1173,7 +1224,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Censor
+        #region TODO: Censor
         /// <summary>
         /// <para>异步调用 [POST] /apps/censor/image 接口。</para>
         /// <para>
@@ -1200,7 +1251,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Chat
+        #region TODO: Chat
         /// <summary>
         /// <para>异步调用 [GET] /apps/chat/customer_service_url 接口。</para>
         /// <para>
@@ -1238,7 +1289,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region CustomerService
+        #region TODO: CustomerService
         /// <summary>
         /// <para>异步调用 [GET] /apps/customer_service/url 接口。</para>
         /// <para>
@@ -1270,8 +1321,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region DataAnalysis
-        #region DataAnalysis/TransactionAnalysis
+        #region TODO: DataAnalysis
+        #region TODO: DataAnalysis/TransactionAnalysis
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/data_analysis/query_deal_overview_data 接口。</para>
         /// <para>
@@ -1436,7 +1487,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region DataAnalysis/UserAnalysis
+        #region TODO: DataAnalysis/UserAnalysis
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/data_analysis/query_behavior_data 接口。</para>
         /// <para>
@@ -2144,7 +2195,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
-        #region Live
+        #region TODO: Live
         /// <summary>
         /// <para>异步调用 [POST] /apps/upload_live_image 接口。</para>
         /// <para>
@@ -2205,7 +2256,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Message
+        #region TODO: Message
         /// <summary>
         /// <para>异步调用 [POST] /apps/message/custom/send 接口。</para>
         /// <para>
@@ -2230,7 +2281,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region Order
+        #region TODO: Order
         /// <summary>
         /// <para>异步调用 [POST] /apps/order/v2/push 接口。</para>
         /// <para>
@@ -2281,7 +2332,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Qrcode
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/qrcode/create 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/qrcode/create/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/qrcode/create-qr-code-v2 ]]>
@@ -2300,14 +2351,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "qrcode", "create")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "qrcode", "create", "")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsQrcodeCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
-        #region ShareConfig
+        #region TODO: ShareConfig
         /// <summary>
         /// <para>异步调用 [POST] /apps/share_config 接口。</para>
         /// <para>
@@ -2334,7 +2385,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region SubscribeNotification
+        #region TODO: SubscribeNotification
         /// <summary>
         /// <para>异步调用 [POST] /apps/subscribe_notification/developer/v1/notify 接口。</para>
         /// <para>
@@ -2362,7 +2413,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region TaskBox
+        #region TODO: TaskBox
         /// <summary>
         /// <para>异步调用 [POST] /apps/taskbox/add_task 接口。</para>
         /// <para>
@@ -2571,7 +2622,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region UrlLink
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/generate_schema 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url/generate_schema/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/generate-schema-v2 ]]>
@@ -2590,14 +2641,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "generate_schema")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "generate_schema", "")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlGenerateSchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/query_schema 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url/query_schema/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-v2 ]]>
@@ -2616,14 +2667,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema", "")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/query_schema_quota 接口。</para>
+        /// <para>异步调用 [POST] /apps/v1/url/query_schema_quota/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-quota-v2 ]]>
@@ -2642,7 +2693,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema_quota")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema_quota", "")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

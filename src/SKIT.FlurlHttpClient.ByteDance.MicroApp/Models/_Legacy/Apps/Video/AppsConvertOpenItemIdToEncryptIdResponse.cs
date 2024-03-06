@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
@@ -16,22 +16,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("convert_result")]
                 [System.Text.Json.Serialization.JsonPropertyName("convert_result")]
-                public Dictionary<string, string> Result { get; set; } = default!;
+                public IDictionary<string, string> Result { get; set; } = default!;
             }
         }
 
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public override long ErrorCode { get; set; }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_tips")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
-        public override string? ErrorMessage { get; set; }
-
         /// <summary>
-        /// 获取或设置返回的数据。
+        /// 获取或设置返回数据。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]

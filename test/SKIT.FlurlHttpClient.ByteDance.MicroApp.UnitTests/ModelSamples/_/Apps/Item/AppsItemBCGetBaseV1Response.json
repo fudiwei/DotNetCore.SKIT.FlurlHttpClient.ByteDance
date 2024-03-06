@@ -1,0 +1,11 @@
+{
+    "data": {
+        "result": {
+            "total_like": 200,
+            "total_comment": 200,
+            "total_share": 200,
+            "avg_play_duration": 200,
+            "total_play": 200
+        }
+    }
+}

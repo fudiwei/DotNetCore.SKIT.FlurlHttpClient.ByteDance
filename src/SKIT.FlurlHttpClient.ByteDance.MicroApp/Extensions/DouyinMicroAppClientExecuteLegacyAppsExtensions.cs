@@ -178,6 +178,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
+        #region Chat
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/chat/customer_service_url 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/im/customer-service-url ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-08-29 下线。")]
+        public static async Task<Models.AppsChatCustomerServiceUrlResponse> ExecuteAppsChatCustomerServiceUrlAsync(this DouyinMicroAppClient client, Models.AppsChatCustomerServiceUrlRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "chat", "customer_service_url")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/chat/customer_service_url")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("appid", request.AppId)
+                .SetQueryParam("openid", request.OpenId)
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("scene", request.Scene);
+
+            if (request.OrderId is not null)
+                flurlReq.SetQueryParam("order_id", request.OrderId);
+
+            if (request.IMType is not null)
+                flurlReq.SetQueryParam("im_type", request.IMType);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsChatCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Qrcode
         /// <summary>
         /// <para>异步调用 [POST] /apps/qrcode 接口。</para>

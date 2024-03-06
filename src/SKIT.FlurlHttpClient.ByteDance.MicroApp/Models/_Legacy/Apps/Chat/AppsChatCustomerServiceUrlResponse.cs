@@ -1,8 +1,11 @@
+using System;
+
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [GET] /apps/chat/customer_service_url 接口的响应。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2023-08-29 下线。")]
     public class AppsChatCustomerServiceUrlResponse : DouyinMicroAppResponse
     {
         public static class Types
@@ -17,16 +20,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string Url { get; set; } = default!;
             }
         }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public override long ErrorCode { get; set; }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_msg")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
-        public override string? ErrorMessage { get; set; }
 
         /// <summary>
         /// 获取或设置返回数据。

@@ -6,7 +6,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
-    public static class DouyinMicroAppClientExecuteTagsExtensions
+    public static class DouyinMicroAppClientExecuteLegacyTagsExtensions
     {
         /// <summary>
         /// <para>异步调用 [POST] /v2/tags/text/antidirt 接口。</para>
@@ -27,6 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v2", "tags", "text", "antidirt")
+                .WithUrl($"{client._BASEURL_LEGACY}/v2/tags/text/antidirt")
                 .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.TagsTextAntiDirtV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -50,6 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v2", "tags", "image")
+                .WithUrl($"{client._BASEURL_LEGACY}/v2/tags/image")
                 .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.TagsImageV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

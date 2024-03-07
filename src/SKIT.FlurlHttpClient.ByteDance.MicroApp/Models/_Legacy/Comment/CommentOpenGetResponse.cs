@@ -127,16 +127,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             }
         }
 
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_no")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
-        public override long ErrorCode { get; set; }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("err_msg")]
-        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
-        public override string? ErrorMessage { get; set; }
-
         /// <summary>
         /// 获取或设置返回数据。
         /// </summary>

@@ -178,6 +178,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         #endregion
         #endregion
 
+        #region Censor
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/censor/image 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/content-security/picture-detect-v2 ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/develop/picture-detect ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCensorImageResponse> ExecuteAppsCensorImageAsync(this DouyinMicroAppClient client, Models.AppsCensorImageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "censor", "image")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/censor/image");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCensorImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Chat
         /// <summary>
         /// <para>异步调用 [GET] /apps/chat/customer_service_url 接口。</para>

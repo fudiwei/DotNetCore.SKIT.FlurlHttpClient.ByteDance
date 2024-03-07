@@ -1,4 +1,4 @@
-﻿{
+{
     "log_id": "202008181611370100150421452708466F",
     "data": [
         {
@@ -17,6 +17,5 @@
         }
     ],
     "error_id": "7bf3b7e299e9448796aa99b44750df68",
-    "code": 401,
-    "exception": "[app token sign fail] bad token"
+    "code": 401
 }

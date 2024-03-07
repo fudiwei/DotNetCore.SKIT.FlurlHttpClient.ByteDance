@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/censor/image 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/censor/image 接口的响应。</para>
     /// </summary>
-    public class AppsCensorImageResponse : DouyinMicroAppResponse
+    public class AppsCensorImageV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {
@@ -24,16 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public bool IsHit { get; set; }
             }
         }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("error")]
-        [System.Text.Json.Serialization.JsonPropertyName("error")]
-        public override long ErrorCode { get; set; }
-
-        /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("message")]
-        [System.Text.Json.Serialization.JsonPropertyName("message")]
-        public override string? ErrorMessage { get; set; }
 
         /// <summary>
         /// 获取或设置置信度列表。

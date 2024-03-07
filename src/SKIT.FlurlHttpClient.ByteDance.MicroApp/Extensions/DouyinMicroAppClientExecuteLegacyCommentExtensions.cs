@@ -6,7 +6,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
-    public static class DouyinMicroAppClientExecuteCommentExtensions
+    public static class DouyinMicroAppClientExecuteLegacyCommentExtensions
     {
         /// <summary>
         /// <para>异步调用 [POST] /comment/open/get 接口。</para>
@@ -28,7 +28,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "comment", "open", "get");
+                .CreateFlurlRequest(request, HttpMethod.Post, "comment", "open", "get")
+                .WithUrl($"{client._BASEURL_LEGACY}/comment/open/get");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.CommentOpenGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

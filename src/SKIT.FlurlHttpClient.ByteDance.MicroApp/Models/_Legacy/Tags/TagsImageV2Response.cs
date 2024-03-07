@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v2/tags/image 接口的响应。</para>
@@ -74,14 +74,16 @@
             }
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 获取或设置错误代码。
+        /// </summary>
         [Newtonsoft.Json.JsonProperty("code")]
         [System.Text.Json.Serialization.JsonPropertyName("code")]
-        public override long ErrorCode { get; set; }
+        public int ErrorCode { get; set; }
 
         /// <inheritdoc/>
-        [Newtonsoft.Json.JsonProperty("exception")]
-        [System.Text.Json.Serialization.JsonPropertyName("exception")]
+        [Newtonsoft.Json.JsonProperty("message")]
+        [System.Text.Json.Serialization.JsonPropertyName("message")]
         public override string? ErrorMessage { get; set; }
 
         /// <summary>
@@ -100,7 +102,7 @@
 
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && string.IsNullOrEmpty(ErrorId);
+            return base.IsSuccessful() && ErrorCode == 0 && string.IsNullOrEmpty(ErrorId);
         }
     }
 }

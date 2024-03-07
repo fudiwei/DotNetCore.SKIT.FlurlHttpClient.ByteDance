@@ -1,0 +1,24 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202008121419360101980821035705926A",
+    "data": {
+        "total_count": 1,
+        "template_list": [
+            {
+                "msg_id": "MSG122591232",
+                "template_id": 12259,
+                "classification": 1,
+                "title": "拍摄通知",
+                "keyword_list": [
+                    "时间",
+                    "地点"
+                ],
+                "category_name": "摄影/扩印",
+                "host_list": [
+                    "toutiao"
+                ]
+            }
+        ]
+    }
+}

@@ -13,6 +13,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// <summary>
         /// 沙盒域名。
         /// </summary>
-        public const string SANDBOX = "https://open-sandbox.douyin.com/auth/entity/";
+        public const string SANDBOX = "https://open-sandbox.douyin.com/auth/entity";
     }
 }

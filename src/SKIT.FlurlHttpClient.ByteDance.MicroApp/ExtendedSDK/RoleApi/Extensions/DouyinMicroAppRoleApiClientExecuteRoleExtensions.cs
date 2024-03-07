@@ -68,31 +68,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
             return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityQueryEntityInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// <para>异步调用 [POST] /enable_mountscope 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/enable-mountscope ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AuthEntityEnableMountScopeResponse> ExecuteAuthEntityEnableMountScopeAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityEnableMountScopeRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "enable_mountscope");
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityEnableMountScopeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
         #region Auth
         /// <summary>
         /// <para>异步调用 [POST] /bypartner 接口。</para>
@@ -296,6 +271,160 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         }
         #endregion
 
+        #region Bind
+        /// <summary>
+        /// <para>异步调用 [POST] /query_mountscope 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-mountscope ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityQueryMountScopeResponse> ExecuteAuthEntityQueryMountScopeAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityQueryMountScopeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "query_mountscope");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityQueryMountScopeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /enable_mountscope 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/enable-mountscope ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityEnableMountScopeResponse> ExecuteAuthEntityEnableMountScopeAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityEnableMountScopeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "enable_mountscope");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityEnableMountScopeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /unbind_account 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/unbind-mountscope ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityUnbindAccountResponse> ExecuteAuthEntityUnbindAccountAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityUnbindAccountRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "unbind_account");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityUnbindAccountResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /query_bind_toc_list 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-mountlist ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityQueryBindToCListResponse> ExecuteAuthEntityQueryBindToCListAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityQueryBindToCListRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "query_bind_toc_list");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityQueryBindToCListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region MerchantCode
+        /// <summary>
+        /// <para>异步调用 [POST] /activate_merchantcode 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/merchant-account-activation ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityActivateMerchantCodeResponse> ExecuteAuthEntityActivateMerchantCodeAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityActivateMerchantCodeRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "activate_merchantcode");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityActivateMerchantCodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /query_merchantcode_status 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-merchant-account-activation-state ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthEntityQueryMerchantCodeStatusResponse> ExecuteAuthEntityQueryMerchantCodeStatusAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityQueryMerchantCodeStatusRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "query_merchantcode_status");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityQueryMerchantCodeStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Role
         /// <summary>
         /// <para>异步调用 [POST] /add_role 接口。</para>
@@ -308,7 +437,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthEntityAddRoleResponse> ExecuteAuthEntityAddRoleAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityAddRoleRequest request,CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthEntityAddRoleResponse> ExecuteAuthEntityAddRoleAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityAddRoleRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -495,58 +624,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
                 .CreateFlurlRequest(request, HttpMethod.Post, "get_appid_auth");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityGetAppIdAuthResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
-        #region MerchantCode
-        /// <summary>
-        /// <para>异步调用 [POST] /activate_merchantcode 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/merchant-account-activation ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AuthEntityActivateMerchantCodeResponse> ExecuteAuthEntityActivateMerchantCodeAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityActivateMerchantCodeRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "activate_merchantcode");
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityActivateMerchantCodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /query_merchantcode_status 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/pan-knowledge/role/query-merchant-account-activation-state ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.AuthEntityQueryMerchantCodeStatusResponse> ExecuteAuthEntityQueryMerchantCodeStatusAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityQueryMerchantCodeStatusRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "query_merchantcode_status");
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.AuthEntityQueryMerchantCodeStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

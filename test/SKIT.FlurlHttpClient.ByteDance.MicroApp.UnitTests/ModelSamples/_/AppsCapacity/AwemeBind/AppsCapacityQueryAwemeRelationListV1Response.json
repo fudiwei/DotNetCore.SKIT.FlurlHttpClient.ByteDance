@@ -1,0 +1,24 @@
+{
+    "data": {
+        "total_count": 12123,
+        "list": [
+            {
+                "bind_status": 1,
+                "reason": "XX",
+                "account_type": 1,
+                "aweme_id": 5791922398551857000,
+                "capacity_list": [
+                    {
+                        "status": 1,
+                        "fail_reason": "2eYo4eva9Q",
+                        "capacity_key": "2xaMvjuA6E"
+                    }
+                ],
+                "user_name": "XX"
+            }
+        ]
+    },
+    "err_no": 12345,
+    "err_msg": "28qeUcfsgo",
+    "log_id": "dI5gONG4WU"
+}

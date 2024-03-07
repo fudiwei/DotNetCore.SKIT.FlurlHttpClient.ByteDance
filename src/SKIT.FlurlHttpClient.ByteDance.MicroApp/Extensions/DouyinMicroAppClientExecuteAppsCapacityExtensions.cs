@@ -9,7 +9,155 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecuteAppsCapacityExtensions
     {
-        #region Aweme
+        #region AwemeBind
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/get_aweme_bind_template_list/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/get-template-list ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityGetAwemeBindTemplateListV1Response> ExecuteAppsCapacityGetAwemeBindTemplateListV1Async(this DouyinMicroAppClient client, Models.AppsCapacityGetAwemeBindTemplateListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_list", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeBindTemplateListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/get_aweme_bind_template_info/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/get-aweme-bind-template-info ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityGetAwemeBindTemplateInfoV1Response> ExecuteAppsCapacityGetAwemeBindTemplateInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityGetAwemeBindTemplateInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_info", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeBindTemplateInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/bind_aweme_relation/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/bind-aweme-relation ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityBindAwemeRelationV1Response> ExecuteAppsCapacityBindAwemeRelationV1Async(this DouyinMicroAppClient client, Models.AppsCapacityBindAwemeRelationV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_aweme_relation", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityBindAwemeRelationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v1/capacity/unbind_aweme_relation/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/unbind-aweme-relation ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUnbindAwemeRelationV1Response> ExecuteAppsCapacityUnbindAwemeRelationV1Async(this DouyinMicroAppClient client, Models.AppsCapacityUnbindAwemeRelationV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_aweme_relation", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUnbindAwemeRelationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/get_aweme_relation_bind_qrcode/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/get-aweme-relation-bind-qrcode ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityGetAwemeRelationBindQrcodeV1Response> ExecuteAppsCapacityGetAwemeRelationBindQrcodeV1Async(this DouyinMicroAppClient client, Models.AppsCapacityGetAwemeRelationBindQrcodeV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_aweme_relation_bind_qrcode", "")
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("capacity_list", string.Join(",", request.CapacityKeyList))
+                .WithHeader("access-token", request.AccessToken);
+
+            if (request.IsCoSubject is not null)
+                flurlReq.SetQueryParam("is_co_subject", request.IsCoSubject.Value ? "true" : "false");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeRelationBindQrcodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v1/capacity/query_aweme_relation_list/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/aweme-bind/query-aweme-relation-list ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAwemeRelationListV1Response> ExecuteAppsCapacityQueryAwemeRelationListV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryAwemeRelationListV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_relation_list", "")
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("page_num", request.PageNumber)
+                .SetQueryParam("page_size", request.PageSize)
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAwemeRelationListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region AwemeKeyword
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_aweme_video_keyword_list/ 接口。</para>
         /// <para>

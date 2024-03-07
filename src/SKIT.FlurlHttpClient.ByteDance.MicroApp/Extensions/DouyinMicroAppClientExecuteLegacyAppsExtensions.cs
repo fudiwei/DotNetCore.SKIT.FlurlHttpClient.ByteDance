@@ -2065,6 +2065,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxQueryTaskVideoDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/taskbox/update_orient_talents/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/updateorienttalent ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsTaskBoxUpdateOrientTalentsResponse> ExecuteAppsTaskBoxUpdateOrientTalentsAsync(this DouyinMicroAppClient client, Models.AppsTaskBoxUpdateOrientTalentsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update_orient_talents", "")
+                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/update_orient_talents");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxUpdateOrientTalentsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
         #endregion
 
         #region Video

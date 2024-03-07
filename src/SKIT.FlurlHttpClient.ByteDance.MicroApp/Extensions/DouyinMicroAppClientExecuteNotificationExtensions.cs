@@ -6,7 +6,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
-    public static class DouyinMicroAppClientExecuteAppsNotificationExtensions
+    public static class DouyinMicroAppClientExecuteNotificationExtensions
     {
         /// <summary>
         /// <para>异步调用 [GET] /notification/v2/subscription/query_tpl_list/ 接口。</para>

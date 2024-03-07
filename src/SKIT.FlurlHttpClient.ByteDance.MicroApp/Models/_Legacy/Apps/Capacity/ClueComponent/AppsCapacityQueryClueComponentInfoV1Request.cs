@@ -13,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// 获取或设置分页每页页数。
+        /// 获取或设置分页每页数量。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

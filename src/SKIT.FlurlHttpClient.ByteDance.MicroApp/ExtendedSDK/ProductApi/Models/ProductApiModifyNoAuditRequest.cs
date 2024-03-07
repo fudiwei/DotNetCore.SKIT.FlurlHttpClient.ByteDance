@@ -13,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
             {
                 public static class Types
                 {
-                    public class MiniAppPageInfo
+                    public class PageInfo
                     {
                         /// <summary>
                         /// 获取或设置小程序页面路径。
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path_info_lst")]
                 [System.Text.Json.Serialization.JsonPropertyName("path_info_lst")]
-                public IList<Types.MiniAppPageInfo> MiniAppPageList { get; set; } = new List<Types.MiniAppPageInfo>();
+                public IList<Types.PageInfo> PageList { get; set; } = new List<Types.PageInfo>();
             }
         }
 

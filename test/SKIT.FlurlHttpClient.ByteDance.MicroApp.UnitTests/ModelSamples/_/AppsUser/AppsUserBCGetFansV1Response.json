@@ -1,0 +1,11 @@
+{
+    "data": {
+        "result_list": [
+            {
+                "date": "yyyy-MM-dd",
+                "new_fans": "200",
+                "total_fans": "200"
+            }
+        ]
+    }
+}

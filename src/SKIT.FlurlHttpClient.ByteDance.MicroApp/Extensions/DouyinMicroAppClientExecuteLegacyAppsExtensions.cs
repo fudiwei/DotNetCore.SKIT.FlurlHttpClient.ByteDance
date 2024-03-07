@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             return await client.SendFlurlRequestAsync<Models.AppsCapacityUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-        #region Capacity/AwemeCapacity
+        #region Capacity/Aweme
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_aweme_permission_list 接口。</para>
         /// <para>

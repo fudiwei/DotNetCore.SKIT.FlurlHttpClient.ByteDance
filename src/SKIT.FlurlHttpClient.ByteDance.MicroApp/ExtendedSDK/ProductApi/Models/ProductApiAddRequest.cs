@@ -153,11 +153,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
                                 public string? ImagePath { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置富文本内容列表。
+                                /// 获取或设置富文本内容。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rich_text")]
                                 [System.Text.Json.Serialization.JsonPropertyName("rich_text")]
-                                public IList<Types.RichText>? RichTextList { get; set; }
+                                public Types.RichText? RichText { get; set; }
                             }
 
                             public class AnchorInfo

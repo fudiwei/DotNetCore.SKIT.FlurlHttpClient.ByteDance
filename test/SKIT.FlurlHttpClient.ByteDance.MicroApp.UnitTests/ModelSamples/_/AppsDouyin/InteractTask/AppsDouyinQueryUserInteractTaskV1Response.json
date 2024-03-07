@@ -1,0 +1,47 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "20231116111433010225127084047533",
+    "data": {
+        "task_info_list": {
+            "task_7301597285245279020": {
+                "task_id": "task_7301597285245279020",
+                "video_info": [
+                    {
+                        "video_status": 3,
+                        "completed": false,
+                        "video_id": "131****087e",
+                        "interact_info": {
+                            "like": {
+                                "completed": false
+                            },
+                            "play": {
+                                "stage": 0,
+                                "completed": false
+                            }
+                        }
+                    },
+                    {
+                        "interact_info": {
+                            "like": {
+                                "completed": false
+                            },
+                            "play": {
+                                "stage": 0,
+                                "completed": false
+                            }
+                        },
+                        "video_status": 1,
+                        "completed": false,
+                        "video_id": "1310******20e79"
+                    }
+                ],
+                "is_valid": true,
+                "success_count": 0,
+                "max_count": 10,
+                "err_msg": "",
+                "err_no": 0
+            }
+        }
+    }
+}

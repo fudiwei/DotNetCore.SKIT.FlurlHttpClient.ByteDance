@@ -1,0 +1,21 @@
+{
+    "err_msg": "",
+    "log_id": "6HhwWpLQiY",
+    "data": {
+        "qr_list": [
+            {
+                "qr_url": "pD3W471lb7",
+                "load_path": "nSyCaf9Fmy",
+                "stage": "GYZbBfqR5V",
+                "status": 1,
+                "exclusive_qr_url_prefix": 1
+            }
+        ],
+        "total_count": 1,
+        "bind_upper_limit": 1,
+        "bind_rest_count": 1,
+        "release_upper_limit": 1,
+        "release_rest_count": 1
+    },
+    "err_no": 0
+}

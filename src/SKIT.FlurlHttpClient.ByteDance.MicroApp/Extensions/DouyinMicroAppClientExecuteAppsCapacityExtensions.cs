@@ -222,6 +222,125 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region SimpleQrcode
+        /// <summary>
+        /// <para>异步调用 [GET] /apps/v2/capacity/query_simple_qr_bind_list/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/simple-qr-code/query-simple-qr-bind-listv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQuerySimpleQrcodeBindListV2Response> ExecuteAppsCapacityQuerySimpleQrcodeBindListV2Async(this DouyinMicroAppClient client, Models.AppsCapacityQuerySimpleQrcodeBindListV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v2", "capacity", "query_simple_qr_bind_list", "")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("page_num", request.PageNumber)
+                .SetQueryParam("page_size", request.PageSize);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQuerySimpleQrcodeBindListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/capacity/add_simple_qr_bind/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/simple-qr-code/add-simple-qr-bindv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityAddSimpleQrcodeBindV2Response> ExecuteAppsCapacityAddSimpleQrcodeBindV2Async(this DouyinMicroAppClient client, Models.AppsCapacityAddSimpleQrcodeBindV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "add_simple_qr_bind", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/capacity/update_simple_qr_bind/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/simple-qr-code/update-simple-qr-bindv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUpdateSimpleQrcodeBindV2Response> ExecuteAppsCapacityUpdateSimpleQrcodeBindV2Async(this DouyinMicroAppClient client, Models.AppsCapacityUpdateSimpleQrcodeBindV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/capacity/update_simple_qr_bind_status/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/simple-qr-code/update-simple-qr-bind-statusv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityUpdateSimpleQrcodeBindStatusV2Response> ExecuteAppsCapacityUpdateSimpleQrcodeBindStatusV2Async(this DouyinMicroAppClient client, Models.AppsCapacityUpdateSimpleQrcodeBindStatusV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind_status", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindStatusV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /apps/v2/capacity/delete_simple_qr_bind/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/simple-qr-code/delete-simple-qr-bindv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityDeleteSimpleQrcodeBindV2Response> ExecuteAppsCapacityDeleteSimpleQrcodeBindV2Async(this DouyinMicroAppClient client, Models.AppsCapacityDeleteSimpleQrcodeBindV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "delete_simple_qr_bind", "")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region SubService
         /// <summary>
         /// <para>异步调用 [POST] /apps/v1/capacity/create_ma_sub_service/ 接口。</para>

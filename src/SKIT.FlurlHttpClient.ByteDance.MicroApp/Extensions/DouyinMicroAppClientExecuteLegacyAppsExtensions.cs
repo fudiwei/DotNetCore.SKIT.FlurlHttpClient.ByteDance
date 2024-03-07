@@ -987,7 +987,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region TrafficPermission
+        #region Capacity/TrafficPermission
         /// <summary>
         /// <para>异步调用 [GET] /apps/v1/capacity/query_traffic_permission_status 接口。</para>
         /// <para>

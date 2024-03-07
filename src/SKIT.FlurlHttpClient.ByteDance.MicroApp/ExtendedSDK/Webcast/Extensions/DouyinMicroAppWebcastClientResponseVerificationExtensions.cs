@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
                 bool valid = Utilities.RSAUtility.Verify(
                     publicKeyPem: client.Credentials.PlatformPublicKey,
-                    messageData: new EncodedString(stringBuilder.ToString(), EncodingKinds.Literal),
+                    messageData: stringBuilder.ToString(),
                     encodingSignature: new EncodedString(response.ByteSignature, EncodingKinds.Base64),
                     Utilities.RSAUtility.DIGEST_ALGORITHM_SHA256
                 );

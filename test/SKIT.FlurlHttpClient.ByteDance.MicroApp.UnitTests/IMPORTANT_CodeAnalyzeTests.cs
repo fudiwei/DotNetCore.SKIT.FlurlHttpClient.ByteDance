@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                         SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Models",
                         SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp",
                         SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.MicroApp.Events",
-                        IgnoreExecutingExtensionTypes = static type => type.Namespace.Contains(".ExtendedSDK."),
+                        IgnoreExecutingExtensionTypes = static type => type.Namespace!.Contains(".ExtendedSDK."),
                         ThrowOnNotFoundRequestModelTypes = true,
                         ThrowOnNotFoundResponseModelTypes = true,
                         ThrowOnNotFoundExecutingExtensionTypes = true,

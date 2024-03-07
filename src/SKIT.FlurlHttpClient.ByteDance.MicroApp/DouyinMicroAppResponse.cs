@@ -6,17 +6,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public abstract class DouyinMicroAppResponse : CommonResponseBase, ICommonResponse
     {
         /// <summary>
-        /// 获取抖音小程序 API 返回的详细错误号。
+        /// 获取抖音小程序 API 返回的错误号。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("errcode")]
-        [System.Text.Json.Serialization.JsonPropertyName("errcode")]
-        public virtual long ErrorCode { get; set; }
+        [Newtonsoft.Json.JsonProperty("err_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
+        public virtual int ErrorNumber { get; set; }
+
+        /// <summary>
+        /// 获取抖音小程序 API 返回的错误信息。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("err_tips")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_tips")]
+        public virtual string? ErrorTips { get; set; }
 
         /// <summary>
         /// 获取抖音小程序 API 返回的错误描述。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("errmsg")]
-        [System.Text.Json.Serialization.JsonPropertyName("errmsg")]
+        [Newtonsoft.Json.JsonProperty("err_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public virtual string? ErrorMessage { get; set; }
 
         /// <summary>
@@ -30,13 +37,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <summary>
         /// 获取一个值，该值指示调用抖音小程序 API 是否成功。
         /// <para>
-        ///（即 HTTP 状态码为 200，且 <see cref="ErrorCode"/> 值为 0）
+        ///（即 HTTP 状态码为 200，且 <see cref="ErrorNumber"/> 值为 0）
         /// </para>
         /// </summary>
         /// <returns></returns>
         public override bool IsSuccessful()
         {
-            return GetRawStatus() == 200 && ErrorCode == 0;
+            return GetRawStatus() == 200 && ErrorNumber == 0;
         }
     }
 }

@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /v2/auth/gen_link 接口的请求。</para>
+    /// <para>表示 [POST] /tpapp/v3/auth/gen_link 接口的请求。</para>
     /// </summary>
-    public class OpenApiAuthGenerateLinkV2Request : DouyinMicroAppOpenApiRequest
+    public class OpenApiTpAppAuthGenerateLinkV3Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置授权链接类型。

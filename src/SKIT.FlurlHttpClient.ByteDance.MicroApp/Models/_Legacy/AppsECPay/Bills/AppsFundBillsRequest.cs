@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 
         /// <summary>
         /// 获取或设置账户类型。
-        /// <para>默认值：ALL</para>
+        /// <para>默认值："ALL"</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 
         /// <summary>
         /// 获取或设置收支类型。
-        /// <para>默认值：ALL</para>
+        /// <para>默认值："ALL"</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 
         /// <summary>
         /// 获取或设置交易类型。
-        /// <para>默认值：ALL</para>
+        /// <para>默认值："ALL"</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("AuthorizationCode")]
         [System.Text.Json.Serialization.JsonPropertyName("AuthorizationCode")]
         [System.Xml.Serialization.XmlElement("AuthorizationCode")]
-        public string AuthCode { get; set; } = default!;
+        public string AuthorizationCode { get; set; } = default!;
 
         /// <summary>
         /// 获取或设置授权码有效期（单位：秒）。
@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("AuthorizationCodeExpiresIn")]
         [System.Text.Json.Serialization.JsonPropertyName("AuthorizationCodeExpiresIn")]
         [System.Xml.Serialization.XmlElement("AuthorizationCodeExpiresIn")]
-        public long AuthCodeExpiresIn { get; set; }
+        public long AuthorizationCodeExpiresIn { get; set; }
 
         /// <summary>
         /// 获取或设置代创建的小程序名称。

@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     public abstract class AppsGameWalletRequestBase : DouyinMicroAppRequest
     {
@@ -30,7 +30,7 @@
 
         /// <summary>
         /// 获取或设置平台。
-        /// <para>默认值：android</para>
+        /// <para>默认值："android"</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pf")]
         [System.Text.Json.Serialization.JsonPropertyName("pf")]

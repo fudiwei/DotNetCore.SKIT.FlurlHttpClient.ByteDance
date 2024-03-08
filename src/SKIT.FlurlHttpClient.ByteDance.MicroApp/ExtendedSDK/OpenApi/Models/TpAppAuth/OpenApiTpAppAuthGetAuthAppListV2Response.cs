@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /v1/tp/auth_app_list 接口的响应。</para>
+    /// <para>表示 [GET] /tpapp/v2/auth/get_auth_app_list 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyAuthAppListV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiTpAppAuthGetAuthAppListV2Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {
@@ -16,15 +16,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// <summary>
                         /// 获取或设置小程序 AppId。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("authAppId")]
-                        [System.Text.Json.Serialization.JsonPropertyName("authAppId")]
+                        [Newtonsoft.Json.JsonProperty("auth_appid")]
+                        [System.Text.Json.Serialization.JsonPropertyName("auth_appid")]
                         public string AppId { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置授权时间戳。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("authTime")]
-                        [System.Text.Json.Serialization.JsonPropertyName("authTime")]
+                        [Newtonsoft.Json.JsonProperty("auth_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("auth_time")]
                         public long AuthTimestamp { get; set; }
                     }
                 }
@@ -32,8 +32,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// <summary>
                 /// 获取或设置授权小程序列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("authAppList")]
-                [System.Text.Json.Serialization.JsonPropertyName("authAppList")]
+                [Newtonsoft.Json.JsonProperty("auth_app_list")]
+                [System.Text.Json.Serialization.JsonPropertyName("auth_app_list")]
                 public Types.AuthApp[] AuthAppList { get; set; } = default!;
 
                 /// <summary>
@@ -44,6 +44,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 public int TotalCount { get; set; }
             }
         }
+
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonProperty("err_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
+        public override int ErrorNumber { get; set; }
+
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonProperty("err_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
+        public override string? ErrorMessage { get; set; }
 
         /// <summary>
         /// 获取或设置返回数据。

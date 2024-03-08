@@ -1,20 +1,27 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /tpapp/v2/file/upload_material 接口的响应。</para>
+    /// <para>表示 [POST] /tpapp/v2/auth/retrieve_auth_code 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyFileUploadMaterialV2Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiTpAppAuthRetrieveAuthCodeV2Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {
             public class Data
             {
                 /// <summary>
-                /// 获取或设置文件路径。
+                /// 获取或设置授权码。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("path")]
-                [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string FilePath { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("authorization_code")]
+                [System.Text.Json.Serialization.JsonPropertyName("authorization_code")]
+                public string AuthorizationCode { get; set; } = default!;
+
+                /// <summary>
+                /// 获取或设置授权码有效期（单位：秒）。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("expires_in")]
+                [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
+                public int ExpiresIn { get; set; }
             }
         }
 

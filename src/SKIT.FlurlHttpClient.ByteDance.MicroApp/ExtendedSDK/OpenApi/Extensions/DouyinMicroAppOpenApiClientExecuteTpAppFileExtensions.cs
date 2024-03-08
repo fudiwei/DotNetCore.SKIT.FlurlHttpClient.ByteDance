@@ -3,12 +3,11 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
-    public static class DouyinMicroAppOpenApiClientExecuteThirdPartyFileExtensions
+    public static class DouyinMicroAppOpenApiClientExecuteTpAppFileExtensions
     {
         /// <summary>
         /// <para>异步调用 [POST] /tpapp/v2/file/upload_material 接口。</para>
@@ -21,7 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyFileUploadMaterialV2Response> ExecuteOpenApiThirdPartyFileUploadMaterialV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyFileUploadMaterialV2Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenApiTpAppFileUploadMaterialV2Response> ExecuteOpenApiTpAppFileUploadMaterialV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiTpAppFileUploadMaterialV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -31,13 +30,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "tpapp", "v2", "file", "upload_material")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("tpapp", "v2", "file", "upload_material"))
                 .WithHeader("access-token", request.ComponentAccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: "image/jpeg", formDataName: "material_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
 
-            return await client.SendFlurlRequestAsync<Models.OpenApiThirdPartyFileUploadMaterialV2Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsync<Models.OpenApiTpAppFileUploadMaterialV2Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

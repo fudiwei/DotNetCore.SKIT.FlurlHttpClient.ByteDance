@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /tpapp/v2/file/upload_material 接口的请求。</para>
     /// </summary>
-    public class OpenApiThirdPartyFileUploadMaterialV2Request : DouyinMicroAppOpenApiRequest
+    public class OpenApiTpAppFileUploadMaterialV2Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置上传的文件类型。

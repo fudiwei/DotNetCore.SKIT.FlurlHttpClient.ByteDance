@@ -14,6 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
         /// <summary>
         /// 获取或设置抖音小程序第三方的 AccessToken。
+        /// <para>注意：v1、v2 版的 ComponentAccessToken 不可混用。</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
@@ -28,6 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
         /// <summary>
         /// 获取或设置抖音小程序授权方的 AccessToken。
+        /// <para>注意：v1、v2 版的 AuthorizerAccessToken 不可混用。</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

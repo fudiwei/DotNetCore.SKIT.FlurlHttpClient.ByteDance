@@ -4,7 +4,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
     public static class DouyinMicroAppOpenApiClientParameterExtensions
     {
-        private const string BASE_URL = "https://open.microapp.bytedance.com/openapi";
+        private const string BASE_URL = "https://open.microapp.bytedance.com";
 
         /// <summary>
         /// <para>生成第三方应用服务商授权 URL。</para>

@@ -5,6 +5,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// </summary>
     public class OpenApiAuthThirdPartyTokenV2Response : DouyinMicroAppOpenApiResponse
     {
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonProperty("err_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
+        public override int ErrorNumber { get; set; }
+
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonProperty("err_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
+        public override string? ErrorMessage { get; set; }
+
         /// <summary>
         /// 获取或设置第三方平台 AccessToken。
         /// </summary>

@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [GET] /v1/tp/poi/supplier/query/match_task 接口的响应。</para>
     /// </summary>
-    public class OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

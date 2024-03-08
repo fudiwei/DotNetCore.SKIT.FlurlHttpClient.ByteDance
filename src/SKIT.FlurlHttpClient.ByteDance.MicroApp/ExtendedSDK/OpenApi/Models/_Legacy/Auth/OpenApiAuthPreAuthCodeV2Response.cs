@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v2/auth/pre_auth_code 接口的响应。</para>
     /// </summary>
-    public class OpenApiAuthPreAuthCodeV2Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiAuthPreAuthCodeV2Response : OpenApiLegacyResponseBase
     {
         /// <summary>
         /// 获取或设置预授权码。

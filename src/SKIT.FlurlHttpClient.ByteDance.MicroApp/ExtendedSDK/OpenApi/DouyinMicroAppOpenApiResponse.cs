@@ -8,15 +8,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <summary>
         /// 获取抖音小程序 API 返回的错误码。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("errno")]
-        [System.Text.Json.Serialization.JsonPropertyName("errno")]
+        [Newtonsoft.Json.JsonProperty("err_no")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_no")]
         public virtual int ErrorNumber { get; set; }
 
         /// <summary>
         /// 获取抖音小程序 API 返回的错误描述。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("message")]
-        [System.Text.Json.Serialization.JsonPropertyName("message")]
+        [Newtonsoft.Json.JsonProperty("err_msg")]
+        [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public virtual string? ErrorMessage { get; set; }
 
         /// <summary>

@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/app/credit_score 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppCreditScoreV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppCreditScoreV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/upload_material 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppUploadMaterialV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiMicroAppUploadMaterialV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/package/versions 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppPackageVersionsV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiMicroAppPackageVersionsV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

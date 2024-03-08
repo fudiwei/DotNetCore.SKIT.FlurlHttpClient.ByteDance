@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/modify_webview_domain 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppAppModifyWebviewDomainV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiMicroAppAppModifyWebviewDomainV1Response : OpenApiLegacyResponseBase
     {
         /// <summary>
         /// 获取或设置 Webview 域名列表。

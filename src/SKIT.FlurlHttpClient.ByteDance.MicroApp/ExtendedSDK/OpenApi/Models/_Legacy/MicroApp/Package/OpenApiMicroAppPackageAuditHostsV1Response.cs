@@ -1,9 +1,9 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/package/audit_hosts 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppPackageAuditHostsV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiMicroAppPackageAuditHostsV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

@@ -1,0 +1,15 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20240115152221728055690DCBE01D5E8E",
+    "data": {
+        "template_list": [
+            {
+                "user_desc": "xxxxx",
+                "user_version": "x.x.x",
+                "create_time": 1667389622,
+                "template_id": 1010
+            }
+        ]
+    }
+}

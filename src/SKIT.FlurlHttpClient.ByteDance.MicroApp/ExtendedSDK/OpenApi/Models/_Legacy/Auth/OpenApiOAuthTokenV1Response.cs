@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/oauth/token 接口的响应。</para>
     /// </summary>
-    public class OpenApiOAuthTokenV1Response : DouyinMicroAppOpenApiResponse
+    public class OpenApiOAuthTokenV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
         {

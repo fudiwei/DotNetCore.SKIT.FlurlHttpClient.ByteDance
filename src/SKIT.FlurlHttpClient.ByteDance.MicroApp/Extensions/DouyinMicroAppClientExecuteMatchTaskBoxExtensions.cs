@@ -6,7 +6,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
-    public static class DouyinMicroAppClientExecuteMatchExtensions
+    public static class DouyinMicroAppClientExecuteMatchTaskBoxExtensions
     {
         /// <summary>
         /// <para>异步调用 [POST] /match/v2/taskbox/add_task/ 接口。</para>

@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiTpAppTemplateGetTemplateAppListV2Response> ExecuteOpenApiTpAppTemplateGetTemplateAppListV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiTpAppTemplateGetTemplateAppListV2Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenTpAppTemplateGetTemplateAppListV2Response> ExecuteOpenTpAppTemplateGetTemplateAppListV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenTpAppTemplateGetTemplateAppListV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .CreateFlurlRequest(request, HttpMethod.Get, "tpapp", "v2", "template", "get_tpl_app_list")
                 .WithHeader("access-token", request.ComponentAccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiTpAppTemplateGetTemplateAppListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OpenTpAppTemplateGetTemplateAppListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiTpAppTemplateGetTemplateListV2Response> ExecuteOpenApiTpAppTemplateGetTemplateListV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiTpAppTemplateGetTemplateListV2Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenTpAppTemplateGetTemplateListV2Response> ExecuteOpenTpAppTemplateGetTemplateListV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenTpAppTemplateGetTemplateListV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .CreateFlurlRequest(request, HttpMethod.Get, "tpapp", "v2", "template", "get_tpl_list")
                 .WithHeader("access-token", request.ComponentAccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiTpAppTemplateGetTemplateListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OpenTpAppTemplateGetTemplateListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiTpAppTemplateAddTemplateV2Response> ExecuteOpenApiTpAppTemplateAddTemplateV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiTpAppTemplateAddTemplateV2Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenTpAppTemplateAddTemplateV2Response> ExecuteOpenTpAppTemplateAddTemplateV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenTpAppTemplateAddTemplateV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .CreateFlurlRequest(request, HttpMethod.Post, "tpapp", "v2", "template", "add_tpl")
                 .WithHeader("access-token", request.ComponentAccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiTpAppTemplateAddTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OpenTpAppTemplateAddTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OpenApiTpAppTemplateDeleteTemplateV2Response> ExecuteOpenApiTpAppTemplateDeleteTemplateV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiTpAppTemplateDeleteTemplateV2Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OpenTpAppTemplateDeleteTemplateV2Response> ExecuteOpenTpAppTemplateDeleteTemplateV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenTpAppTemplateDeleteTemplateV2Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .CreateFlurlRequest(request, HttpMethod.Post, "tpapp", "v2", "template", "add_tpl")
                 .WithHeader("access-token", request.ComponentAccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiTpAppTemplateDeleteTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OpenTpAppTemplateDeleteTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

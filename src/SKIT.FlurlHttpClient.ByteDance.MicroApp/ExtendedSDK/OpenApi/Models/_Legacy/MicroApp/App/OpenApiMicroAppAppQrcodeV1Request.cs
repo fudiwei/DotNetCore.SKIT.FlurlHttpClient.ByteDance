@@ -1,13 +1,16 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
+using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/app/qrcode 接口的请求。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2024-01-23 下线。")]
     public class OpenApiMicroAppAppQrcodeV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
-        /// 获取或设置新名称。
-        /// <para>默认值：current</para>
+        /// 获取或设置版本。
+        /// <para>默认值："current"</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("version")]
         [System.Text.Json.Serialization.JsonPropertyName("version")]

@@ -28,5 +28,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string? MaterialFileName { get; set; }
+
+        /// <summary>
+        /// 获取或设置资源文件 MIME 类型。如果不指定将由系统自动生成。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? MaterialFileContentType { get; set; }
     }
 }

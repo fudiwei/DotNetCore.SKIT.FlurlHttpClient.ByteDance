@@ -57,13 +57,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request.MaterialFileName is null)
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
+            if (request.MaterialFileContentType is null)
+                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? "image/jpeg";
+
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "upload_pic_material")
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "tp", "upload_pic_material"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_access_token", request.ComponentAccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: "image/jpeg", formDataName: "material_file");
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
 
             return await client.SendFlurlRequestAsync<Models.OpenApiThirdPartyUploadPictureMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);

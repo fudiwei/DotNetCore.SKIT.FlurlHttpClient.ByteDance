@@ -1,0 +1,17 @@
+{
+    "category_info": [
+        {
+            "category": "xxx,xxx,xxx",
+            "category_cert": [
+                {
+                    "id": "x",
+                    "name": "《信息网络传播视听节目许可证》",
+                    "path_list": [ "xxxx/xxxx" ]
+                }
+            ]
+        },
+        {
+            "category": "xx,xxxx,xx"
+        }
+    ]
+}

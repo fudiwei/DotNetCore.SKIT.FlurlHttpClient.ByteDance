@@ -1,0 +1,45 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202401162021508C7E711C39144F1127C8",
+    "data": {
+        "new_name_audit_info": {
+            "advice": "",
+            "new_name": "xxxx",
+            "new_name_audit_state": 4,
+            "reason": "",
+            "remaining_times": 3
+        },
+        "app_id": "xxxx",
+        "app_intro": "xxxxx",
+        "new_icon_audit_info": {
+            "advice": "",
+            "new_icon": "xxxx",
+            "new_icon_audit_state": 2,
+            "reason": "",
+            "remaining_times": 3
+        },
+        "new_intro_audit_info": {
+            "advice": "",
+            "new_intro": "xxxxx",
+            "new_intro_audit_state": 2,
+            "reason": "",
+            "remaining_times": 3
+        },
+        "subject_audit_info": {
+            "subject_name": "xxx",
+            "subject_type": 1
+        },
+        "app_categories_audit_info": [
+            {
+                "app_category_audit_state": 2,
+                "app_category_name": "xx-xxxx-xx",
+                "reason": "",
+                "app_category": "xxx,xxx,xxx"
+            }
+        ],
+        "app_icon": "xxxxx",
+        "app_name": "xxxx",
+        "app_state": 0
+    }
+}

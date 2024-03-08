@@ -1,8 +1,11 @@
+using System;
+
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
     /// <para>表示 [POST] /v1/microapp/upload_material 接口的响应。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2024-01-23 下线。")]
     public class OpenApiMicroAppUploadMaterialV1Response : OpenApiLegacyResponseBase
     {
         public static class Types
@@ -14,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path")]
                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string Path { get; set; } = default!;
+                public string FilePath { get; set; } = default!;
             }
         }
 

@@ -48,6 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppUploadMaterialV1Response> ExecuteOpenApiMicroAppUploadMaterialV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppUploadMaterialV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -57,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + (request.MaterialType == 8 ? ".pdf" : ".jpg");
 
             if (request.MaterialFileContentType is null)
-                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName);
+                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? (request.MaterialType == 8 ? "application/pdf" : "image/jpeg");
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "upload_material")
@@ -65,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType!, formDataName: "material_file");
+            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
 
             return await client.SendFlurlRequestAsync<Models.OpenApiMicroAppUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -83,6 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppInfoV1Response> ExecuteOpenApiMicroAppAppInfoV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppInfoV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -108,6 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppQrcodeV1Response> ExecuteOpenApiMicroAppAppQrcodeV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppQrcodeV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -133,6 +136,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppCheckAppNameV1Response> ExecuteOpenApiMicroAppAppCheckAppNameV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppCheckAppNameV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -159,6 +163,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppModifyAppNameV1Response> ExecuteOpenApiMicroAppAppModifyAppNameV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppModifyAppNameV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -184,6 +189,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppModifyAppIntroductionV1Response> ExecuteOpenApiMicroAppAppModifyAppIntroductionV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppModifyAppIntroductionV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -209,6 +215,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppModifyAppIconV1Response> ExecuteOpenApiMicroAppAppModifyAppIconV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppModifyAppIconV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -234,6 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppAllCategoriesV1Response> ExecuteOpenApiMicroAppAppAllCategoriesV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppAllCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -259,6 +267,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppCategoriesV1Response> ExecuteOpenApiMicroAppAppCategoriesV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -284,6 +293,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppAddCategoriesV1Response> ExecuteOpenApiMicroAppAppAddCategoriesV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppAddCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -309,6 +319,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppDeleteCategoriesV1Response> ExecuteOpenApiMicroAppAppDeleteCategoriesV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppDeleteCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -334,6 +345,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppSupplyCategoriesV1Response> ExecuteOpenApiMicroAppAppSupplyCategoriesV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppSupplyCategoriesV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -359,6 +371,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppModifyServerDomainV1Response> ExecuteOpenApiMicroAppAppModifyServerDomainV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppModifyServerDomainV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -384,6 +397,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppModifyWebviewDomainV1Response> ExecuteOpenApiMicroAppAppModifyWebviewDomainV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppModifyWebviewDomainV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -409,6 +423,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-10-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppQualityRatingV1Response> ExecuteOpenApiMicroAppAppQualityRatingV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppQualityRatingV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -434,6 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2024-01-23 下线。")]
         public static async Task<Models.OpenApiMicroAppAppCreditScoreV1Response> ExecuteOpenApiMicroAppAppCreditScoreV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiMicroAppAppCreditScoreV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

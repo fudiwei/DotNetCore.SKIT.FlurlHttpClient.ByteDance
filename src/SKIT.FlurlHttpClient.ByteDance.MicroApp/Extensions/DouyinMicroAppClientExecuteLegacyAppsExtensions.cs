@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "token")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v2/token");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v2", "token"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTokenV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "jscode2session")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v2/jscode2session");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v2", "jscode2session"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsJsCode2SessionV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "upload_material")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/upload_material")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "upload_material"))
                 .WithHeader("access-token", request.AccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: "image/jpeg", formDataName: "material_file");
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_permission_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_aweme_permission_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_aweme_permission_list"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAwemePermissionListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -148,7 +148,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "apply_aweme_permission")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/apply_aweme_permission")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "apply_aweme_permission"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityApplyAwemePermissionV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -173,7 +173,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_scope_quota_detail")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_scope_quota_detail")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_scope_quota_detail"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("permission_key", request.PermissionKey);
 
@@ -199,7 +199,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "apply_scope_quota")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/apply_scope_quota")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "apply_scope_quota"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityApplyScopeQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -225,7 +225,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_clue_component_info")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/create_clue_component_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "create_clue_component_info"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -249,7 +249,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_clue_component_info")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_clue_component_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_clue_component_info"))
                 .WithHeader("access-token", request.AccessToken);
 
             if (request.PageNumber is not null)
@@ -279,7 +279,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_clue_component_info")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_clue_component_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "update_clue_component_info"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -303,7 +303,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Delete, "apps", "v1", "capacity", "delete_clue_component_info")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/delete_clue_component_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "delete_clue_component_info"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -330,7 +330,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_aweme_user")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/bind_aweme_user")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "bind_aweme_user"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityBindAwemeUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -355,7 +355,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_aweme_user_bind")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/unbind_aweme_user_bind")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "unbind_aweme_user_bind"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUnbindAwemeUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -380,7 +380,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_aweme_user_bind_qrcode")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/get_aweme_user_bind_qrcode")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "get_aweme_user_bind_qrcode"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("type", request.BindType);
 
@@ -406,7 +406,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_user_bind_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_aweme_user_bind_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_aweme_user_bind_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("type", request.BindType)
                 .SetQueryParam("page_num", request.PageNumber)
@@ -440,7 +440,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "apply_capacity")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/apply_capacity")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "apply_capacity"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityApplyCapacityV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -469,7 +469,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_apply_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_apply_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_apply_status"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("capacity_key", request.CapacityKey);
 
@@ -495,7 +495,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_self_mount_user")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/bind_self_mount_user")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "bind_self_mount_user"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityBindSelfMountUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -520,7 +520,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_self_mount_user")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/unbind_self_mount_user")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "unbind_self_mount_user"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUnbindSelfMountUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -545,7 +545,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_self_mount_bind_qrcode")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/get_self_mount_bind_qrcode")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "get_self_mount_bind_qrcode"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("capacity_key", request.CapacityKey);
 
@@ -571,7 +571,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_self_mount_user_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_self_mount_user_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_self_mount_user_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("capacity_key", request.CapacityKey)
                 .SetQueryParam("page_num", request.PageNumber)
@@ -600,7 +600,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_capcut_info")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_capcut_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_capcut_info"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryCapcutInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -625,7 +625,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_capcut_template_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_capcut_template_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_capcut_template_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
@@ -652,7 +652,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_capcut_template_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_capcut_template_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "update_capcut_template_status"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateCapcutTemplateStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -680,7 +680,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_simple_qr_bind_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_simple_qr_bind_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_simple_qr_bind_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
@@ -707,7 +707,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_simple_qr_bind")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/add_simple_qr_bind")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "add_simple_qr_bind"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddSimpleQrcodeBindV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -732,7 +732,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_simple_qr_bind")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_simple_qr_bind")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "update_simple_qr_bind"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -757,7 +757,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_simple_qr_bind_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_simple_qr_bind_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "update_simple_qr_bind_status"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -782,7 +782,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_simple_qr_bind")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/delete_simple_qr_bind")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "delete_simple_qr_bind"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteSimpleQrcodeBindV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -809,7 +809,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_subscribe_notification_tpl_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_subscribe_notification_tpl_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_subscribe_notification_tpl_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -844,7 +844,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_app_subscribe_notification_tpl")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_app_subscribe_notification_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_app_subscribe_notification_tpl"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -875,7 +875,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_created_subscribe_notification_tpl_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_created_subscribe_notification_tpl_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_created_subscribe_notification_tpl_list"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
@@ -905,7 +905,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_app_subscribe_notification_tpl")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/add_app_subscribe_notification_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "add_app_subscribe_notification_tpl"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddAppSubscribeNotificationTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -930,7 +930,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "modify_app_subscribe_notification_tpl")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/modify_app_subscribe_notification_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "modify_app_subscribe_notification_tpl"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityModifyAppSubscribeNotificationTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -955,7 +955,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_app_subscribe_notification_tpl")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/delete_app_subscribe_notification_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "delete_app_subscribe_notification_tpl"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteAppSubscribeNotificationTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -980,7 +980,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_subscribe_notification_tpl")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/create_subscribe_notification_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "create_subscribe_notification_tpl"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateAppSubscribeNotificationTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1007,7 +1007,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_traffic_permission_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_traffic_permission_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_traffic_permission_status"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryTrafficPermissionStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1032,7 +1032,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "open_traffic_permission")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/open_traffic_permission")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "open_traffic_permission"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityOpenTrafficPermissionV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1057,7 +1057,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_placement_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_ad_placement_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_ad_placement_list"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAdPlacementListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1082,7 +1082,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_ad_placement")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/add_ad_placement")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "add_ad_placement"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddAdPlacementV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1107,7 +1107,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "update_ad_placement_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/update_ad_placement_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "update_ad_placement_status"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateAdPlacementStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1131,7 +1131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_income")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_ad_income")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_ad_income"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_date", request.StartDateString)
                 .SetQueryParam("end_date", request.EndDateString);
@@ -1160,7 +1160,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ad_settlement_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/capacity/query_ad_settlement_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "capacity", "query_ad_settlement_list"))
                 .WithHeader("access-token", request.AccessToken);
 
             if (request.PeriodString is not null)
@@ -1197,7 +1197,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "censor", "image")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/censor/image");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "censor", "image"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCensorImageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1225,7 +1225,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "customer_service", "url")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/customer_service/url")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "customer_service", "url"))
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("appid", request.AppId)
                 .SetQueryParam("openid", request.OpenId)
@@ -1259,7 +1259,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "chat", "customer_service_url")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/chat/customer_service_url")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "chat", "customer_service_url"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("appid", request.AppId)
                 .SetQueryParam("openid", request.OpenId)
@@ -1297,7 +1297,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_deal_overview_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_deal_overview_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_deal_overview_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1330,7 +1330,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_video_deal_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_video_deal_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_video_deal_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1360,7 +1360,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_room")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_live_room")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_live_room"))
                 .WithHeader("access-token", request.AccessToken);
 
             if (request.AnchorName is not null)
@@ -1388,7 +1388,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_room_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_live_room_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_live_room_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("live_room_id", request.LiveRoomId);
 
@@ -1414,7 +1414,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_live_deal_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_live_deal_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_live_deal_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("live_room_id", request.LiveRoomId);
 
@@ -1440,7 +1440,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_product_deal_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_product_deal_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_product_deal_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp)
@@ -1474,7 +1474,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_behavior_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_behavior_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_behavior_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1510,7 +1510,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_real_time_user_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_real_time_user_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_real_time_user_data"))
                 .WithHeader("access-token", request.AccessToken);
 
             if (request.HostName is not null)
@@ -1541,7 +1541,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_retention_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_retention_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_retention_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1580,7 +1580,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_scene_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_scene_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_scene_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1613,7 +1613,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_user_portrait_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_user_portrait_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_user_portrait_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1649,7 +1649,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_client_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_client_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_client_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1685,7 +1685,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "data_analysis", "query_page_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/data_analysis/query_page_data")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "data_analysis", "query_page_data"))
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("start_time", request.StartTimestamp)
                 .SetQueryParam("end_time", request.EndTimestamp);
@@ -1729,7 +1729,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "upload_live_image")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/upload_live_image")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "upload_live_image"))
                 .WithHeader("access-token", request.AccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: "image/jpeg", formDataName: "image");
@@ -1762,7 +1762,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "live", "set_black_white_list")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/v1/live/set_black_white_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "v1", "live", "set_black_white_list"))
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsLiveSetBlackWhiteListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1788,7 +1788,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "message", "custom", "send")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/message/custom/send")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "message", "custom", "send"))
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsMessageCustomSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -1815,7 +1815,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "order", "v2", "push")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/order/v2/push");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "order", "v2", "push"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsOrderPushV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1838,7 +1838,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "order", "delete")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/order/delete");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "order", "delete"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsOrderDeleteResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1864,7 +1864,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "qrcode")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/qrcode");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "qrcode"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1894,7 +1894,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "subscribe_notification", "developer", "v1", "notify")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/subscribe_notification/developer/v1/notify");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "subscribe_notification", "developer", "v1", "notify"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsSubscribeNotificationDeveloperNotifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1922,7 +1922,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "share_config")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/share_config");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "share_config"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsShareConfigResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1951,7 +1951,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "add_task")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/add_task");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "add_task"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxAddTaskResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1978,7 +1978,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update_task")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/update_task");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "update_task"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxUpdateTaskResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2005,7 +2005,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update", "status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/update/status");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "update", "status"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxUpdateStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2032,7 +2032,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "query_app_task_id")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/query_app_task_id");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "query_app_task_id"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxQueryAppTaskIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2059,7 +2059,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "query_task_video_data")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/query_task_video_data");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "query_task_video_data"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxQueryTaskVideoDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2085,7 +2085,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update_orient_talents", "")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/taskbox/update_orient_talents");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "update_orient_talents", ""));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxUpdateOrientTalentsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2116,7 +2116,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "convert_video_id", "video_id_to_open_item_id")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/convert_video_id/video_id_to_open_item_id");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "convert_video_id", "video_id_to_open_item_id"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsConvertVideoIdToOpenItemIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -2142,7 +2142,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "convert_video_id", "open_item_id_to_encrypt_id")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/convert_video_id/open_item_id_to_encrypt_id");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "convert_video_id", "open_item_id_to_encrypt_id"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsConvertOpenItemIdToEncryptIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

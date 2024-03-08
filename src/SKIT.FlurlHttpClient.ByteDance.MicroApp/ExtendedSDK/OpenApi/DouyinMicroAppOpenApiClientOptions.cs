@@ -12,10 +12,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置抖音小程序服务商平台 API 域名。
+        /// 获取或设置抖音小程序服务商平台 API 入口点。
         /// <para>默认值：<see cref="DouyinMicroAppOpenApiEndpoints.DEFAULT"/></para>
         /// </summary>
         public string Endpoints { get; set; } = DouyinMicroAppOpenApiEndpoints.DEFAULT;
+
+        /// <summary>
+        /// 获取或设置抖音小程序服务商平台旧版 API 入口点。
+        /// <para>默认值：<see cref="DouyinMicroAppOpenApiEndpoints.LEGACY_DEFAULT"/></para>
+        /// </summary>
+        public string EndpointForLegacy { get; set; } = DouyinMicroAppOpenApiEndpoints.LEGACY_DEFAULT;
 
         /// <summary>
         /// 获取或设置抖音小程序服务商 AppId。

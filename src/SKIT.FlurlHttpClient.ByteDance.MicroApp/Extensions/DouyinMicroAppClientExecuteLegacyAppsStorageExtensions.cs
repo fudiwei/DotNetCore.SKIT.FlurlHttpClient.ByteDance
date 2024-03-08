@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "set_user_storage")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/set_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "set_user_storage"))
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("signature", request.Signature)
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "remove_user_storage")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/remove_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "remove_user_storage"))
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("signature", request.Signature)

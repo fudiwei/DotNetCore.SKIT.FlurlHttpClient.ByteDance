@@ -3,507 +3,13 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
-    public static class DouyinMicroAppOpenApiClientExecuteOpenApiExtensions
+    public static class DouyinMicroAppOpenApiClientExecuteLegacyMicroAppExtensions
     {
-        #region Auth
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/auth/tp/token 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentaccesstoken ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiAuthThirdPartyTokenV1Response> ExecuteOpenApiAuthThirdPartyTokenV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiAuthThirdPartyTokenV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.ComponentAppSecret is null)
-                request.ComponentAppSecret = client.Credentials.ComponentAppSecret;
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "auth", "tp", "token")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_appsecret", request.ComponentAppSecret)
-                .SetQueryParam("component_ticket", request.ComponentTicket);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiAuthThirdPartyTokenV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v2/auth/pre_auth_code 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/preauthcode ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiAuthPreAuthCodeV2Response> ExecuteOpenApiAuthPreAuthCodeV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiAuthPreAuthCodeV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v2", "auth", "pre_auth_code")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiAuthPreAuthCodeV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v2/auth/gen_link 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/genlink ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiAuthGenerateLinkV2Response> ExecuteOpenApiAuthGenerateLinkV2Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiAuthGenerateLinkV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v2", "auth", "gen_link")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiAuthGenerateLinkV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/auth/retrieve 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/findauthorizationcode ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiAuthRetrieveV1Response> ExecuteOpenApiAuthRetrieveV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiAuthRetrieveV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "auth", "retrieve")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("authorization_appid", request.AuthorizerAppId);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiAuthRetrieveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
-        #region OAuth
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/oauth/token 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/authorizeraccesstoken ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/authorizerrefreshtoken ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiOAuthTokenV1Response> ExecuteOpenApiOAuthTokenV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiOAuthTokenV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "oauth", "token")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("grant_type", request.GrantType);
-
-            if (request.AuthCode is not null)
-                flurlReq.SetQueryParam("authorization_code", request.AuthCode);
-
-            if (request.AuthorizerRefreshToken is not null)
-                flurlReq.SetQueryParam("authorizer_refresh_token", request.AuthorizerRefreshToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiOAuthTokenV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
-        #region ThirdParty
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/auth_app_list 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/authapplist ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyAuthAppListV1Response> ExecuteOpenApiThirdPartyAuthAppListV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyAuthAppListV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "auth_app_list")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("page", request.PageNumber)
-                .SetQueryParam("size", request.PageSize);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyAuthAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/tp/upload_pic_material 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/upload-pic-material ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyUploadPictureMaterialV1Response> ExecuteOpenApiThirdPartyUploadPictureMaterialV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyUploadPictureMaterialV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            if (request.MaterialFileName is null)
-                request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "upload_pic_material")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: "image/jpeg", formDataName: "material_file");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
-
-            return await client.SendFlurlRequestAsync<Models.OpenApiThirdPartyUploadPictureMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        #region ThirdParty/Domain
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/download/webview_file 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/domain/download ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyDownloadWebviewFileV1Response> ExecuteOpenApiThirdPartyDownloadWebviewFileV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyDownloadWebviewFileV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "download", "webview_file")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyDownloadWebviewFileV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
-        #region ThirdParty/POI
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/tp/poi/supplier/match 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-match ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOISupplierMatchV1Response> ExecuteOpenApiThirdPartyPOISupplierMatchV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOISupplierMatchV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "poi", "supplier", "match")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOISupplierMatchV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/poi/supplier/query/match_task 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/query-match-task ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryMatchTaskV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "poi", "supplier", "query", "match_task")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("task_ids", string.Join(",", request.TaskIdList));
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryMatchTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/poi/supplier/query/match 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query-match ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryMatchV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryMatchV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOISupplierQueryMatchV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "poi", "supplier", "query", "match")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("supplier_ext_ids", string.Join(",", request.SupplierExternalIds));
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryMatchV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/tp/poi/supplier/sync 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-sync ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOISupplierSyncV1Response> ExecuteOpenApiThirdPartyPOISupplierSyncV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOISupplierSyncV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "poi", "supplier", "sync")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOISupplierSyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/poi/supplier/query 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOISupplierQueryV1Response> ExecuteOpenApiThirdPartyPOISupplierQueryV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOISupplierQueryV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "poi", "supplier", "query")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOISupplierQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/poi/base/query/amap 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/thirdparty/API/tp/supplier-query ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyPOIBaseQueryAMapV1Response> ExecuteOpenApiThirdPartyPOIBaseQueryAMapV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyPOIBaseQueryAMapV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "poi", "base", "query", "amap")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("amap_id", request.AMapId);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyPOIBaseQueryAMapV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
-        #region ThirdParty/Template
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/template/get_tpl_list 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/tpl-list ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyTemplateGetTemplateListV1Response> ExecuteOpenApiThirdPartyTemplateGetTemplateListV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyTemplateGetTemplateListV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "template", "get_tpl_list")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyTemplateGetTemplateListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/template/get_draft_list 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/draft-list ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [Obsolete("相关接口或字段于 2022-12-28 下线。")]
-        public static async Task<Models.OpenApiThirdPartyTemplateGetDraftListV1Response> ExecuteOpenApiThirdPartyTemplateGetDraftListV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyTemplateGetDraftListV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "template", "get_draft_list")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyTemplateGetDraftListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/tp/template/get_tpl_app_list 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/tpl-app-list ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Response> ExecuteOpenApiThirdPartyTemplateGetTemplateAppListV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "tp", "template", "get_tpl_app_list")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyTemplateGetTemplateAppListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/tp/template/add_tpl 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/add ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyTemplateAddTemplateV1Response> ExecuteOpenApiThirdPartyTemplateAddTemplateV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyTemplateAddTemplateV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "template", "add_tpl")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyTemplateAddTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/tp/template/del_tpl 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/tpl-manage/delete ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiThirdPartyTemplateDeleteTemplateV1Response> ExecuteOpenApiThirdPartyTemplateDeleteTemplateV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiThirdPartyTemplateDeleteTemplateV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "template", "del_tpl")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiThirdPartyTemplateDeleteTemplateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-        #endregion
-
-        #region MicroApp
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/code2session 接口。</para>
         /// <para>
@@ -522,6 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "code2session")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "code2session"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("code", request.Code)
@@ -554,6 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "upload_material")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "upload_material"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -563,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             return await client.SendFlurlRequestAsync<Models.OpenApiMicroAppUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-        #region MicroApp/App
+        #region App
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/app/info 接口。</para>
         /// <para>
@@ -582,6 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "info"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -606,6 +115,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "qrcode")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "qrcode"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -630,6 +140,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "check_app_name")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "check_app_name"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("app_name", request.AppName);
@@ -655,6 +166,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "modify_app_name")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "modify_app_name"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -679,6 +191,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "modify_app_intro")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "modify_app_intro"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -703,6 +216,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "modify_app_icon")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "modify_app_icon"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -727,6 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "all_categories")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "all_categories"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -751,6 +266,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "categories")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "categories"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -775,6 +291,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "add_categories")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "add_categories"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -799,6 +316,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "del_categories")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "del_categories"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -823,6 +341,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "supply_categories")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "supply_categories"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -847,6 +366,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "modify_server_domain")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "modify_server_domain"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -871,6 +391,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "app", "modify_webview_domain")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "modify_webview_domain"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -895,6 +416,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "quality_rating")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "quality_rating"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -919,6 +441,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "app", "credit_score")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "app", "credit_score"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -926,7 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         }
         #endregion
 
-        #region MicroApp/Operation
+        #region Operation
         /// <summary>
         /// <para>异步调用 [GET] /v1/microapp/operation/video_application_status 接口。</para>
         /// <para>
@@ -945,6 +468,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "operation", "video_application_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "video_application_status"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -969,6 +493,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "video_application")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "video_application"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -993,6 +518,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "operation", "live_application_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "live_application_status"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1017,6 +543,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "live_application")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "live_application"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1041,6 +568,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "operation", "phone_number_application_status")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "phone_number_application_status"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1065,6 +593,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "phone_number_application")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "phone_number_application"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1089,6 +618,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "operation", "share_tpl_list")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "share_tpl_list"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("page", request.PageNumber)
@@ -1115,6 +645,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "add_share_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "add_share_tpl"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1139,6 +670,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "modify_share_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "modify_share_tpl"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1163,6 +695,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "del_share_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "del_share_tpl"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1187,6 +720,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "set_default_share_tpl")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "set_default_share_tpl"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1211,6 +745,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "operation", "add_shop_material")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "add_shop_material"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1235,6 +770,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "operation", "query_shop_material")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "operation", "query_shop_material"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken)
                 .SetQueryParam("supplier_ext_id", request.SupplierExternalId);
@@ -1243,7 +779,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         }
         #endregion
 
-        #region MicroApp/Package
+        #region Package
         /// <summary>
         /// <para>异步调用 [POST] /v1/microapp/package/upload 接口。</para>
         /// <para>
@@ -1262,6 +798,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "package", "upload")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "upload"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1286,6 +823,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "package", "audit_hosts")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "audit_hosts"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1310,6 +848,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v2", "microapp", "package", "audit")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v2", "microapp", "package", "audit"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1334,6 +873,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "package", "revoke_audit")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "revoke_audit"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1358,6 +898,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "package", "release")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "release"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1382,6 +923,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "microapp", "package", "rollback")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "rollback"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
@@ -1406,86 +948,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "v1", "microapp", "package", "versions")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v1", "microapp", "package", "versions"))
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("authorizer_access_token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiMicroAppPackageVersionsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-        #endregion
-
-        #region Settle
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/settle/pre_check 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/developer-settle/predict-check ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiSettlePreCheckV1Response> ExecuteOpenApiSettlePreCheckV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiSettlePreCheckV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "settle", "pre_check")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiSettlePreCheckV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [POST] /v1/settle/apply 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/developer-settle/settle-apply ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiSettleApplyV1Response> ExecuteOpenApiSettleApplyV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiSettleApplyV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v1", "settle", "apply")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiSettleApplyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// <para>异步调用 [GET] /v1/settle/get_apply_status 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/developer-settle/get-apply-status ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.OpenApiSettleGetApplyStatusV1Response> ExecuteOpenApiSettleGetApplyStatusV1Async(this DouyinMicroAppOpenApiClient client, Models.OpenApiSettleGetApplyStatusV1Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "v1", "settle", "get_apply_status")
-                .SetQueryParam("component_appid", request.ComponentAppId)
-                .SetQueryParam("component_access_token", request.ComponentAccessToken)
-                .SetQueryParam("apply_id", request.ApplyId);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.OpenApiSettleGetApplyStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

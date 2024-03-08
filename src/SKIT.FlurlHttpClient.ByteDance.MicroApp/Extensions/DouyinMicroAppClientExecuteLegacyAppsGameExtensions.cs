@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
+using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
@@ -66,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "get_balance")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/game/wallet/get_balance");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "game", "wallet", "get_balance"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletGetBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -98,7 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "game_pay")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/game/wallet/game_pay");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "game", "wallet", "game_pay"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletGamePayResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -130,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "game", "wallet", "add_coin")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/game/wallet/add_coin");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "game", "wallet", "add_coin"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsGameWalletAddCoinResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

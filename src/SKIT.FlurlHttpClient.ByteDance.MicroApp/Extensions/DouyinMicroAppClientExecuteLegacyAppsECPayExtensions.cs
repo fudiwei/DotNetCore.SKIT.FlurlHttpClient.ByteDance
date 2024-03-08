@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "bills")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/bills")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "bills"))
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
@@ -144,7 +144,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "apps", "fund", "bills")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/fund/bills")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "fund", "bills"))
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
@@ -185,7 +185,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_order")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/create_order");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "create_order"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -214,7 +214,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_order")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/query_order");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "query_order"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -243,7 +243,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_refund")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/create_refund");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "create_refund"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -272,7 +272,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_refund")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/query_refund");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "query_refund"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -301,7 +301,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "settle")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/settle");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "settle"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -330,7 +330,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_settle")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/query_settle");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "query_settle"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQuerySettleV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -359,7 +359,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "create_return")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/create_return");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "create_return"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayCreateReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -388,7 +388,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_return")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/query_return");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "query_return"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryReturnV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -417,7 +417,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "v1", "query_platform_order")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/v1/query_platform_order");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "v1", "query_platform_order"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPayQueryPlatformOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -443,7 +443,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "create_merchant")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/create_merchant");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "create_merchant"));
 
             if (request.Signature is null)
                 request.Signature = GenerateRequestSignature(client, request);
@@ -469,7 +469,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "image_upload")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/image_upload");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "image_upload"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSImageUploadResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -495,7 +495,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_status")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/query_merchant_status");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "query_merchant_status"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryMerchantStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -524,7 +524,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_merchant")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/add_merchant");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "add_merchant"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAddMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -554,7 +554,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "get_app_merchant")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/get_app_merchant");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "get_app_merchant"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSGetAppMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -581,7 +581,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "app_add_sub_merchant")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/app_add_sub_merchant");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "app_add_sub_merchant"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAppAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -611,7 +611,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "add_sub_merchant")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/add_sub_merchant");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "add_sub_merchant"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAddSubMerchantResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -639,7 +639,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_merchant_balance")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/query_merchant_balance");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "query_merchant_balance"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryMerchantBalanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -665,7 +665,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "merchant_withdraw")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/merchant_withdraw");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "merchant_withdraw"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSMerchantWithdrawResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -691,7 +691,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "ecpay", "saas", "query_withdraw_order")
-                .WithUrl($"{client._BASEURL_LEGACY}/apps/ecpay/saas/query_withdraw_order");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "ecpay", "saas", "query_withdraw_order"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSQueryWithdrawOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -4,6 +4,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
     public static class DouyinMicroAppOpenApiClientParameterExtensions
     {
+        private const string BASE_URL = "https://open.microapp.bytedance.com/openapi";
+
         /// <summary>
         /// <para>生成第三方应用服务商授权 URL。</para>
         /// <para>
@@ -17,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <returns></returns>
         public static string GenerateParameterizedUrlForOpenComponentThirdPartyAuthorization(this DouyinMicroAppOpenApiClient client, string preAuthCode, string redirectUrl)
         {
-            return new Url(DouyinMicroAppOpenApiEndpoints.DEFAULT)
+            return new Url(BASE_URL)
                 .AppendPathSegments("mappconsole", "tp", "authorization")
                 .SetQueryParam("component_appid", client.Credentials.ComponentAppId)
                 .SetQueryParam("pre_auth_code", preAuthCode)

@@ -2,6 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
@@ -29,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "comment", "open", "get")
-                .WithUrl($"{client._BASEURL_LEGACY}/comment/open/get");
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("comment", "open", "get"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.CommentOpenGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

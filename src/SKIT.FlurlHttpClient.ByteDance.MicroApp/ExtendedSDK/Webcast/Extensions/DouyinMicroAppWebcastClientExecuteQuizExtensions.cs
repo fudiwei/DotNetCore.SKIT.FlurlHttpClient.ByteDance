@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "quiz", "get")
-                .WithHeader("x-token", request.AccessToken);
+                .WithHeader("X-Token", request.AccessToken);
 
             if (request.Level is not null)
                 flurlReq.SetQueryParam("level", request.Level.Value);

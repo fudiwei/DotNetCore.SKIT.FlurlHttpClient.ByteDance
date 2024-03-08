@@ -1,0 +1,5 @@
+{
+    "url": "pages/good/detail?good_id=aaabbb",
+    "card_type": 1,
+    "value": "{\"image_id\":\"123456\",\"title\":{\"main_title\":\"商品A\"}}"
+}

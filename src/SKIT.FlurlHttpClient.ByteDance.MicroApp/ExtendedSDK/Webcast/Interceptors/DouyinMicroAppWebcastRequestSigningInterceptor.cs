@@ -35,7 +35,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Interceptors
 
             if (context.FlurlCall.HttpRequestMessage?.Content is not null)
             {
-                if (method != "GET")
+                if (context.FlurlCall.HttpRequestMessage.Content is MultipartFormDataContent)
+                {
+                    // noop!
+                }
+                else if (method != "GET")
                 {
                     HttpContent httpContent = context.FlurlCall.HttpRequestMessage.Content;
                     body = await _AsyncEx.RunTaskWithCancellationTokenAsync(httpContent.ReadAsStringAsync(), cancellationToken).ConfigureAwait(false);

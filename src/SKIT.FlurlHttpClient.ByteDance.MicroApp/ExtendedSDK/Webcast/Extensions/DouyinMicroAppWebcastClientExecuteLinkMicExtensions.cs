@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "linkmic", "query")
-                .WithHeader("x-token", request.AccessToken);
+                .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.WebcastLinkMicQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

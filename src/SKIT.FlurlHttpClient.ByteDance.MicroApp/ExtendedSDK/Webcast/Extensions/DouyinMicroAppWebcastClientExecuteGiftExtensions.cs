@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "gift", "top_gift")
-                .WithHeader("x-token", request.AccessToken);
+                .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.WebcastGiftTopGiftResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

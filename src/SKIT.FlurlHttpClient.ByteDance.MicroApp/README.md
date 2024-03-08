@@ -9,8 +9,9 @@
 ### 【功能特性】
 
 -   基于抖音小程序开放平台 API 封装。
--   提供了抖音小程序所需的 AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
+-   提供了抖音小程序所需的 RSA、AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
 -   提供了解析回调通知事件等扩展方法。
+-   配合 [SKIT.FlurlHttpClient.ByteDance.DouyinOpen](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.DouyinOpen) 模块，可无缝对接抖音开放平台。
 
 ---
 

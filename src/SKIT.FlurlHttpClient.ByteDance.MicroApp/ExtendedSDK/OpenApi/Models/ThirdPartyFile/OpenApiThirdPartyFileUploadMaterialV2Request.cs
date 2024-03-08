@@ -3,10 +3,9 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /v1/tp/upload_pic_material 接口的请求。</para>
+    /// <para>表示 [POST] /tpapp/v2/file/upload_material 接口的请求。</para>
     /// </summary>
-    [Obsolete("相关接口或字段于 2024-01-23 下线。")]
-    public class OpenApiThirdPartyUploadPictureMaterialV1Request : DouyinMicroAppOpenApiRequest
+    public class OpenApiThirdPartyFileUploadMaterialV2Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置上传的文件类型。

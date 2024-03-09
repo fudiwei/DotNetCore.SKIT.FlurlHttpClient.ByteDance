@@ -1,0 +1,12 @@
+{
+    "data": {
+        "result_list": [
+            {
+                "date": "yyyy-MM-dd",
+                "new_issue": "200",
+                "new_play": "200",
+                "total_issue": "200"
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "load_path": "xxx",
+    "stage": "online",
+    "exclusive_qr_url_prefix": 1,
+    "before_qr_url": "https://xxx",
+    "qr_url": "https://xxx"
+}

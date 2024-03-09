@@ -2,9 +2,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
 {
     /// <summary>
     /// <para>表示 text 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service ]]>
+    /// </para>
     /// </summary>
-    public class TextMessageEvent : ByteDanceMicroAppEvent, ByteDanceMicroAppEvent.Serialization.IJsonSerializable, ByteDanceMicroAppEvent.Serialization.IXmlSerializable
+    public class TextMessageEvent : DouyinMicroAppEvent
     {
         /// <summary>
         /// 获取或设置消息内容。

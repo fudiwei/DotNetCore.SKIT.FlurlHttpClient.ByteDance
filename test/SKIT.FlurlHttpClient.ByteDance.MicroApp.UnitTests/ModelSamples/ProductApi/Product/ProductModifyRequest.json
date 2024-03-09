@@ -1,0 +1,66 @@
+{
+    "access_token": "0801121846756b44471029384758795958537a647053646f773d3d",
+    "product_type": 1,
+    "product_id": 6543216888019123456,
+    "product": {
+        "common_product_params": {
+            "appid": "tt11fd1220e13bba1234",
+            "first_class": 10000,
+            "second_class": 10100,
+            "title": "python入门教程",
+            "purchase_precaution": "小程序内购买课程为课程兑换权益，购买成功后将自动兑换到您的账户内，可在****中重复学习观看",
+            "product_fulfillment_lst": [
+                {
+                    "fulfillment_content": {
+                        "fulfillment_uri": "product/resource/1001d044d41140d53ce9e57d793a4321",
+                        "name": "第一节: python介绍"
+                    },
+                    "fulfillment_type": 3
+                }
+            ],
+            "industry_type": 1,
+            "price_info": {
+                "unit": "节",
+                "price": 5000,
+                "real_price": 4900
+            },
+            "path_info_lst": [
+                {
+                    "path": "page/index/index",
+                    "query": {
+                        "course_id": "29384759"
+                    }
+                }
+            ],
+            "product_detail_lst": [
+                {
+                    "rich_text": {
+                        "text": "<b><i>1. python安装步骤</i></b>"
+                    }
+                }
+            ],
+            "anchor_info": {
+                "video_anchor_info": {
+                    "anchor_title": "python入门教程"
+                }
+            },
+            "product_img_uri": "tos-cn-i-b2i6zad4el/b0e72a2e9c5ee919c65a9b0276315cf9"
+        },
+        "course_params": {
+            "teacher_id": "T7283947392973",
+            "institution_id": "I1039473947393",
+            "course_num": 637,
+            "refund_label": {
+                "type": 1,
+                "day_before_use_info": {
+                    "day": 7
+                }
+            },
+            "use_label": {
+                "valid_date": "2022-12-01"
+            },
+            "start_timestamp": 1649662751000,
+            "end_timestamp": 1681198751000
+        }
+    }
+}

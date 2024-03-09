@@ -1,0 +1,28 @@
+{
+    "data": {
+        "region_list": [
+            {
+                "name": "北京市",
+                "type": 1,
+                "code": "110000",
+                "sub_region": [
+                    {
+                        "code": "110100",
+                        "name": "市辖区",
+                        "type": 2,
+                        "sub_region": [
+                            {
+                                "name": "东城区",
+                                "type": 3,
+                                "code": "110101"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20231206161404445521002D87E92CAAAC"
+}

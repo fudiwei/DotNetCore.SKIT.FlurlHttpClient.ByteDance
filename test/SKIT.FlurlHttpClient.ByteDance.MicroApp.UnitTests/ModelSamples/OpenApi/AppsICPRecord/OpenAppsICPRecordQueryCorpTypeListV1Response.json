@@ -1,0 +1,27 @@
+{
+    "data": {
+        "corp_type_list": [
+            {
+                "corp_type_id": 4,
+                "corp_type_name": "企业",
+                "credentials_type_list": [
+                    {
+                        "credentials_type_id": 1,
+                        "credentials_type_name": "营业执照（个人或企业）"
+                    },
+                    {
+                        "credentials_type_id": 12,
+                        "credentials_type_name": "组织机构代码证"
+                    },
+                    {
+                        "credentials_type_id": 27,
+                        "credentials_type_name": "外国企业常驻代表机构登记证"
+                    }
+                ]
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202312121723335178F7582A6F5A0B21C2"
+}

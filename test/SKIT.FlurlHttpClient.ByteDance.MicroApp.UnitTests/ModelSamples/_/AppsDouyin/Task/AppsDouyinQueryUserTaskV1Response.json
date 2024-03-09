@@ -1,0 +1,38 @@
+{
+    "err_no": 0,
+    "log_id": "202309********************",
+    "data": {
+        "task_info_list": {
+            "task_***********": {
+                "target_count": 0,
+                "task_id": "",
+                "video_info": [],
+                "completed": false,
+                "err_msg": "任务id无效",
+                "err_no": 28005074,
+                "is_valid": false,
+                "success_count": 0
+            },
+            "task_******************": {
+                "is_valid": true,
+                "success_count": 1,
+                "target_count": 2,
+                "task_id": "task_******************",
+                "video_info": [
+                    {
+                        "video_id": "131041************",
+                        "video_status": 1
+                    },
+                    {
+                        "video_id": "131041**************",
+                        "video_status": 2
+                    }
+                ],
+                "completed": false,
+                "err_msg": "",
+                "err_no": 0
+            }
+        }
+    },
+    "err_msg": ""
+}

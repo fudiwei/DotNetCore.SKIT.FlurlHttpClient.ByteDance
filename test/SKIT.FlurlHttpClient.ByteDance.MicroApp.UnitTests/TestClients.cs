@@ -4,13 +4,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
     {
         static TestClients()
         {
-            Instance = new ByteDanceMicroAppClient(new ByteDanceMicroAppClientOptions()
+            Instance = new DouyinMicroAppClient(new DouyinMicroAppClientOptions()
             {
                 AppId = TestConfigs.ByteDanceMicroAppId,
                 AppSecret = TestConfigs.ByteDanceMicroAppSecret
             });
         }
 
-        public static readonly ByteDanceMicroAppClient Instance;
+        public static readonly DouyinMicroAppClient Instance;
     }
 }

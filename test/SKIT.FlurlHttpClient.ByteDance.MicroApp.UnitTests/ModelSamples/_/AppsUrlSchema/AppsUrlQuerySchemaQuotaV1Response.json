@@ -1,0 +1,15 @@
+{
+    "err_no": 0,
+    "log_id": "20230828114955870A641D59241500963C",
+    "data": {
+        "long_term_schema_quota": {
+            "schema_used": 6,
+            "schema_limit": 0
+        },
+        "short_term_schema_quota": {
+            "schema_limit": 0,
+            "schema_used": 0
+        }
+    },
+    "err_msg": ""
+}

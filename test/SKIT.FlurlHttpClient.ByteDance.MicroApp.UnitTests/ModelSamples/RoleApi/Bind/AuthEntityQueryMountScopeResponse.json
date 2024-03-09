@@ -1,0 +1,11 @@
+{
+    "err": {
+        "err_code": 0,
+        "err_msg": ""
+    },
+    "scope_list": [
+        1,
+        2
+    ],
+    "status": 1
+}

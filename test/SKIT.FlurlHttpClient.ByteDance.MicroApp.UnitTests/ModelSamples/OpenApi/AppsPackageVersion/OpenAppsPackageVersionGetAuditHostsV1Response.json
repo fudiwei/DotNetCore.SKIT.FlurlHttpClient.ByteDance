@@ -1,0 +1,15 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "3TmkBXaKXL",
+    "data": {
+        "host_names": [
+            "toutiao",
+            "douyin"
+        ],
+        "released_host_names": [
+            "toutiao",
+            "douyin"
+        ]
+    }
+}

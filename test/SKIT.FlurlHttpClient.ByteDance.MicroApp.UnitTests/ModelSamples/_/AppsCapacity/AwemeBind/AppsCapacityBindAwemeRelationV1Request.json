@@ -1,0 +1,38 @@
+{
+    "employee_info": {
+        "relation_expire_date": 6182115480795152177,
+        "qualification_type": "person",
+        "qualification_image_list": [ "dpNbt49OYK" ],
+        "real_name": "小平",
+        "identity_number": "L0UIPirJC6",
+        "contract_image": "5JnTdW3CbR"
+    },
+    "audit_template_info": {
+        "QL7rwwSNXh": {
+            "id": 1039495565162895323,
+            "title": "kgPbI4sbLW",
+            "template_content": [
+                {
+                    "name": "tuTda7yMta",
+                    "val_type": 1,
+                    "val_list": [ "jgrKT12ETJ" ],
+                    "materiel_id": "1bybqEM0z8"
+                }
+            ]
+        }
+    },
+    "type": "brand",
+    "aweme_id": "6ZycG4oL6Y",
+    "capacity_list": [ "video_self_mount" ],
+    "co_subject": false,
+    "cooperation_info": {
+        "company_name": "XX",
+        "business_license_code": "123456789",
+        "real_name": "小平公司",
+        "identity_number": "olDBxsnBCj",
+        "contract_image": "NdZ7QFpcxH",
+        "contract_image_list": [ "5xSm9WVDVK" ],
+        "relation_expire_date": 4404854813175490268,
+        "cooperation_type": "enterprise"
+    }
+}

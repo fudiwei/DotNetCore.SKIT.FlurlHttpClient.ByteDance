@@ -1,0 +1,25 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202008121419360101980821035705926A",
+    "data": {
+        "total_count": 1,
+        "template_list": [
+            {
+                "title": "xxxx",
+                "keyword_list": [
+                    "xx",
+                    "xxx"
+                ],
+                "classification": 1,
+                "host_list": [
+                    "toutiao",
+                    "douyin"
+                ],
+                "operating_time": 1672835937,
+                "status": 1,
+                "fail_reason": ""
+            }
+        ]
+    }
+}

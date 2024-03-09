@@ -1,0 +1,12 @@
+{
+    "task_name": "xxx",
+    "conditions": [
+        "live_digg"
+    ],
+    "condition_value": [
+        1
+    ],
+    "start_time": 1704981661,
+    "end_time": 1705327261,
+    "aweme_id": "xxx"
+}

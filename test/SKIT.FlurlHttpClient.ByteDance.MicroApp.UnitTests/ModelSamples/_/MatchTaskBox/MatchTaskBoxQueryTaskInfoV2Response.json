@@ -1,0 +1,53 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "202008121419360101980821035705926A",
+    "data": {
+        "page_count": 1,
+        "total": 1,
+        "app_id": "ttf31985a46c214faf",
+        "tasks": [
+            {
+                "anchor_title": "一个测试任务",
+                "appid": "ttcfdbb96650e33350",
+                "payment_allocate_ratio": 7000,
+                "platform_address_app": "subPackage/pages/taskDetail/index?taskId=7159000769277214764&enter_from=7",
+                "platform_address_web": "http://boe.m.zjbyte.net/share/douyin/?token=bd9ce2083d6aed332dcd9f9721b91ec4&share_channel=scan",
+                "refer_ma_captures": [
+                    "http://p-boe-sign.bytedance.net/tos-boe-i-giyy2m8f28/368d6285a0514fd3a230c2bd0873f2d3~tplv-giyy2m8f28-jpg.image?x-orig-authkey=boeorigin&x-orig-expires=1763898974&x-orig-sign=F8XZRENkmZOanX5JZt9LoiaQiws%3D",
+                    "http://p-boe-sign.bytedance.net/tos-boe-i-giyy2m8f28/f83566dd4b924791bd0364af588cad76~tplv-giyy2m8f28-jpg.image?x-orig-authkey=boeorigin&x-orig-expires=1763898974&x-orig-sign=2NBX9lYCvAyq681nR%2FGUlZudvZU%3D"
+                ],
+                "refer_video_captures": [
+                    ""
+                ],
+                "reject_reason": "落地页发生变更",
+                "start_page": "page/detail/detail?id=1",
+                "status": 5,
+                "task_desc": "一个测试任务aaa一个测试任务aaa一个测试任务aaa一个测试任务aaa一个测试任务aaa",
+                "task_end_time": 1669695653,
+                "task_icon": "http://p-boe-sign.bytedance.net/tos-boe-i-giyy2m8f28/93e9ed06180c4c15b397e81653b20313~tplv-giyy2m8f28-144x144.image?x-orig-authkey=boeorigin&x-orig-expires=1763898974&x-orig-sign=BydBniNTuG%2FoYlVhHNVIRdZNcaU%3D",
+                "task_id": 7159000769277214764,
+                "task_name": "一个测试任务aaa",
+                "task_refund_period": 0,
+                "task_settle_type": 1,
+                "task_start_time": 1666846303,
+                "task_tags": [
+                    "娱乐测试",
+                    "小说"
+                ],
+                "task_type": 1,
+                "oriented_talent_rel_list": [
+                    {
+                        "cooperation_state": 2,
+                        "douyin_id": "lw123456"
+                    },
+                    {
+                        "cancel_operator": 1,
+                        "cooperation_state": 3,
+                        "douyin_id": "lv789"
+                    }
+                ]
+            }
+        ]
+    }
+}

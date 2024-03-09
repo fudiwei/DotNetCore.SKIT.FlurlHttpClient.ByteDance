@@ -1,0 +1,20 @@
+{
+    "data": {
+        "app_category_audit_info": [
+            {
+                "category": "xxx,xxx,xxx",
+                "category_audit_state": 2,
+                "category_cert": null,
+                "category_cert_ids": "",
+                "category_name": "xx-xxxx-xx",
+                "reason": ""
+            }
+        ],
+        "category_change_limit": 5,
+        "category_limit": 5,
+        "remaining_times": 5
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20240117144112523B289832A9008E1C74"
+}

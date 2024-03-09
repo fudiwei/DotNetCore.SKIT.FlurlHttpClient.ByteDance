@@ -1,0 +1,16 @@
+{
+    "data": {
+        "trial_task_info": null,
+        "app_credit_score": -999,
+        "is_trial": 1,
+        "trial_limit_info": {
+            "is_capability_limited": 1,
+            "is_payment_restricted": 0,
+            "is_traffic_limited": 0
+        },
+        "trial_pass_score": 80
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20240117151219739E5689A61B947BFFE5"
+}

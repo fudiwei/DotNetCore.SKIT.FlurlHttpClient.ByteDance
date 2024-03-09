@@ -1,0 +1,24 @@
+{
+    "err_no": 0,
+    "log_id": "2023101312022744C2A2666DB7BC00832B",
+    "data": {
+        "authorizer_access_token": "isvact.5dafax837bb9937cdxxxxxx200fO2Eh5YgvG4pFmj6nSf8NGr6j8Yfg",
+        "authorizer_appid": "xxxxxx",
+        "authorizer_refresh_token": "isvrft.d016bb817070xxxxxtUS9BNtfJ174uhFNFUnW",
+        "expires_in": 7200,
+        "refresh_expires_in": 2592000,
+        "authorize_permission": [
+            {
+                "category": "开发管理权限",
+                "description": "帮助小程序进行基础功能开发及配置开发所需信息",
+                "id": 1
+            },
+            {
+                "category": "基本信息设置权限",
+                "description": "帮助小程序管理名称、头像、简介、服务类目等信息",
+                "id": 2
+            }
+        ]
+    },
+    "err_msg": ""
+}

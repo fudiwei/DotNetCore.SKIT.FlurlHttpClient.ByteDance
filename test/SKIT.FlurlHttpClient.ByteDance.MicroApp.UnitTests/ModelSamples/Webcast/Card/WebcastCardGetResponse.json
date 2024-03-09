@@ -1,0 +1,14 @@
+{
+    "audit_opinion": "",
+    "card_type": 1,
+    "status": 2,
+    "value": {
+        "btn": {
+            "btn_type": 100
+        },
+        "image_id": "123456",
+        "title": {
+            "main_title": "商品A"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "category_info": [
+        {
+            "category": "xxx,xxx,xxx",
+            "category_cert": [
+                {
+                    "id": "xxx",
+                    "name": "xxxx",
+                    "path_list": [ "xxxx/xxxx" ]
+                }
+            ]
+        }
+    ]
+}

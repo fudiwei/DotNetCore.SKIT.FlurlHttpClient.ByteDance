@@ -1,0 +1,15 @@
+{
+    "app_id": "tt**********",
+    "task_type": 2,
+    "rule_type": 1,
+    "target_count": 1,
+    "start_time": 1694423074,
+    "end_time": 1694623074,
+    "mount_link": "/pages/index",
+    "publish_type": [
+        1
+    ],
+    "tags": [
+        "**"
+    ]
+}

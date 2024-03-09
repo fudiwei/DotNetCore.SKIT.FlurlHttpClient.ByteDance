@@ -1,0 +1,14 @@
+{
+    "task_type": 3,
+    "app_id": "ttabc*******",
+    "start_time": 1690938443,
+    "end_time": 1702365299,
+    "max_count": 10,
+    "mount_link": "path",
+    "interact_rules": {
+        "like": {
+            "stage_count": 6,
+            "target_count": 1
+        }
+    }
+}

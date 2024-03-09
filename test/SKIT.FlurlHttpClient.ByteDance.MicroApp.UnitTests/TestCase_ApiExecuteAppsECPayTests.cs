@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
         [Fact(DisplayName = "测试用例：担保支付请求签名")]
         public async Task TestECPayRequestSignature()
         {
-            using var client = new ByteDanceMicroAppClient(new ByteDanceMicroAppClientOptions() { ECPaySalt = "your_payment_salt" });
+            using var client = new DouyinMicroAppClient(new DouyinMicroAppClientOptions() { ECPaySalt = "your_payment_salt" });
             var request = new Models.AppsECPayCreateOrderV1Request()
             {
                 AppId = "ttcfdbb9xxxxxxxxxxx",

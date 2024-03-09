@@ -1,0 +1,20 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "xxx",
+    "data": {
+        "clue_component_list": [
+            {
+                "config_id": "xxx",
+                "config_name": "xxx",
+                "region": "xxx",
+                "category_id": "xxx",
+                "state": "xxx",
+                "region_name": "xxx",
+                "category_name": "xxx"
+            }
+        ],
+        "cert_status": false,
+        "total": 32
+    }
+}

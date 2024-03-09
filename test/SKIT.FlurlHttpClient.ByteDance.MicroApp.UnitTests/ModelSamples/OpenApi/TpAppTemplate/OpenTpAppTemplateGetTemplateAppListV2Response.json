@@ -1,0 +1,22 @@
+{
+    "data": {
+        "tpl_app_list": [
+            {
+                "tpl_app_id": "xxxxx",
+                "user_desc": "xxxxx",
+                "user_version": "x.x.x",
+                "app_name": "xxxx",
+                "create_time": 1702553299,
+                "draft_id": 1,
+                "nick_name": "xxxxx"
+            },
+            {
+                "app_name": "xxxxx",
+                "tpl_app_id": "xxxxx"
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20240115162821497BC0191A90E58ABD8D"
+}

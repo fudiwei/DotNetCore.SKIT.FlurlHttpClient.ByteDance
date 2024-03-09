@@ -1,0 +1,14 @@
+{
+    "data": {
+        "auth_app_list": [
+            {
+                "auth_appid": "xxxx",
+                "auth_time": 1703062377
+            }
+        ],
+        "total": 1
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "2024011516552804343697F9D7931FAB00"
+}

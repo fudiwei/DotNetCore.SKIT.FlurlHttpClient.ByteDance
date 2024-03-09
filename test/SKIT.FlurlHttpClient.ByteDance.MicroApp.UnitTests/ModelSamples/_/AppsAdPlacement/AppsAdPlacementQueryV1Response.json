@@ -1,0 +1,15 @@
+{
+    "data": {
+        "ad_placement_list": [
+            {
+                "ad_placement_name": "测试广告位",
+                "ad_placement_type": 1,
+                "status": 1,
+                "ad_placement_id": "bqsc0s8pdcnsru9n6x"
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202402291430081C2C03B70D11918211B2"
+}

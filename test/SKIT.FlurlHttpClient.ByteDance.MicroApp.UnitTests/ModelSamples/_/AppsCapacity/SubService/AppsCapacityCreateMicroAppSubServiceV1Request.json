@@ -1,0 +1,5 @@
+{
+    "sub_service_name": "我的子服务",
+    "search_key_word": [ "key1" ],
+    "start_page_url": "http://xxx.com"
+}

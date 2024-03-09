@@ -1,0 +1,68 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "2034EAC",
+    "data": {
+        "audit": {
+            "approved_apps": [ "抖音" ],
+            "attach_info": {
+                "今日头条": "http://xxxx",
+                "今日头条lite": "http://xxxx"
+            },
+            "categories": [ "服务类-快递、物流-查件" ],
+            "ctime": 1591019952,
+            "developer_avatar": "xxx",
+            "developer_id": "xxx",
+            "developer_name": "xxx",
+            "has_publish": 0,
+            "is_illegal_version": false,
+            "reason": "今日头条: 无法进入小程序;小程序页面存在闪退、卡顿、黑屏等功能异常问题;今日头条lite: 无法进入小程序",
+            "reason_detail": {
+                "今日头条": [ "无法进入小程序", "小程序页面存在闪退、卡顿、黑屏等功能异常问题" ],
+                "今日头条lite": [ "无法进入小程序" ]
+            },
+            "status": 2,
+            "summary": "今天是5月30日",
+            "version": "1.0.1"
+        },
+        "current": {
+            "approved_apps": [],
+            "attach_info": {},
+            "categories": [ "服务类-快递、物流-查件" ],
+            "ctime": 1585727678,
+            "developer_avatar": null,
+            "developer_id": null,
+            "developer_name": null,
+            "has_down": 0,
+            "not_approved_apps": [],
+            "rollback": {
+                "can_rollback": false,
+                "last_version": ""
+            },
+            "summary": "测试版本1.0.0",
+            "uid": 123123,
+            "version": "1.0.0"
+        },
+        "latest": {
+            "categories": [ "服务类-快递、物流-查件" ],
+            "ctime": 1590755478,
+            "developer_avatar": "xxx",
+            "developer_id": "xxx",
+            "developer_name": "xxx",
+            "has_audit": 1,
+            "screenshot": "",
+            "summary": "今天是5月30日",
+            "version": "1.0.1"
+        },
+        "gray": {
+            "categories": [ "服务类-快递、物流-查件" ],
+            "ctime": 1590755478,
+            "developer_avatar": "xxx",
+            "developer_id": "xxx",
+            "developer_name": "xxx",
+            "summary": "今天是5月30日",
+            "version": "1.0.1",
+            "host_gray_scale": {}
+        }
+    }
+}

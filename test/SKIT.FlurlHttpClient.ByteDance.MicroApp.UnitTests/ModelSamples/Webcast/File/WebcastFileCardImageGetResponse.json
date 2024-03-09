@@ -1,0 +1,14 @@
+{
+    "images_status": [
+        {
+            "image_id": "123456",
+            "image_status": 3,
+            "audit_opinion": ""
+        },
+        {
+            "image_id": "654321",
+            "image_status": 4,
+            "audit_opinion": "fail: high risk social event."
+        }
+    ]
+}

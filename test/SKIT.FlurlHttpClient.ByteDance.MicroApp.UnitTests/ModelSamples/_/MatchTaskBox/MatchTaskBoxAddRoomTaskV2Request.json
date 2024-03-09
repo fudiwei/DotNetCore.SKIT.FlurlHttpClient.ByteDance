@@ -1,0 +1,19 @@
+{
+    "task_name": "测试的任务名称",
+    "task_settle_type": 9,
+    "start_page": "page/detail/detail?id=123",
+    "task_icon": "https://p3-developer-sign.bytemaimg.com/tos-cn-i-ke512zj2cu/01cefe0ce3c3479d845dcb861ca018b1~tplv-ke512zj2cu-jpg.jpeg?x-expires=1718424829&x-signature=7vw6D8rEUIDZXHAd4veMedSjlLo%3D",
+    "room_title": "测试的直播间标题",
+    "task_end_time": 1709782399,
+    "task_desc": "任务描述: 東門之池，可以漚麻。彼美淑姬，可與晤歌。東門之池，可以漚紵。彼美淑姬，可與晤語。",
+    "form_tag": "娱乐测试",
+    "content_tag": "漫画",
+    "refer_videos": [
+        "https://v.douyin.com/SHAfHPu/",
+        "https://v.douyin.com/SHASjbd/"
+    ],
+    "refer_ma_captures": [
+        "https://p3-developer-sign.bytemaimg.com/tos-cn-i-ke512zj2cu/1bcfc89de30f4b0fb2000d69f6d36d08~tplv-ke512zj2cu-jpg.jpeg?x-expires=1718424958&x-signature=KA4V5kcK%2FnLtjz5HtfhNz06uce4%3D",
+        "https://p6-developer-sign.bytemaimg.com/tos-cn-i-ke512zj2cu/e840d9158f784733a9f0f27bd60ad433~tplv-ke512zj2cu-jpg.jpeg?x-expires=1718425011&x-signature=zltShSxIkbLay7dlA1oR4KwoyPM%3D"
+    ]
+}

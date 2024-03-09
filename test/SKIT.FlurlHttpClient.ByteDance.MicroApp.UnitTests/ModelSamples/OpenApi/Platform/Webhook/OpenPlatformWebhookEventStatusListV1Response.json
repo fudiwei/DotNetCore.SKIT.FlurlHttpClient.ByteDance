@@ -1,0 +1,19 @@
+{
+    "log_id": "ZcabTr0mNP",
+    "data": {
+        "webhook_info": {
+            "secret": "82bU3YS4zK",
+            "callback_url": "zD6T62rz6p"
+        },
+        "event_list": [
+            {
+                "event": "Hnvd6JbjVi",
+                "name_cn": "aRmr2mb3JN",
+                "desc": "d80J5RlxFs",
+                "status": 1
+            }
+        ]
+    },
+    "err_no": 0,
+    "err_msg": ""
+}

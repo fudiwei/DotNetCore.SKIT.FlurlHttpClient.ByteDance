@@ -1,0 +1,34 @@
+{
+    "card_list": [
+        {
+            "card_type": 1,
+            "status": 2,
+            "value": {
+                "btn": {
+                    "btn_type": 100
+                },
+                "image_id": "123456",
+                "title": {
+                    "main_title": "商品A"
+                }
+            },
+            "user_id": 1234567890,
+            "url": "page/index/index"
+        },
+        {
+            "card_type": 1,
+            "status": 2,
+            "value": {
+                "btn": {
+                    "btn_type": 100
+                },
+                "image_id": "123456",
+                "title": {
+                    "main_title": "商品A"
+                }
+            },
+            "user_id": 1234567890,
+            "url": "page/index/index"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "app_id": "tt5da*****",
+    "query": "{\"key1\":\"val1\",\"key2\":\"val2\"}",
+    "path": "test_miniapp",
+    "no_expire": false,
+    "expire_time": 1685090014
+}

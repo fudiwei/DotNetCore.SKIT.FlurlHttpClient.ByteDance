@@ -1,0 +1,8 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "url_link_used": 1128,
+        "url_link_limit": 1000000
+    }
+}

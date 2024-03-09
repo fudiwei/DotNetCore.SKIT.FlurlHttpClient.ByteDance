@@ -6,8 +6,8 @@
 
 ```csharp
 /* 以 authorize 事件为例 */
-string callbackJson = "{ ... }";
-var callbackModel = client.DeserializeEvent<Events.AuthorizeEvent>(callbackJson);
+string webhookJson = "{ ... }";
+var webhookModel = client.DeserializeEvent<Events.AuthorizeEvent>(webhookJson);
 ```
 
 完整的 Webhook 模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.DouyinOpen/Events_ 目录。
@@ -21,14 +21,14 @@ var callbackModel = client.DeserializeEvent<Events.AuthorizeEvent>(callbackJson)
 这里给出一种解决方案：
 
 ```csharp
-DouyinOpenEvent eventModel = client.DeserializeEvent(callbackJson);
+DouyinOpenEvent eventModel = client.DeserializeEvent(webhookJson);
 string eventType = eventModel.Event?.ToLower();
 
 switch (eventType)
 {
     case "authorize":
         {
-            var callbackModel = client.DeserializeEvent<Events.AuthorizeEvent>(callbackJson);
+            var webhookModel = client.DeserializeEvent<Events.AuthorizeEvent>(webhookJson);
         }
         break;
     // 省略其他情况

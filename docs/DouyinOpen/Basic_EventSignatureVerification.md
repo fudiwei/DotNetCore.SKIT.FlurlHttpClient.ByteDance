@@ -11,7 +11,7 @@
 ```csharp
 /* 验证 Webhook 事件签名 */
 bool ret = client.VerifyEventSignature(
-    callbackJson: "抖音 Webhook 事件中请求正文",
-    callbackSignature: "抖音 Webhook 事件中的 X-Douyin-Signature 字段"
+    webhookJson: "抖音 Webhook 事件中请求正文",
+    webhookSignature: "抖音 Webhook 事件中的 X-Douyin-Signature 字段"
 );
 ```

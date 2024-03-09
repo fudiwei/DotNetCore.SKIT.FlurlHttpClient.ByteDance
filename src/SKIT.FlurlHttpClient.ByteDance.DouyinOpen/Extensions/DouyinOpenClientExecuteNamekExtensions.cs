@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     {
         /// <summary>
         /// <para>异步调用 [GET] /namek/fulfilment/prepare 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/tripartite.code/create/ </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/tripartite.code/create/ ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,16 +26,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "namek", "fulfilment", "prepare")
+                .CreateFlurlRequest(request, HttpMethod.Get, "namek", "fulfilment", "prepare")
                 .SetQueryParam("access_token", request.AccessToken);
 
-            if (request.EncryptedData != null)
+            if (request.EncryptedData is not null)
                 flurlReq.SetQueryParam("encrypted_data", request.EncryptedData);
 
-            if (request.Code != null)
+            if (request.Code is not null)
                 flurlReq.SetQueryParam("code", request.Code);
 
-            return await client.SendRequestWithJsonAsync<Models.NamekFulfilmentPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.NamekFulfilmentPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

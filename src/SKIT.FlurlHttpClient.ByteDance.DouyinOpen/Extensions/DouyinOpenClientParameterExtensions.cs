@@ -9,8 +9,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     {
         /// <summary>
         /// <para>生成客户端 JSBridge `sdk.config` 所需的参数。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/js/js-access </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/js/signature </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/js/js-access ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/js/signature ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="jsapiTicket"></param>
@@ -25,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             url = url.Split('#')[0];
             string timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds().ToString();
             string nonce = Guid.NewGuid().ToString("N");
-            string sign = Utilities.MD5Utility.Hash($"jsapi_ticket={jsapiTicket}&nonce_str={nonce}&timestamp={timestamp}&url={url}").ToLower();
+            string sign = Utilities.MD5Utility.Hash($"jsapi_ticket={jsapiTicket}&nonce_str={nonce}&timestamp={timestamp}&url={url}").Value!.ToLower();
 
             return new ReadOnlyDictionary<string, string>(new Dictionary<string, string>()
             {
@@ -39,8 +42,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
         /// <summary>
         /// <para>生成抖音获取授权临时票据的 URL。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/web/permission </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/douyin-get-permission-code </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/sdk/web-app/web/permission ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/douyin-get-permission-code ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="scope"></param>

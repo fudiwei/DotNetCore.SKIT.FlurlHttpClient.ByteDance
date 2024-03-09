@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     /// <summary>
     /// 表示抖音开放平台 API Webhook 事件的基类。
     /// </summary>
-    public class DouyinOpenEvent
+    public class DouyinOpenEvent : ICommonWebhookEvent
     {
         /// <summary>
         /// 获取或设置事件类型。

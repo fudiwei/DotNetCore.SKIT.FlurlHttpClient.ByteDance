@@ -110,7 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cover_tsp")]
         [System.Text.Json.Serialization.JsonPropertyName("cover_tsp")]
-        public double? CoverTSP { get; set; }
+        public decimal? CoverTSP { get; set; }
 
         /// <summary>
         /// 获取或设置封面图片 ID。

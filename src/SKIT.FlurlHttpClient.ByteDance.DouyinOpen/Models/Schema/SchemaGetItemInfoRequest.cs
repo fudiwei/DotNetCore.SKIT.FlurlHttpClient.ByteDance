@@ -16,9 +16,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// 获取或设置视频 ID。与字段 <see cref="ItemId"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_id")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.NumericalStringConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalStringConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
         public string? VideoId { get; set; }
 
         /// <summary>

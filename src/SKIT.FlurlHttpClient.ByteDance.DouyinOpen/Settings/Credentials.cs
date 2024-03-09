@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Settings
 
         internal Credentials(DouyinOpenClientOptions options)
         {
-            if (options == null) throw new ArgumentNullException(nameof(options));
+            if (options is null) throw new ArgumentNullException(nameof(options));
 
             ClientKey = options.ClientKey;
             ClientSecret = options.ClientSecret;

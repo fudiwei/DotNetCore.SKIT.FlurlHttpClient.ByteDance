@@ -81,7 +81,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot_value")]
-                        public double HotValue { get; set; }
+                        public decimal HotValue { get; set; }
                     }
                 }
 

@@ -2,7 +2,7 @@ using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests
 {
-    public class TestCase_Decryption
+    public class TestCase_DecryptionTests
     {
         [Fact(DisplayName = "测试用例：解密手机号")]
         public void TestDecryptOAuthUserInfoMobileNumber()

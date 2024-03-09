@@ -42,17 +42,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             }
         }
 
-        internal static class Converters
-        {
-            internal class RequestPropertyContentNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-
-            internal class RequestPropertyContentSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-        }
-
         /// <summary>
         /// 获取或设置用户唯一标识。
         /// </summary>
@@ -85,9 +74,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// 获取或设置消息体。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("content")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.RequestPropertyContentNewtonsoftJsonConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.RequestPropertyContentSystemTextJsonConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedObjectInJsonFormatConverter))]
         public Types.Content Content { get; set; } = new Types.Content();
 
         /// <summary>

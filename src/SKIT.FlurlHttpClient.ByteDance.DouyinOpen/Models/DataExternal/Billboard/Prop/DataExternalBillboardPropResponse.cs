@@ -81,7 +81,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("effect_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("effect_value")]
-                        public double EffectValue { get; set; }
+                        public decimal EffectValue { get; set; }
                     }
                 }
 

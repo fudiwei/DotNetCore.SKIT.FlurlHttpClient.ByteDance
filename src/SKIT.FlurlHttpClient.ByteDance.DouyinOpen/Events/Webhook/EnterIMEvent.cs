@@ -1,9 +1,12 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
     /// <para>表示 enter_im 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/event-list </para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/message-management-enterprise/accept-message-event </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/webhooks/event-list ]]> <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/message-management-enterprise/accept-message-event ]]>
+    /// </para>
     /// </summary>
     public class EnterIMEvent : DouyinOpenEvent<EnterIMEvent.Types.Content>
     {

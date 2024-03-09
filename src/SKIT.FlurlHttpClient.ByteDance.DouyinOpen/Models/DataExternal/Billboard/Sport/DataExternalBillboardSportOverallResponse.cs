@@ -87,14 +87,14 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("effect_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("effect_value")]
-                        public double EffectValue { get; set; }
+                        public decimal EffectValue { get; set; }
 
                         /// <summary>
                         /// 获取或设置热度指数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot_value")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot_value")]
-                        public double HotValue { get; set; }
+                        public decimal HotValue { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频列表。

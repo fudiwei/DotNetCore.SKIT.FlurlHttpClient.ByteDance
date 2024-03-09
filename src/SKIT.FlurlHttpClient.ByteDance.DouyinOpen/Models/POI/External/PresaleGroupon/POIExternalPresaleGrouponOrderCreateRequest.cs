@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cps_take_rate")]
         [System.Text.Json.Serialization.JsonPropertyName("cps_take_rate")]
-        public double? COSTakeRate { get; set; }
+        public decimal? COSTakeRate { get; set; }
 
         /// <summary>
         /// 获取或设置用户预留手机号。

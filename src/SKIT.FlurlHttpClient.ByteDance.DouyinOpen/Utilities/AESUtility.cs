@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
 {
+    using SKIT.FlurlHttpClient.Primitives;
+
     /// <summary>
     /// AES 算法工具类。
     /// </summary>
@@ -18,9 +20,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
         /// <returns>解密后的数据字节数组。</returns>
         public static byte[] DecryptWithCBC(byte[] keyBytes, byte[] ivBytes, byte[] cipherBytes)
         {
-            if (keyBytes == null) throw new ArgumentNullException(nameof(keyBytes));
-            if (ivBytes == null) throw new ArgumentNullException(nameof(ivBytes));
-            if (cipherBytes == null) throw new ArgumentNullException(nameof(cipherBytes));
+            if (keyBytes is null) throw new ArgumentNullException(nameof(keyBytes));
+            if (ivBytes is null) throw new ArgumentNullException(nameof(ivBytes));
+            if (cipherBytes is null) throw new ArgumentNullException(nameof(cipherBytes));
 
             using (SymmetricAlgorithm aes = Aes.Create())
             {
@@ -37,21 +39,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
         /// <summary>
         /// 基于 CBC 模式解密数据。
         /// </summary>
-        /// <param name="encodingKey">经 Base64 编码后的 AES 密钥。</param>
-        /// <param name="encodingIV">经 Base64 编码后的 AES 初始化向量。</param>
-        /// <param name="encodingCipherText">经 Base64 编码后的待解密数据。</param>
-        /// <returns>解密后的文本数据。</returns>
-        public static string DecryptWithCBC(string encodingKey, string encodingIV, string encodingCipherText)
+        /// <param name="encodingKey">经过编码后的（通常为 Base64）AES 密钥。</param>
+        /// <param name="encodingIV">经过编码后的（通常为 Base64）初始化向量。</param>
+        /// <param name="encodingCipher">经过编码后的（通常为 Base64）待解密数据。</param>
+        /// <returns>解密后的数据。</returns>
+        public static EncodedString DecryptWithCBC(EncodedString encodingKey, EncodedString encodingIV, EncodedString encodingCipher)
         {
-            if (encodingKey == null) throw new ArgumentNullException(nameof(encodingKey));
-            if (encodingCipherText == null) throw new ArgumentNullException(nameof(encodingCipherText));
+            if (encodingKey.Value is null) throw new ArgumentNullException(nameof(encodingKey));
+            if (encodingIV.Value is null) throw new ArgumentNullException(nameof(encodingIV));
+            if (encodingCipher.Value is null) throw new ArgumentNullException(nameof(encodingCipher));
 
             byte[] plainBytes = DecryptWithCBC(
-                keyBytes: Convert.FromBase64String(encodingKey),
-                ivBytes: Convert.FromBase64String(encodingIV),
-                cipherBytes: Convert.FromBase64String(encodingCipherText)
+                keyBytes: EncodedString.FromString(encodingKey, fallbackEncodingKind: EncodingKinds.Base64),
+                ivBytes: EncodedString.FromString(encodingIV, fallbackEncodingKind: EncodingKinds.Base64),
+                cipherBytes: EncodedString.FromString(encodingCipher, fallbackEncodingKind: EncodingKinds.Base64)
             );
-            return Encoding.UTF8.GetString(plainBytes);
+            return EncodedString.ToLiteralString(plainBytes);
         }
     }
 }

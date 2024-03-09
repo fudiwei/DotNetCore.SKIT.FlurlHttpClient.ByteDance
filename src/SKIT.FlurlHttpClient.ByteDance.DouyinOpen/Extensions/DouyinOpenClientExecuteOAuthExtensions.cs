@@ -11,7 +11,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     {
         /// <summary>
         /// <para>异步调用 [POST] /oauth/access_token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/get-access-token </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/get-access-token ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -22,21 +25,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ClientKey == null)
+            if (request.ClientKey is null)
                 request.ClientKey = client.Credentials.ClientKey;
 
-            if (request.ClientSecret == null)
+            if (request.ClientSecret is null)
                 request.ClientSecret = client.Credentials.ClientSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth", "access_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "access_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuthAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/renew_refresh_token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-token </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-token ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -47,18 +53,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ClientKey == null)
+            if (request.ClientKey is null)
                 request.ClientKey = client.Credentials.ClientKey;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth", "renew_refresh_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "renew_refresh_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuthRenewRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthRenewRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/client_token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/client-token </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/client-token ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -69,21 +78,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ClientKey == null)
+            if (request.ClientKey is null)
                 request.ClientKey = client.Credentials.ClientKey;
 
-            if (request.ClientSecret == null)
+            if (request.ClientSecret is null)
                 request.ClientSecret = client.Credentials.ClientSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth", "client_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "client_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuthClientTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthClientTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /oauth/refresh_token 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-access-token </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-permission/refresh-access-token ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -94,19 +106,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.ClientKey == null)
+            if (request.ClientKey is null)
                 request.ClientKey = client.Credentials.ClientKey;
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "oauth", "refresh_token");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "refresh_token");
 
-            return await client.SendRequestWithJsonAsync<Models.OAuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         #region User
         /// <summary>
         /// <para>异步调用 [GET] /oauth/userinfo 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-account-open-info </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-account-open-info ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -118,11 +133,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "oauth", "userinfo")
+                .CreateFlurlRequest(request, HttpMethod.Get, "oauth", "userinfo")
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
-            return await client.SendRequestWithJsonAsync<Models.OAuthUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

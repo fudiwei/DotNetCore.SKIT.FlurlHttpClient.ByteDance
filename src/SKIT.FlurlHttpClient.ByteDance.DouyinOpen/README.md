@@ -11,6 +11,7 @@
 -   基于抖音开放平台 API 封装。
 -   提供了抖音开放平台 API 所需的 AES、MD5、SHA-1、SHA-256、HMAC-SHA-256 等算法工具类。
 -   提供了生成授权链接、生成 JSBridge 签名、解析回调通知事件、解密手机号码等扩展方法。
+-   配合 [SKIT.FlurlHttpClient.ByteDance.MicroApp](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp) 模块，可无缝对接抖音小程序开放平台。
 
 ---
 

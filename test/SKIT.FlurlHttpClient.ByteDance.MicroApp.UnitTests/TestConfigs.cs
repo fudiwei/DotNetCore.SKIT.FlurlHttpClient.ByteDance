@@ -18,9 +18,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 using var json = JsonDocument.Parse(stream);
 
                 var config = json.RootElement.GetProperty("TestConfigs");
-                ByteDanceMicroAppId = config.GetProperty("AppId").GetString()!;
-                ByteDanceMicroAppSecret = config.GetProperty("AppSecret").GetString()!;
-                ByteDanceMicroAppAccessToken = config.GetProperty("AccessToken").GetString()!;
+                DouyinMicroAppId = config.GetProperty("AppId").GetString()!;
+                DouyinMicroAppSecret = config.GetProperty("AppSecret").GetString()!;
+                DouyinMicroAppAccessToken = config.GetProperty("AccessToken").GetString()!;
             }
             catch (Exception ex)
             {
@@ -28,8 +28,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             }
         }
 
-        public static readonly string ByteDanceMicroAppId;
-        public static readonly string ByteDanceMicroAppSecret;
-        public static readonly string ByteDanceMicroAppAccessToken;
+        public static readonly string DouyinMicroAppId;
+        public static readonly string DouyinMicroAppSecret;
+        public static readonly string DouyinMicroAppAccessToken;
     }
 }

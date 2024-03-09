@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
@@ -26,9 +26,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// 获取或设置小程序点击量视频分布字典。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("mp_item_click_json")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Converters.ResponsePropertyItemClickDistributionMapNewtonsoftJsonConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedObjectInJsonFormatConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("mp_item_click_json")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.ResponsePropertyItemClickDistributionMapSystemTextJsonConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedObjectInJsonFormatConverter))]
                         public IDictionary<string, int> ItemClickDistributionMap { get; set; } = default!;
                     }
                 }
@@ -39,17 +39,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 [Newtonsoft.Json.JsonProperty("result_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("result_list")]
                 public Types.Result[] ResultList { get; set; } = default!;
-            }
-        }
-
-        internal static class Converters
-        {
-            internal class ResponsePropertyItemClickDistributionMapNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<IDictionary<string, int>?>
-            {
-            }
-
-            internal class ResponsePropertyItemClickDistributionMapSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<IDictionary<string, int>?>
-            {
             }
         }
     }

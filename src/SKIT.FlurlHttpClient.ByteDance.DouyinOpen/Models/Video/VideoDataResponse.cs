@@ -11,9 +11,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
                 public static class Types
                 {
-                    public class Video : VideoListResponse.Types.Data.Types.Video
+                    public class Video
                     {
-                        public static new class Types
+                        public static class Types
                         {
                             public class Statistics : VideoListResponse.Types.Data.Types.Video.Types.Statistics
                             {
@@ -21,11 +21,74 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         }
 
                         /// <summary>
+                        /// 获取或设置视频 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("item_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("item_id")]
+                        public string ItemId { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置视频标题。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("title")]
+                        [System.Text.Json.Serialization.JsonPropertyName("title")]
+                        public string Title { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置视频状态。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("video_status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("video_status")]
+                        public int Status { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置封面 URL。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("cover")]
+                        [System.Text.Json.Serialization.JsonPropertyName("cover")]
+                        public string CoverUrl { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置视频分享 URL。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("share_url")]
+                        [System.Text.Json.Serialization.JsonPropertyName("share_url")]
+                        public string ShareUrl { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置是否置顶。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_top")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_top")]
+                        public bool IsTop { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置是否审核结束。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_reviewed")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_reviewed")]
+                        public bool IsReviewed { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置创建时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("create_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("create_time")]
+                        public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置媒体类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("media_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("media_type")]
+                        public int? MediaType { get; set; }
+
+                        /// <summary>
                         /// 获取或设置文章 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("statistics")]
                         [System.Text.Json.Serialization.JsonPropertyName("statistics")]
-                        public new Types.Statistics Statistics { get; set; } = default!;
+                        public Types.Statistics Statistics { get; set; } = default!;
                     }
                 }
 

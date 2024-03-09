@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("all_fans_num")]
                         [System.Text.Json.Serialization.JsonPropertyName("all_fans_num")]
-                        public static int TotalFansCount { get; set; }
+                        public int TotalFansCount { get; set; }
                     }
                 }
 
@@ -120,7 +120,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fans_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("fans_data")]
-                public static Types.Result Result { get; set; } = default!;
+                public Types.Result Result { get; set; } = default!;
             }
         }
     }

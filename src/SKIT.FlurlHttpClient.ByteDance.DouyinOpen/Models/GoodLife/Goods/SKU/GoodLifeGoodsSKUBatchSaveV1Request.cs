@@ -9,9 +9,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     {
         public static class Types
         {
-            public class SKU : GoodLifeGoodsProductSaveV1Request.Types.SKU
+            public class SKU
             {
-                public static new class Types
+                public static class Types
                 {
                     public class Stock : GoodLifeGoodsProductSaveV1Request.Types.SKU.Types.Stock
                     {
@@ -19,11 +19,60 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 }
 
                 /// <summary>
+                /// 获取或设置 SKU ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("sku_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
+                public string? SKUId { get; set; }
+
+                /// <summary>
+                /// 获取或设置 SKU 外部 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("out_sku_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("out_sku_id")]
+                public string? OutSKUId { get; set; }
+
+                /// <summary>
+                /// 获取或设置 SKU 名称。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("sku_name")]
+                [System.Text.Json.Serialization.JsonPropertyName("sku_name")]
+                public string SKUName { get; set; } = string.Empty;
+
+                /// <summary>
+                /// 获取或设置状态。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("status")]
+                [System.Text.Json.Serialization.JsonPropertyName("status")]
+                public int Status { get; set; }
+
+                /// <summary>
                 /// 获取或设置库存信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("stock")]
                 [System.Text.Json.Serialization.JsonPropertyName("stock")]
-                public new Types.Stock Stock { get; set; } = new Types.Stock();
+                public Types.Stock Stock { get; set; } = new Types.Stock();
+
+                /// <summary>
+                /// 获取或设置原价（单位：分）。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("origin_amount")]
+                [System.Text.Json.Serialization.JsonPropertyName("origin_amount")]
+                public int? OriginalAmount { get; set; }
+
+                /// <summary>
+                /// 获取或设置实际价格（单位：分）。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("actual_amount")]
+                [System.Text.Json.Serialization.JsonPropertyName("actual_amount")]
+                public int ActualAmount { get; set; }
+
+                /// <summary>
+                /// 获取或设置属性键值对字典。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
+                [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
+                public IDictionary<string, string>? AttributeKeyValueMap { get; set; }
             }
         }
 

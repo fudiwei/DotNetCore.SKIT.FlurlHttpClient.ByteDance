@@ -14,7 +14,7 @@ string webhookXml = "<xml> ... </xml>";
 var webhookModel = client.DeserializeEventFromXml<Events.TextMessageEvent>(webhookXml);
 ```
 
-完整的回调通知模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.MicroApp/Events_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/OpenApi/Events_、_src/SKIT.FlurlHttpClient.ByteDance.Api/SDK/ProductApi/Events_ 目录。
+完整的回调通知模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.MicroApp/Events_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/OpenApi/Events_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/ProductApi/Events_ 目录。
 
 ---
 

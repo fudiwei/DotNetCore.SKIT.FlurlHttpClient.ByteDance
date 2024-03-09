@@ -9,8 +9,9 @@
 ## 功能
 
 -   基于抖音小程序开放平台 API 封装。
--   提供了抖音小程序所需的 AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
+-   提供了抖音小程序所需的 RSA、AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
 -   提供了解析回调通知事件等扩展方法。
+-   配合 [SKIT.FlurlHttpClient.ByteDance.DouyinOpen](../DouyinOpen/README.md) 模块，可无缝对接抖音开放平台。
 
 ---
 
@@ -66,8 +67,8 @@ if (response.IsSuccessful())
 }
 else
 {
-    Console.WriteLine("错误代码：" + response.ErrorCode);
-    Console.WriteLine("错误描述：" + response.ErrorMessage);
+    Console.WriteLine("错误代码：" + response.ErrorNumber);
+    Console.WriteLine("错误描述：" + response.ErrorTips);
 }
 ```
 
@@ -78,7 +79,7 @@ else
 -   服务商平台：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.OpenApi;
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi;
 
 var options = new DouyinMicroAppOpenApiClientOptions()
 {
@@ -91,7 +92,7 @@ var client = DouyinMicroAppOpenApiClientBuilder.Create(options).Build();
 -   泛知识课程库：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.ProductApi;
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi;
 
 var options = new DouyinMicroAppProductApiClientOptions()
 {
@@ -104,7 +105,7 @@ var client = DouyinMicroAppProductApiClientBuilder.Create(options).Build();
 -   泛知识角色系统：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.RoleApi;
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi;
 
 var options = new DouyinMicroAppRoleApiClientOptions()
 {
@@ -117,7 +118,7 @@ var client = DouyinMicroAppRoleApiClientBuilder.Create(options).Build();
 -   直播小玩法：
 
 ```csharp
-using SKIT.FlurlHttpClient.ByteDance.MicroApp.SDK.Webcast;
+using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast;
 
 var options = new DouyinMicroAppWebcastClientOptions()
 {

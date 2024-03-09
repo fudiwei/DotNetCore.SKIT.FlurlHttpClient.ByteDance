@@ -1,12 +1,9 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /v1/microapp/package/upload 接口的请求。</para>
+    /// <para>表示 [POST] /apps/v1/package_version/upload/ 接口的请求。</para>
     /// </summary>
-    [Obsolete("相关接口或字段于 2024-02-21 下线。")]
-    public class OpenApiMicroAppPackageUploadV1Request : DouyinMicroAppOpenApiRequest
+    public class OpenAppsPackageVersionUploadV1Request : DouyinMicroAppOpenApiRequest
     {
         /// <summary>
         /// 获取或设置提交 ID。
@@ -35,5 +32,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         [Newtonsoft.Json.JsonProperty("ext_json")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_json")]
         public string? ExtraJson { get; set; }
+
+        /// <summary>
+        /// 获取或设置版本通道。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("tag")]
+        [System.Text.Json.Serialization.JsonPropertyName("tag")]
+        public string? VersionTag { get; set; }
+
+        /// <inheritdoc/>
+        [Newtonsoft.Json.JsonProperty("TpAppID")]
+        [System.Text.Json.Serialization.JsonPropertyName("TpAppID")]
+        public override string? ComponentAppId { get; set; }
     }
 }

@@ -1,13 +1,11 @@
-using System;
 using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /v1/microapp/package/versions 接口的响应。</para>
+    /// <para>表示 [GET] /apps/v1/package_version/versions/ 接口的响应。</para>
     /// </summary>
-    [Obsolete("相关接口或字段于 2024-02-21 下线。")]
-    public class OpenApiMicroAppPackageVersionsV1Response : OpenApiLegacyResponseBase
+    public class OpenAppsPackageVersionGetVersionsV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {
@@ -15,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
             {
                 public static class Types
                 {
-                    public class VersionInfo
+                    public abstract class VersionInfoBase
                     {
                         /// <summary>
                         /// 获取或设置服务类目列表。
@@ -25,21 +23,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         public string[] CategoryList { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置小程序拥有者的头像 URL。
+                        /// 获取或设置小程序管理员的头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_avatar")]
                         public string DeveloperAvatarUrl { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置小程序拥有者的账号。
+                        /// 获取或设置小程序管理员的账号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_id")]
                         public string DeveloperId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置小程序拥有者的昵称。
+                        /// 获取或设置小程序管理员的昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_name")]
@@ -51,6 +49,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         [Newtonsoft.Json.JsonProperty("version")]
                         [System.Text.Json.Serialization.JsonPropertyName("version")]
                         public string Version { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置版本通道。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("version_tag")]
+                        [System.Text.Json.Serialization.JsonPropertyName("version_tag")]
+                        public string VersionTag { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置更新信息。
@@ -65,9 +70,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         [Newtonsoft.Json.JsonProperty("ctime")]
                         [System.Text.Json.Serialization.JsonPropertyName("ctime")]
                         public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置各宿主端附件字典。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("attach_info")]
+                        [System.Text.Json.Serialization.JsonPropertyName("attach_info")]
+                        public IDictionary<string, string>? AttachmentMap { get; set; }
                     }
 
-                    public class LatestVersionInfo : VersionInfo
+                    public class LatestVersionInfo : VersionInfoBase
                     {
                         /// <summary>
                         /// 获取或设置是否已提审。
@@ -88,13 +100,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         public string[]? ScreenshotUrlList { get; set; }
                     }
 
-                    public class AuditVersionInfo : VersionInfo
+                    public class AuditVersionInfo : VersionInfoBase
                     {
                         /// <summary>
                         /// 获取或设置通过审核的宿主端列表。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("approvedApps")]
-                        [System.Text.Json.Serialization.JsonPropertyName("approvedApps")]
+                        [Newtonsoft.Json.JsonProperty("approved_apps")]
+                        [System.Text.Json.Serialization.JsonPropertyName("approved_apps")]
                         public string[]? ApprovedApps { get; set; }
 
                         /// <summary>
@@ -128,21 +140,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         public string? RejectReason { get; set; }
 
                         /// <summary>
-                        /// 获取或设置审核不通过原因字典。
+                        /// 获取或设置各宿主端审核不通过原因字典。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("reasonDetail")]
-                        [System.Text.Json.Serialization.JsonPropertyName("reasonDetail")]
+                        [Newtonsoft.Json.JsonProperty("reason_detail")]
+                        [System.Text.Json.Serialization.JsonPropertyName("reason_detail")]
                         public IDictionary<string, string[]>? RejectReasonDetailMap { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置附件字典。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("attachInfo")]
-                        [System.Text.Json.Serialization.JsonPropertyName("attachInfo")]
-                        public IDictionary<string, string>? AttachmentMap { get; set; }
                     }
 
-                    public class CurrentVersionInfo : VersionInfo
+                    public class GrayVersionInfo : VersionInfoBase
+                    {
+                        /// <summary>
+                        /// 获取或设置各宿主端灰度比例字典。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("host_gray_scale")]
+                        [System.Text.Json.Serialization.JsonPropertyName("host_gray_scale")]
+                        public IDictionary<string, string>? HostGrayScaleMap { get; set; }
+                    }
+
+                    public class CurrentVersionInfo : VersionInfoBase
                     {
                         public static class Types
                         {
@@ -167,15 +182,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// <summary>
                         /// 获取或设置通过审核的宿主端列表。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("approvedApps")]
-                        [System.Text.Json.Serialization.JsonPropertyName("approvedApps")]
+                        [Newtonsoft.Json.JsonProperty("approved_apps")]
+                        [System.Text.Json.Serialization.JsonPropertyName("approved_apps")]
                         public string[]? ApprovedApps { get; set; }
 
                         /// <summary>
                         /// 获取或设置没有通过审核的宿主端列表。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("notApprovedApps")]
-                        [System.Text.Json.Serialization.JsonPropertyName("notApprovedApps")]
+                        [Newtonsoft.Json.JsonProperty("not_approved_apps")]
+                        [System.Text.Json.Serialization.JsonPropertyName("not_approved_apps")]
                         public string[]? NotApprovedApps { get; set; }
 
                         /// <summary>
@@ -192,7 +207,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("uid")]
                         [System.Text.Json.Serialization.JsonPropertyName("uid")]
-                        public long? UID { get; set; }
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public long? UserUID { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核不通过原因。
@@ -202,18 +218,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         public string? RejectReason { get; set; }
 
                         /// <summary>
-                        /// 获取或设置审核不通过原因字典。
+                        /// 获取或设置各宿主端审核不通过原因字典。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("reasonDetail")]
-                        [System.Text.Json.Serialization.JsonPropertyName("reasonDetail")]
+                        [Newtonsoft.Json.JsonProperty("reason_detail")]
+                        [System.Text.Json.Serialization.JsonPropertyName("reason_detail")]
                         public IDictionary<string, string[]>? RejectReasonDetailMap { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置附件字典。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("attachInfo")]
-                        [System.Text.Json.Serialization.JsonPropertyName("attachInfo")]
-                        public IDictionary<string, string>? AttachmentMap { get; set; }
 
                         /// <summary>
                         /// 获取或设置回退信息。
@@ -237,6 +246,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 [Newtonsoft.Json.JsonProperty("audit")]
                 [System.Text.Json.Serialization.JsonPropertyName("audit")]
                 public Types.AuditVersionInfo? AuditVersionInfo { get; set; }
+
+                /// <summary>
+                /// 获取或设置灰度版本信息。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("gray")]
+                [System.Text.Json.Serialization.JsonPropertyName("gray")]
+                public Types.GrayVersionInfo? GrayVersionInfo { get; set; }
 
                 /// <summary>
                 /// 获取或设置线上版本信息。

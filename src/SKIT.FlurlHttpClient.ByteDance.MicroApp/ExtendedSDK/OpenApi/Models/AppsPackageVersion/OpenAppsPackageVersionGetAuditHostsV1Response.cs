@@ -1,29 +1,26 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /v1/microapp/package/audit_hosts 接口的响应。</para>
+    /// <para>表示 [GET] /apps/v1/package_version/get_audit_hosts/ 接口的响应。</para>
     /// </summary>
-    [Obsolete("相关接口或字段于 2024-02-21 下线。")]
-    public class OpenApiMicroAppPackageAuditHostsV1Response : OpenApiLegacyResponseBase
+    public class OpenAppsPackageVersionGetAuditHostsV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {
             public class Data
             {
                 /// <summary>
-                /// 获取或设置本次审核可选宿主端英文简称列表。
+                /// 获取或设置本次审核可选宿主端列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("hostNames")]
-                [System.Text.Json.Serialization.JsonPropertyName("hostNames")]
+                [Newtonsoft.Json.JsonProperty("host_names")]
+                [System.Text.Json.Serialization.JsonPropertyName("host_names")]
                 public string[] HostNames { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置上次发布的宿主端英文简称列表。
+                /// 获取或设置上次发布的宿主端列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("releasedHostNames")]
-                [System.Text.Json.Serialization.JsonPropertyName("releasedHostNames")]
+                [Newtonsoft.Json.JsonProperty("released_host_names")]
+                [System.Text.Json.Serialization.JsonPropertyName("released_host_names")]
                 public string[] ReleasedHostNames { get; set; } = default!;
             }
         }

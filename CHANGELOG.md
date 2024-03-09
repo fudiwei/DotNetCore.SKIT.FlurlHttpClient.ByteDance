@@ -33,7 +33,7 @@
 
 <summary>[展开查看]</summary>
 
--   Release 3.0.0 (todo)
+-   Release 3.0.0 (2024-03-09)
 
     -   **新增**：新增 URL Link v2、URL Schema v2、二维码 v2、订阅消息 v2、推广计划 v2、流量主 v2 等相关接口。
 

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net461; netstandard2.0; net6.0</TargetFrameworks>
+        <TargetFrameworks>net462; netstandard2.0; net6.0</TargetFrameworks>
         <LangVersion>10.0</LangVersion>
         <Nullable>enable</Nullable>
         <NullableReferenceTypes>true</NullableReferenceTypes>
@@ -14,7 +14,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance MicroApp 字节 字节跳动 头条 今日头条 抖音 字节小程序 字节跳动小程序 头条小程序 今日头条小程序 抖音小程序</PackageTags>
-        <Version>3.0.0-preview.1</Version>
+        <Version>3.0.0</Version>
         <Description>基于 Flurl.Http 的抖音小程序开放平台 API 客户端，支持小程序、小游戏、服务商平台、泛知识课程库、泛知识角色系统、直播小玩法等接口。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>
@@ -36,7 +36,7 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net461'" />
+        <Reference Include="System.Web" Condition="'$(TargetFramework)' == 'net462'" />
     </ItemGroup>
 
     <ItemGroup>

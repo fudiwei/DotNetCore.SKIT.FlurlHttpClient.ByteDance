@@ -1,0 +1,19 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202312061606423E2733BD492C2826347D",
+    "data": {
+        "service_content_type_list": [
+            {
+                "service_content_type_id": 500,
+                "service_content_type_name": "生活服务",
+                "sub_service_content_type_list": [
+                    {
+                        "service_content_type_id": 1,
+                        "service_content_type_name": "生活缴费"
+                    }
+                ]
+            }
+        ]
+    }
+}

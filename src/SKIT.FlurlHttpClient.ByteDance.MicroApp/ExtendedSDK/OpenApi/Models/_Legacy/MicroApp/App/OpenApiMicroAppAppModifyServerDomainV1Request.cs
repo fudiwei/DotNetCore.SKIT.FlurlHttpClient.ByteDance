@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     {
         /// <summary>
         /// 获取或设置执行动作。
-        /// <para>默认值：get</para>
+        /// <para>默认值："get"</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("action")]
         [System.Text.Json.Serialization.JsonPropertyName("action")]

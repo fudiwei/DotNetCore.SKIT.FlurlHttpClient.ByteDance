@@ -1,0 +1,71 @@
+{
+    "corp_info": {
+        "corp_type": 4,
+        "credentials_type": 1,
+        "credentials_name": "1",
+        "credentials_number": "xxxxx",
+        "credentials_pic": {
+            "path": "xxxx"
+        },
+        "credentials_address": "xxxxx",
+        "province_code": "320000",
+        "province_name": "江苏省",
+        "city_code": "120100",
+        "city_name": "市辖区",
+        "region_code": "120104",
+        "region_name": "南开区",
+        "communication_address": "xxxx",
+        "incharge_people_name": "xxx",
+        "incharge_people_credentials_type": 2,
+        "incharge_people_credentials_number": "xxxxxxx",
+        "incharge_people_credentials_front": {
+            "path": "xxxxxx"
+        },
+        "incharge_people_credentials_back": {
+            "path": "xxxxx"
+        },
+        "incharge_people_credentials_has_end_time": true,
+        "incharge_people_credentials_valid_start_time": 1704038400,
+        "incharge_people_credentials_valid_end_time": 1733328000,
+        "incharge_people_email": "xxxxxx",
+        "incharge_people_phone": "xxxxxx",
+        "incharge_people_emergency_phone": "xxxxxx",
+        "remark": "备注",
+        "corp_other_materials": [
+            {
+                "path": "xxxxxxx"
+            }
+        ],
+        "corp_authority_letter": [
+            {
+                "path": "xxxxxx"
+            }
+        ]
+    },
+    "app_info": {
+        "app_language": [ 1 ],
+        "service_content_type_list": [ 1 ],
+        "involve_pre_approval": true,
+        "pre_approval_list": [
+            {
+                "pre_approval_item_id": 3,
+                "pre_approval_number": "5678",
+                "pre_approval_files": [
+                    {
+                        "path": "xxxxx"
+                    }
+                ]
+            }
+        ],
+        "incharge_people_email": "xxxxx",
+        "incharge_people_phone": "xxxx",
+        "incharge_people_emergency_phone": "xxxx",
+        "remark": "备注",
+        "facial_recognition_token": "xxxxx",
+        "app_other_materials": [
+            {
+                "path": "xxxxxx"
+            }
+        ]
+    }
+}

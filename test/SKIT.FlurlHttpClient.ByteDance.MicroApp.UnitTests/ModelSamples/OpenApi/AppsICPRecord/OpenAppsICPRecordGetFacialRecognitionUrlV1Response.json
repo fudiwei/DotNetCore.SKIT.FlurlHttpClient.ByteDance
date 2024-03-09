@@ -1,0 +1,9 @@
+{
+    "err_no": 0,
+    "log_id": "2023120718400603FC7DFC64EFC63EE90F",
+    "data": {
+        "facial_recognition_token": "xxxx",
+        "facial_recognition_url": "https://xxxxxx"
+    },
+    "err_msg": ""
+}

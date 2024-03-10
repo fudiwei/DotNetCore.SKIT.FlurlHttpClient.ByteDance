@@ -1,0 +1,7 @@
+{
+    "event": "union_auth_info_for_c",
+    "from_user_id": "",
+    "to_user_id": "",
+    "client_key": "",
+    "content": "{\"c_client_key\":\"xxxxxx\",\"c_open_id\":\"xxxxxxx\",\"b_client_key\":\"xxxxxxxx\",\"b_open_id\":\"xxxxx\"}"
+}

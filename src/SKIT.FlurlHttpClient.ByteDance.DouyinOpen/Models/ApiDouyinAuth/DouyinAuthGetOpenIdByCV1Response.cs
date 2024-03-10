@@ -1,20 +1,20 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /api/douyin/v1/schema/get_item_info/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/douyin/v1/auth/get_openid_by_c/ 接口的响应。</para>
     /// </summary>
-    public class DouyinSchemaGetItemInfoV1Response : DouyinOpenResponse
+    public class DouyinAuthGetOpenIdByCV1Response : DouyinOpenResponse
     {
         public static class Types
         {
-            public class Data : DouyinOpenResponseData
+            public class Data
             {
                 /// <summary>
-                /// 获取或设置 Schema URL。
+                /// 获取或设置用户在 B 端下的 OpenId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("schema")]
-                [System.Text.Json.Serialization.JsonPropertyName("schema")]
-                public string SchemaUrl { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("open_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("open_id")]
+                public string BOpenId { get; set; } = default!;
             }
         }
 
@@ -26,13 +26,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         [Newtonsoft.Json.JsonProperty("err_msg")]
         [System.Text.Json.Serialization.JsonPropertyName("err_msg")]
         public string? ErrorMessage { get; set; }
-
-        /// <summary>
-        /// 获取或设置请求唯一标识。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("log_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        public string? LogId { get; set; }
 
         /// <summary>
         /// 获取或设置返回数据。

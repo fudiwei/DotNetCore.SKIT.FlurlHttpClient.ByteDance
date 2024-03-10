@@ -1,20 +1,20 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /api/douyin/v1/schema/get_item_info/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/douyin/v1/auth/get_openid_by_b/ 接口的响应。</para>
     /// </summary>
-    public class DouyinSchemaGetItemInfoV1Response : DouyinOpenResponse
+    public class DouyinAuthGetOpenIdByBV1Response : DouyinOpenResponse
     {
         public static class Types
         {
-            public class Data : DouyinOpenResponseData
+            public class Data
             {
                 /// <summary>
-                /// 获取或设置 Schema URL。
+                /// 获取或设置用户在 C 端下的 OpenId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("schema")]
-                [System.Text.Json.Serialization.JsonPropertyName("schema")]
-                public string SchemaUrl { get; set; } = default!;
+                [Newtonsoft.Json.JsonProperty("open_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("open_id")]
+                public string COpenId { get; set; } = default!;
             }
         }
 

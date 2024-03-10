@@ -10,6 +10,8 @@
 
 	<ItemGroup>
 		<None Remove=".gitignore" />
+		<None Remove="ModelSamples\ApiAppsAuth\AppsAuthGetOpenIdByCV1Request.json" />
+		<None Remove="ModelSamples\ApiAppsAuth\AppsAuthGetOpenIdByCV1Response.json" />
         <Content Include="appsettings.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

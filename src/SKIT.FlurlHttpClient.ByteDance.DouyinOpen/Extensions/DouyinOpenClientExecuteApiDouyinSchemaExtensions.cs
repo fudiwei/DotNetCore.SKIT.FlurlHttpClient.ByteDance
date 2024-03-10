@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_share", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_share/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinSchemaGetShareV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_user_profile", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_user_profile/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinSchemaGetUserProfileV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_chat", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_chat/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinSchemaGetChatV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_item_info", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_item_info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinSchemaGetItemInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_live", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "schema", "get_live/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinSchemaGetLiveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

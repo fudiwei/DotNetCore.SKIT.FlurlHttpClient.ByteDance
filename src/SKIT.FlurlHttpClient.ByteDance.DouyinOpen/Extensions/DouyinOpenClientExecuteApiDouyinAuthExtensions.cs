@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "auth", "get_openid_by_c", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "auth", "get_openid_by_c/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinAuthGetOpenIdByCV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "auth", "get_openid_by_b", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "auth", "get_openid_by_b/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinAuthGetOpenIdByBV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

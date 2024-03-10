@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "api", "douyin", "v1", "user", "fans_data", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "douyin", "v1", "user", "fans_data/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 

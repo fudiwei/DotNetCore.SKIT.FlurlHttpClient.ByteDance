@@ -81,7 +81,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "api", "douyin", "v1", "video", "video_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "douyin", "v1", "video", "video_list/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -107,7 +107,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "video_data", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "video_data/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId); ;
 

@@ -9,5 +9,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// 主域名（默认）。
         /// </summary>
         public const string DEFAULT = "https://open.douyin.com";
+
+        /// <summary>
+        /// 沙盒域名。
+        /// </summary>
+        public const string SANDBOX = "https://open-sandbox.douyin.com";
     }
 }

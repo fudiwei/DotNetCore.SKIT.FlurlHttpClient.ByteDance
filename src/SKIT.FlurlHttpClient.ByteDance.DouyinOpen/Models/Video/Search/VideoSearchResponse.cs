@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class Video : VideoListResponse.Types.Data.Types.Video
+                    public class Video : DouyinVideoListV1Response.Types.Data.Types.Video
                     {
                         /// <summary>
                         /// 获取或设置特殊加密的视频 ID。

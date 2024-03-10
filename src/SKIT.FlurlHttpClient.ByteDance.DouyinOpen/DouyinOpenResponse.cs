@@ -143,7 +143,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <returns></returns>
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && Data?.ErrorCode == 0;
+            return base.IsSuccessful() && (Data?.ErrorCode).GetValueOrDefault() == 0;
         }
     }
 }

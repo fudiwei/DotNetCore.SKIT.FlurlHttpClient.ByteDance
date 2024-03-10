@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class HotSearchVideo : VideoListResponse.Types.Data.Types.Video
+                    public class HotSearchVideo : DouyinVideoListV1Response.Types.Data.Types.Video
                     {
                     }
                 }

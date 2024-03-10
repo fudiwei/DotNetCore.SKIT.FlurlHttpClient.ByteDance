@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
                 request.ClientSecret = client.Credentials.ClientSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "token", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "token/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthAccessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
                 request.ClientSecret = client.Credentials.ClientSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "refresh_token", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "refresh_token/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
                 request.ClientSecret = client.Credentials.ClientSecret;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "revoke", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "revoke/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthRevokeTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
                 request.ClientKey = client.Credentials.ClientKey;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "get_qrcode", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "get_qrcode/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthGetQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -136,7 +136,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "check_qrcode", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "check_qrcode/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthCheckQrcodeResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

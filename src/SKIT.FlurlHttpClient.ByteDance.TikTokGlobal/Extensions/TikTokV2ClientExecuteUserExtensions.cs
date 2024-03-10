@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "user", "info", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "user", "info/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.UserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "add", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "add/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.UserDataAddResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "cancel", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "cancel/");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.UserDataCancelResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "check", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "check/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.UserDataCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "download", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "user", "data", "download/");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.UserDataDownloadResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
         #region User
         /// <summary>
-        /// <para>异步调用 [GET] /oauth/userinfo 接口。</para>
+        /// <para>异步调用 [POST] /oauth/userinfo 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/get-account-open-info ]]>
@@ -133,9 +133,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "oauth", "userinfo");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "userinfo");
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.OAuthUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

@@ -255,6 +255,10 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 3.0.1 (2024-03-10)
+
+    -   **修复**：修复部分以反斜杠结尾的接口地址错误。
+
 -   Release 3.0.0 (2024-03-04)
 
     -   **新增**：新增内容发布（Content Posting）、个人数据可携带权（Data Portability）、调研（Research）、商业化内容（Commercial Content）等相关接口。

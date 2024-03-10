@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "platform", "v1", "webhook", "reset_secret", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "platform", "v1", "webhook", "reset_secret/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenPlatformWebhookResetSecretV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "platform", "v1", "webhook", "save_callback_url", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "platform", "v1", "webhook", "save_callback_url/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenPlatformWebhookSaveCallbackUrlV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "platform", "v1", "webhook", "event_status_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "platform", "v1", "webhook", "event_status_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenPlatformWebhookEventStatusListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "platform", "v1", "webhook", "update_event_status", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "platform", "v1", "webhook", "update_event_status/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenPlatformWebhookUpdateEventStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

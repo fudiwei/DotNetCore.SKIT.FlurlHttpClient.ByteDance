@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "upload", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "upload/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionUploadV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "package_version", "get_audit_hosts", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "package_version", "get_audit_hosts/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionGetAuditHostsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "audit", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "audit/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "revoke_audit", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "revoke_audit/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionRevokeAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "release", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "release/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionReleaseV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -140,7 +140,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "rollback", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "package_version", "rollback/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionRollbackV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -163,7 +163,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "package_version", "versions", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "package_version", "versions/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsPackageVersionGetVersionsV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

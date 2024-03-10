@@ -2090,8 +2090,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update_orient_talents", "")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "update_orient_talents", ""));
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "taskbox", "update_orient_talents/")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "taskbox", "update_orient_talents/"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTaskBoxUpdateOrientTalentsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

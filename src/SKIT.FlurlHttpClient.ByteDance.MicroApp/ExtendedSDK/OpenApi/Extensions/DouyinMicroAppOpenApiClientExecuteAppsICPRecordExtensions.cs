@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 request.ImageFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.ImageFileName) ?? "image/jpeg";
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "upload_image", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "upload_image/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "get_facial_recognition_url", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "get_facial_recognition_url/")
                 .SetQueryParam("province_code", request.ProvinceCode)
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "send_facial_recognition_notify", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "send_facial_recognition_notify/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordSendFacialRecognitionNotifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_facial_recognition_status", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_facial_recognition_status/")
                 .SetQueryParam("facial_recognition_token", request.FacialRecognitionToken)
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_corp_type_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_corp_type_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryCorpTypeListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -152,7 +152,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_region_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_region_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryRegionListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -175,7 +175,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_incharge_people_credentials_type_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_incharge_people_credentials_type_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryInchargePeopleCredentialsTypeListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -198,7 +198,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_incharge_people_credentials_type_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_incharge_people_credentials_type_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryServiceContentTypeListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -221,7 +221,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_pre_approval_item_type_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_pre_approval_item_type_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryPreApprovalItemTypeListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -244,7 +244,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_record_status", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_record_status/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryRecordStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -267,7 +267,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "submit_record_info", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "submit_record_info/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordSubmitRecordInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

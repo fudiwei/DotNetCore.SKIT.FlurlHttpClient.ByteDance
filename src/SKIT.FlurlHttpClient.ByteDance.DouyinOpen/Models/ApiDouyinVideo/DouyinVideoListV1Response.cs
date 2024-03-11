@@ -64,6 +64,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// <summary>
                         /// 获取或设置视频 ID。
                         /// </summary>
+                        [Newtonsoft.Json.JsonProperty("video_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("video_id")]
+                        public string? VideoId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置视频 ID。
+                        /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_id")]
                         public string ItemId { get; set; } = default!;
@@ -145,7 +152,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cursor")]
                 [System.Text.Json.Serialization.JsonPropertyName("cursor")]
-                public long? PageCursor { get; set; }
+                public long? NextCursor { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

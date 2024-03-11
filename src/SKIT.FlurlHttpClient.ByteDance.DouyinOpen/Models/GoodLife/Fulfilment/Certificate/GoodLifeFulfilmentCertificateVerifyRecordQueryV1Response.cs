@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cursor")]
                         [System.Text.Json.Serialization.JsonPropertyName("cursor")]
-                        public string PageCursor { get; set; } = default!;
+                        public string NextCursor { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置核销记录 ID。

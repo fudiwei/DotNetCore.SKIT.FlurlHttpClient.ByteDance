@@ -176,7 +176,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             return await client.SendFlurlRequestAsJsonAsync<Models.OAuthRefreshBusinessTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
-
         /// <summary>
         /// <para>异步调用 [POST] /oauth/business_scopes 接口。</para>
         /// <para>

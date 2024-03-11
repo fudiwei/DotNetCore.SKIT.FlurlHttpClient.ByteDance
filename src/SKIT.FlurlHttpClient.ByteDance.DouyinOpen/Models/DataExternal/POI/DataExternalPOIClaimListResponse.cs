@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [GET] /data/external/poi/claim/list 接口的响应。</para>
@@ -55,7 +55,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cursor")]
                 [System.Text.Json.Serialization.JsonPropertyName("cursor")]
-                public long? PageCursor { get; set; }
+                public long? NextCursor { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

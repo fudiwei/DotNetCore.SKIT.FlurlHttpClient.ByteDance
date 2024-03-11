@@ -281,7 +281,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("next_cursor")]
                 [System.Text.Json.Serialization.JsonPropertyName("next_cursor")]
-                public string? PageCursor { get; set; }
+                public string? NextCursor { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

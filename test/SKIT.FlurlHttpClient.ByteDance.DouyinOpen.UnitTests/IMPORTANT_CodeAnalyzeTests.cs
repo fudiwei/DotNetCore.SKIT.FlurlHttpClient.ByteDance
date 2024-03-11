@@ -6,12 +6,12 @@ using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests
 {
-    // NOTICE:
-    //   如果 Visual Studio 遇到 “缺少 SKIT.FlurlHttpClient.Tools.CodeAnalyzer 包” 的错误，
-    //   请参考此 Issue：https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient/issues/8
-
-    public class IMPORTANT_CodeAnalyzeTests
+    public class CodeAnalyzeTests
     {
+        // NOTICE:
+        //   如果 Visual Studio 遇到 “缺少 SKIT.FlurlHttpClient.Tools.CodeAnalyzer 包” 的错误，
+        //   请参考此 Issue：https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient/issues/8
+
         [Fact(DisplayName = "测试用例：代码质量分析")]
         public void TestCodeAnalyzer()
         {

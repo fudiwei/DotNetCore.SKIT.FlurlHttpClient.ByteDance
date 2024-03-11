@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [POST] /oauth/client_token 接口的响应。</para>
@@ -21,7 +21,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expires_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
-                public int ExpiresIn { get; set; }
+                public long ExpiresIn { get; set; }
             }
         }
     }

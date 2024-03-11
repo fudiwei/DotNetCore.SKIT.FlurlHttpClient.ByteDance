@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expires_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
-                public int ExpiresIn { get; set; }
+                public long ExpiresIn { get; set; }
 
                 /// <summary>
                 /// 获取或设置刷新令牌。
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_expires_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_expires_in")]
-                public int RefreshTokenExpiresIn { get; set; }
+                public long RefreshTokenExpiresIn { get; set; }
             }
         }
     }

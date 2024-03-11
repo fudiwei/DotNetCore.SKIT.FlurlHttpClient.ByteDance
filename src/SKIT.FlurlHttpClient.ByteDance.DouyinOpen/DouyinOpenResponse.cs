@@ -6,13 +6,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public abstract class DouyinOpenResponse : CommonResponseBase, ICommonResponse
     {
         /// <summary>
-        /// 获取抖音开放平台 API 返回的扩展信息。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("extra")]
-        [System.Text.Json.Serialization.JsonPropertyName("extra")]
-        public virtual DouyinOpenResponseExtra? Extra { get; set; }
-
-        /// <summary>
         /// 获取抖音开放平台 API 返回的错误码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("error_code")]
@@ -26,6 +19,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         [Newtonsoft.Json.JsonProperty("description")]
         [System.Text.Json.Serialization.JsonPropertyName("description")]
         public virtual string? ErrorDescription { get; set; }
+
+        /// <summary>
+        /// 获取抖音开放平台 API 返回的扩展信息。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("extra")]
+        [System.Text.Json.Serialization.JsonPropertyName("extra")]
+        public virtual DouyinOpenResponseExtra? Extra { get; set; }
 
         /// <summary>
         /// 获取一个值，该值指示调用抖音开放平台 API 是否成功。

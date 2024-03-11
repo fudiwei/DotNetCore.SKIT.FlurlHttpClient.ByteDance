@@ -13,7 +13,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             public class Data : DouyinOpenResponseData
             {
                 /// <summary>
-                /// 获取或设置意向用户 OpenId 列表。
+                /// 获取或设置意向用户的 OpenId 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]

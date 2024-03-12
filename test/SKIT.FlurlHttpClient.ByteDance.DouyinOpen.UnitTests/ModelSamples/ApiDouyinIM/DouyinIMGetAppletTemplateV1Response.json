@@ -1,0 +1,30 @@
+{
+    "extra": {
+        "now": 1660109739,
+        "logid": "20220810133539010174255181020C5143",
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    },
+    "data": {
+        "error_code": 0,
+        "description": "",
+        "has_more": false,
+        "cursor": 0,
+        "list": [
+            {
+                "status": 1,
+                "title": "邀请你一起打决胜巅峰匹配赛",
+                "content": "点击加入",
+                "card_template_id": "@72MqHzC5kqIEgB56A10R9n1psNsNe8gPbkeqQAHKbHqoQ5jL3za3OAGvMtWtnszA",
+                "card_type": 1,
+                "media_id": "@72MqHzC5kqIEgB56A10R9n1psNsNe8gPbkeqQAHKbHqoQ5jL3za3OAGvMt",
+                "name": "决胜巅峰",
+                "app_icon_url": "https://p3-developer-sign.bytemaimg.com/tos-cn-i-ke512zj2cu/a37b56ae3da84c2b98e4ad3e1ac7a1320~tplv-ke512zj2cu-144x144.jpeg?x-expires=2628437565&x-signature=kRfqYlvF17z%2FYdspB5lHAEQBzQM%3D",
+                "create_time": 1571075129,
+                "update_time": 1571075129
+            }
+        ]
+    }
+}

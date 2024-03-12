@@ -1,0 +1,107 @@
+{
+    "data": {
+        "data_ready_status": [
+            {
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_fans_watch_duration_td",
+                "time_slot": "2023-06-15"
+            },
+            {
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_fans_watch_ucnt_td",
+                "time_slot": "2023-06-15"
+            },
+            {
+                "live_id": 1,
+                "name": "live_watch_cnt_td",
+                "time_slot": "2023-06-15",
+                "is_ready": true,
+                "item_type": 3
+            },
+            {
+                "time_slot": "2023-06-15",
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_watch_duration_td"
+            },
+            {
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_watch_ucnt_td",
+                "time_slot": "2023-06-15"
+            },
+            {
+                "time_slot": "2023-06-15",
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "per_minute_watch_ucnt_td_max"
+            }
+        ],
+        "stats": [
+            {
+                "value": 30,
+                "value_float": 30,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_fans_watch_duration_td",
+                "timeslot": "2023-06-15"
+            },
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_fans_watch_ucnt_td",
+                "timeslot": "2023-06-15",
+                "value": 1,
+                "value_float": 1
+            },
+            {
+                "value_float": 1,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_watch_cnt_td",
+                "timeslot": "2023-06-15",
+                "value": 1
+            },
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_watch_duration_td",
+                "timeslot": "2023-06-15",
+                "value": 30,
+                "value_float": 30
+            },
+            {
+                "timeslot": "2023-06-15",
+                "value": 1,
+                "value_float": 1,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_watch_ucnt_td"
+            },
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "per_minute_watch_ucnt_td_max",
+                "timeslot": "2023-06-15",
+                "value": 1,
+                "value_float": 1
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "02168688376944000000000000000000000ffff0a1360947d72c5"
+}

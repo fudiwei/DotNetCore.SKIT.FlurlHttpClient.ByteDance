@@ -1,0 +1,75 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "02168688376917300000000000000000000ffff0a136094d02c2c",
+    "data": {
+        "stats": [
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_duration_td",
+                "timeslot": "2023-06-15",
+                "value": 98,
+                "value_float": 98
+            },
+            {
+                "value_float": 1686726224,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_end_ts",
+                "timeslot": "2023-06-15",
+                "value": 1686726224
+            },
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_follow_ucnt_td",
+                "timeslot": "2023-06-15",
+                "value": 0,
+                "value_float": 0
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_start_ts",
+                "timeslot": "2023-06-15",
+                "value": 1686726126,
+                "value_float": 1686726126,
+                "item": "7244433****50903080"
+            }
+        ],
+        "data_ready_status": [
+            {
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_duration_td",
+                "time_slot": "2023-06-15"
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_end_ts",
+                "time_slot": "2023-06-15",
+                "is_ready": true
+            },
+            {
+                "name": "live_follow_ucnt_td",
+                "time_slot": "2023-06-15",
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_start_ts",
+                "time_slot": "2023-06-15",
+                "is_ready": true
+            }
+        ]
+    }
+}

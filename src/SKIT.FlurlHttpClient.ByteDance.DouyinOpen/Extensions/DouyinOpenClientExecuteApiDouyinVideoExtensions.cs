@@ -114,6 +114,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             return await client.SendFlurlRequestAsJsonAsync<Models.DouyinVideoDataV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/video_basic_info/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/posting-task/video-basic-info ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.DouyinVideoBasicInfoV1Response> ExecuteDouyinVideoBasicInfoV1Async(this DouyinOpenClient client, Models.DouyinVideoBasicInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "video_basic_info/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId); ;
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.DouyinVideoBasicInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
         #region Iframe
         /// <summary>
         /// <para>异步调用 [GET] /api/douyin/v1/video/get_iframe_by_video 接口。</para>

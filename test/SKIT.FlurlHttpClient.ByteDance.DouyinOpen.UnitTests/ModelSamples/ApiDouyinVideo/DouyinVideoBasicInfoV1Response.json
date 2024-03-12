@@ -1,0 +1,25 @@
+{
+    "data": {
+        "list": [
+            {
+                "create_time": 1571075129,
+                "item_id": "@72M0WCqtxuYGiwtkVUYFvH1itu8zRM8IaUCtRwbNa32+7uo2083g2PcEG70*****",
+                "media_type": 4,
+                "title": "测试视频 #测试话题 @抖音小助手",
+                "video_id": "722781567863447****",
+                "video_status": 5,
+                "cover": "https://p3-dy.byteimg.com/img/tos-cn-p-0015/cfa0d6421bdc4580876cb16974539ff6~c5_300x400.jpeg"
+            }
+        ],
+        "error_code": 0,
+        "description": ""
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "202305310903463FF1BD14FC15E33B60C9",
+        "now": 1685495027
+    }
+}

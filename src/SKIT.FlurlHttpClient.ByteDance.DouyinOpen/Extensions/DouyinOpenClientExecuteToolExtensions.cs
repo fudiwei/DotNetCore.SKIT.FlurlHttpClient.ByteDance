@@ -13,7 +13,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <para>异步调用 [POST] /tool/imagex/client_upload/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/image-upload ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/image-upload ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/instant-message/business-tool/image-upload ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

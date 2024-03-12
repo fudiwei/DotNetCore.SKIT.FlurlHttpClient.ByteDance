@@ -9,33 +9,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
     public static class DouyinOpenClientExecuteEnterpriseExtensions
     {
-        #region IM
-        /// <summary>
-        /// <para>异步调用 [POST] /enterprise/im/message/send 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/enterprise-open-ability/message-management-enterprise/message-to-user ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
-        public static async Task<Models.EnterpriseIMMessageSendResponse> ExecuteEnterpriseIMMessageSendAsync(this DouyinOpenClient client, Models.EnterpriseIMMessageSendRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "enterprise", "im", "message", "send")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.EnterpriseIMMessageSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
         #region Media
         /// <summary>
         /// <para>异步调用 [POST] /enterprise/media/upload 接口。</para>

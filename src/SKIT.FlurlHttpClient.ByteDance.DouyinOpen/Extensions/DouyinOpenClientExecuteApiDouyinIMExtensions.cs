@@ -12,7 +12,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <para>异步调用 [POST] /api/douyin/v1/im/set_applet_template/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/create-template ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/create-template ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/instant-message/business-tool/micro-app-card/create-template ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -35,7 +36,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <para>异步调用 [POST] /api/douyin/v1/im/get_applet_template/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/query-template ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/query-template ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/instant-message/business-tool/micro-app-card/query-template ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -58,7 +60,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <para>异步调用 [POST] /api/douyin/v1/im/del_applet_template/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/delete-template ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/business-tool/micro-app-card/delete-template ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/instant-message/business-tool/micro-app-card/delete-template ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

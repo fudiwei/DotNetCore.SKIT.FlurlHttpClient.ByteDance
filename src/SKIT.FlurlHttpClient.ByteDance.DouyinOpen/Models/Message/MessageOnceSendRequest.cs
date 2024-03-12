@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /message/once/send 接口的请求。</para>
+    /// <para>表示 [POST] /message/once/send/ 接口的请求。</para>
     /// </summary>
     public class MessageOnceSendRequest : DouyinOpenRequest
     {

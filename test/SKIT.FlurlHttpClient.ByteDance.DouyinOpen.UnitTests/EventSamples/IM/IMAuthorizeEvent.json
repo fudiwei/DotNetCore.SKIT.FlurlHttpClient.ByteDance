@@ -1,0 +1,7 @@
+{
+    "event": "im_authorize",
+    "from_user_id": "",
+    "to_user_id": "",
+    "client_key": "",
+    "content": "{\"create_time\":1670229453,\"expire_time\":1672821453,\"update_time\":1670229453,\"operation_type\":1,\"auth_status\":1,\"source\":\"im.direct_message.bind\",\"extra\":\"\",\"data_im_extra\":\"micro app source\",\"query\":\"cptName=button\",\"path\":\"page/componentTpl/componentTpl\"}"
+}

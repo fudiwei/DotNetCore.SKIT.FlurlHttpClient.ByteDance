@@ -1,0 +1,28 @@
+{
+    "event": "im_receive_msg",
+    "client_key": "asdfavetgbvasf",
+    "from_user_id": "aaa-ae9b-4dbf-add1-bf67e4093fab",
+    "to_user_id": "aaa-7ae0-4399-914a-5eb1df5861ba",
+    "content": {
+        "conversation_short_id": "@9Vxc1/yDU8sqaS+gN4koEc7912foPPiLPZVyrQmgKVQabPH460zdRmYqig357zEBMaXjKvvhvwY02ISB7llsWQ==",
+        "server_message_id": "@9Vxc1/yDU8sqaS+gN4koEc7912foPPyAPpF2rgykLFgbafb560zdRmYqig357zEBmWXVPshhwyd/y/7BQpXy/w==",
+        "conversation_type": 1,
+        "create_time": 1681303285997,
+        "message_type": "text",
+        "source": "",
+        "scene_type": 100,
+        "text": "捷途70",
+        "user_infos": [
+            {
+                "open_id": "aaa-ae9b-4dbf-add1-bf67e4093fab",
+                "nick_name": "刘东",
+                "avatar": "https://p3.douyinpic.com/aweme/720x720/xxxxx-avatar/mosaic-legacy_3795_3047680722.jpeg?from=3782654143"
+            },
+            {
+                "open_id": "aaa-7ae0-4399-914a-5eb1df5861ba",
+                "nick_name": "毕节--捷途万丰店",
+                "avatar": "https://p3.douyinpic.com/aweme/720x720/xxxxxx-avatar/tos-cn-avt-0015_6c9ae9afb4e62e2263f98809e3dc5b6a.jpeg?from=3782654143"
+            }
+        ]
+    }
+}

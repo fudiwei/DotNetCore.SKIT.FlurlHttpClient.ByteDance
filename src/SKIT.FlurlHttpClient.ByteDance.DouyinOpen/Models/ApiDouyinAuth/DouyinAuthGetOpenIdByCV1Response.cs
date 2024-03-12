@@ -28,6 +28,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string? ErrorMessage { get; set; }
 
         /// <summary>
+        /// 获取或设置请求唯一标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("log_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
+        public string? LogId { get; set; }
+
+        /// <summary>
         /// 获取或设置返回数据。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]

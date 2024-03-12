@@ -1,0 +1,35 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "20230419214506BBF9134A4E1E961A3F70",
+    "data": {
+        "intention_log_infos": [
+            {
+                "content": "{\"event\":\"im_receive_msg\",\"client_key\":\"aw4194pysb89vab\",\"from_user_id\":\"eb2921c7-b771-4a7f-913d-5c83edf51f62\",\"to_user_id\":\"28940f5a-d8a4-4258-8a74-6a8e647431be\",\"content\":{\"conversation_short_id\":\"@9VxQh6rGTNAjPS/4do48Es7912TqPvqFPJF1qwykJ1kSZvX760zdRmYqig357zEBxvhDiz3L1fs5/fgoye6gkA==\",\"server_message_id\":\"@9VxQh6rGTNAjPS/4do48Es7912fqP/+HOZZ3qAqlL1UVaPj560zdRmYqig357zEBfmnprZLqmDe9tIPiPwahqQ==\",\"conversation_type\":1,\"create_time\":1681799848725,\"message_type\":\"image\",\"source\":\"\",\"scene_type\":100,\"user_infos\":[{\"open_id\":\"eb2921c7-b771-4a7f-913d-5c83edf51f62\",\"nick_name\":\"普皮123\",\"avatar\":\"https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_d8e6795fc59d4fa1afbb86b0ce0cfc37.jpeg?from=3782654143\"},{\"open_id\":\"28940f5a-d8a4-4258-8a74-6a8e647431be\",\"nick_name\":\"企业\",\"avatar\":\"https://p3.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_3792_5112637127.jpeg?from=3782654143\"}]},\"log_id\":\"02168179984822600000000000000000000ffff0ac63e9d1d0a4b\",\"event_id\":\"\"}",
+                "event": "im_receive_msg",
+                "event_time": "1681799849067",
+                "open_id": "eb2921c7-b771-4a7f-913d-5c83edf123"
+            },
+            {
+                "content": "{\"event\":\"im_send_msg\",\"client_key\":\"aw4194pysb89vab\",\"from_user_id\":\"28940f5a-d8a4-4258-8a74-6a8e64743132\",\"to_user_id\":\"eb2921c7-b771-4a7f-913d-5c83edf51f62\",\"content\":{\"conversation_short_id\":\"@9VxQh6rGTNAjPS/4do48Es7912TqPvqFPJF1qwykJ1kSZvX760zdRmYqig357zEBxvhDiz3L1fs5/fgoye6gkA==\",\"server_message_id\":\"@9VxQh6rGTNAjPS/4do48Es7912fqP/+HPpZ4oAOlLlkQafj160zdRmYqig357zEBPcdyuvL4/H9HyycVFwEKIQ==\",\"conversation_type\":1,\"create_time\":1681799925320,\"message_type\":\"text\",\"source\":\"\",\"scene_type\":100,\"text\":\"文字自足\",\"user_infos\":[{\"open_id\":\"28940f5a-d8a4-4258-8a74-6a8e647431be\",\"nick_name\":\"企业123\",\"avatar\":\"https://p6.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_3792_5112637127.jpeg?from=3782654143\"},{\"open_id\":\"eb2921c7-b771-4a7f-913d-5c83edf51f62\",\"nick_name\":\"普皮***\",\"avatar\":\"https://p6.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_d8e6795fc59d4fa1afbb86b0ce0cfc37.jpeg?from=3782654143\"}]},\"log_id\":\"02168179992492200000000000000000000ffff0ac63e9d5dcc33\",\"event_id\":\"\"}",
+                "event": "im_send_msg",
+                "event_time": "1681799925570",
+                "open_id": "eb2921c7-b771-4a7f-913d-5c83edf123"
+            },
+            {
+                "content": "{\"event\":\"im_group_receive_msg\",\"client_key\":\"aw4194pysb89vab\",\"from_user_id\":\"28940f5a-d8a4-4258-8a74-6a8e64743242\",\"to_user_id\":\"28940f5a-d8a4-4258-8a74-6a8e647431be\",\"content\":{\"conversation_short_id\":\"@9VxQh6rGTNAjPS/4do48Es7912frNf+KOp15oAmgJlMSaPT560zdRmYqig357zEBxptq5l+blGKwmg/aUg64ww==\",\"server_message_id\":\"@9VxQh6rGTNAjPS/4do48Es7912fqP/+EPZxwrQ+jJ1MSbfT960zdRmYqig357zEBGtMlPqmU1K7J6z2Z21MU4w==\",\"conversation_type\":2,\"create_time\":1681800184637,\"message_type\":\"text\",\"source\":\"\",\"scene_type\":100,\"text\":\"给哼哼唧唧\",\"owner_id\":\"28940f5a-d8a4-4258-8a74-6a8e647431be\",\"user_infos\":[{\"open_id\":\"65dcbfb7-cddc-409c-9a61-8cff1ed1fb5e\",\"nick_name\":\"我是852\",\"avatar\":\"https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_7f42cb25ea95710122fe0b6b48546040.jpeg?from=3782654143\"},{\"open_id\":\"28940f5a-d8a4-4258-8a74-6a8e647***\",\"nick_name\":\"企业***\",\"avatar\":\"https://p3.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_3792_5112637127.jpeg?from=3782654143\"}]},\"log_id\":\"02168180018421000000000000000000000ffff0a9fd6cfbd8f79\",\"event_id\":\"\"}",
+                "event": "im_group_receive_msg",
+                "event_time": "1681800184933",
+                "open_id": "65dcbfb7-cddc-409c-9a61-8cff1ad12"
+            },
+            {
+                "content": "{\"event\":\"im_enter_direct_msg\",\"client_key\":\"aw4194pysb89vab\",\"from_user_id\":\"65dcbfb7-cddc-409c-9a61-8cff1ed1fb5e\",\"to_user_id\":\"28940f5a-d8a4-4258-8a74-6a8e647412\",\"content\":\"{\\\"conversation_short_id\\\":\\\"@9VxQh6rGTNAjPS/4do48Es7912fqP/+EPpZyqAOvLVUSafX860zdRmYqig357zEBtAf1bCgtWX+PDLlgPeichg==\\\",\\\"server_message_id\\\":\\\"@9VxQh6rGTNAjPS/4do48Es7912fqP/+FO5R0rgqlKlkVbfH760zdRmYqig357zEBTSmfydGzCdTVnhY17yjSIA==\\\",\\\"conversation_type\\\":1,\\\"create_time\\\":1681800236901,\\\"scene_type\\\":4,\\\"user_infos\\\":[{\\\"open_id\\\":\\\"65dcbfb7-cddc-409c-9a61-8cff1ed1fb5e\\\",\\\"nick_name\\\":\\\"我是8068\\\",\\\"avatar\\\":\\\"https://p26.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_7f42cb25ea95710122fe0b6b48546040.jpeg?from=3782654143\\\"},{\\\"open_id\\\":\\\"28940f5a-d8a4-4258-8a74-6a8e647431be\\\",\\\"nick_name\\\":\\\"企业**\\\",\\\"avatar\\\":\\\"https://p26.douyinpic.com/aweme/720x720/aweme-avatar/mosaic-legacy_3792_5112637127.jpeg?from=3782654143\\\"}]}\",\"log_id\":\"02168180023688800000000000000000000ffff0a9fd6cfe9bed8\"}",
+                "event": "im_enter_direct_msg",
+                "event_time": "1681800237112",
+                "open_id": "65dcbfb7-cddc-409c-9a61-8cff1e214"
+            }
+        ],
+        "query_session": "@9VxQh6rGTNAjPS/4do48Es6xxzu8dbzteco2xlHzZkMZfI6IpjicIDsWyFW7yGRVD2G/7zZQcvpdwOmMGiG0UUKGpe976ngABqEXkgIvtgDegRxR8HzftKftzzNWF5nIEWg4zNLU9OCea61/v1P9HhMc5H1Lfs+JnxrMr5KNmKQ=",
+        "has_more": true
+    }
+}

@@ -1325,34 +1325,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
         #endregion
 
-        #region SDK
-        /// <summary>
-        /// <para>异步调用 [GET] /data/external/sdk_share 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://open.douyin.com/platform/doc?doc=docs/openapi/data-open-service/sdk-share-video-data/get-share-data ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [Obsolete("相关接口或字段于 2022-08-09 下线。")]
-        public static async Task<Models.DataExternalSDKShareResponse> ExecuteDataExternalSDKShareAsync(this DouyinOpenClient client, Models.DataExternalSDKShareRequest request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "data", "external", "sdk_share")
-                .WithHeader("access-token", request.AccessToken)
-                .SetQueryParam("begin_date", request.BeginDateString)
-                .SetQueryParam("end_date", request.EndDateString);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.DataExternalSDKShareResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-        #endregion
-
         #region User
         /// <summary>
         /// <para>异步调用 [GET] /data/external/user/item 接口。</para>

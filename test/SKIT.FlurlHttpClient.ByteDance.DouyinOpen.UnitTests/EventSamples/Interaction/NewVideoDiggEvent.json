@@ -1,0 +1,7 @@
+{
+    "event": "new_video_digg",
+    "client_key": "awr8bfr64vxgk036",
+    "from_user_id": "5adb9d61-b91a-4382-8252-b0cea8793e35",
+    "to_user_id": "e3af6e1d-d83a-4116-8f9f-5cb8ac2413c7",
+    "content": "{\"action_type\":1,\"action_time\":1686817996,\"item_id\":\"@9VwWjvGUTp9kKW+ma4huFs791WPtO/mAPpx3rg6nL1kRbfn/60zdRmYqig357zEBDoyWkKJYf4Ae9sL0fd9gYw==\"}"
+}

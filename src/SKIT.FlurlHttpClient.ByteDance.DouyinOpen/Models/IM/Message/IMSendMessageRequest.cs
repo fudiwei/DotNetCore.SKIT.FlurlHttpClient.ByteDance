@@ -56,14 +56,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                     public class MessageContentAsGroupInvitation
                     {
                         /// <summary>
-                        /// 获取或设置群聊 ID。
+                        /// 获取或设置群 ID。与字段 <see cref="GroupToken"/> 二选一。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("group_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("group_id")]
                         public string? GroupId { get; set; }
 
                         /// <summary>
-                        /// 获取或设置群聊 Token。
+                        /// 获取或设置群 Token。与字段 <see cref="GroupId"/> 二选一。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("group_token")]
                         [System.Text.Json.Serialization.JsonPropertyName("group_token")]
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string MicroAppId { get; set; } = string.Empty;
 
                         /// <summary>
-                        /// 获取或设置小程序页面路径。
+                        /// 获取或设置小程序页面路径。与字段 <see cref="MicroAppSchemaUrl"/> 二选一。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("path")]
                         [System.Text.Json.Serialization.JsonPropertyName("path")]
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string? MicroAppPageQuery { get; set; }
 
                         /// <summary>
-                        /// 获取或设置小程序 Schema URL。
+                        /// 获取或设置小程序 Schema URL。与字段 <see cref="MicroAppPagePath"/> 二选一。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("schema")]
                         [System.Text.Json.Serialization.JsonPropertyName("schema")]

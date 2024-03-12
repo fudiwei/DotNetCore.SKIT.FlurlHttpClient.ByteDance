@@ -1,0 +1,27 @@
+{
+    "extra": {
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "now": 1648797449,
+        "logid": "021648797449846fd1b1111000700600000000000000086dfb920",
+        "error_code": 0
+    },
+    "data": {
+        "error_code": 0,
+        "description": ""
+    },
+    "group_list": [
+        {
+            "exist_num": 1,
+            "group_name": "group_name",
+            "max_num": 500,
+            "description": "description",
+            "entry_limit": null,
+            "group_id": "@aaaaaa==",
+            "status": "Normal",
+            "tags": null,
+            "avatar_uri": "https://p3.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-001"
+        }
+    ]
+}

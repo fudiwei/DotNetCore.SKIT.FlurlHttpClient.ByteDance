@@ -1,0 +1,9 @@
+{
+    "avatar_uri": "https://xxx",
+    "group_name": "创建群",
+    "description": "创建群",
+    "open_audit_switch": 1,
+    "show_at_profile": 1,
+    "live_auto_sync": 1,
+    "item_auto_sync": 1
+}

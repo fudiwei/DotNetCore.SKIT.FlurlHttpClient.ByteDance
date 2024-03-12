@@ -1,0 +1,34 @@
+{
+    "event": "im_group_receive_msg",
+    "client_key": "asdfavetgbvasf",
+    "from_user_id": "eeb0ea9b-bed4-4b70-913d-c29bfc00000",
+    "to_user_id": "aaa-7ae0-4399-914a-5eb1df5861ba",
+    "content": {
+        "conversation_short_id": "@c29bfc000+MNggFhRkwGuX1ntucyQ/A1Wn+VfTX3Vk9xDdDQrU9MpJSYEVV6/2hK6gbUC8gjaV/y3CS18WtfMw==",
+        "server_message_id": "@c29bfc000+MNggFhRkwGuX1ntuc1RPw2VXmSfjn/VE9zCtHSrU9MpJSYEVV6/2hKk8cLQDaYzbQpImhvw1Y4FQ==",
+        "conversation_type": 2,
+        "create_time": 1656671771668,
+        "message_type": "emoji",
+        "resource_type": "gif",
+        "resource_width": 450,
+        "resource_height": 450,
+        "resource_url": "",
+        "item_id": "@72NwHyW53+MNggFhRkwGuX1ntuc2RfUyVnKfdTzwU0F0CtjUrU9MpJSYEVV6/2hKy3NMVbBhh6BW27IsDFieLg==",
+        "card_id": "@72MqAjfymKYS1xNrB0sG4X1iidgOeMsMbUSpQwLJb3kYzJh7eXsSr5+aH2GTsvEv",
+        "card_status": 1,
+        "card_data": [
+            {
+                "label": "姓名",
+                "value": "Tonality"
+            },
+            {
+                "label": "手机号",
+                "value": "12345678901"
+            },
+            {
+                "label": "城市",
+                "value": "北京市北京市海淀区"
+            }
+        ]
+    }
+}

@@ -158,3 +158,9 @@ var client = DouyinMicroAppWebcastClientBuilder.Create(options).Build();
 -   [避免内存泄漏](./Advanced_Dispose.md)
 
 -   [与 `IHttpClientFactory` 集成](./Advanced_HttpClientFactory.md)
+
+---
+
+## 迁移指南
+
+-   [v3.x 迁移指南](./Migration_V3.md)

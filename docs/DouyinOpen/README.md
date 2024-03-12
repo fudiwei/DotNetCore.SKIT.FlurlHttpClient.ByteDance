@@ -15,6 +15,9 @@
 
 ## 快速入门
 
+> [!IMPORTANT]
+> 此目录下的文档适用于 v3.x 版本的模块。如果你正在使用 2.x 版本，请移步至 GitHub/Gitee 的已归档分支。
+
 ### 安装：
 
 提示：如果你使用 Visual Studio NuGet 管理器图形化界面，请在搜索结果中勾选“**包括预发行版**”。
@@ -96,3 +99,9 @@ else
 -   [避免内存泄漏](./Advanced_Dispose.md)
 
 -   [与 `IHttpClientFactory` 集成](./Advanced_HttpClientFactory.md)
+
+---
+
+## 迁移指南
+
+-   [v3.x 迁移指南](./Migration_V3.md)

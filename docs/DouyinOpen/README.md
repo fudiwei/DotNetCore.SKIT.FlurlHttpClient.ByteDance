@@ -9,6 +9,7 @@
 -   基于抖音开放平台 API 封装。
 -   提供了抖音开放平台 API 所需的 AES、MD5、SHA-1、SHA-256、HMAC-SHA-256 等算法工具类。
 -   提供了生成授权链接、生成 JSBridge 签名、解析回调通知事件、解密手机号码等扩展方法。
+-   配合 [SKIT.FlurlHttpClient.ByteDance.MicroApp](../MicroApp/README.md) 模块，可无缝对接抖音小程序开放平台。
 
 ---
 
@@ -36,7 +37,7 @@ var options = new DouyinOpenClientOptions()
     ClientKey = "抖音开放平台应用 Key",
     ClientSecret = "抖音开放平台应用密钥"
 };
-var client = new DouyinOpenClient(options);
+var client = DouyinOpenClientBuilder.Create(options).Build();
 ```
 
 ### 请求 & 响应：
@@ -68,13 +69,13 @@ else
 
 ## 基础用法
 
--   [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
+-   ⭐ [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
 
 -   [如何解析 Webhook 事件？](./Basic_EventDeserialization.md)
 
 -   [如何验证 Webhook 事件签名？](./Basic_EventSignatureVerification.md)
 
--   [如何生成 JSBridge 初始化时所需的参数及签名？](./Basic_Parameters.md)
+-   ⭐ [如何生成 JSBridge 初始化时所需的参数及签名？](./Basic_Parameters.md)
 
 -   [如何解密用户公开信息中的手机号码？](./Basic_MobileNumberDecryption.md)
 
@@ -86,8 +87,12 @@ else
 
 ## 高级技巧
 
--   [如何在 ASP.NET Core 中与 `IHttpClientFactory` 集成？](./Advanced_IHttpClientFactory.md)
+-   [配置 JSON 序列化器](./Advanced_JsonSerializer.md)
 
--   [如何指定 JSON 序列化器？](./Advanced_JsonSerializer.md)
+-   [配置 HttpClient](./Advanced_HttpClient.md)
 
--   [如何使用拦截器？](./Advanced_Interceptor.md)
+-   [使用拦截器](./Advanced_Interceptor.md)
+
+-   [避免内存泄漏](./Advanced_Dispose.md)
+
+-   [与 `IHttpClientFactory` 集成](./Advanced_HttpClientFactory.md)

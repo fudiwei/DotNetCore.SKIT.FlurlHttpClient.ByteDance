@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /hotsearch/trending/sentences 接口的响应。</para>
+    /// <para>表示 [GET] /hotsearch/trending/sentences/ 接口的响应。</para>
     /// </summary>
     public class HotSearchTrendingSentencesResponse : DouyinOpenResponse<HotSearchTrendingSentencesResponse.Types.Data>
     {
@@ -55,7 +55,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cursor")]
                 [System.Text.Json.Serialization.JsonPropertyName("cursor")]
-                public long? PageCursor { get; set; }
+                public long? NextCursor { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

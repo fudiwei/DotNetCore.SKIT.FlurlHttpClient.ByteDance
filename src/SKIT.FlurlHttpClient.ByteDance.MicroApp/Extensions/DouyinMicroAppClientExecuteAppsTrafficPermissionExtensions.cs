@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "traffic_permission", "query", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "traffic_permission", "query/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTrafficPermissionQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "traffic_permission", "open", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "traffic_permission", "open/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsTrafficPermissionOpenV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

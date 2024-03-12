@@ -1,0 +1,72 @@
+{
+    "content": {
+        "msg_type": 2,
+        "image": {
+            "media_id": "@aaaa"
+        }
+    },
+    "content_list": [
+        {
+            "msg_type": 1,
+            "text": {
+                "text": "你好"
+            }
+        },
+        {
+            "msg_type": 2,
+            "image": {
+                "media_id": "@sssssssss"
+            }
+        },
+        {
+            "msg_type": 3,
+            "video": {
+                "item_id": "@ssssss=="
+            }
+        },
+        {
+            "msg_type": 8,
+            "retain_consult_card": {
+                "card_id": "@9VwNxuKKBZ03MXG7M8ooWM771FjUAMW/BqhMlDebEmyyzJD7cZENrR868oDbX9xx"
+            }
+        },
+        {
+            "msg_type": 9,
+            "group_invitation": {
+                "group_id": "@9VwNxuKKBZ03MXG7M8ooWM771FjUAMW/BqhMlDebEmyyzJD7cZENrR868oDbX9xx",
+                "group_token": "CgYIASAHKAESTgpMgRzGa429biTLOZKpUpkLgNKB4wTP/iTeFBfgrhQazpSF62U1ImdoTHa5SK4nS0yvdUrF4bpxdMxovADSfnf3HuilL4fS1l8Q8UZO4hoA"
+            }
+        },
+        {
+            "msg_type": 10,
+            "applet_card": {
+                "card_template_id": "@9VwNxuKKBZ03MXG7M8ooWM771FjUAMW/BqhMlDebEmyyzJD7cZENrR868oDbX9xx",
+                "path": "api/apiPage/apiPage",
+                "query": "{\"key1\":\"val1\",\"key2\":\"val2\"}",
+                "app_id": "tt3ergjdge84gdwksb"
+            }
+        },
+        {
+            "msg_type": 11,
+            "applet_coupon": {
+                "activity_id": 123222,
+                "coupon_meta_id": 123015333
+            }
+        },
+        {
+            "msg_type": 12,
+            "auth_private_message_card": {
+                "app_info": {
+                    "app_id": "tt_dadaf12314"
+                },
+                "to_user_info": {
+                    "open_id": "ad134dafdaf",
+                    "app_id": "tt_dadfadfa"
+                }
+            }
+        }
+    ],
+    "msg_id": "@7aaaa==",
+    "conversation_id": "@aaaa==",
+    "to_user_id": "bb-bb-xx"
+}

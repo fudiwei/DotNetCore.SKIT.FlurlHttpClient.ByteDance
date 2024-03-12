@@ -2,7 +2,6 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Flurl;
 using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
@@ -10,8 +9,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteSandboxExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /sandbox/webhook/event/send 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/tools-ability/sandbox-management/mock-webhook-event </para>
+        /// <para>异步调用 [POST] /sandbox/webhook/event/send/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/tools-ability/sandbox-management/mock-webhook-event ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,10 +25,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "sandbox", "webhook", "event", "send")
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateFlurlRequest(request, HttpMethod.Post, "sandbox", "webhook", "event", "send/")
+                .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.SandboxWebhookEventSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.SandboxWebhookEventSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -1,0 +1,7 @@
+{
+    "event": "enter_group_audit_change",
+    "client_key": "awipqx94gnfz3rtg",
+    "from_user_id": "6ff2569e-1a9d-4e94-92ee-8fb495515c9y",
+    "to_user_id": "6cb06b1b-1069-465b-8fba-e1c55f30ab4n",
+    "content": "{\"create_time\":1679638889110,\"user_avatar\":\"https://p3.douyinpic.com/aweme/720x720/aweme-avatar/douyin-user-image-file_4a7daf3c888d80e7bd83636e5a3ae555.jpeg?from=3782654143\",\"user_nicker\":\"12342429747\",\"apply_status\":2,\"apply_id\":\"@9VwNxuKKBZ03MXG7M8ooWM7912TqNP2CO5FyqAqnJlYTZ/j660zdRmYqig357zEBoRXMRQ95AMRhcSWFJ+9AMw==\",\"group_id\":\"@9VwNxuKKBZ03MXG7M8ooWM7912TqNP2CO5FyqAqnJlYTZ/j660zdRmYqig357zEBoRXMRQ95AMRhcSWFJ+9AMw==\"}"
+}

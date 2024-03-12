@@ -1,0 +1,32 @@
+{
+    "data": {
+        "auth_user_list": [
+            {
+                "auth_user_source_app_id": "ttfa3965001",
+                "target_open_id": "_000FnVpk1_9MMOGOTvzFqPoQCxmyooIfgaC",
+                "data_im_extra": "micro_app",
+                "query": "cptName=button",
+                "path": "page/componentTpl/componentTpl"
+
+            },
+            {
+                "target_open_id": "_000LMpVKP67ggHu4Y0OO5JwQKAqkC6j0_li",
+                "auth_user_source_app_id": "ttfa3965001",
+                "data_im_extra": "micro_app",
+                "query": "cptName=button",
+                "path": "page/componentTpl/componentTpl"
+            },
+            {
+                "auth_user_source_app_id": "ttfa3965001",
+                "target_open_id": "_0002cdMxHCrp1JcWzRtI3GDb5J-Ins4JnCS",
+                "data_im_extra": "micro_app",
+                "query": "cptName=button",
+                "path": "page/componentTpl/componentTpl"
+            }
+        ],
+        "has_more": true
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "02169835083298800000000000000000000ffff0a9c251a9d7709"
+}

@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("account_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                         public string AccountId { get; set; } = default!;
 
                                         /// <summary>
@@ -88,14 +88,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("latitude")]
                                 [System.Text.Json.Serialization.JsonPropertyName("latitude")]
-                                public double Latitude { get; set; }
+                                public decimal Latitude { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置经度。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("longitude")]
                                 [System.Text.Json.Serialization.JsonPropertyName("longitude")]
-                                public double Longitude { get; set; }
+                                public decimal Longitude { get; set; }
                             }
                         }
 

@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_item", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_item/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_item", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_item/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_fans", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_fans/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_fans", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_fans/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_like", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -151,7 +151,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_like", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -201,7 +201,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -226,7 +226,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_share", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -251,7 +251,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_share", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -276,7 +276,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_profile", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_profile/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -301,7 +301,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_profile", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_profile/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);

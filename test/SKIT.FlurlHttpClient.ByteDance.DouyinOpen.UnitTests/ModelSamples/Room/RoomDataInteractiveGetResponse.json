@@ -1,0 +1,75 @@
+{
+    "err_no": 0,
+    "log_id": "02168688376963100000000000000000000ffff0a136094895ac7",
+    "err_msg": "",
+    "data": {
+        "data_ready_status": [
+            {
+                "name": "live_comment_cnt_td",
+                "time_slot": "2023-06-15",
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_comment_ucnt_td",
+                "time_slot": "2023-06-15",
+                "is_ready": true
+            },
+            {
+                "is_ready": true,
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_like_cnt_td",
+                "time_slot": "2023-06-15"
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_share_cnt_td",
+                "time_slot": "2023-06-15",
+                "is_ready": true
+            }
+        ],
+        "stats": [
+            {
+                "value_float": 1,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_comment_cnt_td",
+                "timeslot": "2023-06-15",
+                "value": 1
+            },
+            {
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_comment_ucnt_td",
+                "timeslot": "2023-06-15",
+                "value": 1,
+                "value_float": 1
+            },
+            {
+                "value_float": 9,
+                "item": "7244433****50903080",
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_like_cnt_td",
+                "timeslot": "2023-06-15",
+                "value": 9
+            },
+            {
+                "item_type": 3,
+                "live_id": 1,
+                "name": "live_share_cnt_td",
+                "timeslot": "2023-06-15",
+                "value": 1,
+                "value_float": 1,
+                "item": "7244433****50903080"
+            }
+        ]
+    }
+}

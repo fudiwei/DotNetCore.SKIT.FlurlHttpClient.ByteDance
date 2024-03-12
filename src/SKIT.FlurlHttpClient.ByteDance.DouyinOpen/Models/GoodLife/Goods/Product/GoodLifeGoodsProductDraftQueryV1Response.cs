@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("poi_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                         public string POIId { get; set; } = default!;
 
                                         /// <summary>
@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("supplier_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                         public string SupplierId { get; set; } = default!;
 
                                         /// <summary>
@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                         public string SupplierExternalId { get; set; } = default!;
                                     }
                                 }
@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("creator_account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("creator_account_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                 public string? CreatorAccountId { get; set; }
 
                                 /// <summary>
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("owner_account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("owner_account_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                                 public string? OwnerAccountId { get; set; }
 
                                 /// <summary>
@@ -266,7 +266,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("next_cursor")]
                 [System.Text.Json.Serialization.JsonPropertyName("next_cursor")]
-                public string? PageCursor { get; set; }
+                public string? NextCursor { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

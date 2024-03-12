@@ -1,10 +1,11 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
     /// <para>表示 life_member_join 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/member.join </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/member.join ]]>
+    /// </para>
     /// </summary>
     public class LifeMemberJoinEvent : DouyinOpenEvent<LifeMemberJoinEvent.Types.Content>
     {
@@ -17,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("account_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.NumericalStringReadOnlyConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                 public string AccountId { get; set; } = default!;
 
                 /// <summary>
@@ -29,24 +30,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
             }
         }
 
-        internal static class Converters
-        {
-            internal class EventPropertyContentNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-
-            internal class EventPropertyContentSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-        }
-
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("content")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.EventPropertyContentNewtonsoftJsonConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.EventPropertyContentSystemTextJsonConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedObjectInJsonFormatConverter))]
         public override Types.Content EventContent { get; set; } = default!;
     }
 }

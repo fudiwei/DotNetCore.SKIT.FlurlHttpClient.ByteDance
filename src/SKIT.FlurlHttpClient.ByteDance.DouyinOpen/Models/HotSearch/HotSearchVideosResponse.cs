@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /hotsearch/videos 接口的响应。</para>
+    /// <para>表示 [GET] /hotsearch/videos/ 接口的响应。</para>
     /// </summary>
     public class HotSearchVideosResponse : DouyinOpenResponse<HotSearchVideosResponse.Types.Data>
     {
@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class HotSearchVideo : VideoListResponse.Types.Data.Types.Video
+                    public class HotSearchVideo : DouyinVideoListV1Response.Types.Data.Types.Video
                     {
                     }
                 }

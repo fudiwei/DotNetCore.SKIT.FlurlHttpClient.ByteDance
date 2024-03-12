@@ -17,7 +17,7 @@
         /// </summary>
         [Newtonsoft.Json.JsonProperty("take_rate")]
         [System.Text.Json.Serialization.JsonPropertyName("take_rate")]
-        public double TakeRate { get; set; }
+        public decimal TakeRate { get; set; }
 
         /// <summary>
         /// 获取或设置抖音号。

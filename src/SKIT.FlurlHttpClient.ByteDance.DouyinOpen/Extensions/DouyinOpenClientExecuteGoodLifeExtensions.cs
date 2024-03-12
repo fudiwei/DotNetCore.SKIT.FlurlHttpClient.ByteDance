@@ -7,13 +7,17 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
+    // TODO: 独立化 ExtendedSDK
     public static class DouyinOpenClientExecuteGoodLifeExtensions
     {
         #region Aftersale
         #region Aftersale/Audit
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/after_sale/audit/notify 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/refundresult </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/refundresult ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -25,17 +29,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "audit", "notify")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "audit", "notify")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeAftersaleAuditNotifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeAftersaleAuditNotifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Aftersale/Order
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/after_sale/order/merchant_reject 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/rejectorder </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/rejectorder ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -47,15 +54,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "order", "merchant_reject")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "order", "merchant_reject")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeAftersaleOrderMerchantRejectV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeAftersaleOrderMerchantRejectV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/after_sale/order/apply_refund 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/applyrefund </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/applyrefund ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -67,10 +77,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "order", "apply_refund")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "after_sale", "order", "apply_refund")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeAftersaleOrderApplyRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeAftersaleOrderApplyRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -79,7 +89,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region Fulfilment/Certificate
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/fulfilment/certificate/prepare 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.prepare </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.prepare ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -91,17 +104,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "prepare")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "prepare")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("encrypted_data", request.EncryptedData)
                 .SetQueryParam("code", request.Code);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificatePrepareV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificatePrepareV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/fulfilment/certificate/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.get </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.get ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -113,18 +129,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "get")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("encrypted_code", request.EncryptedCode)
                 .SetQueryParam("code", request.Code)
                 .SetQueryParam("order_id", request.OrderId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificateGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/fulfilment/certificate/cancel 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.cancel </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.cancel ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -136,15 +155,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "certificate", "cancel")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "certificate", "cancel")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificateCancelV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateCancelV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/fulfilment/certificate/verify 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.verify </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.verify ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -156,15 +178,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "certificate", "verify")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "certificate", "verify")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificateVerifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateVerifyV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/fulfilment/certificate/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.fulfilment/certificate.query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -176,17 +201,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("encrypted_code", request.EncryptedCode)
                 .SetQueryParam("order_id", request.OrderId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificateQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/fulfilment/certificate/verify_record/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/certificate.verifyrecord.query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/certificate.verifyrecord.query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -198,29 +226,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "verify_record", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "verify_record", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("size", request.PageSize)
                 .SetQueryParam("account_id", request.AccountId);
 
-            if (request.POIIdList != null)
+            if (request.POIIdList is not null)
                 flurlReq.SetQueryParam("poi_ids", string.Join(",", request.POIIdList));
 
-            if (request.StartTimestamp != null)
+            if (request.StartTimestamp is not null)
                 flurlReq.SetQueryParam("start_time", request.StartTimestamp);
 
-            if (request.EndTimestamp != null)
+            if (request.EndTimestamp is not null)
                 flurlReq.SetQueryParam("end_time", request.EndTimestamp);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentCertificateVerifyRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateVerifyRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Fulfilment/Certificate
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/fulfilment/distribution/order/sync_status 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/syncstatus </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/syncstatus ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -232,17 +263,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "distribution", "order", "sync_status")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "distribution", "order", "sync_status")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentDistributionOrderSyncStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentDistributionOrderSyncStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Fulfilment/ReserveCode
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/fulfilment/reserve_code/batch_import 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/reservecode/batchimport </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/reservecode/batchimport ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -254,15 +288,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "reserve_code", "batch_import")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "reserve_code", "batch_import")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentReserveCodeBatchImportV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentReserveCodeBatchImportV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/fulfilment/reserve_code/bind_order_info 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/reservecode/bind.order.info </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/reservecode/bind.order.info ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -274,10 +311,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "reserve_code", "bind_order_info")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "fulfilment", "reserve_code", "bind_order_info")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeFulfilmentReserveCodeBindOrderInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentReserveCodeBindOrderInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -286,7 +323,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region Goods/Calendar
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/calendar_static_attr_group/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savecalendar </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savecalendar ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -298,15 +338,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_static_attr_group", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_static_attr_group", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsCalendarStaticAttributeGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsCalendarStaticAttributeGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/calendar_stock_group/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savestock </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savestock ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -318,15 +361,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_stock_group", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_stock_group", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsCalendarStockGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsCalendarStockGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/calendar_amount_group/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/saveamount </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/saveamount ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -338,17 +384,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_amount_group", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "calendar_amount_group", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsCalendarAmountGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsCalendarAmountGroupSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/Category
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/category/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/category.get </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/category.get ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -360,26 +409,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "category", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "category", "get")
                 .WithHeader("access-token", request.AccessToken);
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.ParentCategoryId != null)
+            if (request.ParentCategoryId is not null)
                 flurlReq.SetQueryParam("category_id", request.ParentCategoryId.Value);
 
-            if (request.QueryType != null)
+            if (request.QueryType is not null)
                 flurlReq.SetQueryParam("query_category_type", request.QueryType.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsCategoryGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsCategoryGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/Product
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/product/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/save </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/save ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -391,15 +443,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/product/free_audit 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/free.audit </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/free.audit ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -411,15 +466,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "free_audit")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "free_audit")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductFreeAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductFreeAuditV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/product/operate 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/operate </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/operate ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -431,15 +489,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "operate")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "product", "operate")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductOperateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOperateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/product/draft/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -451,27 +512,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "query")
                 .WithHeader("access-token", request.AccessToken);
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.Status != null)
+            if (request.Status is not null)
                 flurlReq.SetQueryParam("status", request.Status.Value);
 
-            if (request.PageCursor != null)
+            if (request.PageCursor is not null)
                 flurlReq.SetQueryParam("cursor", request.PageCursor);
 
-            if (request.PageSize != null)
+            if (request.PageSize is not null)
                 flurlReq.SetQueryParam("count", request.PageSize.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductDraftQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductDraftQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/product/draft/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/draft.get </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/draft.get ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -483,24 +547,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "get")
                 .WithHeader("access-token", request.AccessToken);
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.ProductIdList != null)
+            if (request.ProductIdList is not null)
                 flurlReq.SetQueryParam("product_ids", string.Join(",", request.ProductIdList));
 
-            if (request.OutProductIdList != null)
+            if (request.OutProductIdList is not null)
                 flurlReq.SetQueryParam("out_ids", string.Join(",", request.OutProductIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductDraftGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductDraftGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/product/online/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/online.query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/online.query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -512,27 +579,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "query")
                 .WithHeader("access-token", request.AccessToken);
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.Status != null)
+            if (request.Status is not null)
                 flurlReq.SetQueryParam("status", request.Status.Value);
 
-            if (request.PageCursor != null)
+            if (request.PageCursor is not null)
                 flurlReq.SetQueryParam("cursor", request.PageCursor);
 
-            if (request.PageSize != null)
+            if (request.PageSize is not null)
                 flurlReq.SetQueryParam("count", request.PageSize.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductOnlineQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/product/online/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/online.get </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/online.get ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -544,26 +614,29 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "get")
                 .WithHeader("access-token", request.AccessToken);
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.ProductIdList != null)
+            if (request.ProductIdList is not null)
                 flurlReq.SetQueryParam("product_ids", string.Join(",", request.ProductIdList));
 
-            if (request.OutProductIdList != null)
+            if (request.OutProductIdList is not null)
                 flurlReq.SetQueryParam("out_ids", string.Join(",", request.OutProductIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsProductOnlineGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/SKU
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/sku/batch_save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/goods.batch.save </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/goods.batch.save ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -575,17 +648,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "sku", "batch_save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "sku", "batch_save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsSKUBatchSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsSKUBatchSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/SPU
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/spu/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savespu </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/savespu ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -597,17 +673,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "spu", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "spu", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsSPUSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsSPUSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/Stock
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/goods/stock/sync 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/batch.save </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/batch.save ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -619,17 +698,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "stock", "sync")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "goods", "stock", "sync")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsStockSyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsStockSyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Goods/Template
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/goods/template/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/template.get </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/template.get ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -641,12 +723,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "template", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "template", "get")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("product_type", request.ProductType)
                 .SetQueryParam("category_id", request.CategoryId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeGoodsTemplateGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsTemplateGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -654,7 +736,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region Member
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/member/user/update 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/update.info </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/update.info ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -666,15 +751,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "member", "user", "update")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "member", "user", "update")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeMemberUserUpdateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeMemberUserUpdateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/member/unionid/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/unionidget </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/unionidget ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -686,10 +774,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "member", "unionid", "get")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "member", "unionid", "get")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeMemberUnionIdGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeMemberUnionIdGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
@@ -697,7 +785,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region Partner/Commission
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/partner/product_commission/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionsave </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionsave ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -709,15 +800,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "product_commission", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "product_commission", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerProductCommissionSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerProductCommissionSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/partner/product_commission/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/productcommissionquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -729,18 +823,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "product_commission", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "product_commission", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("order_id", request.OrderId)
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerProductCommissionQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerProductCommissionQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/partner/commission_record/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -752,18 +849,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("order_id", request.OrderId)
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerCommissionRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerCommissionRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/partner/commission_record/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordget </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/commissionrecordget ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -775,19 +875,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "commission_record", "get")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("order_id", request.OrderId)
                 .SetQueryParam("record_id", request.RecordId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerCommissionRecordGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerCommissionRecordGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Partner/Order
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/partner/order/create 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/create </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/create ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -799,15 +902,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "order", "create")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "partner", "order", "create")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerOrderCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/partner/order/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -819,33 +925,36 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize)
                 .SetQueryParam("is_asc", request.IsSortByAsc.GetValueOrDefault() ? "true" : "false");
 
-            if (request.AccountId != null)
+            if (request.AccountId is not null)
                 flurlReq.SetQueryParam("account_id", request.AccountId);
 
-            if (request.CooperationContentType != null)
+            if (request.CooperationContentType is not null)
                 flurlReq.SetQueryParam("cooperation_contents", request.CooperationContentType.Value);
 
-            if (request.StartTimestamp != null)
+            if (request.StartTimestamp is not null)
                 flurlReq.SetQueryParam("start_time", request.StartTimestamp.Value);
 
-            if (request.EndTimestamp != null)
+            if (request.EndTimestamp is not null)
                 flurlReq.SetQueryParam("end_time", request.EndTimestamp.Value);
 
-            if (request.Status != null)
+            if (request.Status is not null)
                 flurlReq.SetQueryParam("status", request.Status.Value);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/partner/order/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderget </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/paterner/orderget ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -857,12 +966,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "get")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("order_id", request.OrderId)
                 .SetQueryParam("without_product_items", request.IsWithoutProductItems.GetValueOrDefault() ? "true" : "false");
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePartnerOrderGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerOrderGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -870,7 +979,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region POI
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/poi/sync 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poisync </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poisync ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -882,15 +994,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "sync")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "sync")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOISyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOISyncV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/poi/update 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.update </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.update ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -902,15 +1017,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "update")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "update")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIUpdateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIUpdateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/poi/claim 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.claim </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.claim ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -922,15 +1040,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "claim")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "claim")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIClaimV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIClaimV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/poi/decorate 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.decorate </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/poi.decorate ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -942,15 +1063,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "decorate")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "poi", "decorate")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIDecorateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIDecorateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/poi/task/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/task.query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/task.query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -962,16 +1086,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "task", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "task", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("task_ids", string.Join(",", request.TaskIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOITaskQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOITaskQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/match/task/submit 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.tasksubmit </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.tasksubmit ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -983,15 +1110,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "match", "task", "submit")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "match", "task", "submit")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIMatchTaskSubmitV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIMatchTaskSubmitV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/poi/match/task/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.taskquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.taskquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1003,16 +1133,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "match", "task", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "match", "task", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("task_id", request.TaskId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIMatchTaskQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIMatchTaskQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/poi/match/relation/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.relationquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/match.relationquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1024,17 +1157,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "match", "relation", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "poi", "match", "relation", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("ext_ids", string.Join(",", request.POIExternalIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOIMatchRelationQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOIMatchRelationQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         #region Goods/Crowd
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/poi/crowd/save 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/crowdsave </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/crowdsave ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1046,10 +1182,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "crowd", "save")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "poi", "crowd", "save")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifePOICrowdSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePOICrowdSaveV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion
@@ -1057,7 +1193,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         #region Settle
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/settle/ledger/query_record_by_cert 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/ledger.query-record-by-cert </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/ledger.query-record-by-cert ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1069,16 +1208,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query_record_by_cert")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query_record_by_cert")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("certificate_ids", string.Join(",", request.CertificateIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeSettleLedgerQueryRecordByCertificateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeSettleLedgerQueryRecordByCertificateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/settle/ledger/detailed_query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/detailedquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/detailedquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1090,19 +1232,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "detailed_query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "detailed_query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("size", request.PageSize)
                 .SetQueryParam("bill_date", request.BillDateString);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeSettleLedgerDetailedQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeSettleLedgerDetailedQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/settle/ledger/detailed_query_by_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/detailedquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/detailedquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1114,17 +1259,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "detailed_query_by_order")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "detailed_query_by_order")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("order_ids", string.Join(",", request.OrderIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeSettleLedgerDetailedQueryByOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeSettleLedgerDetailedQueryByOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/settle/ledger/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/merchantquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.billing/merchantquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1136,19 +1284,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("size", request.PageSize)
                 .SetQueryParam("bill_date", request.BillDateString);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeSettleLedgerQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeSettleLedgerQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/settle/ledger/query_by_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/querybyorder </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/querybyorder ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1160,19 +1311,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query_by_order")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "settle", "ledger", "query_by_order")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("order_ids", string.Join(",", request.OrderIdList));
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeSettleLedgerQueryByOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeSettleLedgerQueryByOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Shop
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/shop/poi/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/shop.query </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/life.capacity.shop/shop.query ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1184,21 +1338,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "shop", "poi", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "shop", "poi", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize)
                 .SetQueryParam("account_id", request.AccountId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeShopPOIQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeShopPOIQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
         #region Trade
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/trade/order/query 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/order.query/query </para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/orderquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/order.query/query ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/orderquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1210,45 +1367,48 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "order", "query")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "order", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
 
-            if (request.OrderId != null)
+            if (request.OrderId is not null)
                 flurlReq.SetQueryParam("order_id", request.OrderId);
 
-            if (request.OrderExternalId != null)
+            if (request.OrderExternalId is not null)
                 flurlReq.SetQueryParam("ext_order_id", request.OrderExternalId);
 
-            if (request.OpenId != null)
+            if (request.OpenId is not null)
                 flurlReq.SetQueryParam("open_id", request.OpenId);
 
-            if (request.OrderStatus != null)
+            if (request.OrderStatus is not null)
                 flurlReq.SetQueryParam("order_status", request.OrderStatus);
 
-            if (request.CreateOrderStartTimestamp != null)
+            if (request.CreateOrderStartTimestamp is not null)
                 flurlReq.SetQueryParam("create_order_start_time", request.CreateOrderStartTimestamp);
 
-            if (request.CreateOrderEndTimestamp != null)
+            if (request.CreateOrderEndTimestamp is not null)
                 flurlReq.SetQueryParam("create_order_end_time", request.CreateOrderEndTimestamp);
 
-            if (request.UpdateOrderStartTimestamp != null)
+            if (request.UpdateOrderStartTimestamp is not null)
                 flurlReq.SetQueryParam("update_order_start_time", request.UpdateOrderStartTimestamp);
 
-            if (request.UpdateOrderEndTimestamp != null)
+            if (request.UpdateOrderEndTimestamp is not null)
                 flurlReq.SetQueryParam("update_order_end_time", request.UpdateOrderEndTimestamp);
 
-            if (request.RequireGetSecretNumber != null)
+            if (request.RequireGetSecretNumber is not null)
                 flurlReq.SetQueryParam("get_secret_number", request.RequireGetSecretNumber.Value ? "true" : "false");
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeTradeOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeTradeOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [GET] /goodlife/v1/trade/book/get 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/bookingorderquery </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/presale/bookingorderquery ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1260,22 +1420,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "book", "get")
+                .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "book", "get")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId);
 
-            if (request.BookId != null)
+            if (request.BookId is not null)
                 flurlReq.SetQueryParam("book_id", request.BookId);
 
-            if (request.OrderId != null)
+            if (request.OrderId is not null)
                 flurlReq.SetQueryParam("order_id", request.OrderId);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeTradeBookGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeTradeBookGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// <para>异步调用 [POST] /goodlife/v1/trade/buy/merchant_confirm_order 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/confirmorder </para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/takeout/confirmorder ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -1287,10 +1450,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Post, "goodlife", "v1", "trade", "buy", "merchant_confirm_order")
+                .CreateFlurlRequest(request, HttpMethod.Post, "goodlife", "v1", "trade", "buy", "merchant_confirm_order")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendRequestWithJsonAsync<Models.GoodLifeTradeBuyMerchantConfirmOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeTradeBuyMerchantConfirmOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

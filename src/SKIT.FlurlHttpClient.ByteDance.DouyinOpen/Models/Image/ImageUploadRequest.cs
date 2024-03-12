@@ -5,6 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     /// <summary>
     /// <para>表示 [POST] /image/upload 接口的请求。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2023-07-06 下线。")]
     public class ImageUploadRequest : DouyinOpenRequest
     {
         /// <summary>

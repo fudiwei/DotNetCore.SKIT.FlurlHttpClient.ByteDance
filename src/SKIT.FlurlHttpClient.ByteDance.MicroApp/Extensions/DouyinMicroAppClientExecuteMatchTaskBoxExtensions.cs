@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_task", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxAddTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_room_task", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_room_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxAddRoomTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_task", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxUpdateTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_status", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_status/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxUpdateStatusV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_app_task_id", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_app_task_id/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryAppTaskIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -146,7 +146,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_task_info", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_task_info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryTaskInfoV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -169,7 +169,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_bill_link", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_bill_link/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryBillLinkV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -192,7 +192,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_video_sum_data", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_video_sum_data/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryVideoSummaryDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

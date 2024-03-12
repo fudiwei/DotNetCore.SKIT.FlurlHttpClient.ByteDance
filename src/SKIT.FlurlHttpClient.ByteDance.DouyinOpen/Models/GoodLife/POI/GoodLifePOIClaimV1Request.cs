@@ -21,9 +21,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                     {
                     }
 
-                    public class Industry : GoodLifePOISyncV1Request.Types.POI.Types.Industry
+                    public class Industry
                     {
-                        public static new class Types
+                        public static class Types
                         {
                             public class Qualification : GoodLifePOISyncV1Request.Types.POI.Types.Industry.Types.Qualification
                             {
@@ -31,11 +31,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         }
 
                         /// <summary>
+                        /// 获取或设置主营类目代码。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("major_industry_code")]
+                        [System.Text.Json.Serialization.JsonPropertyName("major_industry_code")]
+                        public string MajorIndustryCode { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置辅营类目代码。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("minor_industry_codes")]
+                        [System.Text.Json.Serialization.JsonPropertyName("minor_industry_codes")]
+                        public IList<string>? MajorIndustryCodeList { get; set; }
+
+                        /// <summary>
                         /// 获取或设置许可证列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qualifications")]
                         [System.Text.Json.Serialization.JsonPropertyName("qualifications")]
-                        public new IList<Types.Qualification>? QualificationList { get; set; }
+                        public IList<Types.Qualification>? QualificationList { get; set; }
                     }
 
                     public class Owner : GoodLifePOISyncV1Request.Types.POI.Types.Owner

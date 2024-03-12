@@ -6,7 +6,7 @@ using Xunit;
 
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
 {
-    public class IMPORTANT_CodeAnalyzeTests
+    public class CodeAnalyzeTests
     {
         // NOTICE:
         //   如果 Visual Studio 遇到 “缺少 SKIT.FlurlHttpClient.Tools.CodeAnalyzer 包” 的错误，

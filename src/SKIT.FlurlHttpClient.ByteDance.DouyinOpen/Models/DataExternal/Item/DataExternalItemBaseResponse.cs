@@ -46,7 +46,7 @@
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avg_play_duration")]
                         [System.Text.Json.Serialization.JsonPropertyName("avg_play_duration")]
-                        public double AveragePlayDuration { get; set; }
+                        public decimal AveragePlayDuration { get; set; }
                     }
                 }
 

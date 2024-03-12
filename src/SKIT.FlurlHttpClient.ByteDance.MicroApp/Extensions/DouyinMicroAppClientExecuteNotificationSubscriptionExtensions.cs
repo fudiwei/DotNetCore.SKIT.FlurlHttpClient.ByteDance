@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_tpl_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_tpl_list/")
                 .SetQueryParam("classification", request.Classification)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "create_tpl", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "create_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionCreateTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_created_tpl_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_created_tpl_list/")
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
                 .WithHeader("access-token", request.AccessToken);
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "add_app_tpl", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "add_app_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionAddAppTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_app_tpl", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_app_tpl/")
                 .SetQueryParam("classification", request.Classification)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -163,7 +163,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "delete_app_tpl", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "delete_app_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionDeleteAppTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -186,7 +186,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "notify_user", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "notify_user/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionNotifyUserV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -1,0 +1,21 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202203271807199888808121990491456D",
+    "data": {
+        "status": 1,
+        "enter_from": "im_card",
+        "attribution": {
+            "room_id": "123456",
+            "anchor_id": "ba253642-0590-40bc-9bdf-9a1334b94059",
+            "from_att_uid": "ba253642-0590-40bc-9bdf-9a1334b94059",
+            "conversation_id": "@8hxdhauTCMppanGnM4ltGM780mDqPP+KPpR0qQOmLVAXb",
+            "message_id": "@8hxdhauTCMppanGnM4ltGM780mDqPP+KPpR0qQOmLVAXb",
+            "group_id": "@8hxdhauTCMppanGnM4ltGM780mDqPP+KPpR0qQOmLVAXb",
+            "author_id": "@8hxdhauTCMppanGnM4ltGM780mDqPP+KPpR0qQOmLVAXb"
+        },
+        "data_im_extra": "haha micro_app",
+        "query": "cptName=button",
+        "path": "page/componentTpl/componentTpl"
+    }
+}

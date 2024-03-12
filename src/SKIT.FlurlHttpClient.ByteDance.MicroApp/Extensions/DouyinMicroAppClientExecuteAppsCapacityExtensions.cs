@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_list/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeBindTemplateListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_info", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "get_aweme_bind_template_info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeBindTemplateInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_aweme_relation", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "bind_aweme_relation/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityBindAwemeRelationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_aweme_relation", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "unbind_aweme_relation/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUnbindAwemeRelationV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -119,7 +119,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_aweme_relation_bind_qrcode", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "get_aweme_relation_bind_qrcode/")
                 .SetQueryParam("type", request.Type)
                 .SetQueryParam("capacity_list", string.Join(",", request.CapacityKeyList))
                 .WithHeader("access-token", request.AccessToken);
@@ -147,7 +147,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_relation_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_relation_list/")
                 .SetQueryParam("type", request.Type)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -175,7 +175,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_video_keyword_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_aweme_video_keyword_list/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
@@ -200,7 +200,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_aweme_video_keyword", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "add_aweme_video_keyword/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddAwemeVideoKeywordV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -223,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_aweme_video_keyword", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_aweme_video_keyword/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteAwemeVideoKeywordV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -294,7 +294,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "modify_alias", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "modify_alias/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityModifyAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -317,7 +317,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_alias", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "delete_alias/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -340,7 +340,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "set_search_tag", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "set_search_tag/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacitySetSearchTagV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -363,7 +363,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_search_tag_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_search_tag_list/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQuerySearchTagListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -388,7 +388,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v2", "capacity", "query_simple_qr_bind_list", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v2", "capacity", "query_simple_qr_bind_list/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
@@ -413,7 +413,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "add_simple_qr_bind", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "add_simple_qr_bind/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -436,7 +436,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -459,7 +459,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind_status", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "update_simple_qr_bind_status/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityUpdateSimpleQrcodeBindStatusV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -482,7 +482,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "delete_simple_qr_bind", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "capacity", "delete_simple_qr_bind/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityDeleteSimpleQrcodeBindV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -507,7 +507,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_ma_sub_service", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "capacity", "create_ma_sub_service/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateMicroAppSubServiceV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -530,7 +530,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ma_sub_service", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "capacity", "query_ma_sub_service/")
                 .SetQueryParam("page_no", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
                 .SetQueryParam("approval_state", request.ApprovalState)

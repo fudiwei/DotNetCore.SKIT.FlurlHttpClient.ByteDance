@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /js/getticket 接口的响应。</para>
+    /// <para>表示 [GET] /js/getticket/ 接口的响应。</para>
     /// </summary>
     public class JSGetTicketResponse : DouyinOpenResponse<JSGetTicketResponse.Types.Data>
     {
@@ -21,7 +21,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("expires_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("expires_in")]
-                public int ExpiresIn { get; set; }
+                public long ExpiresIn { get; set; }
             }
         }
     }

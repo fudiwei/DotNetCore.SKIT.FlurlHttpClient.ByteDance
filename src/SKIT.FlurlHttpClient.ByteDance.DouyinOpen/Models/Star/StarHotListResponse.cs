@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /star/hot_list 接口的响应。</para>
+    /// <para>表示 [GET] /star/hot_list/ 接口的响应。</para>
     /// </summary>
     public class StarHotListResponse : DouyinOpenResponse<StarHotListResponse.Types.Data>
     {
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("score")]
                         [System.Text.Json.Serialization.JsonPropertyName("score")]
-                        public double Score { get; set; }
+                        public decimal Score { get; set; }
 
                         /// <summary>
                         /// 获取或设置标签列表。

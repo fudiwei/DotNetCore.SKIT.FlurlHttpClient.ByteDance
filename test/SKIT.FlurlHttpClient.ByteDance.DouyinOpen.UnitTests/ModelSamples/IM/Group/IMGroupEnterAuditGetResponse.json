@@ -1,0 +1,27 @@
+{
+    "apply_list": {
+        "cursor": 1,
+        "has_more": false,
+        "list": [
+            {
+                "apply_id": "@9VwNxuKKBZ03MXG7M8ooWM7912XrPPqCOJdzqQ6lL1kVbfX760zdRmYqig357zEB84GwkVBjbo2eCWCq4V****==",
+                "apply_status": 1,
+                "create_time": 1676874310259,
+                "group_id": "@9VwNxuKKBZ03MXG7M8ooWM7912XrPPmLO5dyrAOnK1UTZ/T/60zdRmYqig357zEBdsFiI4euKz5E1pivD****==",
+                "user_id": "29d2f583-7fd6-4daa-b1d4-cfab5c05079Q"
+            }
+        ]
+    },
+    "data": {
+        "error_code": 0,
+        "description": ""
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "",
+        "logid": "20230222103211977B5DF3F5230D43A615",
+        "now": 1677033132
+    }
+}

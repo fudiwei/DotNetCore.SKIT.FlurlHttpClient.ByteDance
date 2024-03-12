@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /discovery/ent/rank/item 接口的响应。</para>
+    /// <para>表示 [GET] /discovery/ent/rank/item/ 接口的响应。</para>
     /// </summary>
     public class DiscoveryEntertainmentRankItemResponse : DouyinOpenResponse<DiscoveryEntertainmentRankItemResponse.Types.Data>
     {
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot")]
-                        public double HotValue { get; set; }
+                        public decimal HotValue { get; set; }
                     }
                 }
 
@@ -133,9 +133,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// 获取或设置刷新时间。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("active_time")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.RegularDateTimeOffsetConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("active_time")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Converters.RegularDateTimeOffsetConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
                 public DateTimeOffset ActiveTime { get; set; }
 
                 /// <summary>

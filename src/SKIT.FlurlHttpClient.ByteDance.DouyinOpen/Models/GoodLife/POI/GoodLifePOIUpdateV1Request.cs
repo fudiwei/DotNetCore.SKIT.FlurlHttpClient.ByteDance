@@ -76,23 +76,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("latitude")]
                         [System.Text.Json.Serialization.JsonPropertyName("latitude")]
-                        public double? Latitude { get; set; }
+                        public decimal? Latitude { get; set; }
 
                         /// <summary>
                         /// 获取或设置经度。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("longitude")]
                         [System.Text.Json.Serialization.JsonPropertyName("longitude")]
-                        public double? Longitude { get; set; }
+                        public decimal? Longitude { get; set; }
                     }
 
-                    public class Service : POISupplierSyncRequest.Types.Service
+                    public class Service
                     {
-                        public static new class Types
+                        public static class Types
                         {
-                            public class Entry : POISupplierSyncRequest.Types.Service.Types.Entry
+                            public class Entry
                             {
-                                public static new class Types
+                                public static class Types
                                 {
                                     public class EntryMiniApp : POISupplierSyncRequest.Types.Service.Types.Entry.Types.EntryMiniApp
                                     {
@@ -100,20 +100,41 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 }
 
                                 /// <summary>
+                                /// 获取或设置入口类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("entry_type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("entry_type")]
+                                public int EntryType { get; set; }
+
+                                /// <summary>
                                 /// 获取或设置小程序入口信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("entry_mini_app")]
                                 [System.Text.Json.Serialization.JsonPropertyName("entry_mini_app")]
-                                public new Types.EntryMiniApp? EntryMiniApp { get; set; }
+                                public Types.EntryMiniApp? EntryMiniApp { get; set; }
                             }
                         }
+
+                        /// <summary>
+                        /// 获取或设置上线状态。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("enable")]
+                        [System.Text.Json.Serialization.JsonPropertyName("enable")]
+                        public int Status { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置服务类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("service_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("service_type")]
+                        public int ServiceType { get; set; }
 
                         /// <summary>
                         /// 获取或设置入口信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("entry")]
                         [System.Text.Json.Serialization.JsonPropertyName("entry")]
-                        public new Types.Entry? Entry { get; set; }
+                        public Types.Entry? Entry { get; set; }
                     }
                 }
 

@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "query", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "query/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "detail", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "detail/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "report", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "ad", "report/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdReportResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "advertiser", "query", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "advertiser", "query/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibAdvertiserQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -118,7 +118,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "commercial_content", "query", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "adlib", "commercial_content", "query/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchAdlibCommercialContentQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -143,7 +143,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "info", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "info/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -166,7 +166,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "liked_videos", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "liked_videos/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserLikedVideosResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -189,7 +189,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "pinned_videos", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "pinned_videos/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserPinnedVideosResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -212,7 +212,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "reposted_videos", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "reposted_videos/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserRepostedVideosResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -235,7 +235,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "followers", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "followers/");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserFollowersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -257,7 +257,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "following", "");
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "user", "following/");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchUserFollowingResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -281,7 +281,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "video", "query", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "video", "query/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchVideoQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -304,7 +304,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "research", "video", "comment", "list", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "video", "comment", "list/")
                 .SetQueryParam("fields", string.Join(",", request.FieldList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ResearchVideoCommentListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

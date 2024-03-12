@@ -1,0 +1,7 @@
+{
+    "event": "new_follow_action",
+    "client_key": "awr8bfr64vxgk036",
+    "from_user_id": "5bfa0218-477c-4d51-865c-64f0588794a6",
+    "to_user_id": "e3af6e1d-d83a-4116-8f9f-5cb8ac2413c7",
+    "content": "{\"action_type\":1,\"action_time\":1686811643}"
+}

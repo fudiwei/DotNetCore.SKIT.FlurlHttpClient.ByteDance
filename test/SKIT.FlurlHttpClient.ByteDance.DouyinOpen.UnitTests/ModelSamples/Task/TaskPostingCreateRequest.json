@@ -1,0 +1,10 @@
+{
+    "task_name": "测试投稿任务",
+    "task_condition": {
+        "condition": "digg",
+        "min_value": 0,
+        "max_value": 100
+    },
+    "start_time": 1682858145,
+    "end_time": 1685000977
+}

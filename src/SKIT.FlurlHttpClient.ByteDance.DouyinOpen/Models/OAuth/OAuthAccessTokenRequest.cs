@@ -1,19 +1,19 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /oauth/access_token 接口的请求。</para>
+    /// <para>表示 [POST] /oauth/access_token/ 接口的请求。</para>
     /// </summary>
     public class OAuthAccessTokenRequest : DouyinOpenRequest
     {
         /// <summary>
-        /// 获取或设置抖音开放平台应用 Key。如果不指定将使用构造 <see cref="DouyinOpenClient"/> 时的 <see cref="DouyinOpenClientOptions.ClientKey"/> 参数。
+        /// 获取或设置抖音开放平台 ClientKey。如果不指定将使用构造 <see cref="DouyinOpenClient"/> 时的 <see cref="DouyinOpenClientOptions.ClientKey"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("client_key")]
         [System.Text.Json.Serialization.JsonPropertyName("client_key")]
         public string? ClientKey { get; set; }
 
         /// <summary>
-        /// 获取或设置抖音开放平台应用密钥。如果不指定将使用构造 <see cref="DouyinOpenClient"/> 时的 <see cref="DouyinOpenClientOptions.ClientSecret"/> 参数。
+        /// 获取或设置抖音开放平台 ClientSecret。如果不指定将使用构造 <see cref="DouyinOpenClient"/> 时的 <see cref="DouyinOpenClientOptions.ClientSecret"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("client_secret")]
         [System.Text.Json.Serialization.JsonPropertyName("client_secret")]

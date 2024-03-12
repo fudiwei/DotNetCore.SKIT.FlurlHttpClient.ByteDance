@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /market/service/user/remaintimes/decr 接口的请求。</para>
+    /// <para>表示 [POST] /market/service/user/remaintimes/decr/ 接口的请求。</para>
     /// </summary>
     public class MarketServiceUserRemainTimesDecreaseRequest : DouyinOpenRequest
     {

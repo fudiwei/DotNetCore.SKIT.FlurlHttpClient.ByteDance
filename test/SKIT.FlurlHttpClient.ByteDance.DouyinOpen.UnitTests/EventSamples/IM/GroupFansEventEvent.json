@@ -1,0 +1,8 @@
+{
+    "event": "group_fans_event",
+    "client_key": "gjegd89bebgd9uehd",
+    "from_user_id": "500a9e2f-ca96-4225-865d-a341914502ae",
+    "to_user_id": "a70c3dde-d0f3-45b3-828e-0f1a81cd5245",
+    "content": "{\"open_id\":\"500a9e2f-ca96-4225-865d-a341914502ae\",\"im_group_id\":\"@9VxQh6rGTNAjPS/4do48Es7912frNf2APZB0rQqgKFMUafD160zdRmYqig357zEBN69eGVtkZMdXc4EKtu****==\",\"group_type\":1,\"create_time\":1681720393151,\"create_group_type\":\"5\"}",
+    "log_id": "02168172039281400000000000000000000ffff0ac64157ea0731"
+}

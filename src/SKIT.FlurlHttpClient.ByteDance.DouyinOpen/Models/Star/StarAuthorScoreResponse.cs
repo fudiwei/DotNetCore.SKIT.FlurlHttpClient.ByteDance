@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /star/author_score 接口的响应。</para>
+    /// <para>表示 [GET] /star/author_score/ 接口的响应。</para>
     /// </summary>
     public class StarAuthorScoreResponse : DouyinOpenResponse<StarAuthorScoreResponse.Types.Data>
     {
@@ -21,42 +21,42 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cp_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("cp_score")]
-                public double CPScore { get; set; }
+                public decimal CPScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置种草指数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shop_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("shop_score")]
-                public double ShopScore { get; set; }
+                public decimal ShopScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置传播指数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spread_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("spread_score")]
-                public double SpreadScore { get; set; }
+                public decimal SpreadScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置星图指数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("star_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("star_score")]
-                public double StarScore { get; set; }
+                public decimal StarScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置合作指数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cooperation_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("cooperation_score")]
-                public double CooperationScore { get; set; }
+                public decimal CooperationScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置涨粉指数。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("growth_score")]
                 [System.Text.Json.Serialization.JsonPropertyName("growth_score")]
-                public double GrowthScore { get; set; }
+                public decimal GrowthScore { get; set; }
 
                 /// <summary>
                 /// 获取或设置粉丝数。

@@ -1,0 +1,20 @@
+{
+    "group_setting_type": 1,
+    "group_id": "@4F8C16DLBMpoayH0MI44GaX+1WSGOvqKMpZ2rgigLVAab/b033bhf2Iujgn96zUFzrEMFkG/vUKhYHQ90PrjsQ==",
+    "msg_list": [
+        {
+            "msg_type": 1,
+            "text": {
+                "text": "66666"
+            }
+        },
+        {
+            "msg_type": 10,
+            "applet_card": {
+                "card_template_id": "@4F8C16DLB+1WSGO/yAA61JkTKeF2ltKgvvhATKtvrScVZhhxZ/",
+                "schema": "https://z.douyin.com/lktwYRo",
+                "app_id": "ttfa398c06e94401"
+            }
+        }
+    ]
+}

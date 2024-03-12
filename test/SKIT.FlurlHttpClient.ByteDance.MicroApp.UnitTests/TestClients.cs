@@ -6,8 +6,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
         {
             Instance = new DouyinMicroAppClient(new DouyinMicroAppClientOptions()
             {
-                AppId = TestConfigs.ByteDanceMicroAppId,
-                AppSecret = TestConfigs.ByteDanceMicroAppSecret
+                AppId = TestConfigs.DouyinMicroAppId,
+                AppSecret = TestConfigs.DouyinMicroAppSecret
             });
         }
 

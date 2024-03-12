@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_base", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_base/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .WithHeader("access-token", request.AccessToken);
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_base", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_base/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .WithHeader("access-token", request.AccessToken);
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_like", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_like", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -128,7 +128,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -180,7 +180,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_play", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_play/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -206,7 +206,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_play", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_play/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -232,7 +232,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_share", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -258,7 +258,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_share", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "top_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "top_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -309,7 +309,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "top_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "top_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -333,7 +333,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "reply_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "reply_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -357,7 +357,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "reply_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "reply_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -381,7 +381,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -409,7 +409,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -437,7 +437,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment_reply", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment_reply/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId)
@@ -466,7 +466,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment_reply", "")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment_reply/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId)

@@ -10,8 +10,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteStarExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /star/hot_list 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-tops/get-star-author-hot-list </para>
+        /// <para>异步调用 [GET] /star/hot_list/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-tops/get-star-author-hot-list ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,16 +26,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "star", "hot_list")
-                .SetQueryParam("access_token", request.AccessToken)
+                .CreateFlurlRequest(request, HttpMethod.Get, "star", "hot_list/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("hot_list_type", request.HotListType);
 
-            return await client.SendRequestWithJsonAsync<Models.StarHotListResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.StarHotListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /star/author_score 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data </para>
+        /// <para>异步调用 [GET] /star/author_score/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -44,16 +50,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "star", "author_score")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateFlurlRequest(request, HttpMethod.Get, "star", "author_score/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
-            return await client.SendRequestWithJsonAsync<Models.StarAuthorScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.StarAuthorScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /star/author_score_v2 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data-v2 </para>
+        /// <para>异步调用 [GET] /star/author_score_v2/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/star-data/star-author/get-star-author-data-v2 ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -65,11 +74,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "star", "author_score_v2")
-                .SetQueryParam("unique_id", request.DouyinId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateFlurlRequest(request, HttpMethod.Get, "star", "author_score_v2/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("unique_id", request.DouyinId);
 
-            return await client.SendRequestWithJsonAsync<Models.StarAuthorScoreV2Response>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.StarAuthorScoreV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

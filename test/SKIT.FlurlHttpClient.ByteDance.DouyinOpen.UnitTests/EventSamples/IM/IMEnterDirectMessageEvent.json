@@ -1,0 +1,7 @@
+{
+    "event": "im_enter_direct_msg",
+    "client_key": "aaaoqobz68a71u1",
+    "from_user_id": "aaa-8a0b-4c0f-b04f-feba0e909113",
+    "to_user_id": "aaa-81ec-424c-b738-8693eeaf53ea",
+    "content": "{\"conversation_short_id\":\"@9Vxc1/yDU8sqaS+gN4koEc7912foPPyAOJNyrA+nLFAba/f760zdRmYqig357zEBFWIIcsZD6/UJHKbF2JNw4w==\",\"server_message_id\":\"@9Vxc1/yDU8sqaS+gN4koEc7912foPPyAPZd5qgKuL1UVbfj460zdRmYqig357zEBi2hwzcxjeRsR2HorFuOHvA==\",\"conversation_type\":1,\"create_time\":1681303286088,\"scene_type\":4,\"user_infos\":[{\"open_id\":\"xxxx8a0b-4c0f-b04f-feba0e909113\",\"nick_name\":\"Hs姝羽\",\"avatar\":\"https://p6.douyinpic.com/aweme/720x720/xxxx/tos-cn-i-0813_f2c60a21b05d43e68dd6daffd7d5d733.jpeg?from=3782654143\"},{\"open_id\":\"xxxx-81ec-424c-b738-8693eeaf53ea\",\"nick_name\":\"广汽传祺张掖华逸店\",\"avatar\":\"https://p6.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-i-0813_5d0c96b34bcc4068bb6f9f43b609448a.jpeg?from=3782654143\"}],\"data-im-extra\":\"123456789\",\"query\":\"cptName = button\",\"path\":\"page/componentTpl/componentTpl\"}"
+}

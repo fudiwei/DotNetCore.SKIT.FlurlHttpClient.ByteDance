@@ -26,5 +26,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// 获取或设置抖音开放平台应用密钥。
         /// </summary>
         public string ClientSecret { get; set; } = default!;
+
+        /// <summary>
+        /// 获取或设置抖音开放平台 Webhook 验签秘钥。
+        /// </summary>
+        public string WebhookSecret { get; set; } = default!;
     }
 }

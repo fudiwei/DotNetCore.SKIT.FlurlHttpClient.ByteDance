@@ -10,8 +10,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteShareIdExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /share-id 接口。</para>
-        /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-share-result </para>
+        /// <para>异步调用 [GET] /share-id/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-share-result ]]>
+        /// </para>
         /// </summary>
         /// <param name="client"></param>
         /// <param name="request"></param>
@@ -23,22 +26,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateRequest(request, HttpMethod.Get, "share-id")
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateFlurlRequest(request, HttpMethod.Get, "share-id/")
+                .WithHeader("access-token", request.AccessToken);
 
-            if (request.RequireCallback != null)
-                flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value);
+            if (request.RequireCallback is not null)
+                flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value ? "true" : "false");
 
-            if (request.SourceStyleId != null)
-                flurlReq.SetQueryParam("access_token", request.SourceStyleId);
+            if (request.SourceStyleId is not null)
+                flurlReq.SetQueryParam("source_style_id", request.SourceStyleId);
 
-            if (request.DefaultHashTag != null)
+            if (request.DefaultHashTag is not null)
                 flurlReq.SetQueryParam("default_hashtag", request.DefaultHashTag);
 
-            if (request.LinkParameter != null)
+            if (request.LinkParameter is not null)
                 flurlReq.SetQueryParam("link_param", request.LinkParameter);
 
-            return await client.SendRequestWithJsonAsync<Models.ShareIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken);
+            return await client.SendFlurlRequestAsJsonAsync<Models.ShareIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

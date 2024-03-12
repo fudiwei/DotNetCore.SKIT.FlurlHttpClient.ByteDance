@@ -2,7 +2,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
     /// <para>表示 item_comment_reply 事件的数据。</para>
-    /// <para>REF: https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/accept-comment-reply-event </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/comment-management-user/accept-comment-reply-event ]]>
+    /// </para>
     /// </summary>
     public class ItemCommentReplyEvent : DouyinOpenEvent<ItemCommentReplyEvent.Types.Content>
     {

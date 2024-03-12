@@ -2,7 +2,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
     /// <para>表示 life_product_audit 事件的数据。</para>
-    /// <para>REF: https://partner.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/goods.audit </para>
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/goods/goods.audit ]]>
+    /// </para>
     /// </summary>
     public class LifeProductAuditEvent : DouyinOpenEvent<LifeProductAuditEvent.Types.Content>
     {
@@ -33,31 +36,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
             }
         }
 
-        internal static class Converters
-        {
-            internal class EventPropertyContentNewtonsoftJsonConverter : Newtonsoft.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-
-            internal class EventPropertyContentSystemTextJsonConverter : System.Text.Json.Converters.TextualObjectInJsonFormatConverterBase<Types.Content?>
-            {
-            }
-        }
-
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("content")]
-        [Newtonsoft.Json.JsonConverter(typeof(Converters.EventPropertyContentNewtonsoftJsonConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(Converters.EventPropertyContentSystemTextJsonConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedObjectInJsonFormatConverter))]
         public override Types.Content EventContent { get; set; } = default!;
-
-        /// <summary>
-        /// 获取或设置事件唯一标识。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("log_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        public string? LogId { get; set; }
     }
 }

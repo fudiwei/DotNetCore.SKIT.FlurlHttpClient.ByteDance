@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /api/douyin/v1/video/create_video 接口的响应。</para>
+    /// <para>表示 [POST] /api/douyin/v1/video/create_video/ 接口的响应。</para>
     /// </summary>
     public class DouyinVideoCreateVideoV1Response : DouyinOpenResponse<DouyinVideoCreateVideoV1Response.Types.Data>
     {

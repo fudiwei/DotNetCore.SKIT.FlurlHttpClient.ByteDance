@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /star/author_score_v2 接口的响应。</para>
+    /// <para>表示 [GET] /star/author_score_v2/ 接口的响应。</para>
     /// </summary>
     public class StarAuthorScoreV2Response : DouyinOpenResponse<StarAuthorScoreV2Response.Types.Data>
     {

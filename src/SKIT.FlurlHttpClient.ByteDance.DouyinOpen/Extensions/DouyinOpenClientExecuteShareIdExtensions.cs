@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteShareIdExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /share-id 接口。</para>
+        /// <para>异步调用 [GET] /share-id/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/search-video/video-share-result ]]>
@@ -26,11 +26,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "share-id")
+                .CreateFlurlRequest(request, HttpMethod.Get, "share-id/")
                 .WithHeader("access-token", request.AccessToken);
 
             if (request.RequireCallback is not null)
-                flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value);
+                flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value ? "true" : "false");
 
             if (request.SourceStyleId is not null)
                 flurlReq.SetQueryParam("source_style_id", request.SourceStyleId);

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteDevToolExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /devtool/micapp/is_legal 接口。</para>
+        /// <para>异步调用 [GET] /devtool/micapp/is_legal/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/tools-ability/mini-app-interface ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "devtool", "micapp", "is_legal")
+                .CreateFlurlRequest(request, HttpMethod.Get, "devtool", "micapp", "is_legal/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("micapp_id", request.MicroAppId);
 

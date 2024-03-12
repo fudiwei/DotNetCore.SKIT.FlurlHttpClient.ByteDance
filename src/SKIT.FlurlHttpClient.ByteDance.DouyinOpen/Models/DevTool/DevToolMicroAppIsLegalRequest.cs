@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /devtool/micapp/is_legal 接口的请求。</para>
+    /// <para>表示 [GET] /devtool/micapp/is_legal/ 接口的请求。</para>
     /// </summary>
     public class DevToolMicroAppIsLegalRequest : DouyinOpenRequest
     {

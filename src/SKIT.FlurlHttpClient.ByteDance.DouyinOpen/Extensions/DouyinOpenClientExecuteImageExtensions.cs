@@ -20,6 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-07-06 下线。")]
         public static async Task<Models.ImageUploadResponse> ExecuteImageUploadAsync(this DouyinOpenClient client, Models.ImageUploadRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -51,6 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-07-06 下线。")]
         public static async Task<Models.ImageCreateResponse> ExecuteImageCreateAsync(this DouyinOpenClient client, Models.ImageCreateRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

@@ -7,6 +7,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
+    // TODO: 独立化 ExtendedSDK
     public static class DouyinOpenClientExecuteGoodLifeExtensions
     {
         #region Aftersale

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteApiDouyinVideoExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/upload-video ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/create_video 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/create_video/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-create ]]>
@@ -57,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_video")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_video/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -192,7 +192,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
         #region Image
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_image 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_image/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-image-text/image-upload ]]>
@@ -208,7 +208,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_image")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_image/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -223,7 +223,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/create_image_text 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/create_image_text/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-image-text/create-image-text ]]>
@@ -239,7 +239,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_image_text")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "create_image_text/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -249,7 +249,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
         #region Part
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/init_video_part_upload 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/init_video_part_upload/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-part-upload-init ]]>
@@ -265,7 +265,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "init_video_part_upload")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "init_video_part_upload/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -273,7 +273,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video_part 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/upload_video_part/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create-video/video-part-upload ]]>
@@ -289,7 +289,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video_part")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "upload_video_part/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("upload_id", request.UploadId)
@@ -306,7 +306,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/douyin/v1/video/complete_video_part_upload 接口。</para>
+        /// <para>异步调用 [POST] /api/douyin/v1/video/complete_video_part_upload/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/video-management/douyin/create/slice-accomplish-upload ]]>
@@ -322,7 +322,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "complete_video_part_upload")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "douyin", "v1", "video", "complete_video_part_upload/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("upload_id", request.UploadId);

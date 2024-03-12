@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /oauth/business_token 接口的响应。</para>
+    /// <para>表示 [POST] /oauth/business_token/ 接口的响应。</para>
     /// </summary>
     public class OAuthBusinessTokenResponse : DouyinOpenResponse<OAuthBusinessTokenResponse.Types.Data>
     {

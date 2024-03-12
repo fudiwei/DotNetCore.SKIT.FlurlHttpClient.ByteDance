@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /video/comment/list 接口的请求。</para>
+    /// <para>表示 [GET] /item/comment/list/ 接口的请求。</para>
     /// </summary>
-    public class VideoCommentListRequest : DouyinOpenRequest
+    public class ItemCommentListRequest : DouyinOpenRequest
     {
         /// <summary>
         /// 获取或设置用户唯一标识。
@@ -18,6 +18,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string ItemId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置排序类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? SortType { get; set; }
 
         /// <summary>
         /// 获取或设置分页游标。

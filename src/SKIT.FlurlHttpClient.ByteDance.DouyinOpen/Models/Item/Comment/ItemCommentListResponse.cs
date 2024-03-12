@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /item/comment/list 接口的响应。</para>
+    /// <para>表示 [GET] /item/comment/list/ 接口的响应。</para>
     /// </summary>
     public class ItemCommentListResponse : DouyinOpenResponse<ItemCommentListResponse.Types.Data>
     {

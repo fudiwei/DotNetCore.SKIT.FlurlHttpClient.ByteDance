@@ -1,8 +1,11 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [POST] /image/upload 接口的响应。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2023-07-06 下线。")]
     public class ImageUploadResponse : DouyinOpenResponse<ImageUploadResponse.Types.Data>
     {
         public static class Types

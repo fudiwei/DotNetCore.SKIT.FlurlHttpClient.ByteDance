@@ -71,12 +71,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedObjectInJsonFormatConverter))]
         public override Types.Content EventContent { get; set; } = default!;
-
-        /// <summary>
-        /// 获取或设置事件唯一标识。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("log_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        public string? LogId { get; set; }
     }
 }

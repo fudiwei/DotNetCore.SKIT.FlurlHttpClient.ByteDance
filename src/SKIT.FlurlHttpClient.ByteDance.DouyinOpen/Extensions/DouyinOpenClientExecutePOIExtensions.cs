@@ -7,6 +7,7 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
+    // TODO: 独立化 ExtendedSDK
     public static class DouyinOpenClientExecutePOIExtensions
     {
         /// <summary>
@@ -27,13 +28,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "search", "keyword")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("keyword", request.Keyword)
+                .SetQueryParam("city", request.City)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize);
-
-            if (request.City is not null)
-                flurlReq.SetQueryParam("city", request.City);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISearchKeywordResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -56,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "query")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("amap_id", request.AMapId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -80,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "base", "query", "amap")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("amap_id", request.AMapId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIBaseQueryAMapResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -223,7 +222,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "ext", "hotel", "sku")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("spu_ext_id", request.SPUExternalId)
                 .SetQueryParam("start_date", request.StartDateString)
                 .SetQueryParam("end_date", request.EndDateString);
@@ -326,7 +325,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "order", "sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -349,7 +348,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "order", "status")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderStatusResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -372,7 +371,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "order", "confirm")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderConfirmResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -395,7 +394,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "order", "confirm", "prepare")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderConfirmPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -418,7 +417,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "order", "confirm", "cancel_prepare")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderConfirmCancelPrepareResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -441,7 +440,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "order", "bill", "token")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("bill_date", request.BillDateString);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderBillTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -465,7 +464,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "order", "list", "token")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("order_date", request.OrderDateString);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POIOrderListTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -679,7 +678,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "sku", "sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISKUSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -704,7 +703,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "v2", "spu", "sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISPUSyncV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -727,7 +726,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "v2", "spu", "status_sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISPUStatusSyncV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -750,7 +749,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "v2", "spu", "stock_update")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISPUStockUpdateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -773,12 +772,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "v2", "spu", "get")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("spu_ext_id", request.SPUExternalId)
-                .SetQueryParam("need_spu_draft", request.RequireSPUDraft);
-
-            if (request.SPUDraftCount is not null)
-                flurlReq.SetQueryParam("spu_draft_count", request.SPUDraftCount.Value);
+                .SetQueryParam("need_spu_draft", request.RequireSPUDraft)
+                .SetQueryParam("spu_draft_count", request.SPUDraftCount);
 
             if (request.SupplierIdForFilterReasonList is not null)
                 flurlReq.SetQueryParam("supplier_ids_for_filter_reason", string.Join(",", request.SupplierIdForFilterReasonList));
@@ -804,7 +801,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "v2", "spu", "take_rate", "sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISPUTakeRateSyncV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -829,7 +826,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "supplier", "sync")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierSyncResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -852,7 +849,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "supplier", "query")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("supplier_ext_id", request.ExternalSupplierId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierQueryResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -876,7 +873,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "supplier", "query_all")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierQueryAllResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -899,7 +896,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "supplier", "query_callback")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("task_id", request.TaskId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierQueryCallbackResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -923,7 +920,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "v2", "supplier", "query", "task")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("supplier_task_ids", string.Join(",", request.SupplierTaskIdList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierQueryTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -947,7 +944,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "poi", "v2", "supplier", "query", "supplier")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("supplier_ext_id", string.Join(",", request.SupplierExternalIdList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierQuerySupplierV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -971,7 +968,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "poi", "v2", "supplier", "match")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISupplierMatchV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -1,8 +1,11 @@
+using System;
+
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
     /// <para>表示 [GET] /enterprise/im/card/list 接口的响应。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2023-05-31 下线。")]
     public class EnterpriseIMCardListResponse : DouyinOpenResponse<EnterpriseIMCardListResponse.Types.Data>
     {
         public static class Types

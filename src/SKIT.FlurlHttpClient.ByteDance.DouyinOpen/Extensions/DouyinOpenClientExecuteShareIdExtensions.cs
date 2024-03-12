@@ -27,13 +27,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "share-id")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             if (request.RequireCallback is not null)
                 flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value);
 
             if (request.SourceStyleId is not null)
-                flurlReq.SetQueryParam("access_token", request.SourceStyleId);
+                flurlReq.SetQueryParam("source_style_id", request.SourceStyleId);
 
             if (request.DefaultHashTag is not null)
                 flurlReq.SetQueryParam("default_hashtag", request.DefaultHashTag);

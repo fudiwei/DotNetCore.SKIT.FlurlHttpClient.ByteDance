@@ -47,6 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseIMCardSaveResponse> ExecuteEnterpriseIMCardSaveAsync(this DouyinOpenClient client, Models.EnterpriseIMCardSaveRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -71,6 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseIMCardListResponse> ExecuteEnterpriseIMCardListAsync(this DouyinOpenClient client, Models.EnterpriseIMCardListRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
@@ -97,6 +99,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        [Obsolete("相关接口或字段于 2023-05-31 下线。")]
         public static async Task<Models.EnterpriseIMCardDeleteResponse> ExecuteEnterpriseIMCardDeleteAsync(this DouyinOpenClient client, Models.EnterpriseIMCardDeleteRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteMarketServiceExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /market/service/user/purchase/list 接口。</para>
+        /// <para>异步调用 [GET] /market/service/user/purchase/list/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/service-market/service-relationship/purchase-list ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "market", "service", "user", "purchase", "list")
+                .CreateFlurlRequest(request, HttpMethod.Get, "market", "service", "user", "purchase", "list/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("service_id", request.ServiceId)
@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /market/service/user/remaintimes/decr 接口。</para>
+        /// <para>异步调用 [POST] /market/service/user/remaintimes/decr/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/service-market/service-relationship/remaintimes-decr ]]>
@@ -52,14 +52,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "remaintimes", "decr")
+                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "remaintimes", "decr/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MarketServiceUserRemainTimesDecreaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /market/service/user/insert/purchase/info 接口。</para>
+        /// <para>异步调用 [POST] /market/service/user/insert/purchase/info/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/service-market/service-relationship/insert-purchase-info ]]>
@@ -75,14 +75,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "insert", "purchase", "info")
+                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "insert", "purchase", "info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MarketServiceUserInsertPurchaseInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /market/service/user/delete/purchase/info 接口。</para>
+        /// <para>异步调用 [POST] /market/service/user/delete/purchase/info/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/service-market/service-relationship/delete-purchase-info ]]>
@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "delete", "purchase", "info")
+                .CreateFlurlRequest(request, HttpMethod.Post, "market", "service", "user", "delete", "purchase", "info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MarketServiceUserDeletePurchaseInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

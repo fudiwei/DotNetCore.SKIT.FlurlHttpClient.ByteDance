@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
     public static class DouyinOpenClientExecuteHotSearchExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /hotsearch/sentences 接口。</para>
+        /// <para>异步调用 [GET] /hotsearch/sentences/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/hot-video-data/get-current-hot-words ]]>
@@ -26,14 +26,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "sentences")
-                .SetQueryParam("access_token", request.AccessToken);
+                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "sentences/")
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.HotSearchSentencesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /hotsearch/trending/sentences 接口。</para>
+        /// <para>异步调用 [GET] /hotsearch/trending/sentences/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/hot-video-data/get-ascending-words ]]>
@@ -49,8 +49,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "trending", "sentences")
-                .SetQueryParam("access_token", request.AccessToken)
+                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "trending", "sentences/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize);
 
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /hotsearch/videos 接口。</para>
+        /// <para>异步调用 [GET] /hotsearch/videos/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/data-open-service/hot-video-data/get-hot-words-polymerization-video ]]>
@@ -74,8 +74,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "videos")
-                .SetQueryParam("access_token", request.AccessToken)
+                .CreateFlurlRequest(request, HttpMethod.Get, "hotsearch", "videos/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("hot_sentence", request.HotSentence);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.HotSearchVideosResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -27,8 +27,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "message", "once", "send")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MessageOnceSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

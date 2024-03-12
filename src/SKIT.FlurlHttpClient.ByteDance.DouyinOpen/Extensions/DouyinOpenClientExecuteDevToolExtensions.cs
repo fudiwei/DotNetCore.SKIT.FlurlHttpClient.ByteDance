@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "devtool", "micapp", "is_legal")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("micapp_id", request.MicroAppId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DevToolMicroAppIsLegalResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

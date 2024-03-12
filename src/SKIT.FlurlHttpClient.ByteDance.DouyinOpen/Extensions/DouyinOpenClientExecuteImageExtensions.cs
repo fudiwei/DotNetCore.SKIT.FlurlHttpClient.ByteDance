@@ -33,8 +33,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "image", "upload")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageContentType, formDataName: "image");
             return await client.SendFlurlRequestAsync<Models.ImageUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -58,8 +58,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "image", "create")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ImageCreateResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

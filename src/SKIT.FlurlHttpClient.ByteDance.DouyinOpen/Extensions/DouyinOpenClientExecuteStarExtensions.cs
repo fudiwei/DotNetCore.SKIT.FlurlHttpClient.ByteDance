@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "star", "hot_list")
-                .SetQueryParam("access_token", request.AccessToken)
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("hot_list_type", request.HotListType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.StarHotListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -51,8 +51,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "star", "author_score")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.StarAuthorScoreResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -75,8 +75,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "star", "author_score_v2")
-                .SetQueryParam("unique_id", request.DouyinId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("unique_id", request.DouyinId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.StarAuthorScoreV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

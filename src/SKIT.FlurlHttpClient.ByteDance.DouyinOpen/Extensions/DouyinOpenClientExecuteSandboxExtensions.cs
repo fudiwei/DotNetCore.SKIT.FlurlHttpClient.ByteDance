@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "sandbox", "webhook", "event", "send")
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.SandboxWebhookEventSendResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

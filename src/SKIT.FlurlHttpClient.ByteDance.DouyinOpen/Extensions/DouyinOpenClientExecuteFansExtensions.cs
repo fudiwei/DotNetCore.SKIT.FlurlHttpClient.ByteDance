@@ -27,8 +27,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "fans", "check")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("follower_open_id", request.FollowerOpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.FansCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -1,7 +1,7 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /market/service/user/purchase/list 接口的响应。</para>
+    /// <para>表示 [GET] /market/service/user/purchase/list/ 接口的响应。</para>
     /// </summary>
     public class MarketServiceUserPurchaseListResponse : DouyinOpenResponse<MarketServiceUserPurchaseListResponse.Types.Data>
     {
@@ -11,7 +11,7 @@
             {
                 public static class Types
                 {
-                    public class Purchase
+                    public class PurchaseInfo
                     {
                         /// <summary>
                         /// 获取或设置服务 ID。
@@ -83,7 +83,7 @@
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("purchase_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("purchase_info_list")]
-                public Types.Purchase[] PurchaseList { get; set; } = default!;
+                public Types.PurchaseInfo[] PurchaseList { get; set; } = default!;
             }
         }
     }

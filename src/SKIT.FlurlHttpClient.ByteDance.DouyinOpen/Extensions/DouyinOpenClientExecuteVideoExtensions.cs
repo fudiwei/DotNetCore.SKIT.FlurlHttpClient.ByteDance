@@ -27,8 +27,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "video", "source")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.VideoSourceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -52,8 +52,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "video", "search")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("keyword", request.Keyword);
@@ -79,8 +79,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "video", "search", "comment", "list")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("sec_item_id", request.SecurityItemId);
@@ -106,8 +106,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "video", "search", "comment", "reply", "list")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("cursor", request.PageCursor)
                 .SetQueryParam("count", request.PageSize)
                 .SetQueryParam("sec_item_id", request.SecurityItemId)
@@ -134,8 +134,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "video", "search", "comment", "reply")
-                .SetQueryParam("open_id", request.OpenId)
-                .SetQueryParam("access_token", request.AccessToken);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.VideoSearchCommentReplyResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

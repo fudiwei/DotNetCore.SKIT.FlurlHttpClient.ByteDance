@@ -1,0 +1,13 @@
+{
+    "event_type": "premium_member",
+    "context": {
+        "device": {
+            "open_id": "_000lGk5fU_oab8xxxxxxxxxx"
+        },
+        "ad": {
+            "callback": "xxxxxxx"
+        }
+    },
+    "timestamp": 1712807795,
+    "properties": "{\"benefit_type\": 2,\"benefit_start_time\": 1701360000,\"benefit_duration\": 365,\"playlet_name\": \"短剧名称\",\"album_id\": \"开放平台内容库-短剧ID\",\"order_id\": \"motbxxxxx\"}"
+}

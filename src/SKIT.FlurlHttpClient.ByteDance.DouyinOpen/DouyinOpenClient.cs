@@ -90,6 +90,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 flurlRequest.Verb == HttpMethod.Get ||
                 flurlRequest.Verb == HttpMethod.Head ||
                 flurlRequest.Verb == HttpMethod.Options;
+            if (!isSimpleRequest)
+                flurlRequest.WithHeader(HttpHeaders.ContentType, MimeTypes.Json); // NOTICE: Content-Type 中不能包含 charset 等其他段
+
             using IFlurlResponse flurlResponse = isSimpleRequest ?
                 await base.SendFlurlRequestAsync(flurlRequest, null, cancellationToken) :
                 await base.SendFlurlRequestAsJsonAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);
@@ -113,6 +116,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 flurlRequest.Verb == HttpMethod.Get ||
                 flurlRequest.Verb == HttpMethod.Head ||
                 flurlRequest.Verb == HttpMethod.Options;
+            if (!isSimpleRequest)
+                flurlRequest.WithHeader(HttpHeaders.ContentType, MimeTypes.FormUrlEncoded); // NOTICE: Content-Type 中不能包含 charset 等其他段
+
             using IFlurlResponse flurlResponse = isSimpleRequest ?
                 await base.SendFlurlRequestAsync(flurlRequest, null, cancellationToken).ConfigureAwait(false) :
                 await base.SendFlurlRequestAsFormUrlEncodedAsync(flurlRequest, data, cancellationToken).ConfigureAwait(false);

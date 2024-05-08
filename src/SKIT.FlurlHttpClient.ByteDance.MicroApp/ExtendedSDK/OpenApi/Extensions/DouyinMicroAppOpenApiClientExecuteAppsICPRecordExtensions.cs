@@ -198,7 +198,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_incharge_people_credentials_type_list/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "icp_record", "query_service_content_type_list/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenAppsICPRecordQueryServiceContentTypeListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

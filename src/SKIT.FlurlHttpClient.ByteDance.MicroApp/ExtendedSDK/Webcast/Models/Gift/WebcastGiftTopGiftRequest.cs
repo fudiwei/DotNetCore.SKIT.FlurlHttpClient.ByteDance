@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
@@ -5,6 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
     /// <summary>
     /// <para>表示 [POST] /gift/top_gift 接口的请求。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2024-04-01 下线。")]
     public class WebcastGiftTopGiftRequest : DouyinMicroAppWebcastRequest
     {
         /// <summary>

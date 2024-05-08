@@ -1,8 +1,11 @@
+using System;
+
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
     /// <para>表示 [POST] /gift/top_gift 接口的响应。</para>
     /// </summary>
+    [Obsolete("相关接口或字段于 2024-04-01 下线。")]
     public class WebcastGiftTopGiftResponse : DouyinMicroAppWebcastResponse
     {
         public static class Types

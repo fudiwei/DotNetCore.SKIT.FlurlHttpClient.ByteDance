@@ -14,7 +14,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
         <PackageTags>Flurl.Http ByteDance Douyin 字节 字节跳动 头条 今日头条 头条开放平台 抖音 抖音开放平台</PackageTags>
-        <Version>3.0.0</Version>
+        <Version>3.1.0</Version>
         <Description>基于 Flurl.Http 的抖音开放平台 API 客户端，支持用户授权、用户管理、视频管理、互动管理、搜索管理、数据开放服务、企业号开放能力、生活服务开放能力、工具能力、服务市场开放能力等功能。</Description>
         <Authors>Fu Diwei</Authors>
         <RepositoryType>git</RepositoryType>

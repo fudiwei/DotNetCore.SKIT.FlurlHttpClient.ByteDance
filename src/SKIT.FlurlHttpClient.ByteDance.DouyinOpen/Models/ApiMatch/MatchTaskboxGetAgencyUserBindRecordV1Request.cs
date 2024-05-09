@@ -1,17 +1,10 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /poi/common/plan/talent/media/list 接口的请求。</para>
+    /// <para>表示 [POST] /api/match/v1/taskbox/get_agency_user_bind_record/ 接口的请求。</para>
     /// </summary>
-    public class POICommonPlanTalentMediaListRequest : DouyinOpenRequest
+    public class MatchTaskboxGetAgencyUserBindRecordV1Request : DouyinOpenRequest
     {
-        /// <summary>
-        /// 获取或设置通用佣金计划 ID。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("plan_id")]
-        [System.Text.Json.Serialization.JsonPropertyName("plan_id")]
-        public long PlanId { get; set; }
-
         /// <summary>
         /// 获取或设置分页页数。
         /// <para>默认值：1</para>
@@ -29,17 +22,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public int PageSize { get; set; } = 10;
 
         /// <summary>
-        /// 获取或设置达人带货场景。
+        /// 获取或设置团长 ID。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("content_type")]
-        [System.Text.Json.Serialization.JsonPropertyName("content_type")]
-        public int ContentType { get; set; }
+        [Newtonsoft.Json.JsonProperty("agent_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("agent_id")]
+        public long? AgentId { get; set; }
 
         /// <summary>
         /// 获取或设置达人抖音号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("douyin_id")]
         [System.Text.Json.Serialization.JsonPropertyName("douyin_id")]
-        public string DouyinId { get; set; } = string.Empty;
+        public string? DouyinId { get; set; }
+
+        /// <summary>
+        /// 获取或设置机构侧达人 UID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("agency_talent_uid")]
+        [System.Text.Json.Serialization.JsonPropertyName("agency_talent_uid")]
+        public string? AgencyTalentUID { get; set; }
     }
 }

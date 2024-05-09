@@ -1,0 +1,22 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202008121419360101980821035705926A",
+    "data": {
+        "results": [
+            {
+                "agent_id": 8374834,
+                "douyin_id": "121321",
+                "bind_time": 1684339200,
+                "unbind_time": 0
+            },
+            {
+                "agent_id": 8374834,
+                "douyin_id": "121321",
+                "bind_time": 1684339200,
+                "unbind_time": 0
+            }
+        ],
+        "total_count": 2
+    }
+}

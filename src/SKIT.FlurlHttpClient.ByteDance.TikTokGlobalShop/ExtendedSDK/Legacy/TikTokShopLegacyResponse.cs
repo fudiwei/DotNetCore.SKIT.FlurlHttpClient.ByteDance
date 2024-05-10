@@ -1,9 +1,12 @@
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
+using System;
+
+namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
 {
     /// <summary>
     /// TikTok Shop API 响应的基类。
     /// </summary>
-    public abstract class TikTokShopResponse : CommonResponseBase, ICommonResponse
+    [Obsolete("此类型专为旧版 API 设计，将于 2024-12-31 下线。")]
+    public abstract class TikTokShopLegacyResponse : CommonResponseBase, ICommonResponse
     {
         /// <summary>
         /// 获取 TikTok Shop API 返回的错误码。
@@ -43,7 +46,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
     /// <summary>
     /// TikTok Shop API 响应的泛型基类。
     /// </summary>
-    public abstract class TikTokShopResponse<TData> : TikTokShopResponse
+    [Obsolete("此类型专为旧版 API 设计，将于 2024-12-31 下线。")]
+    public abstract class TikTokShopLegacyResponse<TData> : TikTokShopLegacyResponse
     {
         /// <summary>
         /// 获取或设置接口返回数据。

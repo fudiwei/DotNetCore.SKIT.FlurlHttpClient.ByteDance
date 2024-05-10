@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("success_package_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("success_package_list")]
-                public string[] SucceededPackageList { get; set; } = default!;
+                public string[] SucceededPackageIdList { get; set; } = default!;
             }
         }
     }

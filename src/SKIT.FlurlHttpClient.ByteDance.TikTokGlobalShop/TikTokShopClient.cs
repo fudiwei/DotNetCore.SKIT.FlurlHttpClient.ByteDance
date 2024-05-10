@@ -63,14 +63,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             {
                 request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
             }
-            
+
             return flurlRequest
+                .WithHeader("x-tts-access-token", request.AccessToken)
                 .SetQueryParam("app_key", Credentials.AppKey)
-                .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
-                .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("shop_cipher", request.ShopCipher)
-                .SetQueryParam("version", request.ApiVersion);
+                .SetQueryParam("timestamp", request.Timestamp);
         }
 
         /// <summary>
@@ -102,6 +100,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             where T : TikTokShopResponse, new()
         {
             if (flurlRequest is null) throw new ArgumentNullException(nameof(flurlRequest));
+
+            flurlRequest.WithHeader(HttpHeaders.ContentType, MimeTypes.Json); // NOTICE: GET 请求也要设置 Content-Type 标头
 
             bool isSimpleRequest = data is null ||
                 flurlRequest.Verb == HttpMethod.Get ||

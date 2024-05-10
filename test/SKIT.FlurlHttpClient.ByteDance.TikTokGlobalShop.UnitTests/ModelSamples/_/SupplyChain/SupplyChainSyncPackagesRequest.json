@@ -1,0 +1,34 @@
+{
+    "packages": [
+        {
+            "create_time_millis": 1694176625765,
+            "dimension": {
+                "height": 42,
+                "length": 34,
+                "unit": "METER",
+                "width": 425
+            },
+            "handover_time_millis": 1694176625765,
+            "id": "28427944530283",
+            "provider_warehouse_code": "7475973290484254255",
+            "ship_time_millis": 1694176625765,
+            "shipping_origin_city": "CityA",
+            "shipping_provider_id": "2435653524354624",
+            "shipping_provider_name": "ProviderA",
+            "skus": [
+                {
+                    "id": "4235346547",
+                    "quantity": 13
+                }
+            ],
+            "time_zone": "UTC+8",
+            "tracking_number": "WB53452356",
+            "weight": {
+                "unit": "KILOGRAM",
+                "value": 342
+            },
+            "wms_order_id": "324246554745"
+        }
+    ],
+    "warehouse_provider_id": "7342984797904049750"
+}

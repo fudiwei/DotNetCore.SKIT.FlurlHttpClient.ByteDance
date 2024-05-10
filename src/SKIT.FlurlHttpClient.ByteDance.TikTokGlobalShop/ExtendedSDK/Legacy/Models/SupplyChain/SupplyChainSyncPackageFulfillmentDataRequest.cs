@@ -116,7 +116,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                 public int? Length { get; set; }
 
                 /// <summary>
-                /// 获取或设置宽度单位。
+                /// 获取或设置宽度。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("width")]
                 [System.Text.Json.Serialization.JsonPropertyName("width")]

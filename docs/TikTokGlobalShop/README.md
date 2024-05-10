@@ -49,7 +49,8 @@ using SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models;
 /* Example: Get Order List */
 var request = new OrderSearchOrdersRequest()
 {
-    ShopId = "${SHOP_ID}"
+    AccessToken = "${ACCESS_TOKEN}",
+    ShopCipher = "${SHOP_CIPHER}",
 };
 var response = await client.ExecuteOrderSearchOrdersAsync(request);
 if (response.IsSuccessful())
@@ -59,8 +60,8 @@ if (response.IsSuccessful())
 }
 else
 {
-    Console.WriteLine("ErrorCode: " + response.ErrorCode);
-    Console.WriteLine("ErrorMessage: " + response.ErrorMessage);
+    Console.WriteLine("Code: " + response.Code);
+    Console.WriteLine("Message: " + response.Message);
 }
 ```
 
@@ -69,3 +70,5 @@ else
 ## Basic Usage
 
 -   [API Reference Manual](./Basic_ModelDefinition.md)
+
+-   [Legacy API (pre-v202309)](./Basic_LegacyAPI.md)

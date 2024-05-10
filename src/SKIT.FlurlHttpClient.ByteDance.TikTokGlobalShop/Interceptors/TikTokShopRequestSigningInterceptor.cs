@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Flurl;
@@ -8,6 +8,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
 {
+    using SKIT.FlurlHttpClient.Internal;
+
     internal class TikTokShopRequestSigningInterceptor : HttpInterceptor
     {
         private readonly string _baseUrl;
@@ -19,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
             _appSecret = appSecret;
         }
 
-        public override Task BeforeCallAsync(HttpInterceptorContext context, CancellationToken cancellationToken = default)
+        public override async Task BeforeCallAsync(HttpInterceptorContext context, CancellationToken cancellationToken = default)
         {
             if (context is null) throw new ArgumentNullException(nameof(context));
             if (context.FlurlCall.Completed) throw new TikTokShopException("Failed to sign request. This interceptor must be called before request completed.");
@@ -28,23 +30,33 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
             if (!requestUrl.StartsWith(_baseUrl, StringComparison.OrdinalIgnoreCase))
             {
                 // 非基地址的请求跳过签名（如 Auth API）
-                return Task.CompletedTask;
+                return;
             }
 
-            IList<string> ignoreQueryNames = new List<string>();
-            string signText;
+            string body = string.Empty;
+            if (context.FlurlCall.HttpRequestMessage?.Content is not null)
+            {
+                if (context.FlurlCall.HttpRequestMessage.Method != HttpMethod.Get &&
+                    context.FlurlCall.HttpRequestMessage.Content is not MultipartFormDataContent)
+                {
+                    HttpContent httpContent = context.FlurlCall.HttpRequestMessage.Content;
+                    body = await _AsyncEx.RunTaskWithCancellationTokenAsync(httpContent.ReadAsStringAsync(), cancellationToken).ConfigureAwait(false);
+                }
+            }
+
+            string signature;
 
             try
             {
-                var queryParams = new QueryParamCollection(context.FlurlCall.HttpRequestMessage.RequestUri!.Query);
+                var queryParams = new QueryParamCollection(context.FlurlCall.HttpRequestMessage?.RequestUri?.Query);
                 queryParams.Remove("access_token");
                 queryParams.Remove("sign");
 
                 string msgText = string.Format(
-                    "{0}{1}{2}",
-                    arg0: _appSecret,
-                    arg1: context.FlurlCall.HttpRequestMessage.RequestUri.AbsolutePath,
-                    arg2: string.Join(string.Empty, queryParams
+                    "{0}{1}{2}{3}{4}",
+                    _appSecret,
+                    context.FlurlCall.HttpRequestMessage?.RequestUri?.AbsolutePath,
+                    string.Join(string.Empty, queryParams
                         .ToDictionary(k => k.Name, v => v.Value.ToString())
                         .OrderBy(k => k.Key, StringComparer.Ordinal)
                         .Where(e =>
@@ -52,25 +64,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
                             if (string.IsNullOrEmpty(e.Value))
                             {
                                 // 过滤空参数，空参数不参与签名
-                                ignoreQueryNames.Add(e.Key);
+                                context.FlurlCall.Request.RemoveQueryParam(e.Key);
                                 return false;
                             }
 
                             return true;
                         })
                         .Select(e => $"{e.Key}{e.Value}")
-                    )
+                    ),
+                    body,
+                    _appSecret
                 );
-                signText = Utilities.HMACUtility.HashWithSHA256(_appSecret, msgText).Value!;
+                signature = Utilities.HMACUtility.HashWithSHA256(_appSecret, msgText).Value!;
             }
             catch (Exception ex)
             {
                 throw new TikTokShopException("Failed to sign request. Please see the inner exception for more details.", ex);
             }
 
-            context.FlurlCall.Request.SetQueryParam("sign", signText);
-            context.FlurlCall.Request.RemoveQueryParams(ignoreQueryNames);
-            return Task.CompletedTask;
+            context.FlurlCall.Request.SetQueryParam("sign", signature);
         }
     }
 }

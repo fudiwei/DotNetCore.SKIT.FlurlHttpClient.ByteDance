@@ -1,0 +1,13 @@
+{
+    "global_skus": [
+        {
+            "id": "1729592969712207013",
+            "inventory": [
+                {
+                    "global_warehouse_id": "7068517275539719942",
+                    "quantity": 999
+                }
+            ]
+        }
+    ]
+}

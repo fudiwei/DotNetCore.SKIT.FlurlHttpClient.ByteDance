@@ -1,0 +1,200 @@
+{
+    "code": 0,
+    "data": {
+        "audit_failed_reasons": [
+            {
+                "position": "product",
+                "reasons": [
+                    "violate listing rules"
+                ],
+                "suggestions": [
+                    "The product violates TikTok Shopping listing rules, please check and resubmit."
+                ]
+            }
+        ],
+        "brand": {
+            "id": "7082427311584347905",
+            "name": "brand xxx aaa"
+        },
+        "category_chains": [
+            {
+                "id": "853000",
+                "is_leaf": true,
+                "local_name": "Botol & Stoples Penyimpanan",
+                "parent_id": "851848"
+            }
+        ],
+        "certifications": [
+            {
+                "files": [
+                    {
+                        "format": "PDF",
+                        "id": "v09ea0g40000cj91373c77u3mid3g1s0",
+                        "name": "CERT_X2.PDF",
+                        "urls": [
+                            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                        ]
+                    }
+                ],
+                "id": "602362",
+                "images": [
+                    {
+                        "height": 600,
+                        "thumb_urls": [
+                            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                        ],
+                        "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                        "urls": [
+                            "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                        ],
+                        "width": 600
+                    }
+                ],
+                "title": "SNI Certificate"
+            }
+        ],
+        "create_time": 1234567890,
+        "delivery_options": [
+            {
+                "id": "1729592969712203232",
+                "is_available": true,
+                "name": "\"\""
+            }
+        ],
+        "description": "<p>Please compare above detailed size with your measurement before purchase.</p>\n<ul> \n  <li>M-Size</li>\n  <li>XL-Size</li>\n</ul> \n<img src=\"https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/181595ea7d26489284b5667488d708c1~tplv-o3syd03w52-origin-jpeg.jpeg?from=1432613627\" />\n",
+        "external_product_id": "172959296971220002",
+        "id": "1729592969712207008",
+        "is_cod_allowed": true,
+        "main_images": [
+            {
+                "height": 600,
+                "thumb_urls": [
+                    "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                ],
+                "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                "urls": [
+                    "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                ],
+                "width": 600
+            }
+        ],
+        "manufacturer": {
+            "address": "123W 106th St, New York, NY, USA, 10025",
+            "email": "samplemanufacturer101@outlook.com",
+            "name": "Sample Manufacturer Name",
+            "phone_number": "12345678"
+        },
+        "package_dimensions": {
+            "height": "10",
+            "length": "10",
+            "unit": "CENTIMETER",
+            "width": "10"
+        },
+        "package_weight": {
+            "unit": "KILOGRAM",
+            "value": "1.32"
+        },
+        "product_attributes": [
+            {
+                "id": "100392",
+                "name": "Occasion",
+                "values": [
+                    {
+                        "id": "1001533",
+                        "name": "Birthday"
+                    }
+                ]
+            }
+        ],
+        "product_types": "COMBINED_PRODUCT",
+        "size_chart": {
+            "image": {
+                "height": 600,
+                "thumb_urls": [
+                    "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                ],
+                "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                "urls": [
+                    "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                ],
+                "width": 600
+            },
+            "template": {
+                "id": "7267563252536723205"
+            }
+        },
+        "skus": [
+            {
+                "combined_skus": [
+                    {
+                        "product_id": "1729582718312380123",
+                        "sku_count": 1,
+                        "sku_id": "1729582718312380123"
+                    }
+                ],
+                "external_sku_id": "1729592969712207234",
+                "global_listing_policy": {
+                    "inventory_type": "SHARED",
+                    "price_sync": true,
+                    "replicate_source": {
+                        "product_id": "1729592969712203232",
+                        "shop_id": "7295929697122032321",
+                        "sku_id": "1729592969712203232"
+                    }
+                },
+                "id": "10001",
+                "identifier_code": {
+                    "code": "10000000000010",
+                    "type": "GTIN"
+                },
+                "inventory": [
+                    {
+                        "quantity": 999,
+                        "warehouse_id": "6966568648651605766"
+                    }
+                ],
+                "price": {
+                    "currency": "USD",
+                    "sale_price": "117.5",
+                    "tax_exclusive_price": "110",
+                    "unit_price": "1"
+                },
+                "sales_attributes": [
+                    {
+                        "id": "100000",
+                        "name": "Color",
+                        "sku_img": {
+                            "height": 100,
+                            "thumb_urls": [
+                                "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                            ],
+                            "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                            "urls": [
+                                "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                            ],
+                            "width": 100
+                        },
+                        "value_id": "100000",
+                        "value_name": "Red"
+                    }
+                ],
+                "seller_sku": "sku name",
+                "sku_unit_count": "1.00"
+            }
+        ],
+        "status": "SELLER_DEACTIVATED",
+        "title": "Short Boat Invisible Socks",
+        "update_time": 1234567899,
+        "video": {
+            "cover_url": "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036",
+            "format": "MP4",
+            "height": 480,
+            "id": "v09ea0g40000cj91373c77u3mid3g1s0",
+            "size": 1000,
+            "url": "https://v16m-default.akamaized.net/bbae7099581b26cd340beaa7821b2d8c/64de6020/video/tos/alisg/tos-alisg-v-f466fc-sg/oMne9QuzIBN3fIDN7bFCCMbBKuGigg12ghDC8k/?a=0&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=2212&bt=1106&cs=0&ds=3&ft=dl9~j-Inz7TKnfsfiyq8Z&mime_type=video_mp4&qs=13&rc=anR4Ojk6ZmYzbTMzODRmNEBpanR4Ojk6ZmYzbTMzODRmNEBsYWFwcjRva2NgLS1kLy1zYSNsYWFwcjRva2NgLS1kLy1zcw%3D%3D&l=202308171159498F7B108584E58B010932&btag=e00048000",
+            "width": 1280
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

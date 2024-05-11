@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class ProductCertification
+                    public class Certification
                     {
                         /// <summary>
                         /// 获取或设置商品认证 ID。
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_certifications")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_certifications")]
-                public Types.ProductCertification[] ProductCertificationList { get; set; } = default!;
+                public Types.Certification[] CertificationList { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置尺码表信息。

@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.OrderGetOrderDetailResponse> ExecuteOrderGetOrderDetailAsync(this TikTokShopClient client, Models.OrderGetOrderDetailRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.OrderBatchGetOrderDetailResponse> ExecuteOrderBatchGetOrderDetailAsync(this TikTokShopClient client, Models.OrderBatchGetOrderDetailRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .CreateFlurlRequest(request, HttpMethod.Get, "order", request.ApiVersion, "orders")
                 .SetQueryParam("ids", request.OrderIdList);
 
-            return await client.SendFlurlRequesAsJsontAsync<Models.OrderGetOrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequesAsJsontAsync<Models.OrderBatchGetOrderDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

@@ -1,0 +1,20 @@
+{
+    "publish_target": [
+        {
+            "region": "MY",
+            "skus": [
+                {
+                    "inventory": {
+                        "quantity": 999,
+                        "warehouse_id": "7068517275539719942"
+                    },
+                    "price": {
+                        "amount": "10.01",
+                        "currency": "MYR"
+                    },
+                    "related_global_sku_id": "1729592969712207400"
+                }
+            ]
+        }
+    ]
+}

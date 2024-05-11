@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
             {
                 public static class Types
                 {
-                    public class ProductCertification : ProductGetCategoryRulesResponse.Types.Data.Types.ProductCertification
+                    public class ProductCertification : ProductGetCategoryRulesResponse.Types.Data.Types.Certification
                     {
                         /// <summary>
                         /// 获取或设置必填的地区编码。

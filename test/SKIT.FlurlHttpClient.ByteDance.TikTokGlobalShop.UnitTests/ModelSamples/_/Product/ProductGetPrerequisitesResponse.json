@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "check_results": [
+            {
+                "check_item": "RETURN_WAREHOUSE",
+                "fail_reasons": [
+                    "Couldn't publish this product as you haven't set the return warehouse for your shop. Add the return warehouse information on TikTok Shop Seller Center first and try again."
+                ],
+                "is_failed": true
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

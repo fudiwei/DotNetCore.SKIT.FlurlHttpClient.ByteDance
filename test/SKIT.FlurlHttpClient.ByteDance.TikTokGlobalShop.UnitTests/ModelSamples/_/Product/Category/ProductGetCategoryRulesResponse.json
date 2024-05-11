@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "data": {
+        "cod": {
+            "is_supported": true
+        },
+        "epr": {
+            "is_required": false
+        },
+        "package_dimension": {
+            "is_required": true
+        },
+        "product_certifications": [
+            {
+                "id": "602362",
+                "is_required": true,
+                "name": "SNI Certificate",
+                "sample_image_url": "https://p-boei18n.byted.org/tos-boei18n-i-jvtte31kaf/80b32f2896829eeb69d4b278c4f3aa75.jpg~tplv-jvtte31kaf-origin-jpeg.jpeg"
+            }
+        ],
+        "size_chart": {
+            "is_required": true,
+            "is_supported": true
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

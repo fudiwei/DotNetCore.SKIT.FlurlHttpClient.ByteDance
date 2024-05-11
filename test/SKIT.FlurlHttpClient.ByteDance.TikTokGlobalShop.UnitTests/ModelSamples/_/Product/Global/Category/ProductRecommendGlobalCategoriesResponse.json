@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "categories": [
+            {
+                "id": "605254",
+                "is_leaf": true,
+                "level": 3,
+                "name": "Christmas Gifts"
+            }
+        ],
+        "leaf_category_id": "605254"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

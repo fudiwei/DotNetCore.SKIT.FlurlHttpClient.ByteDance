@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "categories": [
+            {
+                "id": "600002",
+                "is_leaf": false,
+                "local_name": "Home Supplies",
+                "parent_id": "600001",
+                "permission_statuses": [ "INVITE_ONLY", "NON_MAIN_CATEGORY" ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -29,6 +29,14 @@ Naming Policies:
 -   Products
     -   Get Brands: `ProductGetBrands`
     -   Create Custom Brands: `ProductCreateBrand`
+    -   Get Categories: `ProductGetCategories`
+    -   Get Category Rules: `ProductGetCategoryRules`
+    -   Get Attributes: `ProductGetCategoryAttributes`
+    -   Recommend Categories: `ProductRecommendCategories`
+    -   Get Global Categories: `ProductGetGlobalCategories`
+    -   Get Global Category Rules: `ProductGetGlobalCategoryRules`
+    -   Get Global Attributes: `ProductGetGlobalCategoryAttributes`
+    -   Recommend Global Categories: `ProductRecommendGlobalCategories`
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderGetOrderDetail`

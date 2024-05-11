@@ -26,6 +26,12 @@ Naming Policies:
 -   Seller
     -   Get Seller Permissions: `SellerGetPermissions`
     -   Get Active Shops: `SellerGetShops`
+-   Products
+    -   Get Brands: `ProductGetBrands`
+    -   Create Custom Brands: `ProductCreateBrand`
+-   Orders
+    -   Get Order List: `OrderSearchOrders`
+    -   Get Order Detail: `OrderGetOrderDetail`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

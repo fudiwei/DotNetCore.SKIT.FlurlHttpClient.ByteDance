@@ -1,0 +1,18 @@
+{
+    "code": 0,
+    "data": {
+        "brands": [
+            {
+                "authorized_status": "UNAUTHORIEZD",
+                "brand_status": "AVAILABLE",
+                "id": "7082427311584347905",
+                "is_t1_brand": true,
+                "name": "Teas"
+            }
+        ],
+        "next_page_token": "b2Zmc2V0PTAK",
+        "total_count": 10000
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

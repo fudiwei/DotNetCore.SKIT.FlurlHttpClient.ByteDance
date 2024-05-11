@@ -68,9 +68,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
             return flurlRequest
                 .SetQueryParam("app_key", Credentials.AppKey)
                 .SetQueryParam("access_token", request.AccessToken)
-                .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("shop_id", request.ShopId)
                 .SetQueryParam("shop_cipher", request.ShopCipher)
+                .SetQueryParam("timestamp", request.Timestamp)
                 .SetQueryParam("version", request.ApiVersion);
         }
 

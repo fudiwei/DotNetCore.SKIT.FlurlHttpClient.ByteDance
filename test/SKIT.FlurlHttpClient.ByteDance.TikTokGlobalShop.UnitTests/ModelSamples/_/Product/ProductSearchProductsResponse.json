@@ -1,0 +1,39 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "b2Zmc2V0PTAK",
+        "products": [
+            {
+                "create_time": 1234567890,
+                "id": "1729592969712207008",
+                "product_sync_fail_reasons": "The required qualification is missed.",
+                "sales_regions": [
+                    "US"
+                ],
+                "skus": [
+                    {
+                        "id": "1729592969712207012",
+                        "inventory": [
+                            {
+                                "quantity": 999,
+                                "warehouse_id": "7068517275539719942"
+                            }
+                        ],
+                        "price": {
+                            "currency": "USD",
+                            "sale_price": "121.11",
+                            "tax_exclusive_price": "111.01"
+                        },
+                        "seller_sku": "Color-Red-XM01"
+                    }
+                ],
+                "status": "ACTIVATE",
+                "title": "Short Boat Invisible Socks",
+                "update_time": 1234567800
+            }
+        ],
+        "total_count": 200
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

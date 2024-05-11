@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": 12052990,
+                "detail": {
+                    "extra_errors": [
+                        {
+                            "code": 12052003,
+                            "message": "The current product status can not be actiavted"
+                        }
+                    ],
+                    "product_id": "1729382588639839583"
+                },
+                "message": "Batch activate business error."
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

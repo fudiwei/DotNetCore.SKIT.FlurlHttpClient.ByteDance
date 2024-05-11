@@ -203,7 +203,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public string FullAddress { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置国家或地区编码。
+                                /// 获取或设置地区编码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("region_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("region_code")]

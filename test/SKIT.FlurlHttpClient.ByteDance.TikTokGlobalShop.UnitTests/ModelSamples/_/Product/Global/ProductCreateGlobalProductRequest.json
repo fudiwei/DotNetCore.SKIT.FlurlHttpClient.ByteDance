@@ -1,0 +1,98 @@
+{
+    "brand_id": "7082427311584347905",
+    "category_id": "600001",
+    "certifications": [
+        {
+            "files": [
+                {
+                    "format": "PDF",
+                    "id": "v09ea0g40000cj91373c77u3mid3g1s0",
+                    "name": "SNI.PDF"
+                }
+            ],
+            "id": "7182427311584347905",
+            "images": [
+                {
+                    "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                }
+            ]
+        }
+    ],
+    "description": " ",
+    "main_images": [
+        {
+            "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        }
+    ],
+    "manufacturer": {
+        "address": "123W 106th St, New York, NY, USA, 10025",
+        "email": "samplemanufacturer101@outlook.com",
+        "name": "Sample Manufacturer Name",
+        "phone_number": "+4412345678"
+    },
+    "package_dimensions": {
+        "height": "10",
+        "length": "10",
+        "unit": "CENTIMETER",
+        "width": "10"
+    },
+    "package_weight": {
+        "unit": "KILOGRAM",
+        "value": "1.31"
+    },
+    "product_attributes": [
+        {
+            "id": "100392",
+            "values": [
+                {
+                    "id": "1001533",
+                    "name": "Steel"
+                }
+            ]
+        }
+    ],
+    "size_chart": {
+        "image": {
+            "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        },
+        "template": {
+            "id": "7267563252536723205"
+        }
+    },
+    "skus": [
+        {
+            "global_quantity": 999,
+            "identifier_code": {
+                "code": "10000000000000",
+                "type": "GTIN"
+            },
+            "inventory": [
+                {
+                    "global_warehouse_id": "7068517275539719942",
+                    "quantity": 999
+                }
+            ],
+            "price": {
+                "amount": "999",
+                "currency": "USD"
+            },
+            "sales_attributes": [
+                {
+                    "id": "100089",
+                    "name": "Color",
+                    "sku_img": {
+                        "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe\n"
+                    },
+                    "value_id": "1729592969712207000\n",
+                    "value_name": "Red"
+                }
+            ],
+            "seller_sku": "XL-COLOR-RED-001",
+            "sku_unit_count": "1"
+        }
+    ],
+    "title": "Men's Fashion Sports Low Cut Cotton Breathable Ankle Short Boat Invisible Socks\n",
+    "video": {
+        "id": "v09e40f40000cfu0ovhc77ub7fl97k4w"
+    }
+}

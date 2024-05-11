@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": 12052990,
+                "detail": {
+                    "extra_errors": [
+                        {
+                            "code": 12052003,
+                            "message": "The current product status can not be actiavted",
+                            "warehouse_id": "7068517275539719942"
+                        }
+                    ],
+                    "sku_id": "1729592969712207013"
+                },
+                "message": "batch update inventory error"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -1,0 +1,57 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": 12052024,
+                "detail": {
+                    "category_id": 60002
+                },
+                "message": "Category is not final category"
+            }
+        ],
+        "listing_schemas": [
+            {
+                "category_id": 60001,
+                "fileds": [
+                    {
+                        "complex_values": [
+                            {
+                                "id": "100329",
+                                "name": "Occasion",
+                                "options": [
+                                    {
+                                        "id": "1001533",
+                                        "name": "Birthday"
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "MULTIINPUT",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ],
+                        "id": "product_attributes",
+                        "name": "product_attributes",
+                        "options": [
+                            {
+                                "id": " ",
+                                "name": " "
+                            }
+                        ],
+                        "rules": [
+                            {
+                                "type": "REQUIRED",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

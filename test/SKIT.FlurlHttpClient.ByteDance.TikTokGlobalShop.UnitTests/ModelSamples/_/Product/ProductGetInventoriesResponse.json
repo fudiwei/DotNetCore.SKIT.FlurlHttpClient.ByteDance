@@ -1,0 +1,44 @@
+{
+    "code": 0,
+    "data": {
+        "inventory": [
+            {
+                "product_id": "1729592969712207008",
+                "skus": [
+                    {
+                        "id": "1729388324987897824",
+                        "seller_sku": "Color-Red-XM01",
+                        "total_available_inventory_distribution": {
+                            "campaign_inventory": [
+                                {
+                                    "campaign_name": "Big Sale",
+                                    "quantity": 30
+                                }
+                            ],
+                            "creator_inventory": [
+                                {
+                                    "creator_name": "py001",
+                                    "quantity": 20
+                                }
+                            ],
+                            "in_shop_inventory": {
+                                "quantity": 50
+                            }
+                        },
+                        "total_available_quantity": 100,
+                        "total_committed_quantity": 10,
+                        "warehouse_inventory": [
+                            {
+                                "available_quantity": 100,
+                                "committed_quantity": 10,
+                                "warehouse_id": "7054915283043174149"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

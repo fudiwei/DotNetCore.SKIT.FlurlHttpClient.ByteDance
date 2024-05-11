@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [GET] /order/{version}/orders 接口的请求。</para>
     /// </summary>
-    public class OrderGetOrderDetailRequest : TikTokShopRequest
+    public class OrderBatchGetOrderDetailRequest : TikTokShopRequest
     {
         /// <summary>
         /// 获取或设置订单 ID 列表。

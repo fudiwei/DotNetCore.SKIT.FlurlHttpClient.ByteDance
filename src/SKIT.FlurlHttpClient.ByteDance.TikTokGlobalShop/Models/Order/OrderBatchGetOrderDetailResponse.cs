@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [GET] /order/{version}/orders 接口的响应。</para>
     /// </summary>
-    public class OrderGetOrderDetailResponse : TikTokShopResponse<OrderGetOrderDetailResponse.Types.Data>
+    public class OrderBatchGetOrderDetailResponse : TikTokShopResponse<OrderBatchGetOrderDetailResponse.Types.Data>
     {
         public static class Types
         {

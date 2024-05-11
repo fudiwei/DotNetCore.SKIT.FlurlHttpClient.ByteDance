@@ -4,7 +4,7 @@ Legacy API versions (pre-v202309) will no longer be supported or maintained from
 
 New apps should use v202309 exclusively and not legacy versions.
 
-If you are still using the legacy versions API, please follow below:
+Since version v3.1.0 in this SDK, We have isolated the legacy versions API. If you are still using them, please follow below:
 
 ```csharp
 using SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy;

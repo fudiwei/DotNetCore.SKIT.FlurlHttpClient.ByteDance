@@ -35,13 +35,34 @@ Naming Policies:
     -   Recommend Categories: `ProductRecommendCategories`
     -   Upload Product Image: `ProductUploadImage`
     -   Upload Product File: `ProductUploadFile`
+    -   Create Product: `ProductCreateProduct`
+    -   Partial Edit Product: `ProductUpdateProductPartial`
+    -   Edit Product: `ProductUpdateProduct`
+    -   Update Inventory: `ProductUpdateProductInventory`
+    -   Update Price: `ProductUpdateProductPrice`
+    -   Activate Products: `ProductActivateProducts`
+    -   Deactivate Products: `ProductDeactivateProducts`
+    -   Delete Products: `ProductDeleteProducts`
+    -   Recover Products: `ProductRecoverProducts`
+    -   Get Product: `ProductGetProductDetail`
+    -   Inventory Search: `ProductGetInventories`
     -   Get Global Categories: `ProductGetGlobalCategories`
     -   Get Global Category Rules: `ProductGetGlobalCategoryRules`
     -   Get Global Attributes: `ProductGetGlobalCategoryAttributes`
     -   Recommend Global Categories: `ProductRecommendGlobalCategories`
+    -   Create Global Product: `ProductCreateGlobalProduct`
+    -   Publish Global Product: `ProductPublishGlobalProduct`
+    -   Update Global Inventory: `ProductUpdateGlobalProductInventory`
+    -   Get Global Product: `ProductGetGlobalProductDetail`
+    -   Edit Global Product: `ProductUpdateGlobalProduct`
+    -   Delete Global Products: `ProductDeleteGlobalProducts`
+    -   Check Listing Prerequisites: `ProductGetPrerequisites`
+    -   Search Global Products: `ProductSearchGlobalProducts`
+    -   Search Products: `ProductSearchProducts`
+    -   Listing Schemas: `ProductGetListingSchemas`
 -   Orders
     -   Get Order List: `OrderSearchOrders`
-    -   Get Order Detail: `OrderGetOrderDetail`
+    -   Get Order Detail: `OrderBatchGetOrderDetail`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

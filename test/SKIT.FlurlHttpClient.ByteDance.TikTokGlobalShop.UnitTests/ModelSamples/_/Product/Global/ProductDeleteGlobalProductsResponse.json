@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": 12052003,
+                "detail": {
+                    "global_product_id": "1729715829872102020"
+                },
+                "message": "The current product status can not be actiavted"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

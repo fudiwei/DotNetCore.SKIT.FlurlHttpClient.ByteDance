@@ -1,0 +1,38 @@
+{
+    "code": 0,
+    "data": {
+        "products": [
+            {
+                "id": "1929592969712207410",
+                "region": "MY",
+                "shop_id": "7494083603082020484",
+                "skus": [
+                    {
+                        "id": "1729592969712207400",
+                        "related_global_sku_id": "1729696746528737924",
+                        "sales_attributes": [
+                            {
+                                "id": "100001",
+                                "value_id": "7272008676829824800"
+                            }
+                        ],
+                        "seller_sku": "XL-COLOR-001"
+                    }
+                ]
+            }
+        ],
+        "publish_result": [
+            {
+                "fail_reasons": [
+                    {
+                        "message": "The current product status can not be actiavted"
+                    }
+                ],
+                "region": "MY",
+                "status": "SUCCESS"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

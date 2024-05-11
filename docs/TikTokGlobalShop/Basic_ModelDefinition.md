@@ -33,6 +33,8 @@ Naming Policies:
     -   Get Category Rules: `ProductGetCategoryRules`
     -   Get Attributes: `ProductGetCategoryAttributes`
     -   Recommend Categories: `ProductRecommendCategories`
+    -   Upload Product Image: `ProductUploadImage`
+    -   Upload Product File: `ProductUploadFile`
     -   Get Global Categories: `ProductGetGlobalCategories`
     -   Get Global Category Rules: `ProductGetGlobalCategoryRules`
     -   Get Global Attributes: `ProductGetGlobalCategoryAttributes`

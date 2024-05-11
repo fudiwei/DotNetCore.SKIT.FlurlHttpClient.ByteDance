@@ -1,0 +1,10 @@
+{
+    "buyer_user_id": "7213489962827123654",
+    "create_time_ge": 1623812664,
+    "create_time_lt": 1623812664,
+    "is_buyer_request_cancel": false,
+    "order_status": "UNPAID",
+    "shipping_type": "TIKTOK",
+    "update_time_ge": 1623812664,
+    "update_time_lt": 1623812664
+}

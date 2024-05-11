@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "attributes": [
+            {
+                "id": "100392",
+                "is_customizable": true,
+                "is_multiple_selection": true,
+                "is_required": false,
+                "name": "Occasion",
+                "type": "PRODUCT_PROPERTY",
+                "values": [
+                    {
+                        "id": "1001533",
+                        "name": "Birthday"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

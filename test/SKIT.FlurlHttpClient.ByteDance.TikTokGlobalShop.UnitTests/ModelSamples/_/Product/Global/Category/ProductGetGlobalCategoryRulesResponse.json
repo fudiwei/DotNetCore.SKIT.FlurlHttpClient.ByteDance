@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "data": {
+        "product_certifications": [
+            {
+                "id": "7267563252536723205",
+                "is_required": true,
+                "name": "product_cert_name",
+                "optional_regions": [
+                    "US"
+                ],
+                "required_regions": [
+                    "GB",
+                    "MY",
+                    "PH",
+                    "SG",
+                    "TH",
+                    "VN"
+                ],
+                "sample_image_url": "https://p-boei18n.byted.org/tos-boei18n-i-jvtte31kaf/80b32f2896829eeb69d4b278c4f3aa75.jpg~tplv-jvtte31kaf-origin-jpeg.jpeg"
+            }
+        ],
+        "size_chart": {
+            "is_required": true,
+            "is_supported": true
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

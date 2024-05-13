@@ -10,6 +10,8 @@ Naming Policies:
 
 ### APIs
 
+Notes: The following catalog is consistent with the catalog structure of [TikTokShop Partner Center API Reference](https://partner.tiktokshop.com/docv2/page/6507ead7b99d5302be949ba9?external_id=6507ead7b99d5302be949ba9).
+
 <details>
 
 <summary>[View Details]</summary>
@@ -63,11 +65,27 @@ Naming Policies:
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
+-   Fulfillment
+    -   *Pending ...*
+-   Return and Refund
+    -   *Pending ...*
 -   Logistics
     -   Get Warehouse Delivery Options: `LogisticsGetWarehouseDeliveryOptions`
     -   Get Warehouse List: `LogisticsGetWarehouses`
     -   Get Shipping Providers: `LogisticsGetDeliveryOptionShippingProviders`
     -   Get Global Seller Warehouse: `LogisticsGetGlobalWarehouses`
+-   Promotion
+    -   Create Activity: `PromotionCreateActivity`
+    -   Update Activity Product: `PromotionUpdateActivityProducts`
+    -   Remove Activity Product: `PromotionDeleteActivityProducts`
+    -   Search Activities: `PromotionSearchActivities`
+    -   Get Activity: `PromotionGetActivityDetail`
+    -   Update Activity: `PromotionUpdateActivity`
+    -   Deactivate Activity: `PromotionDeactivateActivity`
+-   Finance
+    -   *Pending ...*
+-   Customer Service
+    -   *Pending ...*
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

@@ -1,0 +1,21 @@
+{
+    "activity_id": "7136104288010372865",
+    "products": [
+        {
+            "activity_price_amount": "4.5",
+            "discount": "10",
+            "id": "7135427619356477189",
+            "quantity_limit": -1,
+            "quantity_per_user": -1,
+            "skus": [
+                {
+                    "activity_price_amount": "6.5",
+                    "discount": "10",
+                    "id": "7125688837187176194",
+                    "quantity_limit": -1,
+                    "quantity_per_user": 10
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "data": {
+        "activities": [
+            {
+                "activity_type": "FIXED_PRICE",
+                "begin_time": 1661756811,
+                "create_time": 1661756811,
+                "end_time": 1661756811,
+                "id": "7136104329798256386",
+                "product_level": "PRODUCT",
+                "status": "ONGOING",
+                "title": "FlashSale 20230707",
+                "update_time": 1661756811
+            }
+        ],
+        "next_page_token": "123",
+        "total_count": 120
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

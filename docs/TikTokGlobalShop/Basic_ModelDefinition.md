@@ -89,7 +89,14 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Statements: `FinanceGetStatements`
     -   Get Payments: `FinanceGetPayments`
 -   Customer Service
-    -   *Pending ...*
+    -   Get Conversation Messages: `CustomerServiceGetConversationMessages`
+    -   Get Conversations: `CustomerServiceGetConversations`
+    -   Send Message: `CustomerServiceCreateConversationMessage`
+    -   Get Agent Settings: `CustomerServiceGetAgentSettings`
+    -   Update Agent Settings: `CustomerServiceUpdateAgentSettings`
+    -   Upload Buyer Messages Image: `CustomerServiceUploadImage`
+    -   Read Message: `CustomerServiceReadConversationMessage`
+    -   Create Conversation: `CustomerServiceCreateConversation`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

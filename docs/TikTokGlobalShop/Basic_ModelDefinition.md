@@ -63,6 +63,11 @@ Naming Policies:
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
+-   Logistics
+    -   Get Warehouse Delivery Options: `LogisticsGetWarehouseDeliveryOptions`
+    -   Get Warehouse List: `LogisticsGetWarehouses`
+    -   Get Shipping Providers: `LogisticsGetDeliveryOptionShippingProviders`
+    -   Get Global Seller Warehouse: `LogisticsGetGlobalWarehouses`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

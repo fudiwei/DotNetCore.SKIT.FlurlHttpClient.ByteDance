@@ -1,0 +1,26 @@
+{
+    "code": 0,
+    "data": {
+        "delivery_options": [
+            {
+                "description": "LSV-TTS-STD  S",
+                "dimension_limit": {
+                    "max_height": 100,
+                    "max_length": 100,
+                    "max_width": 100,
+                    "unit": "INCH"
+                },
+                "id": "6955034615128000261",
+                "name": "LSV-TTS-STD",
+                "type": "STANDARD",
+                "weight_limit": {
+                    "max_weight": 100,
+                    "min_weight": 100,
+                    "unit": "GRAM"
+                }
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

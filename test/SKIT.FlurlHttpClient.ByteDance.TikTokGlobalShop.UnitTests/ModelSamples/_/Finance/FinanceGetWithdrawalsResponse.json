@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "6AsPQsUMvH3RkchNUPPh22NROHkE0D8pmq/N5M1kHYcZmtRyv9aVrNv65W7Q6tFA+7D1ud64MPNz5OaT",
+        "total_count": 1,
+        "withdrawals": [
+            {
+                "amount": "100",
+                "create_time": 1623812664,
+                "currency": "IDR",
+                "id": "EFASDFSAFDA23432DFAFDSA",
+                "status": "PROCESSING",
+                "type": "WITHDRAW"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

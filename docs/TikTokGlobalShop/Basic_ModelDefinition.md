@@ -83,7 +83,11 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Update Activity: `PromotionUpdateActivity`
     -   Deactivate Activity: `PromotionDeactivateActivity`
 -   Finance
-    -   *Pending ...*
+    -   Get Order Statement Transactions: `FinanceGetOrderStatementTransactions`
+    -   Get Statement Transactions: `FinanceGetStatementTransactions`
+    -   Get Withdrawals: `FinanceGetWithdrawals`
+    -   Get Statements: `FinanceGetStatements`
+    -   Get Payments: `FinanceGetPayments`
 -   Customer Service
     -   *Pending ...*
 -   Supply Chain

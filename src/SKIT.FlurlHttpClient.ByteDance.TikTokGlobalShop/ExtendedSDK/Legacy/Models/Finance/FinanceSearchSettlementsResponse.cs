@@ -161,7 +161,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                                 public decimal SellerReasonFundDeductionAmount { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置运费调整金额。
+                                /// 获取或设置运费违约金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_adjustment")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_adjustment")]
@@ -169,7 +169,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                                 public decimal ShippingFeeAdjustmentAmount { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置促销调整金额。
+                                /// 获取或设置促销违约金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("promotion_adjustment")]
                                 [System.Text.Json.Serialization.JsonPropertyName("promotion_adjustment")]
@@ -177,7 +177,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                                 public decimal PromotionAdjustmentAmount { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置其他调整金额。
+                                /// 获取或设置其他违约金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("other_adjustment")]
                                 [System.Text.Json.Serialization.JsonPropertyName("other_adjustment")]
@@ -250,7 +250,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Mod
                         public string OrderId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置调整 ID。
+                        /// 获取或设置违约 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("adjustment_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("adjustment_id")]

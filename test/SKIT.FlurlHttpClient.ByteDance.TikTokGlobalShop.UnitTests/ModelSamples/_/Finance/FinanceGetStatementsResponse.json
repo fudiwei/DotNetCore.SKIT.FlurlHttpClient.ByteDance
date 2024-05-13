@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "6AsPQsUMvH3RkchNUPPh22NROHkE0D8pmq/N5M1kHYcZmtRyv9aVrNv65W7Q6tFA+7D1ud64MPNz5OaT",
+        "statements": [
+            {
+                "adjustment_amount": "-70",
+                "currency": "GBP",
+                "fee_amount": "-30",
+                "id": "7238804564097517339",
+                "payment_id": "3459275187040258849",
+                "payment_status": "PAID",
+                "revenue_amount": "200",
+                "settlement_amount": "100",
+                "statement_time": 1685548800
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

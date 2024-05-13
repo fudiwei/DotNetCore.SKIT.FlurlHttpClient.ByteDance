@@ -173,7 +173,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("sku_unit_count")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_unit_count")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal? UnitCount { get; set; }
                     }
 

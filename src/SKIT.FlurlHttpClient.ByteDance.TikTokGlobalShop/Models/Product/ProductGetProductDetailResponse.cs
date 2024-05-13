@@ -411,7 +411,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("sku_unit_count")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_unit_count")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal? UnitCount { get; set; }
 
                         /// <summary>
@@ -430,7 +430,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("length")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("length")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal Length { get; set; }
 
                         /// <summary>
@@ -439,7 +439,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("width")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("width")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal Width { get; set; }
 
                         /// <summary>
@@ -448,7 +448,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("height")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("height")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal Height { get; set; }
 
                         /// <summary>
@@ -467,7 +467,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("value")]
                         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("value")]
-                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
                         public decimal Value { get; set; }
 
                         /// <summary>

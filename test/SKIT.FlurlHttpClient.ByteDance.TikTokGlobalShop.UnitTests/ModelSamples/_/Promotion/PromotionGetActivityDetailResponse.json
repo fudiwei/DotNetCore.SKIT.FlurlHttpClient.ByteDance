@@ -1,0 +1,40 @@
+{
+    "code": 0,
+    "data": {
+        "activity_id": "7136104329798256386",
+        "activity_type": "FIXED_PRICE",
+        "begin_time": 1661756811,
+        "create_time": 1661750811,
+        "end_time": 1661856811,
+        "product_level": "PRODUCT",
+        "products": [
+            {
+                "activity_price": {
+                    "amount": "70500",
+                    "currency": "IDR"
+                },
+                "discount": "10",
+                "id": "7136011254174631686",
+                "quantity_limit": -1,
+                "quantity_per_user": -1,
+                "skus": [
+                    {
+                        "activity_price": {
+                            "amount": "70500",
+                            "currency": "IDR"
+                        },
+                        "discount": "10",
+                        "id": "7136382541418366725",
+                        "quantity_limit": -1,
+                        "quantity_per_user": -1
+                    }
+                ]
+            }
+        ],
+        "status": "ONGOING",
+        "title": "FlashSale 20230707",
+        "update_time": 1661750811
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

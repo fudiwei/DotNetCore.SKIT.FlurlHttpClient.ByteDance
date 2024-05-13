@@ -1,0 +1,34 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "6AsPQsUMvH3RkchNUPPh22NROHkE0D8pmq/N5M1kHYcZmtRyv9aVrNv65W7Q6tFA+7D1ud64MPNz5OaT",
+        "payments": [
+            {
+                "amount": {
+                    "currency": "GBP",
+                    "value": "100"
+                },
+                "bank_account": "***********1234",
+                "create_time": 1636105796,
+                "exchange_rate": "1.000000",
+                "id": "3458767051733897992",
+                "paid_time": 1685548800,
+                "payment_amount_before_exchange": {
+                    "currency": "GBP",
+                    "value": "100"
+                },
+                "reserve_amount": {
+                    "currency": "GBP",
+                    "value": "-30"
+                },
+                "settlement_amount": {
+                    "currency": "GBP",
+                    "value": "130"
+                },
+                "status": "PAID"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

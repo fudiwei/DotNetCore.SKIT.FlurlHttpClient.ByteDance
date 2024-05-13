@@ -1,0 +1,29 @@
+{
+    "code": 0,
+    "data": {
+        "warehouses": [
+            {
+                "address": {
+                    "city": "GuanZhou",
+                    "contact_person": "Lee",
+                    "distict": "HuaDu",
+                    "full_address": "South Sea 11 floor",
+                    "phone_number": "188****2234",
+                    "postal_code": "510000",
+                    "region": "China",
+                    "region_code": "CN",
+                    "state": "GuangDong",
+                    "town": "town"
+                },
+                "effect_status": "ENABLED",
+                "id": "7000714532876273410",
+                "is_default": true,
+                "name": "Guangzhou",
+                "sub_type": "DOMESTIC_WAREHOUSE",
+                "type": "SALES_WAREHOUSE"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

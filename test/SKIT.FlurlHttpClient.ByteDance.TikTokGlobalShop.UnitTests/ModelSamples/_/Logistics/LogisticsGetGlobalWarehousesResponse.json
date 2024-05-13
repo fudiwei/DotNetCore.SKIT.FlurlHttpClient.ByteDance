@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "data": {
+        "global_warehouses": [
+            {
+                "id": "7000714532876273411",
+                "name": "Guangzhou",
+                "ownership": "SELLER"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -432,7 +432,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "data");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.UseCase)), "use_case");
-
             return await client.SendFlurlRequestAsync<Models.ProductUploadImageResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
@@ -463,7 +462,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.FileName, fileBytes: request.FileBytes, fileContentType: request.FileContentType, formDataName: "data");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.FileName)), "name");
-
             return await client.SendFlurlRequestAsync<Models.ProductUploadFileResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion

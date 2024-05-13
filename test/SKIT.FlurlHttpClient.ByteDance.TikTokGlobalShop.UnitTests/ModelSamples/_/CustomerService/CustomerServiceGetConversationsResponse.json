@@ -1,0 +1,39 @@
+{
+    "code": 0,
+    "data": {
+        "conversations": [
+            {
+                "can_send_message": true,
+                "create_time": 1691411573,
+                "id": "7494560109732334261",
+                "latest_message": {
+                    "content": "{\"content\": \"simple text message\"}",
+                    "create_time": 1691411573,
+                    "id": "7494560109732334263",
+                    "is_visible": true,
+                    "sender": {
+                        "avatar": "https://p16-oec-ttp.tiktokcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/566c497faaaf4491a84d3ce55d9cb095~tplv-omjb5zjo8w-origin-image.image?",
+                        "im_user_id": "7494560109732334261",
+                        "nickname": "Albert",
+                        "role": "BUYER"
+                    },
+                    "type": "TEXT"
+                },
+                "participant_count": 3,
+                "participants": [
+                    {
+                        "avatar": "https://p16-oec-ttp.tiktokcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/566c497faaaf4491a84d3ce55d9cb095~tplv-omjb5zjo8w-origin-image.image?",
+                        "im_user_id": "7494560109732334261",
+                        "nickname": "Albert",
+                        "role": "BUYER",
+                        "user_id": "7494560109732334262"
+                    }
+                ],
+                "unread_count": 0
+            }
+        ],
+        "next_page_token": "1612353423"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

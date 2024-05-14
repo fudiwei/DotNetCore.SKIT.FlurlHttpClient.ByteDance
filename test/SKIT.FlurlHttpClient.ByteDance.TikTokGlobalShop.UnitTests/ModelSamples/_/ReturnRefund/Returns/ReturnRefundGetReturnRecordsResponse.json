@@ -1,0 +1,33 @@
+{
+    "code": 0,
+    "data": {
+        "records": [
+            {
+                "create_time": 1690532213,
+                "description": "Customer submitted a return request",
+                "event": "ORDER_RETURN",
+                "images": [
+                    {
+                        "height": 200,
+                        "url": "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/004797ebfd8c4d3da2df1cc4bfdb0614~tplv-o3syd03w52-origin-jpeg.jpeg?from=4246405447",
+                        "width": 200
+                    }
+                ],
+                "note": "Reach an agreement with the buyer",
+                "reason_text": "Wrong product was sent",
+                "role": "Buyer",
+                "videos": [
+                    {
+                        "cover": "https://p16-oec-va.ibyteimg.com/musically-maliva-obj/998d0381960bda1ef272f4a7724cf5ed~tplv-o3syd03w52-origin-jpeg.jpeg?from=4246405489",
+                        "duration_millis": 3000,
+                        "height": 200,
+                        "url": "https://v16m-default.akamaized.net/1e26046c3df91cd008d2ababba9445e2/65005d33/video/tos/maliva/tos-maliva-v-d8ca36-us/oQVCbIQemDpQxI9lHsg9IXQAb7mwgBabababab",
+                        "width": 200
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

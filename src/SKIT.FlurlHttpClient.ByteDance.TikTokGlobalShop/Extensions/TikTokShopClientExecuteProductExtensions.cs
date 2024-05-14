@@ -489,6 +489,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         }
 
         /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/products/listing_check 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/650a0ee8f1fd3102b91c6493 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductCreateProductListingCheckResponse> ExecuteProductCreateProductListingCheckAsync(this TikTokShopClient client, Models.ProductCreateProductListingCheckRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "products", "listing_check");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductCreateProductListingCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// <para>异步调用 [POST] /product/{version}/products/search 接口。</para>
         /// <para>
         /// REF: <br/>

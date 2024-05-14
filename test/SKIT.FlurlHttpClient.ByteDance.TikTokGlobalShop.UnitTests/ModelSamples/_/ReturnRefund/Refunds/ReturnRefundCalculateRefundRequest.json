@@ -1,0 +1,16 @@
+{
+    "handover_method": "DROP_OFF",
+    "order_id": "576469648086175911",
+    "order_line_item_ids": [
+        "576469648086306986"
+    ],
+    "reason_name": "ecom_order_delivered_refund_reason_missing_product_seller",
+    "request_type": "REFUND",
+    "shipment_type": "PLATFORM",
+    "skus": [
+        {
+            "quantity": 1,
+            "sku_id": "1729386416015578024"
+        }
+    ]
+}

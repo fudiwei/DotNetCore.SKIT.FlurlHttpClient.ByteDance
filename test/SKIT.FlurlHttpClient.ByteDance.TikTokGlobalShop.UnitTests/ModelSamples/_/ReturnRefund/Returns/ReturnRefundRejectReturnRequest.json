@@ -1,0 +1,13 @@
+{
+    "comment": "I have reached an agreement with the buyer",
+    "decision": "REJECT_RECEIVED_PACKAGE",
+    "images": [
+        {
+            "height": 200,
+            "image_id": "tos-maliva-i-o3syd03w52-us/57a1c8908fe74572861ea5e50887d8d1",
+            "mime_type": "image/png",
+            "width": 200
+        }
+    ],
+    "reject_reason": "seller_reject_apply_package_has_not_exceeded_estimated_delivery_time"
+}

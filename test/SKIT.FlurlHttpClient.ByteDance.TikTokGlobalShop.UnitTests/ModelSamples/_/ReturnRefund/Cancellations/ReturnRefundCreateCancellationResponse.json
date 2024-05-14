@@ -1,0 +1,9 @@
+{
+    "code": 0,
+    "data": {
+        "cancel_id": "4035319218955782461",
+        "cancel_status": "CANCELLATION_REQUEST_SUCCESS"
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

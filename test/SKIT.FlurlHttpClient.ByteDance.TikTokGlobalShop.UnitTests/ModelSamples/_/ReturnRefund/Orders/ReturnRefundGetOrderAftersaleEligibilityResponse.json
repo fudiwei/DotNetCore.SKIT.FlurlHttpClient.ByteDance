@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "sku_eligibility": [
+            {
+                "line_item_eligibility": [
+                    {
+                        "eligible": true,
+                        "ineligible_code": 25001001,
+                        "ineligible_reason": "invalid order status",
+                        "order_line_items_ids": [
+                            "576469648086306000"
+                        ],
+                        "request_type": "REFUND"
+                    }
+                ],
+                "sku_id": "1729385144994206632"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

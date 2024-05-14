@@ -1,0 +1,85 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "aDU2dHIzMlFhME5CUzJKUDhDdVJhTDM1WmJkeFVTVW9LTkRaSnNaZCtuWjJXVU5CSDhlaA==",
+        "return_orders": [
+            {
+                "arbitration_status": "IN_PROGRESS",
+                "can_buyer_keep_item": true,
+                "create_time": 1690451136,
+                "discount_amount": [
+                    {
+                        "currency": "USD",
+                        "product_platform_discount": "0.1",
+                        "product_seller_discount": "0.1",
+                        "shipping_fee_platform_discount": "0.1",
+                        "shipping_fee_seller_discount": "0.1"
+                    }
+                ],
+                "handover_method": "DROP_OFF",
+                "next_return_id": "4035310341095393463",
+                "order_id": "577686530908261117",
+                "pre_return_id": "4035310341095393452",
+                "refund_amount": {
+                    "currency": "USD",
+                    "refund_shipping_fee": "0.2",
+                    "refund_subtotal": "1",
+                    "refund_tax": "0.03",
+                    "refund_total": "1.23",
+                    "retail_delivery_fee": "0.1"
+                },
+                "return_id": "4035318504086604100",
+                "return_line_items": [
+                    {
+                        "order_line_item_id": "576473917261451851",
+                        "product_image": {
+                            "height": 200,
+                            "url": "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/004797ebfd8c4d3da2df1cc4bfdb0614~tplv-o3syd03w52-origin-jpeg.jpeg?from=4246405447",
+                            "width": 200
+                        },
+                        "product_name": "(SP) [PROMO BUNDLING] NICE Tissue Facial 180s x 5 pcs",
+                        "refund_amount": {
+                            "currency": "USD",
+                            "refund_shipping_fee": "0.2",
+                            "refund_subtotal": "1",
+                            "refund_tax": "0.03",
+                            "refund_total": "1.23",
+                            "retail_delivery_fee": "0.1"
+                        },
+                        "return_line_item_id": "4035227657962164811",
+                        "seller_sku": "PUTIH 1 TALI",
+                        "sku_id": "2729382476852921560",
+                        "sku_name": "1#, Standard"
+                    }
+                ],
+                "return_provider_id": "TH27014E9R5Q4G",
+                "return_provider_name": "J&T Express",
+                "return_reason": "ecom_order_to_ship_canceled_reason_created_by_mistakes",
+                "return_reason_text": "Order created by mistake",
+                "return_status": "RETURN_OR_REFUND_REQUEST_PENDING",
+                "return_tracking_number": "213456789098765433456",
+                "return_type": "REFUND",
+                "role": "BUYER",
+                "seller_next_action_response": [
+                    {
+                        "action": "SELLER_RESPOND_REFUND",
+                        "deadline": 1690554680
+                    }
+                ],
+                "shipment_type": "PLATFORM",
+                "shipping_fee_amount": [
+                    {
+                        "buyer_paid_return_shipping_fee": "0.1",
+                        "currency": "USD",
+                        "platform_paid_return_shipping_fee": "0.1",
+                        "seller_paid_return_shipping_fee": "0.1"
+                    }
+                ],
+                "update_time": 1690453136
+            }
+        ],
+        "total_count": 100
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

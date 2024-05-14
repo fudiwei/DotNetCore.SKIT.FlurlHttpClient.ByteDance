@@ -1,0 +1,13 @@
+{
+    "arbitration_status": [ "IN_PROGRESS" ],
+    "buyer_user_ids": [ "7493996903972308733" ],
+    "create_time_ge": 1690340825,
+    "create_time_lt": 1690340825,
+    "locale": "en-US",
+    "order_ids": [ "577686530908261117" ],
+    "return_ids": [ "4035318504086604100" ],
+    "return_status": [ "RETURN_OR_REFUND_REQUEST_PENDING" ],
+    "return_types": [ "REFUND" ],
+    "update_time_ge": 1690340825,
+    "update_time_lt": 1690340825
+}

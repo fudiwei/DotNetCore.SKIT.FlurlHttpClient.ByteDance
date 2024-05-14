@@ -1,0 +1,109 @@
+{
+    "brand_id": "7082427311584347905",
+    "category_id": "600001",
+    "certifications": [
+        {
+            "files": [
+                {
+                    "format": "PDF",
+                    "id": "v09ea0g40000cj91373c77u3mid3g1s0",
+                    "name": "SNI.PDF"
+                }
+            ],
+            "id": "7182427311584347905",
+            "images": [
+                {
+                    "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe\n"
+                }
+            ]
+        }
+    ],
+    "delivery_option_ids": [ "1729592969712203232" ],
+    "description": "<p>Please compare above detailed size with your measurement before purchase.</p>\n<ul> \n  <li>M-Size</li>\n  <li>XL-Size</li>\n</ul> \n<img src=\"https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/181595ea7d26489284b5667488d708c1~tplv-o3syd03w52-origin-jpeg.jpeg?from=1432613627\" />\n",
+    "external_product_id": "172959296971220002",
+    "is_cod_allowed": false,
+    "main_images": [
+        {
+            "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        }
+    ],
+    "manufacturer": {
+        "address": "123W 106th St, New York, NY, USA, 10025",
+        "email": "samplemanufacturer101@outlook.com",
+        "name": "Sample Manufacturer Name",
+        "phone_number": "123-1234567"
+    },
+    "package_dimensions": {
+        "height": "10",
+        "length": "10",
+        "unit": "CENTIMETER",
+        "width": "10"
+    },
+    "package_weight": {
+        "unit": "KILOGRAM",
+        "value": "1.32"
+    },
+    "primary_combined_product_id": "1729582718312380123",
+    "product_attributes": [
+        {
+            "id": "100392",
+            "values": [
+                {
+                    "id": "1001533",
+                    "name": "Birthday"
+                }
+            ]
+        }
+    ],
+    "size_chart": {
+        "image": {
+            "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+        },
+        "template": {
+            "id": "7267563252536723205"
+        }
+    },
+    "skus": [
+        {
+            "combined_skus": [
+                {
+                    "product_id": "1729582718312380123",
+                    "sku_count": 11,
+                    "sku_id": "1729582718312380123"
+                }
+            ],
+            "external_sku_id": "1729592969712207012",
+            "identifier_code": {
+                "code": "10000000000000",
+                "type": "GTIN"
+            },
+            "inventory": [
+                {
+                    "quantity": 999,
+                    "warehouse_id": "7068517275539719942"
+                }
+            ],
+            "price": {
+                "amount": "1.23",
+                "currency": "USD"
+            },
+            "sales_attributes": [
+                {
+                    "id": "100089",
+                    "name": "Specification",
+                    "sku_img": {
+                        "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
+                    },
+                    "value_id": "1729592969712207000",
+                    "value_name": "XL"
+                }
+            ],
+            "seller_sku": "Color-Red-XM01",
+            "sku_unit_count": "100.00"
+        }
+    ],
+    "title": "Men's Fashion Sports Low Cut Cotton Breathable Ankle Short Boat Invisible Socks",
+    "video": {
+        "id": "v09e40f40000cfu0ovhc77ub7fl97k4w"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "data": {
+        "order_refund_amount": {
+            "currency": "USD",
+            "refund_shipping_fee": "0.2",
+            "refund_subtotal": "1",
+            "refund_tax": "0.03",
+            "refund_total": "1.23",
+            "retail_delivery_fee": "0.1"
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

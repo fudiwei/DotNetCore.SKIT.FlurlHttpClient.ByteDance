@@ -1,0 +1,18 @@
+{
+    "currency": "USD",
+    "handover_method": "DROP_OFF",
+    "order_id": "576473917261320779",
+    "order_line_item_ids": [
+        "455764739172614518516"
+    ],
+    "refund_total": "10.5",
+    "return_reason": "ecom_order_delivered_refund_reason_missing_product_seller",
+    "return_type": "REFUND",
+    "shipment_type": "PLATFORM",
+    "skus": [
+        {
+            "quantity": 1,
+            "sku_id": "1729386416015578024"
+        }
+    ]
+}

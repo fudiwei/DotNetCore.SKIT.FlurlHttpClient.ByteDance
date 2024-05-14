@@ -1,0 +1,59 @@
+{
+    "code": 0,
+    "data": {
+        "cancellations": [
+            {
+                "cancel_id": "4035318504086604100",
+                "cancel_line_items": [
+                    {
+                        "cancel_line_item_id": "4035227913481196964",
+                        "order_line_item_id": "576468844534141348",
+                        "product_image": {
+                            "height": 200,
+                            "url": "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/004797ebfd8c4d3da2df1cc4bfdb0614~tplv-o3syd03w52-origin-jpeg.jpeg?from=4246405447",
+                            "width": 200
+                        },
+                        "product_name": "bundle No Heel Flat Heel Summer Winter Round Toe",
+                        "refund_amount": {
+                            "currency": "USD",
+                            "refund_shipping_fee": "5",
+                            "refund_subtotal": "1",
+                            "refund_tax": "3",
+                            "refund_total": "1.23",
+                            "retail_delivery_fee": "0.1"
+                        },
+                        "seller_sku": "YYAPC23078TRT30",
+                        "sku_id": "2729382476852921560",
+                        "sku_name": "1#, Standard"
+                    }
+                ],
+                "cancel_reason": "ecom_order_to_ship_canceled_reason_created_by_mistakes",
+                "cancel_reason_text": "Order created by mistake",
+                "cancel_status": "CANCELLATION_REQUEST_PENDING",
+                "cancel_type": "REQUEST_CANCEL_REFUND",
+                "create_time": 1690451136,
+                "order_id": "577087614418520388",
+                "refund_amount": {
+                    "currency": "USD",
+                    "refund_shipping_fee": "0.2",
+                    "refund_subtotal": "1",
+                    "refund_tax": "0.03",
+                    "refund_total": "1.23",
+                    "retail_delivery_fee": "0.1"
+                },
+                "role": "BUYER",
+                "seller_next_action_response": [
+                    {
+                        "action": "SELLER_RESPOND_CANCEL",
+                        "deadline": 1690554680
+                    }
+                ],
+                "update_time": 1690451136
+            }
+        ],
+        "next_page_token": "aDU2dHIzMlFhME5CUzJKUDhDdVJhTDM1WmJkeFVTVW9LTkRaSnNaZCtuWjJXVU5CSDhlaA==",
+        "total_count": 100
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

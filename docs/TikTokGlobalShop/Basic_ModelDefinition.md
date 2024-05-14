@@ -10,7 +10,7 @@ Naming Policies:
 
 ### APIs
 
-Notes: The following catalog is consistent with the catalog structure of [TikTokShop Partner Center API Reference](https://partner.tiktokshop.com/docv2/page/6507ead7b99d5302be949ba9?external_id=6507ead7b99d5302be949ba9).
+Notes: The following catalog is consistent with the catalog structure of [TikTokShop Partner Center API Reference](https://partner.tiktokshop.com/docv2/page/6632a7434585a502e1cb5591).
 
 <details>
 
@@ -58,6 +58,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Global Product: `ProductGetGlobalProductDetail`
     -   Edit Global Product: `ProductUpdateGlobalProduct`
     -   Delete Global Products: `ProductDeleteGlobalProducts`
+    -   Check Product Listing: `ProductCreateProductListingCheck`
     -   Check Listing Prerequisites: `ProductGetPrerequisites`
     -   Search Global Products: `ProductSearchGlobalProducts`
     -   Search Products: `ProductSearchProducts`
@@ -66,9 +67,20 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
 -   Fulfillment
-    -   *Pending ...*
+    -   _Pending ..._
 -   Return and Refund
-    -   *Pending ...*
+    -   Search Cancellations: `ReturnRefundSearchCancellations`
+    -   Approve Cancellation: `ReturnRefundApproveCancellation`
+    -   Reject Cancellation: `ReturnRefundRejectCancellation`
+    -   Search Returns: `ReturnRefundSearchReturns`
+    -   Approve Return: `ReturnRefundApproveReturn`
+    -   Reject Return: `ReturnRefundRejectReturn`
+    -   Get Aftersale Eligibility: `ReturnRefundGetOrderAftersaleEligibility`
+    -   Get Reject Reasons: `ReturnRefundGetRejectReasons`
+    -   Calculate Refund: `ReturnRefundCalculateRefund`
+    -   Get Return Records: `ReturnRefundGetReturnRecords`
+    -   Cancel Order: `ReturnRefundCreateCancellation`
+    -   Create Return: `ReturnRefundCreateReturn`
 -   Logistics
     -   Get Warehouse Delivery Options: `LogisticsGetWarehouseDeliveryOptions`
     -   Get Warehouse List: `LogisticsGetWarehouses`

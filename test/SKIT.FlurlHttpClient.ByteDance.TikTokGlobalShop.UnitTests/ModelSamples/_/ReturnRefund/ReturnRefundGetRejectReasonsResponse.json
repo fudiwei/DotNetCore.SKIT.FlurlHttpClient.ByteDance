@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "reasons": [
+            {
+                "name": "seller_reject_apply_you_have_reached_an_agreement_with_the_buyer",
+                "text": "You have reached an agreement with the buyer"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

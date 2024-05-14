@@ -33,10 +33,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models",
                     SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models",
                     SdkExecutingExtensionDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop",
+                    SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events",
                     IgnoreExecutingExtensionTypes = static type => type.Namespace!.Contains(".ExtendedSDK."),
                     ThrowOnNotFoundRequestModelTypes = true,
                     ThrowOnNotFoundResponseModelTypes = true,
-                    ThrowOnNotFoundExecutingExtensionTypes = true
+                    ThrowOnNotFoundExecutingExtensionTypes = true,
+                    ThrowOnNotFoundWebhookEventTypes = true
                 };
                 new TypeDeclarationAnalyzer(options).AssertNoIssues();
             }));
@@ -51,16 +53,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     SdkAssembly = Assembly.GetAssembly(typeof(TikTokShopClient))!,
                     SdkRequestModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models",
                     SdkResponseModelDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models",
+                    SdkWebhookEventDeclarationNamespace = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events",
                     ProjectSourceRootDirectory = Path.Combine(projdir, "./src/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop/"),
                     ProjectTestRootDirectory = Path.Combine(projdir, "./test/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests/"),
                     ProjectTestRequestModelSerializationSampleSubDirectory = "ModelSamples/_/",
                     ProjectTestResponseModelSerializationSampleSubDirectory = "ModelSamples/_/",
-                    ProjectTestWebhookEventSerializationSampleSubDirectory = "EventSamples/_/",
+                    ProjectTestWebhookEventSerializationSampleSubDirectory = "EventSamples/_/", 
                     ThrowOnNotFoundRequestModelClassCodeFiles = true,
                     ThrowOnNotFoundResponseModelClassCodeFiles = true,
                     ThrowOnNotFoundExecutingExtensionClassCodeFiles = true,
+                    ThrowOnNotFoundWebhookEventClassCodeFiles = true,
                     ThrowOnNotFoundRequestModelSerializationSampleFiles = true,
-                    ThrowOnNotFoundResponseModelSerializationSampleFiles = true
+                    ThrowOnNotFoundResponseModelSerializationSampleFiles = true,
+                    ThrowOnNotFoundWebhookEventSerializationSampleFiles = true
                 };
                 new SourceFileAnalyzer(options).AssertNoIssues();
             }));
@@ -100,6 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     ProjectTestRootDirectory = Path.Combine(projdir, "./test/SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests/"),
                     ProjectTestRequestModelSerializationSampleSubDirectory = "ModelSamples/Legacy/",
                     ProjectTestResponseModelSerializationSampleSubDirectory = "ModelSamples/Legacy/",
+                    ProjectTestWebhookEventSerializationSampleSubDirectory = "EventSamples/Legacy/",
                     ThrowOnNotFoundRequestModelClassCodeFiles = true,
                     ThrowOnNotFoundResponseModelClassCodeFiles = true,
                     ThrowOnNotFoundExecutingExtensionClassCodeFiles = true,

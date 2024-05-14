@@ -1,0 +1,11 @@
+{
+    "type": 5,
+    "shop_id": "7494049642642441621",
+    "timestamp": 1644412885,
+    "data": {
+        "product_id": 576486316948490000,
+        "status": "PRODUCT_FIRST_PASS_REVIEW",
+        "suspended_reason": "",
+        "update_time": 1644412885
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": 4,
+    "shop_id": "7494049642642441621",
+    "timestamp": 1644412885,
+    "data": {
+        "sc_type": "COMBINE",
+        "role_type": "ROLE_USER",
+        "package_list": [
+            {
+                "package_id": "123456",
+                "order_id_list": [
+                    "152523",
+                    "532123"
+                ]
+            }
+        ],
+        "update_time": 1644412885
+    }
+}

@@ -444,7 +444,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("cancel_user")]
                                 [System.Text.Json.Serialization.JsonPropertyName("cancel_user")]
-                                public string? CancelUser { get; set; }
+                                public string? CancelRole { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置取消原因。
@@ -787,7 +787,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cancellation_initiator")]
                         [System.Text.Json.Serialization.JsonPropertyName("cancellation_initiator")]
-                        public string? CancelUser { get; set; }
+                        public string? CancelRole { get; set; }
 
                         /// <summary>
                         /// 获取或设置取消订单原因。

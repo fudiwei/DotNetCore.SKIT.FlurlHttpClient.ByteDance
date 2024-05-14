@@ -1,0 +1,9 @@
+{
+    "type": 7,
+    "shop_id": "7494049642642441621",
+    "timestamp": 1644412885,
+    "data": {
+        "message": "Authorization of shop_id {xxx} is expirating in {x} days. Please direct the merchant to re-authorize.",
+        "expiration_time": "1627587506"
+    }
+}

@@ -220,7 +220,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("role")]
                         [System.Text.Json.Serialization.JsonPropertyName("role")]
-                        public string CancelUser { get; set; } = default!;
+                        public string CancelRole { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置创建时间戳。

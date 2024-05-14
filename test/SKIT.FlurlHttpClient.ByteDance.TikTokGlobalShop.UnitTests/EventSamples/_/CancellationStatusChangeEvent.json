@@ -1,0 +1,12 @@
+{
+    "type": 11,
+    "shop_id": "7494049642642441621",
+    "timestamp": 1644412885,
+    "data": {
+        "order_id": "576486316948490001",
+        "cancellations_role": "BUYER",
+        "cancel_status": "CANCELLATION_REQUEST_PENDING",
+        "cancel_id": "4035318504086604100",
+        "create_time": 1627587600
+    }
+}

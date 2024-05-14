@@ -1,0 +1,16 @@
+{
+    "type": 15,
+    "tts_notification_id": "7327112393057371910",
+    "shop_id": "7494049642642441621",
+    "timestamp": 1644412885,
+    "data": {
+        "product_id": "123456789",
+        "changed_fields": [
+            "title",
+            "description",
+            "main_images",
+            "product_attributes"
+        ],
+        "update_time": 1627587600
+    }
+}

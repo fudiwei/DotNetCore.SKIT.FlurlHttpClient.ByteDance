@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": 10007014,
+                "detail": {
+                    "package_id": "123123123123131"
+                },
+                "message": "package in freeze status"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -1,0 +1,16 @@
+{
+    "packages": [
+        {
+            "handover_method": "PICKUP",
+            "id": "12321312312431",
+            "pickup_slot": {
+                "end_time": 1623812664,
+                "start_time": 1623812664
+            },
+            "self_shipment": {
+                "shipping_provider_id": "6617675021119438849",
+                "tracking_number": "JX12345"
+            }
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "dimension": {
+        "height": "0.5",
+        "length": "0.3",
+        "unit": "INCH",
+        "width": "0.2"
+    },
+    "order_line_item_ids": [
+        "32132124331234"
+    ],
+    "weight": {
+        "unit": "GRAM",
+        "value": "0.4"
+    }
+}

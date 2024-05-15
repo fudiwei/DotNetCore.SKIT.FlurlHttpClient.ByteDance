@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "packages": [
+            {
+                "id": "223362377512830222",
+                "splittable_group_id": "123"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

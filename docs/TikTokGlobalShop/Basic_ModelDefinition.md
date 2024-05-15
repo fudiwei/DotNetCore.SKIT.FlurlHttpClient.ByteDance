@@ -67,7 +67,26 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
 -   Fulfillment
-    -   _Pending ..._
+    -   Search Package: `FulfillmentSearchPackages`
+    -   Get Package Detail: `FulfillmentGetPackageDetail`
+    -   Get Package Shipping Document: `FulfillmentGetPackageShippingDocuments`
+    -   Get Package Handover Time Slots: `FulfillmentGetPackageHandoverTimeSlots`
+    -   Get Tracking: `FulfillmentGetOrderTracking`
+    -   Update Package Shipping Info: `FulfillmentUpdatePackageShippingInfo`
+    -   Update Package Delivery Status: `FulfillmentBatchUpdatePackagesDeliveryStatus`
+    -   Get Order Split Attributes: `FulfillmentGetOrderSplitAttributes`
+    -   Split Orders: `FulfillmentSplitOrder`
+    -   Search Combinable Packages: `FulfillmentSearchCombinablePackages`
+    -   Combine Package: `FulfillmentCombinePackage`
+    -   Uncombine Packages: `FulfillmentUncombinePackage`
+    -   Mark Package As Shipped: `FulfillmentUpdateOrderPackages`
+    -   Ship Package: `FulfillmentShipPackage`
+    -   Batch Ship Packages: `FulfillmentBatchShipPackages`
+    -   Fulfillment Upload Delivery Image: `FulfillmentUploadImage`
+    -   Fulfillment Upload Delivery File: `FulfillmentUploadFile`
+    -   Get Eligible Shipping Service: `FulfillmentSearchOrderShippingServices`
+    -   Create Packages: `FulfillmentCreatePackage`
+    -   Update Shipping Info: `FulfillmentUpdateOrderShippingInfo`
 -   Return and Refund
     -   Search Cancellations: `ReturnRefundSearchCancellations`
     -   Approve Cancellation: `ReturnRefundApproveCancellation`

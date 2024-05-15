@@ -86,11 +86,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 
         /// <summary>
         /// 获取或设置分页每页数量。
-        /// <para>默认值：10</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public int PageSize { get; set; } = 10;
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// 获取或设置分页令牌。

@@ -1,0 +1,75 @@
+{
+    "code": 0,
+    "data": {
+        "create_time": 1635338186,
+        "delivery_option_id": "7091146663229654785",
+        "delivery_option_name": "Shipped from seller\n",
+        "dimension": {
+            "height": "0.03",
+            "length": "1.2",
+            "unit": "CM",
+            "width": "0.2"
+        },
+        "handover_method": "PICKUP",
+        "has_multi_skus": true,
+        "note_tag": "BUYER_UNNOTED",
+        "order_line_item_ids": [
+            "1729382476852921560"
+        ],
+        "orders": [
+            {
+                "id": "54335448533296",
+                "skus": [
+                    {
+                        "id": "2729382476852921560",
+                        "image_url": "https://p19-oec-sg.ibyteimg.com/tos-maliva-i-o3syd03w52-us/12345670c",
+                        "name": "white,128g",
+                        "quantity": 5
+                    }
+                ]
+            }
+        ],
+        "package_id": "5433567853345",
+        "package_status": "PROCESSING",
+        "pickup_slot": {
+            "end_time": 1635338186,
+            "start_time": 1635338186
+        },
+        "recipient_address": {
+            "address_detail": "Unit one building 8\n",
+            "address_line1": "TikTok 5800 bristol Pkwy\n",
+            "address_line2": "Suite 100\n",
+            "address_line3": "\"\"",
+            "address_line4": "\"\"",
+            "full_address": "1*** Coleman Ave San Jose, CA 95110\n",
+            "name": "Zay",
+            "phone_number": "(+1)213-***-1234\n",
+            "postal_code": "95110\n",
+            "region_code": "US"
+        },
+        "sender_address": {
+            "address_detail": "Unit one building 8",
+            "address_line1": "TikTok 5800 bristol Pkwy",
+            "address_line2": "Suite 100",
+            "address_line3": "\"\"",
+            "address_line4": "\"\"",
+            "full_address": "1*** Coleman Ave San Jose, CA 95110",
+            "name": "Zay",
+            "phone_number": "(+1)213-***-1234\n",
+            "postal_code": "95110",
+            "region_code": "US"
+        },
+        "shipping_provider_id": "6617675021119438849",
+        "shipping_provider_name": "TT Virtual express",
+        "shipping_type": "TIKTOK",
+        "split_and_combine_tag": "SPLIT",
+        "tracking_number": "6617675021119438849",
+        "update_time": 1635338186,
+        "weight": {
+            "unit": "GRAM",
+            "value": "1.2"
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

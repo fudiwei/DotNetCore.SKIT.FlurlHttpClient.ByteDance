@@ -1,0 +1,11 @@
+{
+    "packages": [
+        {
+            "delivery_type": "DELIVERY_SUCCESS",
+            "fail_delivery_reason": "INVALID_ADDRESS",
+            "file_type": "IMG",
+            "file_url": "https://tiktok.shopcenter.cn/file/CWvBsBZ9mhbMiHtmbZecKshon6f?table=tblTW",
+            "id": "11529598723402"
+        }
+    ]
+}

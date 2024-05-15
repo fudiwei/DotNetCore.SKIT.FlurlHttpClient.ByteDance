@@ -1,0 +1,18 @@
+{
+    "code": 0,
+    "data": {
+        "can_drop_off": true,
+        "can_pickup": true,
+        "can_van_collection": true,
+        "drop_off_point_url": "true",
+        "pickup_slots": [
+            {
+                "avaliable": true,
+                "end_time": 1623812664,
+                "start_time": 1623812664
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

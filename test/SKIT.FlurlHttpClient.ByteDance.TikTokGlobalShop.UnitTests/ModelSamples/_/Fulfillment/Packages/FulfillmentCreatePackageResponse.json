@@ -1,0 +1,33 @@
+{
+    "code": 0,
+    "data": {
+        "create_time": 1623812664,
+        "dimension": {
+            "height": "0.03",
+            "length": "1.2",
+            "unit": "CM",
+            "width": "0.2"
+        },
+        "order_id": "2882335594258860015",
+        "order_line_item_ids": [
+            "32132124331234"
+        ],
+        "package_id": "2882335594258860015",
+        "shipping_service_info": {
+            "currency": "dollar",
+            "earliest_delivery_days": 3,
+            "id": "288233559123860015",
+            "latest_delivery_days": 5,
+            "name": "UPS-first class",
+            "price": "10",
+            "shipping_provider_id": "2882322591238",
+            "shipping_provider_name": "UPS"
+        },
+        "weight": {
+            "unit": "GRAM",
+            "value": "1.2"
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

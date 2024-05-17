@@ -1,12 +1,8 @@
 using System;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using Flurl.Http;
+using System.Text;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 {
-    using System.Text;
     using SKIT.FlurlHttpClient.Primitives;
 
     public static class DouyinMicroAppWebcastClientResponseVerificationExtensions

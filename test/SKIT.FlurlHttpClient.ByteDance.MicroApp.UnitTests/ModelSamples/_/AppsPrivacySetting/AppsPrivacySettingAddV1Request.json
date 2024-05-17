@@ -1,0 +1,17 @@
+{
+    "is_privacy_config": true,
+    "privacy_item_list": [
+        {
+            "id": 1,
+            "apply_desc": "对应的用户昵称和头像"
+        },
+        {
+            "id": 2,
+            "apply_desc": "xxxxxxxxx"
+        }
+    ],
+    "contact_way": 1,
+    "email": "123456@qq.com",
+    "phone": "",
+    "land_line": ""
+}

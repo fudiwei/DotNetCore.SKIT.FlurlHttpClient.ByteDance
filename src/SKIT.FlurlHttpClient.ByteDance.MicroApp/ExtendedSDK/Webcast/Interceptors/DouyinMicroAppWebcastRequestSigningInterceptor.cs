@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -51,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Interceptors
 
             try
             {
-                sign = Utilities.RSAUtility.Sign(_pkPem, signData, Utilities.RSAUtility.DIGEST_ALGORITHM_SHA256).Value!;
+                sign = Utilities.RSAUtility.SignWithSHA256(_pkPem, signData).Value!;
             }
             catch (Exception ex)
             {

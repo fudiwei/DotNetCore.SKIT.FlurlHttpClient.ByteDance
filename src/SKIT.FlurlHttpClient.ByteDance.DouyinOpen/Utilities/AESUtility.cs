@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
         /// 基于 CBC 模式解密数据。
         /// </summary>
         /// <param name="keyBytes">AES 密钥字节数组。</param>
-        /// <param name="ivBytes">加密使用的初始化向量字节数组。</param>
+        /// <param name="ivBytes">初始化向量字节数组。</param>
         /// <param name="cipherBytes">待解密数据字节数组。</param>
         /// <returns>解密后的数据字节数组。</returns>
         public static byte[] DecryptWithCBC(byte[] keyBytes, byte[] ivBytes, byte[] cipherBytes)

@@ -35,11 +35,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
                 stringBuilder.Append(Encoding.UTF8.GetString(response.GetRawBytes()));
                 stringBuilder.Append("\n");
 
-                bool valid = Utilities.RSAUtility.Verify(
+                bool valid = Utilities.RSAUtility.VerifyWithSHA256(
                     publicKeyPem: client.Credentials.PlatformPublicKey,
                     messageData: stringBuilder.ToString(),
-                    encodingSignature: new EncodedString(response.ByteSignature, EncodingKinds.Base64),
-                    Utilities.RSAUtility.DIGEST_ALGORITHM_SHA256
+                    encodingSignature: new EncodedString(response.ByteSignature, EncodingKinds.Base64)
                 );
                 if (valid)
                     result = ErroredResult.Ok();

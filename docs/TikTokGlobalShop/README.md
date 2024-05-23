@@ -37,7 +37,7 @@ var options = new TikTokShopClientOptions()
     AppKey = "${APP_KEY}",
     AppSecret = "${APP_SECRET}}"
 };
-var client = new TikTokShopClientBuilder.Create(options).Build();
+var client = TikTokShopClientBuilder.Create(options).Build();
 ```
 
 ### Requests & Responses:

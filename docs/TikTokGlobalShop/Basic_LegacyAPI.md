@@ -14,7 +14,7 @@ var options = new TikTokShopLegacyClientOptions()
     AppKey = "${APP_KEY}",
     AppSecret = "${APP_SECRET}}"
 };
-var client = new TikTokShopLegacyClientBuilder.Create(options).Build();
+var client = TikTokShopLegacyClientBuilder.Create(options).Build();
 ```
 
 ---

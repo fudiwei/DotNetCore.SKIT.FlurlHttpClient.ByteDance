@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/item/list_comment/ 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/v1/item/list_comment/ 接口的请求。</para>
     /// </summary>
     public class AppsItemListCommentV1Request : DouyinMicroAppRequest
     {

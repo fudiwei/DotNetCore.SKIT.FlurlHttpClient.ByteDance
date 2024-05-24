@@ -3,7 +3,7 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/data_analysis/query_behavior_data 接口的响应。</para>
+    /// <para>表示 [GET] /api/apps/v1/data_analysis/query_behavior_data 接口的响应。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2024-02-02 下线。")]
     public class AppsDataAnalysisQueryBehaviorDataV1Response : DouyinMicroAppResponse

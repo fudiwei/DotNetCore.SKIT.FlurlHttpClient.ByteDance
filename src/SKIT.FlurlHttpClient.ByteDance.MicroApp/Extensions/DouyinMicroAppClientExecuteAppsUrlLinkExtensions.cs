@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsUrlLinkExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/generate_schema/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/url/generate_schema/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/generate-schema-v2 ]]>
@@ -28,14 +28,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "generate_schema/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "url", "generate_schema/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlGenerateSchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/query_schema/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/url/query_schema/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-v2 ]]>
@@ -54,14 +54,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "url", "query_schema/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/url/query_schema_quota/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/url/query_schema_quota/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/schema/query-schema-quota-v2 ]]>
@@ -80,7 +80,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "url", "query_schema_quota/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "url", "query_schema_quota/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsUrlQuerySchemaQuotaV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

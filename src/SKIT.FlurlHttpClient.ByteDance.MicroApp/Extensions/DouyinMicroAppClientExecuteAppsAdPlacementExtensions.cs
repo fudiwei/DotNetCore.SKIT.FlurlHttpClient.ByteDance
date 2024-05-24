@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsAdPlacementExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/ad_placement/query/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/ad_placement/query/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-placement-list ]]>
@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "ad_placement", "query/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "ad_placement", "query/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsAdPlacementQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/ad_placement/add/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/ad_placement/add/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/add-ad-placement ]]>
@@ -48,14 +48,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "ad_placement", "add/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "ad_placement", "add/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsAdPlacementAddV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/ad_placement/update/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/ad_placement/update/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/update-ad-placement-status ]]>
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "ad_placement", "update/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "ad_placement", "update/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsAdPlacementUpdateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -1,7 +1,7 @@
 ﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/share_config 接口的请求。</para>
+    /// <para>表示 [POST] /api/apps/share_config 接口的请求。</para>
     /// </summary>
     public class AppsShareConfigRequest : DouyinMicroAppRequest
     {

@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsQrcodeExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/qrcode/create/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/qrcode/create/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/url-and-qrcode/qrcode/create-qr-code-v2 ]]>
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "qrcode", "create/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "qrcode", "create/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsQrcodeCreateV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

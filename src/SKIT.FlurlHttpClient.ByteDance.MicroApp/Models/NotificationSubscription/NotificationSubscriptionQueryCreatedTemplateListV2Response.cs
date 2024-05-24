@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /notification/v2/subscription/query_created_tpl_list/ 接口的响应。</para>
+    /// <para>表示 [GET] /api/notification/v2/subscription/query_created_tpl_list/ 接口的响应。</para>
     /// </summary>
     public class NotificationSubscriptionQueryCreatedTemplateListV2Response : DouyinMicroAppResponse
     {

@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsLiveBookingExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v2/live_booking/video_create/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v2/live_booking/video_create/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/live-booking/video-create ]]>
@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "live_booking", "video_create/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v2", "live_booking", "video_create/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v2/live_booking/video_cancel/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v2/live_booking/video_cancel/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/live-booking/video-cancel ]]>
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "live_booking", "video_cancel/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v2", "live_booking", "video_cancel/")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("open_id", request.OpenId);
 

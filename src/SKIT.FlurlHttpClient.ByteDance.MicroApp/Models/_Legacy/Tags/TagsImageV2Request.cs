@@ -3,7 +3,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /v2/tags/image 接口的请求。</para>
+    /// <para>表示 [POST] /api/v2/tags/image 接口的请求。</para>
     /// </summary>
     public class TagsImageV2Request : DouyinMicroAppRequest
     {

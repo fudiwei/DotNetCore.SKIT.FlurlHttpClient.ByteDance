@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsVideoExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/video/query/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/video/query/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-video-data/video-data ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "video", "query/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "video", "query/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/video_bc/query/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/video_bc/query/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-video-data/video-data ]]>
@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "video_bc", "query/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "video_bc", "query/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/convert_video_id/video_id_to_open_item_id/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/convert_video_id/video_id_to_open_item_id/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-id-to-open-item-id ]]>
@@ -74,14 +74,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "convert_video_id", "video_id_to_open_item_id/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "convert_video_id", "video_id_to_open_item_id/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsConvertVideoIdToOpenItemIdV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/convert_video_id/open_item_id_to_encrypt_id/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/convert_video_id/open_item_id_to_encrypt_id/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/open-item-id-to-encrypt-id ]]>
@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "convert_video_id", "open_item_id_to_encrypt_id/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "convert_video_id", "open_item_id_to_encrypt_id/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsConvertOpenItemIdToEncryptIdV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

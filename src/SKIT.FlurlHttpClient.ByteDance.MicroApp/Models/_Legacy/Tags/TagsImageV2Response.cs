@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /v2/tags/image 接口的响应。</para>
+    /// <para>表示 [POST] /api/v2/tags/image 接口的响应。</para>
     /// </summary>
     public class TagsImageV2Response : DouyinMicroAppResponse
     {

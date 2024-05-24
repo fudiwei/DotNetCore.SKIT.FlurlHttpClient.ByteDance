@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v2/live_booking/video_create/ 接口的请求。</para>
+    /// <para>表示 [POST] /api/apps/v2/live_booking/video_create/ 接口的请求。</para>
     /// </summary>
     public class AppsLiveBookingVideoCreateV2Request : DouyinMicroAppRequest
     {

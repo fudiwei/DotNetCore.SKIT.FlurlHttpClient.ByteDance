@@ -3,7 +3,7 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/chat/customer_service_url 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/chat/customer_service_url 接口的请求。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2023-08-29 下线。")]
     public class AppsChatCustomerServiceUrlRequest : DouyinMicroAppRequest

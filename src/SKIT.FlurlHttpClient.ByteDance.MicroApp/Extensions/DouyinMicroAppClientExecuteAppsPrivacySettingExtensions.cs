@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsPrivacySettingExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/privacy_setting/add/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/privacy_setting/add/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/privacy-policy/update-privacy-policy ]]>
@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "privacy_setting", "add/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "privacy_setting", "add/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsPrivacySettingAddV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/privacy_setting/query/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/privacy_setting/query/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/privacy-policy/query-privacy-policy-status ]]>
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "privacy_setting", "query/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "privacy_setting", "query/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsPrivacySettingQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

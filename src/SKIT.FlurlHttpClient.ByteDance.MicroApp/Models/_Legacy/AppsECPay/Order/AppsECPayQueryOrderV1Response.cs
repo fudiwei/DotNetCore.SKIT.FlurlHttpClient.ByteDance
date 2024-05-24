@@ -3,7 +3,7 @@ using System;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/ecpay/v1/query_order 接口的响应。</para>
+    /// <para>表示 [POST] /api/apps/ecpay/v1/query_order 接口的响应。</para>
     /// </summary>
     public class AppsECPayQueryOrderV1Response : DouyinMicroAppResponse
     {

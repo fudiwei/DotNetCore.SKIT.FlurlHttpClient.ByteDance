@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsItemExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/get_base/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/get_base/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get-basic-data ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_base/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "get_base/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .WithHeader("access-token", request.AccessToken);
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/get_base/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/get_base/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get_base_bc ]]>
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_base/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "get_base/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .WithHeader("access-token", request.AccessToken);
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/get_like/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get-like-data ]]>
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_like/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/get_like/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get_like_bc ]]>
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_like/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -112,7 +112,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/get_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get-comment-data ]]>
@@ -128,7 +128,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -138,7 +138,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/get_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get_comment_bc ]]>
@@ -154,7 +154,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -164,7 +164,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/get_play/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/get_play/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get-play-data ]]>
@@ -180,7 +180,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_play/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "get_play/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -190,7 +190,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/get_play/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/get_play/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get_play_bc ]]>
@@ -206,7 +206,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_play/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "get_play/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -216,7 +216,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/get_share/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get-share-data ]]>
@@ -232,7 +232,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "get_share/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -242,7 +242,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/get_share/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/user-recent-video-data/get_share_bc ]]>
@@ -258,7 +258,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "get_share/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("date_type", request.DataType)
@@ -269,7 +269,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Comment
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/item/top_comment/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/item/top_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/item-comment-top ]]>
@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "top_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "item", "top_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -293,7 +293,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/item_bc/top_comment/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/item_bc/top_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/item-comment-top ]]>
@@ -309,7 +309,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "top_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "item_bc", "top_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -317,7 +317,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/item/reply_comment/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/item/reply_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/video-comment-reply ]]>
@@ -333,7 +333,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item", "reply_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "item", "reply_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -341,7 +341,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/item_bc/reply_comment/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/item_bc/reply_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/video-comment-reply ]]>
@@ -357,7 +357,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "item_bc", "reply_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "item_bc", "reply_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .WithHeader("access-token", request.AccessToken);
 
@@ -365,7 +365,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/list_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/list_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/comment-list ]]>
@@ -381,7 +381,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "list_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -393,7 +393,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/list_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/list_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/comment-list ]]>
@@ -409,7 +409,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "list_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("cursor", request.PageCursor)
@@ -421,7 +421,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item/list_comment_reply/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item/list_comment_reply/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/comment-reply-list ]]>
@@ -437,7 +437,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item", "list_comment_reply/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item", "list_comment_reply/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId)
@@ -450,7 +450,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/item_bc/list_comment_reply/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/item_bc/list_comment_reply/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/video-id-convert/video-review-data/comment-reply-list ]]>
@@ -466,7 +466,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "item_bc", "list_comment_reply/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "item_bc", "list_comment_reply/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("item_id", request.ItemId)
                 .SetQueryParam("comment_id", request.CommentId)

@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /match/v2/taskbox/query_app_task_id/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/match/v2/taskbox/query_app_task_id/ 接口的响应。</para>
     /// </summary>
     public class MatchTaskBoxQueryAppTaskIdV2Response : DouyinMicroAppResponse
     {

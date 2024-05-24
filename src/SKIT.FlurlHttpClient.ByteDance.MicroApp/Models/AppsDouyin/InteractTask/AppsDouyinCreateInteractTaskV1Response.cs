@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v1/douyin/create_interact_task/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/apps/v1/douyin/create_interact_task/ 接口的响应。</para>
     /// </summary>
     public class AppsDouyinCreateInteractTaskV1Response : DouyinMicroAppResponse
     {

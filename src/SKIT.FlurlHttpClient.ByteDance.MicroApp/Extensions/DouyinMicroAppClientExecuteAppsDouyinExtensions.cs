@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     {
         #region InteractTask
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/douyin/create_interact_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/douyin/create_interact_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/interact-task/create ]]>
@@ -29,14 +29,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "douyin", "create_interact_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "douyin", "create_interact_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsDouyinCreateInteractTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/douyin/query_user_interact_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/douyin/query_user_interact_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/interact-task/query ]]>
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "douyin", "query_user_interact_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "douyin", "query_user_interact_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsDouyinQueryUserInteractTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Task
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/douyin/create_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/douyin/create_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/douyin_task/create_task ]]>
@@ -83,14 +83,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "douyin", "create_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "douyin", "create_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsDouyinCreateTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/douyin/query_user_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/douyin/query_user_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/share/douyin_task/query_task ]]>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "douyin", "query_user_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "douyin", "query_user_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsDouyinQueryUserTaskV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

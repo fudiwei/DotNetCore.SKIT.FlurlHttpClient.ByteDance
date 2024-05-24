@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsUserExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_item/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_item/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-video-status ]]>
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_item/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_item/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_item/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_item/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-video-status ]]>
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_item/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_item/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_fans/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_fans/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-fans-count ]]>
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_fans/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_fans/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -85,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_fans/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_fans/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-fans-count ]]>
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_fans/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_fans/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -110,7 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_like/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-like-number ]]>
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_like/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_like/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-like-number ]]>
@@ -151,7 +151,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_like/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_like/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -160,7 +160,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-comment-count ]]>
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -185,7 +185,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_comment/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-comment-count ]]>
@@ -201,7 +201,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_comment/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_comment/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -210,7 +210,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_share/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-share-count ]]>
@@ -226,7 +226,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_share/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -235,7 +235,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_share/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-share-count ]]>
@@ -251,7 +251,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_share/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_share/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -260,7 +260,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user/get_profile/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user/get_profile/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-home-pv ]]>
@@ -276,7 +276,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user", "get_profile/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user", "get_profile/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);
@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/user_bc/get_profile/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_profile/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-home-pv ]]>
@@ -301,7 +301,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "user_bc", "get_profile/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "user_bc", "get_profile/")
                 .SetQueryParam("open_id", request.OpenId)
                 .SetQueryParam("date_type", request.DateType)
                 .WithHeader("access-token", request.AccessToken);

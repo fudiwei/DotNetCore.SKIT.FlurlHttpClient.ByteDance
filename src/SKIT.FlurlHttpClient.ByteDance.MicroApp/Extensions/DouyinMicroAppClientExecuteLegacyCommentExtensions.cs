@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteLegacyCommentExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /comment/open/get 接口。</para>
+        /// <para>异步调用 [POST] /api/comment/open/get 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/evolution/obtain-evolution ]]>
@@ -29,8 +29,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "comment", "open", "get")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("comment", "open", "get"));
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "comment", "open", "get")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "comment", "open", "get"));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.CommentOpenGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

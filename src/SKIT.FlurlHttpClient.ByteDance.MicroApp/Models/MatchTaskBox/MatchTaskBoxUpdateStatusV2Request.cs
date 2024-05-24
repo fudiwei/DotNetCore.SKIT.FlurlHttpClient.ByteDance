@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /match/v2/taskbox/update_status/ 接口的请求。</para>
+    /// <para>表示 [POST] /api/match/v2/taskbox/update_status/ 接口的请求。</para>
     /// </summary>
     public class MatchTaskBoxUpdateStatusV2Request : DouyinMicroAppRequest
     {

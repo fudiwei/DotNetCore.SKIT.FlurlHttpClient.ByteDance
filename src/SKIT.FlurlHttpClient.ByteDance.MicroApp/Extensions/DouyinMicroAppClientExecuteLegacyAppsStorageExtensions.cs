@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/set_user_storage 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/set_user_storage 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/set-user-storage ]]> <br/>
@@ -54,8 +54,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.Signature = GenerateRequestSignature(client, request, request.SignMethod, request.SessionKey!);
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "set_user_storage")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "set_user_storage"))
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "set_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "set_user_storage"))
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("signature", request.Signature)
@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /apps/remove_user_storage 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/remove_user_storage 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/remove-user-storage ]]> <br/>
@@ -85,8 +85,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.Signature = GenerateRequestSignature(client, request, request.SignMethod, request.SessionKey!);
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "remove_user_storage")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("apps", "remove_user_storage"))
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "remove_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "remove_user_storage"))
                 .SetQueryParam("access_token", request.AccessToken)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("signature", request.Signature)

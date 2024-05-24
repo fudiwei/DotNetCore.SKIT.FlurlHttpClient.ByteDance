@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteLegacyTagsExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /v2/tags/text/antidirt 接口。</para>
+        /// <para>异步调用 [POST] /api/v2/tags/text/antidirt 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/content-security/content-security-detect ]]> <br/>
@@ -27,15 +27,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v2", "tags", "text", "antidirt")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v2", "tags", "text", "antidirt"))
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "v2", "tags", "text", "antidirt")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "v2", "tags", "text", "antidirt"))
                 .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.TagsTextAntiDirtV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /v2/tags/image 接口。</para>
+        /// <para>异步调用 [POST] /api/v2/tags/image 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/open-capacity/content-security/picture-detect ]]>
@@ -51,8 +51,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "v2", "tags", "image")
-                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("v2", "tags", "image"))
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "v2", "tags", "image")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "v2", "tags", "image"))
                 .WithHeader("X-Token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.TagsImageV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

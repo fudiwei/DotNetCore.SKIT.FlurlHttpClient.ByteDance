@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/capacity/get_aweme_relation_bind_qrcode/ 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/v1/capacity/get_aweme_relation_bind_qrcode/ 接口的请求。</para>
     /// </summary>
     public class AppsCapacityGetAwemeRelationBindQrcodeV1Request : DouyinMicroAppRequest
     {

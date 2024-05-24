@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v2/capacity/query_simple_qr_bind_list/ 接口的响应。</para>
+    /// <para>表示 [GET] /api/apps/v2/capacity/query_simple_qr_bind_list/ 接口的响应。</para>
     /// </summary>
     public class AppsCapacityQuerySimpleQrcodeBindListV2Response : DouyinMicroAppResponse
     {

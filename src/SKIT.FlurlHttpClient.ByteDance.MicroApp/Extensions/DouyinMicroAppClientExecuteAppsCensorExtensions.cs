@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsCensorExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/censor/image 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/censor/image 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/content-security/picture-detect-v3 ]]>
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "censor", "image")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "censor", "image")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCensorImageV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

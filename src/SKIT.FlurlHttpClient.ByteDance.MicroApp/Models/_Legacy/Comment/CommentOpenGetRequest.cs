@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /comment/open/get 接口的请求。</para>
+    /// <para>表示 [POST] /api/comment/open/get 接口的请求。</para>
     /// </summary>
     public class CommentOpenGetRequest : DouyinMicroAppRequest
     {

@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsPlayletBusinessExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /apps/v1/playlet_business/upload/ 接口。</para>
+        /// <para>异步调用 [POST] /api/apps/v1/playlet_business/upload/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/playletindustry/upload-playlet-business-rights ]]>
@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "playlet_business", "upload/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "playlet_business", "upload/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsPlayletBusinessUploadV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

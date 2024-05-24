@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v2/task/create_video/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/apps/v2/task/create_video/ 接口的响应。</para>
     /// </summary>
     public class AppsTaskCreateVideoV2Response : DouyinMicroAppResponse
     {

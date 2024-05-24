@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/convert_video_id/video_id_to_open_item_id 接口的响应。</para>
+    /// <para>表示 [POST] /api/apps/convert_video_id/video_id_to_open_item_id 接口的响应。</para>
     /// </summary>
     public class AppsConvertVideoIdToOpenItemIdResponse : DouyinMicroAppResponse
     {

@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /notification/v2/subscription/delete_app_tpl/ 接口的请求。</para>
+    /// <para>表示 [POST] /api/notification/v2/subscription/delete_app_tpl/ 接口的请求。</para>
     /// </summary>
     public class NotificationSubscriptionDeleteAppTemplateV2Request : DouyinMicroAppRequest
     {

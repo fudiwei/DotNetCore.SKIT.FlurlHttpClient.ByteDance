@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/taskbox/update_orient_talents/ 接口的请求。</para>
+    /// <para>表示 [POST] /api/apps/taskbox/update_orient_talents/ 接口的请求。</para>
     /// </summary>
     public class AppsTaskBoxUpdateOrientTalentsRequest : AppsTaskBoxRequestBase
     {

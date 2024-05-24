@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteAppsCategoryExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /apps/v1/category/query_app_categories/ 接口。</para>
+        /// <para>异步调用 [GET] /api/apps/v1/category/query_app_categories/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/category/query-app-categories ]]>
@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "apps", "v1", "category", "query_app_categories/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "category", "query_app_categories/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCategoryQueryAppCategoriesV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

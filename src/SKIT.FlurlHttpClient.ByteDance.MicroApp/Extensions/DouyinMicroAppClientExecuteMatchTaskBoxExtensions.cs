@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteMatchTaskBoxExtensions
     {
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/add_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/add_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/add_task_v2 ]]>
@@ -28,14 +28,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "add_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxAddTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/add_room_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/add_room_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/room/add_room_task_v2 ]]>
@@ -51,14 +51,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "add_room_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "add_room_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxAddRoomTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/update_task/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/update_task/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/upate_task_v2 ]]>
@@ -77,14 +77,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_task/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "update_task/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxUpdateTaskV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/update_status/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/update_status/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/update_task_status ]]>
@@ -100,14 +100,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "update_status/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "update_status/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxUpdateStatusV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/query_app_task_id/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/query_app_task_id/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/query_app_task_id_v2 ]]>
@@ -123,14 +123,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_app_task_id/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "query_app_task_id/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryAppTaskIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/query_task_info/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/query_task_info/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/query_task_info_v2 ]]>
@@ -146,14 +146,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_task_info/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "query_task_info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryTaskInfoV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/query_bill_link/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/query_bill_link/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/QueryBillLink ]]>
@@ -169,14 +169,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_bill_link/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "query_bill_link/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryBillLinkV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /match/v2/taskbox/query_video_sum_data/ 接口。</para>
+        /// <para>异步调用 [POST] /api/match/v2/taskbox/query_video_sum_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/promote/taskbox/DeveloperQueryVideoSum ]]>
@@ -192,7 +192,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "match", "v2", "taskbox", "query_video_sum_data/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "match", "v2", "taskbox", "query_video_sum_data/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.MatchTaskBoxQueryVideoSummaryDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

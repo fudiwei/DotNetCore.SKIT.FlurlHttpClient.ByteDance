@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /apps/v2/capacity/add_simple_qr_bind/ 接口的请求。</para>
+    /// <para>表示 [POST] /api/apps/v2/capacity/add_simple_qr_bind/ 接口的请求。</para>
     /// </summary>
     public class AppsCapacityAddSimpleQrcodeBindV2Request : DouyinMicroAppRequest
     {

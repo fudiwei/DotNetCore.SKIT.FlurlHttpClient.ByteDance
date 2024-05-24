@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/capacity/query_subscribe_notification_tpl_list 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/v1/capacity/query_subscribe_notification_tpl_list 接口的请求。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2024-01-30 下线。")]
     public class AppsCapacityQuerySubscribeNotificationTemplateListV1Request : DouyinMicroAppRequest

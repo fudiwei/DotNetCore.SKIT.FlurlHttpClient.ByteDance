@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/user/get_like/ 接口的响应。</para>
+    /// <para>表示 [GET] /api/apps/v1/user/get_like/ 接口的响应。</para>
     /// </summary>
     public class AppsUserGetLikeV1Response : DouyinMicroAppResponse
     {

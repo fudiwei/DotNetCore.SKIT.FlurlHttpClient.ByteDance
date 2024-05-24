@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/customer_service/url 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/customer_service/url 接口的请求。</para>
     /// </summary>
     public class AppsCustomerServiceUrlRequest : DouyinMicroAppRequest
     {

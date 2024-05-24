@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteNotificationSubscriptionExtensions
     {
         /// <summary>
-        /// <para>异步调用 [GET] /notification/v2/subscription/query_tpl_list/ 接口。</para>
+        /// <para>异步调用 [GET] /api/notification/v2/subscription/query_tpl_list/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/query_tpl_list_v2 ]]>
@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_tpl_list/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_tpl_list/")
                 .SetQueryParam("classification", request.Classification)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /notification/v2/subscription/create_tpl/ 接口。</para>
+        /// <para>异步调用 [POST] /api/notification/v2/subscription/create_tpl/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/create_tpl_v2 ]]>
@@ -60,14 +60,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "create_tpl/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "notification", "v2", "subscription", "create_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionCreateTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /notification/v2/subscription/query_created_tpl_list/ 接口。</para>
+        /// <para>异步调用 [GET] /api/notification/v2/subscription/query_created_tpl_list/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/query_created_tpl_list_v2 ]]>
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_created_tpl_list/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_created_tpl_list/")
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
                 .WithHeader("access-token", request.AccessToken);
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /notification/v2/subscription/add_app_tpl/ 接口。</para>
+        /// <para>异步调用 [POST] /api/notification/v2/subscription/add_app_tpl/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/add_app_tpl_v2 ]]>
@@ -111,14 +111,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "add_app_tpl/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "notification", "v2", "subscription", "add_app_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionAddAppTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /notification/v2/subscription/query_app_tpl/ 接口。</para>
+        /// <para>异步调用 [GET] /api/notification/v2/subscription/query_app_tpl/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/query_app_tpl_v2 ]]>
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "notification", "v2", "subscription", "query_app_tpl/")
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_app_tpl/")
                 .SetQueryParam("classification", request.Classification)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize)
@@ -147,7 +147,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /notification/v2/subscription/delete_app_tpl/ 接口。</para>
+        /// <para>异步调用 [POST] /api/notification/v2/subscription/delete_app_tpl/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/delete_app_tpl_v2 ]]>
@@ -163,14 +163,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "delete_app_tpl/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "notification", "v2", "subscription", "delete_app_tpl/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionDeleteAppTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /notification/v2/subscription/notify_user/ 接口。</para>
+        /// <para>异步调用 [POST] /api/notification/v2/subscription/notify_user/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/subscribe-notification/notify_user_v2 ]]>
@@ -186,7 +186,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "notification", "v2", "subscription", "notify_user/")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "notification", "v2", "subscription", "notify_user/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionNotifyUserV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

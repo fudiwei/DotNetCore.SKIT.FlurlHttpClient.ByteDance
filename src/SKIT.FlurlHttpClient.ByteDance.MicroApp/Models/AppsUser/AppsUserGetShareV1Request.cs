@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /apps/v1/user/get_share/ 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/v1/user/get_share/ 接口的请求。</para>
     /// </summary>
     public class AppsUserGetShareV1Request : DouyinMicroAppRequest
     {

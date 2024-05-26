@@ -1,0 +1,8 @@
+{
+    "op_type": 1,
+    "single_add_limit": 1000,
+    "single_deduct_limit": 500,
+    "daily_add_count": 100,
+    "daily_deduct_count": 10,
+    "app_id": "tt5daf2b12cxxxxxx"
+}

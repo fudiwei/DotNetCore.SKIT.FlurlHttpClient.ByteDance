@@ -1,8 +1,0 @@
-{
-    "err_no": 0,
-    "err_msg": "success",
-    "data": {
-        "qrcode_url": "https://xxxx",
-        "qrcode_parse_content": "https://xxxx"
-    }
-}

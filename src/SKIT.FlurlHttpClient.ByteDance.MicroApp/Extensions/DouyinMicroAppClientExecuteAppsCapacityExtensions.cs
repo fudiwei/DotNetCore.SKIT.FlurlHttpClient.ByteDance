@@ -285,7 +285,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Delivery
         /// <summary>
-        /// <para>异步调用 [POST] /api/apps/v1/capacity/add_alias 接口。</para>
+        /// <para>异步调用 [POST] /aweme/apps/v1/alias/create_alias/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/delivery/add-alias ]]>
@@ -295,20 +295,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityAddAliasV1Response> ExecuteAppsCapacityAddAliasV1Async(this DouyinMicroAppClient client, Models.AppsCapacityAddAliasV1Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityCreateAliasV1Response> ExecuteAppsCapacityCreateAliasV1Async(this DouyinMicroAppClient client, Models.AppsCapacityCreateAliasV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "capacity", "add_alias")
+                .CreateFlurlRequest(request, HttpMethod.Post, "aweme", "apps", "v1", "alias", "create_alias/")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityAddAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [GET] /api/apps/v1/capacity/query_alias_list 接口。</para>
+        /// <para>异步调用 [GET] /aweme/apps/v1/alias/list_alias/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/delivery/query-alias-list ]]>
@@ -318,16 +318,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AppsCapacityQueryAliasListV1Response> ExecuteAppsCapacityQueryAliasListV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryAliasListV1Request request, CancellationToken cancellationToken = default)
+        public static async Task<Models.AppsCapacityListAliasV1Response> ExecuteAppsCapacityListAliasV1Async(this DouyinMicroAppClient client, Models.AppsCapacityListAliasV1Request request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_alias_list")
+                .CreateFlurlRequest(request, HttpMethod.Get, "aweme", "apps", "v1", "alias", "list_alias/")
                 .WithHeader("access-token", request.AccessToken);
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAliasListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityListAliasV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>

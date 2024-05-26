@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /api/apps/v1/capacity/query_ad_settlement_list 接口的请求。</para>
+    /// <para>表示 [GET] /api/apps/v3/capacity/query_ad_settlement_list/ 接口的请求。</para>
     /// </summary>
-    public class AppsCapacityQueryAdSettlementListV1Request : DouyinMicroAppRequest
+    public class AppsCapacityQueryAdSettlementListV3Request : DouyinMicroAppRequest
     {
         /// <summary>
         /// 获取或设置结算周期字符串（格式：yyyy-MM）。

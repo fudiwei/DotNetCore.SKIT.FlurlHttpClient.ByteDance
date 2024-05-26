@@ -1,0 +1,17 @@
+{
+    "err_no": 123,
+    "err_msg": "WrbmT62sE5",
+    "log_id": "cGIBmv7SMj",
+    "data": {
+        "settlement_list": [
+            {
+                "settlement_serial": "1gONnYuPoY",
+                "settlement_name": "p3ZDlVULhf",
+                "settlement_period": "lFqUO3pDro",
+                "tax_rate": 0.9478070115,
+                "settlement_total_amount": 35578762,
+                "status": 4
+            }
+        ]
+    }
+}

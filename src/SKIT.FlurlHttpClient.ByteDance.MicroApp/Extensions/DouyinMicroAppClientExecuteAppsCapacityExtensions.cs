@@ -9,6 +9,59 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecuteAppsCapacityExtensions
     {
+        #region Ad
+        /// <summary>
+        /// <para>异步调用 [GET] /api/apps/v3/capacity/query_ad_income/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-income ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAdIncomeV3Response> ExecuteAppsCapacityQueryAdIncomeV3Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryAdIncomeV3Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v3", "capacity", "query_ad_income/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_date", request.StartDateString)
+                .SetQueryParam("end_date", request.EndDateString)
+                .SetQueryParam("host_name", request.HostName);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAdIncomeV3Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/apps/v3/capacity/query_ad_settlement_list/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/traffic-permission/query-ad-settlement-list ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryAdSettlementListV3Response> ExecuteAppsCapacityQueryAdSettlementListV3Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryAdSettlementListV3Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v3", "capacity", "query_ad_settlement_list/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("month", request.PeriodString)
+                .SetQueryParam("status", request.Status);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAdSettlementListV3Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region AwemeBind
         /// <summary>
         /// <para>异步调用 [POST] /api/apps/v1/capacity/get_aweme_bind_template_list/ 接口。</para>

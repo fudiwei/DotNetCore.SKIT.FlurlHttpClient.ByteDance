@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /api/apps/v1/capacity/query_ad_settlement_list 接口的响应。</para>
+    /// <para>表示 [GET] /api/apps/v3/capacity/query_ad_settlement_list/ 接口的响应。</para>
     /// </summary>
-    public class AppsCapacityQueryAdSettlementListV1Response : DouyinMicroAppResponse
+    public class AppsCapacityQueryAdSettlementListV3Response : DouyinMicroAppResponse
     {
         public static class Types
         {

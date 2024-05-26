@@ -6,7 +6,7 @@
 
 例如，发送订阅消息的请求是 `AppsMessageCustomSendRequest`，响应是 `AppsMessageCustomSendResponse`，接口是 `ExecuteAppsMessageCustomSendAsync()`。知道其中一个，其余两个就可以快速地推断出了。
 
-再有，每个对象的命名与官方文档的接口地址大体保持一致。例如刚刚提到的发送订阅消息，它的接口地址是 `[POST] /apps/message/custom/send`，将其中的反斜杠去掉、并以大驼峰命名法的方式调整它，就可以得到前文提到的几个对象了。如果路由中带有版本信息，那么版本号一般都在结尾处，例如接口 `[POST] /v2/tags/image` 对应的是 `TagsImageV2`。
+再有，每个对象的命名与官方文档的接口地址大体保持一致。例如刚刚提到的发送订阅消息，它的接口地址是 `[POST] /apps/message/custom/send`，将其中的反斜杠去掉、并以大驼峰命名法的方式调整它，就可以得到前文提到的几个对象了。如果路由中带有版本信息，那么版本号一般都在结尾处，例如接口 `[POST] /v2/tags/image` 对应的是 `TagsImageV2`。此外，部分接口地址会以 `/api/` 开头，在命名中会被省略。
 
 完整的模型定义可以参考项目目录下的 _src/SKIT.FlurlHttpClient.ByteDance.Api/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/OpenApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/ProductApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/RoleApi/Models_、_src/SKIT.FlurlHttpClient.ByteDance.Api/ExtendedSDK/Webcast/Models_ 目录。
 
@@ -28,6 +28,7 @@
 |  √  |     接口调用凭证：非用户授权调用凭证      |                                    |
 |  √  |                   登录                    |                                    |
 |  √  |           小程序码与小程序链接            |                                    |
+|  √  |                Web 化接入                 |                                    |
 |  ×  |           <del>私聊和群聊</del>           | 异构协议，请使用 `DouyinOpen` 模块 |
 |  ×  |            <del>解决方案</del>            | 异构协议，请使用 `DouyinOpen` 模块 |
 |  √  |                 线索组件                  |                                    |

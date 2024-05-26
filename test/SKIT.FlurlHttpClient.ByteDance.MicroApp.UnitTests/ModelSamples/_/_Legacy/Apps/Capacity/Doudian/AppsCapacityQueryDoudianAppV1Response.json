@@ -1,0 +1,9 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "data": {
+        "bind_status": 3,
+        "doudian_appid": "xxx",
+        "doudian_app_name": "xxx"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "data": {
+        "ShopIdList": [
+            {
+                "MaAppId": "tt36b44009a99e9b32",
+                "ShopId": 123456,
+                "ShopName": "店铺",
+                "ToutiaoId": 1234567890,
+                "DoudianAppId": 23333
+            }
+        ]
+    },
+    "log_id": "20230702174602467E6D65A8F43145964D"
+}

@@ -313,6 +313,128 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
+        #region Capacity/Doudian
+        /// <summary>
+        /// <para>异步调用 [POST] /api/apps/v1/capacity/bind_doudian_account 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/doudian-bind/bind-doudian-account ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityBindDoudianAccountV1Response> ExecuteAppsCapacityBindDoudianAccountV1Async(this DouyinMicroAppClient client, Models.AppsCapacityBindDoudianAccountV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "capacity", "bind_doudian_account")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "bind_doudian_account"))
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityBindDoudianAccountV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/apps/v1/capacity/query_bind_doudian_account 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/doudian-bind/query-bind-doudian-account ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryBindDoudianAccountV1Response> ExecuteAppsCapacityQueryBindDoudianAccountV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryBindDoudianAccountV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_bind_doudian_account")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "query_bind_doudian_account"))
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryBindDoudianAccountV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/apps/v1/capacity/create_doudian_app 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/doudian-bind/create-doudian-app ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityCreateDoudianAppV1Response> ExecuteAppsCapacityCreateDoudianAppV1Async(this DouyinMicroAppClient client, Models.AppsCapacityCreateDoudianAppV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "capacity", "create_doudian_app")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "create_doudian_app"))
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityCreateDoudianAppV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/apps/v1/capacity/query_doudian_app 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/doudian-bind/query-doudian-app ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryDoudianAppV1Response> ExecuteAppsCapacityQueryDoudianAppV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryDoudianAppV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_doudian_app")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "query_doudian_app"))
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryDoudianAppV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/apps/v1/capacity/query_doudian_shop_info 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/doudian-bind/query_doudian_shop_info ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsCapacityQueryDoudianShopInfoV1Response> ExecuteAppsCapacityQueryDoudianShopInfoV1Async(this DouyinMicroAppClient client, Models.AppsCapacityQueryDoudianShopInfoV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_doudian_shop_info")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "query_doudian_shop_info"))
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryDoudianShopInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Capacity/FollowAweme
         /// <summary>
         /// <para>异步调用 [POST] /api/apps/v1/capacity/bind_aweme_user 接口。</para>

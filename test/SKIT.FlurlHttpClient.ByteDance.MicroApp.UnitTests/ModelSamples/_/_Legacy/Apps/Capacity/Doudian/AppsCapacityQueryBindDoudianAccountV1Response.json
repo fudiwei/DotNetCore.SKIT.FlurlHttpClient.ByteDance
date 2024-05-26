@@ -1,0 +1,10 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "data": {
+        "doudian_account_status": 3,
+        "account": "x",
+        "user_name": "xx",
+        "subject": "xxx"
+    }
+}

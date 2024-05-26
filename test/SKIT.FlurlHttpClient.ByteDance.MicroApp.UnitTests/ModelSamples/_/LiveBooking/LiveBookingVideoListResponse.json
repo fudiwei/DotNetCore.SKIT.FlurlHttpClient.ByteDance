@@ -1,0 +1,22 @@
+{
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "202302021133341E87A25AECA9CD010AFE",
+    "data": {
+        "list": [
+            {
+                "live_time": 1675558800,
+                "video_id": "@9VwW0qOBUN9mJyD3bNxv222PvCAOZF1oA+jJlcVafb660zdRmYqig357zEBoP/2eHYOuMy2cwI03CiA5g==",
+                "anchor_id": 1234567890,
+                "booking_id": "@9VwW0qOBUN9mJyD3b222791GztOvGFOZdwqQyiLFUbafL/60zdRmYqig357zEB13vjXinzjt7bzw9KEZPK0A=="
+            },
+            {
+                "anchor_id": 1234567890,
+                "booking_id": "@9VwW0qOBUN9mJyD3bN2221GzsPvCBOJxyqQukK1QXavT160zdRmYqig357zEBmxxxX7Vwxya6hMcJsZwB7w==",
+                "live_time": 1675566000,
+                "video_id": "@9VwW0qOBUN9mJyD33vCFOJB0oQ6nLVQRaPf560zdRmYqig357zEBGZVatEKryCbIyd/dNBPkMw=="
+            }
+        ],
+        "total": 2
+    }
+}

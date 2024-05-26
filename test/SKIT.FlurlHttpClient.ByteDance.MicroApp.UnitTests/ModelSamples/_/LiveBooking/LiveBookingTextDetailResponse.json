@@ -1,0 +1,23 @@
+{
+    "err_no": 0,
+    "has_booking": true,
+    "log_id": "20230203165308973A2089C91ADF0FA8A2",
+    "text_booking": {
+        "content": "开播啦，快来看我直播吧！",
+        "create_time": 1675414388,
+        "live_date": 0,
+        "live_time": 2300,
+        "live_weekdays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "update_time": 1675414388,
+        "anchor_id": 1234567890,
+        "booking_id": "@9VwW0qOBUN9mJyD3bNxvGc791GzsOPyKPpBzrguhLVgRaPH960zdRmYqig357zEB9uFLHcuBtEoO/E4e0aeFaw=="
+    },
+    "err_msg": ""
+}

@@ -1,0 +1,63 @@
+{
+    "data": {
+        "LiveData": {
+            "Total": 1,
+            "DataList": [
+                {
+                    "Data": {
+                        "ComponentClickPv": 9,
+                        "ComponentClickUv": 2,
+                        "ComponentId": "",
+                        "ComponentName": "",
+                        "ComponentReportPv": 1,
+                        "ComponentReportUv": 1,
+                        "ComponentShowPv": 2,
+                        "ComponentShowUv": 2
+                    },
+                    "RoomCreateTime": 1686131868,
+                    "RoomDuration": 4,
+                    "RoomId": 7241881205325499000,
+                    "ShortInfo": {
+                        "AccountType": 0,
+                        "Avat": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_acf168dca4854fb390763275689ec289.jpeg?from=3782654143",
+                        "AwemeShortID": "huochetou655",
+                        "Nickname": "火车头🚞"
+                    }
+                }
+            ]
+        },
+        "VideoData": {
+            "DataList": [
+                {
+                    "Data": {
+                        "ComponentClickPv": 9,
+                        "ComponentClickUv": 2,
+                        "ComponentId": "",
+                        "ComponentName": "",
+                        "ComponentReportPv": 1,
+                        "ComponentReportUv": 1,
+                        "ComponentShowPv": 2,
+                        "ComponentShowUv": 2
+                    },
+                    "ItemAddr": "http://v5-i.douyinvod.com/79ba3e546339ea5448ca053f51ddacfd/6497be8a/video/tos/cn/tos-cn-ve-15c001-alinc2/o4UgCQGInJdSFBqzgDbUAzSzI8VenkAACYG9fA/?a=2176&ch=289&cr=0&dr=0&lr=all&cd=0%7C0%7C0%7C0&br=1074&bt=1074&cs=0&ds=3&ft=Cppx.nnrThWH6FiY0.bmo0P&mime_type=video_mp4&qs=0&rc=NTc8Njk7ZWc0NTU6aGQzN0BpanNscTk6ZjQ4bDMzNGkzM0A2LzNeL2FeXzAxLV4xMTI0YSNlNWwvcjRnNi1gLS1kLS9zcw%3D%3D&l=20230625111150D4EFD41F08830F2202F3&btag=e00008000&cdn_n80=1",
+                    "ItemCover": "https://p26-sign.douyinpic.com/tos-cn-p-0015/ogFKCenh9AAsgIyGkADEfSBAVAkgJMtEgkbjZ6~c5_300x400.jpeg?x-expires=1688871600&x-signature=D820qyRcZEBCYQ9rJhmLyNLnN5E%3D&from=3213915784_large&s=PackSourceEnum_OPENPLATFORM_SCREEN&se=false&sc=cover&biz_tag=aweme_video&l=20230625111150D4EFD41F08830F2202F3",
+                    "ItemCreateTime": 1686131868,
+                    "ItemDuration": 4,
+                    "ItemId": 7241881205325499000,
+                    "ItemTitle": "",
+                    "ItemVv": 86,
+                    "ShortInfo": {
+                        "AccountType": 0,
+                        "Avat": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_acf168dca4854fb390763275689ec289.jpeg?from=3782654143",
+                        "AwemeShortID": "huochetou655",
+                        "Nickname": "火车头🚞"
+                    }
+                }
+            ],
+            "Total": 1
+        }
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "20230625111150D4EFD41F08830F2202F3"
+}

@@ -1,0 +1,26 @@
+{
+    "data": {
+        "app_id": "ttxxxfffffffff",
+        "app_name": "小程序名称",
+        "over_view_data": {
+            "app_id": "ttxxxfffffffff",
+            "app_name": "小程序名称",
+            "delivery_success_amount": "100",
+            "delivery_success_order_cnt": "10",
+            "live_anchors_cnt": "1",
+            "live_duration": "12000",
+            "live_session_cnt": "2",
+            "max_watch_user_cnt": "30",
+            "pay_amount": "40",
+            "pay_order_cnt": "20",
+            "per_watch_duration": "10",
+            "refund_success_amount": "160",
+            "refund_success_order_cnt": "80",
+            "watch_duration": "10",
+            "watch_user_cnt": "100"
+        }
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "xxxxxx"
+}

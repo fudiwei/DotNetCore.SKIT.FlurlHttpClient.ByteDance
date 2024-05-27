@@ -9,6 +9,204 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecutePlatformDataAnalysisExtensions
     {
+        #region Component
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_overview/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-overview-analysis-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryComponentWithOverviewV2Response> ExecutePlatformDataAnalysisQueryComponentWithOverviewV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryComponentWithOverviewV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_component_with_overview/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryComponentWithOverviewV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_source/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-source-analysis-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryComponentWithSourceV2Response> ExecutePlatformDataAnalysisQueryComponentWithSourceV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryComponentWithSourceV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_component_with_source/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryComponentWithSourceV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_detail/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-detail-analysis-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryComponentWithDetailV2Response> ExecutePlatformDataAnalysisQueryComponentWithDetailV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryComponentWithDetailV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_component_with_detail/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryComponentWithDetailV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_data/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-data-analysisv3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryComponentWithDataV2Response> ExecutePlatformDataAnalysisQueryComponentWithDataV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryComponentWithDataV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_component_with_data/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryComponentWithDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region Live
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_live_with_short_id/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/live-shortId-analysis-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryLiveWithShortIdV2Response> ExecutePlatformDataAnalysisQueryLiveWithShortIdV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryLiveWithShortIdV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_live_with_short_id/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryLiveWithShortIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region SmallRoom
+        /// <summary>
+        /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_overview_data/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-overview-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQuerySmallHomeOverviewDataV2Response> ExecutePlatformDataAnalysisQuerySmallHomeOverviewDataV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQuerySmallHomeOverviewDataV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "platform", "v2", "data_analysis", "query_small_home_overview_data/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQuerySmallHomeOverviewDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_room_data/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-room-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQuerySmallHomeRoomDataV2Response> ExecutePlatformDataAnalysisQuerySmallHomeRoomDataV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQuerySmallHomeRoomDataV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "platform", "v2", "data_analysis", "query_small_home_room_data/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQuerySmallHomeRoomDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_order_data/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-order-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQuerySmallHomeOrderDataV2Response> ExecutePlatformDataAnalysisQuerySmallHomeOrderDataV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQuerySmallHomeOrderDataV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "api", "platform", "v2", "data_analysis", "query_small_home_order_data/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp)
+                .SetQueryParam("page_num", request.PageNumber)
+                .SetQueryParam("page_size", request.PageSize);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQuerySmallHomeOrderDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Transaction
         /// <summary>
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_deal_overview_data/ 接口。</para>
@@ -379,6 +577,102 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("version_type", request.VersionType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryPageDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region Video
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_short_live_id_with_awemeid/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-item-contribute-data ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/live-item-contribute ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryShortLiveIdWithAwemeIdV2Response> ExecutePlatformDataAnalysisQueryShortLiveIdWithAwemeIdV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryShortLiveIdWithAwemeIdV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_short_live_id_with_awemeid/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryShortLiveIdWithAwemeIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_video_data/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-overview-data-v3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryVideoDataV2Response> ExecutePlatformDataAnalysisQueryVideoDataV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryVideoDataV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_video_data/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryVideoDataV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_short_live_data_with_id/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-detail-analysis-data ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/room-detail-analysis-data ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Response> ExecutePlatformDataAnalysisQueryShortLiveDataWithIdV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_short_live_data_with_id/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_video_with_source/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-source-analysis-datav3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PlatformDataAnalysisQueryVideoWithSourceV2Response> ExecutePlatformDataAnalysisQueryVideoWithSourceV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryVideoWithSourceV2Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_video_with_source/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryVideoWithSourceV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
     }

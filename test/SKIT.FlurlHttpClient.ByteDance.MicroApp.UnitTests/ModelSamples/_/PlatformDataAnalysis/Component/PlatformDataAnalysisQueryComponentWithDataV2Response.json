@@ -1,0 +1,70 @@
+{
+    "data": {
+        "DataList": [
+            {
+                "ComponentClickPv": 50,
+                "ComponentClickUv": 6,
+                "ComponentId": "4cbc57c0949fa07ba718f1202d8c5ac6",
+                "ComponentName": "陈设测试",
+                "ComponentReportPv": 171,
+                "ComponentReportUv": 6,
+                "ComponentShowPv": 42,
+                "ComponentShowUv": 9
+            },
+            {
+                "ComponentClickPv": 10,
+                "ComponentClickUv": 1,
+                "ComponentId": "093e4cd2135a967dabad43f96564c7db",
+                "ComponentName": "陈设测试1",
+                "ComponentReportPv": 1,
+                "ComponentReportUv": 1,
+                "ComponentShowPv": 1,
+                "ComponentShowUv": 1
+            },
+            {
+                "ComponentClickPv": 9,
+                "ComponentClickUv": 1,
+                "ComponentId": "61adda99594c19e7733fc8af512388ae",
+                "ComponentName": "陈设测试4",
+                "ComponentReportPv": 1,
+                "ComponentReportUv": 1,
+                "ComponentShowPv": 1,
+                "ComponentShowUv": 1
+            },
+            {
+                "ComponentClickPv": 7,
+                "ComponentClickUv": 1,
+                "ComponentId": "caa8daa5a7fe93a65b736392f698e56f",
+                "ComponentName": "陈设测试3",
+                "ComponentReportPv": 1,
+                "ComponentReportUv": 1,
+                "ComponentShowPv": 1,
+                "ComponentShowUv": 1
+            },
+            {
+                "ComponentClickPv": 8,
+                "ComponentClickUv": 1,
+                "ComponentId": "f0f696d9d808e04cb2528c762a79dbb4",
+                "ComponentName": "陈设测试2",
+                "ComponentReportPv": 1,
+                "ComponentReportUv": 1,
+                "ComponentShowPv": 1,
+                "ComponentShowUv": 1
+            },
+            {
+                "ComponentClickPv": 9,
+                "ComponentClickUv": 1,
+                "ComponentId": "fbca42a8c3ce85cc20704b50eae6b94c",
+                "ComponentName": "陈设测试5",
+                "ComponentReportPv": 4,
+                "ComponentReportUv": 1,
+                "ComponentShowPv": 1,
+                "ComponentShowUv": 1
+            }
+        ],
+        "Total": 6
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "20230625113633EA2ABA88EB7F721B6E4D"
+}

@@ -1,0 +1,25 @@
+{
+    "data": {
+        "ShortDataList": [
+            {
+                "Data": {
+                    "PayCustomerCnt": 0,
+                    "PayOrderAmount": 0,
+                    "RoomDuration": 37532,
+                    "RoomHighestOnlineCount": 6,
+                    "RoomNewFans": 0,
+                    "RoomSessionCnt": 58
+                },
+                "ShortInfo": {
+                    "AccountType": 1,
+                    "Avat": "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_87906d32936af5f7c66d8bdf10149a7f.jpeg?from=3782654143",
+                    "AwemeShortID": "lmn7455",
+                    "Nickname": "喵喵喵喵"
+                }
+            }
+        ],
+        "Total": 5
+    },
+    "err_msg": "success",
+    "err_no": 0
+}

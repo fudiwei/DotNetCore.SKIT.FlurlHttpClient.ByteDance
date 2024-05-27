@@ -1,0 +1,45 @@
+{
+    "data": {
+        "ScenesDataList": [
+            {
+                "Data": {
+                    "ComponentClickPv": 24,
+                    "ComponentClickUv": 2,
+                    "ComponentReportPv": 21,
+                    "ComponentReportUv": 2,
+                    "ComponentShowPv": 9,
+                    "ComponentShowUv": 2
+                },
+                "Scenes": "solid_entrance",
+                "ScenesName": "固定入口"
+            },
+            {
+                "Data": {
+                    "ComponentClickPv": 9,
+                    "ComponentClickUv": 2,
+                    "ComponentReportPv": 1,
+                    "ComponentReportUv": 1,
+                    "ComponentShowPv": 2,
+                    "ComponentShowUv": 2
+                },
+                "Scenes": "video",
+                "ScenesName": "短视频"
+            },
+            {
+                "Data": {
+                    "ComponentClickPv": 60,
+                    "ComponentClickUv": 7,
+                    "ComponentReportPv": 157,
+                    "ComponentReportUv": 8,
+                    "ComponentShowPv": 36,
+                    "ComponentShowUv": 10
+                },
+                "Scenes": "other",
+                "ScenesName": "其它"
+            }
+        ]
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "20230624224047AC0C108A4419A091657E"
+}

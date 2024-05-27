@@ -1,0 +1,34 @@
+{
+    "err_no": 0,
+    "log_id": "20240109180849D46806ACB8D19E0802F9",
+    "data": {
+        "ComponentDataInfoList": [
+            {
+                "ClueUcnt": 0,
+                "ComponentClickUv": 1,
+                "ComponentReportPv": 0,
+                "ComponentReportUv": 0,
+                "ComponentShowPv": 1,
+                "Date": "20231128",
+                "ValidClueCnt": 0,
+                "ClueCnt": 0,
+                "ValidClueUcnt": 0,
+                "ComponentShowUv": 1,
+                "ComponentClickPv": 1
+            }
+        ],
+        "ComponentOverviewData": {
+            "ValidClueUcnt": 0,
+            "ClueCnt": 0,
+            "ComponentClickPv": 1,
+            "ComponentReportPv": 0,
+            "ComponentReportUv": 0,
+            "ValidClueCnt": 0,
+            "ClueUcnt": 0,
+            "ComponentClickUv": 1,
+            "ComponentShowPv": 1,
+            "ComponentShowUv": 1
+        }
+    },
+    "err_msg": ""
+}

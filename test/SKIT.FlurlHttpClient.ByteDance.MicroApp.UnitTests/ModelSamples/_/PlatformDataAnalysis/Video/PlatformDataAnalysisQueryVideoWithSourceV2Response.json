@@ -1,0 +1,74 @@
+{
+    "data": {
+        "DataList": [
+            {
+                "CommonData": {
+                    "MpDrainagePv": 0,
+                    "MpDrainageUv": 0,
+                    "MpShowPv": 34,
+                    "MpShowUv": 13
+                },
+                "Scenes": "homepage_follow",
+                "ScenesName": "关注页",
+                "VideoPlayCount": 0
+            },
+            {
+                "CommonData": {
+                    "MpDrainagePv": 0,
+                    "MpDrainageUv": 0,
+                    "MpShowPv": 20,
+                    "MpShowUv": 13
+                },
+                "Scenes": "others_homepage",
+                "ScenesName": "他人主页",
+                "VideoPlayCount": 0
+            },
+            {
+                "CommonData": {
+                    "MpDrainagePv": 0,
+                    "MpDrainageUv": 0,
+                    "MpShowPv": 1,
+                    "MpShowUv": 1
+                },
+                "Scenes": "homepage_fresh",
+                "ScenesName": "同城页",
+                "VideoPlayCount": 0
+            },
+            {
+                "CommonData": {
+                    "MpDrainagePv": 0,
+                    "MpDrainageUv": 0,
+                    "MpShowPv": 5,
+                    "MpShowUv": 5
+                },
+                "Scenes": "general_search",
+                "ScenesName": "综搜页",
+                "VideoPlayCount": 0
+            },
+            {
+                "CommonData": {
+                    "MpDrainagePv": 15,
+                    "MpDrainageUv": 5,
+                    "MpShowPv": 331,
+                    "MpShowUv": 325
+                },
+                "Scenes": "homepage_hot",
+                "ScenesName": "推荐页",
+                "VideoPlayCount": 0
+            },
+            {
+                "CommonData": {
+                    "MpDrainagePv": 86,
+                    "MpDrainageUv": 19,
+                    "MpShowPv": 377,
+                    "MpShowUv": 352
+                },
+                "Scenes": "other",
+                "ScenesName": "其它",
+                "VideoPlayCount": 0
+            }
+        ]
+    },
+    "err_msg": "success",
+    "err_no": 0
+}

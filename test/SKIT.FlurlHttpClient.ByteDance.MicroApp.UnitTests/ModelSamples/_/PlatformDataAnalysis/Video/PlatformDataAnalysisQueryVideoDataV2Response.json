@@ -1,0 +1,68 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "video_deal_overview_data": {
+            "video_play_cnt": 6005,
+            "mp_show_pv": 5026,
+            "mp_click_pv": 25,
+            "create_order_cnt": 0,
+            "pay_order_cnt": 0,
+            "mp_drainage_pv": 0,
+            "mp_drainage_uv": 0,
+            "mp_show_uv": 0,
+            "mp_click_uv": 0,
+            "video_play_user_cnt": 2000,
+            "pay_customer_cnt": 0,
+            "pay_order_amount": 0,
+            "customer_once_price": 0,
+            "order_once_price": 0,
+            "refund_customer_cnt": 0,
+            "refund_order_cnt": 0,
+            "refund_amount": 0
+        },
+        "video_deal_data_list": [
+            {
+                "time": "2023-03-20",
+                "video_play_cnt": 6005,
+                "mp_show_pv": 5026,
+                "mp_click_pv": 25,
+                "create_order_cnt": 0,
+                "pay_order_cnt": 0,
+                "mp_drainage_pv": 0,
+                "mp_drainage_uv": 0,
+                "mp_show_uv": 0,
+                "mp_click_uv": 0,
+                "video_play_user_cnt": 2000,
+                "pay_customer_cnt": 0,
+                "pay_order_amount": 0,
+                "customer_once_price": 0,
+                "order_once_price": 0,
+                "refund_customer_cnt": 0,
+                "refund_order_cnt": 0,
+                "refund_amount": 0
+            },
+            {
+                "time": "2023-03-21",
+                "video_play_cnt": 6005,
+                "mp_show_pv": 5026,
+                "mp_click_pv": 25,
+                "create_order_cnt": 0,
+                "pay_order_cnt": 0,
+                "mp_drainage_pv": 0,
+                "mp_drainage_uv": 0,
+                "mp_show_uv": 0,
+                "mp_click_uv": 0,
+                "video_play_user_cnt": 2000,
+                "pay_customer_cnt": 0,
+                "pay_order_amount": 0,
+                "customer_once_price": 0,
+                "order_once_price": 0,
+                "refund_customer_cnt": 0,
+                "refund_order_cnt": 0,
+                "refund_amount": 0
+            }
+        ]
+    },
+    "log_id": "xxx"
+}

@@ -1,0 +1,49 @@
+{
+    "data": {
+        "app_id": "ttxxxfffffffff",
+        "app_name": "小程序名称",
+        "room_data": {
+            "1001": {
+                "anchor_id": "12345",
+                "app_id": "ttxxxfffffffff",
+                "app_name": "小程序名称",
+                "delivery_success_amount": "50",
+                "delivery_success_order_cnt": "60",
+                "end_time": "1672900091",
+                "live_duration": "6000",
+                "max_watch_user_cnt": "2",
+                "nick_name": "主播nick_name",
+                "pay_amount": "10",
+                "pay_order_cnt": "20",
+                "per_watch_duration": "10",
+                "refund_success_amount": "30",
+                "refund_success_order_cnt": "40",
+                "start_time": "1672900091",
+                "watch_user_cnt": "100000"
+            },
+            "1002": {
+                "anchor_id": "12345",
+                "app_id": "ttxxxfffffffff",
+                "app_name": "小程序名称",
+                "delivery_success_amount": "50",
+                "delivery_success_order_cnt": "60",
+                "end_time": "1672900091",
+                "live_duration": "6000",
+                "max_watch_user_cnt": "3",
+                "nick_name": "我测试的",
+                "pay_amount": "10",
+                "pay_order_cnt": "20",
+                "per_watch_duration": "10",
+                "refund_success_amount": "30",
+                "refund_success_order_cnt": "40",
+                "start_time": "1672900091",
+                "watch_user_cnt": "100000"
+            }
+        },
+        "total_num": 2,
+        "has_more": false
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "xxxxxx"
+}

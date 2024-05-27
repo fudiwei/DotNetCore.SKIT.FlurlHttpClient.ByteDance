@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /api/platform/v2/data_analysis/query_video_deal_data/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/platform/v2/data_analysis/query_video_data/ 接口的响应。</para>
     /// </summary>
-    public class PlatformDataAnalysisQueryVideoDealDataV2Response : DouyinMicroAppResponse
+    public class PlatformDataAnalysisQueryVideoDataV2Response : DouyinMicroAppResponse
     {
         public static class Types
         {
@@ -28,20 +28,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public int VideoPlayUserCount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置视频播放次数。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("item_vv")]
-                        [System.Text.Json.Serialization.JsonPropertyName("item_vv")]
-                        public int ItemVV { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置视频播放人数。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("item_uv")]
-                        [System.Text.Json.Serialization.JsonPropertyName("item_uv")]
-                        public int ItemUV { get; set; }
-
-                        /// <summary>
                         /// 获取或设置小程序曝光次数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("mp_show_pv")]
@@ -61,6 +47,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("mp_click_pv")]
                         [System.Text.Json.Serialization.JsonPropertyName("mp_click_pv")]
                         public int MicroAppClickPV { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置小程序点击人数。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("mp_click_uv")]
+                        [System.Text.Json.Serialization.JsonPropertyName("mp_click_uv")]
+                        public int MicroAppClickUV { get; set; }
 
                         /// <summary>
                         /// 获取或设置进入小程序次数。
@@ -84,25 +77,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public int ClueCount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置线索人数。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("clue_ucnt")]
-                        [System.Text.Json.Serialization.JsonPropertyName("clue_ucnt")]
-                        public int ClueUserCount { get; set; }
-
-                        /// <summary>
                         /// 获取或设置有效线索数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("valid_clue_cnt")]
                         [System.Text.Json.Serialization.JsonPropertyName("valid_clue_cnt")]
                         public int ValidClueCount { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置有效线索人数。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("valid_clue_ucnt")]
-                        [System.Text.Json.Serialization.JsonPropertyName("valid_clue_ucnt")]
-                        public int ValidClueUserCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建订单数。
@@ -194,14 +173,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 }
 
                 /// <summary>
-                /// 获取或设置短视频交易分析总览数据信息。
+                /// 获取或设置短视频总览数据信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_deal_overview_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_deal_overview_data")]
                 public Types.VideoDealOverviewData VideoDealOverviewData { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置短视频交易分析每日数据列表。
+                /// 获取或设置短视频每日数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_deal_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_deal_data_list")]

@@ -1,0 +1,14 @@
+{
+    "promotion_activity": {
+        "activity_id": "702345xxxxxx",
+        "activity_name": "全新的营销活动标题",
+        "sidebar_activity": {
+            "jump_text": "去使用",
+            "short_title": "免费看一集",
+            "valid_begin_time": 1676984342,
+            "high_value_content": "15个鸡翅仅9.9元",
+            "valid_end_time": 1676984442,
+            "recent_bubble_text": "领福利"
+        }
+    }
+}

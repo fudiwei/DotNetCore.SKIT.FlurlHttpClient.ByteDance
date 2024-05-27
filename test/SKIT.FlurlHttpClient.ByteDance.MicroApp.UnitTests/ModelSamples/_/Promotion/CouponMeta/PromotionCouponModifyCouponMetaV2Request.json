@@ -1,0 +1,14 @@
+{
+    "coupon_meta": {
+        "coupon_meta_id": "721807xxxxxx5644204",
+        "coupon_name": "三亚10日游专享券",
+        "receive_begin_time": 1676984342,
+        "receive_end_time": 1676984442,
+        "valid_type": 1,
+        "valid_begin_time": 1676984342,
+        "valid_end_time": 1676984542,
+        "consume_path": "pages/coupons/index?spm=1111&utm=22222",
+        "receive_desc": "每人限领一张",
+        "consume_desc": "满500元使用"
+    }
+}

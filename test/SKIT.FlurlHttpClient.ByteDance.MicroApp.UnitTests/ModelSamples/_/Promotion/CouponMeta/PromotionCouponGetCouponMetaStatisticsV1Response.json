@@ -1,0 +1,23 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202306081640346D6CE7AD7121F504D69E",
+    "data": {
+        "activity_stats": [
+            {
+                "activity_id": "7242154741227077690",
+                "consumed_num": 0,
+                "received_num": 1
+            }
+        ],
+        "talent_stats": [
+            {
+                "talent_account": "7932234",
+                "talent_open_id": "Cv4PoJXaTPn63rNu",
+                "exposed_num": 1234,
+                "received_num": 812,
+                "consumed_num": 764
+            }
+        ]
+    }
+}

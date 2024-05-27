@@ -1,0 +1,26 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202304201146560B814XXXDB9D0B051956",
+    "data": {
+        "coupon_receive_list": [
+            {
+                "discount_type": 2,
+                "receive_desc": "领取描述",
+                "valid_end_time": 1678716000,
+                "talent_open_id": "Cv4PoJXaxxx63rNu",
+                "valid_begin_time": 1678705200,
+                "consume_path": "pages/index/index",
+                "coupon_id": "720998824905xxxx532",
+                "coupon_status": 10,
+                "discount_amount": 1000,
+                "min_pay_amount": 10,
+                "consume_desc": "使用描述",
+                "coupon_name": "券名称",
+                "merchant_meta_no": "merchant_demo",
+                "talent_account": "473945xxx83",
+                "receive_time": 1678709372
+            }
+        ]
+    }
+}

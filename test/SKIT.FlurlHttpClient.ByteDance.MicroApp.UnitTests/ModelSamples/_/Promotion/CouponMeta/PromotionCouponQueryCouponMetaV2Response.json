@@ -1,0 +1,27 @@
+{
+    "coupon_meta": {
+        "coupon_meta_id": "702345xxxxxx",
+        "coupon_name": "三亚10日游专享券",
+        "merchant_meta_no": "KnV0oAsxg6",
+        "discount_type": 1,
+        "discount_amount": 1000,
+        "min_pay_amount": 2000,
+        "receive_begin_time": 1676984342,
+        "receive_end_time": 1676984442,
+        "valid_type": 1,
+        "valid_begin_time": 1676984342,
+        "valid_end_time": 1676984542,
+        "consume_path": "pages/coupons/index?spm=1111&utm=22222",
+        "stock_number": 1000,
+        "receive_desc": "领取须知",
+        "consume_desc": "使用须知",
+        "callback_url": "https://www.abcde.com/xx/xx",
+        "status": 2,
+        "related_type": 1,
+        "origin_id": "7309123xxxxxx",
+        "secret_source": 1
+    },
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202008121419360101980821035705926A"
+}

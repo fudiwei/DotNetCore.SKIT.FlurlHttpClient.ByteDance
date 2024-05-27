@@ -1,0 +1,19 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "20230602141441E708D3A77C64701C88EB",
+    "data": {
+        "coupon_info": {
+            "coupon_id": "70924xxxx555366",
+            "coupon_status": 10,
+            "discount_amount": 1000,
+            "discount_type": 2,
+            "merchant_meta_no": "45ed-8f3d",
+            "min_pay_amount": 2000,
+            "valid_begin_time": 1685686441,
+            "coupon_name": "奶茶立减10元券",
+            "receive_time": 1685686482,
+            "valid_end_time": 1685772841
+        }
+    }
+}

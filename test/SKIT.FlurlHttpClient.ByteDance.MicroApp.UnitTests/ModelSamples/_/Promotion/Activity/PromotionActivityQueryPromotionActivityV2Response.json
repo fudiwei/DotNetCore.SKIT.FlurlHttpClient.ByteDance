@@ -1,0 +1,18 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "20240401180130D96605C00A6FE1041CFA",
+    "promotion_activity": {
+        "status": 2,
+        "send_scene": 1,
+        "receive_limit": 1,
+        "activity_name": "直播间发放活动1",
+        "activity_id": "738989xxxxxxx",
+        "live_activity": {
+            "clue_component_id": "YUX4DnyksSxxxxxx",
+            "notice_text": "主播发放提示语",
+            "coupon_task_type": 1
+        },
+        "coupon_meta_id": "7340989xxxxxxx"
+    }
+}

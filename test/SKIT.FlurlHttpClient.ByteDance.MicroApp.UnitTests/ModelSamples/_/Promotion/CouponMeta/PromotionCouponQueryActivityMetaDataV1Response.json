@@ -1,0 +1,31 @@
+{
+    "data": {
+        "total": 1,
+        "activity_list": [
+            {
+                "discount_type": 1,
+                "receive_end_time": 1696995547,
+                "remain_stock": 10,
+                "app_icon": "",
+                "consume_time_desc": "领取后 3000000 自然日内有效",
+                "coupon_icon": "https://p9-dexxer-sign.bytxxxxmg.com/tos-cn-i-zptclditwk/067a8aa4b371f26xxxxxxcab319.png~tplv-ke512zj2cu-144x144.jpeg?x-expires=2008056593&x-signature=vN4nWq%2B9fvcq2vNIX2I5HgedfMo%3D",
+                "coupon_meta_name": "api-im渠道",
+                "discount_amount": 100000,
+                "receive_begin_time": 1696649954,
+                "activity_id": "728779470083xxxxxx",
+                "activity_status": 1,
+                "app_name": "ii",
+                "discount_type_name": "立减券",
+                "app_id": "ttcfdbb966xxxxx0",
+                "consume_desc": "无门槛立减",
+                "coupon_meta_id": "7288xxxxxxxx340156",
+                "share_fission_desc": "分享被领取后无奖励",
+                "support_share_fission": true,
+                "total_stock": 10
+            }
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "02169699342137500000000000000000000ffff0a7039acbdb087"
+}

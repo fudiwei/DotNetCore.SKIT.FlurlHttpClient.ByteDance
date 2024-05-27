@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.ImageFileContentType is null)
-                request.ImageFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.ImageFileName) ?? "image/jpeg";
+                request.ImageFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForImage(request.ImageFileName) ?? "image/jpeg";
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "upload_image/")

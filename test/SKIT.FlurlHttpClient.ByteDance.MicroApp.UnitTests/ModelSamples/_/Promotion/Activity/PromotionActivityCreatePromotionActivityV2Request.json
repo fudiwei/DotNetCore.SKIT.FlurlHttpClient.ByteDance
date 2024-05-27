@@ -1,0 +1,13 @@
+{
+    "promotion_activity": {
+        "coupon_meta_id": "71923xxxxxxxx",
+        "activity_name": "直播间11.11大促",
+        "receive_limit": 1,
+        "live_activity": {
+            "coupon_task_type": 2,
+            "clue_component_id": "aGgKcLCYCKxxxxxx",
+            "notice_text": "发放时注意营销感"
+        },
+        "send_scene": 1
+    }
+}

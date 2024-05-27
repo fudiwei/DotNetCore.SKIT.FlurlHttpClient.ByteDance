@@ -1,0 +1,20 @@
+{
+    "coupon_meta": {
+        "merchant_meta_no": "123xxxxxx",
+        "coupon_name": "三亚10日游专享券",
+        "discount_type": 1,
+        "discount_amount": 1000,
+        "min_pay_amount": 2000,
+        "receive_begin_time": 1676984342,
+        "receive_end_time": 1676984442,
+        "valid_type": 1,
+        "valid_duration": 86400,
+        "valid_begin_time": 1676984342,
+        "valid_end_time": 1676984542,
+        "consume_path": "pages/coupons/index?spm=1111&utm=22222",
+        "stock_number": 1000,
+        "receive_desc": "每人限领一张",
+        "consume_desc": "满500元可用",
+        "callback_url": "https://www.abc.com/xx/xx"
+    }
+}

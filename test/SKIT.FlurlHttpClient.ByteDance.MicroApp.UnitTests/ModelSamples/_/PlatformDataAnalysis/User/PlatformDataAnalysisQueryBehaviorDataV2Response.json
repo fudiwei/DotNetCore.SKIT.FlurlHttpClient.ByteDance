@@ -1,0 +1,42 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "sum": {
+            "active_user_num": 113,
+            "new_user_num": 74,
+            "total_user_num": 285227,
+            "share_time": 8,
+            "open_time": 190,
+            "per_user_open_time": 1.6814,
+            "per_user_stay_time": 349603,
+            "avg_stay_time": 136095
+        },
+        "behaviors": [
+            {
+                "time_type": 1,
+                "time": "2022-12-26",
+                "active_user_num": 113,
+                "new_user_num": 74,
+                "total_user_num": 285227,
+                "share_time": 8,
+                "open_time": 190,
+                "per_user_open_time": 1.6814,
+                "per_user_stay_time": 349603,
+                "avg_stay_time": 136095
+            },
+            {
+                "time_type": 1,
+                "time": "2022-12-27",
+                "active_user_num": 402,
+                "new_user_num": 356,
+                "total_user_num": 285583,
+                "share_time": 24,
+                "open_time": 563,
+                "per_user_open_time": 1.4004,
+                "per_user_stay_time": 90556,
+                "avg_stay_time": 49672
+            }
+        ]
+    }
+}

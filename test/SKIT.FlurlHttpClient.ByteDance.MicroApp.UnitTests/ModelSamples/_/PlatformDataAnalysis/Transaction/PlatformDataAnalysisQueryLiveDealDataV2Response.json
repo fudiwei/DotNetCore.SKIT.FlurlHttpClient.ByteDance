@@ -1,0 +1,45 @@
+{
+    "err_no": 0,
+    "err_msg": "success",
+    "data": {
+        "deal_overview_data": {
+            "create_user_count": 0,
+            "show_count": 0,
+            "create_order_count": 0,
+            "customer_once_price": 0,
+            "pay_order_count": 0,
+            "refund_order_amount": 0,
+            "sale_product_cnt": 0,
+            "click_count": 0,
+            "create_order_amount": 0,
+            "refund_success_order_cnt": 0,
+            "refund_success_user_cnt": 0,
+            "success_user_cnt": 0,
+            "order_once_price": 0,
+            "refund_order_cnt": 0,
+            "pay_order_amount": 0,
+            "refund_success_order_amount": 0
+        },
+        "deal_data_list": [
+            {
+                "time": "2022-12-27 15:04:05",
+                "create_user_count": 0,
+                "show_count": 0,
+                "create_order_count": 0,
+                "customer_once_price": 0,
+                "pay_order_count": 0,
+                "refund_order_amount": 0,
+                "sale_product_cnt": 0,
+                "click_count": 0,
+                "create_order_amount": 0,
+                "refund_success_order_cnt": 0,
+                "refund_success_user_cnt": 0,
+                "success_user_cnt": 0,
+                "order_once_price": 0,
+                "refund_order_cnt": 0,
+                "pay_order_amount": 0,
+                "refund_success_order_amount": 0
+            }
+        ]
+    }
+}

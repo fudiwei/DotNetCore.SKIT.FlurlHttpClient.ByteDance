@@ -1,0 +1,14 @@
+{
+    "auth_order_id": "ad7123123123123",
+    "out_pay_order_no": "out_pay_order_no_1",
+    "total_amount": 100,
+    "fee_detail_list": [
+        {
+            "title": "油费",
+            "amount": 100,
+            "description": "租车产生的油费",
+            "quantity": 1
+        }
+    ],
+    "notify_url": "https://www.asdasd"
+}

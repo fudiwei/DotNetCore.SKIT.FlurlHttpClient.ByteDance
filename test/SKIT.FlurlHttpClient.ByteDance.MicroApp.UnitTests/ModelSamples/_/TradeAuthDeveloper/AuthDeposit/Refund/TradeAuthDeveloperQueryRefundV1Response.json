@@ -1,0 +1,24 @@
+{
+    "data": {
+        "app_id": "tt71313213",
+        "status": "SUCCESS",
+        "pay_order_id": "ad7123123123123",
+        "pay_refund_id": "ad712312662312",
+        "out_pay_refund_no": "out_pay_refund_no_1",
+        "refund_total_amount": 100,
+        "refund_reason": "申请退款",
+        "fee_detail_list": [
+            {
+                "title": "油费",
+                "amount": 100,
+                "description": "租车产生的油费",
+                "quantity": 1
+            }
+        ],
+        "refund_at": 1698128528000,
+        "notify_url": "https://www.asdasd"
+    },
+    "err_no": 0,
+    "err_msg": "success",
+    "log_id": "2022092115392201020812109511046"
+}

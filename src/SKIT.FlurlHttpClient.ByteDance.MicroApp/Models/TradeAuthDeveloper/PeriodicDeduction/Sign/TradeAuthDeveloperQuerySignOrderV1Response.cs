@@ -1,9 +1,9 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /api/trade_auth/v1/developer/query_auth_order/ 接口的响应。</para>
+    /// <para>表示 [POST] /api/trade_auth/v1/developer/query_sign_order/ 接口的响应。</para>
     /// </summary>
-    public class TradeAuthDeveloperQueryAuthOrderV1Response : DouyinMicroAppResponse
+    public class TradeAuthDeveloperQuerySignOrderV1Response : DouyinMicroAppResponse
     {
         public static class Types
         {
@@ -24,53 +24,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string OpenId { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置开发者信用单号。
+                /// 获取或设置开发者签约单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_auth_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_auth_order_no")]
                 public string OutAuthOrderNumber { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置信用单 ID。
+                /// 获取或设置签约单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("auth_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
                 public string AuthOrderId { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置信用单状态。
+                /// 获取或设置签约单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
                 public string Status { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置免押场景。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("scene")]
-                [System.Text.Json.Serialization.JsonPropertyName("scene")]
-                public int Scene { get; set; }
-
-                /// <summary>
-                /// 获取或设置信用模板 ID。
+                /// 获取或设置签约模板 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("service_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("service_id")]
                 public string ServiceId { get; set; } = default!;
-
-                /// <summary>
-                /// 获取或设置押金金额（单位：分）。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("total_amount")]
-                [System.Text.Json.Serialization.JsonPropertyName("total_amount")]
-                public int TotalAmount { get; set; }
-
-                /// <summary>
-                /// 获取或设置卖家商户号。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("merchant_uid")]
-                [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-                public string MerchantId { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置回调通知地址。
@@ -85,6 +64,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 [Newtonsoft.Json.JsonProperty("sign_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("sign_time")]
                 public long? SignTimeMilliseconds { get; set; }
+
+                /// <summary>
+                /// 获取或设置解约来源。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("cancel_source")]
+                [System.Text.Json.Serialization.JsonPropertyName("cancel_source")]
+                public int? CancelSource { get; set; }
             }
         }
 

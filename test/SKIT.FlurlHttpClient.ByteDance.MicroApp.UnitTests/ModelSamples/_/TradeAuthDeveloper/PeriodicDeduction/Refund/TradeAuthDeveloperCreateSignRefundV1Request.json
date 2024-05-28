@@ -1,0 +1,7 @@
+{
+    "pay_order_id": "ad7123123123123",
+    "out_pay_refund_no": "out_pay_refund_no_1",
+    "refund_total_amount": 100,
+    "refund_reason": "申请退款",
+    "notify_url": "https://www.asdasd"
+}

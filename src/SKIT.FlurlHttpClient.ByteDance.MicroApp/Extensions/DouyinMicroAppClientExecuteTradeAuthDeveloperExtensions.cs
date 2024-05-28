@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
     public static class DouyinMicroAppClientExecuteTradeAuthDeveloperExtensions
     {
         #region AuthDeposit
-        #region AuthDeposit/AuthOrder
+        #region AuthDeposit/Auth
         /// <summary>
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_admissible_auth/ 接口。</para>
         /// <para>
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
         #endregion
 
-        #region AuthDeposit/PayOrder
+        #region AuthDeposit/Pay
         /// <summary>
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_pay_order/ 接口。</para>
         /// <para>
@@ -242,6 +242,152 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperQueryRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+        #endregion
+
+        #region PeriodicDeduction
+        #region PeriodicDeduction/Pay
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_sign_pay/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/pay/create-sign-pay ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperCreateSignPayV1Response> ExecuteTradeAuthDeveloperCreateSignPayV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperCreateSignPayV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "create_sign_pay/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperCreateSignPayV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_pay/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/pay/query-sign-pay ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperQuerySignPayV1Response> ExecuteTradeAuthDeveloperQuerySignPayV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperQuerySignPayV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "query_sign_pay/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperQuerySignPayV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region PeriodicDeduction/Refund
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_sign_refund/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/refund/create-sign-refund ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperCreateSignRefundV1Response> ExecuteTradeAuthDeveloperCreateSignRefundV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperCreateSignRefundV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "create_sign_refund/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperCreateSignRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_refund/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/refund/query-sign-refund ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperQuerySignRefundV1Response> ExecuteTradeAuthDeveloperQuerySignRefundV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperQuerySignRefundV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "query_sign_refund/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperQuerySignRefundV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
+        #region PeriodicDeduction/Sign
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/terminate_sign/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/sign/terminate-sign ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperTerminateSignV1Response> ExecuteTradeAuthDeveloperTerminateSignV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperTerminateSignV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "terminate_sign/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperTerminateSignV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_order/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/sign/query-sign-order ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.TradeAuthDeveloperQuerySignOrderV1Response> ExecuteTradeAuthDeveloperQuerySignOrderV1Async(this DouyinMicroAppClient client, Models.TradeAuthDeveloperQuerySignOrderV1Request request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "trade_auth", "v1", "developer", "query_sign_order/")
+                .WithHeader("access-token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.TradeAuthDeveloperQuerySignOrderV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
         #endregion

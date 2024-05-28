@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public int TotalAmount { get; set; }
 
         /// <summary>
-        /// 获取或设置卖家商户号。
+        /// 获取或设置收款商户号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_uid")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]

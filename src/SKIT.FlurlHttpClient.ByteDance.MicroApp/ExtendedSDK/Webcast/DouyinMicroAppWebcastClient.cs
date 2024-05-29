@@ -44,8 +44,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
             Interceptors.Add(new Interceptors.DouyinMicroAppWebcastRequestSigningInterceptor(
                 appId: options.AppId,
-                pkVersion: options.ApplicationPublicKeyVersion,
-                pkPem: options.ApplicationPrivateKey
+                pkVersion: options.AppKeyVersion,
+                pkPem: options.AppPrivateKey
             ));
         }
 

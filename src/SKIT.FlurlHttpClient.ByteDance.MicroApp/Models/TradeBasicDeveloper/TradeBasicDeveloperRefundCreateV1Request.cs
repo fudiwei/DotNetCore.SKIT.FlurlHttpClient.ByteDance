@@ -118,7 +118,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string? NotifyUrl { get; set; }
 
         /// <summary>
-        /// 获取或设置退款单的跳转的 Schema。
+        /// 获取或设置退款单详情页的 Schema。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_entry_schema")]
         [System.Text.Json.Serialization.JsonPropertyName("order_entry_schema")]

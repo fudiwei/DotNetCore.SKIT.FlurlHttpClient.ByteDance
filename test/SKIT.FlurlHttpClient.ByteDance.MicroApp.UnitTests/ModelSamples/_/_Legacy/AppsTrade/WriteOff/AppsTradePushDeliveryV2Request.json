@@ -1,0 +1,13 @@
+{
+    "out_order_no": "out123456",
+    "item_order_list": [
+        {
+            "item_order_id": "ot123"
+        },
+        {
+            "item_order_id": "ot456"
+        }
+    ],
+    "use_all": false,
+    "poi_info": "{\"shop_name\":\"xx门店\",\"ext_valid_shop_id\":\"x0001\",\"valid_poi_id_str\":\"6601136930455291912\"}"
+}

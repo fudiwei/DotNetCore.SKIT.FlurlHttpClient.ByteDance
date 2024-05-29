@@ -1,0 +1,22 @@
+{
+    "data": {
+        "order_id": "ot7072366682238",
+        "out_order_no": "121321432",
+        "pay_order_id": "12423414234",
+        "pay_order_token": "544352343",
+        "item_order_info_list": [
+            {
+                "item_order_id_list": [ "ot70939408076069" ],
+                "goods_id": "700843652",
+                "item_order_detail": [
+                    {
+                        "item_order_id": "ot70939408076069",
+                        "price": 80
+                    }
+                ]
+            }
+        ]
+    },
+    "err_tips": "success",
+    "err_no": 0
+}

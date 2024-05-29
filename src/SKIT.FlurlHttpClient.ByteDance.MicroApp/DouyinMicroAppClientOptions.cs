@@ -44,6 +44,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public string? PushEncodingAESKey { get; set; }
 
         /// <summary>
+        /// 获取或设置抖音小程序应用密钥版本号。
+        /// <para>默认值："1"</para>
+        /// </summary>
+        public string? AppKeyVersion { get; set; } = "1";
+
+        /// <summary>
+        /// 获取或设置抖音小程序应用私钥。
+        /// </summary>
+        public string? AppPrivateKey { get; set; }
+
+        /// <summary>
         /// 获取或设置用于担保支付请求签名的密钥。
         /// </summary>
         public string? ECPaySalt { get; set; }

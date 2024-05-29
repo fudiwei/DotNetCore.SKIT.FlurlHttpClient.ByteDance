@@ -41,6 +41,8 @@ var options = new DouyinMicroAppClientOptions()
 {
     AppId = "抖音小程序 AppId",
     AppSecret = "抖音小程序 AppSecret",
+    AppKeyVersion = "应用密钥版本号，用于交易系统等需要请求签名的 API，不用则不填",
+    AppPrivateKey = "应用密钥私钥，用于交易系统等需要请求签名的 API，不用则不填",
     ECPaySalt = "担保支付相关服务的密钥，不用则不填"
 };
 var client = DouyinMicroAppClientBuilder.Create(options).Build();
@@ -124,8 +126,8 @@ var options = new DouyinMicroAppWebcastClientOptions()
 {
     AppId = "抖音小程序 AppId",
     AppSecret = "抖音小程序 AppSecret",
-    ApplicationPublicKeyVersion = "应用密钥公钥版本号",
-    ApplicationPrivateKey = "应用密钥私钥",
+    AppKeyVersion = "应用密钥版本号",
+    AppPrivateKey = "应用密钥私钥",
     PlatformPublicKey = "平台密钥公钥"
 };
 var client = DouyinMicroAppWebcastClientBuilder.Create(options).Build();

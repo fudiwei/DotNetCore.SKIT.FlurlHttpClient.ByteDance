@@ -1,0 +1,20 @@
+{
+    "err_no": 0,
+    "err_tips": "success",
+    "data": [
+        {
+            "item_order_id": "item_order_id_example_1",
+            "item_order_status": 1,
+            "valid_start_time": 1642491214992,
+            "valid_end_time": 1642491231992,
+            "delivery_time": 1642493214992
+        },
+        {
+            "item_order_id": "item_order_id_example_2",
+            "item_order_status": 2,
+            "valid_start_time": 1642491214992,
+            "valid_end_time": 1623491214992,
+            "delivery_time": 1642231214992
+        }
+    ]
+}

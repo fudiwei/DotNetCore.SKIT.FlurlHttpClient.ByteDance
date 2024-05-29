@@ -28,15 +28,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
         public string AppSecret { get; set; } = default!;
 
         /// <summary>
-        /// 获取或设置抖音小程序应用公钥版本号。
+        /// 获取或设置抖音小程序应用密钥版本号。
         /// <para>默认值："1"</para>
         /// </summary>
-        public string ApplicationPublicKeyVersion { get; set; } = "1";
+        public string AppKeyVersion { get; set; } = "1";
 
         /// <summary>
         /// 获取或设置抖音小程序应用私钥。
         /// </summary>
-        public string ApplicationPrivateKey { get; set; } = default!;
+        public string AppPrivateKey { get; set; } = default!;
 
         /// <summary>
         /// 获取或设置抖音小程序平台公钥。

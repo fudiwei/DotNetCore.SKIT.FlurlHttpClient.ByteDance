@@ -1,0 +1,123 @@
+{
+    "goods_list": [
+        {
+            "quantity": 1,
+            "price": 100,
+            "goods_title": "火锅团购",
+            "goods_image": "https://xxx",
+            "labels": "随时退|免预约",
+            "goods_id": "goods_1",
+            "goods_id_type": 2,
+            "discount_amount": 1,
+            "date_rule": "周一至周日可用",
+            "goods_page": {
+                "path": "goods/infoxxxx",
+                "params": "{\"id\":\"xxxxxx\"}"
+            },
+            "order_valid_time": {
+                "valid_duration": 100000
+            },
+            "goods_book_info": {
+                "book_type": 2,
+                "cancel_policy": 1
+            },
+            "merchant_uid": "商户号xxx"
+        }
+    ],
+    "total_amount": 100,
+    "discount_amount": 20,
+    "phone_num": "19273654356",
+    "contact_name": "张三",
+    "extra": "xxx",
+    "open_id": "xxx",
+    "out_order_no": "132324",
+    "pay_notify_url": "https://xxxx",
+    "pay_expire_seconds": 500,
+    "order_entry_schema": {
+        "path": "pages/xxxindexxxx",
+        "params": "{\"id\":\"xxxxxx\"}"
+    },
+    "cp_extra": "xxxxx",
+    "price_calculation_detail": {
+        "calculation_type": 1,
+        "order_discount_detail": {
+            "goods_total_discount_amount": 1,
+            "marketing_detail_info": [
+                {
+                    "discount_amount": 10,
+                    "discount_range": 1,
+                    "id": "activity_id_xxxxxxx",
+                    "note": "活动优惠",
+                    "subtype": "商家侧子营销类型",
+                    "title": "[活动] 满 10.00 减 7.00 元",
+                    "type": 4
+                },
+                {
+                    "discount_amount": 10,
+                    "discount_range": 2,
+                    "id": "coupon_id_xxxxxxx",
+                    "note": "用券优惠",
+                    "subtype": "商家侧子营销类型默认值",
+                    "title": "[券] 减 0.01 元",
+                    "type": 2
+                }
+            ],
+            "order_total_discount_amount": 20
+        },
+        "goods_discount_detail": [
+            {
+                "goods_id": "goods_1",
+                "marketing_detail_info": [
+                    {
+                        "discount_amount": 10,
+                        "discount_range": 1,
+                        "id": "activity_id_xxxxxxx",
+                        "note": "活动优惠",
+                        "subtype": "商家侧子营销类型默认值",
+                        "title": "[活动] 满 10.00 减 7.00 元",
+                        "type": 4
+                    },
+                    {
+                        "discount_amount": 10,
+                        "discount_range": 2,
+                        "id": "coupon_id_xxxxxxx",
+                        "note": "用券优惠",
+                        "subtype": "商家侧子营销类型默认值",
+                        "title": "[券] 减 0.01 元",
+                        "type": 2
+                    }
+                ],
+                "quantity": 1,
+                "total_amount": 100,
+                "total_discount_amount": 20
+            }
+        ],
+        "item_discount_detail": [
+            {
+                "goods_id": "goods_1",
+                "marketing_detail_info": [
+                    {
+                        "discount_amount": 10,
+                        "discount_range": 1,
+                        "id": "activity_id_xxxxxxx",
+                        "note": "活动优惠",
+                        "subtype": "商家侧子营销类型默认值",
+                        "title": "[活动] 满 10.00 减 7.00 元",
+                        "type": 4
+                    },
+                    {
+                        "discount_amount": 10,
+                        "discount_range": 2,
+                        "id": "coupon_id_xxxxxxx",
+                        "note": "用券优惠",
+                        "subtype": "商家侧子营销类型默认值",
+                        "title": "[券] 减 0.01 元",
+                        "type": 2
+                    }
+                ],
+                "total_amount": 100,
+                "total_discount_amount": 20
+            }
+        ]
+    }
+}

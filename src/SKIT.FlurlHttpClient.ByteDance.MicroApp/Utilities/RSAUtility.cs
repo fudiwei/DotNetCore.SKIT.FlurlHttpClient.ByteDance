@@ -133,7 +133,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
 #endif
 
         /// <summary>
-        /// 使用私钥生成签名。
+        /// 使用私钥基于 SHA-256 算法生成签名。
         /// </summary>
         /// <param name="privateKeyBytes">PKCS#8 私钥字节数组。</param>
         /// <param name="messageBytes">待签名的数据字节数组。</param>
@@ -156,7 +156,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
         }
 
         /// <summary>
-        /// 使用私钥生成签名。
+        /// 使用私钥基于 SHA-256 算法生成签名。
         /// </summary>
         /// <param name="privateKeyPem">PKCS#1/PKCS#8 私钥（PEM 格式）。</param>
         /// <param name="messageData">待签名的数据。</param>
@@ -173,7 +173,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
         }
 
         /// <summary>
-        /// 使用公钥验证签名。
+        /// 使用公钥基于 SHA-256 算法验证签名。
         /// </summary>
         /// <param name="publicKeyBytes">PKCS#8 公钥字节数组。</param>
         /// <param name="messageBytes">待验证的数据字节数组。</param>
@@ -198,7 +198,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
         }
 
         /// <summary>
-        /// 使用公钥验证签名。
+        /// 使用公钥基于 SHA-256 算法验证签名。
         /// </summary>
         /// <param name="publicKeyPem">PKCS#1/PKCS#8 公钥（PEM 格式）。</param>
         /// <param name="messageData">待验证的数据。</param>

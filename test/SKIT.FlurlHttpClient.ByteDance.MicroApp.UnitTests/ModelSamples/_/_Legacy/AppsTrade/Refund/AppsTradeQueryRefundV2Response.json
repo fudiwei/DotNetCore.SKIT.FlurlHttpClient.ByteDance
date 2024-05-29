@@ -1,0 +1,35 @@
+{
+    "data": {
+        "refund_list": [
+            {
+                "refund_at": 1672994501000,
+                "create_at": 1672994428929,
+                "refund_source": 1,
+                "refund_total_amount": 1992,
+                "refund_status": "SUCCESS",
+                "out_refund_no": "ext_refund_no_718536707992153502030519534",
+                "message": "",
+                "item_order_detail": [
+                    {
+                        "item_order_id": "800000000101757849613437984",
+                        "refund_amount": 996
+                    },
+                    {
+                        "item_order_id": "800000000101757824013547984",
+                        "refund_amount": 996
+                    }
+                ],
+                "merchant_audit_detail": {
+                    "audit_status": "AGREE",
+                    "deny_message": "",
+                    "need_refund_audit": 1,
+                    "refund_audit_deadline": 1673253628929
+                },
+                "order_id": "8000000001017577984",
+                "refund_id": "718536707992153502030519534"
+            }
+        ]
+    },
+    "err_no": 0,
+    "err_tips": "success"
+}

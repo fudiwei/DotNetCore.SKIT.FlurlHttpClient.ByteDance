@@ -1,0 +1,16 @@
+{
+    "err_no": 0,
+    "err_tips": "success",
+    "data": {
+        "verify_token": "xxx",
+        "out_order_no": "out123456",
+        "order_id": "ot123456",
+        "certificates": [
+            {
+                "encrypted_code": "xxx",
+                "certificate_id": "123456",
+                "item_order_id": "ot123"
+            }
+        ]
+    }
+}

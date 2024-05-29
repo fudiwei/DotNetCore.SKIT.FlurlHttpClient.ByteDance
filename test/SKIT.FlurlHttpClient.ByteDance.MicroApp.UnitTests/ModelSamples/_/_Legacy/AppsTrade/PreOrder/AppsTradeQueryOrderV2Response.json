@@ -1,0 +1,20 @@
+{
+    "err_no": 0,
+    "err_tips": "success",
+    "data": {
+        "order_id": "mock_order_id",
+        "out_order_no": "mock_out_order_no",
+        "refund_amount": 10000,
+        "settle_amount": 0,
+        "total_fee": 10000,
+        "pay_time": "2021-12-12 00:00:00",
+        "order_status": "SUCCESS",
+        "pay_channel": 1,
+        "channel_pay_id": "2iu208bfi2897r9hflquf",
+        "seller_uid": "287484783",
+        "item_id": "9823789736",
+        "cp_extra": "",
+        "message": "SUCCESS",
+        "payment_order_id": "abc123"
+    }
+}

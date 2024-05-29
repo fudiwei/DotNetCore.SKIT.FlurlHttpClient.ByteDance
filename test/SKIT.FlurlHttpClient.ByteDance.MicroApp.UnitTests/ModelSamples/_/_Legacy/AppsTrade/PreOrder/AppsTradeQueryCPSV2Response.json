@@ -1,0 +1,68 @@
+{
+    "err_no": 0,
+    "err_tips": "success",
+    "data": {
+        "order_id": "ot7073664578173012264",
+        "out_order_no": "ext_ot7073664578173012264",
+        "payment_info": {
+            "pay_time": "2022-03-11 16:28:06",
+            "total_fee": 20,
+            "order_status": "SUCCESS",
+            "pay_channel": 1,
+            "channel_pay_id": "4313601110202203112588448957",
+            "seller_uid": "68882720803499563550",
+            "cp_extra": "",
+            "message": "CPS-团购测试商品"
+        },
+        "cps_info": {
+            "total_commission_amount": 4,
+            "cps_item_list": [
+                {
+                    "commission_amount": 2,
+                    "source_type": 1,
+                    "sell_amount": 10,
+                    "status": 3,
+                    "item_id": "7049587675082263815",
+                    "item_order_id": "ot7073664578173045032",
+                    "commission_rate": 2500,
+                    "commission_user_douyinid": "ax81nd873",
+                    "commission_user_nickname": "小毛驴"
+                },
+                {
+                    "sell_amount": 10,
+                    "status": 2,
+                    "item_id": 7049587675082263815,
+                    "item_order_id": "ot7073664578173061416",
+                    "commission_rate": 2500,
+                    "commission_amount": 2,
+                    "source_type": 1,
+                    "commission_user_douyinid": "ax81nd873",
+                    "commission_user_nickname": "小毛驴"
+                }
+            ]
+        },
+        "refund_info": {
+            "total_refund_amount": 10,
+            "refund_items": [
+                {
+                    "out_refund_no": "12894412389749193299",
+                    "refund_amount": 10,
+                    "refund_status": "已退款",
+                    "refund_at": 1646989887000,
+                    "item_order_id": "ot7073664578173061416"
+                }
+            ]
+        },
+        "delivery_info": {
+            "total_delivery_amount": 10,
+            "delivery_items": [
+                {
+                    "delivery_amount": 10,
+                    "delivery_status": "已核销",
+                    "delivery_at": 1646989889000,
+                    "item_order_id": "ot7073664578173045032"
+                }
+            ]
+        }
+    }
+}

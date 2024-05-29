@@ -1,0 +1,15 @@
+{
+    "err_no": 0,
+    "err_tips": "success",
+    "data": {
+        "verify_results": [
+            {
+                "item_order_id": "ot123",
+                "certificate_code": "888888888888",
+                "result_code": 0,
+                "result_msg": "验券成功",
+                "verify_time": 1658300479000
+            }
+        ]
+    }
+}

@@ -25,6 +25,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
         public string? PushEncodingAESKey { get; set; }
 
         /// <summary>
+        /// 初始化客户端时 <see cref="DouyinMicroAppClientOptions.AppKeyVersion"/> 的副本。
+        /// </summary>
+        public string? AppKeyVersion { get; set; }
+
+        /// <summary>
+        /// 初始化客户端时 <see cref="DouyinMicroAppClientOptions.AppPrivateKey"/> 的副本。
+        /// </summary>
+        public string? AppPrivateKey { get; set; }
+
+        /// <summary>
         /// 初始化客户端时 <see cref="DouyinMicroAppClientOptions.ECPaySalt"/> 的副本。
         /// </summary>
         public string? ECPaySalt { get; }
@@ -37,6 +47,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
             AppSecret = options.AppSecret;
             PushToken = options.PushToken;
             PushEncodingAESKey = options.PushEncodingAESKey;
+            AppKeyVersion = options.AppKeyVersion;
+            AppPrivateKey = options.AppPrivateKey;
             ECPaySalt = options.ECPaySalt;
         }
     }

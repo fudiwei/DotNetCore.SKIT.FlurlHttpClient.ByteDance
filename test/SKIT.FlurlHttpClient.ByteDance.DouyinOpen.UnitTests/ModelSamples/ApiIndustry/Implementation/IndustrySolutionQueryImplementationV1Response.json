@@ -1,0 +1,49 @@
+{
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "02168674325065300000000000000000000ffff0a9a6263be866c",
+        "now": 1686743253
+    },
+    "solution_eff_ability_impl_list": [
+        {
+            "extension_ability_impl_list": [
+                {
+                    "ability_identity": "/ext/common/test/runtime_field_test",
+                    "app_id": "tt0feb7956908c100401",
+                    "industry_code": "test-stress",
+                    "name": "Tesla自动化_solution_open_api扩展点",
+                    "prod_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/custom_debug",
+                    "test_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/dev/custom_debug"
+                },
+                {
+                    "app_id": "tt0feb7956908c100401",
+                    "industry_code": "test-stress",
+                    "name": "压测扩展点",
+                    "prod_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/custom_debug",
+                    "test_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/dev/custom_debug",
+                    "ability_identity": "/ext/common/test/stress"
+                }
+            ],
+            "message_ability_impl_list": [
+                {
+                    "test_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/dev/custom_debug",
+                    "ability_identity": "/msg/common/test/runtime_field_test",
+                    "app_id": "tt0feb7956908c100401",
+                    "industry_code": "test-stress",
+                    "name": "Tesla自动化_solution_open_api消息",
+                    "prod_url": "https://open-platform-qa-boe.byted.org/api/trade/common/v2/custom_debug"
+                }
+            ],
+            "solution_id": "7271144788200628249"
+        }
+    ],
+    "app_config_item_list": [
+        {
+            "identity": "/cfg/trade/fulfillment/qrcode_redirect",
+            "value": "https://ss.com/app/open/delivery_qrcode_redirect"
+        }
+    ]
+}

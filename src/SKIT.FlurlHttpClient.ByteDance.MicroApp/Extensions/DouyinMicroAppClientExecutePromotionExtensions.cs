@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ActivityId)), "activity_id");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PopupType.ToString())), "popup_type");
 
-            return await client.SendFlurlRequestAsJsonAsync<Models.PromotionActivityUploadPopupScreenshotV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequestAsync<Models.PromotionActivityUploadPopupScreenshotV2Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>

@@ -622,7 +622,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/apps/ecpay/saas/query_merchant_balance 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query-balance ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/ecpay/withdraw/query-balance ]]> <br/>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

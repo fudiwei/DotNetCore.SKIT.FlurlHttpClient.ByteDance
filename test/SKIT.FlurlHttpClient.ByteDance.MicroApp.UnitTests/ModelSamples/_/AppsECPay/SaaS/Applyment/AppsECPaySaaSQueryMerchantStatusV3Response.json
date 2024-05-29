@@ -1,0 +1,34 @@
+{
+    "err_msg": "success",
+    "log_id": "yRJrlfogxi",
+    "data": {
+        "merchant_status_info": {
+            "5e4y4Y2l5S": {
+                "legal_sign_url": "AF5SUWDo0s",
+                "merchant_id": "CPax8PR5dQ",
+                "status": "QIwYvDgme1",
+                "reject_reason": "QYzoZQ9LB5",
+                "legal_validation_url": "0KNesLpxfM"
+            }
+        },
+        "new_merchant_status_info": {
+            "sZvUWnAayq": {
+                "legal_sign_url": "Ry2tHgEvsL",
+                "merchant_id": "FsCIjY7tKc",
+                "status": "mAwX0ELvbS",
+                "reject_reason": "P1GAIOU5cT",
+                "legal_validation_url": "8DbTFSbHiY"
+            }
+        },
+        "pay_status_info": {
+            "oMAGpUwKP4": {
+                "reject_reason": "XY8TOQ2YRf",
+                "legal_validation_url": "cVO0tu6Waz",
+                "legal_sign_url": "DS36focjPl",
+                "merchant_id": "aMlPuLJ98M",
+                "status": "eAAfSzJFWT"
+            }
+        }
+    },
+    "err_no": 0
+}

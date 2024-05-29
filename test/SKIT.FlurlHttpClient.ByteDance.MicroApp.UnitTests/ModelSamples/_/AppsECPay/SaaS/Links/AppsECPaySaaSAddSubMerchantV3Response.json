@@ -1,0 +1,9 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202310061616226C30B180133AE61392D7",
+    "data": {
+        "url": "https://pay-merchant.bytedance.com/embed-merchant/v2/status?app_id=800078773621&mainbody_customize=&merchant_id=1200007877&sign=3JAOS-KXjFwYybEIYXvdC53bHjix9O_LDCuTGsIdlYCJ7KiD1wo73tQO6787CTQIO3B8fkrvo-Lhcew3wbBAvgljWC1UreIYyRSqJ5KdYisjAS6_UYK8PK695lBrZ4usaKi1FsCOXv-sB2t-Y8JP1kHpoPXuP1BKH6QhawQYmI8k67kpBWUsPYbpwM0d8XaQDMT7oqKw9pg5LqkmRc_jBA&uid=70832947030972357482&uid_type=1002",
+        "merchant_id": "70832947030972357482"
+    }
+}

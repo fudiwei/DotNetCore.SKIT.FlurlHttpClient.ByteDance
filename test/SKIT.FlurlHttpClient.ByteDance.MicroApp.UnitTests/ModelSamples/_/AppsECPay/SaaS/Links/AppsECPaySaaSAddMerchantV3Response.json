@@ -1,0 +1,9 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "202310061616226C30B180133AE61392D7",
+    "data": {
+        "merchant_id": "69929319333434329240",
+        "url": "https://tp-pay.snssdk.com/embed-merchant/status?app_id=xxx&merchant_id=xxx&sign=3JAOS-KXjFwYybEIYXvdC52DBxESU2ru_d0Cb0wzt7beJdqxj9c3Ig903xfJ4te5o3SGoe2Z_ED7lXrcY3SjIJHdCch7vNaSWLYIG_L7tzEDydESvyV2IcK7IOs6tKlPqzZvaTr1McI_OAZKrhorcrHMspQgcyIEVR6aNW0Cn81N82CS6Nd3hM0QV05tBCkVwimaWOuG7_4PaTzaulgyWw&uid=xxx&uid_type=xxx"
+    }
+}

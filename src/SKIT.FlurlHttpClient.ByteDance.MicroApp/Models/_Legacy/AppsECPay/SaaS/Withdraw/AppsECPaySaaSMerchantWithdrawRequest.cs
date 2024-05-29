@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/merchant_withdraw 接口的请求。</para>
@@ -18,6 +18,13 @@
         [Newtonsoft.Json.JsonProperty("app_id")]
         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
         public string? AppId { get; set; }
+
+        /// <summary>
+        /// 获取或设置商户主体标识。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("merchant_entity")]
+        [System.Text.Json.Serialization.JsonPropertyName("merchant_entity")]
+        public int? MerchantEntity { get; set; }
 
         /// <summary>
         /// 获取或设置商户号。

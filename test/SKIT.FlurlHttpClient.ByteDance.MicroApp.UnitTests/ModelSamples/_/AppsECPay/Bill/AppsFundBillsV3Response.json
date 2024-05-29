@@ -1,0 +1,10 @@
+{
+    "data": {
+        "fund_bill_list": [
+            "https://developer.toutiao.com/wsos_v2/wallet_open_bill_v3_file/object/wsos656486e7f7c2cb36?expire=1701108747&skipCookie=true&timeStamp=1701087147&sign=b6b41ee67fa35a1sdfsdfsfsdhhhhb380ac770f3c48ec4asdfas60e5"
+        ]
+    },
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "20231127201227A1F9E573148674091873"
+}

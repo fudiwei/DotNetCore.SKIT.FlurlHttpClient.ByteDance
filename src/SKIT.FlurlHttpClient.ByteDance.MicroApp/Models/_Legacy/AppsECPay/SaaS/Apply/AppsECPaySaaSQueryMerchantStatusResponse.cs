@@ -49,38 +49,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         }
 
         /// <summary>
-        /// 获取或设置微信支付渠道进件状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("wx")]
-        [System.Text.Json.Serialization.JsonPropertyName("wx")]
-        public int WechatpayStatus { get; set; }
-
-        /// <summary>
-        /// 获取或设置支付宝支付渠道进件状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("alipay")]
-        [System.Text.Json.Serialization.JsonPropertyName("alipay")]
-        public int AlipayStatus { get; set; }
-
-        /// <summary>
-        /// 获取或设置合众支付渠道进件状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("hz")]
-        [System.Text.Json.Serialization.JsonPropertyName("hz")]
-        public int UlpayStatus { get; set; }
-
-        /// <summary>
-        /// 获取或设置易宝支付渠道进件状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("yeepay")]
-        [System.Text.Json.Serialization.JsonPropertyName("yeepay")]
-        public int YeepayStatus { get; set; }
-
-        /// <summary>
-        /// 获取或设置渠道状态信息字典。
+        /// 获取或设置抖音信息主体渠道进件状态信息字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_status_info")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_status_info")]
         public IDictionary<string, Types.MerchantStatusInfo>? MerchantStatusInfoMap { get; set; }
+
+        /// <summary>
+        /// 获取或设置光合信号主体渠道进件状态信息字典。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("new_merchant_status_info")]
+        [System.Text.Json.Serialization.JsonPropertyName("new_merchant_status_info")]
+        public IDictionary<string, Types.MerchantStatusInfo>? NewMerchantStatusInfoMap { get; set; }
+
+        /// <summary>
+        /// 获取或设置担保支付企业版渠道进件状态信息字典。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("pay_status_info")]
+        [System.Text.Json.Serialization.JsonPropertyName("pay_status_info")]
+        public IDictionary<string, Types.MerchantStatusInfo>? PayStatusInfoMap { get; set; }
     }
 }

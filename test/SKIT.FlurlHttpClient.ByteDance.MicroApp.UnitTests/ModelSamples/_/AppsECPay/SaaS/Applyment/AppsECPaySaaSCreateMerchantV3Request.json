@@ -1,0 +1,106 @@
+{
+    "app_id": "ttappid1231231",
+    "thirdparty_id": "",
+    "sub_merchant_id": "ttsubmerchantid1231",
+    "type": 1,
+    "callback_url": "",
+    "channels": [
+        "hz",
+        "alipay",
+        "wx"
+    ],
+    "merchant_type": 2,
+    "merchant_name": "测试商户名称",
+    "merchant_short_name": "测试",
+    "province_code": "110000",
+    "city_code": "110100",
+    "district_code": "110105",
+    "registered_addr": "京市海淀区xxxx",
+    "business_license": {
+        "business_license_type": 3,
+        "business_license_code": "1231123112",
+        "business_license_picurl": [
+            {
+                "channel": "hz",
+                "url": "asdasda1212.jepg"
+            },
+            {
+                "channel": "wx",
+                "url": "tos-cn-i-01omznotxb/asdasda"
+            },
+            {
+                "channel": "alipay",
+                "url": "tos-cn-i-01omznotxb/asdaasd"
+            }
+        ],
+        "begin_date": "20210917",
+        "end_date": "20510916"
+    },
+    "legal_person": {
+        "id_type": 1,
+        "id_no": "123121",
+        "name": "测试",
+        "front_pic_url": [
+            {
+                "channel": "hz",
+                "url": "tos-cn-i-01omznotxb/12312"
+            },
+            {
+                "channel": "wx",
+                "url": "tos-cn-i-01omznotxb/1231"
+            },
+            {
+                "channel": "alipay",
+                "url": "tos-cn-i-01omznotxb/1231"
+            }
+        ],
+        "back_pic_url": [
+            {
+                "channel": "hz",
+                "url": "tos-cn-i-01omznotxb/1231"
+            },
+            {
+                "channel": "wx",
+                "url": "tos-cn-i-01omznotxb/1231"
+            },
+            {
+                "channel": "alipay",
+                "url": "tos-cn-i-01omznotxb/1231"
+            }
+        ],
+        "begin_date": "20220201",
+        "exp_date": "20400527",
+        "address": "122344"
+    },
+    "merchant_card_info": {
+        "account_name": "测试accountname",
+        "account_no": "123211",
+        "bank_full_name": "测试银行",
+        "settle_type": 2,
+        "card_type": "DC",
+        "alipay_settle_type": 1,
+        "alipay_account_no": ""
+    },
+    "merchant_operation_info": {
+        "manage_name": "测试",
+        "manage_mobile": "183xxxx1211",
+        "manage_person_type": 1,
+        "manage_id_no": "12312231231",
+        "manage_email": "ceshi@qq.com",
+        "shop_name": "测试小店",
+        "shop_url": "https://microapp.bytedance.com",
+        "id_type": 0,
+        "id_begin_date": "",
+        "id_exp_date": "",
+        "id_front_pic_url": "",
+        "id_back_pic_url": "",
+        "business_authorization_letter": "",
+        "alipay_account_no": "123112"
+    },
+    "industry_code": [
+        "7011"
+    ],
+    "out_order_id": "123121131",
+    "create_name": "12312312312312",
+    "beneficiary_type": "LEGAL"
+}

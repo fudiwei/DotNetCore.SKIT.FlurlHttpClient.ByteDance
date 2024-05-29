@@ -49,11 +49,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public string Status { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置退款金额（单位：分）。
+                        /// 获取或设置退款总金额（单位：分）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_total_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_total_amount")]
-                        public int RefundAmount { get; set; }
+                        public int RefundTotalAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置退款原因。

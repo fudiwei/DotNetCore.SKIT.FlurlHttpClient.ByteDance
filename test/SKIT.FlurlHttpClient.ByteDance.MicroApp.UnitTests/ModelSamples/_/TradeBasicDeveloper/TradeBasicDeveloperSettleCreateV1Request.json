@@ -1,0 +1,8 @@
+{
+    "out_order_no": "out_order_example_1",
+    "out_settle_no": "out_settle_example_1",
+    "settle_desc": "分账描述",
+    "settle_params": "[{\"merchant_uid\":\"分账方商户号1\",\"amount\":100}]",
+    "ext": "test",
+    "notify_url": "https://www.xxxx.com"
+}

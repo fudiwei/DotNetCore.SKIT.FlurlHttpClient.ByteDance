@@ -1,9 +1,6 @@
-﻿{
+{
     "err_no": 0,
     "err_tips": "",
-    "wx": 1,
-    "alipay": 1,
-    "hz": 0,
     "merchant_status_info": {
         "alipay": {
             "status": "SUCCESS",
@@ -26,6 +23,5 @@
             "legal_sign_url": "",
             "merchant_id": "69824283230789983130"
         }
-    },
-    "yeepay": 0
+    }
 }

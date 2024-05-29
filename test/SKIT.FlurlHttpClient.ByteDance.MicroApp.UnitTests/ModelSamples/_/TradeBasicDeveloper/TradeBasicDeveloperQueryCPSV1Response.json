@@ -1,0 +1,24 @@
+{
+    "log_id": "ZENl7Tyibl",
+    "data": {
+        "order_id": "55mL78Gm1c",
+        "out_order_no": "S7dyiECO4T",
+        "total_commission_amount": 1,
+        "cps_item_list": [
+            {
+                "commission_amount": 1,
+                "commission_user_nickname": "owxulioyCe",
+                "source_type": 1,
+                "commission_rate": 1,
+                "sell_amount": 1,
+                "commission_user_douyinid": "d6jZBvnONT",
+                "task_id": "cclOwkyvq6",
+                "item_order_id": "65tbsv9DF8",
+                "status": 1,
+                "item_id": 3102676463474216000
+            }
+        ]
+    },
+    "err_no": 1,
+    "err_msg": "RDefuZRvyF"
+}

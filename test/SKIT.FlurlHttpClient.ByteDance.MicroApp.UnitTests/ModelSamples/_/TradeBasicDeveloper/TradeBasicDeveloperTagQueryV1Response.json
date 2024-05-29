@@ -1,0 +1,63 @@
+{
+    "data": {
+        "tag_detail_list": [
+            {
+                "tag_group_id": "tag_group_7267090101199847468",
+                "rule_list": [
+                    {
+                        "refund_rule": {
+                            "biz_status": "FULFILL_WAIT",
+                            "merchant_audit_type": 2,
+                            "refund_type": 3
+                        },
+                        "rule_id": "refund_rule_7267012070992805932",
+                        "rule_type": 1
+                    },
+                    {
+                        "refund_rule": {
+                            "biz_status": "FULFILLING",
+                            "merchant_audit_type": 1,
+                            "refund_type": 2
+                        },
+                        "rule_id": "refund_rule_7267012070992838700",
+                        "rule_type": 1
+                    },
+                    {
+                        "refund_rule": {
+                            "biz_status": "FULFILL_DONE",
+                            "merchant_audit_type": 2,
+                            "refund_type": 1
+                        },
+                        "rule_id": "refund_rule_7267012070992871468",
+                        "rule_type": 1
+                    }
+                ],
+                "tag_list": [
+                    {
+                        "biz_line": 2001,
+                        "goods_type": 101,
+                        "tag_descs": [
+                            "号码实名定制前可全额退款"
+                        ],
+                        "tag_id": "tag_7267090101199487020",
+                        "tag_name": "未制卡全额退",
+                        "tag_type": 1
+                    },
+                    {
+                        "tag_name": "制卡后协商退",
+                        "tag_type": 1,
+                        "biz_line": 2001,
+                        "goods_type": 101,
+                        "tag_descs": [
+                            "号码制卡完成后如有特殊退款诉求可与卖家协商退款"
+                        ],
+                        "tag_id": "tag_7267090101199519788"
+                    }
+                ]
+            }
+        ]
+    },
+    "err_msg": "success",
+    "err_no": 0,
+    "log_id": "02169279434515800000000000000000000ffff0a9824e43dffea"
+}

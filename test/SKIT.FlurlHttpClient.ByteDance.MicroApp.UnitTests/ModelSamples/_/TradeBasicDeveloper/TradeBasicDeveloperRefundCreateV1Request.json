@@ -1,0 +1,23 @@
+{
+    "order_id": "motb123123131",
+    "out_refund_no": "ext_123123",
+    "cp_extra": "extra_info",
+    "order_entry_schema": {
+        "path": "page/xxx",
+        "params": "{\"id\":1}"
+    },
+    "refund_total_amount": 100,
+    "notify_url": "https://xxx",
+    "item_order_detail": [
+        {
+            "item_order_id": "xxx",
+            "refund_amount": 100
+        }
+    ],
+    "refund_reason": [
+        {
+            "code": 101,
+            "text": "不想要了"
+        }
+    ]
+}

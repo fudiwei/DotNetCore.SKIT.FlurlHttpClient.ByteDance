@@ -507,7 +507,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_evidences")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_evidences")]
-        public IList<string>? ExtraEvidenceImageIdList { get; set; }
+        public IList<string>? ExtendedEvidenceImageIdList { get; set; }
 
         /// <summary>
         /// 获取或设置行业资质图片 ID 列表。

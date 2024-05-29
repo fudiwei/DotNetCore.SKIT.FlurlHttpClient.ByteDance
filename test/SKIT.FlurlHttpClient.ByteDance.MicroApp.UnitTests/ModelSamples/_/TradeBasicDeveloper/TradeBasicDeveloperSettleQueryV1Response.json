@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "settle_amount": 20,
+            "cp_extra": "",
+            "out_settle_no": "out_settle_id_motb72736435031531871160652",
+            "order_id": "motb72736435031531871160652",
+            "out_order_no": "test_1693540312890",
+            "platform_ticket": 0,
+            "rake": 0,
+            "settle_at": 1693540334000,
+            "settle_detail": "商户号boe_real_pay-分成金额(分)4",
+            "commission": 16,
+            "item_order_id": "",
+            "settle_id": "ots72735132864850025400652",
+            "settle_status": "SUCCESS"
+        }
+    ],
+    "err_msg": "",
+    "err_no": 0,
+    "log_id": "2023090114051928011C13A3AFCC67A50E"
+}

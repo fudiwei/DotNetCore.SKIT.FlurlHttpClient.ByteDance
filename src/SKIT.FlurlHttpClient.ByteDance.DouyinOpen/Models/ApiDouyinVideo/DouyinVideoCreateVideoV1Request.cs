@@ -7,12 +7,67 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     /// </summary>
     public class DouyinVideoCreateVideoV1Request : DouyinOpenRequest
     {
+        public static class Types
+        {
+            public class VRTranscodeParameter
+            {
+                public static class Types
+                {
+                    public class VideoStyle
+                    {
+                        /// <summary>
+                        /// 获取或设置维度。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("dimention")]
+                        [System.Text.Json.Serialization.JsonPropertyName("dimention")]
+                        public int Dimention { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置投影模式。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("projection_model")]
+                        [System.Text.Json.Serialization.JsonPropertyName("projection_model")]
+                        public int ProjectionModel { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置视野范围。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("vstyle")]
+                        [System.Text.Json.Serialization.JsonPropertyName("vstyle")]
+                        public int ViewSize { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置视频类型。
+                        /// <para>默认值：1</para>
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("view_size")]
+                        [System.Text.Json.Serialization.JsonPropertyName("view_size")]
+                        public int Style { get; set; } = 1;
+                    }
+                }
+
+                /// <summary>
+                /// 获取或设置视频格式。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("video_style")]
+                [System.Text.Json.Serialization.JsonPropertyName("video_style")]
+                public Types.VideoStyle? VideoStyle { get; set; }
+            }
+        }
+
         /// <summary>
         /// 获取或设置用户唯一标识。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string OpenId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置中介 ClientKey。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("agent_client_key")]
+        [System.Text.Json.Serialization.JsonPropertyName("agent_client_key")]
+        public string? AgentClientKey { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID。
@@ -134,10 +189,38 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public IList<string>? AtUserOpenIdList { get; set; }
 
         /// <summary>
+        /// 获取或设置下载类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("download_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("download_type")]
+        public int? DownloadType { get; set; }
+
+        /// <summary>
+        /// 获取或设置可见范围控制状态。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("private_status")]
+        [System.Text.Json.Serialization.JsonPropertyName("private_status")]
+        public int? PrivateStatus { get; set; }
+
+        /// <summary>
         /// 获取或设置影视 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ent_id")]
         [System.Text.Json.Serialization.JsonPropertyName("ent_id")]
         public string? EntertainmentId { get; set; }
+
+        /// <summary>
+        /// 获取或设置任务 ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("task_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("task_id")]
+        public string? TaskId { get; set; }
+
+        /// <summary>
+        /// 获取或设置全景视频参数信息。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("vr_transcode_extra_params")]
+        [System.Text.Json.Serialization.JsonPropertyName("vr_transcode_extra_params")]
+        public Types.VRTranscodeParameter? VRTranscodeParameter { get; set; }
     }
 }

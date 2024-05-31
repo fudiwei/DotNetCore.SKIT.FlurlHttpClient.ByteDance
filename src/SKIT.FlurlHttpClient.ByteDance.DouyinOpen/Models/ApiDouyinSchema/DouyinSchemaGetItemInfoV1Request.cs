@@ -26,6 +26,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("expire_at")]
         [System.Text.Json.Serialization.JsonPropertyName("expire_at")]
-        public long ExpireTimestamp { get; set; }
+        public long? ExpireTimestamp { get; set; }
     }
 }

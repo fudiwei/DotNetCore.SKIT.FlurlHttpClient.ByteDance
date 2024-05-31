@@ -1,0 +1,37 @@
+{
+    "data": {
+        "order_id": "80000088",
+        "can_use": true,
+        "certificates": [
+            {
+                "certificate_id": "71817",
+                "expire_time": 1703260799,
+                "sku_info": {
+                    "account_id": "12345",
+                    "sku_id": "123",
+                    "title": "测试商品",
+                    "groupon_type": 1,
+                    "market_price": 20,
+                    "sold_start_time": 1672123976,
+                    "third_sku_id": ""
+                },
+                "amount": {
+                    "original_amount": 20,
+                    "pay_amount": 20,
+                    "merchant_ticket_amount": 0,
+                    "payment_discount_amount": 0,
+                    "coupon_pay_amount": 20
+                },
+                "start_time": 1672138509
+            }
+        ]
+    },
+    "extra": {
+        "now": 1663745962686,
+        "logid": "2022092115392201020812109511046",
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": ""
+    }
+}

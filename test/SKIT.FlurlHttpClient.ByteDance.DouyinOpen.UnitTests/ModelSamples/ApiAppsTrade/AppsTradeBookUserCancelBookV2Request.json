@@ -1,0 +1,8 @@
+{
+    "book_id": "mock_book_id",
+    "open_id": "xxxxxxxxxx",
+    "cancel_reason": [
+        "xxxxxx",
+        "xxxxxx"
+    ]
+}

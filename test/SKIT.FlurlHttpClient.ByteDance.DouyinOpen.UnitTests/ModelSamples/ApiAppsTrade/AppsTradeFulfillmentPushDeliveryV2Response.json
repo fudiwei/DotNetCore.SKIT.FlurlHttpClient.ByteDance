@@ -1,0 +1,28 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "verify_results": [
+            {
+                "certificate_id": "7225579753535704",
+                "item_order_id": "80000000613679534",
+                "verify_id": "72255394060460",
+                "verify_time": 1682341467000
+            },
+            {
+                "certificate_id": "722557935766572",
+                "item_order_id": "80000000026899213749534",
+                "verify_id": "72255390118243228",
+                "verify_time": 1682341467000
+            }
+        ]
+    },
+    "extra": {
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "2022092115392201020812109511046",
+        "now": 1663745962686,
+        "error_code": 0,
+        "description": "success"
+    }
+}

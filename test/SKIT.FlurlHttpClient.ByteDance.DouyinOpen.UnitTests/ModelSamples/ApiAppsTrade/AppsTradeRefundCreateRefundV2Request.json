@@ -1,0 +1,18 @@
+{
+    "out_order_no": "123123131",
+    "out_refund_no": "123123",
+    "cp_extra": "extra_info",
+    "order_entry_schema": {
+        "path": "page/xxx",
+        "params": "{\"id\":1}"
+    },
+    "notify_url": "https://xxx",
+    "item_order_detail": [
+        {
+            "item_order_id": "xxx"
+        }
+    ],
+    "times_card_refund_param": {
+        "times_card_refund_type": 1
+    }
+}

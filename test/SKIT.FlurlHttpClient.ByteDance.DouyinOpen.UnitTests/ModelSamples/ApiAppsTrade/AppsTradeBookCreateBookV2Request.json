@@ -1,0 +1,44 @@
+{
+    "order_id": "ot7117199930837961004",
+    "out_book_no": "zxsw4443rette54ert53",
+    "open_id": "194437895436262",
+    "item_book_info_list": [
+        {
+            "book_end_time": 1657110479000,
+            "book_start_time": 1657110478000,
+            "ext_shop_id": "2341",
+            "goods_id": "7116799885390841900",
+            "poi_id": "4355",
+            "shop_name": "345245",
+            "user_info_list": [
+                {
+                    "id_card_no": "123456789012345678",
+                    "name": "zxs",
+                    "phone": "12321234322"
+                }
+            ]
+        },
+        {
+            "book_end_time": 1657110479000,
+            "book_start_time": 1657110478000,
+            "ext_shop_id": "2341",
+            "goods_id": "7116799885390841900",
+            "poi_id": "4355",
+            "shop_name": "345245",
+            "user_info_list": [
+                {
+                    "id_card_no": "123456789012345678",
+                    "name": "zxs",
+                    "phone": "12321234322"
+                }
+            ]
+        }
+    ],
+    "markup_info": {
+        "total_amount": 5,
+        "out_markup_no": "zxsw123512dadqweqe",
+        "order_entry_schema": {
+            "path": "page/order"
+        }
+    }
+}

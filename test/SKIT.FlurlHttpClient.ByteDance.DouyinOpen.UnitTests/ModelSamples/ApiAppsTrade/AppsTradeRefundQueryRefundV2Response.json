@@ -1,0 +1,42 @@
+{
+    "data": {
+        "refund_list": [
+            {
+                "merchant_audit_detail": {
+                    "audit_status": "AGREE",
+                    "need_refund_audit": 1,
+                    "refund_audit_deadline": 1673253628929
+                },
+                "create_at": 1671994501000,
+                "refund_source": 1,
+                "refund_at": 1672994501000,
+                "refund_status": "SUCCESS",
+                "refund_total_amount": 1992,
+                "item_order_detail": [
+                    {
+                        "item_order_id": "800000000101757849613437984",
+                        "refund_amount": 996
+                    },
+                    {
+                        "refund_amount": 996,
+                        "item_order_id": "800000000101757824013547984"
+                    }
+                ],
+                "message": "",
+                "order_id": "8000000001017577984",
+                "out_refund_no": "ext_refund_no_718536707992153502030519534",
+                "refund_id": "718536707992153502030519534"
+            }
+        ],
+        "error_code": 0,
+        "description": ""
+    },
+    "extra": {
+        "error_code": 0,
+        "description": "",
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "02168173575240700000000000000000000ffff0a706f38ab32d2",
+        "now": 1681735753
+    }
+}

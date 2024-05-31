@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "out_order_no": "out_order_example_1",
+            "out_settle_no": "out_settle_example_1",
+            "order_id": "ot7053735385750849836",
+            "settle_id": "ot7053723547314981164",
+            "settle_amount": 1000,
+            "settle_status": "SUCCESS",
+            "settle_detail": "商户号68882720803499563550-分成金额(分)840",
+            "settle_time": 1639733782000,
+            "rake": 60,
+            "commission": 100,
+            "cp_extra": "test"
+        }
+    ],
+    "extra": {
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "2022092115392201020812109511046",
+        "now": 1663745962686,
+        "error_code": 0,
+        "description": "success"
+    }
+}

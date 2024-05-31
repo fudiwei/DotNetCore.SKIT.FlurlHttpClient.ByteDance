@@ -1,0 +1,24 @@
+{
+    "data": {
+        "error_code": 0,
+        "description": "success",
+        "verify_results": [
+            {
+                "item_order_id": "ot123",
+                "certificate_code": "888888888888",
+                "result_code": 0,
+                "result_msg": "验券成功",
+                "verify_time": 1658300479000,
+                "verify_id": "83717297362537"
+            }
+        ]
+    },
+    "extra": {
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "2022092115392201020812109511046",
+        "now": 1663745962686,
+        "error_code": 0,
+        "description": "success"
+    }
+}

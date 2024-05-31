@@ -1,0 +1,40 @@
+{
+    "goods_list": [
+        {
+            "quantity": 1,
+            "price": 100,
+            "goods_title": "火锅团购",
+            "goods_image": "https://xxx",
+            "labels": "随时退|免预约",
+            "goods_id": "goods_1",
+            "goods_id_type": 2,
+            "discount_amount": 0,
+            "date_rule": "周一至周日可用",
+            "goods_page": {
+                "path": "goods/infoxxxx",
+                "params": "{\"id\":\"xxxxxx\"}"
+            },
+            "order_valid_time": {
+                "valid_duration": 100000
+            },
+            "goods_book_info": {
+                "book_type": 2,
+                "cancel_policy": 1
+            }
+        }
+    ],
+    "total_amount": 100,
+    "discount_amount": 20,
+    "phone_num": "19273654356",
+    "contact_name": "张三",
+    "extra": "xxx",
+    "open_id": "xxx",
+    "out_order_no": "132324",
+    "pay_notify_url": "https://xxxx",
+    "pay_expire_seconds": 500,
+    "order_entry_schema": {
+        "path": "pages/xxxindexxxx",
+        "params": "{\"id\":\"xxxxxx\"}"
+    },
+    "cp_extra": "xxxxx"
+}

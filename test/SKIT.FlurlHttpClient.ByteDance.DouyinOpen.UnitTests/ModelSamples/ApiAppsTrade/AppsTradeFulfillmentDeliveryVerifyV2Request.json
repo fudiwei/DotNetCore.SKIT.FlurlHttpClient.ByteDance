@@ -1,0 +1,11 @@
+{
+    "verify_token": "xxx",
+    "order_id": "ot123456",
+    "certificates": [
+        {
+            "encrypted_code": "xxx",
+            "certificate_id": "123456"
+        }
+    ],
+    "poi_info": "{\"shop_name\":\"xx门店\",\"ext_valid_shop_id\":\"x0001\",\"valid_poi_id_str\":\"6601136930455291912\"}"
+}

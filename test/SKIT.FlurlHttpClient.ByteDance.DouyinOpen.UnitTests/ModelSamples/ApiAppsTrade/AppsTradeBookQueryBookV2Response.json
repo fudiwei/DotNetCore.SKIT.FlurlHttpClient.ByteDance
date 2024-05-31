@@ -1,0 +1,50 @@
+{
+    "data": {
+        "book_info_list": [
+            {
+                "book_id": "ot7117205804150901036",
+                "order_id": "ot7117226212715923756",
+                "out_book_no": "zxsw4443rette54ert53",
+                "status": "BOOKING",
+                "book_child_info_list": [
+                    {
+                        "book_end_time": 1657111979000,
+                        "book_start_time": 1657111978000,
+                        "goods_id": "711679988841900",
+                        "item_order_id": "ot7117226212715989292",
+                        "poi_id": 4355,
+                        "user_info_list": [
+                            {
+                                "id_card_no": "123456789012345678",
+                                "name": "zxs",
+                                "phone": "12321234322"
+                            }
+                        ]
+                    },
+                    {
+                        "book_end_time": 1657111979000,
+                        "book_start_time": 1657111978000,
+                        "goods_id": "711679988841900",
+                        "item_order_id": "ot71172262127667772",
+                        "poi_id": 4355,
+                        "user_info_list": [
+                            {
+                                "id_card_no": "123456789012345678",
+                                "name": "zxs",
+                                "phone": "12321234322"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "extra": {
+        "sub_error_code": 0,
+        "sub_description": "success",
+        "logid": "2022092115392201020812109511046",
+        "now": 1663745962686,
+        "error_code": 0,
+        "description": "success"
+    }
+}

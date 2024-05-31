@@ -1,0 +1,15 @@
+{
+    "bind_biz_type": 0,
+    "account_id": "7241527302029314092",
+    "delivery_app_info": {
+        "guidance_text_id": "te7249570906215858220",
+        "button_text_id": "te7249570906215956524",
+        "display_mode": 1
+    },
+    "product_double_open_info": {
+        "guidance_text_id": "te7248537436261777452",
+        "arrival_store_button_text_id": "te7248537436261842988",
+        "arrival_home_button_text_id": "te7270026298611761196",
+        "display_mode": 1
+    }
+}

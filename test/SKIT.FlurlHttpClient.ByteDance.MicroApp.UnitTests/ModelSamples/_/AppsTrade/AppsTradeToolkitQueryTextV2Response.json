@@ -1,0 +1,26 @@
+{
+    "err_no": 0,
+    "err_msg": "",
+    "log_id": "20230828141549451692B53DC7C65C0359",
+    "data": {
+        "text_list": [
+            {
+                "text_content_list": [
+                    {
+                        "text_content": "小程序提前用，到店享服务",
+                        "text_id": "te72485374xxxxxxx"
+                    },
+                    {
+                        "text_content": "提前线上选座，到店直接观影",
+                        "text_id": "te72485374362617xxxx"
+                    },
+                    {
+                        "text_content": "立即点单，配送到家",
+                        "text_id": "te724853743626xxxxx"
+                    }
+                ],
+                "text_type": 1
+            }
+        ]
+    }
+}

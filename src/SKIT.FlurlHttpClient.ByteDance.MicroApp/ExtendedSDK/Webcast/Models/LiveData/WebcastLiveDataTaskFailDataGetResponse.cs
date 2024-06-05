@@ -18,6 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("roomid")]
                         [System.Text.Json.Serialization.JsonPropertyName("roomid")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                         public string RoomId { get; set; } = default!;
 
                         /// <summary>

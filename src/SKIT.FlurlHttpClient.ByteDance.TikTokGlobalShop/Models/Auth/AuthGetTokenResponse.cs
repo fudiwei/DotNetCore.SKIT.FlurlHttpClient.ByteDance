@@ -64,6 +64,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("seller_base_region")]
                 [System.Text.Json.Serialization.JsonPropertyName("seller_base_region")]
                 public string? SellerBaseRegion { get; set; }
+
+                /// <summary>
+                /// 获取或设置已授权的权限列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("granted_permissions")]
+                [System.Text.Json.Serialization.JsonPropertyName("granted_permissions")]
+                public string[]? GrantedPermissionList { get; set; }
             }
         }
     }

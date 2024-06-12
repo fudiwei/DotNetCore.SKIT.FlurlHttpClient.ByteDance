@@ -21,6 +21,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         }
 
         /// <summary>
+        /// 获取或设置分类版本。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("category_version")]
+        [System.Text.Json.Serialization.JsonPropertyName("category_version")]
+        public string? CategoryVersion { get; set; }
+
+        /// <summary>
         /// 获取或设置商品标题。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_title")]

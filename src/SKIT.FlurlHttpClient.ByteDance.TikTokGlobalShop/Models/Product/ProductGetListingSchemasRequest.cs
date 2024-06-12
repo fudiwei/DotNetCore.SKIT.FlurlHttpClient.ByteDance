@@ -23,6 +23,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public IList<string> CategoryIdList { get; set; } = new List<string>();
 
         /// <summary>
+        /// 获取或设置分类版本。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? CategoryVersion { get; set; }
+
+        /// <summary>
         /// 获取或设置本地化语种。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]

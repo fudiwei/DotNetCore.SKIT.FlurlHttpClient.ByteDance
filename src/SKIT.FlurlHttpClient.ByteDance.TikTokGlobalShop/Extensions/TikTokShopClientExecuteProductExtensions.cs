@@ -29,6 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "brands")
                 .SetQueryParam("category_id", request.CategoryId)
+                .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("brand_name", request.BrandName)
                 .SetQueryParam("page_size", request.PageSize)
                 .SetQueryParam("page_token", request.PageToken);
@@ -81,6 +82,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "categories")
+                .SetQueryParam("keyword", request.Keyword)
+                .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("locale", request.Locale);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetCategoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -103,7 +106,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "categories", request.CategoryId, "rules");
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "categories", request.CategoryId, "rules")
+                .SetQueryParam("category_version", request.CategoryVersion);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetCategoryRulesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -126,6 +130,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "categories", request.CategoryId, "attributes")
+                .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("locale", request.Locale);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetCategoryAttributesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -822,6 +827,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "listing_schemas")
                 .SetQueryParam("category_ids", $"[{string.Join(",", request.CategoryIdList)}]")
+                .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("locale", request.Locale);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetListingSchemasResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

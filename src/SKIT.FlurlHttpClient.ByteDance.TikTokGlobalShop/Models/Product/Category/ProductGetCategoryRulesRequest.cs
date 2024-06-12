@@ -11,5 +11,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string CategoryId { get; set; } = string.Empty;
+
+        /// <summary>
+        /// 获取或设置分类版本。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? CategoryVersion { get; set; }
     }
 }

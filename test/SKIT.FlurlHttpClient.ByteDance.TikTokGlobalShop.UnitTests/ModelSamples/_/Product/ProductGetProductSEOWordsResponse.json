@@ -1,0 +1,17 @@
+{
+    "code": 0,
+    "data": {
+        "products": [
+            {
+                "id": "12345",
+                "seo_words": [
+                    {
+                        "text": "dress"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

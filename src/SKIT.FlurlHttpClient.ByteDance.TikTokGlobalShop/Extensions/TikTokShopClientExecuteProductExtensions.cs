@@ -431,7 +431,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "images", "upload");
 
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "data");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.UseCase)), "use_case");
+            if (request.UseCase is not null)
+                httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.UseCase)), "use_case");
+
             return await client.SendFlurlRequestAsync<Models.ProductUploadImageResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
@@ -463,6 +465,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.FileName, fileBytes: request.FileBytes, fileContentType: request.FileContentType, formDataName: "data");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.FileName)), "name");
             return await client.SendFlurlRequestAsync<Models.ProductUploadFileResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/images/optimize 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/665692b35d39dc02deb49a97 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductOptimizeImagesResponse> ExecuteProductOptimizeImagesAsync(this TikTokShopClient client, Models.ProductOptimizeImagesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "images", "optimize");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductOptimizeImagesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 
@@ -801,6 +825,75 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("locale", request.Locale);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetListingSchemasResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /product/{version}/products/diagnoses 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/665048f380b6b302e73917d9 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductGetProductDiagnosesResponse> ExecuteProductGetProductDiagnosesAsync(this TikTokShopClient client, Models.ProductGetProductDiagnosesRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "diagnoses")
+                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductDiagnosesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /product/{version}/products/seo_words 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/66504921e2c24802e66f1a85 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductGetProductSEOWordsResponse> ExecuteProductGetProductSEOWordsAsync(this TikTokShopClient client, Models.ProductGetProductSEOWordsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "seo_words")
+                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductSEOWordsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /product/{version}/products/suggestions 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/66504931a0778602df120244 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductGetProductSuggestionsResponse> ExecuteProductGetProductSuggestionsAsync(this TikTokShopClient client, Models.ProductGetProductSuggestionsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "suggestions")
+                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductSuggestionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

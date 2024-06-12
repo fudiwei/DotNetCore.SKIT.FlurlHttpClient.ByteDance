@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
 
         public TikTokShopRequestSigningInterceptor(string baseUrl, string appSecret)
         {
-            _baseUrl = baseUrl;
+            _baseUrl = baseUrl.TrimEnd('/');
             _appSecret = appSecret;
         }
 

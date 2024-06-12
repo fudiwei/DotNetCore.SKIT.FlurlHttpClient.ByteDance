@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "data": {
+        "products": [
+            {
+                "id": "123456",
+                "suggestions": [
+                    {
+                        "field": "TITLE",
+                        "items": [
+                            {
+                                "text": "this is a good title"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

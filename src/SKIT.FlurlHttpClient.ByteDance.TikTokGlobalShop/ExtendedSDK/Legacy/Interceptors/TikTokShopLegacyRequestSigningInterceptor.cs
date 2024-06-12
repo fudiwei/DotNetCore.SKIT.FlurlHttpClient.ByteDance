@@ -16,7 +16,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy.Int
 
         public TikTokShopLegacyRequestSigningInterceptor(string baseUrl, string appSecret)
         {
-            _baseUrl = baseUrl;
+            _baseUrl = baseUrl.TrimEnd('/');
             _appSecret = appSecret;
         }
 

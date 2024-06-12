@@ -63,6 +63,10 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Search Global Products: `ProductSearchGlobalProducts`
     -   Search Products: `ProductSearchProducts`
     -   Listing Schemas: `ProductGetListingSchemas`
+    -   Product Information Issue Diagnosis: `ProductGetProductDiagnoses`
+    -   Get Products SEO Words: `ProductGetProductSEOWords`
+    -   Get Recommended Product Title And Description: `ProductGetProductSuggestions`
+    -   Optimized Images: `ProductOptimizeImages`
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`

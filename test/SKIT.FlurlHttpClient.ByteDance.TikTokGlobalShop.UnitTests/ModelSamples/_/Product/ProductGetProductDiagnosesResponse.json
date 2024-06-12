@@ -1,0 +1,45 @@
+{
+    "code": 0,
+    "data": {
+        "products": [
+            {
+                "diagnoses": [
+                    {
+                        "diagnosis_results": [
+                            {
+                                "code": "TITLE_LESS_THAN_40_CHARACTERS",
+                                "how_to_solve": "Names must be at least 40 characters long and contain product-identifying information, such as \"hiking boots\" or \"lipstick\"."
+                            }
+                        ],
+                        "field": "TITLE",
+                        "suggestion": {
+                            "images": [
+                                {
+                                    "height": 600,
+                                    "optimized_uri": "tos-maliva-i-o3syd03w52-us/0266127022264e54ad2f639f5e0fb5e6",
+                                    "optimized_url": "https://p16-graph-va.ibyteimg.com/tos-maliva-i-1por3rr4fy-us/v2/0266127022264e54ad2f639f5e0fb5e6~tplv-1por3rr4fy-image.webp",
+                                    "uri": "tos-maliva-i-o3syd03w52-us/53b55d6e8cdf1f315affa7e70b45707d",
+                                    "url": "https://p16-graph-va.ibyteimg.com/tos-maliva-i-1por3rr4fy-us/v2/53b55d6e8cdf1f315affa7e70b45707d~tplv-1por3rr4fy-image.webp",
+                                    "width": 600
+                                }
+                            ],
+                            "seo_words": [
+                                {
+                                    "text": "dress"
+                                }
+                            ],
+                            "smart_texts": [
+                                {
+                                    "text": "this is a good title"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "id": "123456"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <para>表示 [GET] /v1/microapp/package/audit_hosts 接口的响应。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2024-02-21 下线。")]
-    public class OpenApiMicroAppPackageAuditHostsV1Response : OpenApiLegacyResponseBase
+    public class OpenApiMicroAppPackageAuditHostsV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

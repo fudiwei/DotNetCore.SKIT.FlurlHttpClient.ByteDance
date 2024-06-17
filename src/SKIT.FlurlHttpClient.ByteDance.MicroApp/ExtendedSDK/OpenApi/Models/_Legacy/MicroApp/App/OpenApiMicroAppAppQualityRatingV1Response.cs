@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <para>表示 [GET] /v1/microapp/app/quality_rating 接口的响应。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2023-10-23 下线。")]
-    public class OpenApiMicroAppAppQualityRatingV1Response : OpenApiLegacyResponseBase
+    public class OpenApiMicroAppAppQualityRatingV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

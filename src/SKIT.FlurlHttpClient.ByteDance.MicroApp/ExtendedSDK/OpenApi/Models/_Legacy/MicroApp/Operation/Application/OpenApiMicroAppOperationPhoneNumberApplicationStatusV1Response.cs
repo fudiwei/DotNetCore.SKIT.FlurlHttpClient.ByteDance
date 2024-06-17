@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/phone_number_application_status 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationPhoneNumberApplicationStatusV1Response : OpenApiLegacyResponseBase
+    public class OpenApiMicroAppOperationPhoneNumberApplicationStatusV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

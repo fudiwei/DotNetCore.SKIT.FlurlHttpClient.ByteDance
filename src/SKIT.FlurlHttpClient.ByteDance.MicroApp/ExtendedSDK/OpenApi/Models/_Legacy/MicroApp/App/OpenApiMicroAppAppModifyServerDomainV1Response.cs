@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <para>表示 [POST] /v1/microapp/app/modify_server_domain 接口的响应。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2024-01-23 下线。")]
-    public class OpenApiMicroAppAppModifyServerDomainV1Response : OpenApiLegacyResponseBase
+    public class OpenApiMicroAppAppModifyServerDomainV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

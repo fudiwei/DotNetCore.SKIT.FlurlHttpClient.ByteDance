@@ -1,12 +1,9 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /v1/microapp/code2session 接口的响应。</para>
+    /// <para>表示 [POST] /apps/v1/microapp/code2session/ 接口的响应。</para>
     /// </summary>
-    [Obsolete("相关接口或字段于 2024-04-08 下线。")]
-    public class OpenApiMicroAppCode2SessionV1Response : DouyinMicroAppOpenApiLegacyResponseBase
+    public class OpenAppsMicroAppCode2SessionV1Response : DouyinMicroAppOpenApiResponse
     {
         public static class Types
         {
@@ -22,22 +19,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// <summary>
                 /// 获取或设置用户的 OpenId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("openid")]
-                [System.Text.Json.Serialization.JsonPropertyName("openid")]
+                [Newtonsoft.Json.JsonProperty("open_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("open_id")]
                 public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置匿名用户的 OpenId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("anonymous_openid")]
-                [System.Text.Json.Serialization.JsonPropertyName("anonymous_openid")]
+                [Newtonsoft.Json.JsonProperty("anonymous_open_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("anonymous_open_id")]
                 public string? AnonymousOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户的 UnionId。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("unionid")]
-                [System.Text.Json.Serialization.JsonPropertyName("unionid")]
+                [Newtonsoft.Json.JsonProperty("union_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("union_id")]
                 public string? UnionId { get; set; }
             }
         }

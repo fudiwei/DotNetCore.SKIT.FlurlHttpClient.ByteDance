@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [GET] /v1/microapp/operation/query_shop_material 接口的响应。</para>
     /// </summary>
-    public class OpenApiMicroAppOperationQueryShopMaterialV1Response : OpenApiLegacyResponseBase
+    public class OpenApiMicroAppOperationQueryShopMaterialV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

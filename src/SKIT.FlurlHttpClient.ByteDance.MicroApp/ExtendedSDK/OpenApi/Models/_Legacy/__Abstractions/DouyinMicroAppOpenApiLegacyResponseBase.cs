@@ -1,6 +1,6 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
-    public abstract class OpenApiLegacyResponseBase : DouyinMicroAppOpenApiResponse
+    public abstract class DouyinMicroAppOpenApiLegacyResponseBase : DouyinMicroAppOpenApiResponse
     {
         /// <inheritdoc/>
         [Newtonsoft.Json.JsonProperty("errno")]

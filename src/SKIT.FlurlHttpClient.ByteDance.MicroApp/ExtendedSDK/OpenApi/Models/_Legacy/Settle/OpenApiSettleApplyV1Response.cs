@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <summary>
     /// <para>表示 [POST] /v1/settle/apply 接口的响应。</para>
     /// </summary>
-    public class OpenApiSettleApplyV1Response : OpenApiLegacyResponseBase
+    public class OpenApiSettleApplyV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

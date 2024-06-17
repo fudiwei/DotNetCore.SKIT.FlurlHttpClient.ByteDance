@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     /// <para>表示 [GET] /v1/tp/template/get_tpl_app_list 接口的响应。</para>
     /// </summary>
     [Obsolete("相关接口或字段于 2024-01-23 下线。")]
-    public class OpenApiThirdPartyTemplateGetTemplateAppListV1Response : OpenApiLegacyResponseBase
+    public class OpenApiThirdPartyTemplateGetTemplateAppListV1Response : DouyinMicroAppOpenApiLegacyResponseBase
     {
         public static class Types
         {

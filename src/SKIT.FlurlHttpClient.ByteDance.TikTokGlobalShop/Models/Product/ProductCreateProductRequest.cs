@@ -164,6 +164,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public string? ExternalSKUId { get; set; }
 
                 /// <summary>
+                /// 获取或设置外部 URL。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("external_url")]
+                [System.Text.Json.Serialization.JsonPropertyName("external_url")]
+                public string? ExternalUrl { get; set; }
+
+                /// <summary>
                 /// 获取或设置销售属性列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sales_attributes")]

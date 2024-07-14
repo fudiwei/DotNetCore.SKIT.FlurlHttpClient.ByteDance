@@ -33,6 +33,14 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 3.6.0 (2024-07-14)
+
+    -   **新增**：新增开发者回复评价、删除评价等接口。
+
+    -   **变更**：升级公共组件至 v3.1.0。
+
+    -   **修复**：修复小游戏支付接口请求签名错误。（_via_ [GitHub #33](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/issues/33)）
+
 -   Release 3.5.0 (2024-06-17)
 
     -   **新增**：新增素材库相关接口。

@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
     /// <para>表示 [POST] /api/apps/game/wallet/game_pay 接口的请求。</para>
@@ -32,5 +32,15 @@
         [Newtonsoft.Json.JsonProperty("app_remark")]
         [System.Text.Json.Serialization.JsonPropertyName("app_remark")]
         public string? Remark { get; set; }
+
+        protected internal override string GetRequestMethod()
+        {
+            return "POST";
+        }
+
+        protected internal override string GetRequestPath()
+        {
+            return "/api/apps/game/wallet/game_pay";
+        }
     }
 }

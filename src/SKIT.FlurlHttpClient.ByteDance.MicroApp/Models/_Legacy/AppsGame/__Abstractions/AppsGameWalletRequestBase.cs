@@ -56,5 +56,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("mp_sig")]
         [System.Text.Json.Serialization.JsonPropertyName("mp_sig")]
         public string? Signature { get; set; }
+
+        protected internal abstract string GetRequestMethod();
+
+        protected internal abstract string GetRequestPath();
     }
 }

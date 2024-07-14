@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using Flurl;
 using Flurl.Http;
 
@@ -12,32 +11,41 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static class DouyinMicroAppClientExecuteLegacyAppsGameExtensions
     {
-        private static string GenerateRequestSignature<TRequest>(DouyinMicroAppClient client, TRequest request, string httpMethod, string httpLocation)
-            where TRequest : Models.AppsGameWalletRequestBase
+        private static T PreprocessRequest<T>(DouyinMicroAppClient client, ref T request)
+            where T : Models.AppsGameWalletRequestBase, new()
         {
-            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (client is null) throw new ArgumentNullException(nameof(request));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            /*
-             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/payment/payment-signature-generation-algorithm
-             */
+            if (request.AppId is null)
+            {
+                request.AppId = client.Credentials.AppId;
+            }
 
-            IDictionary<string, string> paramMap = new SortedDictionary<string, string>(
-                new Dictionary<string, string>()
+            if (request.Timestamp is null)
+            {
+                request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
+            }
+
+            if (request.Signature is null)
+            {
+                string json = client.JsonSerializer.Serialize(request);
+                IDictionary<string, string> paramMap = new SortedDictionary<string, string>(Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary<string, string>>(json)!, StringComparer.Ordinal);
+                foreach (var entry in paramMap)
                 {
-                    { "access_token", HttpUtility.UrlEncode(request.AccessToken ?? string.Empty) },
-                    { "appid", HttpUtility.UrlEncode(request.AppId ?? string.Empty) },
-                    { "openid", HttpUtility.UrlEncode(request.OpenId ?? string.Empty) },
-                    { "zone_id", HttpUtility.UrlEncode(request.ZoneId ?? string.Empty) },
-                    { "pf", HttpUtility.UrlEncode(request.Platform ?? string.Empty) },
-                    { "ts", request.Timestamp.ToString()! }
-                },
-                StringComparer.Ordinal
-            );
-            string plainText = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))
-                + $"&org_loc={httpLocation}"
-                + $"&method={httpMethod.ToUpper()}";
-            return Utilities.HMACUtility.HashWithSHA256(client.Credentials.ECPaySalt ?? string.Empty, plainText).Value!.ToLower();
+                    if (entry.Key == "mp_sig")
+                        paramMap.Remove(entry.Key);
+                    if (entry.Value is null)
+                        paramMap.Remove(entry.Key);
+                }
+
+                string message = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))
+                    + $"&org_loc={request.GetRequestPath()}"
+                    + $"&method={request.GetRequestMethod()}";
+                request.Signature = Utilities.HMACUtility.HashWithSHA256(client.Credentials.ECPaySalt!, message).Value!.ToLower();
+            }
+
+            return request;
         }
 
         /// <summary>
@@ -56,14 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.Timestamp is null)
-                request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
-
-            if (request.Signature is null)
-                request.Signature = GenerateRequestSignature(client, request, HttpMethod.Post.Method, "/api/apps/game/wallet/get_balance");
+            PreprocessRequest(client, ref request);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "game", "wallet", "get_balance")
@@ -88,14 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.Timestamp is null)
-                request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
-
-            if (request.Signature is null)
-                request.Signature = GenerateRequestSignature(client, request, HttpMethod.Post.Method, "/api/apps/game/wallet/game_pay");
+            PreprocessRequest(client, ref request);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "game", "wallet", "game_pay")
@@ -120,14 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.AppId is null)
-                request.AppId = client.Credentials.AppId;
-
-            if (request.Timestamp is null)
-                request.Timestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
-
-            if (request.Signature is null)
-                request.Signature = GenerateRequestSignature(client, request, HttpMethod.Post.Method, "/api/apps/game/wallet/add_coin");
+            PreprocessRequest(client, ref request);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "game", "wallet", "add_coin")

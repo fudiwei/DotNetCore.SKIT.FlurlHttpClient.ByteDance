@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /api/promotion/v1/coupon/send_coupon_to_designated_user 接口的响应。</para>
+    /// <para>表示 [POST] /api/promotion/v1/coupon/send_coupon_to_designated_user/ 接口的响应。</para>
     /// </summary>
     public class PromotionCouponSendCouponToDesignatedUserV1Response : DouyinMicroAppResponse
     {

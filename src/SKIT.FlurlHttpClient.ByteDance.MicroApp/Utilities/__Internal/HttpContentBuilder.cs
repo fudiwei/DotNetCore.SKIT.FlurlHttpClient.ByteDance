@@ -7,9 +7,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
 {
     using SKIT.FlurlHttpClient;
 
-    internal static class FileHttpContentBuilder
+    internal static class HttpContentBuilder
     {
-        public static MultipartFormDataContent Build(string fileName, byte[] fileBytes, string? fileContentType, string formDataName, Action<HttpContent>? configureFileHttpContent = null)
+        public static MultipartFormDataContent BuildWithFile(string fileName, byte[] fileBytes, string? fileContentType, string formDataName, Action<HttpContent>? configureFileHttpContent = null)
         {
             if (fileName is null) throw new ArgumentNullException(nameof(fileName));
             if (formDataName is null) throw new ArgumentNullException(nameof(formDataName));

@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "ecpay", "v3", "saas", "image_upload/")
                 .WithHeader("access-token", request.AccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: "image.jpg", fileBytes: request.ImageFileBytes, fileContentType: "image/jpeg", formDataName: "image_content");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: "image.jpg", fileBytes: request.ImageFileBytes, fileContentType: "image/jpeg", formDataName: "image_content");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ImageType)), "image_type");
 
             return await client.SendFlurlRequestAsync<Models.AppsECPaySaaSImageUploadV3Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);

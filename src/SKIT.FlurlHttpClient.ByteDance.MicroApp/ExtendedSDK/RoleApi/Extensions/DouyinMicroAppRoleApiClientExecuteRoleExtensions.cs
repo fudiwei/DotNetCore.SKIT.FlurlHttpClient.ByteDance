@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "upload_material");
 
-            using MultipartFormDataContent httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
+            using MultipartFormDataContent httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
             httpContent.Add(new StringContent(request.AppId), "appid");
             httpContent.Add(new StringContent(request.AccessToken!), "access_token");
             httpContent.Add(new StringContent(request.MaterialType.ToString()), "material_type");

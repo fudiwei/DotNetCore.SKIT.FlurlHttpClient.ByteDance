@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
                 .CreateFlurlRequest(request, HttpMethod.Post, "file", "card_image", "upload")
                 .WithHeader("X-Token", request.AccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image_file");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ImageId)), "image_id");
 
             return await client.SendFlurlRequestAsync<Models.WebcastFileCardImageUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);

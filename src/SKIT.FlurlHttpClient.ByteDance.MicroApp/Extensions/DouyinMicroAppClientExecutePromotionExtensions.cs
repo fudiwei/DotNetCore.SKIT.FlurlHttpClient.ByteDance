@@ -84,7 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v2", "activity", "upload_popup_screenshot/")
                 .WithHeader("access-token", request.AccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "popup_image");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "popup_image");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ActivityId)), "activity_id");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PopupType.ToString())), "popup_type");
 
@@ -209,7 +209,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Coupon
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_coupon_receive_info 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_coupon_receive_info/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/get-coupon-receive-info ]]>
@@ -228,14 +228,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "get_coupon_receive_info")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "get_coupon_receive_info/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponGetCouponReceiveInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_consume_coupon 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_consume_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/batch-consume-coupon ]]>
@@ -257,14 +257,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.ConsumeTimestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "batch_consume_coupon")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "batch_consume_coupon/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponBatchConsumeCouponV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_rollback_consume_coupon 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_rollback_consume_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/batch-rollback-consume-coupon ]]>
@@ -286,14 +286,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.RollbackConsumeTimestamp = DateTimeOffset.Now.ToLocalTime().ToUnixTimeSeconds();
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "batch_rollback_consume_coupon")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "batch_rollback_consume_coupon/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponBatchRollbackConsumeCouponV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_talent_coupon 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_talent_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
@@ -312,7 +312,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "get_talent_coupon")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "get_talent_coupon/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponGetTalentCouponV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -345,7 +345,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_talent_coupon_status 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_talent_coupon_status/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
@@ -364,7 +364,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "update_talent_coupon_status")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "update_talent_coupon_status/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponUpdateTalentCouponStatusV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -397,7 +397,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/send_coupon_to_designated_user 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/send_coupon_to_designated_user/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/send-coupon-to-designated-user ]]>
@@ -416,7 +416,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "send_coupon_to_designated_user")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "send_coupon_to_designated_user/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponSendCouponToDesignatedUserV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -450,7 +450,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
         #region Coupon/DeveloperActivity
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/create_developer_activity 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/create_developer_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/create-developer-activity ]]>
@@ -469,14 +469,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "create_developer_activity")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "create_developer_activity/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponCreateDeveloperActivityV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v1/coupon/delete_developer_activity 接口。</para>
+        /// <para>异步调用 [POST] /api/promotion/v1/coupon/delete_developer_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/delete-developer-activity ]]>
@@ -495,7 +495,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.AppId = client.Credentials.AppId;
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "delete_developer_activity")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v1", "coupon", "delete_developer_activity/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.PromotionCouponDeleteDeveloperActivityV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

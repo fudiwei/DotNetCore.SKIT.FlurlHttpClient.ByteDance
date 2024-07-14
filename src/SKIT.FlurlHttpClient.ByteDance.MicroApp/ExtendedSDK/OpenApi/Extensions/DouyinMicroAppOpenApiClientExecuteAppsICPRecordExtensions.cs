@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v1", "icp_record", "upload_image/")
                 .WithHeader("access-token", request.AuthorizerAccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ImageType.ToString())), "image_type");
 
             return await client.SendFlurlRequestAsync<Models.OpenAppsICPRecordUploadImageV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "upload_material"))
                 .WithHeader("access-token", request.AccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.MaterialFileName, fileBytes: request.MaterialFileBytes, fileContentType: request.MaterialFileContentType, formDataName: "material_file");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.MaterialType.ToString())), "material_type");
 
             return await client.SendFlurlRequestAsync<Models.AppsCapacityUploadMaterialV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -527,7 +527,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "upload_live_image"))
                 .WithHeader("access-token", request.AccessToken);
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Title)), "title");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PagePath)), "start_page");
             if (request.RoomId is not null)

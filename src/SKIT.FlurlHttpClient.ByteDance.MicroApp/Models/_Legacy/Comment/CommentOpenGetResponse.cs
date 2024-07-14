@@ -40,6 +40,39 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
                                 public string? AvatarUrl { get; set; }
                             }
+
+                            public class DeveloperReply
+                            {
+                                /// <summary>
+                                /// 获取或设置评论 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("parent_comment_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("parent_comment_id")]
+                                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                                public long ParentCommentId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置回复 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("reply_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("reply_id")]
+                                [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                                public long ReplyId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置回复内容。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("text")]
+                                [System.Text.Json.Serialization.JsonPropertyName("text")]
+                                public string Text { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置回复时间戳。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("create_time")]
+                                [System.Text.Json.Serialization.JsonPropertyName("create_time")]
+                                public long CreateTimestamp { get; set; }
+                            }
                         }
 
                         /// <summary>
@@ -101,6 +134,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("ratings")]
                         [System.Text.Json.Serialization.JsonPropertyName("ratings")]
                         public string? RatingJson { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置开发者回复列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("devloper_reply_comments")]
+                        [System.Text.Json.Serialization.JsonPropertyName("devloper_reply_comments")]
+                        public Types.DeveloperReply[]? DeveloperReplyList { get; set; }
                     }
                 }
 

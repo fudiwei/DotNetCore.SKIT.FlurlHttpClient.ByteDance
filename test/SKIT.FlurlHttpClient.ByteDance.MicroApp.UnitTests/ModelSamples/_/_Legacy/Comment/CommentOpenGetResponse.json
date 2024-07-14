@@ -17,7 +17,15 @@
                     "avatar_url": "https://p-boe.byted.org/aweme/1080x1080/aweme-avatar/tos-boe-o-0000_7059230b38ee45e7bc9b1aca1e47fa60.jpeg",
                     "is_anonymous": false,
                     "scree_name": "b**"
-                }
+                },
+                "devloper_reply_comments": [
+                    {
+                        "parent_comment_id": "7127552400897884972",
+                        "reply_id": "7127552411897884973",
+                        "text": "感谢反馈，我们将尽快解决您的问题",
+                        "create_time": 1718187178
+                    }
+                ]
             },
             {
                 "create_time": "2022-08-16 14:43:33 +0800 CST",

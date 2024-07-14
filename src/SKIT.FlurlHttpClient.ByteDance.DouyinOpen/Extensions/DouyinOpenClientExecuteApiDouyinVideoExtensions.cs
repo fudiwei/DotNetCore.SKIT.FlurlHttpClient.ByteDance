@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.VideoContentType is null)
                 request.VideoContentType = "video/mp4";
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType, formDataName: "video");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType, formDataName: "video");
             return await client.SendFlurlRequestAsync<Models.DouyinVideoUploadVideoV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
@@ -218,7 +218,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.ImageContentType is null)
                 request.ImageContentType = "image/jpeg";
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageContentType, formDataName: "image");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageContentType, formDataName: "image");
             return await client.SendFlurlRequestAsync<Models.DouyinVideoUploadImageV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
@@ -301,7 +301,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.VideoContentType is null)
                 request.VideoContentType = "video/mp4";
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType, formDataName: "video");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.VideoFileName, fileBytes: request.VideoFileBytes, fileContentType: request.VideoContentType, formDataName: "video");
             return await client.SendFlurlRequestAsync<Models.DouyinVideoUploadVideoPartV1Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 

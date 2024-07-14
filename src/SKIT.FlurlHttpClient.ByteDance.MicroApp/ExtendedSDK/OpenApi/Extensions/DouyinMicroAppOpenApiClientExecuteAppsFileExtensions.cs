@@ -7,6 +7,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppOpenApiClientExecuteAppsFileExtensions
     {
         /// <summary>
@@ -29,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + (request.MaterialType == 8 ? ".pdf" : ".jpg");
 
             if (request.MaterialFileContentType is null)
-                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? (request.MaterialType == 8 ? "application/pdf" : "image/jpeg");
+                request.MaterialFileContentType = MimeTypes.GetMimeMapping(request.MaterialFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "apps", "v2", "file", "upload_material")

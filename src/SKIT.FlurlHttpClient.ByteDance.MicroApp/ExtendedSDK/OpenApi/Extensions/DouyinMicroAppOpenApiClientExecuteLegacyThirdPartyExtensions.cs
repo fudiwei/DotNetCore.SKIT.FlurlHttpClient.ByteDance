@@ -8,6 +8,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppOpenApiClientExecuteLegacyThirdPartyExtensions
     {
         /// <summary>
@@ -58,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.MaterialFileContentType is null)
-                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? "image/jpeg";
+                request.MaterialFileContentType = MimeTypes.GetMimeMapping(request.MaterialFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "v1", "tp", "upload_pic_material")

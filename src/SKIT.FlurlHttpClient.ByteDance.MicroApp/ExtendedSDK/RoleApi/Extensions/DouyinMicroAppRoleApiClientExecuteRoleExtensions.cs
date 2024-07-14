@@ -6,6 +6,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppRoleApiClientExecuteRoleExtensions
     {
         /// <summary>
@@ -31,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + (request.MaterialType == 1010 ? ".pdf" : ".jpg");
 
             if (request.MaterialFileContentType is null)
-                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? "image/jpeg";
+                request.MaterialFileContentType = MimeTypes.GetMimeMapping(request.MaterialFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "upload_material");

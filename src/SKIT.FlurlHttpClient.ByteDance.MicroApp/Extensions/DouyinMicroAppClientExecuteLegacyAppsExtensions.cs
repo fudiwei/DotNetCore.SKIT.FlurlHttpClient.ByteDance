@@ -8,6 +8,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppClientExecuteLegacyAppsExtensions
     {
         /// <summary>
@@ -93,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.MaterialFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.MaterialFileContentType is null)
-                request.MaterialFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.MaterialFileName) ?? "image/jpeg";
+                request.MaterialFileContentType = MimeTypes.GetMimeMapping(request.MaterialFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "v1", "capacity", "upload_material")
@@ -518,7 +520,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.ImageFileContentType is null)
-                request.ImageFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForMaterial(request.ImageFileName) ?? "image/jpeg";
+                request.ImageFileContentType = MimeTypes.GetMimeMapping(request.ImageFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "upload_live_image")

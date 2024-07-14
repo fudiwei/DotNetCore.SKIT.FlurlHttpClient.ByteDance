@@ -7,6 +7,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppWebcastClientExecuteFileExtensions
     {
         /// <summary>
@@ -29,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.ImageFileContentType is null)
-                request.ImageFileContentType = "image/jpeg";
+                request.ImageFileContentType = MimeTypes.GetMimeMapping(request.ImageFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "file", "card_image", "upload")

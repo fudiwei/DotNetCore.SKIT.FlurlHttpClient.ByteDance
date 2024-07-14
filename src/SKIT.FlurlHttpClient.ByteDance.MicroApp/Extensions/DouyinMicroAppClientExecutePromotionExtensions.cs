@@ -7,6 +7,8 @@ using Flurl.Http;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
+    using SKIT.FlurlHttpClient;
+
     public static class DouyinMicroAppClientExecutePromotionExtensions
     {
         #region Activity
@@ -76,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 request.ImageFileName = Guid.NewGuid().ToString("N").ToLower() + ".jpg";
 
             if (request.ImageFileContentType is null)
-                request.ImageFileContentType = Utilities.FileNameToContentTypeMapper.GetContentTypeForImage(request.ImageFileName) ?? "image/jpeg";
+                request.ImageFileContentType = MimeTypes.GetMimeMapping(request.ImageFileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v2", "activity", "upload_popup_screenshot/")

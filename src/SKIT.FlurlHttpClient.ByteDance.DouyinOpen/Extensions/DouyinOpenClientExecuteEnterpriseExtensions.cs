@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.MediaContentType is null)
                 request.MediaContentType = "image/jpeg";
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MediaFileName, fileBytes: request.MediaFileBytes, fileContentType: request.MediaContentType, formDataName: "media");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.MediaFileName, fileBytes: request.MediaFileBytes, fileContentType: request.MediaContentType, formDataName: "media");
             return await client.SendFlurlRequestAsync<Models.EnterpriseMediaUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
@@ -68,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request.MediaContentType is null)
                 request.MediaContentType = MimeTypes.Binary;
 
-            using var httpContent = Utilities.FileHttpContentBuilder.Build(fileName: request.MediaFileName, fileBytes: request.MediaFileBytes, fileContentType: request.MediaContentType, formDataName: "media");
+            using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.MediaFileName, fileBytes: request.MediaFileBytes, fileContentType: request.MediaContentType, formDataName: "media");
             return await client.SendFlurlRequestAsync<Models.EnterpriseMediaTempUploadResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 

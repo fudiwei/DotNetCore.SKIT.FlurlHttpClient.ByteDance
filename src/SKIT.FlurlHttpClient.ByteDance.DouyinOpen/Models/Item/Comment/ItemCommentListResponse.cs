@@ -21,11 +21,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string CommentId { get; set; } = default!;
 
                         /// <summary>
+                        /// 获取或设置回复的评论 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("reply_comment_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("reply_comment_id")]
+                        public string? ReplyCommentId { get; set; }
+
+                        /// <summary>
                         /// 获取或设置该条评论发布者 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_user_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_user_id")]
                         public string CommentUserId { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置该条评论发布者的昵称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("nick_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
+                        public string? CommentUserNickname { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置该条评论发布者的头像 URL。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("avatar")]
+                        [System.Text.Json.Serialization.JsonPropertyName("avatar")]
+                        public string? CommentUserAvatarUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置回复内容。

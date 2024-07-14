@@ -1,15 +1,17 @@
-﻿{
+{
     "data": {
         "has_more": true,
         "list": [
             {
-                "create_time": 1607399832,
-                "digg_count": 647,
-                "reply_comment_total": 12,
-                "top": true,
-                "comment_id": "",
-                "comment_user_id": "",
-                "content": "回复内容"
+                "top": false,
+                "comment_id": "@9VwW0qOBUN9mJyD3bNxvGc791G3uO/mLOZ10oQOjJ1EUafn460zdRmYqig357zEBidswyrkjAGx3+uVUd0cE4Q==",
+                "comment_user_id": "43eae150-12eb-4035-8d40-3f9a2bfcdf4e",
+                "content": "评论",
+                "create_time": 1673507751,
+                "digg_count": 0,
+                "reply_comment_total": 0,
+                "avatar": "https://uuue/ehdne",
+                "nick_name": "xiaoming"
             }
         ],
         "cursor": 1

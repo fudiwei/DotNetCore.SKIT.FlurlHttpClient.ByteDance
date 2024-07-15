@@ -31,12 +31,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             {
                 string json = client.JsonSerializer.Serialize(request);
                 IDictionary<string, string> paramMap = new SortedDictionary<string, string>(Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary<string, string>>(json)!, StringComparer.Ordinal);
-                foreach (var entry in paramMap)
+                foreach (string key in paramMap.Keys.ToArray())
                 {
-                    if (entry.Key == "mp_sig")
-                        paramMap.Remove(entry.Key);
-                    if (entry.Value is null)
-                        paramMap.Remove(entry.Key);
+                    if (key == "mp_sig")
+                        paramMap.Remove(key);
+                    else if (paramMap[key] is null)
+                        paramMap.Remove(key);
                 }
 
                 string message = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))

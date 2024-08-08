@@ -8,7 +8,15 @@
                 "is_multiple_selection": true,
                 "is_required": false,
                 "name": "Occasion",
+                "requirement_conditions": [
+                    {
+                        "attribute_id": "101610",
+                        "attribute_value_id": "1024358",
+                        "condition_type": "VALUE_ID_MATCH"
+                    }
+                ],
                 "type": "PRODUCT_PROPERTY",
+                "value_data_format": "POSITIVE_INT_OR_DECIMAL",
                 "values": [
                     {
                         "id": "1001533",

@@ -32,6 +32,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
                                 public string Name { get; set; } = default!;
                             }
+
+                            public class RequirementCondition
+                            {
+                                /// <summary>
+                                /// 获取或设置条件类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("condition_type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("condition_type")]
+                                public string ConditionType { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置属性 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("attribute_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                public string AttributeId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置属性值 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("attribute_value_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("attribute_value_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                public string AttributeValueId { get; set; } = default!;
+                            }
                         }
 
                         /// <summary>
@@ -78,11 +104,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public bool IsCustomizable { get; set; }
 
                         /// <summary>
+                        /// 获取或设置属性值数据格式。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("value_data_format")]
+                        [System.Text.Json.Serialization.JsonPropertyName("value_data_format")]
+                        public string? ValueDataFormat { get; set; }
+
+                        /// <summary>
                         /// 获取或设置属性值列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("values")]
                         [System.Text.Json.Serialization.JsonPropertyName("values")]
                         public Types.AttributeValue[] ValueList { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置必需条件列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("requirement_conditions")]
+                        [System.Text.Json.Serialization.JsonPropertyName("requirement_conditions")]
+                        public Types.RequirementCondition[]? RequirementConditionList { get; set; }
                     }
                 }
 

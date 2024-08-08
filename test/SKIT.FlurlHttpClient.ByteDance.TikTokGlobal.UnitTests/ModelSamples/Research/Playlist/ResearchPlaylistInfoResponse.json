@@ -1,0 +1,23 @@
+{
+    "data": {
+        "playlist_id": 1234579763387255595,
+        "playlist_item_total": 4,
+        "playlist_last_updated": 1663620215,
+        "playlist_name": "Test playlist name",
+        "playlist_video_ids": [
+            12351810646859,
+            7289561123404511,
+            7274412345315375,
+            12312311231231231,
+            12312883434352176,
+            71919242345289237,
+            7190923438988788,
+            71800659413240905
+        ]
+    },
+    "error": {
+        "code": "ok",
+        "message": "ok",
+        "log_id": "20240700200656033B747EC0C8DE33C94C"
+    }
+}

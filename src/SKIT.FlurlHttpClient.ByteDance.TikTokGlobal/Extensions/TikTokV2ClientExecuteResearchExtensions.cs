@@ -125,6 +125,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         }
         #endregion
 
+        #region Playlist
+        /// <summary>
+        /// <para>异步调用 [POST] /research/playlist/info/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/research-api-specs-query-playlist-info ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchPlaylistInfoResponse> ExecuteResearchPlaylistInfoAsync(this TikTokV2Client client, Models.ResearchPlaylistInfoRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "playlist", "info/");
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchPlaylistInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region User
         /// <summary>
         /// <para>异步调用 [POST] /research/user/info/ 接口。</para>

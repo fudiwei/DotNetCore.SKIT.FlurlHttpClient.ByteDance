@@ -50,6 +50,7 @@ Naming Policies:
     -   Query User Followers: `ResearchUserFollowers`
     -   Query User Following: `ResearchUserFollowing`
     -   Query User Reposted Videos: `ResearchUserRepostedVideos`
+    -   Query Playlists: `ResearchPlaylistInfo`
 -   Commercial Content
     -   Query Ads: `ResearchAdlibAdQuery`
     -   Query Advertisers: `ResearchAdlibAdvertiserQuery`

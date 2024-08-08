@@ -24,6 +24,12 @@
                 "parent_id": "851848"
             }
         ],
+        "recommended_categories": [
+            {
+                "id": "853000",
+                "local_name": "Botol & Stoples Penyimpanan"
+            }
+        ],
         "certifications": [
             {
                 "files": [
@@ -193,7 +199,8 @@
             "size": 1000,
             "url": "https://v16m-default.akamaized.net/bbae7099581b26cd340beaa7821b2d8c/64de6020/video/tos/alisg/tos-alisg-v-f466fc-sg/oMne9QuzIBN3fIDN7bFCCMbBKuGigg12ghDC8k/?a=0&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=2212&bt=1106&cs=0&ds=3&ft=dl9~j-Inz7TKnfsfiyq8Z&mime_type=video_mp4&qs=13&rc=anR4Ojk6ZmYzbTMzODRmNEBpanR4Ojk6ZmYzbTMzODRmNEBsYWFwcjRva2NgLS1kLy1zYSNsYWFwcjRva2NgLS1kLy1zcw%3D%3D&l=202308171159498F7B108584E58B010932&btag=e00048000",
             "width": 1280
-        }
+        },
+        "is_not_for_sale": false
     },
     "message": "Success",
     "request_id": "202203070749000101890810281E8C70B7"

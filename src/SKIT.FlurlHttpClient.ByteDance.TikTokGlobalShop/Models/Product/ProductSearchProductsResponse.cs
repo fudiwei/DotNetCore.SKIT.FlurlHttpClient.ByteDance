@@ -15,6 +15,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                     {
                         public static class Types
                         {
+                            public class RecommendedCategory
+                            {
+                                /// <summary>
+                                /// 获取或设置分类 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                public string CategoryId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置名称。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("local_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("local_name")]
+                                public string Name { get; set; } = default!;
+                            }
+
                             public class SKU
                             {
                                 public static class Types
@@ -132,11 +150,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public long UpdateTimestamp { get; set; }
 
                         /// <summary>
+                        /// 获取或设置推荐分类列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("recommended_categories")]
+                        [System.Text.Json.Serialization.JsonPropertyName("recommended_categories")]
+                        public Types.RecommendedCategory[]? RecommendedCategoryList { get; set; }
+
+                        /// <summary>
                         /// 获取或设置 SKU 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("skus")]
                         [System.Text.Json.Serialization.JsonPropertyName("skus")]
                         public Types.SKU[] SKUList { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置是否为非卖品。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_not_for_sale")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_not_for_sale")]
+                        public bool IsNotForSale { get; set; }
 
                         /// <summary>
                         /// 获取或设置同步失败原因。

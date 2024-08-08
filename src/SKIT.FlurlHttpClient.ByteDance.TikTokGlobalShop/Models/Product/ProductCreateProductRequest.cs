@@ -465,6 +465,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public string? Description { get; set; }
 
         /// <summary>
+        /// 获取或设置分类版本。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("category_version")]
+        [System.Text.Json.Serialization.JsonPropertyName("category_version")]
+        public string? CategoryVersion { get; set; }
+
+        /// <summary>
         /// 获取或设置分类 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_id")]
@@ -561,5 +568,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         [Newtonsoft.Json.JsonProperty("manufacturer")]
         [System.Text.Json.Serialization.JsonPropertyName("manufacturer")]
         public Types.Manufacturer? Manufacturer { get; set; }
+
+        /// <summary>
+        /// 获取或设置是否为非卖品。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("is_not_for_sale")]
+        [System.Text.Json.Serialization.JsonPropertyName("is_not_for_sale")]
+        public bool? IsNotForSale { get; set; }
     }
 }

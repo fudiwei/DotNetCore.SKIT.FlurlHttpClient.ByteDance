@@ -50,10 +50,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "products", "details")
-                .SetQueryParam("product_id", request.ProductId);
-
-            if (request.RequireAuditVersion is not null)
-                flurlReq.SetQueryParam("need_audit_version", request.RequireAuditVersion.Value ? "true" : "false");
+                .SetQueryParam("product_id", request.ProductId)
+                .SetQueryParam("need_audit_version", request.RequireAuditVersion.HasValue ? request.RequireAuditVersion.Value ? "true" : "false" : null);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -387,17 +385,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "products", "brands")
+                .SetQueryParam("category_id", request.CategoryId)
+                .SetQueryParam("only_authorized", request.IsOnlyAuthorized.HasValue ? request.IsOnlyAuthorized.Value ? "true" : "false" : null)
+                .SetQueryParam("brand_suggest", request.BrandSuggest)
                 .SetQueryParam("page_number", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
-
-            if (request.CategoryId is not null)
-                flurlReq.SetQueryParam("category_id", request.CategoryId);
-
-            if (request.IsOnlyAuthorized is not null)
-                flurlReq.SetQueryParam("only_authorized", request.IsOnlyAuthorized.Value ? "true" : "false");
-
-            if (request.BrandSuggest is not null)
-                flurlReq.SetQueryParam("brand_suggest", request.BrandSuggest);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetBrandListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

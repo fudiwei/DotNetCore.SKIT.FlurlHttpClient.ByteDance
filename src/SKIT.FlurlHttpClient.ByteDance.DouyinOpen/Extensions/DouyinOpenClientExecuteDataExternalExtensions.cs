@@ -1237,11 +1237,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 .CreateFlurlRequest(request, HttpMethod.Get, "data", "external", "poi", "service_base")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("poi_id", request.POIId)
+                .SetQueryParam("service_type", request.ServiceType)
                 .SetQueryParam("begin_date", request.BeginDateString)
                 .SetQueryParam("end_date", request.EndDateString);
-
-            if (request.ServiceType is not null)
-                flurlReq.SetQueryParam("service_type", request.ServiceType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DataExternalPOIServiceBaseResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1266,10 +1264,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 .CreateFlurlRequest(request, HttpMethod.Get, "data", "external", "poi", "service_user")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("poi_id", request.POIId)
-                .SetQueryParam("date_type", request.DateType);
-
-            if (request.ServiceType is not null)
-                flurlReq.SetQueryParam("service_type", request.ServiceType);
+                .SetQueryParam("date_type", request.DateType)
+                .SetQueryParam("service_type", request.ServiceType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.DataExternalPOIServiceUserResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

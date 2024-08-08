@@ -26,16 +26,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "quiz", "get")
-                .WithHeader("X-Token", request.AccessToken);
-
-            if (request.Level is not null)
-                flurlReq.SetQueryParam("level", request.Level.Value);
-
-            if (request.Type is not null)
-                flurlReq.SetQueryParam("type", request.Type.Value);
-
-            if (request.Number is not null)
-                flurlReq.SetQueryParam("num", request.Number.Value);
+                .WithHeader("X-Token", request.AccessToken)
+                .SetQueryParam("level", request.Level)
+                .SetQueryParam("type", request.Type)
+                .SetQueryParam("num", request.Number);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.WebcastQuizGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

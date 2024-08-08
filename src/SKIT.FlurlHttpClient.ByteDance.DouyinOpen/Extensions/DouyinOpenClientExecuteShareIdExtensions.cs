@@ -27,19 +27,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "share-id/")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.RequireCallback is not null)
-                flurlReq.SetQueryParam("need_callback", request.RequireCallback.Value ? "true" : "false");
-
-            if (request.SourceStyleId is not null)
-                flurlReq.SetQueryParam("source_style_id", request.SourceStyleId);
-
-            if (request.DefaultHashTag is not null)
-                flurlReq.SetQueryParam("default_hashtag", request.DefaultHashTag);
-
-            if (request.LinkParameter is not null)
-                flurlReq.SetQueryParam("link_param", request.LinkParameter);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("need_callback", request.RequireCallback.HasValue ? request.RequireCallback.Value ? "true" : "false" : null)
+                .SetQueryParam("source_style_id", request.SourceStyleId)
+                .SetQueryParam("default_hashtag", request.DefaultHashTag)
+                .SetQueryParam("link_param", request.LinkParameter);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ShareIdResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

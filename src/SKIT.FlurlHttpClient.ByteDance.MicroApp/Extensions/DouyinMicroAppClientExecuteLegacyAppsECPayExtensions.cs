@@ -99,14 +99,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "bills")
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "bills"))
+                .SetQueryParam("thirdparty_id", request.ComponentAppId)
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
                 .SetQueryParam("bill_type", request.BillType)
                 .SetQueryParam("sign", request.Signature);
-
-            if (request.ComponentAppId is not null)
-                flurlReq.SetQueryParam("thirdparty_id", request.ComponentAppId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -145,6 +143,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "fund", "bills")
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "fund", "bills"))
+                .SetQueryParam("thirdparty_id", request.ComponentAppId)
                 .SetQueryParam("app_id", request.AppId)
                 .SetQueryParam("merchant_id", request.MerchantId)
                 .SetQueryParam("bill_date", request.DateString)
@@ -152,9 +151,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("payment_type", request.PaymentType)
                 .SetQueryParam("trade_type", request.TradeType)
                 .SetQueryParam("sign", request.Signature);
-
-            if (request.ComponentAppId is not null)
-                flurlReq.SetQueryParam("thirdparty_id", request.ComponentAppId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsFundBillsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

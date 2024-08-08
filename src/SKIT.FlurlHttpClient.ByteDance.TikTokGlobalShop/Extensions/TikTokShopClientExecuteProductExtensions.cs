@@ -33,11 +33,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 .SetQueryParam("category_id", request.CategoryId)
                 .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("brand_name", request.BrandName)
+                .SetQueryParam("is_authorized", request.IsAuthorized.HasValue ? request.IsAuthorized.Value ? "true" : "false" : null)
                 .SetQueryParam("page_size", request.PageSize)
                 .SetQueryParam("page_token", request.PageToken);
-
-            if (request.IsAuthorized is not null)
-                flurlReq.SetQueryParam("is_authorized", request.IsAuthorized.Value ? "true" : "false");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetBrandsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -582,10 +580,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", request.ProductId);
-
-            if (request.IsReturnUnderReviewVersion is not null)
-                flurlReq.SetQueryParam("return_under_review_version", request.IsReturnUnderReviewVersion.Value ? "true" : "false");
+                .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", request.ProductId)
+                .SetQueryParam("return_under_review_version", request.IsReturnUnderReviewVersion.HasValue ? request.IsReturnUnderReviewVersion.Value ? "true" : "false" : null);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

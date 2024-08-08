@@ -173,12 +173,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "get_aweme_relation_bind_qrcode/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("type", request.Type)
                 .SetQueryParam("capacity_list", string.Join(",", request.CapacityKeyList))
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.IsCoSubject is not null)
-                flurlReq.SetQueryParam("is_co_subject", request.IsCoSubject.Value ? "true" : "false");
+                .SetQueryParam("is_co_subject", request.IsCoSubject.HasValue ? request.IsCoSubject.Value ? "true" : "false" : null);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityGetAwemeRelationBindQrcodeV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -201,10 +199,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_aweme_relation_list/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("type", request.Type)
                 .SetQueryParam("page_num", request.PageNumber)
-                .SetQueryParam("page_size", request.PageSize)
-                .WithHeader("access-token", request.AccessToken);
+                .SetQueryParam("page_size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryAwemeRelationListV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

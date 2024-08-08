@@ -228,18 +228,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "fulfilment", "certificate", "verify_record", "query")
                 .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("poi_ids", request.POIIdList is null ? null : string.Join(",", request.POIIdList))
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp)
                 .SetQueryParam("cursor", request.PageCursor)
-                .SetQueryParam("size", request.PageSize)
-                .SetQueryParam("account_id", request.AccountId);
-
-            if (request.POIIdList is not null)
-                flurlReq.SetQueryParam("poi_ids", string.Join(",", request.POIIdList));
-
-            if (request.StartTimestamp is not null)
-                flurlReq.SetQueryParam("start_time", request.StartTimestamp);
-
-            if (request.EndTimestamp is not null)
-                flurlReq.SetQueryParam("end_time", request.EndTimestamp);
+                .SetQueryParam("size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeFulfilmentCertificateVerifyRecordQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -410,16 +404,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "category", "get")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.ParentCategoryId is not null)
-                flurlReq.SetQueryParam("category_id", request.ParentCategoryId.Value);
-
-            if (request.QueryType is not null)
-                flurlReq.SetQueryParam("query_category_type", request.QueryType.Value);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("category_id", request.ParentCategoryId)
+                .SetQueryParam("query_category_type", request.QueryType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsCategoryGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -513,19 +501,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "query")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.Status is not null)
-                flurlReq.SetQueryParam("status", request.Status.Value);
-
-            if (request.PageCursor is not null)
-                flurlReq.SetQueryParam("cursor", request.PageCursor);
-
-            if (request.PageSize is not null)
-                flurlReq.SetQueryParam("count", request.PageSize.Value);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("status", request.Status)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductDraftQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -548,16 +528,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "draft", "get")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.ProductIdList is not null)
-                flurlReq.SetQueryParam("product_ids", string.Join(",", request.ProductIdList));
-
-            if (request.OutProductIdList is not null)
-                flurlReq.SetQueryParam("out_ids", string.Join(",", request.OutProductIdList));
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("product_ids", request.ProductIdList is null ? null : string.Join(",", request.ProductIdList))
+                .SetQueryParam("out_ids", request.OutProductIdList is null ? null : string.Join(",", request.OutProductIdList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductDraftGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -580,19 +554,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "query")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.Status is not null)
-                flurlReq.SetQueryParam("status", request.Status.Value);
-
-            if (request.PageCursor is not null)
-                flurlReq.SetQueryParam("cursor", request.PageCursor);
-
-            if (request.PageSize is not null)
-                flurlReq.SetQueryParam("count", request.PageSize.Value);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("status", request.Status)
+                .SetQueryParam("cursor", request.PageCursor)
+                .SetQueryParam("count", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -615,16 +581,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "goods", "product", "online", "get")
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.ProductIdList is not null)
-                flurlReq.SetQueryParam("product_ids", string.Join(",", request.ProductIdList));
-
-            if (request.OutProductIdList is not null)
-                flurlReq.SetQueryParam("out_ids", string.Join(",", request.OutProductIdList));
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("product_ids", request.ProductIdList is null ? null : string.Join(",", request.ProductIdList))
+                .SetQueryParam("out_ids", request.OutProductIdList is null ? null : string.Join(",", request.OutProductIdList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeGoodsProductOnlineGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -927,24 +887,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "partner", "order", "query")
                 .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("cooperation_contents", request.CooperationContentType)
+                .SetQueryParam("start_time", request.StartTimestamp)
+                .SetQueryParam("end_time", request.EndTimestamp)
+                .SetQueryParam("status", request.Status)
                 .SetQueryParam("page", request.PageNumber)
                 .SetQueryParam("size", request.PageSize)
-                .SetQueryParam("is_asc", request.IsSortByAsc.GetValueOrDefault() ? "true" : "false");
-
-            if (request.AccountId is not null)
-                flurlReq.SetQueryParam("account_id", request.AccountId);
-
-            if (request.CooperationContentType is not null)
-                flurlReq.SetQueryParam("cooperation_contents", request.CooperationContentType.Value);
-
-            if (request.StartTimestamp is not null)
-                flurlReq.SetQueryParam("start_time", request.StartTimestamp.Value);
-
-            if (request.EndTimestamp is not null)
-                flurlReq.SetQueryParam("end_time", request.EndTimestamp.Value);
-
-            if (request.Status is not null)
-                flurlReq.SetQueryParam("status", request.Status.Value);
+                .SetQueryParam("is_asc", request.IsSortByAsc.HasValue ? request.IsSortByAsc.Value ? "true" : "false" : null);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifePartnerOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1370,35 +1320,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "order", "query")
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("ext_order_id", request.OrderExternalId)
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("order_status", request.OrderStatus)
+                .SetQueryParam("create_order_start_time", request.CreateOrderStartTimestamp)
+                .SetQueryParam("create_order_end_time", request.CreateOrderEndTimestamp)
+                .SetQueryParam("update_order_start_time", request.UpdateOrderStartTimestamp)
+                .SetQueryParam("update_order_end_time", request.UpdateOrderEndTimestamp)
+                .SetQueryParam("get_secret_number", request.RequireGetSecretNumber.HasValue ? request.RequireGetSecretNumber.Value ? "true" : "false" : null)
                 .SetQueryParam("page_num", request.PageNumber)
                 .SetQueryParam("page_size", request.PageSize);
-
-            if (request.OrderId is not null)
-                flurlReq.SetQueryParam("order_id", request.OrderId);
-
-            if (request.OrderExternalId is not null)
-                flurlReq.SetQueryParam("ext_order_id", request.OrderExternalId);
-
-            if (request.OpenId is not null)
-                flurlReq.SetQueryParam("open_id", request.OpenId);
-
-            if (request.OrderStatus is not null)
-                flurlReq.SetQueryParam("order_status", request.OrderStatus);
-
-            if (request.CreateOrderStartTimestamp is not null)
-                flurlReq.SetQueryParam("create_order_start_time", request.CreateOrderStartTimestamp);
-
-            if (request.CreateOrderEndTimestamp is not null)
-                flurlReq.SetQueryParam("create_order_end_time", request.CreateOrderEndTimestamp);
-
-            if (request.UpdateOrderStartTimestamp is not null)
-                flurlReq.SetQueryParam("update_order_start_time", request.UpdateOrderStartTimestamp);
-
-            if (request.UpdateOrderEndTimestamp is not null)
-                flurlReq.SetQueryParam("update_order_end_time", request.UpdateOrderEndTimestamp);
-
-            if (request.RequireGetSecretNumber is not null)
-                flurlReq.SetQueryParam("get_secret_number", request.RequireGetSecretNumber.Value ? "true" : "false");
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeTradeOrderQueryV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1422,13 +1354,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "goodlife", "v1", "trade", "book", "get")
                 .WithHeader("access-token", request.AccessToken)
-                .SetQueryParam("account_id", request.AccountId);
-
-            if (request.BookId is not null)
-                flurlReq.SetQueryParam("book_id", request.BookId);
-
-            if (request.OrderId is not null)
-                flurlReq.SetQueryParam("order_id", request.OrderId);
+                .SetQueryParam("account_id", request.AccountId)
+                .SetQueryParam("book_id", request.BookId)
+                .SetQueryParam("order_id", request.OrderId);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.GoodLifeTradeBookGetV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

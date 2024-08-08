@@ -775,10 +775,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                 .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("spu_ext_id", request.SPUExternalId)
                 .SetQueryParam("need_spu_draft", request.RequireSPUDraft)
-                .SetQueryParam("spu_draft_count", request.SPUDraftCount);
-
-            if (request.SupplierIdForFilterReasonList is not null)
-                flurlReq.SetQueryParam("supplier_ids_for_filter_reason", string.Join(",", request.SupplierIdForFilterReasonList));
+                .SetQueryParam("spu_draft_count", request.SPUDraftCount)
+                .SetQueryParam("supplier_ids_for_filter_reason", request.SupplierIdForFilterReasonList is null ? null : string.Join(",", request.SupplierIdForFilterReasonList));
 
             return await client.SendFlurlRequestAsJsonAsync<Models.POISPUGetV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -131,13 +131,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "finance", request.ApiVersion, "withdrawals")
+                .SetQueryParam("types", request.TypeList is null ? null : string.Join(",", request.TypeList))
                 .SetQueryParam("create_time_ge", request.CreateTimestampGreaterThan)
                 .SetQueryParam("create_time_lt", request.CreateTimestampLessThan)
                 .SetQueryParam("page_size", request.PageSize)
                 .SetQueryParam("page_token", request.PageToken);
-
-            if (request.TypeList is not null)
-                flurlReq.SetQueryParam("types", string.Join(",", request.TypeList));
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FinanceGetWithdrawalsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

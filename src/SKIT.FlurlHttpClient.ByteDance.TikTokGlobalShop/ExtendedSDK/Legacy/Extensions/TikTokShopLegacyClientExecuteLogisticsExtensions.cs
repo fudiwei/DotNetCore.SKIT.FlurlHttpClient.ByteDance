@@ -95,10 +95,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "logistics", "shipping_document")
                 .SetQueryParam("order_id", request.OrderId)
-                .SetQueryParam("document_type", request.DocumentType);
-
-            if (request.DocumentSize is not null)
-                flurlReq.SetQueryParam("document_size", request.DocumentSize);
+                .SetQueryParam("document_type", request.DocumentType)
+                .SetQueryParam("document_size", request.DocumentSize);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.LogisticsGetShippingDocumentResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -115,16 +115,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.ExtendedSDK.Legacy
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list");
-
-            if (request.ActionType is not null)
-                flurlReq.SetQueryParam("reverse_action_type", request.ActionType.Value);
-
-            if (request.ReasonType is not null)
-                flurlReq.SetQueryParam("reason_type", request.ReasonType.Value);
-
-            if (request.FulfillmentStatus is not null)
-                flurlReq.SetQueryParam("fulfillment_status", request.FulfillmentStatus.Value);
+                .CreateFlurlRequest(request, HttpMethod.Get, "reverse", "reverse_reason", "list")
+                .SetQueryParam("reverse_action_type", request.ActionType)
+                .SetQueryParam("reason_type", request.ReasonType)
+                .SetQueryParam("fulfillment_status", request.FulfillmentStatus);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReverseGetRejectReasonListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

@@ -152,13 +152,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "apps", "v1", "capacity", "query_clue_component_info")
                 .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "v1", "capacity", "query_clue_component_info"))
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.PageNumber is not null)
-                flurlReq.SetQueryParam("page_no", request.PageNumber.Value);
-
-            if (request.PageSize is not null)
-                flurlReq.SetQueryParam("page_size", request.PageSize.Value);
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("page_no", request.PageNumber)
+                .SetQueryParam("page_size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsCapacityQueryClueComponentInfoV1Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -484,13 +480,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .SetQueryParam("appid", request.AppId)
                 .SetQueryParam("openid", request.OpenId)
                 .SetQueryParam("type", request.Type)
-                .SetQueryParam("scene", request.Scene);
-
-            if (request.OrderId is not null)
-                flurlReq.SetQueryParam("order_id", request.OrderId);
-
-            if (request.IMType is not null)
-                flurlReq.SetQueryParam("im_type", request.IMType);
+                .SetQueryParam("scene", request.Scene)
+                .SetQueryParam("order_id", request.OrderId)
+                .SetQueryParam("im_type", request.IMType);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsChatCustomerServiceUrlResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

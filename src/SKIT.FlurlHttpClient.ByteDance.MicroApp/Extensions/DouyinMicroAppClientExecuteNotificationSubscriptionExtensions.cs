@@ -26,19 +26,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_tpl_list/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("classification", request.Classification)
+                .SetQueryParam("template_type", request.TemplateType)
+                .SetQueryParam("category_ids", request.CategoryIdString)
+                .SetQueryParam("keyword", request.Keyword)
                 .SetQueryParam("page_num", request.PageNumber)
-                .SetQueryParam("page_size", request.PageSize)
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.TemplateType is not null)
-                flurlReq.SetQueryParam("template_type", request.TemplateType);
-
-            if (request.CategoryIdString is not null)
-                flurlReq.SetQueryParam("category_ids", request.CategoryIdString);
-
-            if (request.Keyword is not null)
-                flurlReq.SetQueryParam("keyword", request.Keyword);
+                .SetQueryParam("page_size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionQueryTemplateListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -84,12 +78,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_created_tpl_list/")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("status", request.Status)
                 .SetQueryParam("page_num", request.PageNumber)
-                .SetQueryParam("page_size", request.PageSize)
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.Status is not null)
-                flurlReq.SetQueryParam("status", request.Status.Value);
+                .SetQueryParam("page_size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionQueryCreatedTemplateListV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -135,13 +127,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "api", "notification", "v2", "subscription", "query_app_tpl/")
+                .WithHeader("access-token", request.AccessToken)
                 .SetQueryParam("classification", request.Classification)
+                .SetQueryParam("category_ids", request.CategoryIdString)
                 .SetQueryParam("page_num", request.PageNumber)
-                .SetQueryParam("page_size", request.PageSize)
-                .WithHeader("access-token", request.AccessToken);
-
-            if (request.CategoryIdString is not null)
-                flurlReq.SetQueryParam("category_ids", request.CategoryIdString);
+                .SetQueryParam("page_size", request.PageSize);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.NotificationSubscriptionQueryAppTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

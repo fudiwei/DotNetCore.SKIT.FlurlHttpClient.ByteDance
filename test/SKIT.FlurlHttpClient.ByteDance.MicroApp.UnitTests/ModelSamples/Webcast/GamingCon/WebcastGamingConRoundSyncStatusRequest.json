@@ -1,0 +1,15 @@
+{
+    "round_id": 23,
+    "room_id": "78273162632",
+    "app_id": "tt411d37a0dxxxxx",
+    "anchor_open_id": "UhJKbtCg3N",
+    "start_time": 1722239345,
+    "end_time": 1722239345,
+    "status": 2,
+    "group_result_list": [
+        {
+            "group_id": "test-01",
+            "result": 1
+        }
+    ]
+}

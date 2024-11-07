@@ -135,6 +135,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             FieldList.Add("effect_ids");
             FieldList.Add("playlist_id");
             FieldList.Add("voice_to_text");
+            FieldList.Add("is_stem_verified");
+            FieldList.Add("favourites_count");
+            FieldList.Add("video_duration");
+            FieldList.Add("hashtag_info_list");
+            FieldList.Add("video_mention_list");
             return this;
         }
     }

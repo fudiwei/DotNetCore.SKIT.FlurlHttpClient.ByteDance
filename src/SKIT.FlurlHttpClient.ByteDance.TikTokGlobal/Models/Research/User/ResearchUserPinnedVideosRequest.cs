@@ -50,6 +50,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             FieldList.Add("share_count");
             FieldList.Add("view_count");
             FieldList.Add("hashtag_names");
+            FieldList.Add("is_stem_verified");
+            FieldList.Add("favourites_count");
+            FieldList.Add("video_duration");
+            FieldList.Add("hashtag_info_list");
+            FieldList.Add("video_mention_list");
             return this;
         }
     }

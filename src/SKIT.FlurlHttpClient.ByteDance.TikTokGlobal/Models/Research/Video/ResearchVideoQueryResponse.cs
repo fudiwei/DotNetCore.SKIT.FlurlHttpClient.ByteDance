@@ -13,6 +13,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 {
                     public class Video
                     {
+                        public static class Types
+                        {
+                            public class HashTagInfo
+                            {
+                                /// <summary>
+                                /// 获取或设置话题标签 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("hashtag_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("hashtag_id")]
+                                public string HashTagId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置话题标签描述。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("hashtag_description")]
+                                [System.Text.Json.Serialization.JsonPropertyName("hashtag_description")]
+                                public string HashTagDescription { get; set; } = default!;
+                            }
+                        }
+
                         /// <summary>
                         /// 获取或设置视频 ID。
                         /// </summary>
@@ -71,11 +91,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         public long ViewCount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置收藏次数。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("favourites_count")]
+                        [System.Text.Json.Serialization.JsonPropertyName("favourites_count")]
+                        public long FavouritesCount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置创建时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("create_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                         public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置视频时长（单位：秒）。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("video_duration")]
+                        [System.Text.Json.Serialization.JsonPropertyName("video_duration")]
+                        public int VideoDuration { get; set; }
 
                         /// <summary>
                         /// 获取或设置音乐 ID。
@@ -100,6 +134,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         public string[]? HashtagNameList { get; set; }
 
                         /// <summary>
+                        /// 获取或设置话题标签信息列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("hashtag_info_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("hashtag_info_list")]
+                        public Types.HashTagInfo[]? HashTagInfoList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置提及列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("video_mention_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("video_mention_list")]
+                        public string[]? VideoMentionList { get; set; }
+
+                        /// <summary>
                         /// 获取或设置播放列表 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("playlist_id")]
@@ -113,6 +161,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         [Newtonsoft.Json.JsonProperty("voice_to_text")]
                         [System.Text.Json.Serialization.JsonPropertyName("voice_to_text")]
                         public string? VoiceToText { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置是否已通过 STEM 认证。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_stem_verified")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_stem_verified")]
+                        public bool? IsSTEMVerified { get; set; }
                     }
                 }
 

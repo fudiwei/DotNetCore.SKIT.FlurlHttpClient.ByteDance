@@ -28,7 +28,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("bio_description")]
                 [System.Text.Json.Serialization.JsonPropertyName("bio_description")]
-                public string BioDescription { get; set; } = default!;
+                public string? BioDescription { get; set; }
+
+                /// <summary>
+                /// 获取或设置用户个人描述 URL。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("bio_url")]
+                [System.Text.Json.Serialization.JsonPropertyName("bio_url")]
+                public string? BioUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否已认证。

@@ -33,6 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             FieldList.Add("following_count");
             FieldList.Add("likes_count");
             FieldList.Add("video_count");
+            FieldList.Add("bio_url");
             return this;
         }
     }

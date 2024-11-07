@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("item_watched_cnt")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_watched_cnt")]
                         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                        public int ItemWatchedCount { get; set; }
+                        public int? ItemWatchedCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频投稿数。
@@ -29,7 +29,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("item_contribute_cnt")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_contribute_cnt")]
                         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-                        public int ItemContributeCount { get; set; }
+                        public int? ItemContributeCount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置开播场次。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("room_session_cnt")]
+                        [System.Text.Json.Serialization.JsonPropertyName("room_session_cnt")]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public int? RoomSessionCount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置开播天数。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("room_broadcast_cnt")]
+                        [System.Text.Json.Serialization.JsonPropertyName("room_broadcast_cnt")]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public int? RoomBroadcastCount { get; set; }
                     }
                 }
 

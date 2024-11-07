@@ -1,0 +1,24 @@
+{
+    "gift_info": {
+        "play_type": 1,
+        "user_receive_guide": [
+            "玩小游戏10秒后获得白金礼包"
+        ],
+        "name": "白金强化碎片包",
+        "icon_url": "https://img.byte25cdn.org/image/198082103523233",
+        "gift_effective_start_time": 1722873600,
+        "gift_effective_end_time": 1723737600,
+        "gift_id": "222622358400",
+        "prop_list": [
+            {
+                "prop_id": "10111",
+                "name": "白金强化碎片",
+                "icon": "https://img.byte25cdn.org/image/1980821035232290",
+                "count": 10
+            }
+        ]
+    },
+    "err_msg": "",
+    "log_id": "202008121419360101980821035705926A",
+    "err_no": 0
+}

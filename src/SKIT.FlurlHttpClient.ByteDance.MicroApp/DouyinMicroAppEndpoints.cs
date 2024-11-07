@@ -11,6 +11,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         public const string DEFAULT = "https://open.douyin.com";
 
         /// <summary>
+        /// 小游戏域名。
+        /// </summary>
+        public const string MINIGAME = "https://minigame.zijieapi.com/mgplatform";
+
+        /// <summary>
         /// 旧版接口默认域名。
         /// </summary>
         public const string LEGACY_DEFAULT = "https://developer.toutiao.com";

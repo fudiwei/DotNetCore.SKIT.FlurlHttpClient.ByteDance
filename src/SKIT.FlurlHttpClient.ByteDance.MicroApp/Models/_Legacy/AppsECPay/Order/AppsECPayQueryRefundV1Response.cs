@@ -29,6 +29,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 [Newtonsoft.Json.JsonProperty("refund_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_status")]
                 public string RefundStatus { get; set; } = default!;
+
+                /// <summary>
+                /// 获取或设置退款时间戳。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("refunded_at")]
+                [System.Text.Json.Serialization.JsonPropertyName("refunded_at")]
+                public long RefundTimestamp { get; set; }
+
+                /// <summary>
+                /// 获取或设置是否分账。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("is_all_settled")]
+                [System.Text.Json.Serialization.JsonPropertyName("is_all_settled")]
+                public bool IsAllSettled { get; set; }
+
+                /// <summary>
+                /// 获取或设置自定义字段。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("cp_extra")]
+                [System.Text.Json.Serialization.JsonPropertyName("cp_extra")]
+                public string? Extra { get; set; }
             }
         }
 

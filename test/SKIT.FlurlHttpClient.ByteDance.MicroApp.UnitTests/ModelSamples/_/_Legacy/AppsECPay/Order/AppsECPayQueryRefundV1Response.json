@@ -1,9 +1,12 @@
-﻿{
+{
     "err_no": 0,
     "err_tips": "",
     "refundInfo": {
-        "refund_no": "69821555158047006",
-        "refund_amount": 3580,
-        "refund_status": "SUCCESS"
+        "refund_no": "N7067470744111892000",
+        "refund_amount": 190,
+        "refund_status": "SUCCESS",
+        "refunded_at": 1645523798,
+        "is_all_settled": false,
+        "cp_extra": ""
     }
 }

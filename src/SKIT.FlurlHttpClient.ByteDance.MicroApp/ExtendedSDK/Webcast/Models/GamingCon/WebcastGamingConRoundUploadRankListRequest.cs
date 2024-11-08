@@ -3,13 +3,13 @@ using System.Collections.Generic;
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /gaming_con/round/sync_status 接口的请求。</para>
+    /// <para>表示 [POST] /gaming_con/round/upload_rank_list 接口的请求。</para>
     /// </summary>
-    public class WebcastGamingConRoundSyncStatusRequest : DouyinMicroAppWebcastRequest
+    public class WebcastGamingConRoundUploadRankListRequest : DouyinMicroAppWebcastRequest
     {
         public static class Types
         {
-            public class GroupResult
+            public class Rank : WebcastGamingConWorldRankUploadRankListRequest.Types.Rank
             {
                 /// <summary>
                 /// 获取或设置阵营 ID。
@@ -21,8 +21,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// <summary>
                 /// 获取或设置​​对局结果。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("result")]
-                [System.Text.Json.Serialization.JsonPropertyName("result")]
+                [Newtonsoft.Json.JsonProperty("round_result")]
+                [System.Text.Json.Serialization.JsonPropertyName("round_result")]
                 public int RoundResult { get; set; }
             }
         }
@@ -56,31 +56,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         public long RoundId { get; set; }
 
         /// <summary>
-        /// 获取或设置本局开始时间戳​。
+        /// 获取或设置对局榜单列表​​​。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("start_time")]
-        [System.Text.Json.Serialization.JsonPropertyName("start_time")]
-        public long StartTimestamp { get; set; }
-
-        /// <summary>
-        /// 获取或设置本局结束时间戳​。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("end_time")]
-        [System.Text.Json.Serialization.JsonPropertyName("end_time")]
-        public long EndTimestamp { get; set; }
-
-        /// <summary>
-        /// 获取或设置对局状态。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("status")]
-        [System.Text.Json.Serialization.JsonPropertyName("status")]
-        public int Status { get; set; }
-
-        /// <summary>
-        /// 获取或设置阵型的结果数据​。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("group_result_list")]
-        [System.Text.Json.Serialization.JsonPropertyName("group_result_list")]
-        public IList<Types.GroupResult>? GroupResultList { get; set; }
+        [Newtonsoft.Json.JsonProperty("rank_list")]
+        [System.Text.Json.Serialization.JsonPropertyName("rank_list")]
+        public IList<Types.Rank> RankList { get; set; } = new List<Types.Rank>();
     }
 }

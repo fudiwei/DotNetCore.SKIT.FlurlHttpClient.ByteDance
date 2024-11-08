@@ -411,6 +411,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal CustomerPaidShippingFeeRefundAmount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置客户运费补偿金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("customer_shipping_fee_offset_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("customer_shipping_fee_offset_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal CustomerShippingFeeOffsetAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置 TikTok 配送费用金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("fbt_fulfillment_fee_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fbt_fulfillment_fee_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal FBTFulfillmentFeeAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置物流激励金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("promo_shipping_incentive_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("promo_shipping_incentive_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal PromoShippingIncentiveAmount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置签字确认费用金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("signature_confirmation_fee_amount")]

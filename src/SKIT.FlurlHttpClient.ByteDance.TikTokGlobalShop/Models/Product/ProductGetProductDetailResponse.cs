@@ -898,6 +898,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("audit_failed_reasons")]
                 [System.Text.Json.Serialization.JsonPropertyName("audit_failed_reasons")]
                 public Types.AuditFailedReason[]? AuditFailedReasonList { get; set; }
+
+                /// <summary>
+                /// 获取或设置上架质量等级。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("listing_quality_tier")]
+                [System.Text.Json.Serialization.JsonPropertyName("listing_quality_tier")]
+                public string? ListingQualityTier { get; set; }
             }
         }
     }

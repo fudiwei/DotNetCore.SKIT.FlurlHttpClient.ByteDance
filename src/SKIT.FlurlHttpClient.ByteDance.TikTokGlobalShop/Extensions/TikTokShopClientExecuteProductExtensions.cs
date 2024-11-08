@@ -536,6 +536,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "products", "listing_check");
 
+            if (request.IsDiagnosisRequired is not null)
+                flurlReq.SetQueryParam("is_diagnosis_required", request.IsDiagnosisRequired.Value ? "true" : "false");
+
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductCreateProductListingCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 

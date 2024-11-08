@@ -101,6 +101,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         }
 
         /// <summary>
+        /// 获取或设置是否返回优化诊断结果。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public bool? IsDiagnosisRequired { get; set; }
+
+        /// <summary>
         /// 获取或设置外部商品 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("external_product_id")]

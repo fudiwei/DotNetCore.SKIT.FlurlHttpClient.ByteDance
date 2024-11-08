@@ -8,7 +8,8 @@
                         "diagnosis_results": [
                             {
                                 "code": "TITLE_LESS_THAN_40_CHARACTERS",
-                                "how_to_solve": "Names must be at least 40 characters long and contain product-identifying information, such as \"hiking boots\" or \"lipstick\"."
+                                "how_to_solve": "Names must be at least 40 characters long and contain product-identifying information, such as \"hiking boots\" or \"lipstick\".",
+                                "quality_tier": "GOOD"
                             }
                         ],
                         "field": "TITLE",
@@ -36,7 +37,11 @@
                         }
                     }
                 ],
-                "id": "123456"
+                "id": "123456",
+                "listing_quality": {
+                    "current_tier": "POOR",
+                    "remaining_recommendations": 3
+                }
             }
         ]
     },

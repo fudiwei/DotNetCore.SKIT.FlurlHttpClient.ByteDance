@@ -34,6 +34,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         [Newtonsoft.Json.JsonProperty("how_to_solve")]
                                         [System.Text.Json.Serialization.JsonPropertyName("how_to_solve")]
                                         public string HowToSolve { get; set; } = default!;
+
+                                        /// <summary>
+                                        /// 获取或设置质量等级。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("quality_tier")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("quality_tier")]
+                                        public string? QualityTier { get; set; }
                                     }
 
                                     public class Suggestion
@@ -150,6 +157,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("suggestion")]
                                 public Types.Suggestion? Suggestion { get; set; }
                             }
+
+                            public class ListingQuality
+                            {
+                                /// <summary>
+                                /// 获取或设置当前等级。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("current_tier")]
+                                [System.Text.Json.Serialization.JsonPropertyName("current_tier")]
+                                public string CurrentTier { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置剩余建议数量。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("remaining_recommendations")]
+                                [System.Text.Json.Serialization.JsonPropertyName("remaining_recommendations")]
+                                public int RemainingRecommendationCount { get; set; } = default!;
+                            }
                         }
 
                         /// <summary>
@@ -166,6 +190,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("diagnoses")]
                         [System.Text.Json.Serialization.JsonPropertyName("diagnoses")]
                         public Types.Diagnosis[] DiagnosisList { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置上架质量信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("listing_quality")]
+                        [System.Text.Json.Serialization.JsonPropertyName("listing_quality")]
+                        public Types.ListingQuality? ListingQuality { get; set; }
                     }
                 }
 

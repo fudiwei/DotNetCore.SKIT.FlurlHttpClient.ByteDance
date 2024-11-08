@@ -62,6 +62,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public decimal SettlementAmount { get; set; }
 
                                 /// <summary>
+                                /// 获取或设置净销售金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("net_sales_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("net_sales_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? NetSalesAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置毛销售金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("gross_sales_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("gross_sales_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? GrossSalesAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置毛销售退款金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("gross_sales_refund_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("gross_sales_refund_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? GrossSalesRefundAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置卖家优惠金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("seller_discount_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("seller_discount_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? SellerDiscountAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置卖家优惠退款金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("seller_discount_refund_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("seller_discount_refund_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? SellerDiscountRefundAmount { get; set; }
+
+                                /// <summary>
                                 /// 获取或设置收入金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("revenue_amount")]
@@ -302,12 +342,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public decimal RefundAdministrationFeeAmount { get; set; }
 
                                 /// <summary>
-                                /// 获取或设置 TikTok 运费费金额。
+                                /// 获取或设置运费金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("shipping_cost_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("shipping_cost_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal ShippingCostAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置 TikTok 运费金额。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("fbm_shipping_cost_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("fbm_shipping_cost_amount")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
-                                public decimal ShippingCostAmount { get; set; }
+                                public decimal FBMShippingCostAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 TikTok 平台运费金额。
@@ -315,7 +363,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("fbt_shipping_cost_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("fbt_shipping_cost_amount")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
-                                public decimal PlatformShippingCostAmount { get; set; }
+                                public decimal FBTShippingCostAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 TikTok 运费优惠金额。
@@ -332,6 +380,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("refund_shipping_cost_discount_amount")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                                 public decimal RefundShippingCostDiscountAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置客户支付的运费金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("customer_paid_shipping_fee_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("customer_paid_shipping_fee_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal CustomerPaidShippingFeeAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置客户支付的运费退款金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("customer_paid_shipping_fee_refund_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("customer_paid_shipping_fee_refund_amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal CustomerPaidShippingFeeRefundAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置签字确认费用金额。
@@ -387,6 +451,46 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [System.Text.Json.Serialization.JsonPropertyName("settlement_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal SettlementAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置净销售金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("net_sales_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("net_sales_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? NetSalesAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置毛销售金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("gross_sales_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("gross_sales_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? GrossSalesAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置毛销售退款金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("gross_sales_refund_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("gross_sales_refund_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? GrossSalesRefundAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置卖家优惠金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("seller_discount_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("seller_discount_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? SellerDiscountAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置卖家优惠退款金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("seller_discount_refund_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("seller_discount_refund_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? SellerDiscountRefundAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置收入金额。
@@ -629,12 +733,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal RefundAdministrationFeeAmount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置 TikTok 运费费金额。
+                        /// 获取或设置运费金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("shipping_cost_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("shipping_cost_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal ShippingCostAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置 TikTok 运费金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("fbm_shipping_cost_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("fbm_shipping_cost_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
-                        public decimal ShippingCostAmount { get; set; }
+                        public decimal FBMShippingCostAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置 TikTok 平台运费金额。
@@ -642,7 +754,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("fbt_shipping_cost_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("fbt_shipping_cost_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
-                        public decimal PlatformShippingCostAmount { get; set; }
+                        public decimal FBTShippingCostAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置 TikTok 运费优惠金额。
@@ -659,6 +771,22 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [System.Text.Json.Serialization.JsonPropertyName("refund_shipping_cost_discount_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal RefundShippingCostDiscountAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置客户支付的运费金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("customer_paid_shipping_fee_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("customer_paid_shipping_fee_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal CustomerPaidShippingFeeAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置客户支付的运费退款金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("customer_paid_shipping_fee_refund_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("customer_paid_shipping_fee_refund_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal CustomerPaidShippingFeeRefundAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置签字确认费用金额。

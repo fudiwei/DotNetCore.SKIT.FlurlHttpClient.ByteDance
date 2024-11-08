@@ -8,10 +8,12 @@
                 "currency": "GBP",
                 "fee_amount": "-30",
                 "id": "7238804564097517339",
+                "net_sales_amount": "-70",
                 "payment_id": "3459275187040258849",
                 "payment_status": "PAID",
                 "revenue_amount": "200",
                 "settlement_amount": "100",
+                "shipping_cost_amount": "-70",
                 "statement_time": 1685548800
             }
         ]

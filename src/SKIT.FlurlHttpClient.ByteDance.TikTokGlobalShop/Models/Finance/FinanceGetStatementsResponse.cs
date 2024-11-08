@@ -59,6 +59,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal SettlementAmount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置净销售金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("net_sales_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("net_sales_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal? NetSalesAmount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置收入金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("revenue_amount")]
@@ -81,6 +89,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [System.Text.Json.Serialization.JsonPropertyName("adjustment_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal AdjustmentAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置运费金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("shipping_cost_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("shipping_cost_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal ShippingCostAmount { get; set; }
                     }
                 }
 

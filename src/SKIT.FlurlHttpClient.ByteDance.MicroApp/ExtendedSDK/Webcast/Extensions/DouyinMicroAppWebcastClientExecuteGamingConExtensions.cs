@@ -142,6 +142,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
         }
 
         /// <summary>
+        /// <para>异步调用 [POST] /gaming_con/round/co_game_upload_user_data 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/interaction/develop/server/live/audience-play ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.WebcastGamingConRoundCoGameUploadUserDataResponse> ExecuteWebcastGamingConRoundCoGameUploadUserDataAsync(this DouyinMicroAppWebcastClient client, Models.WebcastGamingConRoundCoGameUploadUserDataRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            if (request.AppId is null)
+                request.AppId = client.Credentials.AppId;
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "gaming_con", "round", "co_game_upload_user_data")
+                .WithHeader("X-Token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.WebcastGamingConRoundCoGameUploadUserDataResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// <para>异步调用 [POST] /gaming_con/world_rank/set_valid_version 接口。</para>
         /// <para>
         /// REF: <br/>

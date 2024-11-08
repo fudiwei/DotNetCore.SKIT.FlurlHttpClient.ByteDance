@@ -1,0 +1,17 @@
+{
+    "app_id": "ttb101c7bc2e30xxxxxx",
+    "round_id": 1,
+    "round_status": 1,
+    "anchor_infos": [
+        {
+            "anchor_open_id": "xxxx",
+            "room_id": "741033347597639xxxx"
+        }
+    ],
+    "user_list": [
+        {
+            "open_id": "xxxx",
+            "score": 396
+        }
+    ]
+}

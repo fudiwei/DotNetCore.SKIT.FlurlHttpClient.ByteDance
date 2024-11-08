@@ -9,6 +9,8 @@
     "user_list": [
         {
             "open_id": "",
+            "avatar_url": "",
+            "nick_name": "",
             "sec_avatar_url": "",
             "sec_nick_name": "",
             "link_state": 1,
@@ -16,7 +18,10 @@
             "disable_microphone": 1,
             "microphone_state": 1,
             "disable_camera": 1,
-            "camera_state": 1
+            "camera_state": 1,
+            "app_info": {
+                "host_app_start_app_available": true
+            }
         }
     ]
 }

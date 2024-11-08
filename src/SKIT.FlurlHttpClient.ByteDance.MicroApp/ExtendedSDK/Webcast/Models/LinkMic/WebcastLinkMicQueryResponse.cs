@@ -33,6 +33,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
 
             public class User
             {
+                public static class Types
+                {
+                    public class AppInfo
+                    {
+                        /// <summary>
+                        /// 获取或设置麦上用户宿主是否支持云启动玩法。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("host_app_start_app_available")]
+                        [System.Text.Json.Serialization.JsonPropertyName("host_app_start_app_available")]
+                        public bool? IsHostAppStartAppAvailable { get; set; }
+                    }
+                }
+
                 /// <summary>
                 /// 获取或设置用户的 OpenId。
                 /// </summary>
@@ -41,18 +54,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 public string OpenId { get; set; } = default!;
 
                 /// <summary>
+                /// 获取或设置头像 URL。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("avatar_url")]
+                [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
+                public string? AvatarUrl { get; set; }
+
+                /// <summary>
+                /// 获取或设置昵称。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("nick_name")]
+                [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
+                public string? Nickname { get; set; } 
+
+                /// <summary>
                 /// 获取或设置加密头像 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sec_avatar_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("sec_avatar_url")]
-                public string SecretAvatarUrl { get; set; } = default!;
+                public string? SecretAvatarUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置加密昵称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sec_nick_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("sec_nick_name")]
-                public string SecretNickName { get; set; } = default!;
+                public string? SecretNickname { get; set; }
 
                 /// <summary>
                 /// 获取或设置连麦状态。
@@ -95,6 +122,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 [Newtonsoft.Json.JsonProperty("camera_state")]
                 [System.Text.Json.Serialization.JsonPropertyName("camera_state")]
                 public int CameraState { get; set; }
+
+                /// <summary>
+                /// 获取或设置麦上用户玩法相关信息​。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("app_info")]
+                [System.Text.Json.Serialization.JsonPropertyName("app_info")]
+                public Types.AppInfo? AppInfo { get; set; }
             }
         }
 

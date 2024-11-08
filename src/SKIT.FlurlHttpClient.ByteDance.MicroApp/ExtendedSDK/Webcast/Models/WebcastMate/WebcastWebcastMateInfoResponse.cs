@@ -41,6 +41,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                         [Newtonsoft.Json.JsonProperty("avatar_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
                         public string AnchorAvatarUrl { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置支持的游戏场景列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("available_game_scenes")]
+                        [System.Text.Json.Serialization.JsonPropertyName("available_game_scenes")]
+                        public int[]? AvailableGameSceneList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置当前加入游戏的用户 OpenId。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("join_game_user_open_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("join_game_user_open_id")]
+                        public string? JoinedGameUserOpenId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置当前加入游戏的用户角色。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("join_game_user_role")]
+                        [System.Text.Json.Serialization.JsonPropertyName("join_game_user_role")]
+                        [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
+                        public int? JoinedGameUserRole { get; set; }
                     }
                 }
 

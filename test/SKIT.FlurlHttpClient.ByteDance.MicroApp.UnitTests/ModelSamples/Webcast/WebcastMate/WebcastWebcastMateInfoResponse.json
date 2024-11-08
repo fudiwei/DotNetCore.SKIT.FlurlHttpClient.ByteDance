@@ -4,7 +4,10 @@
             "room_id": 7214015683695250235,
             "anchor_open_id": "_000oJIu6APhomK7KIBGqSYm5XYPxCJB_xxx",
             "avatar_url": "https://p11.douyinpic.com/aweme/720x720/aweme-avatar/tos-cn-avt-0015_973c31e8055f78a41d3f7de3def9821d.jpeg?from=3067671334",
-            "nick_name": "xxx"
+            "nick_name": "xxx",
+            "join_game_user_open_id": "720575940380000262",
+            "join_game_user_role": 1,
+            "available_game_scenes": [ 1 ]
         }
     }
 }

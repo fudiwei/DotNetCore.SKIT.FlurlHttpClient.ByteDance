@@ -13,6 +13,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 {
                     public class Certification
                     {
+                        public static class Types
+                        {
+                            public class RequirementCondition
+                            {
+                                /// <summary>
+                                /// 获取或设置条件类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("condition_type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("condition_type")]
+                                public string ConditionType { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置属性 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("attribute_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                public string AttributeId { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置属性值 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("attribute_value_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("attribute_value_id")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                public string AttributeValueId { get; set; } = default!;
+                            }
+                        }
+
                         /// <summary>
                         /// 获取或设置商品认证 ID。
                         /// </summary>
@@ -41,6 +70,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("is_required")]
                         [System.Text.Json.Serialization.JsonPropertyName("is_required")]
                         public bool IsRequired { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置必需条件列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("requirement_conditions")]
+                        [System.Text.Json.Serialization.JsonPropertyName("requirement_conditions")]
+                        public Types.RequirementCondition[]? RequirementConditionList { get; set; }
                     }
 
                     public class SizeChart

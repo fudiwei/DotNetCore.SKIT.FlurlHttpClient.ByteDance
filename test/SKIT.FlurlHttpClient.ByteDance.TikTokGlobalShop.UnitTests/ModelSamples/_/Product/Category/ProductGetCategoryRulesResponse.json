@@ -15,6 +15,13 @@
                 "id": "602362",
                 "is_required": true,
                 "name": "SNI Certificate",
+                "requirement_conditions": [
+                    {
+                        "attribute_id": "101610",
+                        "attribute_value_id": "1024358",
+                        "condition_type": "VALUE_ID_MATCH"
+                    }
+                ],
                 "sample_image_url": "https://p-boei18n.byted.org/tos-boei18n-i-jvtte31kaf/80b32f2896829eeb69d4b278c4f3aa75.jpg~tplv-jvtte31kaf-origin-jpeg.jpeg"
             }
         ],

@@ -13,7 +13,7 @@
         "listing_schemas": [
             {
                 "category_id": 60001,
-                "fileds": [
+                "fields": [
                     {
                         "complex_values": [
                             {
@@ -27,7 +27,7 @@
                                 ],
                                 "rules": [
                                     {
-                                        "type": "MULTIINPUT",
+                                        "type": "REQUIRED",
                                         "value": "true"
                                     }
                                 ]
@@ -37,14 +37,14 @@
                         "name": "product_attributes",
                         "options": [
                             {
-                                "id": " ",
-                                "name": " "
+                                "id": "  ",
+                                "name": "  "
                             }
                         ],
                         "rules": [
                             {
-                                "type": "REQUIRED",
-                                "value": "true"
+                                "type": "MAX_LENGTH",
+                                "value": "20"
                             }
                         ]
                     }

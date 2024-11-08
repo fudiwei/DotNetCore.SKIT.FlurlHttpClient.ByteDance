@@ -102,8 +102,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// <summary>
                         /// 获取或设置字段列表。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("fileds")]
-                        [System.Text.Json.Serialization.JsonPropertyName("fileds")]
+                        [Newtonsoft.Json.JsonProperty("fields")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fields")]
                         public Types.Field[] FieldList { get; set; } = default!;
                     }
 

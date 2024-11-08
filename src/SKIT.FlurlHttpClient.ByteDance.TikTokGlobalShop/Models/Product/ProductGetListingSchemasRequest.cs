@@ -9,11 +9,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     {
         /// <summary>
         /// 获取或设置 API 版本号。
-        /// <para>默认值：202401</para>
+        /// <para>默认值：202407</para>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public override int ApiVersion { get; set; } = 202401;
+        public override int ApiVersion { get; set; } = 202407;
 
         /// <summary>
         /// 获取或设置分类 ID 列表。

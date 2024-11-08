@@ -240,7 +240,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "video", "search", "comment", "reply")
                 .WithHeader("access-token", request.AccessToken)
-                .SetQueryParam("open_id", request.OpenId);
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("device_brand", request.DeviceBrand)
+                .SetQueryParam("device_platform", request.DevicePlatform)
+                .SetQueryParam("device_type", request.DeviceType)
+                .SetQueryParam("ip", request.ClientIp)
+                .SetQueryParam("os_version", request.OSVersion)
+                .SetQueryParam("shark_channel", request.SharkChannel);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.VideoSearchCommentReplyResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

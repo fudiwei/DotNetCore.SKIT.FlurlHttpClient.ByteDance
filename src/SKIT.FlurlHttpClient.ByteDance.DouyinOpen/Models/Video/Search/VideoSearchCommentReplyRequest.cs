@@ -13,6 +13,48 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
+        /// 获取或设置设备品牌。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? DeviceBrand { get; set; }
+
+        /// <summary>
+        /// 获取或设置设备平台。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? DevicePlatform { get; set; }
+
+        /// <summary>
+        /// 获取或设置设备类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? DeviceType { get; set; }
+
+        /// <summary>
+        /// 获取或设置客户端 IP。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? ClientIp { get; set; }
+
+        /// <summary>
+        /// 获取或设置操作系统版本号。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? OSVersion { get; set; }
+
+        /// <summary>
+        /// 获取或设置接入渠道。
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string? SharkChannel { get; set; }
+
+        /// <summary>
         /// 获取或设置特殊加密的视频 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sec_item_id")]

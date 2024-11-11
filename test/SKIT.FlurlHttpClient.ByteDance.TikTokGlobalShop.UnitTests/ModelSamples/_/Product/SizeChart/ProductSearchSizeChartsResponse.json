@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "data": {
+        "next_page_token": "b2Zmc2V0PTAK",
+        "size_chart": [
+            {
+                "images": [
+                    {
+                        "locale": "en-US",
+                        "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe",
+                        "url": "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/6c8519a3663a4d728c4e3c131dc914b4~tplv-o3syd03w52-resize-jpeg:300:300.jpeg?from=522366036"
+                    }
+                ],
+                "template_id": "7362027385890244398",
+                "template_name": "size chart"
+            }
+        ],
+        "total_count": 100
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

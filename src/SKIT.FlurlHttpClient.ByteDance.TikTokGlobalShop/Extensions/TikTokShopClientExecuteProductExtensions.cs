@@ -409,6 +409,33 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         }
         #endregion
 
+        #region SizeChart
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/sizecharts/search 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/66bebeaa224acb02f7d7e8c5 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductSearchSizeChartsResponse> ExecuteProductSearchSizeChartsAsync(this TikTokShopClient client, Models.ProductSearchSizeChartsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "sizecharts", "search")
+                .SetQueryParam("locales", request.Locales is not null ? string.Join(",", request.Locales) : null)
+                .SetQueryParam("page_size", request.PageSize)
+                .SetQueryParam("page_token", request.PageToken);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductSearchSizeChartsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Upload
         /// <summary>
         /// <para>异步调用 [POST] /product/{version}/images/upload 接口。</para>

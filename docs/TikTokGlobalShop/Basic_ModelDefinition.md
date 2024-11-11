@@ -30,109 +30,110 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Seller Permissions: `SellerGetPermissions`
     -   Get Active Shops: `SellerGetShops`
 -   Products
-    -   Get Brands: `ProductGetBrands`
-    -   Create Custom Brands: `ProductCreateBrand`
+    -   Check Listing Prerequisites: `ProductGetPrerequisites`
     -   Get Categories: `ProductGetCategories`
+    -   Recommend Categories: `ProductRecommendCategories`
     -   Get Category Rules: `ProductGetCategoryRules`
     -   Get Attributes: `ProductGetCategoryAttributes`
-    -   Recommend Categories: `ProductRecommendCategories`
+    -   Get Brands: `ProductGetBrands`
+    -   Create Custom Brands: `ProductCreateBrand`
+    -   Check Product Listing: `ProductCreateProductListingCheck`
     -   Upload Product Image: `ProductUploadImage`
     -   Upload Product File: `ProductUploadFile`
+    -   Search Size Charts: `ProductSearchSizeCharts`
     -   Create Product: `ProductCreateProduct`
     -   Partial Edit Product: `ProductUpdateProductPartial`
     -   Edit Product: `ProductUpdateProduct`
-    -   Update Inventory: `ProductUpdateProductInventory`
-    -   Update Price: `ProductUpdateProductPrice`
     -   Activate Products: `ProductActivateProducts`
     -   Deactivate Products: `ProductDeactivateProducts`
     -   Delete Products: `ProductDeleteProducts`
     -   Recover Products: `ProductRecoverProducts`
     -   Get Product: `ProductGetProductDetail`
-    -   Inventory Search: `ProductGetInventories`
-    -   Get Global Categories: `ProductGetGlobalCategories`
-    -   Get Global Category Rules: `ProductGetGlobalCategoryRules`
-    -   Get Global Attributes: `ProductGetGlobalCategoryAttributes`
-    -   Recommend Global Categories: `ProductRecommendGlobalCategories`
-    -   Create Global Product: `ProductCreateGlobalProduct`
-    -   Publish Global Product: `ProductPublishGlobalProduct`
-    -   Update Global Inventory: `ProductUpdateGlobalProductInventory`
-    -   Get Global Product: `ProductGetGlobalProductDetail`
-    -   Edit Global Product: `ProductUpdateGlobalProduct`
-    -   Delete Global Products: `ProductDeleteGlobalProducts`
-    -   Check Product Listing: `ProductCreateProductListingCheck`
-    -   Check Listing Prerequisites: `ProductGetPrerequisites`
-    -   Search Global Products: `ProductSearchGlobalProducts`
     -   Search Products: `ProductSearchProducts`
-    -   Listing Schemas: `ProductGetListingSchemas`
+    -   Update Price: `ProductUpdateProductPrice`
+    -   Update Inventory: `ProductUpdateProductInventory`
+    -   Inventory Search: `ProductGetInventories`
     -   Product Information Issue Diagnosis: `ProductGetProductDiagnoses`
     -   Get Products SEO Words: `ProductGetProductSEOWords`
     -   Get Recommended Product Title And Description: `ProductGetProductSuggestions`
     -   Optimized Images: `ProductOptimizeImages`
+    -   Get Global Categories: `ProductGetGlobalCategories`
+    -   Recommend Global Categories: `ProductRecommendGlobalCategories`
+    -   Get Global Category Rules: `ProductGetGlobalCategoryRules`
+    -   Get Global Attributes: `ProductGetGlobalCategoryAttributes`
+    -   Create Global Product: `ProductCreateGlobalProduct`
+    -   Publish Global Product: `ProductPublishGlobalProduct`
+    -   Edit Global Product: `ProductUpdateGlobalProduct`
+    -   Delete Global Products: `ProductDeleteGlobalProducts`
+    -   Get Global Product: `ProductGetGlobalProductDetail`
+    -   Search Global Products: `ProductSearchGlobalProducts`
+    -   Update Global Inventory: `ProductUpdateGlobalProductInventory`
+    -   Listing Schemas: `ProductGetListingSchemas`
+-   Promotion
+    -   Create Activity: `PromotionCreateActivity`
+    -   Update Activity: `PromotionUpdateActivity`
+    -   Deactivate Activity: `PromotionDeactivateActivity`
+    -   Get Activity: `PromotionGetActivityDetail`
+    -   Search Activities: `PromotionSearchActivities`
+    -   Update Activity Product: `PromotionUpdateActivityProducts`
+    -   Remove Activity Product: `PromotionDeleteActivityProducts`
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
 -   Fulfillment
-    -   Search Package: `FulfillmentSearchPackages`
-    -   Get Package Detail: `FulfillmentGetPackageDetail`
-    -   Get Package Shipping Document: `FulfillmentGetPackageShippingDocuments`
-    -   Get Package Handover Time Slots: `FulfillmentGetPackageHandoverTimeSlots`
-    -   Get Tracking: `FulfillmentGetOrderTracking`
-    -   Update Package Shipping Info: `FulfillmentUpdatePackageShippingInfo`
-    -   Update Package Delivery Status: `FulfillmentBatchUpdatePackagesDeliveryStatus`
     -   Get Order Split Attributes: `FulfillmentGetOrderSplitAttributes`
     -   Split Orders: `FulfillmentSplitOrder`
+    -   Get Eligible Shipping Service: `FulfillmentSearchOrderShippingServices`
+    -   Create Packages: `FulfillmentCreatePackage`
+    -   Search Package: `FulfillmentSearchPackages`
     -   Search Combinable Packages: `FulfillmentSearchCombinablePackages`
     -   Combine Package: `FulfillmentCombinePackage`
     -   Uncombine Packages: `FulfillmentUncombinePackage`
-    -   Mark Package As Shipped: `FulfillmentUpdateOrderPackages`
+    -   Get Package Handover Time Slots: `FulfillmentGetPackageHandoverTimeSlots`
     -   Ship Package: `FulfillmentShipPackage`
     -   Batch Ship Packages: `FulfillmentBatchShipPackages`
-    -   Fulfillment Upload Delivery Image: `FulfillmentUploadImage`
-    -   Fulfillment Upload Delivery File: `FulfillmentUploadFile`
-    -   Get Eligible Shipping Service: `FulfillmentSearchOrderShippingServices`
-    -   Create Packages: `FulfillmentCreatePackage`
+    -   Mark Package As Shipped: `FulfillmentUpdateOrderPackages`
+    -   Get Package Shipping Document: `FulfillmentGetPackageShippingDocuments`
+    -   Get Package Detail: `FulfillmentGetPackageDetail`
+    -   Get Tracking: `FulfillmentGetOrderTracking`
     -   Update Shipping Info: `FulfillmentUpdateOrderShippingInfo`
+    -   Update Package Shipping Info: `FulfillmentUpdatePackageShippingInfo`
+    -   Fulfillment Upload Delivery File: `FulfillmentUploadFile`
+    -   Fulfillment Upload Delivery Image: `FulfillmentUploadImage`
+    -   Update Package Delivery Status: `FulfillmentBatchUpdatePackagesDeliveryStatus`
+-   Logistics
+    -   Get Warehouse List: `LogisticsGetWarehouses`
+    -   Get Global Seller Warehouse: `LogisticsGetGlobalWarehouses`
+    -   Get Warehouse Delivery Options: `LogisticsGetWarehouseDeliveryOptions`
+    -   Get Shipping Providers: `LogisticsGetDeliveryOptionShippingProviders`
 -   Return and Refund
-    -   Search Cancellations: `ReturnRefundSearchCancellations`
-    -   Approve Cancellation: `ReturnRefundApproveCancellation`
-    -   Reject Cancellation: `ReturnRefundRejectCancellation`
-    -   Search Returns: `ReturnRefundSearchReturns`
-    -   Approve Return: `ReturnRefundApproveReturn`
-    -   Reject Return: `ReturnRefundRejectReturn`
     -   Get Aftersale Eligibility: `ReturnRefundGetOrderAftersaleEligibility`
     -   Get Reject Reasons: `ReturnRefundGetRejectReasons`
-    -   Calculate Refund: `ReturnRefundCalculateRefund`
+    -   Create Return: `ReturnRefundCreateReturn`
+    -   Approve Return: `ReturnRefundApproveReturn`
+    -   Reject Return: `ReturnRefundRejectReturn`
+    -   Search Returns: `ReturnRefundSearchReturns`
     -   Get Return Records: `ReturnRefundGetReturnRecords`
     -   Cancel Order: `ReturnRefundCreateCancellation`
-    -   Create Return: `ReturnRefundCreateReturn`
--   Logistics
-    -   Get Warehouse Delivery Options: `LogisticsGetWarehouseDeliveryOptions`
-    -   Get Warehouse List: `LogisticsGetWarehouses`
-    -   Get Shipping Providers: `LogisticsGetDeliveryOptionShippingProviders`
-    -   Get Global Seller Warehouse: `LogisticsGetGlobalWarehouses`
--   Promotion
-    -   Create Activity: `PromotionCreateActivity`
-    -   Update Activity Product: `PromotionUpdateActivityProducts`
-    -   Remove Activity Product: `PromotionDeleteActivityProducts`
-    -   Search Activities: `PromotionSearchActivities`
-    -   Get Activity: `PromotionGetActivityDetail`
-    -   Update Activity: `PromotionUpdateActivity`
-    -   Deactivate Activity: `PromotionDeactivateActivity`
+    -   Approve Cancellation: `ReturnRefundApproveCancellation`
+    -   Reject Cancellation: `ReturnRefundRejectCancellation`
+    -   Search Cancellations: `ReturnRefundSearchCancellations`
+    -   Calculate Refund: `ReturnRefundCalculateRefund`
 -   Finance
-    -   Get Order Statement Transactions: `FinanceGetOrderStatementTransactions`
-    -   Get Statement Transactions: `FinanceGetStatementTransactions`
-    -   Get Withdrawals: `FinanceGetWithdrawals`
     -   Get Statements: `FinanceGetStatements`
+    -   Get Statement Transactions: `FinanceGetStatementTransactions`
+    -   Get Order Statement Transactions: `FinanceGetOrderStatementTransactions`
     -   Get Payments: `FinanceGetPayments`
+    -   Get Withdrawals: `FinanceGetWithdrawals`
 -   Customer Service
-    -   Get Conversation Messages: `CustomerServiceGetConversationMessages`
+    -   Create Conversation: `CustomerServiceCreateConversation`
     -   Get Conversations: `CustomerServiceGetConversations`
+    -   Get Conversation Messages: `CustomerServiceGetConversationMessages`
+    -   Upload Buyer Messages Image: `CustomerServiceUploadImage`
     -   Send Message: `CustomerServiceCreateConversationMessage`
+    -   Read Message: `CustomerServiceReadConversationMessage`
     -   Get Agent Settings: `CustomerServiceGetAgentSettings`
     -   Update Agent Settings: `CustomerServiceUpdateAgentSettings`
-    -   Upload Buyer Messages Image: `CustomerServiceUploadImage`
-    -   Read Message: `CustomerServiceReadConversationMessage`
-    -   Create Conversation: `CustomerServiceCreateConversation`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

@@ -20,6 +20,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Access Token: `AuthGetToken`
     -   Refresh Access Token: `AuthRefreshToken`
 -   Authorization
+    -   Get Authorized Category Assets: `AuthorizationGetCategoryAssets`
     -   Get Authorized Shops: `AuthorizationGetShops`
 -   Event
     -   Get Shop Webhooks: `EventGetWebhooks`

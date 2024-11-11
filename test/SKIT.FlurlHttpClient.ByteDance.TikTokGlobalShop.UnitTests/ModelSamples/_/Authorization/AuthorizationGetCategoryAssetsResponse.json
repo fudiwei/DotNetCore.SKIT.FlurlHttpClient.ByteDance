@@ -1,0 +1,17 @@
+{
+    "code": 0,
+    "data": {
+        "category_assets": [
+            {
+                "category": {
+                    "id": 3,
+                    "name": "Customer Support"
+                },
+                "cipher": "TTP_XF90igAAAABh0sddwer0qsWgt233vOiG",
+                "target_market": "US"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

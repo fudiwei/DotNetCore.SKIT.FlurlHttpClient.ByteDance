@@ -1,0 +1,17 @@
+{
+    "code": 0,
+    "data": {
+        "shops": [
+            {
+                "cipher": "GCP_XF90igAAAABh00qsWgtvOiGFNqyubMt3",
+                "code": "CNGBCBA4LLU8",
+                "id": "7000714532876273420",
+                "name": "Maomao beauty shop",
+                "region": "GB",
+                "seller_type": "CROSS_BORDER"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

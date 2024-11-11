@@ -8,6 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
     public static class TikTokShopClientExecutePromotionExtensions
     {
+        #region Activity
         /// <summary>
         /// <para>异步调用 [POST] /promotion/{version}/activities 接口。</para>
         /// <para>
@@ -161,5 +162,54 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionDeleteActivityProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
+        #endregion
+
+        #region Coupon
+        /// <summary>
+        /// <para>异步调用 [POST] /promotion/{version}/coupons/search 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/6699dcdf115ebe02f841e4cd ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PromotionSearchCouponsResponse> ExecutePromotionSearchCouponsAsync(this TikTokShopClient client, Models.PromotionSearchCouponsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "promotion", request.ApiVersion, "coupons", "search")
+                .SetQueryParam("page_size", request.PageSize)
+                .SetQueryParam("page_token", request.PageToken);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.PromotionSearchCouponsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /promotion/{version}/coupons/{coupon_id} 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/6699dce0de15e502ed219e37 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.PromotionGetCouponDetailResponse> ExecutePromotionGetCouponDetailAsync(this TikTokShopClient client, Models.PromotionGetCouponDetailRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "promotion", request.ApiVersion, "coupons", request.CouponId);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.PromotionGetCouponDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
     }
 }

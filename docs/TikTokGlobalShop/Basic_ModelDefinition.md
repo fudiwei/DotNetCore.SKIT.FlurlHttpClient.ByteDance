@@ -78,6 +78,8 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Search Activities: `PromotionSearchActivities`
     -   Update Activity Product: `PromotionUpdateActivityProducts`
     -   Remove Activity Product: `PromotionDeleteActivityProducts`
+    -   Get Coupon: `PromotionGetCouponDetail`
+    -   Search Coupons: `PromotionSearchCoupons`
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`

@@ -1,0 +1,57 @@
+{
+    "code": 0,
+    "data": {
+        "coupons": [
+            {
+                "claim_duration": {
+                    "end_time": 1709654340,
+                    "start_time": 1709568000
+                },
+                "create_time": 1661756811000,
+                "creation_source": "SELLER_CENTER",
+                "discount": {
+                    "max_discount": {
+                        "amount": "40",
+                        "currency": "USD"
+                    },
+                    "percentage": "30",
+                    "reduction_amount": {
+                        "amount": "30.5",
+                        "currency": "USD"
+                    },
+                    "type": "AMOUNT_OFF"
+                },
+                "display_type": "CHAT\n\n\n",
+                "id": "7342461823095965461",
+                "product_scope": "FULL_SHOP",
+                "promo_code": "TTS12345",
+                "redemption_duration": {
+                    "end_time": 1709754340,
+                    "relative_time": 4,
+                    "start_time": 1709768000,
+                    "type": "ABSOLUTE"
+                },
+                "status": "NOT_START\n\n\n\n",
+                "target_buyer_segment": "NEW\n",
+                "threshold": {
+                    "min_spend": {
+                        "amount": "30",
+                        "currency": "USD"
+                    },
+                    "type": "MIN_SPEND"
+                },
+                "title": "test coupon",
+                "update_time": 1661756811000,
+                "usage_limits": {
+                    "redemption_limit": 1000,
+                    "single_buyer_claim_limit": 30,
+                    "total_claim_limit": 1000
+                }
+            }
+        ],
+        "next_page_token": "1661756811000",
+        "total_count": 20
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

@@ -11,6 +11,7 @@
                 "cancellation_initiator": "SELLER",
                 "collection_due_time": 1678389618,
                 "collection_time": 1678389618,
+                "commerce_platform": "TIKTOK_SHOP",
                 "cpf": "3213-31231412",
                 "create_time": 1619611561,
                 "delivery_due_time": 1678389618,
@@ -20,7 +21,12 @@
                 "delivery_sla_time": 1678389618,
                 "delivery_time": 1678389618,
                 "delivery_type": "HOME_DELIVERY",
+                "fast_dispatch_sla_time": 1678389618,
                 "fulfillment_type": "FULFILLMENT_BY_SELLER",
+                "handling_duration": {
+                    "days": "7",
+                    "type": "BUSINESS_DAY"
+                },
                 "has_updated_recipient_address": false,
                 "id": "576461413038785752",
                 "is_buyer_request_cancel": false,
@@ -36,12 +42,14 @@
                         "combined_listing_skus": [
                             {
                                 "product_id": "1729582718312380456",
+                                "seller_sku": "yellow-24-XL ",
                                 "sku_count": 1,
                                 "sku_id": "2729382476852921123"
                             }
                         ],
                         "currency": "IDR",
                         "display_status": "TO_SHIP",
+                        "handling_duration_days": "7",
                         "id": "577086512123755123",
                         "is_gift": false,
                         "item_tax": [
@@ -73,6 +81,7 @@
                     }
                 ],
                 "need_upload_invoice": "NEED_INVOICE",
+                "order_type": "ZERO_LOTTERY",
                 "packages": [
                     {
                         "id": "1152321127278713123"
@@ -82,6 +91,8 @@
                 "payment": {
                     "buyer_service_fee": "1000",
                     "currency": "IDR",
+                    "handling_fee": "1000",
+                    "item_insurance_fee": "1000",
                     "original_shipping_fee": "5000",
                     "original_total_product_price": "5000",
                     "platform_discount": "5000",
@@ -92,12 +103,14 @@
                     "shipping_fee_platform_discount": "5000",
                     "shipping_fee_seller_discount": "5000",
                     "shipping_fee_tax": "11",
+                    "shipping_insurance_fee": "1000",
                     "small_order_fee": "3000",
                     "sub_total": "5000",
                     "tax": "5000",
                     "total_amount": "5000"
                 },
                 "payment_method_name": "CCDC",
+                "pick_up_cut_off_time": 1678389618,
                 "recipient_address": {
                     "address_detail": "Unit one building 8",
                     "address_line1": "TikTok 5800 bristol Pkwy",
@@ -114,12 +127,15 @@
                             "address_name": "United Kingdom"
                         }
                     ],
+                    "first_name": "David",
                     "full_address": "1199 Coleman Ave San Jose, CA 95110",
-                    "name": "Zay",
+                    "last_name": "Kong",
+                    "name": "David Kong",
                     "phone_number": "(+1)213-***-1234",
                     "postal_code": "95110",
                     "region_code": "US"
                 },
+                "release_date": 1619611762,
                 "replaced_order_id": "576461416728782174",
                 "request_cancel_time": 1678389618,
                 "rts_sla_time": 1619611688,

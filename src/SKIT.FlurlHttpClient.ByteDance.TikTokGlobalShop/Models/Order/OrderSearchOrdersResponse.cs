@@ -154,6 +154,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("buyer_service_fee")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                                 public decimal BuyerServiceFee { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置额外处理费。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("handling_fee")]
+                                [System.Text.Json.Serialization.JsonPropertyName("handling_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? HandlingFee { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置运输保险费。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("shipping_insurance_fee")]
+                                [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? ShippingInsuranceFee { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置货物保险费。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("item_insurance_fee")]
+                                [System.Text.Json.Serialization.JsonPropertyName("item_insurance_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal? ItemInsuranceFee { get; set; }
                             }
 
                             public class RecipientAddress
@@ -222,6 +246,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
                                 public string ContactName { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置联系人名。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("first_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("first_name")]
+                                public string? ContactFirstName { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置联系人姓。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("last_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("last_name")]
+                                public string? ContactLastName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置邮编。
@@ -454,6 +492,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 public string? CancelReason { get; set; }
 
                                 /// <summary>
+                                /// 获取或设置卖家处理周期天数。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("handling_duration_days")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonPropertyName("handling_duration_days")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public int? HandlingDurationDays { get; set; }
+
+                                /// <summary>
                                 /// 获取或设置准备发货时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rts_time")]
@@ -527,6 +574,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_count")]
                                 public int SKUCount { get; set; }
                             }
+
+                            public class HandlingDuration
+                            {
+                                /// <summary>
+                                /// 获取或设置类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("type")]
+                                public string Type { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置天数。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("days")]
+                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonPropertyName("days")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public int? Days { get; set; }
+                            }
                         }
 
                         /// <summary>
@@ -536,6 +602,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
                         public string OrderId { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置电商平台。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("commerce_platform")]
+                        [System.Text.Json.Serialization.JsonPropertyName("commerce_platform")]
+                        public string? CommercePlatform { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置订单类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("order_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("order_type")]
+                        public string OrderType { get; set; } = default!;
 
                         /// <summary>
                         /// 获取或设置订单状态。
@@ -711,6 +791,34 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("collection_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("collection_time")]
                         public long? CollectionTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置揽货截止时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("pick_up_cut_off_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("pick_up_cut_off_time")]
+                        public long? PickupCutOffTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置最晚揽货 SLA 时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("fast_dispatch_sla_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fast_dispatch_sla_time")]
+                        public long? FastDispatchSLATimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置卖家处理周期信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("handling_duration")]
+                        [System.Text.Json.Serialization.JsonPropertyName("handling_duration")]
+                        public Types.HandlingDuration? HandlingDuration { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置卖家处理开始时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("release_date")]
+                        [System.Text.Json.Serialization.JsonPropertyName("release_date")]
+                        public long? ReleaseDataTimestamp { get; set; }
 
                         /// <summary>
                         /// 获取或设置物流单号。

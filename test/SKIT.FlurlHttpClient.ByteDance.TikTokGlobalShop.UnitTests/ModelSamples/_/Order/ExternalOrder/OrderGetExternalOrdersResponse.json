@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "data": {
+        "external_orders": [
+            {
+                "id": "676461413038785752",
+                "line_items": [
+                    {
+                        "id": "577086512123755123",
+                        "origin_id": "677086512123755123"
+                    }
+                ],
+                "platform": "SHOPIFY"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

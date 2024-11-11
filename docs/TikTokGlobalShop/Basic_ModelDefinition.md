@@ -83,6 +83,10 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
 -   Orders
     -   Get Order List: `OrderSearchOrders`
     -   Get Order Detail: `OrderBatchGetOrderDetail`
+    -   Get Price Detail: `OrderGetOrderPriceDetail`
+    -   Add External Order References: `OrderCreateExternalOrder`
+    -   Get External Order References: `OrderGetExternalOrders`
+    -   Search Order By External Order Reference: `OrderSearchExternalOrders`
 -   Fulfillment
     -   Get Order Split Attributes: `FulfillmentGetOrderSplitAttributes`
     -   Split Orders: `FulfillmentSplitOrder`

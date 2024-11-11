@@ -1,0 +1,20 @@
+{
+    "code": 0,
+    "data": {
+        "errors": [
+            {
+                "code": "36020001",
+                "detail": {
+                    "external_order": {
+                        "id": "676461413038785752",
+                        "platform": "SHOPIFY"
+                    },
+                    "order_id": "576461413038785752"
+                },
+                "message": "Invalid order_id"
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

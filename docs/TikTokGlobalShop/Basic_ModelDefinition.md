@@ -85,6 +85,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Order Split Attributes: `FulfillmentGetOrderSplitAttributes`
     -   Split Orders: `FulfillmentSplitOrder`
     -   Get Eligible Shipping Service: `FulfillmentSearchOrderShippingServices`
+    -   Create First Mile Bundle: `FulfillmentCreateBundle`
     -   Create Packages: `FulfillmentCreatePackage`
     -   Search Package: `FulfillmentSearchPackages`
     -   Search Combinable Packages: `FulfillmentSearchCombinablePackages`

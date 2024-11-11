@@ -11,6 +11,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
     public static class TikTokShopClientExecuteFulfillmentExtensions
     {
+        #region Bundle
+        /// <summary>
+        /// <para>异步调用 [POST] /fulfillment/{version}/bundles 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/669f4a4e762e2402ff17df5c ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.FulfillmentCreateBundleResponse> ExecuteFulfillmentCreateBundleAsync(this TikTokShopClient client, Models.FulfillmentCreateBundleRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "bundles");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentCreateBundleResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Orders
         /// <summary>
         /// <para>异步调用 [GET] /fulfillment/{version}/orders/split_attributes 接口。</para>

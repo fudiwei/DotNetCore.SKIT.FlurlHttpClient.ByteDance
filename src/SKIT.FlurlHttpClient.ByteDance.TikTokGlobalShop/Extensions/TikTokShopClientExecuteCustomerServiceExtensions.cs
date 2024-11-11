@@ -57,6 +57,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         }
         #endregion
 
+        #region Performance
+        /// <summary>
+        /// <para>异步调用 [GET] /customer_service/{version}/performance 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/66bec10859f0b0030018e518 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.CustomerServiceGetPerformanceResponse> ExecuteCustomerServiceGetPerformanceAsync(this TikTokShopClient client, Models.CustomerServiceGetPerformanceRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "customer_service", request.ApiVersion, "performance")
+                .SetQueryParam("support_date_ge", request.SupportDateStringGreaterThan)
+                .SetQueryParam("support_date_lt", request.SupportDateStringLessThan);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.CustomerServiceGetPerformanceResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         /// <summary>
         /// <para>异步调用 [POST] /customer_service/{version}/conversations 接口。</para>
         /// <para>

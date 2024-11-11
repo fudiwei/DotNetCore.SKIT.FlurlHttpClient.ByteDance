@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "data": {
+        "performance": {
+            "response_percentage": "93.4",
+            "response_time_mins": "3.4",
+            "satisfaction_percentage": "95.2",
+            "support_session_count": 15
+        }
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

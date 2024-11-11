@@ -135,6 +135,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Read Message: `CustomerServiceReadConversationMessage`
     -   Get Agent Settings: `CustomerServiceGetAgentSettings`
     -   Update Agent Settings: `CustomerServiceUpdateAgentSettings`
+    -   Get Customer Service Performance: `CustomerServiceGetPerformance`
 -   Supply Chain
     -   Confirm Package Shipment: `SupplyChainSyncPackages`
 

@@ -929,5 +929,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductSuggestionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/products/category_upgrade_task 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/6690f62988c3cf02ee1a8d72 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductCreateProductCategoryUpgradeTaskResponse> ExecuteProductCreateProductCategoryUpgradeTaskAsync(this TikTokShopClient client, Models.ProductCreateProductCategoryUpgradeTaskRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "products", "category_upgrade_task");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductCreateProductCategoryUpgradeTaskResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
     }
 }

@@ -68,6 +68,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Global Product: `ProductGetGlobalProductDetail`
     -   Search Global Products: `ProductSearchGlobalProducts`
     -   Update Global Inventory: `ProductUpdateGlobalProductInventory`
+    -   Create Category Upgrade Task: `ProductCreateProductCategoryUpgradeTask`
     -   Listing Schemas: `ProductGetListingSchemas`
 -   Promotion
     -   Create Activity: `PromotionCreateActivity`

@@ -109,6 +109,13 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Fulfillment Upload Delivery File: `FulfillmentUploadFile`
     -   Fulfillment Upload Delivery Image: `FulfillmentUploadImage`
     -   Update Package Delivery Status: `FulfillmentBatchUpdatePackagesDeliveryStatus`
+-   Fulfillment By TikTok (FBT)
+    -   Get FBT Merchant Onboarded Regions: `FBTGetMerchantOnboardedRegions`
+    -   Get FBT Warehouse List: `FBTGetWarehouses`
+    -   Get Inbound Order: `FBTGetInboundOrders`
+    -   Search FBT Inventory: `FBTGetInventories`
+    -   Search FBT Inventory Record: `FBTGetInventoryRecords`
+    -   Search Goods Info: `FBTGetGoods`
 -   Logistics
     -   Get Warehouse List: `LogisticsGetWarehouses`
     -   Get Global Seller Warehouse: `LogisticsGetGlobalWarehouses`

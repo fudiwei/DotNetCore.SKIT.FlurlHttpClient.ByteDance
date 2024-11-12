@@ -1,0 +1,67 @@
+{
+    "code": 0,
+    "data": {
+        "inbound_orders": [
+            {
+                "actual_arrive_time": 1213232323,
+                "carriers": [
+                    {
+                        "carrier_name": "UPS",
+                        "tracking_number": "3283298203923283943"
+                    }
+                ],
+                "create_time": 1213232323,
+                "expect_arrive_time": 1213243434,
+                "id": "IBR23230232324",
+                "merchant": {
+                    "id": "493493403043",
+                    "name": "ABC"
+                },
+                "order_operation_logs": [
+                    {
+                        "operate_time": 1715398048,
+                        "order_status": "RECEIVED"
+                    }
+                ],
+                "planned_goods": [
+                    {
+                        "id": "12324323",
+                        "name": "100ml water",
+                        "quantity": 9,
+                        "reference_code": "water01",
+                        "sku_ids": [
+                            "1235566232323"
+                        ]
+                    }
+                ],
+                "received_batches": [
+                    {
+                        "defective_quantity": 0,
+                        "goods_id": "12324323",
+                        "id": "423541234612",
+                        "normal_quantity": 9,
+                        "product_ids": [
+                            "23455654676645"
+                        ],
+                        "sku_ids": [
+                            "1235566232323"
+                        ],
+                        "total_quantity": 9
+                    }
+                ],
+                "ship_time": 1213232323,
+                "type": "REPLENISHMENT",
+                "warehouse": {
+                    "fbt_warehouse_id": "121219993203023",
+                    "name": "TikTok Warehouse",
+                    "type": "PLATFORM_WAREHOUSE",
+                    "warehouse_ids": [
+                        "121219993209983"
+                    ]
+                }
+            }
+        ]
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

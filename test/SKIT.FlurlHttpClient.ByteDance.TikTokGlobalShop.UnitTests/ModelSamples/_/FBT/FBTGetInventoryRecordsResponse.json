@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "data": {
+        "inventory_records": [
+            {
+                "changed_quantity": 2,
+                "create_time": 1212139230,
+                "fbt_warehouse_id": "7232392932323",
+                "final_on_hand_quantity": 12,
+                "goods": {
+                    "id": "12324323",
+                    "name": "100ml water",
+                    "reference_code": "water01"
+                },
+                "initial_on_hand_quantity": 10,
+                "inventory_goods_type": "NORMAL",
+                "order": {
+                    "id": "OBF8932302030203",
+                    "type": "OUTBOUND_ORDER"
+                }
+            }
+        ],
+        "next_page_token": "cGFnZV9udW1iZXI9Mg==",
+        "total_count": 22113
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

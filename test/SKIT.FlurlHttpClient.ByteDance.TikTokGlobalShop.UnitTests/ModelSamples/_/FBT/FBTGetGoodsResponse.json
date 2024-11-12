@@ -1,0 +1,73 @@
+{
+    "code": 0,
+    "data": {
+        "goods": [
+            {
+                "barcodes": [
+                    {
+                        "code": "014673829105",
+                        "type": "UPC"
+                    }
+                ],
+                "id": "86533997569",
+                "image_url": "https://p-boei18n.byted.org/tos-boei18n-i-0euhj0x6u9/beec7f914a044902a0c5dc929b97d064~tplv-k3ldphp9j8-origin-jpeg.jpeg?",
+                "lot_expiration_info": {
+                    "expiration_alert_days": 60,
+                    "handling_method": "DISPOSE",
+                    "inbound_cutoff_days": 90,
+                    "is_expiration_management": true,
+                    "is_lot_control": true,
+                    "return_cycle": "ONCE_A_WEEK",
+                    "sales_cutoff_days": 20,
+                    "shelf_life_days": 12
+                },
+                "merchant_declaration_info": {
+                    "dimension": {
+                        "height": "3.122",
+                        "length": "2.122",
+                        "unit": "CENTIMETER",
+                        "width": "1.122"
+                    },
+                    "weight": {
+                        "unit": "GRAM",
+                        "value": "1.122"
+                    }
+                },
+                "name": "water1.0",
+                "reference_code": "abc32323",
+                "skus": [
+                    {
+                        "id": "1729439634328225260",
+                        "image_url": "https://p-boei18n.byted.org/tos-boei18n-i-0euhj0x6u9/beec7f914a044902a0c5dc929b97d064~tplv-jvtte31kaf-origin-jpeg.jpeg?from=522366036",
+                        "matched": true,
+                        "name": "Testcase SKU",
+                        "product": {
+                            "id": "1729439631253210604",
+                            "image_url": "https://p-boei18n.byted.org/tos-boei18n-i-0euhj0x6u9/fc303cec3f9b4e54a247bc8583892a4d~tplv-k3ldphp9j8-origin-jpeg.jpeg?from=3498640996",
+                            "name": "Testcase_xd2.0_test_goods"
+                        },
+                        "regions": [
+                            "US"
+                        ]
+                    }
+                ],
+                "warehouse_confirmation_info": {
+                    "dimension": {
+                        "height": "3",
+                        "length": "2.5",
+                        "unit": "CENTIMETER",
+                        "width": "1"
+                    },
+                    "weight": {
+                        "unit": "GRAM",
+                        "value": "1"
+                    }
+                }
+            }
+        ],
+        "next_page_token": "cGFnZV9udW1iZXI9Mg==",
+        "total_count": 123
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

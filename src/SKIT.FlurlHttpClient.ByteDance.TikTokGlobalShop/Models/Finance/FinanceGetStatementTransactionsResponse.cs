@@ -251,6 +251,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal PlatformShippingFeeDiscountAmount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置退单运输费金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("return_shipping_fee_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("return_shipping_fee_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal ReturnShippingFeeAmount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置运输费实际金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("actual_shipping_fee_amount")]
@@ -299,12 +307,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal PlatformCommissionAmount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置附属机构佣金金额。
+                        /// 获取或设置联盟佣金金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("affiliate_commission_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("affiliate_commission_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                         public decimal AffiliateCommissionAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置联盟广告佣金金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("affiliate_ads_commission_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("affiliate_ads_commission_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal AffiliateAdsCommissionAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置附属合作伙伴佣金金额。
@@ -315,7 +331,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal AffiliatePartnerCommissionAmount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置附属机构佣金税前金额。
+                        /// 获取或设置联盟佣金税前金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("affiliate_commission_before_pit")]
                         [System.Text.Json.Serialization.JsonPropertyName("affiliate_commission_before_pit")]
@@ -379,6 +395,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal FBTShippingCostAmount { get; set; }
 
                         /// <summary>
+                        /// 获取或设置 TikTok 配送费用金额。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("fbt_fulfillment_fee_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("fbt_fulfillment_fee_amount")]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                        public decimal FBTFulfillmentFeeAmount { get; set; }
+
+                        /// <summary>
                         /// 获取或设置 TikTok 运费优惠金额。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shipping_cost_discount_amount")]
@@ -419,12 +443,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public decimal CustomerShippingFeeOffsetAmount { get; set; }
 
                         /// <summary>
-                        /// 获取或设置 TikTok 配送费用金额。
+                        /// 获取或设置运费保险费用金额。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("fbt_fulfillment_fee_amount")]
-                        [System.Text.Json.Serialization.JsonPropertyName("fbt_fulfillment_fee_amount")]
+                        [Newtonsoft.Json.JsonProperty("shipping_insurance_fee_amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_fee_amount")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
-                        public decimal FBTFulfillmentFeeAmount { get; set; }
+                        public decimal ShippingInsuranceFeetAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置物流激励金额。

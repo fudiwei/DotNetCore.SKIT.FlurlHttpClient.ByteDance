@@ -42,7 +42,7 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Upload Product File: `ProductUploadFile`
     -   Search Size Charts: `ProductSearchSizeCharts`
     -   Create Product: `ProductCreateProduct`
-    -   Partial Edit Product: `ProductUpdateProductPartial`
+    -   Partial Edit Product: `ProductUpdateProductPartially`
     -   Edit Product: `ProductUpdateProduct`
     -   Activate Products: `ProductActivateProducts`
     -   Deactivate Products: `ProductDeactivateProducts`
@@ -68,6 +68,12 @@ Notes: The following catalog is consistent with the catalog structure of [TikTok
     -   Get Global Product: `ProductGetGlobalProductDetail`
     -   Search Global Products: `ProductSearchGlobalProducts`
     -   Update Global Inventory: `ProductUpdateGlobalProductInventory`
+    -   Create Manufacturer: `ProductCreateComplianceManufacturer`
+    -   Partial Edit Manufacturer: `ProductUpdateComplianceManufacturerPartially`
+    -   Search Manufacturers: `ProductSearchComplianceManufacturers`
+    -   Create Responsible Person: `ProductCreateComplianceResponsiblePerson`
+    -   Partial Edit Responsible Person: `ProductUpdateComplianceResponsiblePersonPartially`
+    -   Search Responsible Persons: `ProductSearchComplianceResponsiblePersons`
     -   Create Category Upgrade Task: `ProductCreateProductCategoryUpgradeTask`
     -   Listing Schemas: `ProductGetListingSchemas`
 -   Promotion

@@ -159,6 +159,144 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         }
         #endregion
 
+        #region Compliance
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/manufacturers 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a54a049d802e7afd063 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductCreateComplianceManufacturerResponse> ExecuteProductCreateComplianceManufacturerAsync(this TikTokShopClient client, Models.ProductCreateComplianceManufacturerRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "manufacturers");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductCreateComplianceManufacturerResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/manufacturers/{manufacturer_id}/partial_edit 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a55c55b3a03044eea29 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductUpdateComplianceManufacturerPartiallyResponse> ExecuteProductUpdateComplianceManufacturerPartiallyAsync(this TikTokShopClient client, Models.ProductUpdateComplianceManufacturerPartiallyRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "manufacturers", request.ManufacturerId, "partial_edit");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductUpdateComplianceManufacturerPartiallyResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/manufacturers/search 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a580dcee902fa03ccf9 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductSearchComplianceManufacturersResponse> ExecuteProductSearchComplianceManufacturersAsync(this TikTokShopClient client, Models.ProductSearchComplianceManufacturersRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "manufacturers", "search")
+                .SetQueryParam("page_size", request.PageSize)
+                .SetQueryParam("page_token", request.PageToken);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductSearchComplianceManufacturersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/responsible_persons 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a553521310300c988f2 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductCreateComplianceResponsiblePersonResponse> ExecuteProductCreateComplianceResponsiblePersonAsync(this TikTokShopClient client, Models.ProductCreateComplianceResponsiblePersonRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "responsible_persons");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductCreateComplianceResponsiblePersonResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/responsible_persons/{responsible_person_id}/partial_edit 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a5587019802fdce19b3 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductUpdateComplianceResponsiblePersonPartiallyResponse> ExecuteProductUpdateComplianceResponsiblePersonPartiallyAsync(this TikTokShopClient client, Models.ProductUpdateComplianceResponsiblePersonPartiallyRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "responsible_persons", request.ResponsiblePersonId, "partial_edit");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductUpdateComplianceResponsiblePersonPartiallyResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /product/{version}/compliance/responsible_persons/search 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/67066a55f17b7d02f95d2fb1 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ProductSearchComplianceResponsiblePersonsResponse> ExecuteProductSearchComplianceResponsiblePersonsAsync(this TikTokShopClient client, Models.ProductSearchComplianceResponsiblePersonsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "compliance", "responsible_persons", "search")
+                .SetQueryParam("page_size", request.PageSize)
+                .SetQueryParam("page_token", request.PageToken);
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductSearchComplianceResponsiblePersonsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Global
         #region Global/Category
         /// <summary>
@@ -649,7 +787,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.ProductUpdateProductPartialResponse> ExecuteProductUpdateProductPartialAsync(this TikTokShopClient client, Models.ProductUpdateProductPartialRequest request, CancellationToken cancellationToken = default)
+        public static async Task<Models.ProductUpdateProductPartiallyResponse> ExecuteProductUpdateProductPartiallyAsync(this TikTokShopClient client, Models.ProductUpdateProductPartiallyRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -657,7 +795,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "products", request.ProductId, "partial_edit");
 
-            return await client.SendFlurlRequesAsJsontAsync<Models.ProductUpdateProductPartialResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+            return await client.SendFlurlRequesAsJsontAsync<Models.ProductUpdateProductPartiallyResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>

@@ -1,0 +1,22 @@
+{
+    "code": 0,
+    "data": {
+        "manufacturers": [
+            {
+                "address": "One Raffles Quay, 1 Raffles Quay, Singapore 048583",
+                "email": "johndoe@email.com",
+                "id": "66d3cbe4d9c8b09ddca932a7",
+                "name": "John Doe",
+                "phone_number": {
+                    "country_code": "+65",
+                    "local_number": "81234567"
+                },
+                "registered_trade_name": "TikTok Shop"
+            }
+        ],
+        "next_page_token": "66d3cbe3d9c8b09ddca932a1",
+        "total_count": 26
+    },
+    "message": "Success",
+    "request_id": "202203070749000101890810281E8C70B7"
+}

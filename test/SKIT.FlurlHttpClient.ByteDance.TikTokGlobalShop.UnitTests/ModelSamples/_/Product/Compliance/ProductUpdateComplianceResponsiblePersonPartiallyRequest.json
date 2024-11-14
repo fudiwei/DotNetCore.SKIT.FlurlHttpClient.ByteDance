@@ -1,0 +1,17 @@
+{
+    "address": {
+        "city": "Dublin City",
+        "country": "Ireland",
+        "district": "-",
+        "postal_code": "D02 HD23",
+        "province": "Dublin",
+        "street_address_line1": "63 Cardiff Ln",
+        "street_address_line2": "Grand Canal Dock"
+    },
+    "email": "john.doe@email.com",
+    "name": "John Doe",
+    "phone_number": {
+        "country_code": "+353",
+        "local_number": "80915151"
+    }
+}

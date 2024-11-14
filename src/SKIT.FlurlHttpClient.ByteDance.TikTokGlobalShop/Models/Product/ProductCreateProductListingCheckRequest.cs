@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
@@ -44,6 +45,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                     }
 
                     public class CombinedSKU : ProductCreateProductRequest.Types.SKU.Types.CombinedSKU
+                    {
+                    }
+
+                    public class PreSale : ProductCreateProductRequest.Types.SKU.Types.PreSale
                     {
                     }
                 }
@@ -95,6 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
             }
 
+            [Obsolete("相关接口或字段于 2024-09-26 下线。")]
             public class Manufacturer : ProductCreateProductRequest.Types.Manufacturer
             {
             }
@@ -222,8 +228,51 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// <summary>
         /// 获取或设置制造商信息。
         /// </summary>
+        [Obsolete("相关接口或字段于 2024-09-26 下线。")]
         [Newtonsoft.Json.JsonProperty("manufacturer")]
         [System.Text.Json.Serialization.JsonPropertyName("manufacturer")]
         public Types.Manufacturer? Manufacturer { get; set; }
+
+        /// <summary>
+        /// 获取或设置制造商 ID 列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("manufacturer_ids")]
+        [System.Text.Json.Serialization.JsonPropertyName("manufacturer_ids")]
+        public IList<string>? ManufacturerIdList { get; set; }
+
+        /// <summary>
+        /// 获取或设置责任人 ID 列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("responsible_person_ids")]
+        [System.Text.Json.Serialization.JsonPropertyName("responsible_person_ids")]
+        public IList<string>? ResponsiblePersonIdList { get; set; }
+
+        /// <summary>
+        /// 获取或设置上架平台列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("listing_platforms")]
+        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
+        public IList<string>? ListingPlatformList { get; set; }
+
+        /// <summary>
+        /// 获取或设置运输保险需求类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("shipping_insurance_requirement")]
+        [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_requirement")]
+        public string? ShippingInsuranceRequirementType { get; set; }
+
+        /// <summary>
+        /// 获取或设置是否为二手。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("is_pre_owned")]
+        [System.Text.Json.Serialization.JsonPropertyName("is_pre_owned")]
+        public bool? IsPreOwned { get; set; }
+
+        /// <summary>
+        /// 获取或设置最低订购数量。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("minimum_order_quantity")]
+        [System.Text.Json.Serialization.JsonPropertyName("minimum_order_quantity")]
+        public int? MinimumOrderQuantity { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
@@ -5,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [POST] /product/{version}/products/{product_id}/partial_edit 接口的请求。</para>
     /// </summary>
-    public class ProductUpdateProductPartialRequest : TikTokShopRequest
+    public class ProductUpdateProductPartiallyRequest : TikTokShopRequest
     {
         public static class Types
         {
@@ -95,6 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 }
             }
 
+            [Obsolete("相关接口或字段于 2024-09-26 下线。")]
             public class Manufacturer : ProductUpdateProductRequest.Types.Manufacturer
             {
             }
@@ -208,8 +210,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// <summary>
         /// 获取或设置制造商信息。
         /// </summary>
+        [Obsolete("相关接口或字段于 2024-09-26 下线。")]
         [Newtonsoft.Json.JsonProperty("manufacturer")]
         [System.Text.Json.Serialization.JsonPropertyName("manufacturer")]
         public Types.Manufacturer? Manufacturer { get; set; }
+
+        /// <summary>
+        /// 获取或设置制造商 ID 列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("manufacturer_ids")]
+        [System.Text.Json.Serialization.JsonPropertyName("manufacturer_ids")]
+        public IList<string>? ManufacturerIdList { get; set; }
+
+        /// <summary>
+        /// 获取或设置责任人 ID 列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("responsible_person_ids")]
+        [System.Text.Json.Serialization.JsonPropertyName("responsible_person_ids")]
+        public IList<string>? ResponsiblePersonIdList { get; set; }
+
+        /// <summary>
+        /// 获取或设置上架平台列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("listing_platforms")]
+        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
+        public IList<string>? ListingPlatformList { get; set; }
     }
 }

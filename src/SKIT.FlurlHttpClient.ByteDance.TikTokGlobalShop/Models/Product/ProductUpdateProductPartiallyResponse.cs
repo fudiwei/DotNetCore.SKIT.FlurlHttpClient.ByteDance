@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     /// <summary>
     /// <para>表示 [POST] /product/{version}/products/{product_id}/partial_edit 接口的响应。</para>
     /// </summary>
-    public class ProductUpdateProductPartialResponse : TikTokShopResponse<ProductUpdateProductPartialResponse.Types.Data>
+    public class ProductUpdateProductPartiallyResponse : TikTokShopResponse<ProductUpdateProductPartiallyResponse.Types.Data>
     {
         public static class Types
         {

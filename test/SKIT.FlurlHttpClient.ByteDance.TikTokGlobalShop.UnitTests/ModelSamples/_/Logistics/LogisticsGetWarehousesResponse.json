@@ -8,6 +8,10 @@
                     "contact_person": "Lee",
                     "distict": "HuaDu",
                     "full_address": "South Sea 11 floor",
+                    "geolocation": {
+                        "latitude": "45.41634",
+                        "longitude": "-75.6868"
+                    },
                     "phone_number": "188****2234",
                     "postal_code": "510000",
                     "region": "China",

@@ -251,11 +251,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public IList<string>? ResponsiblePersonIdList { get; set; }
 
         /// <summary>
-        /// 获取或设置上架平台列表。
+        /// 获取或设置是否为二手。
         /// </summary>
-        [Newtonsoft.Json.JsonProperty("listing_platforms")]
-        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
-        public IList<string>? ListingPlatformList { get; set; }
+        [Newtonsoft.Json.JsonProperty("is_pre_owned")]
+        [System.Text.Json.Serialization.JsonPropertyName("is_pre_owned")]
+        public bool? IsPreOwned { get; set; }
 
         /// <summary>
         /// 获取或设置运输保险需求类型。
@@ -265,17 +265,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public string? ShippingInsuranceRequirementType { get; set; }
 
         /// <summary>
-        /// 获取或设置是否为二手。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("is_pre_owned")]
-        [System.Text.Json.Serialization.JsonPropertyName("is_pre_owned")]
-        public bool? IsPreOwned { get; set; }
-
-        /// <summary>
         /// 获取或设置最低订购数量。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("minimum_order_quantity")]
         [System.Text.Json.Serialization.JsonPropertyName("minimum_order_quantity")]
         public int? MinimumOrderQuantity { get; set; }
+
+        /// <summary>
+        /// 获取或设置上架平台列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("listing_platforms")]
+        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
+        public IList<string>? ListingPlatformList { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 {
     "brand_id": "7082427311584347905",
     "category_id": "600001",
+    "category_version": "v1",
     "certifications": [
         {
             "files": [
@@ -18,21 +19,26 @@
             ]
         }
     ],
-    "delivery_option_ids": [ "1729592969712203232" ],
-    "description": " ",
+    "delivery_option_ids": [
+        "1729592969712203232"
+    ],
+    "description": " \u003cp\u003ePlease check the measurements before purchase.\u003c/p\u003e\u003cul\u003e   \u003cli\u003eM-Size\u003c/li\u003e  \u003cli\u003eXL-Size\u003c/li\u003e\u003c/ul\u003e \u003cimg src=\"https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/181595ea7d26489284b5667488d708c1~tplv-o3syd03w52-origin-jpeg.jpeg?from=1432613627\" width='100' height='100' /\u003e ",
     "external_product_id": "172959296971220002",
     "is_cod_allowed": false,
+    "is_not_for_sale": true,
+    "is_pre_owned": false,
+    "listing_platforms": [
+        "TIKTOK_SHOP"
+    ],
     "main_images": [
         {
             "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
         }
     ],
-    "manufacturer": {
-        "address": "123W 106th St, New York, NY, USA, 10025",
-        "email": "samplemanufacturer101@outlook.com",
-        "name": "Sample Manufacturer Name\n",
-        "phone_number": "4412345678"
-    },
+    "manufacturer_ids": [
+        "172959296971220002"
+    ],
+    "minimum_order_quantity": 1,
     "package_dimensions": {
         "height": "10",
         "length": "10",
@@ -55,7 +61,11 @@
             ]
         }
     ],
+    "responsible_person_ids": [
+        "172959296971220003"
+    ],
     "save_mode": "LISTING",
+    "shipping_insurance_requirement": "REQUIRED",
     "size_chart": {
         "image": {
             "uri": "tos-maliva-i-o3syd03w52-us/c668cdf70b7f483c94dbe"
@@ -74,6 +84,14 @@
                 }
             ],
             "external_sku_id": "1729592969712207012",
+            "external_urls": [
+                "https://example.com/path1",
+                "https://example.com/path2"
+            ],
+            "extra_identifier_codes": [
+                "00012345678905",
+                "9780596520687"
+            ],
             "identifier_code": {
                 "code": "10000000000000",
                 "type": "GTIN"
@@ -84,6 +102,12 @@
                     "warehouse_id": "7068517275539719942"
                 }
             ],
+            "pre_sale": {
+                "fulfillment_type": {
+                    "handling_duration_days": 7
+                },
+                "type": "PRE_ORDER"
+            },
             "price": {
                 "amount": "1.21",
                 "currency": "USD"
@@ -103,9 +127,8 @@
             "sku_unit_count": "100.00"
         }
     ],
-    "title": "Men's Fashion Sports Low Cut Cotton Breathable Ankle Short Boat Invisible Socks",
+    "title": "Men\\'s Fashion Sports Low Cut Cotton Breathable Ankle Short Boat Invisible Socks",
     "video": {
         "id": "v09e40f40000cfu0ovhc77ub7fl97k4w"
-    },
-    "is_not_for_sale": false
+    }
 }

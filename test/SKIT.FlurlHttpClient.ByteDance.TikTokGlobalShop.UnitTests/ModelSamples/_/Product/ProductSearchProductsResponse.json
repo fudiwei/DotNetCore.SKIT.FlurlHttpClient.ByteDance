@@ -6,8 +6,17 @@
             {
                 "create_time": 1234567890,
                 "id": "1729592969712207008",
+                "integrated_platform_statuses": [
+                    {
+                        "platform": "TOKOPEDIA",
+                        "status": "PLATFORM_DEACTIVATED"
+                    }
+                ],
                 "is_not_for_sale": true,
-                "product_sync_fail_reasons": "The required qualification is missed.",
+                "listing_quality_tier": "POOR",
+                "product_sync_fail_reasons": [
+                    "The required qualification is missed."
+                ],
                 "recommended_categories": [
                     {
                         "id": "853000",

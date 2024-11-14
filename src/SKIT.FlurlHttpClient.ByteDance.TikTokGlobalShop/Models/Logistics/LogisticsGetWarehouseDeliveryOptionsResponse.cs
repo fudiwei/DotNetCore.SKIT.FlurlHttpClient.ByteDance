@@ -113,6 +113,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("weight_limit")]
                         [System.Text.Json.Serialization.JsonPropertyName("weight_limit")]
                         public Types.WeightLimit WeightLimit { get; set; } = default!;
+
+                        /// <summary>
+                        /// 获取或设置平台列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("platform")]
+                        [System.Text.Json.Serialization.JsonPropertyName("platform")]
+                        public string[]? PlatformList { get; set; }
                     }
                 }
 

@@ -638,20 +638,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public IList<string>? ResponsiblePersonIdList { get; set; }
 
         /// <summary>
-        /// 获取或设置上架平台列表。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("listing_platforms")]
-        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
-        public IList<string>? ListingPlatformList { get; set; }
-
-        /// <summary>
-        /// 获取或设置运输保险需求类型。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("shipping_insurance_requirement")]
-        [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_requirement")]
-        public string? ShippingInsuranceRequirementType { get; set; }
-
-        /// <summary>
         /// 获取或设置是否为二手。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("is_pre_owned")]
@@ -666,10 +652,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         public bool? IsNotForSale { get; set; }
 
         /// <summary>
+        /// 获取或设置运输保险需求类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("shipping_insurance_requirement")]
+        [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_requirement")]
+        public string? ShippingInsuranceRequirementType { get; set; }
+
+        /// <summary>
         /// 获取或设置最低订购数量。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("minimum_order_quantity")]
         [System.Text.Json.Serialization.JsonPropertyName("minimum_order_quantity")]
         public int? MinimumOrderQuantity { get; set; }
+
+        /// <summary>
+        /// 获取或设置上架平台列表。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("listing_platforms")]
+        [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
+        public IList<string>? ListingPlatformList { get; set; }
     }
 }

@@ -758,8 +758,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public string? Email { get; set; }
                     }
 
+                    public class IntegratedPlatform : ProductSearchProductsResponse.Types.Data.Types.Product.Types.IntegratedPlatform
+                    {
+                    }
+
                     public class AuditFailedReason
                     {
+                        /// <summary>
+                        /// 获取或设置上架平台。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("listing_platform")]
+                        [System.Text.Json.Serialization.JsonPropertyName("listing_platform")]
+                        public string? ListingPlatform { get; set; }
+
                         /// <summary>
                         /// 获取或设置位置。
                         /// </summary>
@@ -954,13 +965,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public string[]? ResponsiblePersonIdList { get; set; }
 
                 /// <summary>
-                /// 获取或设置上架平台列表。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("listing_platforms")]
-                [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
-                public string[]? ListingPlatformList { get; set; }
-
-                /// <summary>
                 /// 获取或设置是否为非卖品。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("is_not_for_sale")]
@@ -968,11 +972,39 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public bool IsNotForSale { get; set; }
 
                 /// <summary>
-                /// 获取或设置审核失败原因列表。
+                /// 获取或设置是否为二手。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("audit_failed_reasons")]
-                [System.Text.Json.Serialization.JsonPropertyName("audit_failed_reasons")]
-                public Types.AuditFailedReason[]? AuditFailedReasonList { get; set; }
+                [Newtonsoft.Json.JsonProperty("is_pre_owned")]
+                [System.Text.Json.Serialization.JsonPropertyName("is_pre_owned")]
+                public bool? IsPreOwned { get; set; }
+
+                /// <summary>
+                /// 获取或设置运输保险需求类型。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("shipping_insurance_requirement")]
+                [System.Text.Json.Serialization.JsonPropertyName("shipping_insurance_requirement")]
+                public string? ShippingInsuranceRequirementType { get; set; }
+
+                /// <summary>
+                /// 获取或设置最低订购数量。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("minimum_order_quantity")]
+                [System.Text.Json.Serialization.JsonPropertyName("minimum_order_quantity")]
+                public int? MinimumOrderQuantity { get; set; }
+
+                /// <summary>
+                /// 获取或设置上架平台列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("listing_platforms")]
+                [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
+                public string[]? ListingPlatformList { get; set; }
+
+                /// <summary>
+                /// 获取或设置上架平台列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("integrated_platform_statuses")]
+                [System.Text.Json.Serialization.JsonPropertyName("integrated_platform_statuses")]
+                public Types.IntegratedPlatform[]? IntegratedPlatformList { get; set; }
 
                 /// <summary>
                 /// 获取或设置上架质量等级。
@@ -980,6 +1012,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("listing_quality_tier")]
                 [System.Text.Json.Serialization.JsonPropertyName("listing_quality_tier")]
                 public string? ListingQualityTier { get; set; }
+
+                /// <summary>
+                /// 获取或设置审核失败原因列表。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("audit_failed_reasons")]
+                [System.Text.Json.Serialization.JsonPropertyName("audit_failed_reasons")]
+                public Types.AuditFailedReason[]? AuditFailedReasonList { get; set; }
             }
         }
     }

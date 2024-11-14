@@ -17,6 +17,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         {
                             public class Address
                             {
+                                public static class Types
+                                {
+                                    public class GeoLocation
+                                    {
+                                        /// <summary>
+                                        /// 获取或设置经度。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("longitude")]
+                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonPropertyName("longitude")]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        public decimal Longitude { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置纬度。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("latitude")]
+                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonPropertyName("latitude")]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        public decimal Latitude { get; set; }
+                                    }
+                                }
+
                                 /// <summary>
                                 /// 获取或设置完整地址。
                                 /// </summary>
@@ -86,6 +110,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("postal_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("postal_code")]
                                 public string PostalCode { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置地理位置信息。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("geolocation")]
+                                [System.Text.Json.Serialization.JsonPropertyName("geolocation")]
+                                public Types.GeoLocation? GeoLocation { get; set; }
                             }
                         }
 

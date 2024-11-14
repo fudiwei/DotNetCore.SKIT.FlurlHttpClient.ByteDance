@@ -5,7 +5,9 @@
         "return_orders": [
             {
                 "arbitration_status": "IN_PROGRESS",
+                "buyer_rejected_partial_refund": true,
                 "can_buyer_keep_item": true,
+                "combined_return_id": "4035309948547073951",
                 "create_time": 1690451136,
                 "discount_amount": [
                     {
@@ -17,10 +19,16 @@
                     }
                 ],
                 "handover_method": "DROP_OFF",
+                "is_combined_return": true,
                 "next_return_id": "4035310341095393463",
                 "order_id": "577686530908261117",
+                "partial_refund": {
+                    "amount": "10",
+                    "currency": "IDR"
+                },
                 "pre_return_id": "4035310341095393452",
                 "refund_amount": {
+                    "buyer_service_fee": "0.1",
                     "currency": "USD",
                     "refund_shipping_fee": "0.2",
                     "refund_subtotal": "1",
@@ -39,6 +47,7 @@
                         },
                         "product_name": "(SP) [PROMO BUNDLING] NICE Tissue Facial 180s x 5 pcs",
                         "refund_amount": {
+                            "buyer_service_fee": "0.1",
                             "currency": "USD",
                             "refund_shipping_fee": "0.2",
                             "refund_subtotal": "1",
@@ -52,13 +61,18 @@
                         "sku_name": "1#, Standard"
                     }
                 ],
+                "return_method": "SELLER_ARRANGE",
                 "return_provider_id": "TH27014E9R5Q4G",
                 "return_provider_name": "J&T Express",
                 "return_reason": "ecom_order_to_ship_canceled_reason_created_by_mistakes",
                 "return_reason_text": "Order created by mistake",
+                "return_shipping_document_type": "SHIPPING_LABEL",
                 "return_status": "RETURN_OR_REFUND_REQUEST_PENDING",
                 "return_tracking_number": "213456789098765433456",
                 "return_type": "REFUND",
+                "return_warehouse_address": {
+                    "full_address": "1199 Coleman Ave San Jose, CA 95110"
+                },
                 "role": "BUYER",
                 "seller_next_action_response": [
                     {
@@ -66,6 +80,7 @@
                         "deadline": 1690554680
                     }
                 ],
+                "seller_proposed_return_type": "PARTIAL_REFUND",
                 "shipment_type": "PLATFORM",
                 "shipping_fee_amount": [
                     {

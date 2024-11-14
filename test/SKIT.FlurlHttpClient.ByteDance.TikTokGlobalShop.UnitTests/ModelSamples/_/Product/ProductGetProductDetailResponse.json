@@ -3,6 +3,7 @@
     "data": {
         "audit_failed_reasons": [
             {
+                "listing_platform": "TOKOPEDIA",
                 "position": "product",
                 "reasons": [
                     "violate listing rules"

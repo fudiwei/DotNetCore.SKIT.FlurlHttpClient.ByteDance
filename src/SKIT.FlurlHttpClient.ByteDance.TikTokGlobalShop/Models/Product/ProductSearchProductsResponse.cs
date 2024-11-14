@@ -111,6 +111,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_sku")]
                                 public string? SellerSKU { get; set; }
                             }
+
+                            public class IntegratedPlatform
+                            {
+                                /// <summary>
+                                /// 获取或设置平台。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform")]
+                                public string Platform { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置状态。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("status")]
+                                [System.Text.Json.Serialization.JsonPropertyName("status")]
+                                public string Status { get; set; } = default!;
+                            }
                         }
 
                         /// <summary>
@@ -171,18 +188,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public bool IsNotForSale { get; set; }
 
                         /// <summary>
-                        /// 获取或设置同步失败原因。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("product_sync_fail_reasons")]
-                        [System.Text.Json.Serialization.JsonPropertyName("product_sync_fail_reasons")]
-                        public string? SyncFailReason { get; set; }
-
-                        /// <summary>
                         /// 获取或设置销售地区编码列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sales_regions")]
                         [System.Text.Json.Serialization.JsonPropertyName("sales_regions")]
                         public string[]? SalesRegionCodeList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置上架平台列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("integrated_platform_statuses")]
+                        [System.Text.Json.Serialization.JsonPropertyName("integrated_platform_statuses")]
+                        public Types.IntegratedPlatform[]? IntegratedPlatformList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置上架质量等级。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("listing_quality_tier")]
+                        [System.Text.Json.Serialization.JsonPropertyName("listing_quality_tier")]
+                        public string? ListingQualityTier { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置同步失败原因列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("product_sync_fail_reasons")]
+                        [System.Text.Json.Serialization.JsonPropertyName("product_sync_fail_reasons")]
+                        public string[]? SyncFailReasonList { get; set; }
                     }
                 }
 

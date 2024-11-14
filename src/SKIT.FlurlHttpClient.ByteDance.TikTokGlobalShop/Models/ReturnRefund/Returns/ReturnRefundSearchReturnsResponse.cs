@@ -19,6 +19,24 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                             {
                             }
 
+                            public class PartialRefundAmount
+                            {
+                                /// <summary>
+                                /// 获取或设置币种。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("currency")]
+                                [System.Text.Json.Serialization.JsonPropertyName("currency")]
+                                public string Currency { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置退款金额。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("amount")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal Amount { get; set; }
+                            }
+
                             public class DiscountAmount
                             {
                                 /// <summary>
@@ -97,6 +115,37 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 
                             public class SellerActionResponse : ReturnRefundSearchCancellationsResponse.Types.Data.Types.Cancellation.Types.SellerActionResponse
                             {
+                            }
+
+                            public class ReturnWarehouseAddress
+                            {
+                                /// <summary>
+                                /// 获取或设置完整地址。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("full_address")]
+                                [System.Text.Json.Serialization.JsonPropertyName("full_address")]
+                                public string FullAddress { get; set; } = default!;
+
+                                /// <summary>
+                                /// 获取或设置地址行 1。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("address_line1")]
+                                [System.Text.Json.Serialization.JsonPropertyName("address_line1")]
+                                public string? AddressLine1 { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置地址行 2。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("address_line2")]
+                                [System.Text.Json.Serialization.JsonPropertyName("address_line2")]
+                                public string? AddressLine2 { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置地址行 3。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("address_line3")]
+                                [System.Text.Json.Serialization.JsonPropertyName("address_line3")]
+                                public string? AddressLine3 { get; set; }
                             }
 
                             public class ReturnLineItem
@@ -241,6 +290,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public long UpdateTimestamp { get; set; }
 
                         /// <summary>
+                        /// 获取或设置退货方式。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("return_method")]
+                        [System.Text.Json.Serialization.JsonPropertyName("return_method")]
+                        public string? ReturnMethod { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置退货运输文件类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("return_shipping_document_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("return_shipping_document_type")]
+                        public string? ReturnShippingDocumentType { get; set; }
+
+                        /// <summary>
                         /// 获取或设置运输类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("shipment_type")]
@@ -290,6 +353,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public string? NextReturnId { get; set; }
 
                         /// <summary>
+                        /// 获取或设置是否合并退货。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_combined_return")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_combined_return")]
+                        public bool? IsCombinedReturn { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置合并退货 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("combined_return_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("combined_return_id")]
+                        public string? CombinedReturnId { get; set; }
+
+                        /// <summary>
                         /// 获取或设置买家是否可保留货物。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("can_buyer_keep_item")]
@@ -297,11 +374,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public bool CanBuyerKeepItem { get; set; }
 
                         /// <summary>
+                        /// 获取或设置卖家建议退货类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("seller_proposed_return_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("seller_proposed_return_type")]
+                        public string? SellerProposedReturnType { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置买家是否拒绝部分退款。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("buyer_rejected_partial_refund")]
+                        [System.Text.Json.Serialization.JsonPropertyName("buyer_rejected_partial_refund")]
+                        public bool? IsBuyerRejectedPartialRefund { get; set; }
+
+                        /// <summary>
                         /// 获取或设置退款金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_amount")]
-                        public Types.RefundAmount RefundAmount { get; set; } = default!;
+                        public Types.RefundAmount? RefundAmount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置部分退款金额信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("partial_refund")]
+                        [System.Text.Json.Serialization.JsonPropertyName("partial_refund")]
+                        public Types.PartialRefundAmount? PartialRefundAmount { get; set; }
 
                         /// <summary>
                         /// 获取或设置优惠金额信息列表。
@@ -323,6 +421,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("seller_next_action_response")]
                         [System.Text.Json.Serialization.JsonPropertyName("seller_next_action_response")]
                         public Types.SellerActionResponse[]? SellerNextActionResponseList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置退货仓库地址信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("return_warehouse_address")]
+                        [System.Text.Json.Serialization.JsonPropertyName("return_warehouse_address")]
+                        public Types.ReturnWarehouseAddress? ReturnWarehouseAddress { get; set; } 
 
                         /// <summary>
                         /// 获取或设置退货订单行列表。

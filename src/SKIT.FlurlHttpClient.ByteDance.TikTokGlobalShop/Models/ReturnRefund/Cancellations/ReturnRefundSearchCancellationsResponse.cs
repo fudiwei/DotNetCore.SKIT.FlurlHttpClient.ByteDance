@@ -63,6 +63,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("retail_delivery_fee")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
                                 public decimal RetailDeliveryFee { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置买家服务费。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("buyer_service_fee")]
+                                [System.Text.Json.Serialization.JsonPropertyName("buyer_service_fee")]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                public decimal BuyerServiceFee { get; set; }
                             }
 
                             public class SellerActionResponse

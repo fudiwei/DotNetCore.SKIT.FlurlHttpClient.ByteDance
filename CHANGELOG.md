@@ -421,6 +421,12 @@
 
 <summary>[展开查看]</summary>
 
+-   Release 3.5.0 (2025-03-31)
+
+    -   **变更**：移除已废弃的旧版本 API。
+
+    -   **修复**：修复因大小写敏感导致的请求签名错误。（_via_ [GitHub #37](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/issues/37)）
+
 -   Release 3.4.0 (2024-11-14)
 
     -   **新增**：新增商品制造商与责任人相关接口。

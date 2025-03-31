@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
                     body,
                     _appSecret
                 );
-                signature = Utilities.HMACUtility.HashWithSHA256(_appSecret, msgText).Value!;
+                signature = Utilities.HMACUtility.HashWithSHA256(_appSecret, msgText).Value!.ToLower();
             }
             catch (Exception ex)
             {

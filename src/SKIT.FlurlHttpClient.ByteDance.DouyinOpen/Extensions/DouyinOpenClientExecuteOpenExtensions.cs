@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "js", "getticket")
+                .CreateFlurlRequest(request, HttpMethod.Get, "open", "getticket")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenGetTicketResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

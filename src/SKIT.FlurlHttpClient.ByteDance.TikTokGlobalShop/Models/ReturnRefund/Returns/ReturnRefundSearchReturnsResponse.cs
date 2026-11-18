@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal Amount { get; set; }
                             }
 
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_platform_discount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_platform_discount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal ProductPlatformDiscount { get; set; }
 
                                 /// <summary>
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_seller_discount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_seller_discount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal ProductSellerDiscount { get; set; }
 
                                 /// <summary>
@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_platform_discount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_platform_discount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal ShippingFeePlatformDiscount { get; set; }
 
                                 /// <summary>
@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shipping_fee_seller_discount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shipping_fee_seller_discount")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal ShippingFeeSellerDiscount { get; set; }
                             }
 
@@ -93,7 +93,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform_paid_return_shipping_fee")]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform_paid_return_shipping_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal PlatformPaidReturnShippingFee { get; set; }
 
                                 /// <summary>
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("seller_paid_return_shipping_fee")]
                                 [System.Text.Json.Serialization.JsonPropertyName("seller_paid_return_shipping_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal SellerPaidReturnShippingFee { get; set; }
 
                                 /// <summary>
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("buyer_paid_return_shipping_fee")]
                                 [System.Text.Json.Serialization.JsonPropertyName("buyer_paid_return_shipping_fee")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                 public decimal BuyerPaidReturnShippingFee { get; set; }
                             }
 
@@ -162,7 +162,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("return_line_item_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("return_line_item_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string ReturnLineItemId { get; set; } = default!;
 
                                 /// <summary>
@@ -170,7 +170,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_line_item_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_line_item_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string? OrderlLineItemId { get; set; }
 
                                 /// <summary>
@@ -222,7 +222,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("return_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("return_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                         public string ReturnId { get; set; } = default!;
 
                         /// <summary>
@@ -230,7 +230,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                         public string OrderId { get; set; } = default!;
 
                         /// <summary>
@@ -427,7 +427,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("return_warehouse_address")]
                         [System.Text.Json.Serialization.JsonPropertyName("return_warehouse_address")]
-                        public Types.ReturnWarehouseAddress? ReturnWarehouseAddress { get; set; } 
+                        public Types.ReturnWarehouseAddress? ReturnWarehouseAddress { get; set; }
 
                         /// <summary>
                         /// 获取或设置退货订单行列表。

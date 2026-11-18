@@ -49,27 +49,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// 获取或设置长度。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("length")]
-                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("length")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         public decimal? Length { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置宽度。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("width")]
-                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("width")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         public decimal? Width { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置高度。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("height")]
-                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("height")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         public decimal? Height { get; set; }
                                     }
 
@@ -86,9 +86,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// 获取或设置重量。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("value")]
-                                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("value")]
-                                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         public decimal? Value { get; set; }
                                     }
                                 }

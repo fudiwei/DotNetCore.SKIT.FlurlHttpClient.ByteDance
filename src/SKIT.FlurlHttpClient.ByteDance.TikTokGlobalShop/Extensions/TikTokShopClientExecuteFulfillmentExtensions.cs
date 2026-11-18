@@ -1,10 +1,3 @@
-using System;
-using System.Net.Http;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Flurl.Http;
-
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
     using SKIT.FlurlHttpClient;
@@ -491,7 +484,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
                 request.FileName = Guid.NewGuid().ToString("N").ToLower() + ".pdf";
 
             if (request.FileContentType is null)
-                request.FileContentType = MimeTypes.GetMimeMapping(request.FileName) ;
+                request.FileContentType = MimeTypes.GetMimeMapping(request.FileName);
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "files", "upload");

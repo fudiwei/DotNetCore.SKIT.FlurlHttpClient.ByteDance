@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// </summary>
         [Newtonsoft.Json.JsonProperty("shop_id")]
         [System.Text.Json.Serialization.JsonPropertyName("shop_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
         public virtual string ShopId { get; set; } = default!;
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tts_notification_id")]
         [System.Text.Json.Serialization.JsonPropertyName("tts_notification_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
         public virtual string? NotificationId { get; set; }
     }
 

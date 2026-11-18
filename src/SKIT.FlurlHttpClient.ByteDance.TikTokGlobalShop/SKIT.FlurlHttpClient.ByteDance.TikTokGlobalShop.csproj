@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net462; netstandard2.0; net6.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0; net462; net6.0; net8.0; net10.0</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageId>SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop</PackageId>
-        <PackageVersion>3.5.0</PackageVersion>
+        <PackageVersion>4.0.0-dev</PackageVersion>
         <PackageIcon>LOGO.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
-        <PackageTags>Flurl.Http ByteDance TikTok TikTokShop TikTokShopPartner TikTokShopOpenPlatform TikTokShopOpenAPI TTS TTSPartner TTSOpenPlatform TTSOpenAPI 字节 字节跳动 抖音国际版 抖音国际版电商 抖音跨境电商 抖音跨境电商开放平台</PackageTags>
+        <PackageTags>Flurl.Http; ByteDance; TikTok; TikTokShop; TikTokShopPartner; TikTokShopOpenPlatform; TikTokShopOpenAPI; TTS; TTSPartner; TTSOpenPlatform; TTSOpenAPI; 字节; 字节跳动; 抖音国际版; 抖音国际版电商; 抖音跨境电商; 抖音跨境电商开放平台</PackageTags>
         <Authors>Fu Diwei</Authors>
         <Description>
             基于 Flurl.Http 的 TikTok Shop Open Platform API 客户端。
@@ -22,10 +22,14 @@
     <ItemGroup>
         <None Include="../../LOGO.png" Pack="true" PackagePath="/" />
         <None Include="README.md" Pack="true" PackagePath="/" />
+        <None Include="ModelsFixtures/**/*.json" />
+        <None Include="EventsFixtures/**/*.json" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="3.1.1" />
+        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="4.0.1" />
+        <PackageReference Include="SKIT.JsonConv.NewtonsoftJson" Version="0.1.2" />
+        <PackageReference Include="SKIT.JsonConv.SystemTextJson" Version="0.1.2" />
     </ItemGroup>
 
 </Project>

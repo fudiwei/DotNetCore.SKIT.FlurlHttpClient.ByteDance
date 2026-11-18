@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 {
     public static class TikTokShopClientEventExtensions

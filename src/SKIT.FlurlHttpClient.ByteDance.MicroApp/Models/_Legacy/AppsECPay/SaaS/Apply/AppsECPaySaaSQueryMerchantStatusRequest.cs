@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/query_merchant_status 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSQueryMerchantStatusRequest : DouyinMicroAppRequest
+    public class AppsECPaySaaSQueryMerchantStatusRequest : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。与字段 <see cref="AppId"/> 二选一。
@@ -32,12 +32,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("sub_merchant_id")]
         [System.Text.Json.Serialization.JsonPropertyName("sub_merchant_id")]
         public string? SubMerchantId { get; set; }
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
     }
 }

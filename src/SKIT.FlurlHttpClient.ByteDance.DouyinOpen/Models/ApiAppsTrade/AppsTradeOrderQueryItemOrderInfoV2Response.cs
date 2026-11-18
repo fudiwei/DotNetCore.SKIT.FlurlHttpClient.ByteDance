@@ -62,25 +62,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public int Status { get; set; }
 
                         /// <summary>
-                        /// 获取或设置有效期开始时间毫秒级时间戳。
+                        /// 获取或设置有效期开始时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("valid_start_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("valid_start_time")]
-                        public long ValidStartTimeMilliseconds { get; set; }
+                        public long ValidStartTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置有效期结束时间毫秒级时间戳。
+                        /// 获取或设置有效期结束时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("valid_end_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("valid_end_time")]
-                        public long ValidEndTimeMilliseconds { get; set; }
+                        public long ValidEndTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置核销时间毫秒级时间戳。
+                        /// 获取或设置核销时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("delivery_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("delivery_time")]
-                        public long DeliveryTimeMilliseconds { get; set; }
+                        public long DeliveryTimestampMilli { get; set; }
 
                         /// <summary>
                         /// 获取或设置次卡信息。

@@ -1,0 +1,49 @@
+namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
+{
+    public static partial class TikTokShopClientExecuteExtensions
+    {
+        /// <summary>
+        /// <para>异步调用 [GET] /authorization/{version}/shops 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/6507ead7b99d5302be949ba9 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthorizationGetShopsResponse> ExecuteAuthorizationGetShopsAsync(this TikTokShopClient client, Models.AuthorizationGetShopsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "authorization", request.ApiVersion, "shops");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.AuthorizationGetShopsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [GET] /authorization/{version}/category_assets 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/666012dd609d4402cc3be995 ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AuthorizationGetCategoryAssetsResponse> ExecuteAuthorizationGetCategoryAssetsAsync(this TikTokShopClient client, Models.AuthorizationGetCategoryAssetsRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "authorization", request.ApiVersion, "category_assets");
+
+            return await client.SendFlurlRequesAsJsontAsync<Models.AuthorizationGetCategoryAssetsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

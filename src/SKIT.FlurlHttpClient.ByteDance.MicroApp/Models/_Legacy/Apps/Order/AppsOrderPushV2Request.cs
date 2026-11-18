@@ -80,11 +80,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public int OrderStatus { get; set; }
 
         /// <summary>
-        /// 获取或设置订单变更时间毫秒级时间戳。
+        /// 获取或设置订单变更时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("update_time")]
         [System.Text.Json.Serialization.JsonPropertyName("update_time")]
-        public long UpdateTimeMilliseconds { get; set; }
+        public long UpdateTimestampMilli { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

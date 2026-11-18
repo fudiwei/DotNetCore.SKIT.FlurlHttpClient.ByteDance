@@ -94,11 +94,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public int SettleAmount { get; set; }
 
                 /// <summary>
-                /// 获取或设置分账时间毫秒级时间戳。
+                /// 获取或设置分账时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_time")]
-                public long? SettleTimeMilliseconds { get; set; }
+                public long? SettleTimestampMilli { get; set; }
             }
         }
 

@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 
         /// <summary>
         /// 获取或设置取消原因。
-        /// <para>默认值：USER_CANCEL</para>
+        /// <para>默认值："USER_CANCEL"</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_reason")]

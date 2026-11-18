@@ -14,8 +14,8 @@
         <PackageTags>Flurl.Http; ByteDance; TikTok; 字节; 字节跳动; 抖音国际版</PackageTags>
         <Authors>Fu Diwei</Authors>
         <Description>
-            基于 Flurl.Http 的 TikTok Developer API 客户端。
-            The TikTok Developer API SDK for .NET. (Offical Website: https://developers.tiktok.com/)
+            基于 Flurl.Http 的 TikTok Developer API 客户端 SDK。
+            A client SDK for TikTok Developer API based on Flurl.Http.
         </Description>
     </PropertyGroup>
 

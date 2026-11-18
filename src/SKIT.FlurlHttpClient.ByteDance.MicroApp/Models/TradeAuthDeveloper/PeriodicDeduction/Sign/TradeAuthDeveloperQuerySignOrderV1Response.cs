@@ -59,11 +59,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string? NotifyUrl { get; set; }
 
                 /// <summary>
-                /// 获取或设置签约时间毫秒级时间戳。
+                /// 获取或设置签约时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sign_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("sign_time")]
-                public long? SignTimeMilliseconds { get; set; }
+                public long? SignTimestampMilli { get; set; }
 
                 /// <summary>
                 /// 获取或设置解约来源。

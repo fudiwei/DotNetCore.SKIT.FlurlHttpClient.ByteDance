@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/v1/query_return 接口的响应。</para>
     /// </summary>
-    public class AppsECPayQueryReturnV1Response : DouyinMicroAppResponse
+    public class AppsECPayQueryReturnV1Response : AppsECPayResponseBase
     {
         public static class Types
         {

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/v1/settle 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySettleV1Response : DouyinMicroAppResponse
+    public class AppsECPaySettleV1Response : AppsECPayResponseBase
     {
         /// <summary>
         /// 获取或设置担保交易分帐单号。

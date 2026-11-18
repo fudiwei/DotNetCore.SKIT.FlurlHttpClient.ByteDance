@@ -200,11 +200,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public string RefundStatus { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置退款时间毫秒级时间戳。
+                                /// 获取或设置退款时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("refund_at")]
                                 [System.Text.Json.Serialization.JsonPropertyName("refund_at")]
-                                public long? RefundTimeMilliseconds { get; set; }
+                                public long? RefundTimestampMilli { get; set; }
                             }
                         }
 
@@ -251,11 +251,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 public string Deliverytatus { get; set; } = default!;
 
                                 /// <summary>
-                                /// 获取或设置核销时间毫秒级时间戳。
+                                /// 获取或设置核销时间戳。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("delivery_at")]
                                 [System.Text.Json.Serialization.JsonPropertyName("delivery_at")]
-                                public long? DeliveryTimeMilliseconds { get; set; }
+                                public long? DeliveryTimestampMilli { get; set; }
                             }
                         }
 

@@ -80,11 +80,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string? ChannelPayId { get; set; }
 
                 /// <summary>
-                /// 获取或设置支付时间毫秒级时间戳。
+                /// 获取或设置支付时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_time")]
-                public long? PayTimeMilliseconds { get; set; }
+                public long? PayTimestampMilli { get; set; }
             }
         }
 

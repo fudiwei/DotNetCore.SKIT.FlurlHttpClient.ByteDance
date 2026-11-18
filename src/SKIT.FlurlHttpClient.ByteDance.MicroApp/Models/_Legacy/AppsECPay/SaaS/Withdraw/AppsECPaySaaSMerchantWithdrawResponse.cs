@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/merchant_withdraw 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSMerchantWithdrawResponse : DouyinMicroAppResponse
+    public class AppsECPaySaaSMerchantWithdrawResponse : AppsECPayResponseBase
     {
         /// <summary>
         /// 获取或设置平台提现单号。

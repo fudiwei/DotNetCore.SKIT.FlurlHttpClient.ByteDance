@@ -6,6 +6,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
     public class OAuth2AccessTokenRequest : OceanEngineRequest
     {
         /// <summary>
+        /// 获取或设置授权类型。
+        /// <para>默认值："auth_code"</para>
+        /// <remarks><i>（使用默认值即可，无需修改）</i></remarks>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("grant_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
+        public string GrantType { get; set; } = "auth_code";
+
+        /// <summary>
         /// 获取或设置应用 ID。如果不指定将使用构造 <see cref="OceanEngineClient"/> 时的 <see cref="OceanEngineClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_id")]
@@ -18,13 +27,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         [Newtonsoft.Json.JsonProperty("secret")]
         [System.Text.Json.Serialization.JsonPropertyName("secret")]
         public string? AppSecret { get; set; }
-
-        /// <summary>
-        /// <i>（使用默认值即可，无需修改）</i>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("grant_type")]
-        [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
-        public string GrantType { get; set; } = "auth_code";
 
         /// <summary>
         /// 获取或设置授权码。

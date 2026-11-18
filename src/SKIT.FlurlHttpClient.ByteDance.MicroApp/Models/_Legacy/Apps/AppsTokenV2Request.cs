@@ -6,6 +6,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     public class AppsTokenV2Request : DouyinMicroAppRequest
     {
         /// <summary>
+        /// 获取或设置授权类型。
+        /// <para>默认值："client_credential"</para>
+        /// <remarks><i>（使用默认值即可，无需修改）</i></remarks>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("grant_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
+        public string GrantType { get; set; } = "client_credential";
+
+        /// <summary>
         /// 获取或设置小程序 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("appid")]
@@ -18,12 +27,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("secret")]
         [System.Text.Json.Serialization.JsonPropertyName("secret")]
         public string? AppSecret { get; set; }
-
-        /// <summary>
-        /// <i>（使用默认值即可，无需修改）</i>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("grant_type")]
-        [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
-        public string GrantType { get; set; } = "client_credential";
     }
 }

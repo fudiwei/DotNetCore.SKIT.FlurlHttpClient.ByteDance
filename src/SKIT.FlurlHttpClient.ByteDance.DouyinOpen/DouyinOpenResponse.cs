@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         public string LogId { get; set; } = default!;
 
         /// <summary>
-        /// 获取毫秒级时间戳。
+        /// 获取时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("now")]
         [System.Text.Json.Serialization.JsonPropertyName("now")]
@@ -135,10 +135,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         [System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
 
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        /// <returns></returns>
         public override bool IsSuccessful()
         {
             return base.IsSuccessful() && (Data?.ErrorCode).GetValueOrDefault() == 0;

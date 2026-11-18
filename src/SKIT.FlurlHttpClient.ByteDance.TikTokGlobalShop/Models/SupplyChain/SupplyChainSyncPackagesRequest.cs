@@ -120,25 +120,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public string TimeZone { get; set; } = string.Empty;
 
                 /// <summary>
-                /// 获取或设置发货时间毫秒级时间戳。
+                /// 获取或设置发货时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ship_time_millis")]
                 [System.Text.Json.Serialization.JsonPropertyName("ship_time_millis")]
-                public long ShipTimeMilliseconds { get; set; }
+                public long ShipTimestampMilli { get; set; }
 
                 /// <summary>
-                /// 获取或设置创建时间毫秒级时间戳。
+                /// 获取或设置创建时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("create_time_millis")]
                 [System.Text.Json.Serialization.JsonPropertyName("create_time_millis")]
-                public long CreateTimeMilliseconds { get; set; }
+                public long CreateTimestampMilli { get; set; }
 
                 /// <summary>
-                /// 获取或设置交接时间毫秒级时间戳。
+                /// 获取或设置交接时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("handover_time_millis")]
                 [System.Text.Json.Serialization.JsonPropertyName("handover_time_millis")]
-                public long HandoverTimeMilliseconds { get; set; }
+                public long HandoverTimestampMilli { get; set; }
 
                 /// <summary>
                 /// 获取或设置运输服务商 ID。

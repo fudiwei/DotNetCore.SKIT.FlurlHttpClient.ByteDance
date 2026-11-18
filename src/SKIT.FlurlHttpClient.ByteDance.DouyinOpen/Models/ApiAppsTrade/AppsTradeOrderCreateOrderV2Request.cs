@@ -14,18 +14,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                     public class OrderValidTime
                     {
                         /// <summary>
-                        /// 获取或设置有效期开始时间毫秒级时间戳。
+                        /// 获取或设置有效期开始时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("valid_start_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("valid_start_time")]
-                        public long? StartTimeMilliseconds { get; set; }
+                        public long? StartTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置有效期结束时间毫秒级时间戳。
+                        /// 获取或设置有效期结束时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("valid_end_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("valid_end_time")]
-                        public long? EndTimeMilliseconds { get; set; }
+                        public long? EndTimestampMilli { get; set; }
 
                         /// <summary>
                         /// 获取或设置有效时长（单位：毫秒）。

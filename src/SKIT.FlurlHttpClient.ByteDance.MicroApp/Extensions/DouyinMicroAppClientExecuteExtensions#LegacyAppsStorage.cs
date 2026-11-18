@@ -1,0 +1,91 @@
+namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
+{
+    public static partial class DouyinMicroAppClientExecuteExtensions
+    {
+        private static T PreprocessRequestForAppsStorage<T>(DouyinMicroAppClient client, ref T request)
+            where T : Models.AppsStorageRequestBase, new()
+        {
+            if (client is null) throw new ArgumentNullException(nameof(request));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            /*
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/user-login-sign/
+             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/other/user-login-sign/
+             */
+
+            if (request.Signature is null)
+            {
+                string json = client.JsonSerializer.Serialize(request);
+
+                switch (request.SignMethod)
+                {
+                    case "hmac_sha256":
+                        request.Signature = Utilities.HMACUtility.HashWithSHA256(request.SessionKey!, json).Value!.ToLower();
+                        break;
+                }
+            }
+
+            return request;
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/apps/set_user_storage 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/set-user-storage ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/data-caching/set-user-storage ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsSetUserStorageResponse> ExecuteAppsSetUserStorageAsync(this DouyinMicroAppClient client, Models.AppsSetUserStorageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            PreprocessRequestForAppsStorage(client, ref request);
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "set_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "set_user_storage"))
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("openid", request.OpenId)
+                .SetQueryParam("signature", request.Signature)
+                .SetQueryParam("sig_method", request.SignMethod);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsSetUserStorageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /api/apps/remove_user_storage 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-caching/remove-user-storage ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/data-caching/remove-user-storage ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.AppsRemoveUserStorageResponse> ExecuteAppsRemoveUserStorageAsync(this DouyinMicroAppClient client, Models.AppsRemoveUserStorageRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            PreprocessRequestForAppsStorage(client, ref request);
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "remove_user_storage")
+                .WithUrl(url => new Url(client._BASEURL_LEGACY).AppendPathSegments("api", "apps", "remove_user_storage"))
+                .SetQueryParam("access_token", request.AccessToken)
+                .SetQueryParam("openid", request.OpenId)
+                .SetQueryParam("signature", request.Signature)
+                .SetQueryParam("sig_method", request.SignMethod);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.AppsRemoveUserStorageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

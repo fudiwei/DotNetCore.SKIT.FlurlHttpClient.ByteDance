@@ -49,11 +49,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public string VerifyId { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置核销时间毫秒级时间戳。
+                        /// 获取或设置核销时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("verify_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("verify_time")]
-                        public long VerifyTimeMilliseconds { get; set; }
+                        public long VerifyTimestampMilli { get; set; }
                     }
                 }
 

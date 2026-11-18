@@ -94,11 +94,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string? ResultMessage { get; set; }
 
                 /// <summary>
-                /// 获取或设置退款时间毫秒级时间戳。
+                /// 获取或设置退款时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_at")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_at")]
-                public long? RefundTimeMilliseconds { get; set; }
+                public long? RefundTimestampMilli { get; set; }
             }
         }
 

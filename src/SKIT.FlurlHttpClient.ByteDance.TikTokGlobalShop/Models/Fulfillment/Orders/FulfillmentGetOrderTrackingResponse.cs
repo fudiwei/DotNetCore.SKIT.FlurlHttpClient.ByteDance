@@ -21,11 +21,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         public string Description { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置更新时间毫秒级时间戳。
+                        /// 获取或设置更新时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("update_time_millis")]
                         [System.Text.Json.Serialization.JsonPropertyName("update_time_millis")]
-                        public long UpdateTimeMilliseconds { get; set; }
+                        public long UpdateTimestampMilli { get; set; }
                     }
                 }
 

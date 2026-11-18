@@ -63,18 +63,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public int? RemainServiceTimes { get; set; }
 
                         /// <summary>
-                        /// 获取或设置服务生效时间毫秒级时间戳。
+                        /// 获取或设置服务生效时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("effective_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("effective_time")]
-                        public long? EffectiveTimeMilliseconds { get; set; }
+                        public long? EffectiveTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置服务失效时间毫秒级时间戳。
+                        /// 获取或设置服务失效时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("expire_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                        public long? ExpireTimeMilliseconds { get; set; }
+                        public long? ExpireTimestampMilli { get; set; }
                     }
                 }
 

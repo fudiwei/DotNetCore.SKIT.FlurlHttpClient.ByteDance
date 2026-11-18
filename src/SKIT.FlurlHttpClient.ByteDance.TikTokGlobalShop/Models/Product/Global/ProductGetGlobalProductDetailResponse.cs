@@ -199,33 +199,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 
                     public class Manufacturer : ProductGetProductDetailResponse.Types.Data.Types.Manufacturer
                     {
-                        /// <summary>
-                        /// 获取或设置制造商名称。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("name")]
-                        [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string? Name { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置制造商地址。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("address")]
-                        [System.Text.Json.Serialization.JsonPropertyName("address")]
-                        public string? Address { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置联系电话。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("phone_number")]
-                        [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-                        public string? PhoneNumber { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置联系邮箱。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("email")]
-                        [System.Text.Json.Serialization.JsonPropertyName("email")]
-                        public string? Email { get; set; }
                     }
                 }
 

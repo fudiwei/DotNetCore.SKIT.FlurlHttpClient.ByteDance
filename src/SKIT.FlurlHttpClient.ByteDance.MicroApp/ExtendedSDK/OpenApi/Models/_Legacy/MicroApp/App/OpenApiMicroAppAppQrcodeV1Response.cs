@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
     {
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && GetRawBytes().Any();
+            return base.IsSuccessful() && GetRawHeaders().ContainsKey(HttpHeaders.ContentDisposition);
         }
     }
 }

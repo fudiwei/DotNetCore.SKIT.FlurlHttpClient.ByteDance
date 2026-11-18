@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 public string RefundId { get; set; } = default!;
 
                 /// <summary>
-                /// 获取或设置审核的最后期限毫秒级时间戳。
+                /// 获取或设置审核的最后期限时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_audit_deadline")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_audit_deadline")]

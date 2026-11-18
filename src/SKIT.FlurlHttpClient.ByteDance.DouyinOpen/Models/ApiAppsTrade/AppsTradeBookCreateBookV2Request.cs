@@ -96,18 +96,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 public string? ItemOrderId { get; set; }
 
                 /// <summary>
-                /// 获取或设置预约开始时间毫秒级时间戳。
+                /// 获取或设置预约开始时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_start_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_start_time")]
-                public long BookStartTimeMilliseconds { get; set; }
+                public long BookStartTimestampMilli { get; set; }
 
                 /// <summary>
-                /// 获取或设置预约结束时间毫秒级时间戳。
+                /// 获取或设置预约结束时间戳。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_end_time")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_end_time")]
-                public long BookEndTimeMilliseconds { get; set; }
+                public long BookEndTimestampMilli { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户信息列表。

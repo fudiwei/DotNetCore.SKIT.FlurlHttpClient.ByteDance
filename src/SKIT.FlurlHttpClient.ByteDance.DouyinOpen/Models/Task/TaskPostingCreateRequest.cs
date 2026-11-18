@@ -33,14 +33,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         }
 
         /// <summary>
-        /// 获取或设置开始时间时间戳。
+        /// 获取或设置开始时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("start_time")]
         [System.Text.Json.Serialization.JsonPropertyName("start_time")]
         public long StartTimestamp { get; set; }
 
         /// <summary>
-        /// 获取或设置结束时间时间戳。
+        /// 获取或设置结束时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("end_time")]
         [System.Text.Json.Serialization.JsonPropertyName("end_time")]

@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/v1/settle 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySettleV1Request : DouyinMicroAppRequest
+    public class AppsECPaySettleV1Request : AppsECPayRequestBase
     {
         public static class Types
         {
@@ -68,13 +68,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [System.Text.Json.Serialization.JsonPropertyName("settle_params")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
         public IList<Types.SettleParameter> SettleParameterList { get; set; } = new List<Types.SettleParameter>();
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

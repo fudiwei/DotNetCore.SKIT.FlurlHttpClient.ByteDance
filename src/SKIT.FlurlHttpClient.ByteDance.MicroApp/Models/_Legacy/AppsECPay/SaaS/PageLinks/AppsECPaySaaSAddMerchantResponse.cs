@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/add_merchant 接口的响应。</para>
     /// </summary>
-    public class AppsECPaySaaSAddMerchantResponse : DouyinMicroAppResponse
+    public class AppsECPaySaaSAddMerchantResponse : AppsECPayResponseBase
     {
         /// <summary>
         /// 获取或设置请求页面链接。

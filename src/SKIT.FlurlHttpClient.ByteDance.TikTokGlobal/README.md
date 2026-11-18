@@ -12,7 +12,7 @@
 
 ---
 
-An API client SDK for TikTok Developer Platform based on Flurl.Http.
+A client SDK for TikTok Developer API based on Flurl.Http.
 
 ## Features
 

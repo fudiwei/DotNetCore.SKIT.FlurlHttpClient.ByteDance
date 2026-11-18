@@ -43,11 +43,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         }
 
         /// <summary>
-        /// 获取或设置发送请求时的毫秒级时间戳。如果不指定将由系统自动生成。
+        /// 获取或设置发送请求的时间戳。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("date_time")]
         [System.Text.Json.Serialization.JsonPropertyName("date_time")]
-        public long? DateTimeUnixMilliseconds { get; set; }
+        public long? DateTimestampMilli { get; set; }
 
         /// <summary>
         /// 获取或设置订单类型。

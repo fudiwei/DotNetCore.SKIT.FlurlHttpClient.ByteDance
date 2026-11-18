@@ -1,0 +1,30 @@
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
+{
+    public static partial class DouyinOpenClientExecuteExtensions
+    {
+        /// <summary>
+        /// <para>异步调用 [GET] /fans/check 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/account-management/fans-judge ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.FansCheckResponse> ExecuteFansCheckAsync(this DouyinOpenClient client, Models.FansCheckRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Get, "fans", "check")
+                .WithHeader("access-token", request.AccessToken)
+                .SetQueryParam("open_id", request.OpenId)
+                .SetQueryParam("follower_open_id", request.FollowerOpenId);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.FansCheckResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

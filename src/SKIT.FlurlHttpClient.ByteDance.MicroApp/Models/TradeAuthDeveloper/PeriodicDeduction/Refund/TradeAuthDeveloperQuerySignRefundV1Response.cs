@@ -77,18 +77,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         public string? ResultMessage { get; set; }
 
                         /// <summary>
-                        /// 获取或设置创建时间毫秒级时间戳。
+                        /// 获取或设置创建时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("create_at")]
                         [System.Text.Json.Serialization.JsonPropertyName("create_at")]
-                        public long? CreateTimeMilliseconds { get; set; }
+                        public long? CreateTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置退款时间毫秒级时间戳。
+                        /// 获取或设置退款时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_at")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_at")]
-                        public long? RefundTimeMilliseconds { get; set; }
+                        public long? RefundTimestampMilli { get; set; }
                     }
                 }
 

@@ -19,9 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         [System.Text.Json.Serialization.JsonPropertyName("client_secret")]
         public string? ClientSecret { get; set; }
 
-        /// <summary>
         /// <inheritdoc/>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty("token")]
         [System.Text.Json.Serialization.JsonPropertyName("token")]
         public override string? AccessToken

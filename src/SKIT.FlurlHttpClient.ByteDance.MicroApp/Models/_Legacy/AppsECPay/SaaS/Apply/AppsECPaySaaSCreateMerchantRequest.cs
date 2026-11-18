@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/create_merchant 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSCreateMerchantRequest : DouyinMicroAppRequest
+    public class AppsECPaySaaSCreateMerchantRequest : AppsECPayRequestBase
     {
         public static class Types
         {
@@ -534,12 +534,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("beneficiary")]
         [System.Text.Json.Serialization.JsonPropertyName("beneficiary")]
         public Types.Beneficiary? Beneficiary { get; set; }
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
     }
 }

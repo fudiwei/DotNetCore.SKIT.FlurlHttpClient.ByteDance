@@ -34,11 +34,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         public string OpenId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置服务订购时间毫秒级时间戳。
+        /// 获取或设置服务订购时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("purchase_time")]
         [System.Text.Json.Serialization.JsonPropertyName("purchase_time")]
-        public long PurchaseTimeMilliseconds { get; set; }
+        public long PurchaseTimestampMilli { get; set; }
 
         /// <summary>
         /// 获取或设置周期类型。

@@ -37,7 +37,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string Platform { get; set; } = "android";
 
         /// <summary>
-        /// 获取或设置时间戳。如果不指定将由系统自动生成
+        /// 获取或设置请求时间戳。如果不指定将由系统自动生成
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ts")]
         [System.Text.Json.Serialization.JsonPropertyName("ts")]
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public string? UserIp { get; set; }
 
         /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
+        /// 获取或设置请求签名。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("mp_sig")]
         [System.Text.Json.Serialization.JsonPropertyName("mp_sig")]

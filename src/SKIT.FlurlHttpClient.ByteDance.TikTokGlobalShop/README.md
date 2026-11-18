@@ -14,7 +14,7 @@
 
 ---
 
-An API client SDK for TikTok Shop Open Platform based on Flurl.Http.
+A client SDK for TikTok Shop Open Platform API based on Flurl.Http.
 
 ## Features
 

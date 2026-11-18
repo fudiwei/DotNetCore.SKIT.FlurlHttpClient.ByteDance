@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/merchant_withdraw 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSMerchantWithdrawRequest : DouyinMicroAppRequest
+    public class AppsECPaySaaSMerchantWithdrawRequest : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。
@@ -53,13 +53,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("out_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_id")]
         public string OutOrderId { get; set; } = string.Empty;
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

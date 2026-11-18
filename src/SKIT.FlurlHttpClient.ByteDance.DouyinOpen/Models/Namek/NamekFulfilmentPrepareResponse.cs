@@ -46,11 +46,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         public Types.SKU SKU { get; set; } = default!;
 
                         /// <summary>
-                        /// 获取或设置过期时间毫秒级时间戳。
+                        /// 获取或设置过期时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("expire_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                        public long ExpireTimeUnixMilliseconds { get; set; }
+                        public long ExpireTimestampMilli { get; set; }
                     }
                 }
 

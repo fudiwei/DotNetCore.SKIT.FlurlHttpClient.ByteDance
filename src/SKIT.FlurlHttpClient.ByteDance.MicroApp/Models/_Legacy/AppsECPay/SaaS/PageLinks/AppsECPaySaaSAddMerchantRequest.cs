@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/add_merchant 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSAddMerchantRequest : DouyinMicroAppRequest
+    public class AppsECPaySaaSAddMerchantRequest : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。

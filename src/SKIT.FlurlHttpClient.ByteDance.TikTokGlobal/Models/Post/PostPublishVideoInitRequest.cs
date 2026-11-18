@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_cover_timestamp_ms")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_cover_timestamp_ms")]
-                public int? VideoCoverTimeMilliseconds { get; set; }
+                public int? VideoCoverTimestampMilli { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否是第三方品牌推广内容。

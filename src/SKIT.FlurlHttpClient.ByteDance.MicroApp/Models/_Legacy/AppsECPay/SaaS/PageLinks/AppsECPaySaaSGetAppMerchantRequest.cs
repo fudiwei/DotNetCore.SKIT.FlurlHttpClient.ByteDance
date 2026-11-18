@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/saas/get_app_merchant 接口的请求。</para>
     /// </summary>
-    public class AppsECPaySaaSGetAppMerchantRequest : DouyinMicroAppRequest
+    public class AppsECPaySaaSGetAppMerchantRequest : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         public int UrlType { get; set; }
 
         /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
+        /// 获取或设置请求签名。如果不指定将由系统自动生成。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sign")]
         [System.Text.Json.Serialization.JsonPropertyName("sign")]

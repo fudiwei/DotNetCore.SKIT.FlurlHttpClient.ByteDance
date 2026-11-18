@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/remove_user_storage 接口的请求。</para>
     /// </summary>
-    public class AppsRemoveUserStorageRequest : DouyinMicroAppRequest
+    public class AppsRemoveUserStorageRequest : AppsStorageRequestBase
     {
         public static class Types
         {
@@ -25,26 +25,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
         public string OpenId { get; set; } = string.Empty;
-
-        /// <summary>
-        /// 获取或设置会话密钥。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string SessionKey { get; set; } = string.Empty;
-
-        /// <summary>
-        /// <i>（使用默认值即可，无需修改）</i>
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string SignMethod { get; set; } = "hmac_sha256";
-
-        /// <summary>
-        /// 获取或设置请求签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string? Signature { get; set; }
     }
 }

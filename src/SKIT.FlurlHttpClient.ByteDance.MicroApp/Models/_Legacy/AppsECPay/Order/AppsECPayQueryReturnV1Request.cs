@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/v1/query_return 接口的请求。</para>
     /// </summary>
-    public class AppsECPayQueryReturnV1Request : DouyinMicroAppRequest
+    public class AppsECPayQueryReturnV1Request : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序第三方平台应用 ID。
@@ -32,12 +32,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("return_no")]
         [System.Text.Json.Serialization.JsonPropertyName("return_no")]
         public string? ReturnNumber { get; set; }
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
     }
 }

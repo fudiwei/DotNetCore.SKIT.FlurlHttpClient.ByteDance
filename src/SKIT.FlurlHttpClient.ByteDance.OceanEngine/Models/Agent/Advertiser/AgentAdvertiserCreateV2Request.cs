@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 
         /// <summary>
         /// 获取或设置角色。
-        /// <para>默认值：ROLE_CHILD_ADVERTISER</para>
+        /// <para>默认值："ROLE_CHILD_ADVERTISER"</para>
         /// </summary>
         [Newtonsoft.Json.JsonProperty("role")]
         [System.Text.Json.Serialization.JsonPropertyName("role")]

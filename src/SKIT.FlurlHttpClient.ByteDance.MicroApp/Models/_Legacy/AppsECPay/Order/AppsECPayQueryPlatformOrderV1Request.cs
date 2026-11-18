@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [POST] /api/apps/ecpay/v1/query_platform_order 接口的请求。</para>
     /// </summary>
-    public class AppsECPayQueryPlatformOrderV1Request : DouyinMicroAppRequest
+    public class AppsECPayQueryPlatformOrderV1Request : AppsECPayRequestBase
     {
         /// <summary>
         /// 获取或设置小程序 AppId。如果不指定将使用构造 <see cref="DouyinMicroAppClient"/> 时的 <see cref="DouyinMicroAppClientOptions.AppId"/> 参数。
@@ -26,12 +26,5 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonProperty("query_type")]
         [System.Text.Json.Serialization.JsonPropertyName("query_type")]
         public int QueryType { get; set; } = 1;
-
-        /// <summary>
-        /// 获取或设置签名。如果不指定将由系统自动生成。
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty("sign")]
-        [System.Text.Json.Serialization.JsonPropertyName("sign")]
-        public string? Signature { get; set; }
     }
 }

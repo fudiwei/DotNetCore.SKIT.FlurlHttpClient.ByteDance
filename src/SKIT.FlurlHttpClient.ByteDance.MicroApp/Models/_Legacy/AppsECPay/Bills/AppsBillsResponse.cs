@@ -3,11 +3,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// <summary>
     /// <para>表示 [GET] /api/apps/bills 接口的响应。</para>
     /// </summary>
-    public class AppsBillsResponse : DouyinMicroAppResponse
+    public class AppsBillsResponse : AppsECPayResponseBase
     {
         public override bool IsSuccessful()
         {
-            return base.IsSuccessful() && GetRawBytes().Any();
+            return base.IsSuccessful() && GetRawHeaders().ContainsKey(HttpHeaders.ContentDisposition);
         }
     }
 }

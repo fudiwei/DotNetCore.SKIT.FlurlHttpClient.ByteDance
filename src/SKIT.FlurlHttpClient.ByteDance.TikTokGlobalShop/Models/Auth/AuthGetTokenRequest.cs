@@ -6,7 +6,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
     public class AuthGetTokenRequest : TikTokShopRequest
     {
         /// <summary>
-        /// <i>（使用默认值即可，无需修改）</i>
+        /// 获取或设置授权类型。
+        /// <para>默认值："authorized_code"</para>
+        /// <remarks><i>（使用默认值即可，无需修改）</i></remarks>
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]

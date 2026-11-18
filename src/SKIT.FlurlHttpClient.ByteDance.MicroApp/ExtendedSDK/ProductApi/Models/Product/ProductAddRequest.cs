@@ -383,18 +383,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.ProductApi.Models
                         public Types.UseLabel? UseLabel { get; set; }
 
                         /// <summary>
-                        /// 获取或设置课程开始时间毫秒级时间戳。
+                        /// 获取或设置课程开始时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("start_timestamp")]
                         [System.Text.Json.Serialization.JsonPropertyName("start_timestamp")]
-                        public long? StartTimeMilliseconds { get; set; }
+                        public long? StartTimestampMilli { get; set; }
 
                         /// <summary>
-                        /// 获取或设置课程结束时间毫秒级时间戳。
+                        /// 获取或设置课程结束时间戳。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("end_timestamp")]
                         [System.Text.Json.Serialization.JsonPropertyName("end_timestamp")]
-                        public long? EndTimeMilliseconds { get; set; }
+                        public long? EndTimestampMilli { get; set; }
                     }
                 }
 

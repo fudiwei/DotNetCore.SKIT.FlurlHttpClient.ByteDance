@@ -33,21 +33,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("major_industry_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("major_industry_code")]
-                        public string MajorIndustryCode { get; set; } = string.Empty;
+                        public string? MajorIndustryCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置辅营类目代码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("minor_industry_codes")]
                         [System.Text.Json.Serialization.JsonPropertyName("minor_industry_codes")]
-                        public IList<string>? MajorIndustryCodeList { get; set; }
+                        public List<string>? MajorIndustryCodeList { get; set; }
 
                         /// <summary>
                         /// 获取或设置许可证列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qualifications")]
                         [System.Text.Json.Serialization.JsonPropertyName("qualifications")]
-                        public IList<Types.Qualification>? QualificationList { get; set; }
+                        public List<Types.Qualification>? QualificationList { get; set; }
                     }
 
                     public class Owner : GoodLifePOISyncV1Request.Types.POI.Types.Owner
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("third_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                public string ThirdId { get; set; } = string.Empty;
+                public string? ThirdId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商家 ID。
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = string.Empty;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置营业执照信息。
@@ -118,6 +118,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("datas")]
         [System.Text.Json.Serialization.JsonPropertyName("datas")]
-        public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+        public List<Types.POI>? POIList { get; set; }
     }
 }

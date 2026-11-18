@@ -42,30 +42,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         [System.Text.Json.Serialization.JsonPropertyName("id_card_no")]
                                         public string? IdCardNumber { get; set; }
                                     }
-
-                                    public class BookSKUInfo
-                                    {
-                                        /// <summary>
-                                        /// 获取或设置 SKU ID 类型。
-                                        /// </summary>
-                                        [Newtonsoft.Json.JsonProperty("sku_id_type")]
-                                        [System.Text.Json.Serialization.JsonPropertyName("sku_id_type")]
-                                        public int SKUIdType { get; set; }
-
-                                        /// <summary>
-                                        /// 获取或设置 SKU ID。
-                                        /// </summary>
-                                        [Newtonsoft.Json.JsonProperty("sku_id")]
-                                        [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                        public string SKUId { get; set; } = default!;
-
-                                        /// <summary>
-                                        /// 获取或设置加价金额（单位：分）。
-                                        /// </summary>
-                                        [Newtonsoft.Json.JsonProperty("price")]
-                                        [System.Text.Json.Serialization.JsonPropertyName("price")]
-                                        public int Price { get; set; }
-                                    }
                                 }
 
                                 /// <summary>
@@ -75,14 +51,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringReadOnlyConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string POIId { get; set; } = default!;
+                                public string? POIId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("goods_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                                public string GoodsId { get; set; } = default!;
+                                public string? GoodsId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品单号。
@@ -110,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("user_info_list")]
                                 [System.Text.Json.Serialization.JsonPropertyName("user_info_list")]
-                                public Types.UserInfo[]? UserInfoList { get; set; }
+                                public List<Types.UserInfo>? UserInfoList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置预约的商品 SKU ID。
@@ -133,35 +109,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商家预约单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("out_book_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("out_book_no")]
-                        public string OutBookNumber { get; set; } = default!;
+                        public string? OutBookNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置预约单 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("book_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("book_id")]
-                        public string BookId { get; set; } = default!;
+                        public string? BookId { get; set; }
 
                         /// <summary>
                         /// 获取或设置预约状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置预约信息列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("book_child_info_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("book_child_info_list")]
-                        public Types.ItemBookInfo[] ItemBookInfoList { get; set; } = default!;
+                        public List<Types.ItemBookInfo>? ItemBookInfoList { get; set; }
 
                         /// <summary>
                         /// 获取或设置加价单 ID。
@@ -177,7 +153,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_info_list")]
-                public Types.Book[] BookList { get; set; } = default!;
+                public List<Types.Book>? BookList { get; set; }
             }
         }
     }

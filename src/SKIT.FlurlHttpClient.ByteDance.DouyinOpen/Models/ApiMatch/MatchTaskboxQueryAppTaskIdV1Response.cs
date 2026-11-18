@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_ids")]
-                public long[] TaskIdList { get; set; } = default!;
+                public List<long>? TaskIdList { get; set; }
             }
         }
 
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

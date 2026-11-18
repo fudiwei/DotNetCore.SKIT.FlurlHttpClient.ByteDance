@@ -11,8 +11,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
                 public static class Types
                 {
-                    public class HotSearchVideo : DouyinVideoListV1Response.Types.Data.Types.Video
+                    public class HotSearchVideo : DouyinVideoListV1Response.Types.Data.Types.__zz__Video
                     {
+                        public static class Types
+                        {
+                            public class Statistics : DouyinVideoListV1Response.Types.Data.Types.Video.Types.Statistics
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置文章 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("statistics")]
+                        [System.Text.Json.Serialization.JsonPropertyName("statistics")]
+                        public Types.Statistics? Statistics { get; set; }
                     }
                 }
 
@@ -21,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.HotSearchVideo[] HotSearchVideoList { get; set; } = default!;
+                public List<Types.HotSearchVideo>? HotSearchVideoList { get; set; }
             }
         }
     }

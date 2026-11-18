@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("role_labels")]
         [System.Text.Json.Serialization.JsonPropertyName("role_labels")]
-        public IList<string> RoleLabelList { get; set; } = new List<string>();
+        public List<string>? RoleLabelList { get; set; }
 
         /// <summary>
         /// 获取或设置用户的 OpenId。与字段 <see cref="DouyinId"/> 二选一。

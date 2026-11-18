@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("key")]
                         [System.Text.Json.Serialization.JsonPropertyName("key")]
-                        public string Key { get; set; } = default!;
+                        public string? Key { get; set; }
 
                         /// <summary>
                         /// 获取或设置值。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("value")]
                         [System.Text.Json.Serialization.JsonPropertyName("value")]
-                        public string Value { get; set; } = default!;
+                        public string? Value { get; set; }
                     }
                 }
 
@@ -34,21 +34,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("city_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("city_list")]
-                public Types.KeyValue[] CityList { get; set; } = default!;
+                public List<Types.KeyValue>? CityList { get; set; }
 
                 /// <summary>
                 /// 获取或设置性别数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("gender_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("gender_list")]
-                public Types.KeyValue[] GenderList { get; set; } = default!;
+                public List<Types.KeyValue>? GenderList { get; set; }
 
                 /// <summary>
                 /// 获取或设置年龄数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("age_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("age_list")]
-                public Types.KeyValue[] AgeList { get; set; } = default!;
+                public List<Types.KeyValue>? AgeList { get; set; }
             }
         }
     }

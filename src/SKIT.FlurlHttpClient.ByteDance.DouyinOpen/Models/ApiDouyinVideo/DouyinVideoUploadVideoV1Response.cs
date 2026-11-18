@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频高度（单位：像素）。
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video")]
                 [System.Text.Json.Serialization.JsonPropertyName("video")]
-                public Types.Video Video { get; set; } = default!;
+                public Types.Video? Video { get; set; }
             }
         }
     }

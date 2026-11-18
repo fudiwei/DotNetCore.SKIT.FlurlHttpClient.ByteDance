@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("event")]
                         [System.Text.Json.Serialization.JsonPropertyName("event")]
-                        public string Event { get; set; } = default!;
+                        public string? Event { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户唯一标识。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                        public string OpenId { get; set; } = default!;
+                        public string? OpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置事件时间戳。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("content")]
                         [System.Text.Json.Serialization.JsonPropertyName("content")]
-                        public string EventContentJson { get; set; } = default!;
+                        public string? EventContentJson { get; set; }
                     }
                 }
 
@@ -48,14 +48,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("intention_log_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("intention_log_infos")]
-                public Types.IntentionLogInfo[] IntentionLogList { get; set; } = default!;
+                public List<Types.IntentionLogInfo>? IntentionLogList { get; set; }
 
                 /// <summary>
                 /// 获取或设置查询会话信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("query_session")]
                 [System.Text.Json.Serialization.JsonPropertyName("query_session")]
-                public string QuerySession { get; set; } = default!;
+                public string? QuerySession { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多数据。
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

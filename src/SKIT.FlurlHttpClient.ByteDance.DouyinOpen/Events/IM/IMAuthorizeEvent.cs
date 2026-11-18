@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
-                public string Source { get; set; } = default!;
+                public string? Source { get; set; }
 
                 /// <summary>
                 /// 获取或设置扩展字段。
@@ -90,6 +90,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

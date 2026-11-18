@@ -30,14 +30,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("server_message_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("server_message_id")]
-                public string ServerMessageId { get; set; } = default!;
+                public string? ServerMessageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置会话 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("conversation_short_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("conversation_short_id")]
-                public string ConversationShortId { get; set; } = default!;
+                public string? ConversationShortId { get; set; }
 
                 /// <summary>
                 /// 获取或设置会话类型。
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("owner_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("owner_id")]
-                public string OwnerOpenId { get; set; } = default!;
+                public string? OwnerOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置场景类型。
@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("message_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("message_type")]
-                public string MessageType { get; set; } = default!;
+                public string? MessageType { get; set; }
 
                 /// <summary>
                 /// 获取或设置消息来源。
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("card_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("card_data")]
-                public Types.CardData[]? CardData { get; set; }
+                public List<Types.CardData>? CardData { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。
@@ -149,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_infos")]
-                public Types.UserInfo[]? UserList { get; set; }
+                public List<Types.UserInfo>? UserList { get; set; }
             }
         }
     }

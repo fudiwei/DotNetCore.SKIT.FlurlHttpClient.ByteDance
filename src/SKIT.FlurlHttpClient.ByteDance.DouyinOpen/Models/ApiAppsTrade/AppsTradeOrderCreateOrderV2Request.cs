@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("goods_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                public string GoodsId { get; set; } = string.Empty;
+                public string? GoodsId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品标题。
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedStringListWithPipeSplitConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("labels")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedStringListWithPipeSplitConverter))]
-                public IList<string>? LabelList { get; set; }
+                public List<string>? LabelList { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用规则。
@@ -165,7 +165,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("goods_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                        public string GoodsId { get; set; } = string.Empty;
+                        public string? GoodsId { get; set; }
 
                         /// <summary>
                         /// 获取或设置数量。
@@ -193,7 +193,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("marketing_detail_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("marketing_detail_info")]
-                        public IList<MarketingDetail>? MarketingDetailList { get; set; }
+                        public List<MarketingDetail>? MarketingDetailList { get; set; }
                     }
 
                     public class ItemDiscountDetail
@@ -203,7 +203,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("goods_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                        public string GoodsId { get; set; } = string.Empty;
+                        public string? GoodsId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品总金额（单位：分）。
@@ -224,7 +224,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("marketing_detail_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("marketing_detail_info")]
-                        public IList<MarketingDetail>? MarketingDetailList { get; set; }
+                        public List<MarketingDetail>? MarketingDetailList { get; set; }
                     }
 
                     public class OrderDiscountDetail
@@ -248,7 +248,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("marketing_detail_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("marketing_detail_info")]
-                        public IList<MarketingDetail>? MarketingDetailList { get; set; }
+                        public List<MarketingDetail>? MarketingDetailList { get; set; }
                     }
 
                     public class MarketingDetail
@@ -258,7 +258,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string Id { get; set; } = string.Empty;
+                        public string? Id { get; set; }
 
                         /// <summary>
                         /// 获取或设置营销类型。
@@ -323,14 +323,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("goods_discount_detail")]
                 [System.Text.Json.Serialization.JsonPropertyName("goods_discount_detail")]
-                public IList<Types.GoodsDiscountDetail>? GoodsDiscountDetailList { get; set; }
+                public List<Types.GoodsDiscountDetail>? GoodsDiscountDetailList { get; set; }
 
                 /// <summary>
                 /// 获取或设置单商品算价结果列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_discount_detail")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_discount_detail")]
-                public IList<Types.ItemDiscountDetail>? ItemDiscountDetailList { get; set; }
+                public List<Types.ItemDiscountDetail>? ItemDiscountDetailList { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单算价结果信息。
@@ -347,14 +347,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path")]
                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string Path { get; set; } = string.Empty;
+                public string? Path { get; set; }
 
                 /// <summary>
                 /// 获取或设置页面参数字符串。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("params")]
                 [System.Text.Json.Serialization.JsonPropertyName("params")]
-                public string? ParamsString { get; set; } = string.Empty;
+                public string? ParamsString { get; set; }
             }
         }
 
@@ -363,7 +363,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutOrderNumber { get; set; } = string.Empty;
+        public string? OutOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置订单总金额（单位：分）。
@@ -384,14 +384,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置商品列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("goods_list")]
         [System.Text.Json.Serialization.JsonPropertyName("goods_list")]
-        public IList<Types.Goods> GoodsList { get; set; } = new List<Types.Goods>();
+        public List<Types.Goods>? GoodsList { get; set; }
 
         /// <summary>
         /// 获取或设置回调通知地址。

@@ -14,21 +14,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置核销单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("confirm_apply_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("confirm_apply_id")]
-                public string ConfirmApplyId { get; set; } = default!;
+                public string? ConfirmApplyId { get; set; }
 
                 /// <summary>
                 /// 获取或设置券码 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("code_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("code_list")]
-                public string[] CodeList { get; set; } = default!;
+                public List<string>? CodeList { get; set; }
             }
         }
     }

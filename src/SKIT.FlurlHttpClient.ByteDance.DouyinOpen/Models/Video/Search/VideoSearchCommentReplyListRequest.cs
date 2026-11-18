@@ -17,14 +17,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string SecurityItemId { get; set; } = string.Empty;
+        public string? SecurityItemId { get; set; }
 
         /// <summary>
         /// 获取或设置评论 ID。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string CommentId { get; set; } = string.Empty;
+        public string? CommentId { get; set; }
 
         /// <summary>
         /// 获取或设置分页游标。

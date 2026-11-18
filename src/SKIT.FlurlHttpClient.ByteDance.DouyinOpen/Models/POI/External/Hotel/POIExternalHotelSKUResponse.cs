@@ -16,21 +16,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_ext_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_ext_id")]
-                public string SPUExternalId { get; set; } = default!;
+                public string? SPUExternalId { get; set; }
 
                 /// <summary>
                 /// 获取或设置拉取价格时间区间开始时间字符串（格式：yyyy-MM-dd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("start_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("start_date")]
-                public string StartDateString { get; set; } = default!;
+                public string? StartDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置拉取价格时间区间结束时间字符串（格式：yyyy-MM-dd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("end_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("end_date")]
-                public string EndDateString { get; set; } = default!;
+                public string? EndDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置房型价格（单位：分）。

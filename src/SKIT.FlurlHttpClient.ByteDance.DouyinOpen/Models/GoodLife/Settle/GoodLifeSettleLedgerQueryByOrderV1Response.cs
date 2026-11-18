@@ -11,8 +11,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
                 public static class Types
                 {
-                    public class LedgerRecord : GoodLifeSettleLedgerDetailedQueryByOrderV1Response.Types.Data.Types.LedgerRecord
+                    public class LedgerRecord : GoodLifeSettleLedgerDetailedQueryByOrderV1Response.Types.Data.Types.__zz__LedgerRecord
                     {
+                        public static class Types
+                        {
+                            public class Amount : GoodLifeSettleLedgerDetailedQueryByOrderV1Response.Types.Data.Types.LedgerRecord.Types.Amount
+                            {
+                            }
+
+                            public class SKU : GoodLifeSettleLedgerDetailedQueryByOrderV1Response.Types.Data.Types.LedgerRecord.Types.SKU
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置金额信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("amount")]
+                        public Types.Amount? Amount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置团购 SKU 信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("goods")]
+                        [System.Text.Json.Serialization.JsonPropertyName("goods")]
+                        public Types.SKU? SKU { get; set; }
                     }
                 }
 
@@ -21,14 +45,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ledger_records")]
                 [System.Text.Json.Serialization.JsonPropertyName("ledger_records")]
-                public IDictionary<string, Types.LedgerRecord> LedgerRecordMap { get; set; } = default!;
+                public Dictionary<string, Types.LedgerRecord>? LedgerRecordMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置二次分账记录字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ledger_second_records")]
                 [System.Text.Json.Serialization.JsonPropertyName("ledger_second_records")]
-                public IDictionary<string, Types.LedgerRecord> SecondLedgerRecordMap { get; set; } = default!;
+                public Dictionary<string, Types.LedgerRecord>? SecondLedgerRecordMap { get; set; }
             }
         }
     }

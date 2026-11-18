@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.AlbumVersion[] VersionList { get; set; } = default!;
+                public List<Types.AlbumVersion>? VersionList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

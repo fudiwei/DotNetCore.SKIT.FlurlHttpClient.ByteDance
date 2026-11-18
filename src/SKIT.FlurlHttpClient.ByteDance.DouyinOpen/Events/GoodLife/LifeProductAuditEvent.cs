@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                public string ProductId { get; set; } = default!;
+                public string? ProductId { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string AuditStatus { get; set; } = default!;
+                public string? AuditStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核拒绝原因。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reason")]
                 [System.Text.Json.Serialization.JsonPropertyName("reason")]
-                public string? RejectReason { get; set; } = default!;
+                public string? RejectReason { get; set; }
             }
         }
 
@@ -41,6 +41,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

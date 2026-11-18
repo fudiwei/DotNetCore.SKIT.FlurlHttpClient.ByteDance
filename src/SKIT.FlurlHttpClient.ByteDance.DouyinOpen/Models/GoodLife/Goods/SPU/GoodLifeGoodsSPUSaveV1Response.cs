@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_id")]
-                public string SPUId { get; set; } = default!;
+                public string? SPUId { get; set; }
             }
         }
 
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("BaseResp")]
         [System.Text.Json.Serialization.JsonPropertyName("BaseResp")]
-        public Types.BaseResponse BaseResponse { get; set; } = default!;
+        public Types.BaseResponse? BaseResponse { get; set; }
 
         public override bool IsSuccessful()
         {

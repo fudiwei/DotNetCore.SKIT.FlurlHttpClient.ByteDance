@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("record_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("record_id")]
-                        public string RecordId { get; set; } = default!;
+                        public string? RecordId { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("commission_records")]
                 [System.Text.Json.Serialization.JsonPropertyName("commission_records")]
-                public Types.CommissionRecord[] CommissionRecordList { get; set; } = default!;
+                public List<Types.CommissionRecord>? CommissionRecordList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

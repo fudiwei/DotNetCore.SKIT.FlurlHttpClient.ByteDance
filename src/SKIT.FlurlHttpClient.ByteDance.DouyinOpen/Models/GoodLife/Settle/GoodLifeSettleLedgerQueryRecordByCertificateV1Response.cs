@@ -73,45 +73,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                                public Types.SettleAmount SettleAmount { get; set; } = default!;
+                                public Types.SettleAmount? SettleAmount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置分账款项金额信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("fund_amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("fund_amount")]
-                                public Types.FundAmount FundAmount { get; set; } = default!;
+                                public Types.FundAmount? FundAmount { get; set; }
                             }
 
-                            public class SKU
+                            public class SKU : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.LedgerRecord.Types.SKU
                             {
-                                /// <summary>
-                                /// 获取或设置 SKU ID。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("sku_id")]
-                                [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                public string SKUId { get; set; } = default!;
-
                                 /// <summary>
                                 /// 获取或设置团购名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("title")]
                                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                public string Title { get; set; } = default!;
-
-                                /// <summary>
-                                /// 获取或设置团购市场价（单位：分）。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("market_price")]
-                                [System.Text.Json.Serialization.JsonPropertyName("market_price")]
-                                public int MarketPrice { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置售卖开始时间戳。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("sold_start_time")]
-                                [System.Text.Json.Serialization.JsonPropertyName("sold_start_time")]
-                                public long StartTimestamp { get; set; }
+                                public new string? Title
+                                {
+                                    get { return base.Title; }
+                                    set { base.Title = value; }
+                                }
                             }
                         }
 
@@ -120,28 +103,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ledger_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("ledger_id")]
-                        public string LedgerId { get; set; } = default!;
+                        public string? LedgerId { get; set; }
 
                         /// <summary>
                         /// 获取或设置核销记录 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("verify_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("verify_id")]
-                        public string VerifyId { get; set; } = default!;
+                        public string? VerifyId { get; set; }
 
                         /// <summary>
                         /// 获取或设置券 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificate_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                        public string CertificateId { get; set; } = default!;
+                        public string? CertificateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置核销时间戳。
@@ -162,21 +145,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public string Code { get; set; } = default!;
+                        public string? Code { get; set; }
 
                         /// <summary>
                         /// 获取或设置金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount? Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置团购 SKU 信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku")]
-                        public Types.SKU SKU { get; set; } = default!;
+                        public Types.SKU? SKU { get; set; }
                     }
                 }
 
@@ -185,7 +168,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("records")]
                 [System.Text.Json.Serialization.JsonPropertyName("records")]
-                public Types.LedgerRecord[] LedgerRecordList { get; set; } = default!;
+                public List<Types.LedgerRecord>? LedgerRecordList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

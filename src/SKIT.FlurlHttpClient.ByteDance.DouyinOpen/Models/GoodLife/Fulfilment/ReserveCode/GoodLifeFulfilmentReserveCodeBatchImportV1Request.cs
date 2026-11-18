@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU ID。
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("codes")]
         [System.Text.Json.Serialization.JsonPropertyName("codes")]
-        public IList<string> CodeList { get; set; } = new List<string>();
+        public List<string>? CodeList { get; set; }
 
         /// <summary>
         /// 获取或设置预置码过期时间戳。

@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reason_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("reason_code")]
-                public IList<int> ReasonCodeList { get; set; } = new List<int>();
+                public List<int>? ReasonCodeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款描述。
@@ -30,20 +30,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置外部售后单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_after_sale_id")]
         [System.Text.Json.Serialization.JsonPropertyName("out_after_sale_id")]
-        public string OutAftersaleId { get; set; } = string.Empty;
+        public string? OutAftersaleId { get; set; }
 
         /// <summary>
         /// 获取或设置退款原因信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refund_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("refund_reason")]
-        public Types.RefundReason RefundReason { get; set; } = new Types.RefundReason();
+        public Types.RefundReason? RefundReason { get; set; }
     }
 }

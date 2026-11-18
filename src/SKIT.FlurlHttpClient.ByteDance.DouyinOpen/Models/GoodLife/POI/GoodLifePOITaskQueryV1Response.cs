@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                                public string AccountId { get; set; } = default!;
+                                public string? AccountId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置任务状态。
@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("key")]
                                         [System.Text.Json.Serialization.JsonPropertyName("key")]
-                                        public string AuditKey { get; set; } = default!;
+                                        public string? AuditKey { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置审核状态。
@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("key_audit_result_list")]
                                 [System.Text.Json.Serialization.JsonPropertyName("key_audit_result_list")]
-                                public Types.AuditResult[]? AuditResultList { get; set; }
+                                public List<Types.AuditResult>? AuditResultList { get; set; }
                             }
                         }
 
@@ -122,14 +122,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("third_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                        public string ThirdId { get; set; } = default!;
+                        public string? ThirdId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 POI ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("match_poi_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("match_poi_id")]
-                        public string POIId { get; set; } = default!;
+                        public string? POIId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商服绑定关系结果信息。
@@ -166,7 +166,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_results")]
-                public Types.TaskResult[] TaskResultList { get; set; } = default!;
+                public List<Types.TaskResult>? TaskResultList { get; set; }
             }
         }
     }

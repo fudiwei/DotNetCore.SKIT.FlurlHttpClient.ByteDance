@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string SPUExternalId { get; set; } = string.Empty;
+        public string? SPUExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置拉取价格时间区间开始时间字符串（格式：yyyy-MM-dd）。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string StartDateString { get; set; } = string.Empty;
+        public string? StartDateString { get; set; }
 
         /// <summary>
         /// 获取或设置拉取价格时间区间结束时间字符串（格式：yyyy-MM-dd）。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string EndDateString { get; set; } = string.Empty;
+        public string? EndDateString { get; set; }
     }
 }

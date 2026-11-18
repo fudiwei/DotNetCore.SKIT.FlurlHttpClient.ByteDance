@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sku_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("sku_name")]
-                public string SKUName { get; set; } = string.Empty;
+                public string? SKUName { get; set; }
 
                 /// <summary>
                 /// 获取或设置状态。
@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("stock")]
                 [System.Text.Json.Serialization.JsonPropertyName("stock")]
-                public Types.Stock Stock { get; set; } = new Types.Stock();
+                public Types.Stock? Stock { get; set; }
 
                 /// <summary>
                 /// 获取或设置原价（单位：分）。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
                 [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
-                public IDictionary<string, string>? AttributeKeyValueMap { get; set; }
+                public Dictionary<string, string>? AttributeKeyValueMap { get; set; }
             }
         }
 
@@ -93,6 +93,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sku_list")]
         [System.Text.Json.Serialization.JsonPropertyName("sku_list")]
-        public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+        public List<Types.SKU>? SKUList { get; set; }
     }
 }

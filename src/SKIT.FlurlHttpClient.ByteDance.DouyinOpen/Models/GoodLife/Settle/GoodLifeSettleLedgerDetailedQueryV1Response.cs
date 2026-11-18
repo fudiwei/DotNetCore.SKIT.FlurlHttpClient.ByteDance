@@ -11,7 +11,87 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
                 public static class Types
                 {
-                    public class LedgerRecord
+                    public abstract class __zz__LedgerRecord
+                    {
+                        /// <summary>
+                        /// 获取或设置商家 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("account_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("account_id")]
+                        public string? AccountId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置数据唯一标识。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("id")]
+                        public string? Id { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置门店 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("poi_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
+                        public string? POIId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置分账记录 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("ledger_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("ledger_id")]
+                        public string? LedgerId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置订单 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("order_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("order_id")]
+                        public string? OrderId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置 Item 维度订单 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("item_order_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
+                        public string? ItemOrderId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置 SKU 维度订单 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("sku_order_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("sku_order_id")]
+                        public string? SKUOrderId { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置分账状态。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("status")]
+                        [System.Text.Json.Serialization.JsonPropertyName("status")]
+                        public int Status { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置分账成功时间戳。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("ledger_time")]
+                        [System.Text.Json.Serialization.JsonPropertyName("ledger_time")]
+                        public long LedgerTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置订单参数字典。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("order_attrribute")]
+                        [System.Text.Json.Serialization.JsonPropertyName("order_attrribute")]
+                        public Dictionary<string, string>? OrderAttributeMap { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置发票月账单的 Key。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("receipt_bill_key")]
+                        [System.Text.Json.Serialization.JsonPropertyName("receipt_bill_key")]
+                        public string? ReceiptBillKey { get; set; }
+                    }
+
+                    public class LedgerRecord : __zz__LedgerRecord
                     {
                         public static class Types
                         {
@@ -186,14 +266,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("certificate_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                                public string CertificateId { get; set; } = default!;
+                                public string? CertificateId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置券码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("code")]
-                                public string Code { get; set; } = default!;
+                                public string? Code { get; set; }
                             }
 
                             public class SKU
@@ -203,14 +283,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置团购名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("group_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("group_name")]
-                                public string Title { get; set; } = default!;
+                                public string? Title { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置团购市场价（单位：分）。
@@ -229,102 +309,25 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         }
 
                         /// <summary>
-                        /// 获取或设置商家 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("account_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                        public string AccountId { get; set; } = string.Empty;
-
-                        /// <summary>
-                        /// 获取或设置数据唯一标识。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string Id { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置门店 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("poi_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                        public string POIId { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置分账记录 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("ledger_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("ledger_id")]
-                        public string LedgerId { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置订单 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置 Item 维度订单 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("item_order_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                        public string? ItemOrderId { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置 SKU 维度订单 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("sku_order_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("sku_order_id")]
-                        public string? SKUOrderId { get; set; }
-
-                        /// <summary>
                         /// 获取或设置券信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificate")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificate")]
-                        public Types.Certificate Certificate { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置分账状态。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("status")]
-                        [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public int Status { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置分账成功时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("ledger_time")]
-                        [System.Text.Json.Serialization.JsonPropertyName("ledger_time")]
-                        public long LedgerTimestamp { get; set; }
+                        public Types.Certificate? Certificate { get; set; }
 
                         /// <summary>
                         /// 获取或设置金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount? Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置团购 SKU 信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("goods")]
                         [System.Text.Json.Serialization.JsonPropertyName("goods")]
-                        public Types.SKU SKU { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置订单参数字典。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("order_attrribute")]
-                        [System.Text.Json.Serialization.JsonPropertyName("order_attrribute")]
-                        public IDictionary<string, string>? OrderAttributeMap { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置发票月账单的 Key。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("receipt_bill_key")]
-                        [System.Text.Json.Serialization.JsonPropertyName("receipt_bill_key")]
-                        public string? ReceiptBillKey { get; set; }
+                        public Types.SKU? SKU { get; set; }
                     }
                 }
 
@@ -333,7 +336,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ledger_records")]
                 [System.Text.Json.Serialization.JsonPropertyName("ledger_records")]
-                public Types.LedgerRecord[] LedgerRecordList { get; set; } = default!;
+                public List<Types.LedgerRecord>? LedgerRecordList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

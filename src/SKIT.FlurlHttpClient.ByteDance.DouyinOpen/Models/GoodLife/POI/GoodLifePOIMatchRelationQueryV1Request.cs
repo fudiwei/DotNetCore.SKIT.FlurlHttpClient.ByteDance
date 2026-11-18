@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> POIExternalIdList { get; set; } = new List<string>();
+        public List<string>? POIExternalIdList { get; set; }
     }
 }

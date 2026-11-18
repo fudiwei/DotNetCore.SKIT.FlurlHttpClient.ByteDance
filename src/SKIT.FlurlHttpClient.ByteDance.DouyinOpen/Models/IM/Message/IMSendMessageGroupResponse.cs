@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("msg_id")]
         [System.Text.Json.Serialization.JsonPropertyName("msg_id")]
-        public string ServerMessageId { get; set; } = default!;
+        public string? ServerMessageId { get; set; }
     }
 }

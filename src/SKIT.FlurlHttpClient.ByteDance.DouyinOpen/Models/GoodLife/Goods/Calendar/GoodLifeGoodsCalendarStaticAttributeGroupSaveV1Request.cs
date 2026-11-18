@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("calendar_static_attrs")]
                 [System.Text.Json.Serialization.JsonPropertyName("calendar_static_attrs")]
-                public IList<Types.CalendarStaticAttribute> StaticAttributeList { get; set; } = new List<Types.CalendarStaticAttribute>();
+                public List<Types.CalendarStaticAttribute>? StaticAttributeList { get; set; }
             }
 
             public class CalendarStaticAttribute
@@ -42,14 +42,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("values")]
                         [System.Text.Json.Serialization.JsonPropertyName("values")]
-                        public IList<string>? DateStringList { get; set; }
+                        public List<string>? DateStringList { get; set; }
 
                         /// <summary>
                         /// 获取或设置要排除的日期字符串列表（格式：yyyy-MM-dd）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("exclude_dates")]
                         [System.Text.Json.Serialization.JsonPropertyName("exclude_dates")]
-                        public IList<string>? ExcludedDateStringList { get; set; }
+                        public List<string>? ExcludedDateStringList { get; set; }
                     }
                 }
 
@@ -72,14 +72,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public Types.Value Value { get; set; } = new Types.Value();
+                public Types.Value? Value { get; set; }
 
                 /// <summary>
                 /// 获取或设置属性字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
                 [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
-                public IDictionary<string, string>? KeyValueMap { get; set; }
+                public Dictionary<string, string>? KeyValueMap { get; set; }
             }
         }
 
@@ -88,13 +88,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置日历属性信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("calendar_static_attr_group")]
         [System.Text.Json.Serialization.JsonPropertyName("calendar_static_attr_group")]
-        public Types.CalendarStaticAttributeGroup CalendarStaticAttributeGroup { get; set; } = new Types.CalendarStaticAttributeGroup();
+        public Types.CalendarStaticAttributeGroup? CalendarStaticAttributeGroup { get; set; }
     }
 }

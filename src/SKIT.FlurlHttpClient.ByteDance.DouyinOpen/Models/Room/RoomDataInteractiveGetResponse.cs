@@ -32,14 +32,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置日期字符串（格式：yyyy-MM-dd）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("time_slot")]
                         [System.Text.Json.Serialization.JsonPropertyName("time_slot")]
-                        public string DateString { get; set; } = default!;
+                        public string? DateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否已就绪。
@@ -70,21 +70,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item")]
                         [System.Text.Json.Serialization.JsonPropertyName("item")]
-                        public string ItemId { get; set; } = default!;
+                        public string? ItemId { get; set; }
 
                         /// <summary>
                         /// 获取或设置指标名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置日期字符串（格式：yyyy-MM-dd）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("timeslot")]
                         [System.Text.Json.Serialization.JsonPropertyName("timeslot")]
-                        public string DateString { get; set; } = default!;
+                        public string? DateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置指标值。
@@ -107,14 +107,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_ready_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_ready_status")]
-                public Types.DataReadyStatusInfo[] DataReadyStatusList { get; set; } = default!;
+                public List<Types.DataReadyStatusInfo>? DataReadyStatusList { get; set; }
 
                 /// <summary>
                 /// 获取或设置统计数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("stats")]
                 [System.Text.Json.Serialization.JsonPropertyName("stats")]
-                public Types.Statistics[] StatisticsList { get; set; } = default!;
+                public List<Types.Statistics>? StatisticsList { get; set; }
             }
         }
 
@@ -139,7 +139,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

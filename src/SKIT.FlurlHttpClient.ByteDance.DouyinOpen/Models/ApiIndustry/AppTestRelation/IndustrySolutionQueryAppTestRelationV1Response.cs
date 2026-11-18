@@ -35,14 +35,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("BaseResp")]
         [System.Text.Json.Serialization.JsonPropertyName("BaseResp")]
-        public Types.BaseResponse BaseResponse { get; set; } = default!;
+        public Types.BaseResponse? BaseResponse { get; set; }
 
         /// <summary>
         /// 获取或设置物料 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ref_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("ref_id_list")]
-        public string[] ReferenceIdList { get; set; } = default!;
+        public List<string>? ReferenceIdList { get; set; }
 
         public override bool IsSuccessful()
         {

@@ -22,21 +22,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置文本链接。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("value")]
                         [System.Text.Json.Serialization.JsonPropertyName("value")]
-                        public string Value { get; set; } = default!;
+                        public string? Value { get; set; }
 
                         /// <summary>
                         /// 获取或设置文本点击后的事件类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("action_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("action_type")]
-                        public string ActionType { get; set; } = default!;
+                        public string? ActionType { get; set; }
                     }
                 }
 
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("message_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("message_type")]
-                public string MessageType { get; set; } = default!;
+                public string? MessageType { get; set; }
 
                 /// <summary>
                 /// 获取或设置文本消息内容。
@@ -115,7 +115,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("actions")]
                 [System.Text.Json.Serialization.JsonPropertyName("actions")]
-                public IDictionary<string, Types.Action>? ActionMap { get; set; }
+                public Dictionary<string, Types.Action>? ActionMap { get; set; }
             }
         }
     }

@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("date")]
                         [System.Text.Json.Serialization.JsonPropertyName("date")]
-                        public string DateString { get; set; } = default!;
+                        public string? DateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序点击量视频分布字典。
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("mp_item_click_json")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-                        public IDictionary<string, int> ItemClickDistributionMap { get; set; } = default!;
+                        public Dictionary<string, int>? ItemClickDistributionMap { get; set; }
                     }
                 }
 
@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("result_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("result_list")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
     }

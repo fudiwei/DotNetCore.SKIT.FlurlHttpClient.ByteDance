@@ -58,7 +58,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置中介 ClientKey。
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_id")]
         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-        public string VideoId { get; set; } = string.Empty;
+        public string? VideoId { get; set; }
 
         /// <summary>
         /// 获取或设置视频标题。
@@ -184,7 +184,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("at_users")]
         [System.Text.Json.Serialization.JsonPropertyName("at_users")]
-        public IList<string>? AtUserOpenIdList { get; set; }
+        public List<string>? AtUserOpenIdList { get; set; }
 
         /// <summary>
         /// 获取或设置下载类型。

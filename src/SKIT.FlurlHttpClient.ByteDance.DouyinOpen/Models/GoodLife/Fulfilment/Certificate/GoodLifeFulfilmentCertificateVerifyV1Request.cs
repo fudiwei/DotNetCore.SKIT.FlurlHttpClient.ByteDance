@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("code")]
                 [System.Text.Json.Serialization.JsonPropertyName("code")]
-                public string Code { get; set; } = string.Empty;
+                public string? Code { get; set; }
 
                 /// <summary>
                 /// 获取或设置核销时间戳（单位：秒）。
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("verify_token")]
         [System.Text.Json.Serialization.JsonPropertyName("verify_token")]
-        public string VerifyToken { get; set; } = string.Empty;
+        public string? VerifyToken { get; set; }
 
         /// <summary>
         /// 获取或设置门店 ID。
@@ -44,14 +44,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("encrypted_codes")]
         [System.Text.Json.Serialization.JsonPropertyName("encrypted_codes")]
-        public IList<string>? EncryptedCodeList { get; set; }
+        public List<string>? EncryptedCodeList { get; set; }
 
         /// <summary>
         /// 获取或设置券码列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("codes")]
         [System.Text.Json.Serialization.JsonPropertyName("codes")]
-        public IList<string>? CodeList { get; set; }
+        public List<string>? CodeList { get; set; }
 
         /// <summary>
         /// 获取或设置抖音订单号。
@@ -65,6 +65,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("code_with_time_list")]
         [System.Text.Json.Serialization.JsonPropertyName("code_with_time_list")]
-        public IList<Types.CodeWithTime>? CodeWithTimeList { get; set; }
+        public List<Types.CodeWithTime>? CodeWithTimeList { get; set; }
     }
 }

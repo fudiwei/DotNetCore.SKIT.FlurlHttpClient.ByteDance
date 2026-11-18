@@ -18,28 +18,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频发布者。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("author")]
                         [System.Text.Json.Serialization.JsonPropertyName("author")]
-                        public string Author { get; set; } = default!;
+                        public string? Author { get; set; }
 
                         /// <summary>
                         /// 获取或设置封面 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_cover")]
-                        public string CoverUrl { get; set; } = default!;
+                        public string? CoverUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频分享 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
+                        public string? ShareUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置排名。
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("hot_words")]
                         [System.Text.Json.Serialization.JsonPropertyName("hot_words")]
-                        public string HotWords { get; set; } = default!;
+                        public string? HotWords { get; set; }
 
                         /// <summary>
                         /// 获取或设置热度指数。
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Item[] List { get; set; } = default!;
+                public List<Types.Item>? List { get; set; }
             }
         }
     }

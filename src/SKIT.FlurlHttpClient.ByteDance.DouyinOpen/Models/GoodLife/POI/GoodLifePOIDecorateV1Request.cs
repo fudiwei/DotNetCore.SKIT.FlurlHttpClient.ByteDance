@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                                public string Url { get; set; } = string.Empty;
+                                public string? Url { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片排序。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("title")]
                                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                public string Title { get; set; } = string.Empty;
+                                public string? Title { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置相册图片列表。
@@ -56,14 +56,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("image_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("image_url")]
-                                public string Url { get; set; } = string.Empty;
+                                public string? Url { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("image_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("image_name")]
-                                public string Name { get; set; } = string.Empty;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片排序。
@@ -80,21 +80,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("image_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("image_url")]
-                                public string Url { get; set; } = string.Empty;
+                                public string? Url { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置标题。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("title")]
                                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                public string Name { get; set; } = string.Empty;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置描述。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("description")]
                                 [System.Text.Json.Serialization.JsonPropertyName("description")]
-                                public string Description { get; set; } = string.Empty;
+                                public string? Description { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置是否展示。
@@ -110,14 +110,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tags")]
                         [System.Text.Json.Serialization.JsonPropertyName("tags")]
-                        public IList<string>? TagList { get; set; }
+                        public List<string>? TagList { get; set; }
 
                         /// <summary>
                         /// 获取或设置头图列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("head_images")]
                         [System.Text.Json.Serialization.JsonPropertyName("head_images")]
-                        public IList<Types.Image>? HeadImageList { get; set; }
+                        public List<Types.Image>? HeadImageList { get; set; }
 
                         /// <summary>
                         /// 获取或设置相册列表。
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover_images")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover_images")]
-                        public IList<Types.Image>? CoverImageList { get; set; }
+                        public List<Types.Image>? CoverImageList { get; set; }
 
                         /// <summary>
                         /// 获取或设置公告信息。
@@ -147,21 +147,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("third_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                public string ThirdId { get; set; } = string.Empty;
+                public string? ThirdId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = string.Empty;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置装修信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("license")]
                 [System.Text.Json.Serialization.JsonPropertyName("license")]
-                public Types.Decoration Decoration { get; set; } = new Types.Decoration();
+                public Types.Decoration? Decoration { get; set; }
             }
         }
 
@@ -170,6 +170,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("datas")]
         [System.Text.Json.Serialization.JsonPropertyName("datas")]
-        public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+        public List<Types.POI>? POIList { get; set; }
     }
 }

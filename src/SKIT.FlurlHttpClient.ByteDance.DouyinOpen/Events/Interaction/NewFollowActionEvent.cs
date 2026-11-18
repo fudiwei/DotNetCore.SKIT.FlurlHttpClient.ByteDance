@@ -34,6 +34,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

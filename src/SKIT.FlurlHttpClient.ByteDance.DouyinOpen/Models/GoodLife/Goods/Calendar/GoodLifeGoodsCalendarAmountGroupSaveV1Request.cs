@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("calendar_amounts")]
                 [System.Text.Json.Serialization.JsonPropertyName("calendar_amounts")]
-                public IList<Types.CalendarAmount> AmountList { get; set; } = new List<Types.CalendarAmount>();
+                public List<Types.CalendarAmount>? AmountList { get; set; }
             }
 
             public class CalendarAmount
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public Types.Value Value { get; set; } = new Types.Value();
+                public Types.Value? Value { get; set; }
 
                 /// <summary>
                 /// 获取或设置原价（单位：分）。
@@ -82,13 +82,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置日历价格信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("calendar_amount_group")]
         [System.Text.Json.Serialization.JsonPropertyName("calendar_amount_group")]
-        public Types.CalendarAmountGroup CalendarAmountGroup { get; set; } = new Types.CalendarAmountGroup();
+        public Types.CalendarAmountGroup? CalendarAmountGroup { get; set; }
     }
 }

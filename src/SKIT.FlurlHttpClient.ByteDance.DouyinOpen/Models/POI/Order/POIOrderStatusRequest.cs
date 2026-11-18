@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置订单外部 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ext_id")]
-        public string OrderExternalId { get; set; } = string.Empty;
+        public string? OrderExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置门店外部 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-        public string SupplierExternalId { get; set; } = string.Empty;
+        public string? SupplierExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置订单确认状态。

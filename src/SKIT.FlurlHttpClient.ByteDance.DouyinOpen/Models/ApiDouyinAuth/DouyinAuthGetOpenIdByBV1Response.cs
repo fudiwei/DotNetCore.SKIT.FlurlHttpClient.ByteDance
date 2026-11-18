@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string COpenId { get; set; } = default!;
+                public string? COpenId { get; set; }
             }
         }
 
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

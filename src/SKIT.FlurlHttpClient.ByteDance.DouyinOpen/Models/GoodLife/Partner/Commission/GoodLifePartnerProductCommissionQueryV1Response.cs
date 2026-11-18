@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                public string ProductId { get; set; } = default!;
+                                public string? ProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_name")]
-                                public string ProductName { get; set; } = default!;
+                                public string? ProductName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品状态。
@@ -69,14 +69,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("item_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                                public string ItemId { get; set; } = default!;
+                                public string? ItemId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                public string ProductId { get; set; } = default!;
+                                public string? ProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置审核中的商品分佣比例（单位：万分数）。
@@ -115,7 +115,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product")]
                         [System.Text.Json.Serialization.JsonPropertyName("product")]
-                        public Types.Product Product { get; set; } = default!;
+                        public Types.Product? Product { get; set; }
 
                         /// <summary>
                         /// 获取或设置最近一次的佣金配置记录商品明细信息。
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_commissions")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_commissions")]
-                public Types.ProductCommission[] ProductCommissionList { get; set; } = default!;
+                public List<Types.ProductCommission>? ProductCommissionList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

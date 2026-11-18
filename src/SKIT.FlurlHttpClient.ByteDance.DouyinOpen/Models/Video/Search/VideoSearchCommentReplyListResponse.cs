@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Comment[] CommentList { get; set; } = default!;
+                public List<Types.Comment>? CommentList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

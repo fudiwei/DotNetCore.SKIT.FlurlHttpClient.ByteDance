@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string POIId { get; set; } = string.Empty;
+        public string? POIId { get; set; }
 
         /// <summary>
         /// 获取或设置日期类型。

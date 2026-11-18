@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("card_template_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("card_template_id")]
-                public string CardTemplateId { get; set; } = default!;
+                public string? CardTemplateId { get; set; }
             }
         }
     }

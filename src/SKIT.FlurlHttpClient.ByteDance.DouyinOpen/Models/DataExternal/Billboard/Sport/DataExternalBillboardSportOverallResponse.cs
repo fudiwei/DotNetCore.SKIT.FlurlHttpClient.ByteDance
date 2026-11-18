@@ -22,21 +22,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("title")]
                                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                public string Title { get; set; } = default!;
+                                public string? Title { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置视频封面 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("item_cover")]
                                 [System.Text.Json.Serialization.JsonPropertyName("item_cover")]
-                                public string CoverUrl { get; set; } = default!;
+                                public string? CoverUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置视频播放链接。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("share_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                                public string ShareUrl { get; set; } = default!;
+                                public string? ShareUrl { get; set; }
                             }
                         }
 
@@ -45,14 +45,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nickname")]
                         [System.Text.Json.Serialization.JsonPropertyName("nickname")]
-                        public string Nickname { get; set; } = default!;
+                        public string? Nickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                        public string AvatarUrl { get; set; } = default!;
+                        public string? AvatarUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置排名。
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_list")]
-                        public Types.Video[] VideoList { get; set; } = default!;
+                        public List<Types.Video>? VideoList { get; set; }
                     }
                 }
 
@@ -110,7 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Item[] List { get; set; } = default!;
+                public List<Types.Item>? List { get; set; }
             }
         }
     }

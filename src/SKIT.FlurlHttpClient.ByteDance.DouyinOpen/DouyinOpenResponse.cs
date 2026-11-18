@@ -74,15 +74,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("logid")]
         [System.Text.Json.Serialization.JsonPropertyName("logid")]
-        public string LogId { get; set; } = default!;
+        public string? LogId { get; set; }
 
         /// <summary>
-        /// 获取时间戳。
+        /// 获取请求时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("now")]
         [System.Text.Json.Serialization.JsonPropertyName("now")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString)]
-        public long Now { get; set; }
+        public long TimestampMilli { get; set; }
 
         /// <summary>
         /// 获取错误码。
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public TData Data { get; set; } = default!;
+        public TData? Data { get; set; }
 
         /// <summary>
         /// 获取或设置接口返回消息。

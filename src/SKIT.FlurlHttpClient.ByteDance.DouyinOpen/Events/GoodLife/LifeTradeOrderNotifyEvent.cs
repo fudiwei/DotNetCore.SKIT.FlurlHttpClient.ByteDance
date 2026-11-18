@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商家 ID。
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         [Newtonsoft.Json.JsonProperty("account_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string AccountId { get; set; } = default!;
+                        public string? AccountId { get; set; }
 
                         /// <summary>
                         /// 获取或设置售卖价格（单位：分）。
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("action")]
                 [System.Text.Json.Serialization.JsonPropertyName("action")]
-                public string Action { get; set; } = default!;
+                public string? Action { get; set; }
 
                 /// <summary>
                 /// 获取或设置消息时间戳。
@@ -86,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order")]
                 [System.Text.Json.Serialization.JsonPropertyName("order")]
-                public Types.Order Order { get; set; } = default!;
+                public Types.Order? Order { get; set; }
             }
         }
 
@@ -95,6 +95,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

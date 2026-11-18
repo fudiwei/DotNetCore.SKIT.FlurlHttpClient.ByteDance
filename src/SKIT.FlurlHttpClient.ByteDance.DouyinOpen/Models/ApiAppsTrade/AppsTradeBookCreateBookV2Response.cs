@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("markup_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("markup_order_id")]
-                        public string MarkupOrderId { get; set; } = default!;
+                        public string? MarkupOrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置唤起收银台的支付订单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("pay_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("pay_order_id")]
-                        public string PayOrderId { get; set; } = default!;
+                        public string? PayOrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置唤起收银台的 Token。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("pay_order_token")]
                         [System.Text.Json.Serialization.JsonPropertyName("pay_order_token")]
-                        public string PayOrderToken { get; set; } = default!;
+                        public string? PayOrderToken { get; set; }
                     }
                 }
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_id")]
-                public string BookId { get; set; } = default!;
+                public string? BookId { get; set; }
 
                 /// <summary>
                 /// 获取或设置加价单信息。

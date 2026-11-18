@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置素材文件字节数组。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] MediaFileBytes { get; set; } = Array.Empty<byte>();
+        public byte[]? MediaFileBytes { get; set; }
 
         /// <summary>
         /// 获取或设置素材文件名。如果不指定将由系统自动生成。

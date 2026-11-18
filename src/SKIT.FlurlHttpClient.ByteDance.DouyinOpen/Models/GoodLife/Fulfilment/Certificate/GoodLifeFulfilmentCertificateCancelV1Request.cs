@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("verify_id")]
         [System.Text.Json.Serialization.JsonPropertyName("verify_id")]
-        public string VerifyId { get; set; } = string.Empty;
+        public string? VerifyId { get; set; }
 
         /// <summary>
         /// 获取或设置券 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("certificate_id")]
         [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-        public string CertificateId { get; set; } = string.Empty;
+        public string? CertificateId { get; set; }
     }
 }

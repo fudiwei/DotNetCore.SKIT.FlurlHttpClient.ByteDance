@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("author")]
                         [System.Text.Json.Serialization.JsonPropertyName("author")]
-                        public string Author { get; set; } = default!;
+                        public string? Author { get; set; }
 
                         /// <summary>
                         /// 获取或设置歌曲标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置封面 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover")]
-                        public string CoverUrl { get; set; } = default!;
+                        public string? CoverUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置时长（单位：秒）。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
+                        public string? ShareUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置使用量。
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Item[] List { get; set; } = default!;
+                public List<Types.Item>? List { get; set; }
             }
         }
     }

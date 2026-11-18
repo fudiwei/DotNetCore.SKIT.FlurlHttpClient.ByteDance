@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置入住日期字符串（格式：yyyyMMdd）。
@@ -75,21 +75,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("customer_list")]
         [System.Text.Json.Serialization.JsonPropertyName("customer_list")]
-        public IList<Types.Customer>? CustomerList { get; set; }
+        public List<Types.Customer>? CustomerList { get; set; }
 
         /// <summary>
         /// 获取或设置预订人姓名。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("customer_name")]
         [System.Text.Json.Serialization.JsonPropertyName("customer_name")]
-        public string CustomerName { get; set; } = string.Empty;
+        public string? CustomerName { get; set; }
 
         /// <summary>
         /// 获取或设置预订人电话。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("customer_phone")]
         [System.Text.Json.Serialization.JsonPropertyName("customer_phone")]
-        public string CustomerPhoneNumber { get; set; } = string.Empty;
+        public string? CustomerPhoneNumber { get; set; }
 
         /// <summary>
         /// 获取或设置备注。
@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spu_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("spu_ext_id")]
-        public string SPUExternalId { get; set; } = string.Empty;
+        public string? SPUExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置订单支付状态。
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("date_price")]
         [System.Text.Json.Serialization.JsonPropertyName("date_price")]
-        public IList<Types.DatePrice>? DatePriceList { get; set; }
+        public List<Types.DatePrice>? DatePriceList { get; set; }
 
         /// <summary>
         /// 获取或设置总价（单位：分）。

@@ -25,21 +25,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ability_identity")]
                         [System.Text.Json.Serialization.JsonPropertyName("ability_identity")]
-                        public string AbilityId { get; set; } = default!;
+                        public string? AbilityId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序 AppId。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string AppId { get; set; } = default!;
+                        public string? AppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置实现名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string ImplementationName { get; set; } = default!;
+                        public string? ImplementationName { get; set; }
 
                         /// <summary>
                         /// 获取或设置测试地址。
@@ -62,21 +62,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("solution_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("solution_id")]
-                public string SolutionId { get; set; } = default!;
+                public string? SolutionId { get; set; }
 
                 /// <summary>
                 /// 获取或设置扩展点能力实现列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("extension_ability_impl_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("extension_ability_impl_list")]
-                public Types.AbilityImplementation[]? ExtensionAbilityImplementationList { get; set; }
+                public List<Types.AbilityImplementation>? ExtensionAbilityImplementationList { get; set; }
 
                 /// <summary>
                 /// 获取或设置消息配置实现列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("message_ability_impl_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("message_ability_impl_list")]
-                public Types.AbilityImplementation[]? MessageAbilityImplementationList { get; set; }
+                public List<Types.AbilityImplementation>? MessageAbilityImplementationList { get; set; }
             }
 
             public class AppConfigItem
@@ -86,14 +86,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("identity")]
                 [System.Text.Json.Serialization.JsonPropertyName("identity")]
-                public string Key { get; set; } = default!;
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// 获取或设置值。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public string Value { get; set; } = default!;
+                public string? Value { get; set; }
             }
         }
 
@@ -102,13 +102,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("solution_eff_ability_impl_list")]
         [System.Text.Json.Serialization.JsonPropertyName("solution_eff_ability_impl_list")]
-        public Types.IndustryImplementation[] IndustryImplementationList { get; set; } = default!;
+        public List<Types.IndustryImplementation>? IndustryImplementationList { get; set; }
 
         /// <summary>
         /// 获取或设置小程序配置项列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_config_item_list")]
         [System.Text.Json.Serialization.JsonPropertyName("app_config_item_list")]
-        public Types.AppConfigItem[] AppConfigItemList { get; set; } = default!;
+        public List<Types.AppConfigItem>? AppConfigItemList { get; set; }
     }
 }

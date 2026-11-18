@@ -79,7 +79,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_coupon_id")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_coupon_id")]
-        public string ExternalCouponId { get; set; } = string.Empty;
+        public string? ExternalCouponId { get; set; }
 
         /// <summary>
         /// 获取或设置上线状态。
@@ -93,6 +93,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("available_info")]
         [System.Text.Json.Serialization.JsonPropertyName("available_info")]
-        public IList<Types.Availability>? AvailabilityList { get; set; }
+        public List<Types.Availability>? AvailabilityList { get; set; }
     }
 }

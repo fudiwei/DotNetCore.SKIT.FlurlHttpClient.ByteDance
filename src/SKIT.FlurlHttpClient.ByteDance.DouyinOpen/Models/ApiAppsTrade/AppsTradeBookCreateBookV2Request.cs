@@ -49,7 +49,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = string.Empty;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置加价金额（单位：分）。
@@ -65,28 +65,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ext_shop_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("ext_shop_id")]
-                public string ExternalPOIId { get; set; } = string.Empty;
+                public string? ExternalPOIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = string.Empty;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shop_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("shop_name")]
-                public string ShopName { get; set; } = string.Empty;
+                public string? ShopName { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("goods_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                public string GoodsId { get; set; } = string.Empty;
+                public string? GoodsId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品单号。
@@ -114,7 +114,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_info_list")]
-                public IList<Types.UserInfo>? UserInfoList { get; set; }
+                public List<Types.UserInfo>? UserInfoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置预约的商品 SKU 信息。
@@ -138,7 +138,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_markup_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_markup_no")]
-                public string OutMarkupNumber { get; set; } = string.Empty;
+                public string? OutMarkupNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置总金额（单位：分）。
@@ -168,28 +168,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置商家预约单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_book_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_book_no")]
-        public string OutBookNumber { get; set; } = string.Empty;
+        public string? OutBookNumber { get; set; }
 
         /// <summary>
         /// 获取或设置用户的 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置预约信息列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_book_info_list")]
         [System.Text.Json.Serialization.JsonPropertyName("item_book_info_list")]
-        public IList<Types.ItemBookInfo> ItemBookInfoList { get; set; } = new List<Types.ItemBookInfo>();
+        public List<Types.ItemBookInfo>? ItemBookInfoList { get; set; }
 
         /// <summary>
         /// 获取或设置加价信息。

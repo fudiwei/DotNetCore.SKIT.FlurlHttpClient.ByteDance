@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reason_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("reason_code")]
-                public IList<int> ReasonCodeList { get; set; } = new List<int>();
+                public List<int>? ReasonCodeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置拒绝描述。
@@ -30,14 +30,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_after_sale_id")]
         [System.Text.Json.Serialization.JsonPropertyName("out_after_sale_id")]
-        public string OutAftersaleId { get; set; } = string.Empty;
+        public string? OutAftersaleId { get; set; }
 
         /// <summary>
         /// 获取或设置售后单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("after_sale_id")]
         [System.Text.Json.Serialization.JsonPropertyName("after_sale_id")]
-        public string AftersaleId { get; set; } = string.Empty;
+        public string? AftersaleId { get; set; }
 
         /// <summary>
         /// 获取或设置是否审核通过。

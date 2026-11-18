@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public string[] Data { get; set; } = default!;
+        public List<string>? Data { get; set; }
     }
 }

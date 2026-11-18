@@ -18,70 +18,70 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poi_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                        public string POIId { get; set; } = default!;
+                        public string? POIId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 POI 名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poi_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("poi_name")]
-                        public string POIName { get; set; } = default!;
+                        public string? POIName { get; set; }
 
                         /// <summary>
                         /// 获取或设置国家编码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("country_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                        public string CountryCode { get; set; } = default!;
+                        public string? CountryCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置国家。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("country")]
                         [System.Text.Json.Serialization.JsonPropertyName("country")]
-                        public string Country { get; set; } = default!;
+                        public string? Country { get; set; }
 
                         /// <summary>
                         /// 获取或设置省份。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("province")]
                         [System.Text.Json.Serialization.JsonPropertyName("province")]
-                        public string Province { get; set; } = default!;
+                        public string? Province { get; set; }
 
                         /// <summary>
                         /// 获取或设置城市编码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("city_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("city_code")]
-                        public string CityCode { get; set; } = default!;
+                        public string? CityCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置城市。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("city")]
                         [System.Text.Json.Serialization.JsonPropertyName("city")]
-                        public string City { get; set; } = default!;
+                        public string? City { get; set; }
 
                         /// <summary>
                         /// 获取或设置区县。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("district")]
                         [System.Text.Json.Serialization.JsonPropertyName("district")]
-                        public string District { get; set; } = default!;
+                        public string? District { get; set; }
 
                         /// <summary>
                         /// 获取或设置详细地址。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("address")]
                         [System.Text.Json.Serialization.JsonPropertyName("address")]
-                        public string Address { get; set; } = default!;
+                        public string? Address { get; set; }
 
                         /// <summary>
                         /// 获取或设置经纬度坐标（格式：X,Y）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("location")]
                         [System.Text.Json.Serialization.JsonPropertyName("location")]
-                        public string Location { get; set; } = default!;
+                        public string? Location { get; set; }
                     }
                 }
 
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pois")]
                 [System.Text.Json.Serialization.JsonPropertyName("pois")]
-                public Types.POI[] POIList { get; set; } = default!;
+                public List<Types.POI>? POIList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

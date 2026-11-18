@@ -74,14 +74,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_id")]
-                public string BookId { get; set; } = default!;
+                public string? BookId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置预约单状态。
@@ -96,14 +96,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_start_day")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_start_day")]
-                public string BookStartDateString { get; set; } = default!;
+                public string? BookStartDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置预约结束日期字符串（格式：yyyy-MM-dd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("book_end_day")]
                 [System.Text.Json.Serialization.JsonPropertyName("book_end_day")]
-                public string BookEndDateString { get; set; } = default!;
+                public string? BookEndDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置申请时间戳。
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("BaseResp")]
         [System.Text.Json.Serialization.JsonPropertyName("BaseResp")]
-        public Types.BaseResponse BaseResponse { get; set; } = default!;
+        public Types.BaseResponse? BaseResponse { get; set; }
 
         /// <summary>
         /// 获取或设置三方预定 SKU ID。

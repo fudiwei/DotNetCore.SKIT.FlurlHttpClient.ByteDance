@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("group_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("group_id")]
-                public string GroupId { get; set; } = default!;
+                public string? GroupId { get; set; }
 
                 /// <summary>
                 /// 获取或设置入群申请 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("apply_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("apply_id")]
-                public string ApplyId { get; set; } = default!;
+                public string? ApplyId { get; set; }
 
                 /// <summary>
                 /// 获取或设置申请状态。
@@ -40,14 +40,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_nicker")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_nicker")]
-                public string UserNickname { get; set; } = default!;
+                public string? UserNickname { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户头像 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_avatar")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_avatar")]
-                public string UserAvatarUrl { get; set; } = default!;
+                public string? UserAvatarUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。
@@ -63,6 +63,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

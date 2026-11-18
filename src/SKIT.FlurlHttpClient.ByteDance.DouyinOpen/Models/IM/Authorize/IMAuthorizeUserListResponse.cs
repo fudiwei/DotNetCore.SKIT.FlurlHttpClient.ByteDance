@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("enter_from")]
                         [System.Text.Json.Serialization.JsonPropertyName("enter_from")]
-                        public string EnterFrom { get; set; } = default!;
+                        public string? EnterFrom { get; set; }
 
                         /// <summary>
                         /// 获取或设置来源小程序 AppId。
@@ -124,7 +124,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("auth_user_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("auth_user_list")]
-                public Types.AuthUser[] AuthUserList { get; set; } = default!;
+                public List<Types.AuthUser>? AuthUserList { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多数据。
@@ -156,7 +156,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

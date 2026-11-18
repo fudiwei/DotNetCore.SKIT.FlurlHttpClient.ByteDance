@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("item")]
                                 [System.Text.Json.Serialization.JsonPropertyName("item")]
-                                public string Item { get; set; } = default!;
+                                public string? Item { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置分布的数值。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("flow")]
                                 [System.Text.Json.Serialization.JsonPropertyName("flow")]
-                                public string Flow { get; set; } = default!;
+                                public string? Flow { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置流量总值。
@@ -62,49 +62,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("active_days_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("active_days_distributions")]
-                        public Types.ItemValue[] ActiveDaysDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? ActiveDaysDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝年龄分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("age_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("age_distributions")]
-                        public Types.ItemValue[] AgeDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? AgeDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝性别分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("gender_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("gender_distributions")]
-                        public Types.ItemValue[] GenderDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? GenderDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝设备分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("device_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("device_distributions")]
-                        public Types.ItemValue[] DeviceDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? DeviceDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝地域分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("geographical_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("geographical_distributions")]
-                        public Types.ItemValue[] GeographicalDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? GeographicalDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝兴趣分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("interest_distributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("interest_distributions")]
-                        public Types.ItemValue[] InterestDistributions { get; set; } = default!;
+                        public List<Types.ItemValue>? InterestDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝流量贡献分布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("flow_contributions")]
                         [System.Text.Json.Serialization.JsonPropertyName("flow_contributions")]
-                        public Types.FlowDistribution[] FlowDistributions { get; set; } = default!;
+                        public List<Types.FlowDistribution>? FlowDistributions { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝总数。
@@ -120,7 +120,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fans_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("fans_data")]
-                public Types.Result Result { get; set; } = default!;
+                public Types.Result? Result { get; set; }
             }
         }
     }

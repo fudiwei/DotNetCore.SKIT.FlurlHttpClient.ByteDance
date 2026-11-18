@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("supplier_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
-                public string SupplierId { get; set; } = default!;
+                public string? SupplierId { get; set; }
             }
         }
     }

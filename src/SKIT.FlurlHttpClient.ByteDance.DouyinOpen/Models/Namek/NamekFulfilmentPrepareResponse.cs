@@ -29,21 +29,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("encrypted_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("encrypted_code")]
-                        public string EncryptedCode { get; set; } = default!;
+                        public string? EncryptedCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount? Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置团购 SKU 信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku")]
-                        public Types.SKU SKU { get; set; } = default!;
+                        public Types.SKU? SKU { get; set; }
 
                         /// <summary>
                         /// 获取或设置过期时间戳。
@@ -59,14 +59,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("verify_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("verify_token")]
-                public string VerifyToken { get; set; } = default!;
+                public string? VerifyToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置团购券列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("certificates")]
                 [System.Text.Json.Serialization.JsonPropertyName("certificates")]
-                public Types.Certificate[] CertificateList { get; set; } = default!;
+                public List<Types.Certificate>? CertificateList { get; set; }
             }
         }
     }

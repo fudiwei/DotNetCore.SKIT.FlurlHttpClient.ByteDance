@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fail_plan_id_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("fail_plan_id_list")]
-                public long[]? FailedPlanIdList { get; set; } = default!;
+                public List<long>? FailedPlanIdList { get; set; }
             }
         }
     }

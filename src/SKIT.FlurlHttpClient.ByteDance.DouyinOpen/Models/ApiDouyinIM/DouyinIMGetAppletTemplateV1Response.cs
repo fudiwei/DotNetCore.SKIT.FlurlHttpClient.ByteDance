@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("card_template_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("card_template_id")]
-                        public string CardTemplateId { get; set; } = default!;
+                        public string? CardTemplateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置卡片类型。
@@ -32,42 +32,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置卡片内容。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("content")]
                         [System.Text.Json.Serialization.JsonPropertyName("content")]
-                        public string Content { get; set; } = default!;
+                        public string? Content { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("media_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("media_id")]
-                        public string MediaId { get; set; } = default!;
+                        public string? MediaId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序 AppId。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string MicroAppId { get; set; } = default!;
+                        public string? MicroAppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string MicroAppName { get; set; } = default!;
+                        public string? MicroAppName { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序图标 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_icon_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_icon_url")]
-                        public string MicroAppIconUrl { get; set; } = default!;
+                        public string? MicroAppIconUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -104,7 +104,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Card[] CardList { get; set; } = default!;
+                public List<Types.Card>? CardList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

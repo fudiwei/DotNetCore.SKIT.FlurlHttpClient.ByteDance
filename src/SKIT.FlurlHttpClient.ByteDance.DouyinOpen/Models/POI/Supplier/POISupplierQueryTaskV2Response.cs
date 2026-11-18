@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("mismatch_status_desc")]
                         [System.Text.Json.Serialization.JsonPropertyName("mismatch_status_desc")]
-                        public string MatchStatusDescription { get; set; } = default!;
+                        public string? MatchStatusDescription { get; set; }
                     }
                 }
 
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("match_result_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("match_result_list")]
-                public Types.MatchResult[] MatchResultList { get; set; } = default!;
+                public List<Types.MatchResult>? MatchResultList { get; set; }
             }
         }
     }

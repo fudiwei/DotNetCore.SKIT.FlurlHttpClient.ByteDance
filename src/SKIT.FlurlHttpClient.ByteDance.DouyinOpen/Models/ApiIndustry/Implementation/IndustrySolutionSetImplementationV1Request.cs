@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ability_identity")]
                         [System.Text.Json.Serialization.JsonPropertyName("ability_identity")]
-                        public string AbilityId { get; set; } = string.Empty;
+                        public string? AbilityId { get; set; }
 
                         /// <summary>
                         /// 获取或设置开放能力类型。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("impl_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("impl_name")]
-                        public string ImplementationName { get; set; } = string.Empty;
+                        public string? ImplementationName { get; set; }
 
                         /// <summary>
                         /// 获取或设置测试地址。
@@ -62,14 +62,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("solution_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("solution_id")]
-                public string SolutionId { get; set; } = string.Empty;
+                public string? SolutionId { get; set; }
 
                 /// <summary>
                 /// 获取或设置开放能力实现列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_ability_impl_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_ability_impl_list")]
-                public IList<Types.AbilityImplementation> OpenAbilityImplementationList { get; set; } = new List<Types.AbilityImplementation>();
+                public List<Types.AbilityImplementation>? OpenAbilityImplementationList { get; set; }
             }
 
             public class AppConfigItem
@@ -79,14 +79,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("identity")]
                 [System.Text.Json.Serialization.JsonPropertyName("identity")]
-                public string Key { get; set; } = string.Empty;
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// 获取或设置值。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public string Value { get; set; } = string.Empty;
+                public string? Value { get; set; }
             }
         }
 
@@ -95,27 +95,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("operator")]
         [System.Text.Json.Serialization.JsonPropertyName("operator")]
-        public string Operator { get; set; } = string.Empty;
+        public string? Operator { get; set; }
 
         /// <summary>
         /// 获取或设置发布原因。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("release_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("release_reason")]
-        public string ReleaseReason { get; set; } = string.Empty;
+        public string? ReleaseReason { get; set; }
 
         /// <summary>
         /// 获取或设置各行业实现列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("industry_impl_list")]
         [System.Text.Json.Serialization.JsonPropertyName("industry_impl_list")]
-        public IList<Types.IndustryImplementation> IndustryImplementationList { get; set; } = new List<Types.IndustryImplementation>();
+        public List<Types.IndustryImplementation>? IndustryImplementationList { get; set; }
 
         /// <summary>
         /// 获取或设置小程序配置项列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_config_item_list")]
         [System.Text.Json.Serialization.JsonPropertyName("app_config_item_list")]
-        public IList<Types.AppConfigItem> AppConfigItemList { get; set; } = new List<Types.AppConfigItem>();
+        public List<Types.AppConfigItem>? AppConfigItemList { get; set; }
     }
 }

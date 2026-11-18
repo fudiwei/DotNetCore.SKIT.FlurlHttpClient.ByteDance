@@ -10,28 +10,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置群名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("group_name")]
         [System.Text.Json.Serialization.JsonPropertyName("group_name")]
-        public string GroupName { get; set; } = string.Empty;
+        public string? GroupName { get; set; }
 
         /// <summary>
         /// 获取或设置群简介。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("description")]
         [System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
         /// <summary>
         /// 获取或设置头像 URL。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("avatar_uri")]
         [System.Text.Json.Serialization.JsonPropertyName("avatar_uri")]
-        public string AvatarUrl { get; set; } = string.Empty;
+        public string? AvatarUrl { get; set; }
 
         /// <summary>
         /// 获取或设置群类型。

@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("content")]
                                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                                public string Content { get; set; } = default!;
+                                public string? Content { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置优先级。
@@ -104,7 +104,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("spu_poi_filter_status")]
                                 [System.Text.Json.Serialization.JsonPropertyName("spu_poi_filter_status")]
-                                public Types.SPUPOIFilterStatus[]? SPUPOIFilterStatusList { get; set; }
+                                public List<Types.SPUPOIFilterStatus>? SPUPOIFilterStatusList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置门店 ID。
@@ -120,28 +120,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("spu_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("spu_id")]
-                        public string SPUId { get; set; } = default!;
+                        public string? SPUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SPU 外部 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("spu_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("spu_ext_id")]
-                        public string SPUExternalId { get; set; } = default!;
+                        public string? SPUExternalId { get; set; }
 
                         /// <summary>
                         /// 获取或设置门店外部 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id_list")]
-                        public string[] SupplierExternalIdList { get; set; } = default!;
+                        public List<string>? SupplierExternalIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品名。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SPU 类型。
@@ -162,7 +162,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("front_category_tag")]
                         [System.Text.Json.Serialization.JsonPropertyName("front_category_tag")]
-                        public string[]? FrontCategoryTagList { get; set; }
+                        public List<string>? FrontCategoryTagList { get; set; }
 
                         /// <summary>
                         /// 获取或设置推荐语。
@@ -197,7 +197,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_list")]
-                        public string[]? ImageUrlList { get; set; }
+                        public List<string>? ImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算类型。
@@ -218,14 +218,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("attribute")]
                         [System.Text.Json.Serialization.JsonPropertyName("attribute")]
-                        public IDictionary<int, object> AttributeMap { get; set; } = default!;
+                        public Dictionary<int, object>? AttributeMap { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品亮点列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("highlights")]
                         [System.Text.Json.Serialization.JsonPropertyName("highlights")]
-                        public Types.Highlight[]? HighlightList { get; set; }
+                        public List<Types.Highlight>? HighlightList { get; set; }
 
                         /// <summary>
                         /// 获取或设置在线状态。
@@ -239,7 +239,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status_desc")]
                         [System.Text.Json.Serialization.JsonPropertyName("status_desc")]
-                        public string StatusDescription { get; set; } = default!;
+                        public string? StatusDescription { get; set; }
 
                         /// <summary>
                         /// 获取或设置库存数量。
@@ -253,7 +253,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("spu_filter_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("spu_filter_status")]
-                        public Types.SPUFilterStatus[]? SPUFilterStatusList { get; set; }
+                        public List<Types.SPUFilterStatus>? SPUFilterStatusList { get; set; }
                     }
                 }
 
@@ -262,14 +262,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_detail")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_detail")]
-                public Types.SPU SPUDetail { get; set; } = default!;
+                public Types.SPU? SPUDetail { get; set; }
 
                 /// <summary>
                 /// 获取或设置 SPU 草稿列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_draft")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_draft")]
-                public Types.SPU[]? SPUDraftList { get; set; }
+                public List<Types.SPU>? SPUDraftList { get; set; }
             }
         }
     }

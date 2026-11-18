@@ -55,14 +55,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("date")]
                 [System.Text.Json.Serialization.JsonPropertyName("date")]
-                public string DateString { get; set; } = default!;
+                public string? DateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置通用佣金计划列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data")]
                 [System.Text.Json.Serialization.JsonPropertyName("data")]
-                public Types.Data[] DataList { get; set; } = default!;
+                public List<Types.Data>? DataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

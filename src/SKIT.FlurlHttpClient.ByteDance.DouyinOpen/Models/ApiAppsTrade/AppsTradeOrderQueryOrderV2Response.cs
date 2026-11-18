@@ -14,21 +14,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-                public string OutOrderNumber { get; set; } = default!;
+                public string? OutOrderNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置支付金额（单位：分）。
@@ -100,14 +100,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringReadOnlyConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("item_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ItemId { get; set; } = default!;
+                public string? ItemId { get; set; }
 
                 /// <summary>
                 /// 获取或设置调起收银台的支付订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("payment_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("payment_order_id")]
-                public string PayOrderId { get; set; } = default!;
+                public string? PayOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置核销类型。

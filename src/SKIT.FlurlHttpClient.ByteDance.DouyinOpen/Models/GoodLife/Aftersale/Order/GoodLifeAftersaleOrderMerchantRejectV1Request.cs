@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reason_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("reason_code")]
-                public IList<int> ReasonCodeList { get; set; } = new List<int>();
+                public List<int>? ReasonCodeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置拒单描述。
@@ -30,13 +30,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置拒单原因信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reject_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("reject_reason")]
-        public Types.RejectReason RejectReason { get; set; } = new Types.RejectReason();
+        public Types.RejectReason? RejectReason { get; set; }
     }
 }

@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("app_id")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                                                public string AppId { get; set; } = default!;
+                                                public string? AppId { get; set; }
 
                                                 /// <summary>
                                                 /// 获取或设置小程序页面路径。
@@ -142,14 +142,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poi_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                        public string POIId { get; set; } = default!;
+                        public string? POIId { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺介绍。
@@ -177,7 +177,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-                        public string SupplierExternalId { get; set; } = default!;
+                        public string? SupplierExternalId { get; set; }
 
                         /// <summary>
                         /// 获取或设置在线状态。
@@ -212,21 +212,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("attributes")]
                         [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-                        public IDictionary<int, object> AttributeMap { get; set; } = default!;
+                        public Dictionary<int, object>? AttributeMap { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("services")]
                         [System.Text.Json.Serialization.JsonPropertyName("services")]
-                        public Types.Service[]? ServiceList { get; set; }
+                        public List<Types.Service>? ServiceList { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("images")]
                         [System.Text.Json.Serialization.JsonPropertyName("images")]
-                        public string[]? ImageList { get; set; }
+                        public List<string>? ImageList { get; set; }
                     }
                 }
 
@@ -235,14 +235,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sync_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("sync_status")]
-                public Types.SyncStatus SyncStatus { get; set; } = default!;
+                public Types.SyncStatus? SyncStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置详细信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_detail")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_detail")]
-                public Types.Detail Detail { get; set; } = default!;
+                public Types.Detail? Detail { get; set; }
             }
         }
     }

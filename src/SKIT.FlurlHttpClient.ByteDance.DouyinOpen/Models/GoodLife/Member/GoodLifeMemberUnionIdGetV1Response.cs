@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                        public string OpenId { get; set; } = default!;
+                        public string? OpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置会员 UnionId。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("union_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("union_id")]
-                        public string UnionId { get; set; } = default!;
+                        public string? UnionId { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("members")]
                 [System.Text.Json.Serialization.JsonPropertyName("members")]
-                public Types.Member[] MemberList { get; set; } = default!;
+                public List<Types.Member>? MemberList { get; set; }
             }
         }
     }

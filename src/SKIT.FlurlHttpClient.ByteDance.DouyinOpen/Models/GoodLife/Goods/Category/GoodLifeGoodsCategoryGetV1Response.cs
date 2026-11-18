@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置类目层级。
@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sub_tree_infos")]
                         [System.Text.Json.Serialization.JsonPropertyName("sub_tree_infos")]
-                        public Types.Category[]? SubCategoryList { get; set; }
+                        public List<Types.Category>? SubCategoryList { get; set; }
                     }
                 }
 
@@ -75,14 +75,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_infos")]
-                public Types.Category[]? CategoryList { get; set; }
+                public List<Types.Category>? CategoryList { get; set; }
 
                 /// <summary>
                 /// 获取或设置类目树形列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_tree_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_tree_infos")]
-                public Types.CategoryTreeItem[]? CategoryTreeItems { get; set; }
+                public List<Types.CategoryTreeItem>? CategoryTreeItems { get; set; }
             }
         }
     }

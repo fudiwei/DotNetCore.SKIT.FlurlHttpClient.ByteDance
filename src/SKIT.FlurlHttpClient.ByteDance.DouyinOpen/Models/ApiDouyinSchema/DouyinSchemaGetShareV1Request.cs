@@ -14,21 +14,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = string.Empty;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置小程序标题。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_title")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_title")]
-                public string Title { get; set; } = string.Empty;
+                public string? Title { get; set; }
 
                 /// <summary>
                 /// 获取或设置小程序页面路径。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_url")]
-                public string PagePath { get; set; } = string.Empty;
+                public string? PagePath { get; set; }
 
                 /// <summary>
                 /// 获取或设置小程序描述语	。
@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("client_ticket")]
         [System.Text.Json.Serialization.JsonPropertyName("client_ticket")]
-        public string ClientTicket { get; set; } = string.Empty;
+        public string? ClientTicket { get; set; }
 
         /// <summary>
         /// 获取或设置凭证过期时间戳。
@@ -58,14 +58,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("hashtag_list")]
         [System.Text.Json.Serialization.JsonPropertyName("hashtag_list")]
-        public IList<string>? HashTagList { get; set; }
+        public List<string>? HashTagList { get; set; }
 
         /// <summary>
         /// 获取或设置图片 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_list_path")]
         [System.Text.Json.Serialization.JsonPropertyName("image_list_path")]
-        public IList<string>? ImageUrlList { get; set; }
+        public List<string>? ImageUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置图片 URL。

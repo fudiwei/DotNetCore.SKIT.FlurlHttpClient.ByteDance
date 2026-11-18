@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                        public string ProductId { get; set; } = string.Empty;
+                        public string? ProductId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品分佣比例（单位：万分数）。
@@ -43,14 +43,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("record_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("record_id")]
-                public string RecordId { get; set; } = default!;
+                public string? RecordId { get; set; }
 
                 /// <summary>
                 /// 获取或设置无效的商品佣金配置列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("invalid_commission_product_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("invalid_commission_product_list")]
-                public Types.InvalidProductItem[]? InvalidProductItemList { get; set; }
+                public List<Types.InvalidProductItem>? InvalidProductItemList { get; set; }
             }
         }
     }

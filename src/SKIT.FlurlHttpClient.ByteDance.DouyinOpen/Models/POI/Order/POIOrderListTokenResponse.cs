@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_file_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_file_token")]
-                public string DownloadToken { get; set; } = default!;
+                public string? DownloadToken { get; set; }
             }
         }
     }

@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_name")]
-                public string SPUName { get; set; } = string.Empty;
+                public string? SPUName { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品类型。
@@ -62,21 +62,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                public string Description { get; set; } = string.Empty;
+                public string? Description { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pois")]
                 [System.Text.Json.Serialization.JsonPropertyName("pois")]
-                public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+                public List<Types.POI>? POIList { get; set; }
 
                 /// <summary>
                 /// 获取或设置属性键值对字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
                 [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
-                public IDictionary<string, string>? AttributeKeyValueMap { get; set; }
+                public Dictionary<string, string>? AttributeKeyValueMap { get; set; }
             }
         }
 
@@ -85,6 +85,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spu")]
         [System.Text.Json.Serialization.JsonPropertyName("spu")]
-        public Types.SPU SPU { get; set; } = new Types.SPU();
+        public Types.SPU? SPU { get; set; }
     }
 }

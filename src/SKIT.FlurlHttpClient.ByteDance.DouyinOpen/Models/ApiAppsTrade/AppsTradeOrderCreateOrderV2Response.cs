@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("item_order_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                                public string ItemOrderId { get; set; } = default!;
+                                public string? ItemOrderId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品价格（单位：分）。
@@ -38,21 +38,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("goods_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("goods_id")]
-                        public string GoodsId { get; set; } = default!;
+                        public string? GoodsId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品单号列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_id_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_id_list")]
-                        public string[] ItemOrderIdList { get; set; } = default!;
+                        public List<string>? ItemOrderIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品单列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_detail")]
-                        public Types.ItemOrder[] ItemOrderList { get; set; } = default!;
+                        public List<Types.ItemOrder>? ItemOrderList { get; set; }
                     }
                 }
 
@@ -61,35 +61,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-                public string OutOrderNumber { get; set; } = default!;
+                public string? OutOrderNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置调起收银台的支付订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_order_id")]
-                public string PayOrderId { get; set; } = default!;
+                public string? PayOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置调起收银台的 Token。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_order_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_order_token")]
-                public string PayOrderToken { get; set; } = default!;
+                public string? PayOrderToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品单信息列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_order_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_order_info_list")]
-                public Types.ItemOrderInfo[] ItemOrderInfoList { get; set; } = default!;
+                public List<Types.ItemOrderInfo>? ItemOrderInfoList { get; set; }
             }
         }
     }

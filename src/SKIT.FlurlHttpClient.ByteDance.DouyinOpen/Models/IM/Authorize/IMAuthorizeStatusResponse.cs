@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("enter_from")]
                 [System.Text.Json.Serialization.JsonPropertyName("enter_from")]
-                public string EnterFrom { get; set; } = default!;
+                public string? EnterFrom { get; set; }
 
                 /// <summary>
                 /// 获取或设置归因信息。
@@ -81,7 +81,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

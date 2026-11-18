@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("urls")]
                                 [System.Text.Json.Serialization.JsonPropertyName("urls")]
-                                public IList<string> ImageUrlList { get; set; } = new List<string>();
+                                public List<string>? ImageUrlList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置合作内容类型。
@@ -43,21 +43,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("effective_time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("effective_time")]
-                                public string EffectiveDateString { get; set; } = string.Empty;
+                                public string? EffectiveDateString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置失效日期字符串。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("expiration")]
                                 [System.Text.Json.Serialization.JsonPropertyName("expiration")]
-                                public string? ExpireDateString { get; set; } = string.Empty;
+                                public string? ExpireDateString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置小程序 AppId 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_ids")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_ids")]
-                                public IList<string> AppIdList { get; set; } = new List<string>();
+                                public List<string>? AppIdList { get; set; }
                             }
                         }
 
@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("authorization")]
                         [System.Text.Json.Serialization.JsonPropertyName("authorization")]
-                        public Types.Authorization Authorization { get; set; } = new Types.Authorization();
+                        public Types.Authorization? Authorization { get; set; }
                     }
 
                     public class POIClaimAuthorization
@@ -76,14 +76,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("urls")]
-                        public IList<string> ImageUrlList { get; set; } = new List<string>();
+                        public List<string>? ImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置生效日期字符串。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("effective_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("effective_time")]
-                        public string EffectiveDateString { get; set; } = string.Empty;
+                        public string? EffectiveDateString { get; set; }
                     }
 
                     public class BusinessLicense
@@ -121,7 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("license_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("license_urls")]
-                        public IList<string> LicenseImageUrlList { get; set; } = new List<string>();
+                        public List<string>? LicenseImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置省份。
@@ -180,14 +180,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id_card_front_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("id_card_front_url")]
-                        public string IdCardFrontImageUrlList { get; set; } = string.Empty;
+                        public string? IdCardFrontImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置身份证背面照片 URL 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id_card_back_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("id_card_back_url")]
-                        public string IdCardBackImageUrlList { get; set; } = string.Empty;
+                        public string? IdCardBackImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置失效日期字符串。
@@ -208,7 +208,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("qualification_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("qualification_id")]
-                                public string QualificationId { get; set; } = string.Empty;
+                                public string? QualificationId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置许可证类型。
@@ -222,7 +222,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("qualification_urls")]
                                 [System.Text.Json.Serialization.JsonPropertyName("qualification_urls")]
-                                public IList<string> QualificationImageUrlList { get; set; } = new List<string>();
+                                public List<string>? QualificationImageUrlList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置失效日期字符串。
@@ -238,21 +238,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("major_industry_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("major_industry_code")]
-                        public string MajorIndustryCode { get; set; } = string.Empty;
+                        public string? MajorIndustryCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置辅营类目代码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("minor_industry_codes")]
                         [System.Text.Json.Serialization.JsonPropertyName("minor_industry_codes")]
-                        public IList<string>? MajorIndustryCodeList { get; set; }
+                        public List<string>? MajorIndustryCodeList { get; set; }
 
                         /// <summary>
                         /// 获取或设置许可证列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qualifications")]
                         [System.Text.Json.Serialization.JsonPropertyName("qualifications")]
-                        public IList<Types.Qualification>? QualificationList { get; set; }
+                        public List<Types.Qualification>? QualificationList { get; set; }
                     }
 
                     public class Owner
@@ -262,7 +262,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = string.Empty;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置职务。
@@ -292,7 +292,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("third_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                public string ThirdId { get; set; } = string.Empty;
+                public string? ThirdId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商家 ID。
@@ -306,7 +306,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = string.Empty;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商服合作信息。
@@ -364,6 +364,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("datas")]
         [System.Text.Json.Serialization.JsonPropertyName("datas")]
-        public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+        public List<Types.POI>? POIList { get; set; }
     }
 }

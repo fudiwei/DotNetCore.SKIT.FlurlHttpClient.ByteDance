@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置加密手机号码。
@@ -90,14 +90,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = default!;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU 外部 ID。
@@ -111,21 +111,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("codes")]
                         [System.Text.Json.Serialization.JsonPropertyName("codes")]
-                        public string[] CodeList { get; set; } = default!;
+                        public List<string>? CodeList { get; set; }
 
                         /// <summary>
                         /// 获取或设置金额信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount_info")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount? Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置出行人列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tourists")]
                         [System.Text.Json.Serialization.JsonPropertyName("tourists")]
-                        public Types.Tourist[]? TouristList { get; set; }
+                        public List<Types.Tourist>? TouristList { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。

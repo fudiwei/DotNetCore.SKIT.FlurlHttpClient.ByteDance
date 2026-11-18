@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("text")]
                         [System.Text.Json.Serialization.JsonPropertyName("text")]
-                        public string Text { get; set; } = string.Empty;
+                        public string? Text { get; set; }
                     }
 
                     public class MessageContentAsImage
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("media_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("media_id")]
-                        public string MediaId { get; set; } = string.Empty;
+                        public string? MediaId { get; set; }
                     }
 
                     public class MessageContentAsVideo
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                        public string ItemId { get; set; } = string.Empty;
+                        public string? ItemId { get; set; }
                     }
 
                     public class MessageContentAsRetainConsultCard
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("card_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("card_id")]
-                        public string CardId { get; set; } = string.Empty;
+                        public string? CardId { get; set; }
                     }
 
                     public class MessageContentAsGroupInvitation
@@ -75,14 +75,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("card_template_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("card_template_id")]
-                        public string CardTemplateId { get; set; } = string.Empty;
+                        public string? CardTemplateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序 AppId。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string MicroAppId { get; set; } = string.Empty;
+                        public string? MicroAppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序页面路径。与字段 <see cref="MicroAppSchemaUrl"/> 二选一。
@@ -134,7 +134,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                                public string AppId { get; set; } = string.Empty;
+                                public string? AppId { get; set; }
                             }
 
                             public class UserInfo
@@ -144,14 +144,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                                public string ClientKey { get; set; } = string.Empty;
+                                public string? ClientKey { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 B 端用户的 OpenId。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("open_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                                public string OpenId { get; set; } = string.Empty;
+                                public string? OpenId { get; set; }
                             }
                         }
 
@@ -160,14 +160,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_info")]
-                        public Types.MicroAppInfo MicroAppInfo { get; set; } = new Types.MicroAppInfo();
+                        public Types.MicroAppInfo? MicroAppInfo { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("to_user_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("to_user_info")]
-                        public Types.UserInfo UserInfo { get; set; } = new Types.UserInfo();
+                        public Types.UserInfo? UserInfo { get; set; }
                     }
                 }
 
@@ -241,7 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置消息 ID。
@@ -262,7 +262,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("to_user_id")]
         [System.Text.Json.Serialization.JsonPropertyName("to_user_id")]
-        public string ToUserOpenId { get; set; } = string.Empty;
+        public string? ToUserOpenId { get; set; }
 
         /// <summary>
         /// 获取或设置消息内容。
@@ -276,13 +276,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("content_list")]
         [System.Text.Json.Serialization.JsonPropertyName("content_list")]
-        public IList<Types.Content>? ContentList { get; set; }
+        public List<Types.Content>? ContentList { get; set; }
 
         /// <summary>
         /// 获取或设置私信场景。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("scene")]
         [System.Text.Json.Serialization.JsonPropertyName("scene")]
-        public string Scene { get; set; } = string.Empty;
+        public string? Scene { get; set; }
     }
 }

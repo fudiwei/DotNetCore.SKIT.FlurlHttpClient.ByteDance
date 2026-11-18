@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置排名。
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("daily_issue_percent")]
                         [System.Text.Json.Serialization.JsonPropertyName("daily_issue_percent")]
-                        public string DailyIssuePercantString { get; set; } = default!;
+                        public string? DailyIssuePercantString { get; set; }
 
                         /// <summary>
                         /// 获取或设置日收藏数。
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Item[] List { get; set; } = default!;
+                public List<Types.Item>? List { get; set; }
             }
         }
     }

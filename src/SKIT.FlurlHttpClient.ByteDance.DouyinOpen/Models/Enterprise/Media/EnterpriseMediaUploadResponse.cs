@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("media_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("media_id")]
-                        public string MediaId { get; set; } = default!;
+                        public string? MediaId { get; set; }
 
                         /// <summary>
                         /// 获取或设置素材的 URL 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("url_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("url_list")]
-                        public string[] UrlList { get; set; } = default!;
+                        public List<string>? UrlList { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("media")]
                 [System.Text.Json.Serialization.JsonPropertyName("media")]
-                public Types.Media Media { get; set; } = default!;
+                public Types.Media? Media { get; set; }
             }
         }
     }

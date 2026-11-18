@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置骑手电话号码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("rider_phone")]
         [System.Text.Json.Serialization.JsonPropertyName("rider_phone")]
-        public string RiderPhoneNumer { get; set; } = string.Empty;
+        public string? RiderPhoneNumer { get; set; }
 
         /// <summary>
         /// 获取或设置三方配送商标示。

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("appid")]
         [System.Text.Json.Serialization.JsonPropertyName("appid")]
-        public string AppId { get; set; } = string.Empty;
+        public string? AppId { get; set; }
 
         /// <summary>
         /// 获取或设置分页页数。
@@ -40,6 +40,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("query_params_content")]
         [System.Text.Json.Serialization.JsonPropertyName("query_params_content")]
-        public string QueryParameterContent { get; set; } = string.Empty;
+        public string? QueryParameterContent { get; set; }
     }
 }

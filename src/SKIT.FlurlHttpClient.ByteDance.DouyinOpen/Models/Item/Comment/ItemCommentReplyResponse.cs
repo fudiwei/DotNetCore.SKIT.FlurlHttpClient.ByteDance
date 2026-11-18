@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("comment_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("comment_id")]
-                public string CommentId { get; set; } = default!;
+                public string? CommentId { get; set; }
             }
         }
     }

@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sentence")]
                         [System.Text.Json.Serialization.JsonPropertyName("sentence")]
-                        public string Sentence { get; set; } = default!;
+                        public string? Sentence { get; set; }
 
                         /// <summary>
                         /// 获取或设置热度等级。
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.HotSearchSentence[] HotSearchSentenceList { get; set; } = default!;
+                public List<Types.HotSearchSentence>? HotSearchSentenceList { get; set; }
             }
         }
     }

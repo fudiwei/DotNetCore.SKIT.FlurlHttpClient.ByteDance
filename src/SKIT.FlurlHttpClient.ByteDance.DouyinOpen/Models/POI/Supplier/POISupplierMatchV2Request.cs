@@ -86,6 +86,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("match_data_list")]
         [System.Text.Json.Serialization.JsonPropertyName("match_data_list")]
-        public IList<Types.MatchData> MatchDataList { get; set; } = new List<Types.MatchData>();
+        public List<Types.MatchData>? MatchDataList { get; set; }
     }
 }

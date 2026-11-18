@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("third_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                public string ThirdId { get; set; } = string.Empty;
+                public string? ThirdId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店外部 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ext_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("ext_id")]
-                public string POIExternalId { get; set; } = string.Empty;
+                public string? POIExternalId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店 ID。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_name")]
-                public string POIName { get; set; } = string.Empty;
+                public string? POIName { get; set; }
 
                 /// <summary>
                 /// 获取或设置省份。
@@ -79,6 +79,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("datas")]
         [System.Text.Json.Serialization.JsonPropertyName("datas")]
-        public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+        public List<Types.POI>? POIList { get; set; }
     }
 }

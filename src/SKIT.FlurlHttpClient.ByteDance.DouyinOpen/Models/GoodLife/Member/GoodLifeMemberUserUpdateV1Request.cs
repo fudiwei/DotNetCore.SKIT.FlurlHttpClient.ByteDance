@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = string.Empty;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置会员最新积分。
@@ -44,13 +44,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置会员列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("members")]
         [System.Text.Json.Serialization.JsonPropertyName("members")]
-        public IList<Types.Member> MemberList { get; set; } = new List<Types.Member>();
+        public List<Types.Member>? MemberList { get; set; }
     }
 }

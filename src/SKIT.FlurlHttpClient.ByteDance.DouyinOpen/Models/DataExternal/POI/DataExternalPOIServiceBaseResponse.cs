@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("date")]
                         [System.Text.Json.Serialization.JsonPropertyName("date")]
-                        public string DateString { get; set; } = default!;
+                        public string? DateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置曝光 UV。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("result_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("result_list")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
     }

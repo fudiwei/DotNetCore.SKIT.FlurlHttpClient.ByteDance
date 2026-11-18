@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("solution_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("solution_id_list")]
-        public IList<string> SolutionIdList { get; set; } = new List<string>();
+        public List<string>? SolutionIdList { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("BaseResp")]
         [System.Text.Json.Serialization.JsonPropertyName("BaseResp")]
-        public Types.BaseResponse BaseResponse { get; set; } = default!;
+        public Types.BaseResponse? BaseResponse { get; set; }
 
         public override bool IsSuccessful()
         {

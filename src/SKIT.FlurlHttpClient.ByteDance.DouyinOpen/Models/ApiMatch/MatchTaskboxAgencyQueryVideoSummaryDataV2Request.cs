@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("video_ids")]
-        public IList<long> VideoIdList { get; set; } = new List<long>();
+        public List<long>? VideoIdList { get; set; }
     }
 }

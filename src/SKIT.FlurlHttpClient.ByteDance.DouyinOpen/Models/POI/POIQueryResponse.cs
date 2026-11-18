@@ -14,21 +14,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("amap_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("amap_id")]
-                public string AMapId { get; set; } = default!;
+                public string? AMapId { get; set; }
 
                 /// <summary>
                 /// 获取或设置 POI ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = default!;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置 POI 名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_name")]
-                public string POIName { get; set; } = default!;
+                public string? POIName { get; set; }
 
                 /// <summary>
                 /// 获取或设置经度。

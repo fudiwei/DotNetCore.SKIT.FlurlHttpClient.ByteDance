@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("douyin_id")]
         [System.Text.Json.Serialization.JsonPropertyName("douyin_id")]
-        public string DouyinId { get; set; } = string.Empty;
+        public string? DouyinId { get; set; }
     }
 }

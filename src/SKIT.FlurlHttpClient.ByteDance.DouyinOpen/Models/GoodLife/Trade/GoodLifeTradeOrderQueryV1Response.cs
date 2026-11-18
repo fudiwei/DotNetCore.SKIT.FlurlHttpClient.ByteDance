@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("certificate_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                                public string CertificateId { get; set; } = default!;
+                                public string? CertificateId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 Item 维度订单 ID。
@@ -112,14 +112,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置电话号码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("phone")]
                                 [System.Text.Json.Serialization.JsonPropertyName("phone")]
-                                public string PhoneNumber { get; set; } = default!;
+                                public string? PhoneNumber { get; set; }
                             }
 
                             public class Delivery
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("shop_number")]
                                 [System.Text.Json.Serialization.JsonPropertyName("shop_number")]
-                                public string ShopNumber { get; set; } = default!;
+                                public string? ShopNumber { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置是否为预订单。
@@ -160,14 +160,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-                                public string AccountId { get; set; } = default!;
+                                public string? AccountId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商家名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("account_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("account_name")]
-                                public string AccountName { get; set; } = default!;
+                                public string? AccountName { get; set; }
                             }
 
                             public class POI
@@ -177,14 +177,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("poi_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                                public string POIId { get; set; } = default!;
+                                public string? POIId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置门店名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("poi_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("poi_name")]
-                                public string POIName { get; set; } = default!;
+                                public string? POIName { get; set; }
                             }
 
                             public class Receiver
@@ -194,35 +194,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("province")]
                                 [System.Text.Json.Serialization.JsonPropertyName("province")]
-                                public string Province { get; set; } = default!;
+                                public string? Province { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置城市。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("city")]
                                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                                public string City { get; set; } = default!;
+                                public string? City { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置区县。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("district")]
                                 [System.Text.Json.Serialization.JsonPropertyName("district")]
-                                public string District { get; set; } = default!;
+                                public string? District { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置街道。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("town")]
                                 [System.Text.Json.Serialization.JsonPropertyName("town")]
-                                public string Street { get; set; } = default!;
+                                public string? Street { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置地址。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("location_address")]
                                 [System.Text.Json.Serialization.JsonPropertyName("location_address")]
-                                public string Address { get; set; } = default!;
+                                public string? Address { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置纬度。
@@ -243,14 +243,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("receiver_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("receiver_name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置脱敏后的收件人手机号码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("receiver_phone")]
                                 [System.Text.Json.Serialization.JsonPropertyName("receiver_phone")]
-                                public string PhoneNumber { get; set; } = default!;
+                                public string? PhoneNumber { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置收件人隐私号码。
@@ -275,7 +275,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("name")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                                public string Name { get; set; } = default!;
+                                                public string? Name { get; set; }
 
                                                 /// <summary>
                                                 /// 获取或设置菜品价格（单位：分）。
@@ -333,7 +333,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("items")]
                                         [System.Text.Json.Serialization.JsonPropertyName("items")]
-                                        public Types.Item[]? ItemList { get; set; }
+                                        public List<Types.Item>? ItemList { get; set; }
                                     }
                                 }
 
@@ -342,21 +342,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                public string ProductId { get; set; } = default!;
+                                public string? ProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_name")]
-                                public string ProductName { get; set; } = default!;
+                                public string? ProductName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置数量。
@@ -370,7 +370,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("commodities")]
                                 [System.Text.Json.Serialization.JsonPropertyName("commodities")]
-                                public Types.Commodity[]? CommodityList { get; set; }
+                                public List<Types.Commodity>? CommodityList { get; set; }
                             }
                         }
 
@@ -379,7 +379,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单状态。
@@ -428,14 +428,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = default!;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU 名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_name")]
-                        public string SKUName { get; set; } = default!;
+                        public string? SKUName { get; set; }
 
                         /// <summary>
                         /// 获取或设置支付成功时间戳。
@@ -477,7 +477,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificate")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificate")]
-                        public Types.Certificate[] CertificateList { get; set; } = default!;
+                        public List<Types.Certificate>? CertificateList { get; set; }
 
                         /// <summary>
                         /// 获取或设置券数量。
@@ -491,7 +491,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("contacts")]
                         [System.Text.Json.Serialization.JsonPropertyName("contacts")]
-                        public Types.Contact[] ContactList { get; set; } = default!;
+                        public List<Types.Contact>? ContactList { get; set; }
 
                         /// <summary>
                         /// 获取或设置配送信息。
@@ -519,7 +519,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("products")]
                         [System.Text.Json.Serialization.JsonPropertyName("products")]
-                        public Types.Product[]? ProductList { get; set; }
+                        public List<Types.Product>? ProductList { get; set; }
                     }
 
                     public class Pagination
@@ -552,14 +552,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("orders")]
                 [System.Text.Json.Serialization.JsonPropertyName("orders")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                public List<Types.Order>? OrderList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("page")]
                 [System.Text.Json.Serialization.JsonPropertyName("page")]
-                public Types.Pagination Pagination { get; set; } = default!;
+                public Types.Pagination? Pagination { get; set; }
             }
         }
     }

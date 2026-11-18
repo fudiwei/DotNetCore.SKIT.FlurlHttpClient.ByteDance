@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_ids")]
-                        public IList<string>? SupplierExternalIdList { get; set; }
+                        public List<string>? SupplierExternalIdList { get; set; }
                     }
 
                     public class SupplierExternalInfo
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("spu_ext_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("spu_ext_ids")]
-                        public IList<string>? SPUExternalIdList { get; set; }
+                        public List<string>? SPUExternalIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置门店外部 ID。
@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_coupon_id")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_coupon_id")]
-        public string ExternalCouponId { get; set; } = string.Empty;
+        public string? ExternalCouponId { get; set; }
 
         /// <summary>
         /// 获取或设置上线状态。
@@ -133,14 +133,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("attribute")]
         [System.Text.Json.Serialization.JsonPropertyName("attribute")]
-        public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
+        public Dictionary<int, object>? AttributeMap { get; set; }
 
         /// <summary>
         /// 获取或设置可用列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("available_info")]
         [System.Text.Json.Serialization.JsonPropertyName("available_info")]
-        public IList<Types.Availability>? AvailabilityList { get; set; }
+        public List<Types.Availability>? AvailabilityList { get; set; }
 
         /// <summary>
         /// 获取或设置入口信息。

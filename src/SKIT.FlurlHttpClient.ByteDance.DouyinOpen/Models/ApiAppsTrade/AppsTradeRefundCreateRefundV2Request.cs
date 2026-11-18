@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                public string ItemOrderId { get; set; } = string.Empty;
+                public string? ItemOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款金额（单位：分）。
@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path")]
                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string Path { get; set; } = string.Empty;
+                public string? Path { get; set; }
 
                 /// <summary>
                 /// 获取或设置页面参数字符串。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("params")]
                 [System.Text.Json.Serialization.JsonPropertyName("params")]
-                public string? ParamsString { get; set; } = string.Empty;
+                public string? ParamsString { get; set; }
             }
 
             public class TimesCardRefundParameter
@@ -57,14 +57,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutOrderNumber { get; set; } = string.Empty;
+        public string? OutOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置开发者退款单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_refund_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_refund_no")]
-        public string OutRefundNumber { get; set; } = string.Empty;
+        public string? OutRefundNumber { get; set; }
 
         /// <summary>
         /// 获取或设置退款总金额（单位：分）。
@@ -78,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_order_detail")]
         [System.Text.Json.Serialization.JsonPropertyName("item_order_detail")]
-        public IList<Types.ItemOrder>? ItemOrderList { get; set; }
+        public List<Types.ItemOrder>? ItemOrderList { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

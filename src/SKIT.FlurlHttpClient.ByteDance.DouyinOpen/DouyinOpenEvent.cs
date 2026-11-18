@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("event")]
         [System.Text.Json.Serialization.JsonPropertyName("event")]
-        public virtual string Event { get; set; } = default!;
+        public virtual string? Event { get; set; }
 
         /// <summary>
         /// 获取或设置应用的 ClientKey。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("client_key")]
         [System.Text.Json.Serialization.JsonPropertyName("client_key")]
-        public virtual string ClientKey { get; set; } = default!;
+        public virtual string? ClientKey { get; set; }
 
         /// <summary>
         /// 获取或设置事件发起者用户 ID。
@@ -51,6 +51,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
         /// </summary>
         [Newtonsoft.Json.JsonProperty("content")]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
-        public virtual TContent EventContent { get; set; } = default!;
+        public virtual TContent? EventContent { get; set; }
     }
 }

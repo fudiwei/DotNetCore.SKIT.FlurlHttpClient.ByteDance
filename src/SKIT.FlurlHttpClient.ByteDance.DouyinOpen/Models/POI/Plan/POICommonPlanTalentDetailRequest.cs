@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("douyin_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("douyin_id_list")]
-        public IList<string> DouyinIdList { get; set; } = new List<string>();
+        public List<string>? DouyinIdList { get; set; }
     }
 }

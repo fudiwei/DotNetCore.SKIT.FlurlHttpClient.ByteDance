@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string Id { get; set; } = default!;
+                        public string? Id { get; set; }
 
                         /// <summary>
                         /// 获取或设置类型。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置英文片名。
@@ -60,28 +60,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("directors")]
                         [System.Text.Json.Serialization.JsonPropertyName("directors")]
-                        public string[]? DirectorList { get; set; }
+                        public List<string>? DirectorList { get; set; }
 
                         /// <summary>
                         /// 获取或设置演员列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("actors")]
                         [System.Text.Json.Serialization.JsonPropertyName("actors")]
-                        public string[]? ActorList { get; set; }
+                        public List<string>? ActorList { get; set; }
 
                         /// <summary>
                         /// 获取或设置标签列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tags")]
                         [System.Text.Json.Serialization.JsonPropertyName("tags")]
-                        public string[]? TagList { get; set; }
+                        public List<string>? TagList { get; set; }
 
                         /// <summary>
                         /// 获取或设置地区列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("areas")]
                         [System.Text.Json.Serialization.JsonPropertyName("areas")]
-                        public string[]? AreaList { get; set; }
+                        public List<string>? AreaList { get; set; }
 
                         /// <summary>
                         /// 获取或设置海报 URL。
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Album[] AlbumList { get; set; } = default!;
+                public List<Types.Album>? AlbumList { get; set; }
             }
         }
     }

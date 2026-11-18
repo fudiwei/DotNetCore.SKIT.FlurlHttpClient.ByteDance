@@ -7,8 +7,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
     {
         public static class Types
         {
-            public class Data : EnterpriseMediaUploadResponse.Types.Data
+            public class Data : DouyinOpenResponseData
             {
+                public static class Types
+                {
+                    public class Media : EnterpriseMediaUploadResponse.Types.Data.Types.Media
+                    {
+                    }
+                }
+
+                /// <summary>
+                /// 获取或设置素材信息。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("media")]
+                [System.Text.Json.Serialization.JsonPropertyName("media")]
+                public Types.Media? Media { get; set; }
             }
         }
     }

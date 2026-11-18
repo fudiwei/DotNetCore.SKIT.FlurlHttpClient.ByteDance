@@ -23,21 +23,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                        public string OpenId { get; set; } = default!;
+                        public string? OpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nick_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                        public string Nickname { get; set; } = default!;
+                        public string? Nickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                        public string AvatarUrl { get; set; } = default!;
+                        public string? AvatarUrl { get; set; }
                     }
 
                     public class AdInfo
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ad_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("ad_name")]
-                        public string AdName { get; set; } = default!;
+                        public string? AdName { get; set; }
 
                         /// <summary>
                         /// 获取或设置广告主 ID。
@@ -68,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("adv_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("adv_name")]
-                        public string AdvertiserName { get; set; } = default!;
+                        public string? AdvertiserName { get; set; }
 
                         /// <summary>
                         /// 获取或设置创意 ID。
@@ -112,14 +112,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("server_message_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("server_message_id")]
-                public string ServerMessageId { get; set; } = default!;
+                public string? ServerMessageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置会话 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("conversation_short_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("conversation_short_id")]
-                public string ConversationShortId { get; set; } = default!;
+                public string? ConversationShortId { get; set; }
 
                 /// <summary>
                 /// 获取或设置会话类型。
@@ -175,7 +175,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_infos")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_infos")]
-                public Types.UserInfo[]? UserList { get; set; }
+                public List<Types.UserInfo>? UserList { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告信息。
@@ -193,6 +193,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

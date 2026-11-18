@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         [Newtonsoft.Json.JsonProperty("poi_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                        public string POIId { get; set; } = default!;
+                                        public string? POIId { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置门店 ID。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         [Newtonsoft.Json.JsonProperty("supplier_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("supplier_id")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                        public string SupplierId { get; set; } = default!;
+                                        public string? SupplierId { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置门店外部 ID。
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                        public string SupplierExternalId { get; set; } = default!;
+                                        public string? SupplierExternalId { get; set; }
                                     }
                                 }
 
@@ -52,21 +52,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                public string ProductId { get; set; } = default!;
+                                public string? ProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品外部 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("out_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("out_id")]
-                                public string OutProductId { get; set; } = default!;
+                                public string? OutProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_name")]
-                                public string ProductName { get; set; } = default!;
+                                public string? ProductName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品类型。
@@ -145,14 +145,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("pois")]
                                 [System.Text.Json.Serialization.JsonPropertyName("pois")]
-                                public Types.POI[] POIList { get; set; } = default!;
+                                public List<Types.POI>? POIList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置属性键值对字典。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
-                                public IDictionary<string, string>? AttributeKeyValueMap { get; set; }
+                                public Dictionary<string, string>? AttributeKeyValueMap { get; set; }
                             }
 
                             public class SKU
@@ -169,21 +169,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 外部 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("out_sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("out_sku_id")]
-                                public string OutSKUId { get; set; } = default!;
+                                public string? OutSKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_name")]
-                                public string SKUName { get; set; } = default!;
+                                public string? SKUName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置状态。
@@ -197,7 +197,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("stock")]
                                 [System.Text.Json.Serialization.JsonPropertyName("stock")]
-                                public Types.Stock Stock { get; set; } = default!;
+                                public Types.Stock? Stock { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置原价（单位：分）。
@@ -218,7 +218,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("attr_key_value_map")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attr_key_value_map")]
-                                public IDictionary<string, string>? AttributeKeyValueMap { get; set; }
+                                public Dictionary<string, string>? AttributeKeyValueMap { get; set; }
                             }
                         }
 
@@ -241,7 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product")]
                         [System.Text.Json.Serialization.JsonPropertyName("product")]
-                        public Types.Product Product { get; set; } = default!;
+                        public Types.Product? Product { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU 信息。
@@ -257,7 +257,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("products")]
                 [System.Text.Json.Serialization.JsonPropertyName("products")]
-                public Types.ProductDraft[] DraftList { get; set; } = default!;
+                public List<Types.ProductDraft>? DraftList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

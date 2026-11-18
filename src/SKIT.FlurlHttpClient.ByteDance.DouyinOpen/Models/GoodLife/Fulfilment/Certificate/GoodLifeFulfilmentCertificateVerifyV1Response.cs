@@ -32,14 +32,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("verify_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("verify_id")]
-                        public string VerifyId { get; set; } = default!;
+                        public string? VerifyId { get; set; }
 
                         /// <summary>
                         /// 获取或设置券 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificate_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                        public string CertificateId { get; set; } = default!;
+                        public string? CertificateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置核销时间戳。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public string Code { get; set; } = default!;
+                        public string? Code { get; set; }
 
                         /// <summary>
                         /// 获取或设置原始券码。
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("verify_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("verify_results")]
-                public Types.VerifyResult[] VerifyResultList { get; set; } = default!;
+                public List<Types.VerifyResult>? VerifyResultList { get; set; }
             }
         }
     }

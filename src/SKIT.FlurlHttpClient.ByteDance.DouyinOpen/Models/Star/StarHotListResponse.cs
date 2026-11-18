@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("unique_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("unique_id")]
-                        public string DouyinId { get; set; } = default!;
+                        public string? DouyinId { get; set; }
 
                         /// <summary>
                         /// 获取或设置昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nick_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                        public string Nickname { get; set; } = default!;
+                        public string? Nickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置粉丝数。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tags")]
                         [System.Text.Json.Serialization.JsonPropertyName("tags")]
-                        public string[] TagList { get; set; } = default!;
+                        public List<string>? TagList { get; set; }
                     }
                 }
 
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Star[] StarList { get; set; } = default!;
+                public List<Types.Star>? StarList { get; set; }
 
                 /// <summary>
                 /// 获取或设置达人热榜类型。
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("hot_list_description")]
                 [System.Text.Json.Serialization.JsonPropertyName("hot_list_description")]
-                public string HotListDescription { get; set; } = default!;
+                public string? HotListDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置达人热榜更新时间戳。

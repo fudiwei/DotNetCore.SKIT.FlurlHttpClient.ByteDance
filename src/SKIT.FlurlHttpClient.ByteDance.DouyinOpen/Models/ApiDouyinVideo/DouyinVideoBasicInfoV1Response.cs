@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                        public string ItemId { get; set; } = default!;
+                        public string? ItemId { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频 ID。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频状态。
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover")]
-                        public string CoverUrl { get; set; } = default!;
+                        public string? CoverUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
             }
         }
     }

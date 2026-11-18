@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-                public string RefreshToken { get; set; } = default!;
+                public string? RefreshToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置刷新令牌有效期（单位：秒）。

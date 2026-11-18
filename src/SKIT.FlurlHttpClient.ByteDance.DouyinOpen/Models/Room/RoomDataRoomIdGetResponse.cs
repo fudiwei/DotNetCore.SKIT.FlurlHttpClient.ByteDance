@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("room_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("room_ids")]
-        public string[] RoomIdList { get; set; } = default!;
+        public List<string>? RoomIdList { get; set; }
 
         public override bool IsSuccessful()
         {

@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("ext_id")]
-                        public string POIExternalId { get; set; } = default!;
+                        public string? POIExternalId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 POI ID。
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("results")]
                 [System.Text.Json.Serialization.JsonPropertyName("results")]
-                public Types.MatchResult[] MatchResultList { get; set; } = default!;
+                public List<Types.MatchResult>? MatchResultList { get; set; }
             }
         }
     }

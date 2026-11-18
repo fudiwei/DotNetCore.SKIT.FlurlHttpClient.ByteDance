@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ext_id")]
-        public string OrderExternalId { get; set; } = default!;
+        public string? OrderExternalId { get; set; }
     }
 }

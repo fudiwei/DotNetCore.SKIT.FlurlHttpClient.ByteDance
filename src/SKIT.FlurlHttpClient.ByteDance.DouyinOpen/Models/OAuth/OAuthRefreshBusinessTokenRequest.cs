@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refresh_token")]
         [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-        public string BusinessRefreshToken { get; set; } = string.Empty;
+        public string? BusinessRefreshToken { get; set; }
     }
 }

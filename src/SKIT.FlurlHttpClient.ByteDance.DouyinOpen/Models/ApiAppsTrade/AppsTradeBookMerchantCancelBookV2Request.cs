@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("book_id")]
         [System.Text.Json.Serialization.JsonPropertyName("book_id")]
-        public string BookId { get; set; } = string.Empty;
+        public string? BookId { get; set; }
 
         /// <summary>
         /// 获取或设置取消原因。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_reason")]
-        public string CancelReason { get; set; } = string.Empty;
+        public string? CancelReason { get; set; }
     }
 }

@@ -11,8 +11,43 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
             {
                 public static class Types
                 {
-                    public class LedgerRecord : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.LedgerRecord
+                    public class LedgerRecord : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.__zz__LedgerRecord
                     {
+                        public static class Types
+                        {
+                            public class Amount : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.LedgerRecord.Types.Amount
+                            {
+                            }
+
+                            public class Certificate : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.LedgerRecord.Types.Certificate
+                            {
+                            }
+
+                            public class SKU : GoodLifeSettleLedgerDetailedQueryV1Response.Types.Data.Types.LedgerRecord.Types.SKU
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置券信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("certificate")]
+                        [System.Text.Json.Serialization.JsonPropertyName("certificate")]
+                        public Types.Certificate? Certificate { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置金额信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("amount")]
+                        [System.Text.Json.Serialization.JsonPropertyName("amount")]
+                        public Types.Amount? Amount { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置团购 SKU 信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("goods")]
+                        [System.Text.Json.Serialization.JsonPropertyName("goods")]
+                        public Types.SKU? SKU { get; set; }
                     }
                 }
 
@@ -21,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ledger_records")]
                 [System.Text.Json.Serialization.JsonPropertyName("ledger_records")]
-                public Types.LedgerRecord[] LedgerRecordList { get; set; } = default!;
+                public List<Types.LedgerRecord>? LedgerRecordList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

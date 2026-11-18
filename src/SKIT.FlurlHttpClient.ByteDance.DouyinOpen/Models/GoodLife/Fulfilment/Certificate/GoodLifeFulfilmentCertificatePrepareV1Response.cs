@@ -74,14 +74,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置团购名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("title")]
                                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                public string Title { get; set; } = default!;
+                                public string? Title { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置团购类型（type=1团餐券; type=2代金券; type=3次卡）。
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("encrypted_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("encrypted_code")]
-                        public string EncryptedCode { get; set; } = default!;
+                        public string? EncryptedCode { get; set; }
 
                         /// <summary>
                         /// 券码有效期，开始时间，时间戳，单位秒。
@@ -146,14 +146,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("amount")]
                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                        public Types.Amount Amount { get; set; } = default!;
+                        public Types.Amount? Amount { get; set; }
 
                         /// <summary>
                         /// 获取或设置团购 SKU 信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku")]
-                        public Types.SKU SKU { get; set; } = default!;
+                        public Types.SKU? SKU { get; set; }
                     }
                 }
 
@@ -162,21 +162,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("verify_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("verify_token")]
-                public string VerifyToken { get; set; } = default!;
+                public string? VerifyToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置抖音订单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置可用团购券列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("certificates")]
                 [System.Text.Json.Serialization.JsonPropertyName("certificates")]
-                public Types.Certificate[] CertificateList { get; set; } = default!;
+                public List<Types.Certificate>? CertificateList { get; set; }
             }
         }
     }

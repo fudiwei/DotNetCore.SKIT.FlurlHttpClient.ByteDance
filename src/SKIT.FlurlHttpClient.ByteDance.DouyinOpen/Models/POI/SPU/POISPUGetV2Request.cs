@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string SPUExternalId { get; set; } = string.Empty;
+        public string? SPUExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置是否需要商品草稿数据。
@@ -31,6 +31,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string>? SupplierIdForFilterReasonList { get; set; }
+        public List<string>? SupplierIdForFilterReasonList { get; set; }
     }
 }

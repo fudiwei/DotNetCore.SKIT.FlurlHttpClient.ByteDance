@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("share_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("share_id")]
-                public string ShareId { get; set; } = default!;
+                public string? ShareId { get; set; }
             }
         }
     }

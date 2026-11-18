@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string POIId { get; set; } = string.Empty;
+        public string? POIId { get; set; }
 
         /// <summary>
         /// 获取或设置开始日期字符串（格式：yyyy-MM-dd）。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string BeginDateString { get; set; } = string.Empty;
+        public string? BeginDateString { get; set; }
 
         /// <summary>
         /// 获取或设置结束日期字符串（格式：yyyy-MM-dd）。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string EndDateString { get; set; } = string.Empty;
+        public string? EndDateString { get; set; }
     }
 }

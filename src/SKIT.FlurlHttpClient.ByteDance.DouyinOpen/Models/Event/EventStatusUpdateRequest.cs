@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("event")]
                 [System.Text.Json.Serialization.JsonPropertyName("event")]
-                public string Event { get; set; } = string.Empty;
+                public string? Event { get; set; }
 
                 /// <summary>
                 /// 获取或设置事件订阅状态。
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("list")]
         [System.Text.Json.Serialization.JsonPropertyName("list")]
-        public IList<Types.Item> List { get; set; } = new List<Types.Item>();
+        public List<Types.Item>? List { get; set; }
     }
 }

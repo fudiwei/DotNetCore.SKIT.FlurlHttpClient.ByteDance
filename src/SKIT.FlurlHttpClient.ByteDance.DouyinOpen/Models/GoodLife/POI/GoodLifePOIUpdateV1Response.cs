@@ -26,14 +26,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("third_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                        public string ThirdId { get; set; } = default!;
+                        public string? ThirdId { get; set; }
 
                         /// <summary>
                         /// 获取或设置门店 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poi_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                        public string POIId { get; set; } = default!;
+                        public string? POIId { get; set; }
                     }
                 }
 
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tasks")]
                 [System.Text.Json.Serialization.JsonPropertyName("tasks")]
-                public Types.Task[] TaskList { get; set; } = default!;
+                public List<Types.Task>? TaskList { get; set; }
             }
         }
     }

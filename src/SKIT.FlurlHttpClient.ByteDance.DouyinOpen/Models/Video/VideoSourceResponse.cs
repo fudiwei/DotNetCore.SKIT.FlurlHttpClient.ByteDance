@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
-                public string[] SourceList { get; set; } = default!;
+                public List<string>? SourceList { get; set; }
             }
         }
     }

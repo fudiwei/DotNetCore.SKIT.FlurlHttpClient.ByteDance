@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("b_client_key")]
         [System.Text.Json.Serialization.JsonPropertyName("b_client_key")]
-        public string BClientKey { get; set; } = string.Empty;
+        public string? BClientKey { get; set; }
 
         /// <summary>
         /// 获取或设置 C 端应用 ClientKey。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("c_client_key")]
         [System.Text.Json.Serialization.JsonPropertyName("c_client_key")]
-        public string CClientKey { get; set; } = string.Empty;
+        public string? CClientKey { get; set; }
 
         /// <summary>
         /// 获取或设置用户在 C 端下的 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string COpenId { get; set; } = string.Empty;
+        public string? COpenId { get; set; }
     }
 }

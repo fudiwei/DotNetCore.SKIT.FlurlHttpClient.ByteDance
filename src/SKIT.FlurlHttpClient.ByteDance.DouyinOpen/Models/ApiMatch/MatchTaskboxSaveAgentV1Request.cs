@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("agent_nickname")]
         [System.Text.Json.Serialization.JsonPropertyName("agent_nickname")]
-        public string AgentNickname { get; set; } = string.Empty;
+        public string? AgentNickname { get; set; }
     }
 }

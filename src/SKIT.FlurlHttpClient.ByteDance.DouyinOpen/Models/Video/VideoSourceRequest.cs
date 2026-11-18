@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("item_ids")]
-        public IList<string> ItemIdList { get; set; } = new List<string>();
+        public List<string>? ItemIdList { get; set; }
     }
 }

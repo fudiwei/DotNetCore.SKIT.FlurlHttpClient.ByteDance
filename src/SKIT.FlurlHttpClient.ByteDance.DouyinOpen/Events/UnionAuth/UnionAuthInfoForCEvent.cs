@@ -19,28 +19,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("b_client_key")]
                 [System.Text.Json.Serialization.JsonPropertyName("b_client_key")]
-                public string BClientKey { get; set; } = default!;
+                public string? BClientKey { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户在 B 端下的 OpenId。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("b_open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("b_open_id")]
-                public string BOpenId { get; set; } = default!;
+                public string? BOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置 C 端应用 ClientKey。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("c_client_key")]
                 [System.Text.Json.Serialization.JsonPropertyName("c_client_key")]
-                public string CClientKey { get; set; } = default!;
+                public string? CClientKey { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户在 C 端下的 OpenId。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("c_open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("c_open_id")]
-                public string COpenId { get; set; } = default!;
+                public string? COpenId { get; set; }
             }
         }
 
@@ -49,6 +49,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

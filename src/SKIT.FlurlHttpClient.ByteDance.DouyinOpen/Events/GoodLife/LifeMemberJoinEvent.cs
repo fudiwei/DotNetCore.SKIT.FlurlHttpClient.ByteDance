@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 [Newtonsoft.Json.JsonProperty("account_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("account_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string AccountId { get; set; } = default!;
+                public string? AccountId { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("mobile")]
                 [System.Text.Json.Serialization.JsonPropertyName("mobile")]
-                public string MobileNumber { get; set; } = default!;
+                public string? MobileNumber { get; set; }
             }
         }
 
@@ -35,6 +35,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

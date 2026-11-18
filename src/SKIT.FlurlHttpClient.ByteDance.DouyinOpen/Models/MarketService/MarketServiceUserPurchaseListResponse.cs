@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_id")]
-                        public string ServiceId { get; set; } = default!;
+                        public string? ServiceId { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_name")]
-                        public string ServiceName { get; set; } = default!;
+                        public string? ServiceName { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务状态。
@@ -46,14 +46,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("specification_title")]
                         [System.Text.Json.Serialization.JsonPropertyName("specification_title")]
-                        public string SpecificationTitle { get; set; } = default!;
+                        public string? SpecificationTitle { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务规格 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_mode_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_mode_id")]
-                        public string ServiceModeId { get; set; } = default!;
+                        public string? ServiceModeId { get; set; }
 
                         /// <summary>
                         /// 获取或设置剩余服务次数。
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("purchase_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("purchase_info_list")]
-                public Types.PurchaseInfo[] PurchaseList { get; set; } = default!;
+                public List<Types.PurchaseInfo>? PurchaseList { get; set; }
             }
         }
     }

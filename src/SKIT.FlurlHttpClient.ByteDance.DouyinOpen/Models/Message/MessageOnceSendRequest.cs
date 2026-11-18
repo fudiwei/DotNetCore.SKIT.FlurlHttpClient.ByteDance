@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置消息的接收方 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("to_open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("to_open_id")]
-        public string ToUserOpenId { get; set; } = string.Empty;
+        public string? ToUserOpenId { get; set; }
 
         /// <summary>
         /// 获取或设置消息模板 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("template_id")]
         [System.Text.Json.Serialization.JsonPropertyName("template_id")]
-        public string TemplateId { get; set; } = string.Empty;
+        public string? TemplateId { get; set; }
 
         /// <summary>
         /// 获取或设置消息内容自定义字段字典。
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("template_arg_map")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public IDictionary<string, string>? TemplateArgumentMap { get; set; }
+        public Dictionary<string, string>? TemplateArgumentMap { get; set; }
 
         /// <summary>
         /// 获取或设置消息跳转链接。

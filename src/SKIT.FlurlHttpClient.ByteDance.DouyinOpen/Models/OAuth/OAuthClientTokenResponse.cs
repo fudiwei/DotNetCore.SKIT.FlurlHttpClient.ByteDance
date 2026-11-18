@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("access_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-                public string AccessToken { get; set; } = default!;
+                public string? AccessToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置凭证有效期（单位：秒）。

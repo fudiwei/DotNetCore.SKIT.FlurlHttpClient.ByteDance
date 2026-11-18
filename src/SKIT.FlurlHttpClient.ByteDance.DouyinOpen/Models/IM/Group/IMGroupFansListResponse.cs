@@ -18,28 +18,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("group_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("group_id")]
-                public string GroupId { get; set; } = default!;
+                public string? GroupId { get; set; }
 
                 /// <summary>
                 /// 获取或设置群名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("group_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("group_name")]
-                public string GroupName { get; set; } = default!;
+                public string? GroupName { get; set; }
 
                 /// <summary>
                 /// 获取或设置群简介。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("description")]
                 [System.Text.Json.Serialization.JsonPropertyName("description")]
-                public string Description { get; set; } = default!;
+                public string? Description { get; set; }
 
                 /// <summary>
                 /// 获取或设置头像 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("avatar_uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("avatar_uri")]
-                public string AvatarUrl { get; set; } = default!;
+                public string? AvatarUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置群类型。
@@ -53,14 +53,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置群门槛列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("entry_limit")]
                 [System.Text.Json.Serialization.JsonPropertyName("entry_limit")]
-                public string[]? EntryLimitList { get; set; }
+                public List<string>? EntryLimitList { get; set; }
 
                 /// <summary>
                 /// 获取或设置群现有人数。
@@ -81,7 +81,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tags")]
                 [System.Text.Json.Serialization.JsonPropertyName("tags")]
-                public string[]? TagList { get; set; }
+                public List<string>? TagList { get; set; }
             }
         }
 
@@ -90,6 +90,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("group_list")]
         [System.Text.Json.Serialization.JsonPropertyName("group_list")]
-        public Types.Group[] GroupList { get; set; } = default!;
+        public List<Types.Group>? GroupList { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                        public string ItemOrderId { get; set; } = default!;
+                        public string? ItemOrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品单状态。
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_list")]
-                public Types.ItemOrder[] ItemOrderList { get; set; } = default!;
+                public List<Types.ItemOrder>? ItemOrderList { get; set; }
             }
         }
     }

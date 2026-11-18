@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("im_group_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("im_group_id")]
-                public string GroupId { get; set; } = default!;
+                public string? GroupId { get; set; }
 
                 /// <summary>
                 /// 获取或设置群主的 OpenId。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OwnerOpenId { get; set; } = default!;
+                public string? OwnerOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置群类型。
@@ -58,6 +58,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("content")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public override Types.Content EventContent { get; set; } = default!;
+        public override Types.Content? EventContent { get; set; }
     }
 }

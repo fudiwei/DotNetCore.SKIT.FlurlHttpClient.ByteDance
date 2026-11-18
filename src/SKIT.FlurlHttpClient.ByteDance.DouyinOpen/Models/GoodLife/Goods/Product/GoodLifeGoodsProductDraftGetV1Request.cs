@@ -17,13 +17,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string>? ProductIdList { get; set; }
+        public List<string>? ProductIdList { get; set; }
 
         /// <summary>
         /// 获取或设置商品外部 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string>? OutProductIdList { get; set; }
+        public List<string>? OutProductIdList { get; set; }
     }
 }

@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置图片 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_list")]
         [System.Text.Json.Serialization.JsonPropertyName("image_list")]
-        public IList<string> ImageIdList { get; set; } = new List<string>();
+        public List<string>? ImageIdList { get; set; }
 
         /// <summary>
         /// 获取或设置视频标题。
@@ -66,6 +66,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("at_users")]
         [System.Text.Json.Serialization.JsonPropertyName("at_users")]
-        public IList<string>? AtUserOpenIdList { get; set; }
+        public List<string>? AtUserOpenIdList { get; set; }
     }
 }

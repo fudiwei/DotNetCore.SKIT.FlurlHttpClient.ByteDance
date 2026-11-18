@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("content_open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("content_open_id")]
-                        public string ContentOpenId { get; set; } = default!;
+                        public string? ContentOpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置带货 GMV。
@@ -62,14 +62,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("date")]
                 [System.Text.Json.Serialization.JsonPropertyName("date")]
-                public string DateString { get; set; } = default!;
+                public string? DateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置达人带货数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data")]
                 [System.Text.Json.Serialization.JsonPropertyName("data")]
-                public Types.Data[] DataList { get; set; } = default!;
+                public List<Types.Data>? DataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

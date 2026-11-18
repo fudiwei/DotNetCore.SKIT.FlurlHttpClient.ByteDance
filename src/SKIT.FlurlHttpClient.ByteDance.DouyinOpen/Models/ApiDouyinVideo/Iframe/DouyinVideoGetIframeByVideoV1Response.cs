@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("iframe_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("iframe_code")]
-                public string IframeCode { get; set; } = default!;
+                public string? IframeCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频标题。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_title")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_title")]
-                public string VideoTitle { get; set; } = default!;
+                public string? VideoTitle { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频宽度（单位：像素）。
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
 
         public override bool IsSuccessful()
         {

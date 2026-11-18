@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("head_image_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("head_image_urls")]
-                        public IList<string>? HeadImageUrlList { get; set; }
+                        public List<string>? HeadImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置行业代码。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("open_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("open_time")]
-                        public IList<string>? OpenTimeStringList { get; set; }
+                        public List<string>? OpenTimeStringList { get; set; }
 
                         /// <summary>
                         /// 获取或设置联系座机号。
@@ -141,14 +141,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("third_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("third_id")]
-                public string ThirdId { get; set; } = string.Empty;
+                public string? ThirdId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("poi_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                public string POIId { get; set; } = string.Empty;
+                public string? POIId { get; set; }
 
                 /// <summary>
                 /// 获取或设置门店类型。
@@ -169,7 +169,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("services")]
                 [System.Text.Json.Serialization.JsonPropertyName("services")]
-                public IList<Types.Service>? ServiceList { get; set; }
+                public List<Types.Service>? ServiceList { get; set; }
             }
         }
 
@@ -178,6 +178,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("datas")]
         [System.Text.Json.Serialization.JsonPropertyName("datas")]
-        public IList<Types.POI> POIList { get; set; } = new List<Types.POI>();
+        public List<Types.POI>? POIList { get; set; }
     }
 }

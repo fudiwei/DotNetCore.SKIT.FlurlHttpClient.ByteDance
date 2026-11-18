@@ -15,7 +15,38 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                     {
                         public static class Types
                         {
-                            public class Certificate
+                            public abstract class __zz__Certificate
+                            {
+                                /// <summary>
+                                /// 获取或设置券 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("certificate_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
+                                public string? CertificateId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置生效时间戳。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("start_time")]
+                                [System.Text.Json.Serialization.JsonPropertyName("start_time")]
+                                public long StartTimestamp { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置过期时间戳。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("expire_time")]
+                                [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
+                                public long ExpireTimestamp { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置券码。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("code")]
+                                [System.Text.Json.Serialization.JsonPropertyName("code")]
+                                public string? Code { get; set; }
+                            }
+
+                            public class Certificate : __zz__Certificate
                             {
                                 public static class Types
                                 {
@@ -40,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("sku_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                                        public string SKUId { get; set; } = default!;
+                                        public string? SKUId { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置商家 SKU ID。
@@ -54,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("title")]
                                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                                        public string Title { get; set; } = default!;
+                                        public string? Title { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置团购类型。
@@ -149,46 +180,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 }
 
                                 /// <summary>
-                                /// 获取或设置券 ID。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("certificate_id")]
-                                [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                                public string CertificateId { get; set; } = default!;
-
-                                /// <summary>
-                                /// 获取或设置生效时间戳。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("start_time")]
-                                [System.Text.Json.Serialization.JsonPropertyName("start_time")]
-                                public long StartTimestamp { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置过期时间戳。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("expire_time")]
-                                [System.Text.Json.Serialization.JsonPropertyName("expire_time")]
-                                public long ExpireTimestamp { get; set; }
-
-                                /// <summary>
-                                /// 获取或设置券码。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("code")]
-                                [System.Text.Json.Serialization.JsonPropertyName("code")]
-                                public string? Code { get; set; }
-
-                                /// <summary>
                                 /// 获取或设置 SKU 信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_info")]
-                                public Types.SKU SKU { get; set; } = default!;
+                                public Types.SKU? SKU { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置金额信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("amount")]
                                 [System.Text.Json.Serialization.JsonPropertyName("amount")]
-                                public Types.Amount Amount { get; set; } = default!;
+                                public Types.Amount? Amount { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置次卡信息。
@@ -204,14 +207,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置券列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificates")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificates")]
-                        public Types.Certificate[] CertificateList { get; set; } = default!;
+                        public List<Types.Certificate>? CertificateList { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否可用。
@@ -227,7 +230,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("orders")]
                 [System.Text.Json.Serialization.JsonPropertyName("orders")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                public List<Types.Order>? OrderList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

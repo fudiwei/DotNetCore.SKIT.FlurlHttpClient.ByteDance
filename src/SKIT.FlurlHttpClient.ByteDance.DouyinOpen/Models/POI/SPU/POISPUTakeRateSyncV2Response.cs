@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_id")]
-                public string SPUId { get; set; } = default!;
+                public string? SPUId { get; set; }
             }
         }
     }

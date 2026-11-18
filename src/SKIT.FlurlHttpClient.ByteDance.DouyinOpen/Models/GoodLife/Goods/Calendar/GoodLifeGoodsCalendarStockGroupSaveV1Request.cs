@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("calendar_stocks")]
                 [System.Text.Json.Serialization.JsonPropertyName("calendar_stocks")]
-                public IList<Types.CalendarStock> StockList { get; set; } = new List<Types.CalendarStock>();
+                public List<Types.CalendarStock>? StockList { get; set; }
             }
 
             public class CalendarStock
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public Types.Value Value { get; set; } = new Types.Value();
+                public Types.Value? Value { get; set; }
 
                 /// <summary>
                 /// 获取或设置库存数量。
@@ -82,13 +82,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置日历库存信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("calendar_stock_group")]
         [System.Text.Json.Serialization.JsonPropertyName("calendar_stock_group")]
-        public Types.CalendarStockGroup CalendarStockGroup { get; set; } = new Types.CalendarStockGroup();
+        public Types.CalendarStockGroup? CalendarStockGroup { get; set; }
     }
 }

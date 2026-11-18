@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("biz_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("biz_token")]
-                public string BusinessToken { get; set; } = default!;
+                public string? BusinessToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置经营关系调用凭证有效期（单位：秒）。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("biz_refresh_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("biz_refresh_token")]
-                public string BusinessRefreshToken { get; set; } = default!;
+                public string? BusinessRefreshToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置经营关系刷新令牌有效期（单位：秒）。

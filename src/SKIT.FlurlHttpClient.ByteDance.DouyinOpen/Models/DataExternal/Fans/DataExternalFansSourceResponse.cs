@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("source")]
                         [System.Text.Json.Serialization.JsonPropertyName("source")]
-                        public string Source { get; set; } = default!;
+                        public string? Source { get; set; }
 
                         /// <summary>
                         /// 获取或设置占比字符串。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("percent")]
                         [System.Text.Json.Serialization.JsonPropertyName("percent")]
-                        public string PercentString { get; set; } = default!;
+                        public string? PercentString { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
     }

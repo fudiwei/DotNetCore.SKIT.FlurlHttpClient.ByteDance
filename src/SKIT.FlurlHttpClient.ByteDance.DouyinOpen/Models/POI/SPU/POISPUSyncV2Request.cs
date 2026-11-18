@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("content")]
                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                public string Content { get; set; } = string.Empty;
+                public string? Content { get; set; }
 
                 /// <summary>
                 /// 获取或设置优先级。
@@ -61,21 +61,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spu_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("spu_ext_id")]
-        public string SPUExternalId { get; set; } = string.Empty;
+        public string? SPUExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置门店外部 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("supplier_ext_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id_list")]
-        public IList<string> SupplierExternalIdList { get; set; } = new List<string>();
+        public List<string>? SupplierExternalIdList { get; set; }
 
         /// <summary>
         /// 获取或设置商品名。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         /// <summary>
         /// 获取或设置 SPU 类型。
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("front_category_tag")]
         [System.Text.Json.Serialization.JsonPropertyName("front_category_tag")]
-        public IList<string>? FrontCategoryTagList { get; set; }
+        public List<string>? FrontCategoryTagList { get; set; }
 
         /// <summary>
         /// 获取或设置推荐语。
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_list")]
         [System.Text.Json.Serialization.JsonPropertyName("image_list")]
-        public IList<string>? ImageUrlList { get; set; }
+        public List<string>? ImageUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置结算类型。
@@ -152,14 +152,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("attribute")]
         [System.Text.Json.Serialization.JsonPropertyName("attribute")]
-        public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
+        public Dictionary<int, object>? AttributeMap { get; set; }
 
         /// <summary>
         /// 获取或设置商品亮点列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("highlights")]
         [System.Text.Json.Serialization.JsonPropertyName("highlights")]
-        public IList<Types.Highlight>? HighlightList { get; set; }
+        public List<Types.Highlight>? HighlightList { get; set; }
 
         /// <summary>
         /// 获取或设置下单是否依赖日期。

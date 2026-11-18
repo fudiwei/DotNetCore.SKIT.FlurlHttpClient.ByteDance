@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-                        public string ImageId { get; set; } = default!;
+                        public string? ImageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片高度（单位：像素）。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image")]
                 [System.Text.Json.Serialization.JsonPropertyName("image")]
-                public Types.Image Image { get; set; } = default!;
+                public Types.Image? Image { get; set; }
             }
         }
     }

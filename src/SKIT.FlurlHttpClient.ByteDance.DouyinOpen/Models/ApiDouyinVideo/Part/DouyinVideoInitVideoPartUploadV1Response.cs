@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("upload_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("upload_id")]
-                public string UploadId { get; set; } = default!;
+                public string? UploadId { get; set; }
             }
         }
     }

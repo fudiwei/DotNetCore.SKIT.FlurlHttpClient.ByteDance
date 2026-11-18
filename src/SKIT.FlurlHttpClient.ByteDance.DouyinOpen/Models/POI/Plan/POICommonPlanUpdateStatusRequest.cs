@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("plan_update_list")]
         [System.Text.Json.Serialization.JsonPropertyName("plan_update_list")]
-        public IList<Types.Plan> PlanList { get; set; } = new List<Types.Plan>();
+        public List<Types.Plan>? PlanList { get; set; }
     }
 }

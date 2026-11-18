@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                public string ItemId { get; set; } = default!;
+                public string? ItemId { get; set; }
 
                 /// <summary>
                 /// 获取或设置分享 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("share_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("share_id")]
-                public string ShareId { get; set; } = default!;
+                public string? ShareId { get; set; }
             }
         }
     }

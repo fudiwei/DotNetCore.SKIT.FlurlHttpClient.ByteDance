@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("group_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("group_id")]
-                public string GroupId { get; set; } = default!;
+                public string? GroupId { get; set; }
 
                 /// <summary>
                 /// 获取或设置入群申请 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("apply_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("apply_id")]
-                public string ApplyId { get; set; } = default!;
+                public string? ApplyId { get; set; }
 
                 /// <summary>
                 /// 获取或设置申请状态。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_id")]
-                public string UserOpenId { get; set; } = default!;
+                public string? UserOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.ApplyItem[] Items { get; set; } = default!;
+                public List<Types.ApplyItem>? Items { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。
@@ -79,6 +79,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("apply_list")]
         [System.Text.Json.Serialization.JsonPropertyName("apply_list")]
-        public Types.ApplyList ApplyList { get; set; } = default!;
+        public Types.ApplyList? ApplyList { get; set; }
     }
 }

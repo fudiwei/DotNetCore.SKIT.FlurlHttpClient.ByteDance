@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("key")]
                         [System.Text.Json.Serialization.JsonPropertyName("key")]
-                        public string Key { get; set; } = default!;
+                        public string? Key { get; set; }
 
                         /// <summary>
                         /// 获取或设置属性名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置属性描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("desc")]
                         [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否列表。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("value_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("value_type")]
-                        public string ValueType { get; set; } = default!;
+                        public string? ValueType { get; set; }
 
                         /// <summary>
                         /// 获取或设置值样例。
@@ -69,28 +69,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_attrs")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_attrs")]
-                public Types.Attribute[]? ProductAttributeList { get; set; }
+                public List<Types.Attribute>? ProductAttributeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品属性列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("spu_attrs")]
                 [System.Text.Json.Serialization.JsonPropertyName("spu_attrs")]
-                public Types.Attribute[]? SPUAttributeList { get; set; }
+                public List<Types.Attribute>? SPUAttributeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置 SKU 属性列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sku_attrs")]
                 [System.Text.Json.Serialization.JsonPropertyName("sku_attrs")]
-                public Types.Attribute[]? SKUAttributeList { get; set; }
+                public List<Types.Attribute>? SKUAttributeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置日历属性列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("calendar_attrs")]
                 [System.Text.Json.Serialization.JsonPropertyName("calendar_attrs")]
-                public Types.Attribute[]? CalenderAttributeList { get; set; }
+                public List<Types.Attribute>? CalenderAttributeList { get; set; }
             }
         }
     }

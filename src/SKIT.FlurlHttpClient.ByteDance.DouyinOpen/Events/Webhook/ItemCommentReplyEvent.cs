@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("comment_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("comment_id")]
-                public string CommentId { get; set; } = default!;
+                public string? CommentId { get; set; }
 
                 /// <summary>
                 /// 获取或设置评论发布者 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("comment_user_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("comment_user_id")]
-                public string CommentUserId { get; set; } = default!;
+                public string? CommentUserId { get; set; }
 
                 /// <summary>
                 /// 获取或设置回复内容。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("content")]
                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                public string CommentContent { get; set; } = default!;
+                public string? CommentContent { get; set; }
 
                 /// <summary>
                 /// 获取或设置点赞数量。

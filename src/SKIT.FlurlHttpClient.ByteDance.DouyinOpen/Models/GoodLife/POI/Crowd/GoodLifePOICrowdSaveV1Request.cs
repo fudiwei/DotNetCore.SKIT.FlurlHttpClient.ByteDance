@@ -85,20 +85,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置门店 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("poi_id")]
         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-        public string POIId { get; set; } = string.Empty;
+        public string? POIId { get; set; }
 
         /// <summary>
         /// 获取或设置人群列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("crowds")]
         [System.Text.Json.Serialization.JsonPropertyName("crowds")]
-        public IList<Types.Crowd> CrowdList { get; set; } = new List<Types.Crowd>();
+        public List<Types.Crowd>? CrowdList { get; set; }
     }
 }

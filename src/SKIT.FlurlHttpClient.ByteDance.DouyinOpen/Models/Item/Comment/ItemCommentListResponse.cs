@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_id")]
-                        public string CommentId { get; set; } = default!;
+                        public string? CommentId { get; set; }
 
                         /// <summary>
                         /// 获取或设置回复的评论 ID。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_user_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_user_id")]
-                        public string CommentUserId { get; set; } = default!;
+                        public string? CommentUserId { get; set; }
 
                         /// <summary>
                         /// 获取或设置该条评论发布者的昵称。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("content")]
                         [System.Text.Json.Serialization.JsonPropertyName("content")]
-                        public string Content { get; set; } = default!;
+                        public string? Content { get; set; }
 
                         /// <summary>
                         /// 获取或设置点赞数量。
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Comment[] CommentList { get; set; } = default!;
+                public List<Types.Comment>? CommentList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

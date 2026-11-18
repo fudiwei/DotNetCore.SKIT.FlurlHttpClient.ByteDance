@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-                public IDictionary<int, object> AttributeMap { get; set; } = new Dictionary<int, object>();
+                public Dictionary<int, object>? AttributeMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置价格（单位：分）。
@@ -44,13 +44,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("spu_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("spu_ext_id")]
-        public string SPUExternalId { get; set; } = string.Empty;
+        public string? SPUExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+        public List<Types.SKU>? SKUList { get; set; }
     }
 }

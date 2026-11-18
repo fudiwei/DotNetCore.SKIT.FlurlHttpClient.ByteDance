@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_id")]
-                public string TaskId { get; set; } = default!;
+                public string? TaskId { get; set; }
             }
         }
     }

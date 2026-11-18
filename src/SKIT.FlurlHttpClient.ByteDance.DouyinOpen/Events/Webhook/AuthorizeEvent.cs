@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("scopes")]
                 [System.Text.Json.Serialization.JsonPropertyName("scopes")]
-                public string[] ScopeList { get; set; } = default!;
+                public List<string>? ScopeList { get; set; }
             }
         }
     }

@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("unique_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("unique_id")]
-                public string DouyinId { get; set; } = default!;
+                public string? DouyinId { get; set; }
 
                 /// <summary>
                 /// 获取或设置昵称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("nick_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                public string Nickname { get; set; } = default!;
+                public string? Nickname { get; set; }
 
                 /// <summary>
                 /// 获取或设置性价比指数。

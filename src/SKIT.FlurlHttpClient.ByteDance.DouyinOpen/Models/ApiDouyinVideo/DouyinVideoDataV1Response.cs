@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                        public string ItemId { get; set; } = default!;
+                        public string? ItemId { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频状态。
@@ -46,14 +46,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover")]
-                        public string CoverUrl { get; set; } = default!;
+                        public string? CoverUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频分享 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
+                        public string? ShareUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否置顶。
@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("statistics")]
                         [System.Text.Json.Serialization.JsonPropertyName("statistics")]
-                        public Types.Statistics Statistics { get; set; } = default!;
+                        public Types.Statistics? Statistics { get; set; }
                     }
                 }
 
@@ -97,7 +97,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
             }
         }
     }

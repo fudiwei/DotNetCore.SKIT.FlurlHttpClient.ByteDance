@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("confirm_apply_id")]
         [System.Text.Json.Serialization.JsonPropertyName("confirm_apply_id")]
-        public string ConfirmApplyId { get; set; } = string.Empty;
+        public string? ConfirmApplyId { get; set; }
 
         /// <summary>
         /// 获取或设置订单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置用户唯一标识。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置取消原因。
@@ -32,6 +32,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_reason")]
-        public string CancelReason { get; set; } = "USER_CANCEL";
+        public string? CancelReason { get; set; } = "USER_CANCEL";
     }
 }

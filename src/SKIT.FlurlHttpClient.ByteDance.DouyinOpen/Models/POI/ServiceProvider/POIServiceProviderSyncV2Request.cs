@@ -85,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("industry_license")]
         [System.Text.Json.Serialization.JsonPropertyName("industry_license")]
-        public IList<Types.IndustryLicense>? IndustryLicenseList { get; set; }
+        public List<Types.IndustryLicense>? IndustryLicenseList { get; set; }
 
         /// <summary>
         /// 获取或设置联系人信息。

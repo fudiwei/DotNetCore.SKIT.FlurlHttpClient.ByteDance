@@ -18,28 +18,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("card_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("card_id")]
-                public string CardId { get; set; } = default!;
+                public string? CardId { get; set; }
 
                 /// <summary>
                 /// 获取或设置卡片标题。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("title")]
                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                public string? Title { get; set; } = default!;
+                public string? Title { get; set; }
 
                 /// <summary>
                 /// 获取或设置输入组件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("components")]
                 [System.Text.Json.Serialization.JsonPropertyName("components")]
-                public int[] ComponentIdList { get; set; } = default!;
+                public List<int>? ComponentIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("media_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("media_id")]
-                public string MediaId { get; set; } = default!;
+                public string? MediaId { get; set; }
 
                 /// <summary>
                 /// 获取或设置卡片状态。
@@ -55,6 +55,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cards")]
         [System.Text.Json.Serialization.JsonPropertyName("cards")]
-        public Types.Card[] CardList { get; set; } = default!;
+        public List<Types.Card>? CardList { get; set; }
     }
 }

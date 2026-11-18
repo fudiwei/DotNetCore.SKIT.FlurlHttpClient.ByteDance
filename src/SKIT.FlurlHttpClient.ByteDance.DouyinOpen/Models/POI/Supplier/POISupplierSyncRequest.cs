@@ -99,14 +99,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("industry_license")]
                 [System.Text.Json.Serialization.JsonPropertyName("industry_license")]
-                public IList<Types.IndustryLicense>? IndustryLicenseList { get; set; }
+                public List<Types.IndustryLicense>? IndustryLicenseList { get; set; }
 
                 /// <summary>
                 /// 获取或设置补充信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("other_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("other_info")]
-                public IList<Types.OtherInfo>? OtherInfoList { get; set; }
+                public List<Types.OtherInfo>? OtherInfoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置合作协议信息。
@@ -130,7 +130,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("industry_license_ext_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("industry_license_ext_id")]
-                public IList<string>? IndustryLicenseExternalIdList { get; set; }
+                public List<string>? IndustryLicenseExternalIdList { get; set; }
             }
 
             public class Recommend
@@ -165,7 +165,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                                public string AppId { get; set; } = string.Empty;
+                                public string? AppId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置小程序页面路径。
@@ -236,14 +236,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("poi_id")]
         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-        public string POIId { get; set; } = string.Empty;
+        public string? POIId { get; set; }
 
         /// <summary>
         /// 获取或设置店铺名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         /// <summary>
         /// 获取或设置店铺介绍。
@@ -278,7 +278,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-        public string SupplierExternalId { get; set; } = string.Empty;
+        public string? SupplierExternalId { get; set; }
 
         /// <summary>
         /// 获取或设置在线状态。
@@ -348,41 +348,41 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("attributes")]
         [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-        public IDictionary<int, object> Attribute { get; set; } = new Dictionary<int, object>();
+        public Dictionary<int, object>? Attribute { get; set; }
 
         /// <summary>
         /// 获取或设置推荐列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("recommends")]
         [System.Text.Json.Serialization.JsonPropertyName("recommends")]
-        public IList<Types.Recommend>? RecommendList { get; set; }
+        public List<Types.Recommend>? RecommendList { get; set; }
 
         /// <summary>
         /// 获取或设置服务列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("services")]
         [System.Text.Json.Serialization.JsonPropertyName("services")]
-        public IList<Types.Service>? ServiceList { get; set; }
+        public List<Types.Service>? ServiceList { get; set; }
 
         /// <summary>
         /// 获取或设置营业时间范围字符串列表（格式：HH:mm-HH:mm）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_time")]
         [System.Text.Json.Serialization.JsonPropertyName("open_time")]
-        public IList<string>? OpenTimeRangeList { get; set; }
+        public List<string>? OpenTimeRangeList { get; set; }
 
         /// <summary>
         /// 获取或设置标签列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tags")]
         [System.Text.Json.Serialization.JsonPropertyName("tags")]
-        public IList<string>? TagList { get; set; }
+        public List<string>? TagList { get; set; }
 
         /// <summary>
         /// 获取或设置图片列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("images")]
         [System.Text.Json.Serialization.JsonPropertyName("images")]
-        public IList<string>? ImageList { get; set; }
+        public List<string>? ImageList { get; set; }
     }
 }

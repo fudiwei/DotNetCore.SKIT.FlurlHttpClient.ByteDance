@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         }
 
         /// <summary>
-        /// <para>异步调用 [PUT] /{upload_url} 接口。</para>
+        /// <para>异步调用 [PUT] {upload_url} 接口。</para>
         /// <para>
         /// REF: <br/>
         /// <![CDATA[ https://developers.tiktok.com/doc/content-posting-api-reference-direct-post ]]> <br/>
@@ -63,13 +63,15 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyUrl(request.UploadUrl);
+
             if (request.ChunkContentType is null)
             {
                 request.ChunkContentType = "video/mp4";
             }
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Put, request.UploadUrl)
+                .CreateFlurlRequest(request, HttpMethod.Put)
                 .WithUrl(request.UploadUrl)
                 .WithHeader(HttpHeaders.ContentType, request.ChunkContentType)
                 .WithHeader(HttpHeaders.ContentLength, request.ChunkBytes.Length)

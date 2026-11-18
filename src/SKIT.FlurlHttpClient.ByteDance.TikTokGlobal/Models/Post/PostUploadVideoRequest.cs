@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
     /// <summary>
-    /// <para>表示 [PUT] /{upload_url} 接口的请求。</para>
+    /// <para>表示 [PUT] {upload_url} 接口的请求。</para>
     /// </summary>
     public class PostUploadVideoRequest : TikTokV2Request
     {

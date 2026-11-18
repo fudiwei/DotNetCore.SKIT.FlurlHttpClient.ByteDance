@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置推送的广告主 ID。
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fail_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("fail_list")]
-                public Types.Failure[] FailureList { get; set; } = default!;
+                public List<Types.Failure>? FailureList { get; set; }
             }
         }
     }

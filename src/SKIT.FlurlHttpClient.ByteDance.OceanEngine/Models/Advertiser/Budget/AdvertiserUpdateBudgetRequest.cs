@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("budget_mode")]
         [System.Text.Json.Serialization.JsonPropertyName("budget_mode")]
-        public string BudgetMode { get; set; } = string.Empty;
+        public string? BudgetMode { get; set; }
     }
 }

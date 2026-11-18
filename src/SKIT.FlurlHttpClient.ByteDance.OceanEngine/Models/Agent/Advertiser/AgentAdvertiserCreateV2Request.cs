@@ -17,14 +17,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         /// <summary>
         /// 获取或设置公司。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("company")]
         [System.Text.Json.Serialization.JsonPropertyName("company")]
-        public string Company { get; set; } = string.Empty;
+        public string? Company { get; set; }
 
         /// <summary>
         /// 获取或设置角色。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("role")]
         [System.Text.Json.Serialization.JsonPropertyName("role")]
-        public string Role { get; set; } = "ROLE_CHILD_ADVERTISER";
+        public string? Role { get; set; } = "ROLE_CHILD_ADVERTISER";
 
         /// <summary>
         /// 获取或设置账号类型。
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("promotion_area")]
         [System.Text.Json.Serialization.JsonPropertyName("promotion_area")]
-        public string PromotionArea { get; set; } = string.Empty;
+        public string? PromotionArea { get; set; }
 
         /// <summary>
         /// 获取或设置营销中心省份编码。
@@ -81,21 +81,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("email")]
         [System.Text.Json.Serialization.JsonPropertyName("email")]
-        public string Email { get; set; } = string.Empty;
+        public string? Email { get; set; }
 
         /// <summary>
         /// 获取或设置联系人。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("contact")]
         [System.Text.Json.Serialization.JsonPropertyName("contact")]
-        public string Contact { get; set; } = string.Empty;
+        public string? Contact { get; set; }
 
         /// <summary>
         /// 获取或设置手机号码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("phone_number")]
         [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-        public string MobileNumber { get; set; } = string.Empty;
+        public string? MobileNumber { get; set; }
 
         /// <summary>
         /// 获取或设置固话号码。
@@ -109,7 +109,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("address")]
         [System.Text.Json.Serialization.JsonPropertyName("address")]
-        public string Address { get; set; } = string.Empty;
+        public string? Address { get; set; }
 
         /// <summary>
         /// 获取或设置执照类型。
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("license_no")]
         [System.Text.Json.Serialization.JsonPropertyName("license_no")]
-        public string LicenseNumber { get; set; } = string.Empty;
+        public string? LicenseNumber { get; set; }
 
         /// <summary>
         /// 获取或设置执照省份编码。

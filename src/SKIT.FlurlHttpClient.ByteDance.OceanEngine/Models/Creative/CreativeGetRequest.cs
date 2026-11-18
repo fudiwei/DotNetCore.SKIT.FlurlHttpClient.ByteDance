@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creative_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("creative_ids")]
-                public IList<long>? CreativeIdList { get; set; }
+                public List<long>? CreativeIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告组 ID。
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fields")]
         [System.Text.Json.Serialization.JsonPropertyName("fields")]
-        public IList<string>? FieldList { get; set; }
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置分页页码。

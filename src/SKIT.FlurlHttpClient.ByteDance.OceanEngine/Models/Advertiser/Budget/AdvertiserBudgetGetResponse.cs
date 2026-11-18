@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("budget_mode")]
                         [System.Text.Json.Serialization.JsonPropertyName("budget_mode")]
-                        public string BudgetMode { get; set; } = default!;
+                        public string? BudgetMode { get; set; }
                     }
                 }
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.AdvertiserBudget[] AdvertiserBudgetList { get; set; } = default!;
+                public List<Types.AdvertiserBudget>? AdvertiserBudgetList { get; set; }
             }
         }
     }

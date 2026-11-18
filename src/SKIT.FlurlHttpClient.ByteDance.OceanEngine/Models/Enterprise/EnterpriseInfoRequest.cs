@@ -11,6 +11,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("e_douyin_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("e_douyin_ids")]
-        public IList<string> EDouyinIdList { get; set; } = new List<string>();
+        public List<string>? EDouyinIdList { get; set; }
     }
 }

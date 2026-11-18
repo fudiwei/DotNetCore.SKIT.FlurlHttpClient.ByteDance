@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; } = default!;
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 获取或设置联系邮箱。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("emal")]
                 [System.Text.Json.Serialization.JsonPropertyName("emal")]
-                public string Email { get; set; } = default!;
+                public string? Email { get; set; }
 
                 /// <summary>
                 /// 获取或设置账户余额（单位：元）。

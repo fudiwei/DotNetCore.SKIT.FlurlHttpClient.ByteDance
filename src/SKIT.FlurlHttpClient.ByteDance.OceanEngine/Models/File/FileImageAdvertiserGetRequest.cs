@@ -18,6 +18,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-        public IList<string> ImageIdList { get; set; } = new List<string>();
+        public List<string>? ImageIdList { get; set; }
     }
 }

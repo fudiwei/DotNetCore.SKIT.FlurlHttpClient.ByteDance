@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string ImageId { get; set; } = default!;
+                        public string? ImageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片大小（单位：字节）。
@@ -46,21 +46,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("url")]
                         [System.Text.Json.Serialization.JsonPropertyName("url")]
-                        public string ImageUrl { get; set; } = default!;
+                        public string? ImageUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片格式。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("format")]
                         [System.Text.Json.Serialization.JsonPropertyName("format")]
-                        public string Format { get; set; } = default!;
+                        public string? Format { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片 MD5 哈希值。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("signature")]
                         [System.Text.Json.Serialization.JsonPropertyName("signature")]
-                        public string Signature { get; set; } = default!;
+                        public string? Signature { get; set; }
                         /// <summary>
                         /// 获取或设置素材 ID。
                         /// </summary>
@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("filename")]
                         [System.Text.Json.Serialization.JsonPropertyName("filename")]
-                        public string FileName { get; set; } = default!;
+                        public string? FileName { get; set; }
 
                         /// <summary>
                         /// 获取或设置上传时间。
@@ -95,14 +95,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Image[] ImageList { get; set; } = default!;
+                public List<Types.Image>? ImageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("page_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("page_info")]
-                public Types.Pagination Pagination { get; set; } = default!;
+                public Types.Pagination? Pagination { get; set; }
             }
         }
     }

@@ -11,8 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
             {
                 public class Credentials
                 {
-                    [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-                    public long AppId { get; set; }
+                    public string? AppId { get; set; }
                     public string? AppSecret { get; set; }
                     public string? AccessToken { get; set; }
                 }
@@ -32,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
                 using var stream = File.OpenRead("appsettings.local.json");
                 var appsettings = JsonSerializer.Deserialize<AppSettings>(stream, JsonSerializerOptions.Web)!;
 
-                Credentials_AppId = appsettings.Credentials?.AppId ?? default;
+                Credentials_AppId = appsettings.Credentials?.AppId ?? string.Empty;
                 Credentials_AppSecret = appsettings.Credentials?.AppSecret ?? string.Empty;
                 Credentials_AccessToken = appsettings.Credentials?.AccessToken ?? string.Empty;
             }
@@ -42,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
             }
         }
 
-        public static readonly long Credentials_AppId;
+        public static readonly string Credentials_AppId;
         public static readonly string Credentials_AppSecret;
         public static readonly string Credentials_AccessToken;
     }

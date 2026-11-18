@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                public string VideoId { get; set; } = default!;
+                public string? VideoId { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频大小（单位：字节）。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_url")]
-                public string VideoUrl { get; set; } = default!;
+                public string? VideoUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频时长（单位：秒）。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("format")]
                 [System.Text.Json.Serialization.JsonPropertyName("format")]
-                public string Format { get; set; } = default!;
+                public string? Format { get; set; }
 
                 /// <summary>
                 /// 获取或设置素材 ID。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("signature")]
                 [System.Text.Json.Serialization.JsonPropertyName("signature")]
-                public string Signature { get; set; } = default!;
+                public string? Signature { get; set; }
             }
         }
     }

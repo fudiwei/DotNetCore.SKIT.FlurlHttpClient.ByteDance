@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("child_agent_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("child_agent_ids")]
-                public long[] ChildAgentIdList { get; set; } = default!;
+                public List<long>? ChildAgentIdList { get; set; }
             }
         }
     }

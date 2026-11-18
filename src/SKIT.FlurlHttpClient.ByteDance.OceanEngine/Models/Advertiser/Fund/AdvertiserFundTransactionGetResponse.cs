@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("transaction_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("transaction_type")]
-                        public string TransactionType { get; set; } = default!;
+                        public string? TransactionType { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         [Newtonsoft.Json.JsonProperty("transaction_seq")]
                         [System.Text.Json.Serialization.JsonPropertyName("transaction_seq")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
-                        public string TransactionSequenceNumber { get; set; } = default!;
+                        public string? TransactionSequenceNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置付款方广告主 ID。
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Transaction[] TransactionList { get; set; } = default!;
+                public List<Types.Transaction>? TransactionList { get; set; }
             }
         }
     }

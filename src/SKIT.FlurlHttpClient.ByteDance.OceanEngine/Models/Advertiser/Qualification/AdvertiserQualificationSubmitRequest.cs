@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("company_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("company_name")]
-                public string CompanyName { get; set; } = string.Empty;
+                public string? CompanyName { get; set; }
 
                 /// <summary>
                 /// 获取或设置公司类型。
@@ -49,28 +49,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualification_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualification_code")]
-                public string QualificationCode { get; set; } = string.Empty;
+                public string? QualificationCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置注册国家。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("registered_nation_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("registered_nation_name")]
-                public string RegisteredNationName { get; set; } = string.Empty;
+                public string? RegisteredNationName { get; set; }
 
                 /// <summary>
                 /// 获取或设置注册省份。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("registered_province_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("registered_province_name")]
-                public string RegisteredProvinceName { get; set; } = string.Empty;
+                public string? RegisteredProvinceName { get; set; }
 
                 /// <summary>
                 /// 获取或设置注册城市。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("registered_city_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("registered_city_name")]
-                public string RegisteredCityName { get; set; } = string.Empty;
+                public string? RegisteredCityName { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否有有效日期。
@@ -91,14 +91,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("proprietor_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("proprietor_name")]
-                public string ProprietorName { get; set; } = string.Empty;
+                public string? ProprietorName { get; set; }
 
                 /// <summary>
                 /// 获取或设置详细地址。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("address")]
                 [System.Text.Json.Serialization.JsonPropertyName("address")]
-                public string Address { get; set; } = string.Empty;
+                public string? Address { get; set; }
 
                 /// <summary>
                 /// 获取或设置资质图片附件 ID。
@@ -132,7 +132,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("content")]
                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                public string Content { get; set; } = string.Empty;
+                public string? Content { get; set; }
             }
         }
 
@@ -148,20 +148,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("subject")]
         [System.Text.Json.Serialization.JsonPropertyName("subject")]
-        public Types.Subject Subject { get; set; } = new Types.Subject();
+        public Types.Subject? Subject { get; set; }
 
         /// <summary>
         /// 获取或设置开户资质列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("others")]
         [System.Text.Json.Serialization.JsonPropertyName("others")]
-        public IList<Types.OtherQualification> OtherQualificationList { get; set; } = new List<Types.OtherQualification>();
+        public List<Types.OtherQualification>? OtherQualificationList { get; set; }
 
         /// <summary>
         /// 获取或设置推广资质信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("promotion")]
         [System.Text.Json.Serialization.JsonPropertyName("promotion")]
-        public Types.PromotionQualification PromotionQualification { get; set; } = new Types.PromotionQualification();
+        public Types.PromotionQualification? PromotionQualification { get; set; }
     }
 }

@@ -42,8 +42,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             using var httpContent = new MultipartFormDataContent();
             httpContent.Add(new StringContent(request.AdvertiserId.ToString()), "advertiser_id");
-            httpContent.Add(new StringContent(request.UploadType), "upload_type");
-            httpContent.Add(new StringContent(request.UploadTo), "upload_to");
+            httpContent.Add(new StringContent(request.UploadType!), "upload_type");
+            httpContent.Add(new StringContent(request.UploadTo!), "upload_to");
 
             if (request.ImageFileBytes is not null)
             {
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 
             using var httpContent = new MultipartFormDataContent();
             httpContent.Add(new StringContent(request.AdvertiserId.ToString()), "advertiser_id");
-            httpContent.Add(new StringContent(request.UploadType), "upload_type");
+            httpContent.Add(new StringContent(request.UploadType!), "upload_type");
             httpContent.Add(new StringContent(request.ImageFileName!), "filename");
 
             if (request.ImageFileBytes is not null)
@@ -134,32 +134,36 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
-            if (request.VideoFileName is null)
+            if (request.VideoFileBytes is not null)
             {
-                request.VideoFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".mp4";
-            }
+                if (request.VideoFileName is null)
+                {
+                    request.VideoFileName = Guid.NewGuid().ToString("N").ToString().ToLower() + ".mp4";
+                }
 
-            if (request.VideoFileHash is null)
-            {
-                request.VideoFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.VideoFileBytes)).Replace("-", "");
-            }
+                if (request.VideoFileHash is null)
+                {
+                    request.VideoFileHash = BitConverter.ToString(Utilities.MD5Utility.Hash(request.VideoFileBytes)).Replace("-", "");
+                }
 
-            if (request.VideoContentType is null)
-            {
-                request.VideoContentType = "video/mp4";
+                if (request.VideoContentType is null)
+                {
+                    request.VideoContentType = "video/mp4";
+                }
             }
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "2", "file", "video", "ad")
                 .WithHeader("Access-Token", request.AccessToken);
 
-            using var httpContent = new MultipartFormDataContent();
             using var fileContent = new ByteArrayContent(request.VideoFileBytes ?? Array.Empty<byte>());
-            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType);
-            httpContent.Add(fileContent, "video_file", request.VideoFileName);
+            fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(request.VideoContentType!);
+            
+            using var httpContent = new MultipartFormDataContent();
+            httpContent.Add(fileContent, "video_file", request.VideoFileName!);
             httpContent.Add(new StringContent(request.AdvertiserId.ToString()), "advertiser_id");
-            httpContent.Add(new StringContent(request.VideoFileHash), "video_signature");
-            httpContent.Add(new StringContent(request.VideoFileName), "filename");
+            httpContent.Add(new StringContent(request.VideoFileHash!), "video_signature");
+            httpContent.Add(new StringContent(request.VideoFileName!), "filename");
 
             return await client.SendFlurlRequestAsync<Models.FileVideoAdvertisingResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

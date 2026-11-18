@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fail_video_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("fail_video_ids")]
-                public string[] FailedVideoIdList { get; set; } = default!;
+                public List<string>? FailedVideoIdList { get; set; }
             }
         }
     }

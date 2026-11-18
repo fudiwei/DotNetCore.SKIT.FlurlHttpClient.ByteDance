@@ -15,14 +15,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("partner_organization_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("partner_organization_ids")]
-                public IList<long>? PartnerOrganizationList { get; set; }
+                public List<long>? PartnerOrganizationList { get; set; }
 
                 /// <summary>
                 /// 获取或设置合作状态列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public IList<string>? StatusList { get; set; }
+                public List<string>? StatusList { get; set; }
             }
         }
 

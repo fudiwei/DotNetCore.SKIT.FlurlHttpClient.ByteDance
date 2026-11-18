@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("creative_word_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("creative_word_ids")]
-                        public long[]? CreativeWordIdList { get; set; }
+                        public List<long>? CreativeWordIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置创意素材类型。
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-                        public string[]? ImageIdList { get; set; }
+                        public List<string>? ImageIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置创意素材封面图片 ID 列表。
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("metarials")]
                         [System.Text.Json.Serialization.JsonPropertyName("metarials")]
-                        public Types.Material[]? MaterialList { get; set; }
+                        public List<Types.Material>? MaterialList { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间。
@@ -160,14 +160,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Creative[] CampaignList { get; set; } = default!;
+                public List<Types.Creative>? CampaignList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("page_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("page_info")]
-                public Types.Pagination Pagination { get; set; } = default!;
+                public Types.Pagination? Pagination { get; set; }
             }
         }
     }

@@ -17,13 +17,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("campaign_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("campaign_ids")]
-        public IList<long> CampaignIdList { get; set; } = new List<long>();
+        public List<long>? CampaignIdList { get; set; }
 
         /// <summary>
         /// 获取或设置操作状态。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("opt_status")]
         [System.Text.Json.Serialization.JsonPropertyName("opt_status")]
-        public string Operation { get; set; } = string.Empty;
+        public string? Operation { get; set; }
     }
 }

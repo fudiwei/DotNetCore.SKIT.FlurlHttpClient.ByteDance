@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置更新状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("status_code")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("videos")]
                 [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
     }

@@ -25,21 +25,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_mode")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_mode")]
-                        public string ImageMode { get; set; } = default!;
+                        public string? ImageMode { get; set; }
 
                         /// <summary>
                         /// 获取或设置创意标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string CreativeTitle { get; set; } = default!;
+                        public string? CreativeTitle { get; set; }
 
                         /// <summary>
                         /// 获取或设置第三方 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("third_party_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("third_party_id")]
-                        public string ThirdPartyId { get; set; } = default!;
+                        public string? ThirdPartyId { get; set; }
                     }
                 }
 
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creatives")]
                 [System.Text.Json.Serialization.JsonPropertyName("creatives")]
-                public Types.Creative[] CreativeList { get; set; } = default!;
+                public List<Types.Creative>? CreativeList { get; set; }
             }
         }
     }

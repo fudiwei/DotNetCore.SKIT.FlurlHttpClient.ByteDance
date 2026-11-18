@@ -11,13 +11,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("advertiser_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("advertiser_ids")]
-        public IList<long> AdvertiserIdList { get; set; } = new List<long>();
+        public List<long>? AdvertiserIdList { get; set; }
 
         /// <summary>
         /// 获取或设置查询字段列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fields")]
         [System.Text.Json.Serialization.JsonPropertyName("fields")]
-        public IList<string>? FieldList { get; set; }
+        public List<string>? FieldList { get; set; }
     }
 }

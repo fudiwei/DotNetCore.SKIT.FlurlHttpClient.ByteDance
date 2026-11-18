@@ -17,20 +17,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("target_advertiser_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("target_advertiser_ids")]
-        public IList<long> TargetAdvertiserIdList { get; set; } = new List<long>();
+        public List<long>? TargetAdvertiserIdList { get; set; }
 
         /// <summary>
         /// 获取或设置图片 ID 列表。与字段 <see cref="VideoIdList"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-        public IList<string>? ImageIdList { get; set; }
+        public List<string>? ImageIdList { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID 列表。与字段 <see cref="ImageIdList"/> 二选一。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("video_ids")]
-        public IList<string>? VideoIdList { get; set; }
+        public List<string>? VideoIdList { get; set; }
     }
 }

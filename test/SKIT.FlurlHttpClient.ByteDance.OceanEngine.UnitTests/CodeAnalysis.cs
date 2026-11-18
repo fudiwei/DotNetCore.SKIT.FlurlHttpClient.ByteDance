@@ -20,7 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
         {
             Assert.Multiple(() =>
             {
-                var options = TypeDeclarationAnalyzerOptions.LoadFromClient(typeof(DouyinOceanEngineClient));
+                var options = TypeDeclarationAnalyzerOptions.LoadFromClient(typeof(OceanEngineClient));
                 options.ReportOnMissingSDKModels = true;
                 options.ReportOnMissingSDKMethods = true;
 
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.UnitTests
                 string workDir = Environment.CurrentDirectory;
                 string projDir = Path.Combine(workDir, "../../../../../");
 
-                var options = StaticFileAnalyzerOptions.LoadFromClient(typeof(DouyinOceanEngineClient));
+                var options = StaticFileAnalyzerOptions.LoadFromClient(typeof(OceanEngineClient));
                 options.ProjectRootPath = Path.Combine(projDir, "./src/SKIT.FlurlHttpClient.ByteDance.OceanEngine/");
                 options.ReportOnMissingSDKModelsCodes = true;
                 options.ReportOnMissingSDKModelsFixtures = true;

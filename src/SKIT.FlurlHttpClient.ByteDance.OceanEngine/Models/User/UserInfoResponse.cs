@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
     /// <summary>
     /// <para>表示 [GET] /2/user/info 接口的响应。</para>
     /// </summary>
-    public class UserInfoResponse : OceanEngineResponse<UserInfoResponse.Types.User[]>
+    public class UserInfoResponse : OceanEngineResponse<List<UserInfoResponse.Types.User>>
     {
         public static class Types
         {
@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("email")]
                 [System.Text.Json.Serialization.JsonPropertyName("email")]
-                public string Email { get; set; } = default!;
+                public string? Email { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户名。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("display_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("display_name")]
-                public string DisplayName { get; set; } = default!;
+                public string? DisplayName { get; set; }
             }
         }
     }

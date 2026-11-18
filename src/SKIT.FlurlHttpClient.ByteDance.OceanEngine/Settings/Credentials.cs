@@ -5,7 +5,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Settings
         /// <summary>
         /// 初始化客户端时 <see cref="OceanEngineClientOptions.AppId"/> 的副本。
         /// </summary>
-        public long AppId { get; }
+        public string AppId { get; }
 
         /// <summary>
         /// 初始化客户端时 <see cref="OceanEngineClientOptions.AppSecret"/> 的副本。

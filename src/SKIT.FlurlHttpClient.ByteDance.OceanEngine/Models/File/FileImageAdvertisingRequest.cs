@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string UploadType { get; set; } = string.Empty;
+        public string? UploadType { get; set; }
 
         /// <summary>
         /// 获取或设置图片 URL。与字段 <see cref="ImageFileBytes"/> 二选一。

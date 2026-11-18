@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("campaign_name")]
         [System.Text.Json.Serialization.JsonPropertyName("campaign_name")]
-        public string CampaignName { get; set; } = string.Empty;
+        public string? CampaignName { get; set; }
 
         /// <summary>
         /// 获取或设置广告组类型。
@@ -38,14 +38,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("budget_mode")]
         [System.Text.Json.Serialization.JsonPropertyName("budget_mode")]
-        public string BudgetMode { get; set; } = string.Empty;
+        public string? BudgetMode { get; set; }
 
         /// <summary>
         /// 获取或设置广告组推广目的。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("landing_type")]
         [System.Text.Json.Serialization.JsonPropertyName("landing_type")]
-        public string LandingType { get; set; } = string.Empty;
+        public string? LandingType { get; set; }
 
         /// <summary>
         /// 获取或设置广告组营销目的。

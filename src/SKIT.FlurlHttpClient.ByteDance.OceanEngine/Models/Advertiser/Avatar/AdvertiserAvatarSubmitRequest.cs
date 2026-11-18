@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_id")]
         [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-        public string ImageId { get; set; } = string.Empty;
+        public string? ImageId { get; set; }
 
         /// <summary>
         /// 获取或设置品牌名称。

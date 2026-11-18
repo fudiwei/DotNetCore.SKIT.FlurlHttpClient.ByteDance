@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string ImageId { get; set; } = default!;
+                public string? ImageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片大小（单位：字节）。
@@ -42,21 +42,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("url")]
                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                public string ImageUrl { get; set; } = default!;
+                public string? ImageUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片格式。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("format")]
                 [System.Text.Json.Serialization.JsonPropertyName("format")]
-                public string Format { get; set; } = default!;
+                public string? Format { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 MD5 哈希值。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("signature")]
                 [System.Text.Json.Serialization.JsonPropertyName("signature")]
-                public string Signature { get; set; } = default!;
+                public string? Signature { get; set; }
             }
         }
     }

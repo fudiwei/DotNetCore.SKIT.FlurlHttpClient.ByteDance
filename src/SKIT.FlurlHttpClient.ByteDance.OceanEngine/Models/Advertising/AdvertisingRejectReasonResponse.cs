@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reject_data")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reject_data")]
-                                public Types.RejectionItem[]? RejectionList { get; set; }
+                                public List<Types.RejectionItem>? RejectionList { get; set; }
                             }
 
                             public class CreativeRejection
@@ -46,14 +46,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reject_data")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reject_data")]
-                                public Types.RejectionItem[]? RejectionList { get; set; }
+                                public List<Types.RejectionItem>? RejectionList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置程序化创意的素材维度审核建议列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("material_reject")]
                                 [System.Text.Json.Serialization.JsonPropertyName("material_reject")]
-                                public Types.MaterialRejection[]? MaterialRejectionList { get; set; }
+                                public List<Types.MaterialRejection>? MaterialRejectionList { get; set; }
                             }
 
                             public class MaterialRejection
@@ -84,7 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reject_reason")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reject_reason")]
-                                public string RejectReason { get; set; } = default!;
+                                public string? RejectReason { get; set; }
                             }
 
                             public class RejectionItem
@@ -94,14 +94,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reject_item")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reject_item")]
-                                public string Item { get; set; } = default!;
+                                public string? Item { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置审核建议。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reject_reason")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reject_reason")]
-                                public string Reason { get; set; } = default!;
+                                public string? Reason { get; set; }
                             }
                         }
 
@@ -117,14 +117,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("creative_reject")]
                         [System.Text.Json.Serialization.JsonPropertyName("creative_reject")]
-                        public Types.CreativeRejection[]? CreativeRejectionList { get; set; }
+                        public List<Types.CreativeRejection>? CreativeRejectionList { get; set; }
 
                         /// <summary>
                         /// 获取或设置程序化创意的素材维度审核建议列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("material_reject")]
                         [System.Text.Json.Serialization.JsonPropertyName("material_reject")]
-                        public Types.MaterialRejection[]? MaterialRejectionList { get; set; }
+                        public List<Types.MaterialRejection>? MaterialRejectionList { get; set; }
                     }
                 }
 
@@ -133,7 +133,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public static Types.Item[] List { get; set; } = default!;
+                public List<Types.Item>? List { get; set; }
             }
         }
     }

@@ -18,6 +18,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_id")]
         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-        public string VideoId { get; set; } = string.Empty;
+        public string? VideoId { get; set; }
     }
 }

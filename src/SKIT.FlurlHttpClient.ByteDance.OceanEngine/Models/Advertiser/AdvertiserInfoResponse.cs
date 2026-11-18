@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
     /// <summary>
     /// <para>表示 [GET] /2/advertiser/info 接口的响应。</para>
     /// </summary>
-    public class AdvertiserInfoResponse : OceanEngineResponse<AdvertiserInfoResponse.Types.Advertiser[]>
+    public class AdvertiserInfoResponse : OceanEngineResponse<List<AdvertiserInfoResponse.Types.Advertiser>>
     {
         public static class Types
         {

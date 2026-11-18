@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("action_scene")]
                                         [System.Text.Json.Serialization.JsonPropertyName("action_scene")]
-                                        public string[]? ActionSceneList { get; set; }
+                                        public List<string>? ActionSceneList { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置用户发生行为天数。
@@ -137,14 +137,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("action_categories")]
                                         [System.Text.Json.Serialization.JsonPropertyName("action_categories")]
-                                        public long[]? ActionCategoryIdList { get; set; }
+                                        public List<long>? ActionCategoryIdList { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置行为关键词 ID 列表。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("action_words")]
                                         [System.Text.Json.Serialization.JsonPropertyName("action_words")]
-                                        public long[]? ActionWordIdList { get; set; }
+                                        public List<long>? ActionWordIdList { get; set; }
                                     }
                                 }
 
@@ -167,14 +167,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("city")]
                                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                                public int[]? CityIdList { get; set; }
+                                public List<int>? CityIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商圈 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("business_ids")]
                                 [System.Text.Json.Serialization.JsonPropertyName("business_ids")]
-                                public int[]? BusinessIdList { get; set; }
+                                public List<int>? BusinessIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置位置类型。
@@ -202,28 +202,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("age")]
                                 [System.Text.Json.Serialization.JsonPropertyName("age")]
-                                public string[]? AgeTypeList { get; set; }
+                                public List<string>? AgeTypeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置职业类型列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("career")]
                                 [System.Text.Json.Serialization.JsonPropertyName("career")]
-                                public string[]? CareerTypeList { get; set; }
+                                public List<string>? CareerTypeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置定向人群包列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("retargeting_tags_include")]
                                 [System.Text.Json.Serialization.JsonPropertyName("retargeting_tags_include")]
-                                public long[]? RetargetingTagsIncludedList { get; set; }
+                                public List<long>? RetargetingTagsIncludedList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置排除人群包列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("retargeting_tags_exclude")]
                                 [System.Text.Json.Serialization.JsonPropertyName("retargeting_tags_exclude")]
-                                public long[]? RetargetingTagsExcludedList { get; set; }
+                                public List<long>? RetargetingTagsExcludedList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置行为兴趣。
@@ -244,28 +244,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("interest_categories")]
                                 [System.Text.Json.Serialization.JsonPropertyName("interest_categories")]
-                                public long[]? InterestCategoryIdList { get; set; }
+                                public List<long>? InterestCategoryIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置兴趣关键词 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("interest_words")]
                                 [System.Text.Json.Serialization.JsonPropertyName("interest_words")]
-                                public long[]? InterestWordIdList { get; set; }
+                                public List<long>? InterestWordIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置兴趣分类 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("ad_tag")]
                                 [System.Text.Json.Serialization.JsonPropertyName("ad_tag")]
-                                public long[]? AdTagIdList { get; set; }
+                                public List<long>? AdTagIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置兴趣关键词 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("interest_tags")]
                                 [System.Text.Json.Serialization.JsonPropertyName("interest_tags")]
-                                public long[]? InterestTagIdList { get; set; }
+                                public List<long>? InterestTagIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 App 行为类型。
@@ -279,21 +279,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_category")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_category")]
-                                public long[]? AppCategoryIdList { get; set; }
+                                public List<long>? AppCategoryIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 App ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("app_ids")]
                                 [System.Text.Json.Serialization.JsonPropertyName("app_ids")]
-                                public long[]? AppIdList { get; set; }
+                                public List<long>? AppIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置抖音达人互动用户行为类型列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aweme_fan_behaviors")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aweme_fan_behaviors")]
-                                public string[]? AwemeFanBehaviorList { get; set; }
+                                public List<string>? AwemeFanBehaviorList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置抖音达人互动行为时间范围类型。
@@ -307,21 +307,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aweme_fan_categories")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aweme_fan_categories")]
-                                public long[]? AwemeFanCategoryIdList { get; set; }
+                                public List<long>? AwemeFanCategoryIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置抖音达人 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aweme_fan_accounts")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aweme_fan_accounts")]
-                                public long[]? AwemeFanAccountIdList { get; set; }
+                                public List<long>? AwemeFanAccountIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置账号粉丝相似人群列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("aweme_fans_numbers")]
                                 [System.Text.Json.Serialization.JsonPropertyName("aweme_fans_numbers")]
-                                public int[]? AwemeFanNumberList { get; set; }
+                                public List<int>? AwemeFanNumberList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置过滤高活跃用户类型。
@@ -356,21 +356,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("flow_package")]
                                 [System.Text.Json.Serialization.JsonPropertyName("flow_package")]
-                                public long[]? FlowPackageIdIncludedList { get; set; }
+                                public List<long>? FlowPackageIdIncludedList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置排除定向流量包 ID 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("exclude_flow_package")]
                                 [System.Text.Json.Serialization.JsonPropertyName("exclude_flow_package")]
-                                public long[]? FlowPackageIdExcluedList { get; set; }
+                                public List<long>? FlowPackageIdExcluedList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置平台列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("platform")]
                                 [System.Text.Json.Serialization.JsonPropertyName("platform")]
-                                public string[]? PlatformList { get; set; }
+                                public List<string>? PlatformList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置最低安卓版本。
@@ -391,49 +391,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("device_type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("device_type")]
-                                public string[]? DeviceTypeList { get; set; }
+                                public List<string>? DeviceTypeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置网络类型列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("ac")]
                                 [System.Text.Json.Serialization.JsonPropertyName("ac")]
-                                public string[]? NetworkTypeList { get; set; }
+                                public List<string>? NetworkTypeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置运营商列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("carrier")]
                                 [System.Text.Json.Serialization.JsonPropertyName("carrier")]
-                                public string[]? CarrierList { get; set; }
+                                public List<string>? CarrierList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置新用户使用头条的时间类型列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("activate_type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("activate_type")]
-                                public string[]? ActivateTypeList { get; set; }
+                                public List<string>? ActivateTypeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置文章分类列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("article_category")]
                                 [System.Text.Json.Serialization.JsonPropertyName("article_category")]
-                                public string[]? ArticleCategoryList { get; set; }
+                                public List<string>? ArticleCategoryList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置手机品牌列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("device_brand")]
                                 [System.Text.Json.Serialization.JsonPropertyName("device_brand")]
-                                public string[]? DeviceBrandList { get; set; }
+                                public List<string>? DeviceBrandList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置手机价格区间（单位：元）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("launch_price")]
                                 [System.Text.Json.Serialization.JsonPropertyName("launch_price")]
-                                public int[]? LaunchPriceRange { get; set; }
+                                public List<int>? LaunchPriceRange { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置是否启用智能放量。
@@ -449,7 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("auto_extend_targets")]
                                 [System.Text.Json.Serialization.JsonPropertyName("auto_extend_targets")]
-                                public string[]? AutoExtendTargetList { get; set; }
+                                public List<string>? AutoExtendTargetList { get; set; }
                             }
 
                             public class CustomAction
@@ -556,7 +556,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("inventory_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("inventory_type")]
-                        public string[]? InventoryType { get; set; }
+                        public List<string>? InventoryType { get; set; }
 
                         /// <summary>
                         /// 获取或设置优选广告位。
@@ -584,35 +584,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("track_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("track_url")]
-                        public string[]? TrackUrl { get; set; }
+                        public List<string>? TrackUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置点击监测链接列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("action_track_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("action_track_url")]
-                        public string[]? ActionTrackUrl { get; set; }
+                        public List<string>? ActionTrackUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频有效播放监测链接列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_play_effective_track_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_play_effective_track_url")]
-                        public string[]? VideoPlayEffectiveTrackUrl { get; set; }
+                        public List<string>? VideoPlayEffectiveTrackUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频播完监测链接列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_play_done_track_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_play_done_track_url")]
-                        public string[]? VideoPlayDoneTrackUrl { get; set; }
+                        public List<string>? VideoPlayDoneTrackUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频播放监测链接列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_play_track_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_play_track_url")]
-                        public string[]? VideoPlayTrackUrl { get; set; }
+                        public List<string>? VideoPlayTrackUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置数据发送方式。
@@ -682,7 +682,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("external_actions")]
                         [System.Text.Json.Serialization.JsonPropertyName("external_actions")]
-                        public string[]? ExternalActionList { get; set; }
+                        public List<string>? ExternalActionList { get; set; }
 
                         /// <summary>
                         /// 获取或设置深度转化目标。
@@ -731,7 +731,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("game_package_thumbnail_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("game_package_thumbnail_ids")]
-                        public string[]? GamePackageThumbnailIdList { get; set; }
+                        public List<string>? GamePackageThumbnailIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置门店推广投放内容。
@@ -759,7 +759,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("advertiser_store_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("advertiser_store_ids")]
-                        public long[]? StoreIdList { get; set; }
+                        public List<long>? StoreIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置产品目录 ID。
@@ -794,21 +794,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_categories")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_categories")]
-                        public long[]? DPACategoryIdList { get; set; }
+                        public List<long>? DPACategoryIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置 DPA 商品 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_products")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_products")]
-                        public long[]? DPAProductIdList { get; set; }
+                        public List<long>? DPAProductIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置 DPA 商品投放条件列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_product_target")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_product_target")]
-                        public Types.DPAProductTarget[]? DPAProductTargetList { get; set; }
+                        public List<Types.DPAProductTarget>? DPAProductTargetList { get; set; }
 
                         /// <summary>
                         /// 获取或设置 DPA 广告类型。
@@ -829,7 +829,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_external_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_external_urls")]
-                        public string[]? DPAExternalUrlList { get; set; }
+                        public List<string>? DPAExternalUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置链接类型。
@@ -899,7 +899,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_thumbnails")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_thumbnails")]
-                        public string[]? AppThumbnailIdList { get; set; }
+                        public List<string>? AppThumbnailIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置直达链接类型。
@@ -920,7 +920,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dpa_open_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("dpa_open_urls")]
-                        public string[]? DPAOpenUrlList { get; set; }
+                        public List<string>? DPAOpenUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置落地页检测参数。
@@ -1028,21 +1028,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("asset_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("asset_ids")]
-                        public long[]? AssetIdList { get; set; }
+                        public List<long>? AssetIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置包含人群包列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("include_custom_actions")]
                         [System.Text.Json.Serialization.JsonPropertyName("include_custom_actions")]
-                        public Types.CustomAction[]? CustomActionIncludedList { get; set; }
+                        public List<Types.CustomAction>? CustomActionIncludedList { get; set; }
 
                         /// <summary>
                         /// 获取或设置排除人群包列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("exclude_custom_actions")]
                         [System.Text.Json.Serialization.JsonPropertyName("exclude_custom_actions")]
-                        public Types.CustomAction[]? CustomActionExcludedList { get; set; }
+                        public List<Types.CustomAction>? CustomActionExcludedList { get; set; }
 
                         /// <summary>
                         /// 获取或设置 DPA 商品重定向推荐类型。
@@ -1176,14 +1176,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public static Types.Advertising[] AdvertisingList { get; set; } = default!;
+                public List<Types.Advertising>? AdvertisingList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("page_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("page_info")]
-                public static Types.Pagination Pagination { get; set; } = default!;
+                public Types.Pagination? Pagination { get; set; }
             }
         }
     }

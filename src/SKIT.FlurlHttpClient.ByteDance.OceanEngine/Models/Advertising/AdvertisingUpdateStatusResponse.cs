@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("error_message")]
                         [System.Text.Json.Serialization.JsonPropertyName("error_message")]
-                        public string ErrorMessage { get; set; } = default!;
+                        public string? ErrorMessage { get; set; }
                     }
                 }
 
@@ -34,14 +34,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ad_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("ad_ids")]
-                public long[] SuccessAdvertisingId { get; set; } = default!;
+                public List<long>? SuccessAdvertisingId { get; set; }
 
                 /// <summary>
                 /// 获取或设置失败列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("errors")]
                 [System.Text.Json.Serialization.JsonPropertyName("errors")]
-                public Types.Failure[] FailureList { get; set; } = default!;
+                public List<Types.Failure>? FailureList { get; set; }
             }
         }
     }

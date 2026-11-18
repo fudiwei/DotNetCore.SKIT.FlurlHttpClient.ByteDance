@@ -27,14 +27,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_mode")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_mode")]
-                public string ImageMode { get; set; } = string.Empty;
+                public string? ImageMode { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-                public IList<string>? ImageIdList { get; set; }
+                public List<string>? ImageIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置封面图片 ID。
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_data_list")]
-                public IList<Types.TemplateData>? TemplateDataList { get; set; }
+                public List<Types.TemplateData>? TemplateDataList { get; set; }
             }
 
             public class Title
@@ -79,14 +79,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creative_word_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("creative_word_ids")]
-                public IList<long>? CreativeWordIdList { get; set; }
+                public List<long>? CreativeWordIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置 DPA 词包 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("dpa_dict_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("dpa_dict_ids")]
-                public IList<long>? DPADictionaryIdList { get; set; }
+                public List<long>? DPADictionaryIdList { get; set; }
             }
 
             public class Component
@@ -96,7 +96,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("component_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("component_id")]
-                public string ComponentId { get; set; } = string.Empty;
+                public string? ComponentId { get; set; }
             }
 
             public class Creative
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_mode")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_mode")]
-                public string ImageMode { get; set; } = string.Empty;
+                public string? ImageMode { get; set; }
 
                 /// <summary>
                 /// 获取或设置创意标题。
@@ -137,21 +137,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creative_word_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("creative_word_ids")]
-                public IList<long>? CreativeWordIdList { get; set; }
+                public List<long>? CreativeWordIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置 DPA 词包 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("dpa_dict_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("dpa_dict_ids")]
-                public IList<long>? DPADictionaryIdList { get; set; }
+                public List<long>? DPADictionaryIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-                public IList<string>? ImageIdList { get; set; }
+                public List<string>? ImageIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置封面图片 ID。
@@ -179,7 +179,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_data_list")]
-                public IList<Types.TemplateData>? TemplateDataList { get; set; }
+                public List<Types.TemplateData>? TemplateDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置基础试玩素材信息。
@@ -216,7 +216,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("dpa_video_task_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("dpa_video_task_ids")]
-                public IList<string>? DPAVideoTaskIdList { get; set; }
+                public List<string>? DPAVideoTaskIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置第三方 ID。
@@ -230,7 +230,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("component_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("component_info")]
-                public IList<Component>? ComponentList { get; set; }
+                public List<Component>? ComponentList { get; set; }
             }
 
             public class PromotionCard
@@ -247,21 +247,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_selling_points")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_selling_points")]
-                public IList<string> ProductSellingPointList { get; set; } = new List<string>();
+                public List<string>? ProductSellingPointList { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_description")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_description")]
-                public string ProductDescription { get; set; } = string.Empty;
+                public string? ProductDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置推广卡片的行动号召。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("call_to_action")]
                 [System.Text.Json.Serialization.JsonPropertyName("call_to_action")]
-                public string CallToAction { get; set; } = string.Empty;
+                public string? CallToAction { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否使用智能优选。
@@ -275,7 +275,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_image_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_image_id")]
-                public string ProductImageId { get; set; } = string.Empty;
+                public string? ProductImageId { get; set; }
             }
 
             public class CommerceCard
@@ -285,21 +285,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("call_to_action")]
                 [System.Text.Json.Serialization.JsonPropertyName("call_to_action")]
-                public string ImageId { get; set; } = string.Empty;
+                public string? ImageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置产品名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
-                public string Source { get; set; } = string.Empty;
+                public string? Source { get; set; }
 
                 /// <summary>
                 /// 获取或设置产品卖点。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("title")]
                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                public string Title { get; set; } = string.Empty;
+                public string? Title { get; set; }
             }
         }
 
@@ -322,7 +322,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("inventory_type")]
         [System.Text.Json.Serialization.JsonPropertyName("inventory_type")]
-        public IList<string>? InventoryType { get; set; }
+        public List<string>? InventoryType { get; set; }
 
         /// <summary>
         /// 获取或设置优选广告位。
@@ -375,28 +375,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_list")]
         [System.Text.Json.Serialization.JsonPropertyName("image_list")]
-        public IList<Types.Material>? MaterialList { get; set; }
+        public List<Types.Material>? MaterialList { get; set; }
 
         /// <summary>
         /// 获取或设置标题列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("title_list")]
         [System.Text.Json.Serialization.JsonPropertyName("title_list")]
-        public IList<Types.Title>? TitleList { get; set; }
+        public List<Types.Title>? TitleList { get; set; }
 
         /// <summary>
         /// 获取或设置组件列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("component_info")]
         [System.Text.Json.Serialization.JsonPropertyName("component_info")]
-        public IList<Types.Component>? ComponentList { get; set; }
+        public List<Types.Component>? ComponentList { get; set; }
 
         /// <summary>
         /// 获取或设置自定义素材列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("creatives")]
         [System.Text.Json.Serialization.JsonPropertyName("creatives")]
-        public IList<Types.Creative>? CreativeList { get; set; }
+        public List<Types.Creative>? CreativeList { get; set; }
 
         /// <summary>
         /// 获取或设置广告来源。
@@ -507,7 +507,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("commerce_cards")]
         [System.Text.Json.Serialization.JsonPropertyName("commerce_cards")]
-        public IList<Types.CommerceCard>? CommerceCardList { get; set; }
+        public List<Types.CommerceCard>? CommerceCardList { get; set; }
 
         /// <summary>
         /// 获取或设置副标题。
@@ -549,7 +549,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ad_keywords")]
         [System.Text.Json.Serialization.JsonPropertyName("ad_keywords")]
-        public IList<string>? AdKeywordList { get; set; }
+        public List<string>? AdKeywordList { get; set; }
 
         /// <summary>
         /// 获取或设置展示监测链接。

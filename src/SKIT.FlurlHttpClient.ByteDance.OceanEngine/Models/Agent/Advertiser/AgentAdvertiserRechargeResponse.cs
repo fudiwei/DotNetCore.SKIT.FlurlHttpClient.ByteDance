@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 [Newtonsoft.Json.JsonProperty("transaction_seq")]
                 [System.Text.Json.Serialization.JsonPropertyName("transaction_seq")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
-                public string TransactionSequenceNumber { get; set; } = default!;
+                public string? TransactionSequenceNumber { get; set; }
             }
         }
     }

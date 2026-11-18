@@ -51,6 +51,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public TData Data { get; set; } = default!;
+        public TData? Data { get; set; }
     }
 }

@@ -10,8 +10,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// 获取或设置应用 ID。如果不指定将使用构造 <see cref="OceanEngineClient"/> 时的 <see cref="OceanEngineClientOptions.AppId"/> 参数。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_id")]
+        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-        public long? AppId { get; set; }
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
+        public string? AppId { get; set; }
 
         /// <summary>
         /// 获取或设置应用密钥。如果不指定将使用构造 <see cref="OceanEngineClient"/> 时的 <see cref="OceanEngineClientOptions.AppSecret"/> 参数。

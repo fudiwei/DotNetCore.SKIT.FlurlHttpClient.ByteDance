@@ -23,14 +23,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                                 [Newtonsoft.Json.JsonProperty("attachment_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attachment_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
-                                public string AttachmentId { get; set; } = default!;
+                                public string? AttachmentId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置附件图片 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("image_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("image_url")]
-                                public string ImageUrl { get; set; } = default!;
+                                public string? ImageUrl { get; set; }
                             }
                         }
 
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_list")]
-                        public Types.Image[] ImageList { get; set; } = default!;
+                        public List<Types.Image>? ImageList { get; set; }
                     }
                 }
 
@@ -92,7 +92,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Qualification[] QualificationList { get; set; } = default!;
+                public List<Types.Qualification>? QualificationList { get; set; }
             }
         }
     }

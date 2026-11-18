@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("ids")]
-                public IList<long>? AdvertisingIdList { get; set; }
+                public List<long>? AdvertisingIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告计划名称。
@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pricing_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("pricing_list")]
-                public IList<string>? PricingTypeList { get; set; }
+                public List<string>? PricingTypeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告计划状态。
@@ -80,7 +80,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fields")]
         [System.Text.Json.Serialization.JsonPropertyName("fields")]
-        public IList<string>? FieldList { get; set; }
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置分页页码。

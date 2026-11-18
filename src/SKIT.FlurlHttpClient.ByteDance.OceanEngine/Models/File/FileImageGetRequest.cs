@@ -15,21 +15,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_ids")]
-                public IList<string>? ImageIdList { get; set; }
+                public List<string>? ImageIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置素材 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("material_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("material_ids")]
-                public IList<long>? MaterialIdList { get; set; }
+                public List<long>? MaterialIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 MD5 哈希值列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("signatures")]
                 [System.Text.Json.Serialization.JsonPropertyName("signatures")]
-                public IList<string>? SignatureList { get; set; }
+                public List<string>? SignatureList { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片宽度（单位：像素）。
@@ -50,7 +50,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ratio")]
                 [System.Text.Json.Serialization.JsonPropertyName("ratio")]
-                public IList<double>? RatioList { get; set; }
+                public List<decimal>? RatioList { get; set; }
 
                 /// <summary>
                 /// 获取或设置开始时间字符串（格式：yyyy-MM-dd）。

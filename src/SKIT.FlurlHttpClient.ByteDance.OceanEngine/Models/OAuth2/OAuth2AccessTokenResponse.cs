@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("access_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-                public string AccessToken { get; set; } = default!;
+                public string? AccessToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置凭证有效期（单位：秒）。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-                public string RefreshToken { get; set; } = default!;
+                public string? RefreshToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置刷新令牌有效期（单位：秒）。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("advertiser_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("advertiser_ids")]
-                public long[] AdvertiserIdList { get; set; } = default!;
+                public List<long>? AdvertiserIdList { get; set; }
             }
         }
     }

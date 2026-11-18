@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public IList<Types.AdBudget> AdBudgetList { get; set; } = new List<Types.AdBudget>();
+        public List<Types.AdBudget>? AdBudgetList { get; set; }
     }
 }

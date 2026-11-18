@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("advertiser_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("advertiser_name")]
-                        public string AdvertiserName { get; set; } = default!;
+                        public string? AdvertiserName { get; set; }
 
                         /// <summary>
                         /// 获取或设置账号角色。
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Advertiser[] AdvertiserList { get; set; } = default!;
+                public List<Types.Advertiser>? AdvertiserList { get; set; }
             }
         }
     }

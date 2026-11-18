@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("transfer_type")]
         [System.Text.Json.Serialization.JsonPropertyName("transfer_type")]
-        public string TransferType { get; set; } = string.Empty;
+        public string? TransferType { get; set; }
 
         /// <summary>
         /// 获取或设置转账金额（单位：元）。

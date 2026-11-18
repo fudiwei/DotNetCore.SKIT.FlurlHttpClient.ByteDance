@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string ImageId { get; set; } = default!;
+                        public string? ImageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置封面宽度（单位：像素）。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("url")]
                         [System.Text.Json.Serialization.JsonPropertyName("url")]
-                        public string ImageUrl { get; set; } = default!;
+                        public string? ImageUrl { get; set; }
                     }
                 }
 
@@ -48,14 +48,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置封面列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Cover[]? CoverList { get; set; }
+                public List<Types.Cover>? CoverList { get; set; }
             }
         }
     }

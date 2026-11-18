@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ad_qualification_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("ad_qualification_type")]
-                public string ImageType { get; set; } = string.Empty;
+                public string? ImageType { get; set; }
 
                 /// <summary>
                 /// 获取或设置资质图片 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualification_img_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualification_img_id")]
-                public string ImageId { get; set; } = string.Empty;
+                public string? ImageId { get; set; }
             }
         }
 
@@ -37,13 +37,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("qualification_type")]
         [System.Text.Json.Serialization.JsonPropertyName("qualification_type")]
-        public string QualificationType { get; set; } = string.Empty;
+        public string? QualificationType { get; set; }
 
         /// <summary>
         /// 获取或设置资质列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("qualifications")]
         [System.Text.Json.Serialization.JsonPropertyName("qualifications")]
-        public IList<Types.Qualification> QualificationList { get; set; } = new List<Types.Qualification>();
+        public List<Types.Qualification>? QualificationList { get; set; }
     }
 }

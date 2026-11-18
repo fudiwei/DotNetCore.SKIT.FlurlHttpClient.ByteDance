@@ -3,7 +3,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
     /// <summary>
     /// <para>表示 [GET] /2/file/video/ad/get 接口的响应。</para>
     /// </summary>
-    public class FileVideoAdvertiserGetResponse : OceanEngineResponse<FileVideoGetResponse.Types.Data>
+    public class FileVideoAdvertiserGetResponse : OceanEngineResponse<FileVideoAdvertiserGetResponse.Types.Data>
     {
         public static class Types
         {
@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频大小（单位：字节）。
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("url")]
                         [System.Text.Json.Serialization.JsonPropertyName("url")]
-                        public string VideoUrl { get; set; } = default!;
+                        public string? VideoUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频时长（单位：秒）。
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("format")]
                         [System.Text.Json.Serialization.JsonPropertyName("format")]
-                        public string Format { get; set; } = default!;
+                        public string? Format { get; set; }
 
                         /// <summary>
                         /// 获取或设置素材 ID。
@@ -74,14 +74,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("signature")]
                         [System.Text.Json.Serialization.JsonPropertyName("signature")]
-                        public string Signature { get; set; } = default!;
+                        public string? Signature { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频封面 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poster_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("poster_url")]
-                        public string PosterUrl { get; set; } = default!;
+                        public string? PosterUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频比特率（单位：bps）。
@@ -101,14 +101,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("page_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("page_info")]
-                public Types.Pagination Pagination { get; set; } = default!;
+                public Types.Pagination? Pagination { get; set; }
             }
         }
     }

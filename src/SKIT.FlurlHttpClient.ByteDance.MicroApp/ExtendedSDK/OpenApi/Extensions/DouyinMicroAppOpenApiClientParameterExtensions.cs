@@ -1,5 +1,3 @@
-using Flurl;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 {
     public static class DouyinMicroAppOpenApiClientParameterExtensions

@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Settings
 {
     public class Credentials

@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// </summary>
         [Newtonsoft.Json.JsonProperty("log_id")]
         [System.Text.Json.Serialization.JsonPropertyName("log_id")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
         public virtual string? LogId { get; set; }
 
         /// <summary>

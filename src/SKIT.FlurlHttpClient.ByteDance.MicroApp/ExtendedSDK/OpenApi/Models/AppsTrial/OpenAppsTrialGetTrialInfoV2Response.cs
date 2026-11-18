@@ -17,27 +17,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// 获取或设置是否被限制进阶能力。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("is_capability_limited")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("is_capability_limited")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool IsCapabilityLimited { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否被限制支付额度。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("is_payment_restricted")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("is_payment_restricted")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool IsPaymentRestricted { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否被限制流量。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("is_traffic_limited")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("is_traffic_limited")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool IsTrafficLimited { get; set; }
                     }
 
@@ -77,9 +77,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// 获取或设置是否处于试运营期。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("is_trial")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("is_trial")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                 public bool IsTrial { get; set; }
 
                 /// <summary>

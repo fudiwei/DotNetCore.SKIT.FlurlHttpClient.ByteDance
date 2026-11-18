@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("bind_taskid")]
         [System.Text.Json.Serialization.JsonPropertyName("bind_taskid")]
-        public string? BindTaskId { get; set; } 
+        public string? BindTaskId { get; set; }
     }
 }

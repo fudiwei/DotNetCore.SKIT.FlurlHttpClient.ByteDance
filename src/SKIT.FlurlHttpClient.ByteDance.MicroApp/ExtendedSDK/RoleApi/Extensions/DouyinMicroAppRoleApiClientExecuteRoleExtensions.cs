@@ -1,9 +1,3 @@
-using System;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using Flurl.Http;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
 {
     using SKIT.FlurlHttpClient;
@@ -21,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthEntityUploadMaterialResponse> ExecuteAuthEntityUploadMaterialAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityUploadMaterialRequest request,CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthEntityUploadMaterialResponse> ExecuteAuthEntityUploadMaterialAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityUploadMaterialRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -82,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthEntityByPartnerResponse> ExecuteAuthEntityByPartnerAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityByPartnerRequest request,CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthEntityByPartnerResponse> ExecuteAuthEntityByPartnerAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityByPartnerRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
@@ -107,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<Models.AuthEntityBySelfResponse> ExecuteAuthEntityBySelfAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityBySelfRequest request,CancellationToken cancellationToken = default)
+        public static async Task<Models.AuthEntityBySelfResponse> ExecuteAuthEntityBySelfAsync(this DouyinMicroAppRoleApiClient client, Models.AuthEntityBySelfRequest request, CancellationToken cancellationToken = default)
         {
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));

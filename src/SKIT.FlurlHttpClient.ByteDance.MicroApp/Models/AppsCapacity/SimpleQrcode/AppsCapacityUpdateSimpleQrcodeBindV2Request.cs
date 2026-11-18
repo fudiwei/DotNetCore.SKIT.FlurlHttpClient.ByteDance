@@ -37,9 +37,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// 获取或设置是否独占该链接作为前缀。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("exclusive_qr_url_prefix")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("exclusive_qr_url_prefix")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
         public bool IsPrefixExclusive { get; set; }
     }
 }

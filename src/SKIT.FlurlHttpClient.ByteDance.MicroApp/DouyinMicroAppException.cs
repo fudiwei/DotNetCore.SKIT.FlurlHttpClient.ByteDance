@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     /// <summary>

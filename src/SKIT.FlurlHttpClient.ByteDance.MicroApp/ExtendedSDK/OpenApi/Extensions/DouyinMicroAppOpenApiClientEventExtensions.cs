@@ -1,4 +1,3 @@
-using System;
 using System.Xml.Linq;
 
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
@@ -150,7 +149,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
 
             [Newtonsoft.Json.JsonProperty("TimeStamp")]
             [System.Text.Json.Serialization.JsonPropertyName("TimeStamp")]
-            [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+            [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
             [System.Xml.Serialization.XmlElement("TimeStamp")]
             public string TimestampString { get; set; } = default!;
 

@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
 {
     /// <summary>
@@ -85,18 +83,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// 获取或设置是否已提审。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("has_audit")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("has_audit")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool HasAudited { get; set; }
 
                         /// <summary>
                         /// 获取或设置截图 URL 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("screenshot")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedStringArrayWithCommaSplitConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedStringArrayWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("screenshot")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedStringArrayWithCommaSplitConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedStringArrayWithCommaSplitConverter))]
                         public string[]? ScreenshotUrlList { get; set; }
                     }
 
@@ -113,9 +111,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// 获取或设置是否已发布。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("has_publish")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("has_publish")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool HasPublished { get; set; }
 
                         /// <summary>
@@ -197,9 +195,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// 获取或设置是否已下架。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("has_down")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("has_down")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                         public bool HasDowned { get; set; }
 
                         /// <summary>

@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
     using SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi;
@@ -42,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
             {
                 string callbackRawJson = "{\"FromUserName\":\"ByteDanceMicroApp\",\"CreateTime\":\"2019-01-14 12:45:10\",\"Event\":\"PUSH\",\"MsgType\":\"Ticket\",\"Ticket\":\"8c0da4968b0d1e28acbc1d738a56607d\"}";
                 string callbackSecretJson = "{\"Nonce\":\"1372623149\",\"TimeStamp\":\"1409659813\",\"Encrypt\":\"OheJ/nrK5Liim/H6TjL6ufUBwoxRP4sy2e0mS7IO47WESBIHgIXdGLwhs8iDCgMsPe0I78q2jUNtdO7w6+Vg+gtmEm5mbcljWv18Fs5hw91+hwID9uOGNC5ICeLGMMXW0uaGtqn8XgwXxtROAK220M5oRYK9MvmIoU/Q7Tvx1xnP4Jfunww+2mYqgD3YIYvTFVReX+3BeRuBh7zOK7tRbdqXaPbK/Cko0Vnt82rikDmItgXLUtJC4wxJohhXKZGb/12oFq6L/Uy+CtLqVLZMIH4uxlb5cO9exYfArVocZTc=\",\"MsgSignature\":\"e51e71c9087fc57ae1cf8eb25c0d1ba837db5b7c\"}";
-                
+
                 var options = new DouyinMicroAppOpenApiClientOptions()
                 {
                     ComponentAppId = "tt5823bf96d3bd56c7",
@@ -112,7 +110,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 var client = new DouyinMicroAppOpenApiClient(options);
                 var eventModel1 = client.DeserializeEventFromXml<ComponentPushTicketEvent>(callbackRawXml);
                 var eventModel2 = client.DeserializeEventFromXml<ComponentPushTicketEvent>(callbackSecretXml);
-                
+
                 Assert.True(client.VerifyEventSignatureFromXml(callbackSecretXml));
                 Assert.Equal("ByteDanceMicroApp", eventModel1.FromUserName);
                 Assert.Equal("ByteDanceMicroApp", eventModel2.FromUserName);

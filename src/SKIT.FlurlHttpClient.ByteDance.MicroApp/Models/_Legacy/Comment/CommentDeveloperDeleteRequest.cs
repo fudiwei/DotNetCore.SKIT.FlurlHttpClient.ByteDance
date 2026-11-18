@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// 获取或设置回复 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reply_id")]
-        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberConverter))]
+        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("reply_id")]
         [System.Text.Json.Serialization.JsonNumberHandling(System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString | System.Text.Json.Serialization.JsonNumberHandling.WriteAsString)]
         public long ReplyId { get; set; }

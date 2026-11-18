@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
 {
     /// <summary>
@@ -75,6 +73,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("enterprise")]
         [System.Text.Json.Serialization.JsonPropertyName("enterprise")]
-        public Types.Enterprise? Enterprise { get; set; } 
+        public Types.Enterprise? Enterprise { get; set; }
     }
 }

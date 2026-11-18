@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
@@ -123,9 +121,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// 获取或设置创建时间。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("create_time")]
-                        [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Internal.CstDateTimeOffsetConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(MicroApp.Converters.NewtonsoftJson.CSTDateTimeOffsetConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Internal.CstDateTimeOffsetConverter))]
+                        [System.Text.Json.Serialization.JsonConverter(typeof(MicroApp.Converters.SystemTextJson.CSTDateTimeOffsetConverter))]
                         public DateTimeOffset CreateTime { get; set; }
 
                         /// <summary>

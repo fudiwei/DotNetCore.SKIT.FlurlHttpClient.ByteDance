@@ -1,26 +1,14 @@
-## SKIT.FlurlHttpClient.ByteDance.MicroApp
+# SKIT.FlurlHttpClient.ByteDance.MicroApp
 
-[![GitHub Stars](https://img.shields.io/github/stars/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance?logo=github&label=Stars)](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance) [![GitHub Forks](https://img.shields.io/github/forks/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance?logo=github&label=Forks)](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance) [![NuGet Download](https://img.shields.io/nuget/dt/SKIT.FlurlHttpClient.ByteDance.MicroApp.svg?sanitize=true&label=Downloads)](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.MicroApp) [![License](https://img.shields.io/github/license/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance?label=License)](https://mit-license.org/)
+基于 Flurl.Http 的抖音小程序开放平台 API 客户端 SDK。
 
-基于 `Flurl.Http` 的抖音小程序开放平台 HTTP API SDK。
+## 功能特性
 
----
+- 封装抖音小程序开放平台 API。
+- 提供了 RSA、AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
+- 提供了回调通知事件解析等扩展方法。
+- 配合 [SKIT.FlurlHttpClient.ByteDance.DouyinOpen](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.DouyinOpen) 模块，可对接抖音开放平台。
 
-### 【功能特性】
+## 开发文档
 
--   基于抖音小程序开放平台 API 封装。
--   提供了抖音小程序所需的 RSA、AES、MD5、SHA-1、HMAC-SHA-256 等算法工具类。
--   提供了解析回调通知事件等扩展方法。
--   配合 [SKIT.FlurlHttpClient.ByteDance.DouyinOpen](https://www.nuget.org/packages/SKIT.FlurlHttpClient.ByteDance.DouyinOpen) 模块，可无缝对接抖音开放平台。
-
----
-
-### 【开发文档】
-
-[点此查看](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance)。
-
----
-
-### 【更新日志】
-
-[点此查看](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance/blob/main/CHANGELOG.md)。
+请前往[项目主页](https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance)查看。

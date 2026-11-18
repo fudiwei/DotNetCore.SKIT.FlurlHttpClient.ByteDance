@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("consume_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("consume_desc")]
-                public string? ConsumeDescription { get; set; } 
+                public string? ConsumeDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用链接。

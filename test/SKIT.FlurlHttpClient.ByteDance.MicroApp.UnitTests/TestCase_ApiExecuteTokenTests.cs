@@ -1,6 +1,3 @@
-using System.Threading.Tasks;
-using Xunit;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 {
     public class TestCase_ApiExecuteTokenTests

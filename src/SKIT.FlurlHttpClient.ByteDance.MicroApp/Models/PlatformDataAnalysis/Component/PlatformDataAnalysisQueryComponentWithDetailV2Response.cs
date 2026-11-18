@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("ItemId")]
                                 [System.Text.Json.Serialization.JsonPropertyName("ItemId")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string ItemId { get; set; } = default!;
 
                                 /// <summary>
@@ -171,7 +171,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("RoomId")]
                                 [System.Text.Json.Serialization.JsonPropertyName("RoomId")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string LiveRoomId { get; set; } = default!;
 
                                 /// <summary>

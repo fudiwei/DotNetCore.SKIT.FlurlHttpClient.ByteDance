@@ -65,7 +65,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("nick_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                public string? Nickname { get; set; } 
+                public string? Nickname { get; set; }
 
                 /// <summary>
                 /// 获取或设置加密头像 URL。

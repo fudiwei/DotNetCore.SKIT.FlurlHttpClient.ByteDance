@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// </summary>
         [Newtonsoft.Json.JsonProperty("EventTime")]
         [System.Text.Json.Serialization.JsonPropertyName("EventTime")]
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
         [System.Xml.Serialization.XmlElement("EventTime", IsNullable = true)]
         public virtual string? EventTimeString { get; set; }
     }

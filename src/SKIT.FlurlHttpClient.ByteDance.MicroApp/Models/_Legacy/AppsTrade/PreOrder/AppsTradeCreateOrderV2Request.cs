@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
@@ -94,9 +92,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// 获取或设置标签列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("labels")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.StringifiedStringListWithPipeSplitConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedStringListWithPipeSplitConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("labels")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.StringifiedStringListWithPipeSplitConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedStringListWithPipeSplitConverter))]
                 public IList<string>? LabelList { get; set; }
 
                 /// <summary>

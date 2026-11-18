@@ -34,18 +34,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// 获取或设置开播时间字符串（格式：HHmm）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("live_time")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalStringConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("live_time")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
                 public string? LiveTimeString { get; set; }
 
                 /// <summary>
                 /// 获取或设置开播日期字符串（格式：yyyyMMdd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("live_date")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalStringConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("live_date")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
                 public string? LiveDateString { get; set; }
 
                 /// <summary>

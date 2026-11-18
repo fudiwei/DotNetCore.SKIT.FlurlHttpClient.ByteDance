@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         /// </summary>
         [Newtonsoft.Json.JsonProperty("err")]
         [System.Text.Json.Serialization.JsonPropertyName("err")]
-        public virtual ByteDanceMicroAppRoleApiResponseError? Error { get; set; }
+        public virtual DouyinMicroAppRoleApiResponseError? Error { get; set; }
 
         /// <summary>
         /// 获取一个值，该值指示调用抖音小程序 API 是否成功。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.RoleApi
         }
     }
 
-    public class ByteDanceMicroAppRoleApiResponseError
+    public class DouyinMicroAppRoleApiResponseError
     {
         /// <summary>
         /// 获取抖音小程序 API 返回的错误码。

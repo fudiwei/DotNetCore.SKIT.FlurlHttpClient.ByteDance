@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>
@@ -64,9 +62,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// 获取或设置订单支付时间。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_time")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.ISO8601DateTimeOffsetConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_time")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.ISO8601DateTimeOffsetConverter))]
                 public DateTimeOffset? PayTime { get; set; }
             }
         }

@@ -1,6 +1,3 @@
-using System;
-using System.Text;
-
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
 {
     /// <summary>

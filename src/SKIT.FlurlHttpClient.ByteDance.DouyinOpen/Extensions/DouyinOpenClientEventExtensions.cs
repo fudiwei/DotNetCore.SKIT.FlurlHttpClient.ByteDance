@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
     using SKIT.FlurlHttpClient.Primitives;

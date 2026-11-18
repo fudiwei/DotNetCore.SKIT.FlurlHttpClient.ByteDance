@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
@@ -25,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                     {
                                     }
                                 }
-                                
+
                                 /// <summary>
                                 /// 获取或设置商品 ID。
                                 /// </summary>
@@ -80,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("creator_account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("creator_account_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string? CreatorAccountId { get; set; }
 
                                 /// <summary>
@@ -88,7 +86,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("owner_account_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("owner_account_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string? OwnerAccountId { get; set; }
 
                                 /// <summary>

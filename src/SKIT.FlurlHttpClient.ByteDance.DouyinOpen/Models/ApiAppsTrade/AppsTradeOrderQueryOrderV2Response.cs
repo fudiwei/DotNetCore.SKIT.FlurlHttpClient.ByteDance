@@ -97,9 +97,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// 获取或设置短视频或直播间 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_id")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalStringReadOnlyConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringReadOnlyConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("item_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                 public string ItemId { get; set; } = default!;
 
                 /// <summary>

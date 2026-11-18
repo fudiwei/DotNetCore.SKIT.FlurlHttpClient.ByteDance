@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
@@ -93,9 +91,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                                 /// 获取或设置是否是测试版。
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("is_test")]
-                                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalBooleanConverter))]
+                                                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericBooleanConverter))]
                                                 [System.Text.Json.Serialization.JsonPropertyName("is_test")]
-                                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalBooleanConverter))]
+                                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericBooleanConverter))]
                                                 public bool? IsTest { get; set; }
                                             }
                                         }

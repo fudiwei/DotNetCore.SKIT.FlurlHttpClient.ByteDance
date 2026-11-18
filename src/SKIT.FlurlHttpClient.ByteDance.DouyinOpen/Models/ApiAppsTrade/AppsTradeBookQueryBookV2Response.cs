@@ -72,9 +72,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                                 /// 获取或设置门店 ID。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("poi_id")]
-                                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.NumericalStringReadOnlyConverter))]
+                                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.NumericStringReadOnlyConverter))]
                                 [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.NumericalStringReadOnlyConverter))]
+                                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
                                 public string POIId { get; set; } = default!;
 
                                 /// <summary>

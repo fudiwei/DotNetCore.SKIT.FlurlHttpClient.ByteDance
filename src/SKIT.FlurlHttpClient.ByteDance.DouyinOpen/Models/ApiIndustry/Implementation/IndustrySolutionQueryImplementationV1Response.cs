@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 [Newtonsoft.Json.JsonProperty("extension_ability_impl_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("extension_ability_impl_list")]
                 public Types.AbilityImplementation[]? ExtensionAbilityImplementationList { get; set; }
-                
+
                 /// <summary>
                 /// 获取或设置消息配置实现列表。
                 /// </summary>

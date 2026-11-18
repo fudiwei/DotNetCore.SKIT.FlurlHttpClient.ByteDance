@@ -29,9 +29,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// 获取或设置团长 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("agent_id")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.TextualNumberReadOnlyConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("agent_id")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.TextualNumberReadOnlyConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
                 public long? AgentId { get; set; }
 
                 /// <summary>

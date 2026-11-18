@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
@@ -33,6 +31,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("accept_type")]
         [System.Text.Json.Serialization.JsonPropertyName("accept_type")]
-        public int? AcceptType { get; set; } 
+        public int? AcceptType { get; set; }
     }
 }

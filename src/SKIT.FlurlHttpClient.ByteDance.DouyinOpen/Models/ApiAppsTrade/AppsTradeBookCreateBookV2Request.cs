@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
@@ -198,6 +196,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("markup_info")]
         [System.Text.Json.Serialization.JsonPropertyName("markup_info")]
-        public Types.MarkupInfo? MarkupInfo { get; set; } 
+        public Types.MarkupInfo? MarkupInfo { get; set; }
     }
 }

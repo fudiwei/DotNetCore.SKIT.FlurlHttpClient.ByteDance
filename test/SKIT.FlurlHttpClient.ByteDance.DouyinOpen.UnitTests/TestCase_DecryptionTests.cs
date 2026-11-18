@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests
 {
     public class TestCase_DecryptionTests

@@ -1,6 +1,4 @@
-using System;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
 {

@@ -1,6 +1,3 @@
-using System;
-using System.Text;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 {
     using SKIT.FlurlHttpClient.Primitives;
@@ -34,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen
                     msg += $"&http_body={requestBody}";
 
                 string sign = Utilities.SHA256Utility.Hash(msg).Value!;
-                bool valid =  string.Equals(sign, requestSignature, StringComparison.OrdinalIgnoreCase);
+                bool valid = string.Equals(sign, requestSignature, StringComparison.OrdinalIgnoreCase);
 
                 if (valid)
                     result = ErroredResult.Ok();

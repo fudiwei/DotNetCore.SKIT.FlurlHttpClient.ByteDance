@@ -1,8 +1,3 @@
-using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Web;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Utilities
 {
     using SKIT.FlurlHttpClient;

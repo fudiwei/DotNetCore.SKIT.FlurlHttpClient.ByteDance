@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
 {
     /// <summary>
@@ -35,9 +33,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Models
                 /// 获取或设置刷新时间。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("active_time")]
-                [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.Common.BasicDateTimeOffsetConverter))]
+                [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.ISO8601DateTimeOffsetConverter))]
                 [System.Text.Json.Serialization.JsonPropertyName("active_time")]
-                [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.Common.BasicDateTimeOffsetConverter))]
+                [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.ISO8601DateTimeOffsetConverter))]
                 public DateTimeOffset ActiveTime { get; set; }
 
                 /// <summary>

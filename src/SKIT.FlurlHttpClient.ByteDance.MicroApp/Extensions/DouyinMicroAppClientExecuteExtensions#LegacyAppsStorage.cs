@@ -2,16 +2,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static partial class DouyinMicroAppClientExecuteExtensions
     {
+        /// <summary>
+        ///
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/user-login-sign ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/other/user-login-sign ]]>
+        /// </para>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private static T PreprocessRequestForAppsStorage<T>(DouyinMicroAppClient client, ref T request)
             where T : Models.AppsStorageRequestBase, new()
         {
             if (client is null) throw new ArgumentNullException(nameof(request));
             if (request is null) throw new ArgumentNullException(nameof(request));
-
-            /*
-             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/other/user-login-sign/
-             * REF: https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/other/user-login-sign/
-             */
 
             if (request.Signature is null)
             {

@@ -2,6 +2,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Interceptors
 {
     using SKIT.FlurlHttpClient.Internal;
 
+    /// <summary>
+    /// 
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/interaction/develop/server/live-room-scope/signature-guide ]]>
+    /// </para>
+    /// </summary>
     internal class DouyinMicroAppWebcastRequestSigningInterceptor : HttpInterceptor
     {
         private readonly string _appId;

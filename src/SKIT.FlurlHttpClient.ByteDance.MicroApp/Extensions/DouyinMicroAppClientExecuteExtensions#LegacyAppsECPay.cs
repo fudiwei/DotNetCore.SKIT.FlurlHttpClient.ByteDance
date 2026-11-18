@@ -2,15 +2,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static partial class DouyinMicroAppClientExecuteExtensions
     {
+        /// <summary>
+        ///
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/open-capacity/business-monetization/guaranteed-payment/TE ]]>
+        /// </para>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="extraParams"></param>
+        /// <returns></returns>
         private static T PreprocessRequestForAppsECPay<T>(DouyinMicroAppClient client, ref T request, Dictionary<string, string?>? extraParams = null)
             where T : Models.AppsECPayRequestBase, new()
         {
             if (client is null) throw new ArgumentNullException(nameof(request));
             if (request is null) throw new ArgumentNullException(nameof(request));
-
-            /*
-             * REF: https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/server/ecpay/TE/#%E4%B8%89%E3%80%81%E7%AD%BE%E5%90%8D-demo
-             */
 
             if (request.Signature is null)
             {

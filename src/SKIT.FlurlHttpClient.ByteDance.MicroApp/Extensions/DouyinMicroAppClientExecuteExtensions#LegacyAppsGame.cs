@@ -2,6 +2,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 {
     public static partial class DouyinMicroAppClientExecuteExtensions
     {
+        /// <summary>
+        ///
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/api/javascript-api/payment/payment-signature-generation-algorithm ]]>
+        /// </para>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private static T PreprocessRequestForAppsGameWallet<T>(DouyinMicroAppClient client, ref T request)
             where T : Models.AppsGameWalletRequestBase, new()
         {

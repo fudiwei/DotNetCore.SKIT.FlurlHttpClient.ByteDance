@@ -87,6 +87,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.CancelId, "cancel_id");
+
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "cancellations", request.CancelId, "approve");
 
@@ -109,8 +111,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.CancelId, "cancel_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "cancellations", request.CancelId, "reject");
+                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "cancellations", request.CancelId!, "reject");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundRejectCancellationResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -133,8 +137,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "return_refund", request.ApiVersion, "orders", request.OrderId, "aftersale_eligibility");
+                .CreateFlurlRequest(request, HttpMethod.Get, "return_refund", request.ApiVersion, "orders", request.OrderId!, "aftersale_eligibility");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundGetOrderAftersaleEligibilityResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -227,8 +233,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ReturnId, "return_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "returns", request.ReturnId, "approve");
+                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "returns", request.ReturnId!, "approve");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundApproveReturnResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -249,8 +257,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ReturnId, "return_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "returns", request.ReturnId, "reject");
+                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "returns", request.ReturnId!, "reject");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundRejectReturnResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -271,8 +281,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ReturnId, "return_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "return_refund", request.ApiVersion, "returns", request.ReturnId, "records");
+                .CreateFlurlRequest(request, HttpMethod.Get, "return_refund", request.ApiVersion, "returns", request.ReturnId!, "records");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundGetReturnRecordsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

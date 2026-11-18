@@ -63,8 +63,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ActivityId, "activity_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "promotion", request.ApiVersion, "activities", request.ActivityId);
+                .CreateFlurlRequest(request, HttpMethod.Get, "promotion", request.ApiVersion, "activities", request.ActivityId!);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionGetActivityDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -85,8 +87,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ActivityId, "activity_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Put, "promotion", request.ApiVersion, "activities", request.ActivityId);
+                .CreateFlurlRequest(request, HttpMethod.Put, "promotion", request.ApiVersion, "activities", request.ActivityId!);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionUpdateActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -107,8 +111,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ActivityId, "activity_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "promotion", request.ApiVersion, "activities", request.ActivityId, "deactivate");
+                .CreateFlurlRequest(request, HttpMethod.Post, "promotion", request.ApiVersion, "activities", request.ActivityId!, "deactivate");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionDeactivateActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -129,8 +135,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ActivityId, "activity_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Put, "promotion", request.ApiVersion, "activities", request.ActivityId, "products");
+                .CreateFlurlRequest(request, HttpMethod.Put, "promotion", request.ApiVersion, "activities", request.ActivityId!, "products");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionUpdateActivityProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -151,8 +159,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ActivityId, "activity_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Delete, "promotion", request.ApiVersion, "activities", request.ActivityId, "products");
+                .CreateFlurlRequest(request, HttpMethod.Delete, "promotion", request.ApiVersion, "activities", request.ActivityId!, "products");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionDeleteActivityProductsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -199,8 +209,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.CouponId, "coupon_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "promotion", request.ApiVersion, "coupons", request.CouponId);
+                .CreateFlurlRequest(request, HttpMethod.Get, "promotion", request.ApiVersion, "coupons", request.CouponId!);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.PromotionGetCouponDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

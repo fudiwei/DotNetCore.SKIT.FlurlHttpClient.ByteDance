@@ -139,8 +139,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ConversationId, "conversation_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "customer_service", request.ApiVersion, "conversations", request.ConversationId, "messages");
+                .CreateFlurlRequest(request, HttpMethod.Post, "customer_service", request.ApiVersion, "conversations", request.ConversationId!, "messages");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.CustomerServiceCreateConversationMessageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -161,8 +163,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ConversationId, "conversation_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "customer_service", request.ApiVersion, "conversations", request.ConversationId, "messages")
+                .CreateFlurlRequest(request, HttpMethod.Get, "customer_service", request.ApiVersion, "conversations", request.ConversationId!, "messages")
                 .SetQueryParam("locale", request.Locale)
                 .SetQueryParam("sort_field", request.SortField)
                 .SetQueryParam("sort_order", request.SortOrder)
@@ -221,8 +225,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.ConversationId, "conversation_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "customer_service", request.ApiVersion, "conversations", request.ConversationId, "messages", "read");
+                .CreateFlurlRequest(request, HttpMethod.Post, "customer_service", request.ApiVersion, "conversations", request.ConversationId!, "messages", "read");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.CustomerServiceReadConversationMessageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

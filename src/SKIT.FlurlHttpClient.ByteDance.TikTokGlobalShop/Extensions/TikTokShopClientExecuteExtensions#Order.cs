@@ -67,8 +67,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "order", request.ApiVersion, "orders", request.OrderId, "price_detail");
+                .CreateFlurlRequest(request, HttpMethod.Get, "order", request.ApiVersion, "orders", request.OrderId!, "price_detail");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.OrderGetOrderPriceDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -112,8 +114,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "order", request.ApiVersion, "orders", request.OrderId, "external_orders")
+                .CreateFlurlRequest(request, HttpMethod.Get, "order", request.ApiVersion, "orders", request.OrderId!, "external_orders")
                 .SetQueryParam("platform", request.Platform);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.OrderGetExternalOrdersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

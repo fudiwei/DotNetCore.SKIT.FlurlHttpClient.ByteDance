@@ -18,8 +18,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "finance", request.ApiVersion, "orders", request.OrderId, "statement_transactions");
+                .CreateFlurlRequest(request, HttpMethod.Get, "finance", request.ApiVersion, "orders", request.OrderId!, "statement_transactions");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FinanceGetOrderStatementTransactionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -40,8 +42,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.StatementId, "statement_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "finance", request.ApiVersion, "statements", request.StatementId, "statement_transactions")
+                .CreateFlurlRequest(request, HttpMethod.Get, "finance", request.ApiVersion, "statements", request.StatementId!, "statement_transactions")
                 .SetQueryParam("sort_field", request.SortField)
                 .SetQueryParam("sort_order", request.SortOrder)
                 .SetQueryParam("page_size", request.PageSize)

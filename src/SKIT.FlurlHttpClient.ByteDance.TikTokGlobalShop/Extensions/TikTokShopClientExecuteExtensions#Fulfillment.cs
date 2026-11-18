@@ -67,8 +67,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "orders", request.OrderId, "tracking");
+                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "orders", request.OrderId!, "tracking");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentGetOrderTrackingResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -89,8 +91,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId, "shipping_services", "query");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId!, "shipping_services", "query");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentSearchOrderShippingServicesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -111,8 +115,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId, "split");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId!, "split");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentSplitOrderResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -133,8 +139,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId, "packages");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId!, "packages");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentUpdateOrderPackagesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -155,8 +163,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.OrderId, "order_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId, "shipping_info", "update");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "orders", request.OrderId!, "shipping_info", "update");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentUpdateOrderShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -225,8 +235,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.PackageId, "package_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId);
+                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId!);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentGetPackageDetailResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -247,8 +259,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.PackageId, "package_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId, "shipping_documents");
+                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId!, "shipping_documents");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentGetPackageShippingDocumentsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -269,8 +283,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.PackageId, "package_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId, "handover_time_slots");
+                .CreateFlurlRequest(request, HttpMethod.Get, "fulfillment", request.ApiVersion, "packages", request.PackageId!, "handover_time_slots");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentGetPackageHandoverTimeSlotsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -291,8 +307,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.PackageId, "package_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "packages", request.PackageId, "shipping_info", "update");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "packages", request.PackageId!, "shipping_info", "update");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentUpdatePackageShippingInfoResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -313,8 +331,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.PackageId, "package_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "packages", request.PackageId, "ship");
+                .CreateFlurlRequest(request, HttpMethod.Post, "fulfillment", request.ApiVersion, "packages", request.PackageId!, "ship");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.FulfillmentShipPackageResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

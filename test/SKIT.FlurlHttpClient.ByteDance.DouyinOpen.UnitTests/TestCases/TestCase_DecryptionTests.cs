@@ -1,4 +1,4 @@
-namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests
+namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.UnitTests.TestCases
 {
     public class TestCase_DecryptionTests
     {

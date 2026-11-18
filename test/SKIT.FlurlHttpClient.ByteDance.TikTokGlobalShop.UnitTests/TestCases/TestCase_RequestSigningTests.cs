@@ -2,14 +2,14 @@ using System.Net;
 using System.Net.Http;
 using Flurl;
 
-namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
+namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests.TestCases
 {
     public partial class TestCase_RequestSigningTests
     {
-        [Fact(DisplayName = "测试用例：即时配送请求签名")]
+        [Fact(DisplayName = "测试用例：即时配送相关请求签名")]
         public async Task TestRequestSignature()
         {
-            var mockClient = TikTokShopClientBuilder
+            using var mockClient = TikTokShopClientBuilder
                 .Create(new TikTokShopClientOptions()
                 {
                     AppKey = "68xu9ks5p4i8",
@@ -19,6 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                 .Build();
 
             // Sign GET request
+            await Assert.MultipleAsync(async () =>
             {
                 var request = new Models.EventGetWebhooksRequest()
                 {
@@ -26,12 +27,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     Timestamp = 1696909648,
                     ApiVersion = 202309
                 };
-                var response = await mockClient.ExecuteEventGetWebhooksAsync(request);
+                var response = await mockClient.ExecuteEventGetWebhooksAsync(request, TestContext.Current.CancellationToken);
 
-                Assert.Equal("ed58e1b5e59865c22a7b828c1cab65007441f43cc91a6cb2f2cdc638e0995a37", response.GetRawHeaders().GetFirstValueOrEmpty(MOCK_HEADER_NAME), ignoreCase: true);
-            }
+                Assert.Equal("ed58e1b5e59865c22a7b828c1cab65007441f43cc91a6cb2f2cdc638e0995a37", response.GetRawHeaders().GetFirstValueOrEmpty(MOCK_SIGN_HEADER_NAME), ignoreCase: true);
+            });
 
             // Sign non-GET request
+            await Assert.MultipleAsync(async () =>
             {
                 var request = new Models.EventUpdateWebhookRequest()
                 {
@@ -41,16 +43,16 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     EventType = "PACKAGE_UPDATE",
                     WebhookUrl = "https://partner.tiktokshop.com"
                 };
-                var response = await mockClient.ExecuteEventUpdateWebhookAsync(request);
+                var response = await mockClient.ExecuteEventUpdateWebhookAsync(request, TestContext.Current.CancellationToken);
 
-                Assert.Equal("701dd6deb2389fe4c469b89bd37fc56f96a6da6afeb4d01c9077a65169752fa7", response.GetRawHeaders().GetFirstValueOrEmpty(MOCK_HEADER_NAME), ignoreCase: true);
-            }
+                Assert.Equal("701dd6deb2389fe4c469b89bd37fc56f96a6da6afeb4d01c9077a65169752fa7", response.GetRawHeaders().GetFirstValueOrEmpty(MOCK_SIGN_HEADER_NAME), ignoreCase: true);
+            });
         }
     }
 
     partial class TestCase_RequestSigningTests
     {
-        private const string MOCK_HEADER_NAME = "Mock-Sign";
+        private const string MOCK_SIGN_HEADER_NAME = "Mock-Sign";
 
         public class MockHttpClient : HttpClient
         {
@@ -76,7 +78,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests
                     Content = new ByteArrayContent(Array.Empty<byte>()),
                 };
                 var queryParams = new QueryParamCollection(request.RequestUri?.Query);
-                resp.Headers.TryAddWithoutValidation(MOCK_HEADER_NAME, string.Join(",", queryParams.GetAll("sign")));
+                resp.Headers.TryAddWithoutValidation(MOCK_SIGN_HEADER_NAME, string.Join(",", queryParams.GetAll("sign")));
                 return Task.FromResult(resp);
             }
         }

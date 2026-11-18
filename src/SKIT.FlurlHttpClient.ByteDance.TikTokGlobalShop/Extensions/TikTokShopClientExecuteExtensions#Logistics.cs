@@ -62,8 +62,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.WarehouseId, "warehouse_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "logistics", request.ApiVersion, "warehouses", request.WarehouseId, "delivery_options");
+                .CreateFlurlRequest(request, HttpMethod.Get, "logistics", request.ApiVersion, "warehouses", request.WarehouseId!, "delivery_options");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.LogisticsGetWarehouseDeliveryOptionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -84,8 +86,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (client is null) throw new ArgumentNullException(nameof(client));
             if (request is null) throw new ArgumentNullException(nameof(request));
 
+            Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.DeliveryOptionId, "delivery_option_id");
+
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "logistics", request.ApiVersion, "delivery_options", request.DeliveryOptionId, "shipping_providers");
+                .CreateFlurlRequest(request, HttpMethod.Get, "logistics", request.ApiVersion, "delivery_options", request.DeliveryOptionId!, "shipping_providers");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.LogisticsGetDeliveryOptionShippingProvidersResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

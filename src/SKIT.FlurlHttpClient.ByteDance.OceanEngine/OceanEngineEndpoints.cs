@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine
 {
     /// <summary>
     /// 巨量引擎开放平台 API 接口域名。

@@ -1,4 +1,4 @@
-﻿## 如何生成 JSBridge 初始化时所需的参数及签名？
+## 如何生成 JSBridge 初始化时所需的参数及签名？
 
 ---
 
@@ -24,6 +24,6 @@ var paramMap = client.GenerateParametersForJSBridgeConfig(response.Data.Ticket, 
 
 ### 【附】生成参数相关扩展方法速查表：
 
--   生成客户端 JSBridge `sdk.config` 所需的参数字典：`GenerateParametersForJSBridgeConfig`
+- 生成客户端 JSBridge `sdk.config` 所需的参数字典：`GenerateParametersForJSBridgeConfig`
 
--   生成抖音获取授权临时票据的 URL：`GenerateParameterizedUrlForPlatformOAuthConnect`
+- 生成抖音获取授权临时票据的 URL：`GenerateParameterizedUrlForPlatformOAuthConnect`

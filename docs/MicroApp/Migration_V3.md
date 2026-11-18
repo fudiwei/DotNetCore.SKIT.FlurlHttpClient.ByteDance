@@ -1,4 +1,4 @@
-﻿## v3.x 迁移指南
+## v3.x 迁移指南
 
 v3.x 版本是一个主要版本，其中包括了一些破坏性的变化。从 v2.x 升级到 v3.x 之前，请仔细阅读本文档。
 
@@ -78,16 +78,16 @@ var client = new DouyinMicroAppClient(options);
 
 公共组件中提供了如下的异常类型：
 
--   `CommonException`：异常基类。
--   `CommonHttpException`：执行 HTTP 请求时引发的异常。
--   `CommonTimeoutException`：超时引发的异常。
--   `CommonSerializationException`：序列化或反序列化时引发的异常。
--   `CommonInterceptorCallException`：拦截器引发的异常。
+- `CommonException`：异常基类。
+- `CommonHttpException`：执行 HTTP 请求时引发的异常。
+- `CommonTimeoutException`：超时引发的异常。
+- `CommonSerializationException`：序列化或反序列化时引发的异常。
+- `CommonInterceptorCallException`：拦截器引发的异常。
 
 模块内更加细化的异常信息，统一由 `DouyinMicroAppException`（即原 `ByteDanceMicroAppException`）异常类型包装，但废弃并移除了其派生的异常类型：
 
--   `ByteDanceMicroAppRequestTimeoutException`
--   `ByteDanceMicroAppEventSerializationException`
+- `ByteDanceMicroAppRequestTimeoutException`
+- `ByteDanceMicroAppEventSerializationException`
 
 ### 基础类型：`SKIT.FlurlHttpClient.Primitives.EncodedeString`
 

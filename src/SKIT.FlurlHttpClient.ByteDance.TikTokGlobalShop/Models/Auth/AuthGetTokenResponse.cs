@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("access_token_expire_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("access_token_expire_in")]
-                public int AccessTokenExpireTimestamp { get; set; }
+                public long AccessTokenExpireTimestamp { get; set; }
 
                 /// <summary>
                 /// 获取或设置刷新令牌。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_token_expire_in")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_token_expire_in")]
-                public int RefreshTokenExpireTimestamp { get; set; }
+                public long RefreshTokenExpireTimestamp { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户唯一标识。

@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
     /// <para>表示 [GET] /2/business_platform/partner_organization/list 接口的响应。</para>

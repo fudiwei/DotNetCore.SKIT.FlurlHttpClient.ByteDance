@@ -1,15 +1,15 @@
-﻿# SKIT.FlurlHttpClient.ByteDance.DouyinOpen
+# SKIT.FlurlHttpClient.ByteDance.DouyinOpen
 
-基于 `Flurl.Http` 的[抖音开放平台](https://open.douyin.com/platform) HTTP API SDK。
+基于 `Flurl.Http` 的[抖音开放平台](https://open.douyin.com/platform) API 客户端 SDK。
 
 ---
 
 ## 功能
 
--   基于抖音开放平台 API 封装。
--   提供了抖音开放平台 API 所需的 AES、MD5、SHA-1、SHA-256、HMAC-SHA-256 等算法工具类。
--   提供了生成授权链接、生成 JSBridge 签名、解析回调通知事件、解密手机号码等扩展方法。
--   配合 [SKIT.FlurlHttpClient.ByteDance.MicroApp](../MicroApp/README.md) 模块，可无缝对接抖音小程序开放平台。
+- 封装抖音开放平台 API。
+- 提供了 AES、MD5、SHA-1、SHA-256、HMAC-SHA-256 等算法工具类。
+- 提供了授权链接生成、JSBridge 签名、回调通知事件解析、手机号码解密等扩展方法。
+- 配合 [SKIT.FlurlHttpClient.ByteDance.MicroApp](../MicroApp/README.md) 模块，可对接抖音小程序开放平台。
 
 ---
 
@@ -72,36 +72,36 @@ else
 
 ## 基础用法
 
--   ⭐ [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
+- ⭐ [如何快速找到需要调用的 API 模型类名 / 方法名？](./Basic_ModelDefinition.md)
 
--   [如何解析 Webhook 事件？](./Basic_EventDeserialization.md)
+- [如何解析 Webhook 事件？](./Basic_EventDeserialization.md)
 
--   [如何验证 Webhook 事件签名？](./Basic_EventSignatureVerification.md)
+- [如何验证 Webhook 事件签名？](./Basic_EventSignatureVerification.md)
 
--   ⭐ [如何生成 JSBridge 初始化时所需的参数及签名？](./Basic_Parameters.md)
+- ⭐ [如何生成 JSBridge 初始化时所需的参数及签名？](./Basic_Parameters.md)
 
--   [如何解密用户公开信息中的手机号码？](./Basic_MobileNumberDecryption.md)
+- [如何解密用户公开信息中的手机号码？](./Basic_MobileNumberDecryption.md)
 
--   [如何解密抖音生活服务 SPI 接口中的加密字段？](./Basic_GoodLifeSPIDecryption.md)
+- [如何解密抖音生活服务 SPI 接口中的加密字段？](./Basic_GoodLifeSPIDecryption.md)
 
--   [如何自定义额外的 API 接口？](./Basic_Extensions.md)
+- [如何自定义额外的 API 接口？](./Basic_Extensions.md)
 
 ---
 
 ## 高级技巧
 
--   [配置 JSON 序列化器](./Advanced_JsonSerializer.md)
+- [配置 JSON 序列化器](./Advanced_JsonSerializer.md)
 
--   [配置 HttpClient](./Advanced_HttpClient.md)
+- [配置 HttpClient](./Advanced_HttpClient.md)
 
--   [使用拦截器](./Advanced_Interceptor.md)
+- [使用拦截器](./Advanced_Interceptor.md)
 
--   [避免内存泄漏](./Advanced_Dispose.md)
+- [避免内存泄漏](./Advanced_Dispose.md)
 
--   [与 `IHttpClientFactory` 集成](./Advanced_HttpClientFactory.md)
+- [与 `IHttpClientFactory` 集成](./Advanced_HttpClientFactory.md)
 
 ---
 
 ## 迁移指南
 
--   [v3.x 迁移指南](./Migration_V3.md)
+- [v3.x 迁移指南](./Migration_V3.md)

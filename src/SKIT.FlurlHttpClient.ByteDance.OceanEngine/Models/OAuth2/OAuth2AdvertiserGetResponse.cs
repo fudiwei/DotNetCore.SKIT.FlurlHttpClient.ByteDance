@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
     /// <para>表示 [GET] /oauth2/advertiser/get 接口的响应。</para>

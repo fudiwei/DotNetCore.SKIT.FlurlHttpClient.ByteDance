@@ -1,4 +1,4 @@
-﻿namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
+namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>
     /// <para>表示 [POST] /2/agent/advertiser/recharge 接口的请求。</para>

@@ -1,4 +1,4 @@
-﻿/* @codestyle-disable no-jsonable-property-in-request-get */
+/* @codestyle-disable no-jsonable-property-in-request-get */
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Models
 {
     /// <summary>

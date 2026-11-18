@@ -15,7 +15,7 @@ An API client SDK for [TikTok Shop Open Platform](https://partner.tiktokshop.com
 ## Get Started
 
 > [!IMPORTANT]
-> The documents are applicable to version 3.x of this SDK. If you are using version 2.x, please move to the archived branches on GitHub/Gitee.
+> The documents are applicable to version 3.x of this SDK. If you are using other versions, please move to the archived branches on GitHub/Gitee.
 
 ### Installation:
 

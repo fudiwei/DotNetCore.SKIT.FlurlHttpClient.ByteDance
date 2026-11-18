@@ -2,9 +2,6 @@
 
     <PropertyGroup>
         <TargetFrameworks>net472; net6.0</TargetFrameworks>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <NullableReferenceTypes>true</NullableReferenceTypes>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
@@ -12,11 +9,9 @@
         <None Remove=".gitignore" />
         <Content Include="appsettings.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </Content>
         <Content Include="appsettings.*.json" Condition="'$(Configuration)' == 'Debug'">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>
         <Content Include="ModelSamples/**/*.json" />
     </ItemGroup>

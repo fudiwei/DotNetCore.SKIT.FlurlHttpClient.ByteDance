@@ -2,23 +2,16 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net472; net6.0</TargetFrameworks>
-		<LangVersion>latest</LangVersion>
-		<Nullable>enable</Nullable>
-		<NullableReferenceTypes>true</NullableReferenceTypes>
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Remove=".gitignore" />
-		<None Remove="ModelSamples\ApiAppsAuth\AppsAuthGetOpenIdByCV1Request.json" />
-		<None Remove="ModelSamples\ApiAppsAuth\AppsAuthGetOpenIdByCV1Response.json" />
         <Content Include="appsettings.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </Content>
         <Content Include="appsettings.*.json" Condition="'$(Configuration)' == 'Debug'">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>
         <Content Include="ModelSamples/**/*.json" />
         <Content Include="EventSamples/**/*.json" />

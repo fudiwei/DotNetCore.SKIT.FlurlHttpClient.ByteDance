@@ -26,14 +26,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("business_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("business_name")]
-                        public string BusinessName { get; set; } = default!;
+                        public string? BusinessName { get; set; }
 
                         /// <summary>
                         /// 获取或设置国家代码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("country_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                        public string CountryCode { get; set; } = default!;
+                        public string? CountryCode { get; set; }
                     }
                 }
 
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("advertisers")]
                 [System.Text.Json.Serialization.JsonPropertyName("advertisers")]
-                public Types.Advertiser[] AdvertiserList { get; set; } = default!;
+                public List<Types.Advertiser>? AdvertiserList { get; set; }
             }
         }
     }

@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("status")]
         [System.Text.Json.Serialization.JsonPropertyName("status")]
-        public string Status { get; set; } = default!;
+        public string? Status { get; set; }
 
         /// <summary>
         /// 获取或设置客户端票据。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("client_ticket")]
         [System.Text.Json.Serialization.JsonPropertyName("client_ticket")]
-        public string ClientTicket { get; set; } = default!;
+        public string? ClientTicket { get; set; }
 
         /// <summary>
         /// 获取或设置重定向 URL。

@@ -1,12 +1,12 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     /// <summary>
-    /// 一个 TikTok v2 API HTTP 客户端。
+    /// 一个 TikTok Developer APIv2 HTTP 客户端。
     /// </summary>
     public class TikTokV2Client : CommonClientBase, ICommonClient
     {
         /// <summary>
-        /// 获取当前客户端使用的 TikTok API 凭证。
+        /// 获取当前客户端使用的 TikTok Developer API 凭证。
         /// </summary>
         public Settings.Credentials Credentials { get; }
 

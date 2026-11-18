@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> FieldList { get; set; } = new List<string>();
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置数据格式。
@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data_format")]
         [System.Text.Json.Serialization.JsonPropertyName("data_format")]
-        public string DataFormat { get; set; } = "text";
+        public string? DataFormat { get; set; } = "text";
 
         /// <summary>
         /// 获取或设置数据分类列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_selection_list")]
         [System.Text.Json.Serialization.JsonPropertyName("category_selection_list")]
-        public IList<string> CategorySelectionList { get; set; } = new List<string>();
+        public List<string>? CategorySelectionList { get; set; }
 
         public UserDataAddRequest SetCompleteFields()
         {

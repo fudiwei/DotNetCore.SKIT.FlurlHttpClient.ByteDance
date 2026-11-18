@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("grant_type")]
         [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
-        public string GrantType { get; set; } = "refresh_token";
+        public string? GrantType { get; set; } = "refresh_token";
 
         /// <summary>
         /// 获取或设置 TikTok ClientKey。如果不指定将使用构造 <see cref="TikTokV2Client"/> 时的 <see cref="TikTokV2ClientOptions.ClientKey"/> 参数。
@@ -33,6 +33,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refresh_token")]
         [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; } = string.Empty;
+        public string? RefreshToken { get; set; }
     }
 }

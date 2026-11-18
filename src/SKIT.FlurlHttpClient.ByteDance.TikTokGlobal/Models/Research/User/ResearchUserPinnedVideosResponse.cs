@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pinned_videos_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("pinned_videos_list")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

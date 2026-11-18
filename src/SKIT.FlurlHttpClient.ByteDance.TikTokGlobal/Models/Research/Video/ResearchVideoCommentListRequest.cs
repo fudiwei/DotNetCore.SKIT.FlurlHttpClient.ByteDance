@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> FieldList { get; set; } = new List<string>();
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID。

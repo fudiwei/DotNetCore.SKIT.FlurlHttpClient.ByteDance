@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("grant_type")]
         [System.Text.Json.Serialization.JsonPropertyName("grant_type")]
-        public string GrantType { get; set; } = "authorization_code";
+        public string? GrantType { get; set; } = "authorization_code";
 
         /// <summary>
         /// 获取或设置 TikTok ClientKey。如果不指定将使用构造 <see cref="TikTokV2Client"/> 时的 <see cref="TikTokV2ClientOptions.ClientKey"/> 参数。
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("code")]
         [System.Text.Json.Serialization.JsonPropertyName("code")]
-        public string Code { get; set; } = string.Empty;
+        public string? Code { get; set; }
 
         /// <summary>
         /// 获取或设置重定向 URL。

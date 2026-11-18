@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("publish_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("publish_id")]
-                public string PublishId { get; set; } = default!;
+                public string? PublishId { get; set; }
             }
         }
     }

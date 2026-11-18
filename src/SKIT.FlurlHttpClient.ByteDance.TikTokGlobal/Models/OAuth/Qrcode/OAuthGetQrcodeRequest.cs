@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("scope")]
         [System.Text.Json.Serialization.JsonPropertyName("scope")]
-        public string Scope { get; set; } = string.Empty;
+        public string? Scope { get; set; }
 
         /// <summary>
         /// 获取或设置自定义状态值。

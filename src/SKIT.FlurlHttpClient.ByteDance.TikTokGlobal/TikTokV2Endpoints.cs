@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     /// <summary>
-    /// TikTok v2 API 接口域名。
+    /// TikTok Developer APIv2 接口域名。
     /// </summary>
     public static class TikTokV2Endpoints
     {

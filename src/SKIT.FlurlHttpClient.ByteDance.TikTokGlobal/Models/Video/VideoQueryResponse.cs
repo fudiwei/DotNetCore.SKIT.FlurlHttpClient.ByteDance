@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("videos")]
                 [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
             }
         }
     }

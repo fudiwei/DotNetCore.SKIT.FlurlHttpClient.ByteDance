@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_ids")]
-                public IList<string>? VideoIdList { get; set; }
+                public List<string>? VideoIdList { get; set; }
             }
         }
 
@@ -23,14 +23,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> FieldList { get; set; } = new List<string>();
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置筛选条件。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("filters")]
         [System.Text.Json.Serialization.JsonPropertyName("filters")]
-        public Types.Filters Filters { get; set; } = new Types.Filters();
+        public Types.Filters? Filters { get; set; }
 
         public VideoQueryRequest SetCompleteFields()
         {

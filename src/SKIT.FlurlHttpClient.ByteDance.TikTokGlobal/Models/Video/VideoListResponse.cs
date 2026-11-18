@@ -18,35 +18,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置封面图片 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cover_image_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("cover_image_url")]
-                        public string CoverImageUrl { get; set; } = default!;
+                        public string? CoverImageUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置分享链接 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("share_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("share_url")]
-                        public string ShareUrl { get; set; } = default!;
+                        public string? ShareUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_description")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_description")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频时长（单位：秒）。
@@ -74,21 +74,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("embed_html")]
                         [System.Text.Json.Serialization.JsonPropertyName("embed_html")]
-                        public string EmbedHtml { get; set; } = default!;
+                        public string? EmbedHtml { get; set; }
 
                         /// <summary>
                         /// 获取或设置内嵌链接。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("embed_link")]
                         [System.Text.Json.Serialization.JsonPropertyName("embed_link")]
-                        public string EmbedLink { get; set; } = default!;
+                        public string? EmbedLink { get; set; }
 
                         /// <summary>
                         /// 获取或设置点赞次数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("like_count")]
                         [System.Text.Json.Serialization.JsonPropertyName("like_count")]
-                        public long LikeCount { get; set; } = default!;
+                        public long LikeCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置评论次数。
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("videos")]
                 [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

@@ -72,12 +72,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Put)
-                .WithUrl(request.UploadUrl)
+                .WithUrl(request.UploadUrl!)
                 .WithHeader(HttpHeaders.ContentType, request.ChunkContentType)
-                .WithHeader(HttpHeaders.ContentLength, request.ChunkBytes.Length)
+                .WithHeader(HttpHeaders.ContentLength, request.ChunkBytes?.Length)
                 .WithHeader(HttpHeaders.ContentRange, $"bytes {request.ChunkContentRangeStart}-{request.ChunkContentRangeEnd}/{request.VideoSize}");
 
-            using HttpContent httpContent = new ByteArrayContent(request.ChunkBytes);
+            using HttpContent httpContent = new ByteArrayContent(request.ChunkBytes ?? Array.Empty<byte>());
             return await client.SendFlurlRequestAsync<Models.PostUploadVideoResponse>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 

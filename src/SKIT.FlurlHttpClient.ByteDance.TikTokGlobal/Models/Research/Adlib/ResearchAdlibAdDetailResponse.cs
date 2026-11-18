@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                                public string Url { get; set; } = default!;
+                                public string? Url { get; set; }
                             }
 
                             public class Reach
@@ -32,14 +32,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("unique_users_seen")]
                                 [System.Text.Json.Serialization.JsonPropertyName("unique_users_seen")]
-                                public string UniqueUsersSeen { get; set; } = default!;
+                                public string? UniqueUsersSeen { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置各国家的 UV。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("unique_users_seen_by_country")]
                                 [System.Text.Json.Serialization.JsonPropertyName("unique_users_seen_by_country")]
-                                public IDictionary<string, string> UniqueUsersSeenByCountry { get; set; } = default!;
+                                public Dictionary<string, string>? UniqueUsersSeenByCountry { get; set; }
                             }
 
                             public class Rejection
@@ -49,14 +49,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reasons")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reasons")]
-                                public string[]? ReasonList { get; set; }
+                                public List<string>? ReasonList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置受影响的国家代码列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("affected_countries")]
                                 [System.Text.Json.Serialization.JsonPropertyName("affected_countries")]
-                                public string[]? AffectedCountrieCodeList { get; set; }
+                                public List<string>? AffectedCountrieCodeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置报告来源。
@@ -87,42 +87,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("first_shown_date")]
                         [System.Text.Json.Serialization.JsonPropertyName("first_shown_date")]
-                        public string FirstShownDateString { get; set; } = default!;
+                        public string? FirstShownDateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置末次曝光日期字符串（格式：yyyyMMdd）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("last_shown_date")]
                         [System.Text.Json.Serialization.JsonPropertyName("last_shown_date")]
-                        public string LastShownDateString { get; set; } = default!;
+                        public string? LastShownDateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("videos")]
                         [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                        public Types.Video[] VideoList { get; set; } = default!;
+                        public List<Types.Video>? VideoList { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("image_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("image_urls")]
-                        public string[] ImageList { get; set; } = default!;
+                        public List<string>? ImageList { get; set; }
 
                         /// <summary>
                         /// 获取或设置触客信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reach")]
                         [System.Text.Json.Serialization.JsonPropertyName("reach")]
-                        public Types.Reach Reach { get; set; } = default!;
+                        public Types.Reach? Reach { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核拒绝信息。
@@ -143,14 +143,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("profile_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("profile_url")]
-                                public string ProfileUrl { get; set; } = default!;
+                                public string? ProfileUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置用户头像 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("avatar_url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
-                                public string AvatarUrl { get; set; } = default!;
+                                public string? AvatarUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置粉丝数。
@@ -174,28 +174,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("business_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("business_name")]
-                        public string BusinessName { get; set; } = default!;
+                        public string? BusinessName { get; set; }
 
                         /// <summary>
                         /// 获取或设置国家代码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("country_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                        public string CountryCode { get; set; } = default!;
+                        public string? CountryCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置资金来源。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("paid_by")]
                         [System.Text.Json.Serialization.JsonPropertyName("paid_by")]
-                        public string PaidBy { get; set; } = default!;
+                        public string? PaidBy { get; set; }
 
                         /// <summary>
                         /// 获取或设置 TikTok 账户信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tiktok_account")]
                         [System.Text.Json.Serialization.JsonPropertyName("tiktok_account")]
-                        public Types.TikTokAccount TikTokAccount { get; set; } = default!;
+                        public Types.TikTokAccount? TikTokAccount { get; set; }
                     }
 
                     public class AdGroup
@@ -209,28 +209,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("number_of_users_targeted")]
                                 [System.Text.Json.Serialization.JsonPropertyName("number_of_users_targeted")]
-                                public string UsersTargeted { get; set; } = default!;
+                                public string? UsersTargeted { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置目标国家代码列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("country")]
                                 [System.Text.Json.Serialization.JsonPropertyName("country")]
-                                public string[] CountryCodeList { get; set; } = default!;
+                                public List<string>? CountryCodeList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置目标年龄分布字典。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("age")]
                                 [System.Text.Json.Serialization.JsonPropertyName("age")]
-                                public IDictionary<string, bool> AgeMap { get; set; } = default!;
+                                public Dictionary<string, bool>? AgeMap { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置目标性别分布字典。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("gender")]
                                 [System.Text.Json.Serialization.JsonPropertyName("gender")]
-                                public IDictionary<string, bool> GenderMap { get; set; } = default!;
+                                public Dictionary<string, bool>? GenderMap { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置受众目标。
@@ -267,7 +267,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("targeting_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("targeting_info")]
-                        public Types.Target Target { get; set; } = default!;
+                        public Types.Target? Target { get; set; }
                     }
                 }
 
@@ -276,21 +276,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ad")]
                 [System.Text.Json.Serialization.JsonPropertyName("ad")]
-                public Types.Advertisement Advertisement { get; set; } = default!;
+                public Types.Advertisement? Advertisement { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告主信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("advertiser")]
                 [System.Text.Json.Serialization.JsonPropertyName("advertiser")]
-                public Types.Advertiser Advertiser { get; set; } = default!;
+                public Types.Advertiser? Advertiser { get; set; }
 
                 /// <summary>
                 /// 获取或设置广告组信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ad_group")]
                 [System.Text.Json.Serialization.JsonPropertyName("ad_group")]
-                public Types.AdGroup AdGroup { get; set; } = default!;
+                public Types.AdGroup? AdGroup { get; set; }
             }
         }
     }

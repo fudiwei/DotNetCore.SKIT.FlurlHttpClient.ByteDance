@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置失败原因。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("publicaly_available_post_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("publicaly_available_post_id")]
-                public long[]? PublicalyAvailablePostId { get; set; }
+                public List<long>? PublicalyAvailablePostId { get; set; }
 
                 /// <summary>
                 /// 获取或设置已上传的字节大小。

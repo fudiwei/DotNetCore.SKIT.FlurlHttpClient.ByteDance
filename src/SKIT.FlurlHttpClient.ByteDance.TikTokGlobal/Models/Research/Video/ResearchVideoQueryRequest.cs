@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("operation")]
                         [System.Text.Json.Serialization.JsonPropertyName("operation")]
-                        public string Operation { get; set; } = string.Empty;
+                        public string? Operation { get; set; }
 
                         /// <summary>
                         /// 获取或设置字段名。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("field_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("field_name")]
-                        public string FieldName { get; set; } = string.Empty;
+                        public string? FieldName { get; set; }
 
                         /// <summary>
                         /// 获取或设置字段值。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("field_values")]
                         [System.Text.Json.Serialization.JsonPropertyName("field_values")]
-                        public IList<string> FieldValues { get; set; } = new List<string>();
+                        public List<string>? FieldValues { get; set; }
                     }
                 }
 
@@ -41,21 +41,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("and")]
                 [System.Text.Json.Serialization.JsonPropertyName("and")]
-                public IList<Types.Condition>? And { get; set; }
+                public List<Types.Condition>? And { get; set; }
 
                 /// <summary>
                 /// 获取或设置“或”条件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("or")]
                 [System.Text.Json.Serialization.JsonPropertyName("or")]
-                public IList<Types.Condition>? Or { get; set; }
+                public List<Types.Condition>? Or { get; set; }
 
                 /// <summary>
                 /// 获取或设置“否”条件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("not")]
                 [System.Text.Json.Serialization.JsonPropertyName("not")]
-                public IList<Types.Condition>? Not { get; set; }
+                public List<Types.Condition>? Not { get; set; }
             }
         }
 
@@ -64,28 +64,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> FieldList { get; set; } = new List<string>();
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置查询条件信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("query")]
         [System.Text.Json.Serialization.JsonPropertyName("query")]
-        public Types.Query Query { get; set; } = new Types.Query();
+        public Types.Query? Query { get; set; }
 
         /// <summary>
         /// 获取或设置开始日期字符串（格式：yyyyMMdd）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("start_date")]
         [System.Text.Json.Serialization.JsonPropertyName("start_date")]
-        public string StartDateString { get; set; } = string.Empty;
+        public string? StartDateString { get; set; }
 
         /// <summary>
         /// 获取或设置结束日期字符串（格式：yyyyMMdd）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("end_date")]
         [System.Text.Json.Serialization.JsonPropertyName("end_date")]
-        public string EndDateString { get; set; } = string.Empty;
+        public string? EndDateString { get; set; }
 
         /// <summary>
         /// 获取或设置搜索结果标识。

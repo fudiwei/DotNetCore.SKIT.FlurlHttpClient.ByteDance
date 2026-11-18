@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("min")]
                         [System.Text.Json.Serialization.JsonPropertyName("min")]
-                        public string Min { get; set; } = string.Empty;
+                        public string? Min { get; set; }
 
                         /// <summary>
                         /// 获取或设置最大值。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("max")]
                         [System.Text.Json.Serialization.JsonPropertyName("max")]
-                        public string Max { get; set; } = string.Empty;
+                        public string? Max { get; set; }
                     }
                 }
 
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("advertiser_business_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("advertiser_business_ids")]
-                public IList<long>? AdvertiserBusinessIdList { get; set; }
+                public List<long>? AdvertiserBusinessIdList { get; set; }
             }
         }
 
@@ -64,14 +64,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> FieldList { get; set; } = new List<string>();
+        public List<string>? FieldList { get; set; }
 
         /// <summary>
         /// 获取或设置过滤条件信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("filters")]
         [System.Text.Json.Serialization.JsonPropertyName("filters")]
-        public Types.Filter Filter { get; set; } = new Types.Filter();
+        public Types.Filter? Filter { get; set; }
 
         /// <summary>
         /// 获取或设置搜索词。

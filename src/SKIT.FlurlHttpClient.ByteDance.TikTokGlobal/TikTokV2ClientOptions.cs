@@ -12,19 +12,19 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         public int Timeout { get; set; } = 30 * 1000;
 
         /// <summary>
-        /// 获取或设置 TikTok API 入口点。
+        /// 获取或设置 TikTok Developer API 入口点。
         /// <para>默认值：<see cref="TikTokV2Endpoints.DEFAULT"/></para>
         /// </summary>
         public string Endpoint { get; set; } = TikTokV2Endpoints.DEFAULT;
 
         /// <summary>
-        /// 获取或设置 TikTok ClientKey。
+        /// 获取或设置 TikTok Developer ClientKey。
         /// </summary>
-        public string ClientKey { get; set; } = default!;
+        public string ClientKey { get; set; } = string.Empty;
 
         /// <summary>
-        /// 获取或设置 TikTok ClientSecret。
+        /// 获取或设置 TikTok Developer ClientSecret。
         /// </summary>
-        public string ClientSecret { get; set; } = default!;
+        public string ClientSecret { get; set; } = string.Empty;
     }
 }

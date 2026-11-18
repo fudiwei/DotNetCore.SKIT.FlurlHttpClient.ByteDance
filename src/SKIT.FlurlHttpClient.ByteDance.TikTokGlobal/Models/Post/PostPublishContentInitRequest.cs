@@ -66,14 +66,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
-                public string Source { get; set; } = string.Empty;
+                public string? Source { get; set; }
 
                 /// <summary>
                 /// 获取或设置照片图片 URL 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("photo_images")]
                 [System.Text.Json.Serialization.JsonPropertyName("photo_images")]
-                public IList<string>? PhotoImageUrlList { get; set; }
+                public List<string>? PhotoImageUrlList { get; set; }
 
                 /// <summary>
                 /// 获取或设置照片封面索引。
@@ -89,27 +89,27 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("media_type")]
         [System.Text.Json.Serialization.JsonPropertyName("media_type")]
-        public string MediaType { get; set; } = string.Empty;
+        public string? MediaType { get; set; }
 
         /// <summary>
         /// 获取或设置上传模式。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("post_mode")]
         [System.Text.Json.Serialization.JsonPropertyName("post_mode")]
-        public string PostMode { get; set; } = string.Empty;
+        public string? PostMode { get; set; }
 
         /// <summary>
         /// 获取或设置上传信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("post_info")]
         [System.Text.Json.Serialization.JsonPropertyName("post_info")]
-        public Types.PostInfo PostInfo { get; set; } = new Types.PostInfo();
+        public Types.PostInfo? PostInfo { get; set; }
 
         /// <summary>
         /// 获取或设置源文件信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("source_info")]
         [System.Text.Json.Serialization.JsonPropertyName("source_info")]
-        public Types.SourceInfo SourceInfo { get; set; } = new Types.SourceInfo();
+        public Types.SourceInfo? SourceInfo { get; set; }
     }
 }

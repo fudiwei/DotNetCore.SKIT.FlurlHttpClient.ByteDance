@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("source")]
                 [System.Text.Json.Serialization.JsonPropertyName("source")]
-                public string Source { get; set; } = string.Empty;
+                public string? Source { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频 URL。
@@ -51,6 +51,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("source_info")]
         [System.Text.Json.Serialization.JsonPropertyName("source_info")]
-        public Types.SourceInfo SourceInfo { get; set; } = new Types.SourceInfo();
+        public Types.SourceInfo? SourceInfo { get; set; }
     }
 }

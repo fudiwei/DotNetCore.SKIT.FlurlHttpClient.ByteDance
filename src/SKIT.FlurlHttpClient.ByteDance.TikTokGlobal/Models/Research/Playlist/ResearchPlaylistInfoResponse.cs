@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("playlist_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("playlist_name")]
-                public string PlaylistName { get; set; } = default!;
+                public string? PlaylistName { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频总数。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("playlist_video_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("playlist_video_ids")]
-                public long[]? VideoIdList { get; set; }
+                public List<long>? VideoIdList { get; set; }
             }
         }
     }

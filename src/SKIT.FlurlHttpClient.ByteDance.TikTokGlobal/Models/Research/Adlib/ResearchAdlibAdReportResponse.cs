@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("date")]
                         [System.Text.Json.Serialization.JsonPropertyName("date")]
-                        public string DateString { get; set; } = default!;
+                        public string? DateString { get; set; }
 
                         /// <summary>
                         /// 获取或设置次数。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("count_time_series_by_country")]
                 [System.Text.Json.Serialization.JsonPropertyName("count_time_series_by_country")]
-                public IDictionary<string, Types.DateCount[]> CountTimeSeriesByCountry { get; set; } = default!;
+                public Dictionary<string, Types.DateCount[]>? CountTimeSeriesByCountry { get; set; }
             }
         }
     }

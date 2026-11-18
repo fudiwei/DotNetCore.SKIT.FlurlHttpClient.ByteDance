@@ -14,28 +14,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creator_avatar_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("creator_avatar_url")]
-                public string CreatorAvatarUrl { get; set; } = default!;
+                public string? CreatorAvatarUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置创作者 TikTok 账号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creator_username")]
                 [System.Text.Json.Serialization.JsonPropertyName("creator_username")]
-                public string CreatorUsername { get; set; } = default!;
+                public string? CreatorUsername { get; set; }
 
                 /// <summary>
                 /// 获取或设置创作者昵称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("creator_nickname")]
                 [System.Text.Json.Serialization.JsonPropertyName("creator_nickname")]
-                public string CreatorNickname { get; set; } = default!;
+                public string? CreatorNickname { get; set; }
 
                 /// <summary>
                 /// 获取或设置隐私级别选项。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("privacy_level_options")]
                 [System.Text.Json.Serialization.JsonPropertyName("privacy_level_options")]
-                public string[] PrivacyLevelOptions { get; set; } = default!;
+                public List<string>? PrivacyLevelOptions { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否禁止二重奏。

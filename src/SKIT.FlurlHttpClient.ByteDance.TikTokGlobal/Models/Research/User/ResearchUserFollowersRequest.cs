@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("username")]
         [System.Text.Json.Serialization.JsonPropertyName("username")]
-        public string Username { get; set; } = string.Empty;
+        public string? Username { get; set; }
 
         /// <summary>
         /// 获取或设置分页游标。

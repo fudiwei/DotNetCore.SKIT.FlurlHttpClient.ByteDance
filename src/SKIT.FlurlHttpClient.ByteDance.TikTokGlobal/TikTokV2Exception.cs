@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     /// <summary>
-    /// 当调用 TikTok v2 API 出错时引发的异常。
+    /// 当调用 TikTok Developer APIv2 出错时引发的异常。
     /// </summary>
     public class TikTokV2Exception : CommonException
     {

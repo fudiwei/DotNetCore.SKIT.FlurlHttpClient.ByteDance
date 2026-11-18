@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-        public string AccessToken { get; set; } = default!;
+        public string? AccessToken { get; set; }
 
         /// <summary>
         /// 获取或设置授权用户唯一标识。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = default!;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置用户授权的作用域。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("scope")]
         [System.Text.Json.Serialization.JsonPropertyName("scope")]
-        public string Scope { get; set; } = default!;
+        public string? Scope { get; set; }
 
         /// <summary>
         /// 获取或设置凭证有效期（单位：秒）。
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refresh_token")]
         [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; } = default!;
+        public string? RefreshToken { get; set; }
 
         /// <summary>
         /// 获取或设置刷新令牌有效期（单位：秒）。
@@ -52,6 +52,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("token_type")]
         [System.Text.Json.Serialization.JsonPropertyName("token_type")]
-        public string TokenType { get; set; } = default!;
+        public string? TokenType { get; set; }
     }
 }

@@ -35,21 +35,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_format")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_format")]
-                public string DataFormat { get; set; } = default!;
+                public string? DataFormat { get; set; }
 
                 /// <summary>
                 /// 获取或设置数据分类列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_selection_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_selection_list")]
-                public string[] CategorySelectionList { get; set; } = default!;
+                public List<string>? CategorySelectionList { get; set; }
 
                 /// <summary>
                 /// 获取或设置状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
             }
         }
     }

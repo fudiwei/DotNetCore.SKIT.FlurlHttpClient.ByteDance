@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("username")]
                         [System.Text.Json.Serialization.JsonPropertyName("username")]
-                        public string Username { get; set; } = default!;
+                        public string? Username { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户展示名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("display_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("display_name")]
-                        public string DisplayName { get; set; } = default!;
+                        public string? DisplayName { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_followers")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_followers")]
-                public Types.Follower[] FollowerList { get; set; } = default!;
+                public List<Types.Follower>? FollowerList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页游标。

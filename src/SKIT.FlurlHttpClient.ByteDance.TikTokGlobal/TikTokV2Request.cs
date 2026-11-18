@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 {
     /// <summary>
-    /// TikTok v2 API 请求的基类。
+    /// TikTok Developer APIv2 请求的基类。
     /// </summary>
     public abstract class TikTokV2Request : CommonRequestBase, ICommonRequest
     {

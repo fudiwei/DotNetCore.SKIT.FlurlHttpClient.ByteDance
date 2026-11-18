@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("url")]
                                         [System.Text.Json.Serialization.JsonPropertyName("url")]
-                                        public string Url { get; set; } = default!;
+                                        public string? Url { get; set; }
                                     }
 
                                     public class Reach
@@ -36,7 +36,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("unique_users_seen")]
                                         [System.Text.Json.Serialization.JsonPropertyName("unique_users_seen")]
-                                        public string UniqueUsersSeen { get; set; } = default!;
+                                        public string? UniqueUsersSeen { get; set; }
                                     }
                                 }
 
@@ -53,42 +53,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("first_shown_date")]
                                 [System.Text.Json.Serialization.JsonPropertyName("first_shown_date")]
-                                public string FirstShownDateString { get; set; } = default!;
+                                public string? FirstShownDateString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置末次曝光日期字符串（格式：yyyyMMdd）。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("last_shown_date")]
                                 [System.Text.Json.Serialization.JsonPropertyName("last_shown_date")]
-                                public string LastShownDateString { get; set; } = default!;
+                                public string? LastShownDateString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置审核状态。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("status")]
                                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                                public string Status { get; set; } = default!;
+                                public string? Status { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置视频列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("videos")]
                                 [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                                public Types.Video[] VideoList { get; set; } = default!;
+                                public List<Types.Video>? VideoList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("image_urls")]
                                 [System.Text.Json.Serialization.JsonPropertyName("image_urls")]
-                                public string[] ImageList { get; set; } = default!;
+                                public List<string>? ImageList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置触客信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reach")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reach")]
-                                public Types.Reach Reach { get; set; } = default!;
+                                public Types.Reach? Reach { get; set; }
                             }
 
                             public class Advertiser
@@ -106,14 +106,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("business_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("business_name")]
-                                public string BusinessName { get; set; } = default!;
+                                public string? BusinessName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置资金来源。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("paid_by")]
                                 [System.Text.Json.Serialization.JsonPropertyName("paid_by")]
-                                public string PaidBy { get; set; } = default!;
+                                public string? PaidBy { get; set; }
                             }
                         }
 
@@ -122,14 +122,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ad")]
                         [System.Text.Json.Serialization.JsonPropertyName("ad")]
-                        public Types.Advertisement Advertisement { get; set; } = default!;
+                        public Types.Advertisement? Advertisement { get; set; }
 
                         /// <summary>
                         /// 获取或设置广告主信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("advertiser")]
                         [System.Text.Json.Serialization.JsonPropertyName("advertiser")]
-                        public Types.Advertiser Advertiser { get; set; } = default!;
+                        public Types.Advertiser? Advertiser { get; set; }
                     }
                 }
 
@@ -138,7 +138,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ads")]
                 [System.Text.Json.Serialization.JsonPropertyName("ads")]
-                public Types.Ad[] AdList { get; set; } = default!;
+                public List<Types.Ad>? AdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多。

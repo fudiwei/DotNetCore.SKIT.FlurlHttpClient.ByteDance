@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string UploadUrl { get; set; } = string.Empty;
+        public string? UploadUrl { get; set; }
 
         /// <summary>
         /// 获取或设置视频分片字节数组。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] ChunkBytes { get; set; } = Array.Empty<byte>();
+        public byte[]? ChunkBytes { get; set; }
 
         /// <summary>
         /// 获取或设置视频分片起始位置。

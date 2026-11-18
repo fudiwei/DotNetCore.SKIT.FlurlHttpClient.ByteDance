@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ManufacturerId { get; set; } = string.Empty;
+        public string? ManufacturerId { get; set; }
 
         /// <summary>
         /// 获取或设置制造商名称。
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("email")]
         [System.Text.Json.Serialization.JsonPropertyName("email")]
-        public string? Email { get; set; } = string.Empty;
+        public string? Email { get; set; }
 
         /// <summary>
         /// 获取或设置电话号码信息。

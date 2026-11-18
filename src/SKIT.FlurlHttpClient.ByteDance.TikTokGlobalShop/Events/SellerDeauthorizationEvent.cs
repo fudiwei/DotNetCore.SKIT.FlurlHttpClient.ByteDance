@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("message")]
                 [System.Text.Json.Serialization.JsonPropertyName("message")]
-                public string Message { get; set; } = default!;
+                public string? Message { get; set; }
             }
         }
     }

@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("manufacturer_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("manufacturer_ids")]
-        public IList<string>? ManufacturerIdList { get; set; }
+        public List<string>? ManufacturerIdList { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

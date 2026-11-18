@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("description")]
                         [System.Text.Json.Serialization.JsonPropertyName("description")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置更新时间戳。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tracking")]
                 [System.Text.Json.Serialization.JsonPropertyName("tracking")]
-                public Types.Tracking[] TrackingList { get; set; } = default!;
+                public List<Types.Tracking>? TrackingList { get; set; }
             }
         }
     }

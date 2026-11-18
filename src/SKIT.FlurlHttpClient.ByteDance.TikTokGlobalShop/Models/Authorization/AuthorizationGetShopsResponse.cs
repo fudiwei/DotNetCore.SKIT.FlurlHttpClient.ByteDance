@@ -19,42 +19,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ShopId { get; set; } = default!;
+                        public string? ShopId { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置所在地。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("region")]
                         [System.Text.Json.Serialization.JsonPropertyName("region")]
-                        public string Region { get; set; } = default!;
+                        public string? Region { get; set; }
 
                         /// <summary>
                         /// 获取或设置卖家类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("seller_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("seller_type")]
-                        public string SellerType { get; set; } = default!;
+                        public string? SellerType { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺密码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cipher")]
                         [System.Text.Json.Serialization.JsonPropertyName("cipher")]
-                        public string Cipher { get; set; } = default!;
+                        public string? Cipher { get; set; }
 
                         /// <summary>
                         /// 获取或设置店铺编码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public string Code { get; set; } = default!;
+                        public string? Code { get; set; }
                     }
                 }
 
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shops")]
                 [System.Text.Json.Serialization.JsonPropertyName("shops")]
-                public Types.Shop[] ShopList { get; set; } = default!;
+                public List<Types.Shop>? ShopList { get; set; }
             }
         }
     }

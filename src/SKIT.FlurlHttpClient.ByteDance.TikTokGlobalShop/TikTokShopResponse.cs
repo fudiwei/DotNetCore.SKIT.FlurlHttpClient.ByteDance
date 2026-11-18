@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
         public virtual string? RequestId { get; set; }
 
         /// <summary>
-        /// 获取一个值，该值指示调用 TikTok API 是否成功。
+        /// 获取一个值，该值指示调用 TikTok Shop API 是否成功。
         /// <para>
         /// （即 HTTP 状态码为 200，且 <see cref="Code"/> 值为 0）
         /// </para>

@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ActivityId { get; set; } = string.Empty;
+        public string? ActivityId { get; set; }
 
         /// <summary>
         /// 获取或设置商品 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("product_ids")]
-        public IList<string>? ProductIdList { get; set; }
+        public List<string>? ProductIdList { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sku_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("sku_ids")]
-        public IList<string>? SKUIdList { get; set; }
+        public List<string>? SKUIdList { get; set; }
     }
 }

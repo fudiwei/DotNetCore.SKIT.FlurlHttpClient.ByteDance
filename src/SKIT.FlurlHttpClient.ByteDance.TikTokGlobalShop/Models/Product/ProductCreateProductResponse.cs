@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string AttributeId { get; set; } = default!;
+                                public string? AttributeId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置属性值 ID。
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("value_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("value_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string ValueId { get; set; } = default!;
+                                public string? ValueId { get; set; }
                             }
                         }
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string SKUId { get; set; } = default!;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置外部 SKU ID。
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sales_attributes")]
                         [System.Text.Json.Serialization.JsonPropertyName("sales_attributes")]
-                        public Types.SalesAttribute[] SalesAttributeList { get; set; } = default!;
+                        public List<Types.SalesAttribute>? SalesAttributeList { get; set; }
                     }
 
                     public class Warning
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("message")]
                         [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
+                        public string? Message { get; set; }
                     }
                 }
 
@@ -82,21 +82,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("product_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ProductId { get; set; } = default!;
+                public string? ProductId { get; set; }
 
                 /// <summary>
                 /// 获取或设置 SKU 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("skus")]
                 [System.Text.Json.Serialization.JsonPropertyName("skus")]
-                public Types.SKU[] SKUList { get; set; } = default!;
+                public List<Types.SKU>? SKUList { get; set; }
 
                 /// <summary>
                 /// 获取或设置警告列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("warnings")]
                 [System.Text.Json.Serialization.JsonPropertyName("warnings")]
-                public Types.Warning[]? WarningList { get; set; }
+                public List<Types.Warning>? WarningList { get; set; }
             }
         }
     }

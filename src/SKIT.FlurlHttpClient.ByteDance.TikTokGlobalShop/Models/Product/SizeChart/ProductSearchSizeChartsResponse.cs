@@ -22,21 +22,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("locale")]
                                 [System.Text.Json.Serialization.JsonPropertyName("locale")]
-                                public string Locale { get; set; } = default!;
+                                public string? Locale { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片 URI。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("uri")]
                                 [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                                public string Uri { get; set; } = default!;
+                                public string? Uri { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置图片 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                                public string Url { get; set; } = default!;
+                                public string? Url { get; set; }
                             }
                         }
 
@@ -46,21 +46,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("template_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("template_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string TemplateId { get; set; } = default!;
+                        public string? TemplateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置模板名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("template_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("template_name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置图片列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("images")]
                         [System.Text.Json.Serialization.JsonPropertyName("images")]
-                        public Types.Image[] ImageList { get; set; } = default!;
+                        public List<Types.Image>? ImageList { get; set; }
                     }
                 }
 
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("size_chart")]
                 [System.Text.Json.Serialization.JsonPropertyName("size_chart")]
-                public Types.SizeChart[] SizeChartList { get; set; } = default!;
+                public List<Types.SizeChart>? SizeChartList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

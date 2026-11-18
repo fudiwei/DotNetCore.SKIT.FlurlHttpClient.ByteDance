@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                public string Uri { get; set; } = string.Empty;
+                public string? Uri { get; set; }
 
                 /// <summary>
                 /// 获取或设置优化模式列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("optimization_mode")]
                 [System.Text.Json.Serialization.JsonPropertyName("optimization_mode")]
-                public IList<string> OptimizationModeList { get; set; } = new List<string>();
+                public List<string>? OptimizationModeList { get; set; }
             }
         }
 
@@ -38,6 +38,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("images")]
         [System.Text.Json.Serialization.JsonPropertyName("images")]
-        public IList<Types.Image> ImageList { get; set; } = new List<Types.Image>();
+        public List<Types.Image>? ImageList { get; set; }
     }
 }

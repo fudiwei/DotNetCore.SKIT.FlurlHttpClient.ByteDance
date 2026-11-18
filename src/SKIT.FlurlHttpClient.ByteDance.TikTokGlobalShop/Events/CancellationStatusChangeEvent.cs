@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置取消 ID。
@@ -27,21 +27,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 [Newtonsoft.Json.JsonProperty("cancel_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("cancel_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string CancelId { get; set; } = default!;
+                public string? CancelId { get; set; }
 
                 /// <summary>
                 /// 获取或设置取消发起人。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cancellations_role")]
                 [System.Text.Json.Serialization.JsonPropertyName("cancellations_role")]
-                public string CancelRole { get; set; } = default!;
+                public string? CancelRole { get; set; }
 
                 /// <summary>
                 /// 获取或设置取消状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cancel_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("cancel_status")]
-                public string CancelStatus { get; set; } = default!;
+                public string? CancelStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。

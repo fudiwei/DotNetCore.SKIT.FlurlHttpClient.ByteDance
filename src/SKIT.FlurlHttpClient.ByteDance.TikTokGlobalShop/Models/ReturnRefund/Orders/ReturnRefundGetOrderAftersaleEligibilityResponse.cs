@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_line_items_ids")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_line_items_ids")]
-                                public string[] OrderLineItemIdList { get; set; } = default!;
+                                public List<string>? OrderLineItemIdList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置是否有资格。
@@ -59,14 +59,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = default!;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置资格列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("line_item_eligibility")]
                         [System.Text.Json.Serialization.JsonPropertyName("line_item_eligibility")]
-                        public Types.LineItemEligibility[] LineItemEligibilityList { get; set; } = default!;
+                        public List<Types.LineItemEligibility>? LineItemEligibilityList { get; set; }
                     }
                 }
 
@@ -75,7 +75,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sku_eligibility")]
                 [System.Text.Json.Serialization.JsonPropertyName("sku_eligibility")]
-                public Types.SKUEligibility[] SKUEligibilityList { get; set; } = default!;
+                public List<Types.SKUEligibility>? SKUEligibilityList { get; set; }
             }
         }
     }

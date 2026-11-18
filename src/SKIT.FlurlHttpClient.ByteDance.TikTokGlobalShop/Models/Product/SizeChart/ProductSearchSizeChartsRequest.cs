@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ids")]
         [System.Text.Json.Serialization.JsonPropertyName("ids")]
-        public IList<string>? SizeChartTemplateIdList { get; set; }
+        public List<string>? SizeChartTemplateIdList { get; set; }
 
         /// <summary>
         /// 获取或设置关键字。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string>? Locales { get; set; }
+        public List<string>? Locales { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

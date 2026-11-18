@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置取消原因文本。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("text")]
                         [System.Text.Json.Serialization.JsonPropertyName("text")]
-                        public string Text { get; set; } = default!;
+                        public string? Text { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("reasons")]
                 [System.Text.Json.Serialization.JsonPropertyName("reasons")]
-                public Types.Reason[] ReasonList { get; set; } = default!;
+                public List<Types.Reason>? ReasonList { get; set; }
             }
         }
     }

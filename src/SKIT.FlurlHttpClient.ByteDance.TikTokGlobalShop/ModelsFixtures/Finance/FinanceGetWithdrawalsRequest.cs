@@ -1,37 +1,30 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
 {
     /// <summary>
-    /// <para>表示 [GET] /finance/{version}/statements/{statement_id}/statement_transactions 接口的请求。</para>
+    /// <para>表示 [GET] /finance/{version}/withdrawals 接口的请求。</para>
     /// </summary>
-    public class FinanceGetStatementTransactionsRequest : TikTokShopRequest
+    public class FinanceGetWithdrawalsRequest : TikTokShopRequest
     {
         /// <summary>
-        /// 获取或设置结算单 ID。
+        /// 获取或设置创建时间范围起始时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string StatementId { get; set; } = string.Empty;
+        public long? CreateTimestampGreaterThan { get; set; }
 
         /// <summary>
-        /// 获取或设置付款单状态。
+        /// 获取或设置创建时间范围截止时间戳。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string? PaymentStatus { get; set; }
+        public long? CreateTimestampLessThan { get; set; }
 
         /// <summary>
-        /// 获取或设置排序字段。
+        /// 获取或设置提现类型列表。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string? SortField { get; set; }
-
-        /// <summary>
-        /// 获取或设置排序方式。
-        /// </summary>
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string? SortOrder { get; set; }
+        public List<string>? TypeList { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

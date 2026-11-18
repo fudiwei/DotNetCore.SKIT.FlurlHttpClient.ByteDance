@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string PackageId { get; set; } = default!;
+                        public string? PackageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置分组 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("splittable_group_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("splittable_group_id")]
-                        public string SplittableGroupId { get; set; } = default!;
+                        public string? SplittableGroupId { get; set; }
                     }
                 }
 
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("packages")]
                 [System.Text.Json.Serialization.JsonPropertyName("packages")]
-                public Types.Package[] PackageList { get; set; } = default!;
+                public List<Types.Package>? PackageList { get; set; }
             }
         }
     }

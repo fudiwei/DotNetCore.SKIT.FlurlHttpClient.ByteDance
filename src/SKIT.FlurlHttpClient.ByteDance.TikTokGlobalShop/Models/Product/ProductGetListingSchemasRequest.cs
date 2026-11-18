@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> CategoryIdList { get; set; } = new List<string>();
+        public List<string>? CategoryIdList { get; set; }
 
         /// <summary>
         /// 获取或设置分类版本。

@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("manufacturer_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("manufacturer_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ManufacturerId { get; set; } = default!;
+                public string? ManufacturerId { get; set; }
             }
         }
     }

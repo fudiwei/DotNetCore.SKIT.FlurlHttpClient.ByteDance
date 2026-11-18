@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("event_type")]
         [System.Text.Json.Serialization.JsonPropertyName("event_type")]
-        public string EventType { get; set; } = string.Empty;
+        public string? EventType { get; set; }
     }
 }

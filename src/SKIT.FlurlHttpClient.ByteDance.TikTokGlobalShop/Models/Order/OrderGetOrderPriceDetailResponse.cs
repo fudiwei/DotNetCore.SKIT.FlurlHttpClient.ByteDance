@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string LineItemId { get; set; } = default!;
+                        public string? LineItemId { get; set; }
 
                         /// <summary>
                         /// 获取或设置币种。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("currency")]
                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                        public string Currency { get; set; } = default!;
+                        public string? Currency { get; set; }
 
                         /// <summary>
                         /// 获取或设置总金额。
@@ -209,7 +209,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("currency")]
                 [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                public string Currency { get; set; } = default!;
+                public string? Currency { get; set; }
 
                 /// <summary>
                 /// 获取或设置总金额。
@@ -391,7 +391,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("line_items")]
                 [System.Text.Json.Serialization.JsonPropertyName("line_items")]
-                public Types.LineItem[] LineItemList { get; set; } = default!;
+                public List<Types.LineItem>? LineItemList { get; set; }
             }
         }
     }

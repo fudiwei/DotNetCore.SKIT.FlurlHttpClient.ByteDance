@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ShippingProviderId { get; set; } = default!;
+                        public string? ShippingProviderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置运输服务商名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
                     }
                 }
 
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shipping_providers")]
                 [System.Text.Json.Serialization.JsonPropertyName("shipping_providers")]
-                public Types.ShippingProvider[] ShippingProviderList { get; set; } = default!;
+                public List<Types.ShippingProvider>? ShippingProviderList { get; set; }
             }
         }
     }

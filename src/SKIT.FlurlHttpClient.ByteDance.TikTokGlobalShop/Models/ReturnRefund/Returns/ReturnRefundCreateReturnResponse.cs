@@ -15,14 +15,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("return_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ReturnId { get; set; } = default!;
+                public string? ReturnId { get; set; }
 
                 /// <summary>
                 /// 获取或设置退货状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_status")]
-                public string ReturnStatus { get; set; } = default!;
+                public string? ReturnStatus { get; set; }
             }
         }
     }

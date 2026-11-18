@@ -2,6 +2,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Interceptors
 {
     using SKIT.FlurlHttpClient.Internal;
 
+    /// <summary>
+    /// 
+    /// <para>
+    /// REF: <br/>
+    /// <![CDATA[ https://partner.tiktokshop.com/docv2/page/sign-your-api-request ]]>
+    /// </para>
+    /// </summary>
     internal class TikTokShopRequestSigningInterceptor : HttpInterceptor
     {
         private readonly string _baseUrl;

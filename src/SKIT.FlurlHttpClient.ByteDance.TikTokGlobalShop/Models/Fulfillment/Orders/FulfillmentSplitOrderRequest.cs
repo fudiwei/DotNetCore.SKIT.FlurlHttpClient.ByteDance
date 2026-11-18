@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string SplittableGroupId { get; set; } = string.Empty;
+                public string? SplittableGroupId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单行 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-                public IList<string> OrderLineItemIdList { get; set; } = new List<string>();
+                public List<string>? OrderLineItemIdList { get; set; }
             }
         }
 
@@ -30,13 +30,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置分组列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("splittable_groups")]
         [System.Text.Json.Serialization.JsonPropertyName("splittable_groups")]
-        public IList<Types.SplittableGroup> SplittableGroupList { get; set; } = new List<Types.SplittableGroup>();
+        public List<Types.SplittableGroup>? SplittableGroupList { get; set; }
     }
 }

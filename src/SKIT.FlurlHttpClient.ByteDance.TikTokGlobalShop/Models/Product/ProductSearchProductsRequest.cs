@@ -60,14 +60,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("seller_skus")]
         [System.Text.Json.Serialization.JsonPropertyName("seller_skus")]
-        public IList<string>? SellerSKUList { get; set; }
+        public List<string>? SellerSKUList { get; set; }
 
         /// <summary>
         /// 获取或设置上架平台列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("listing_platforms")]
         [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
-        public IList<string>? ListingPlatformList { get; set; }
+        public List<string>? ListingPlatformList { get; set; }
 
         /// <summary>
         /// 获取或设置上架质量等级。

@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tracking_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("tracking_number")]
-                public string TrackingNumber { get; set; } = string.Empty;
+                public string? TrackingNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置运输服务商 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shipping_provider_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_id")]
-                public string ShippingProviderId { get; set; } = string.Empty;
+                public string? ShippingProviderId { get; set; }
             }
         }
 
@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string PackageId { get; set; } = string.Empty;
+        public string? PackageId { get; set; }
 
         /// <summary>
         /// 获取或设置交接方式。

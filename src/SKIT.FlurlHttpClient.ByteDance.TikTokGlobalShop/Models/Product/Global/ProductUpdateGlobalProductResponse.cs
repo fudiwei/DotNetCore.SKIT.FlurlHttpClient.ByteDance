@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("global_skus")]
                 [System.Text.Json.Serialization.JsonPropertyName("global_skus")]
-                public Types.SKU[] SKUList { get; set; } = default!;
+                public List<Types.SKU>? SKUList { get; set; }
 
                 /// <summary>
                 /// 获取或设置发布结果列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("publish_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("publish_results")]
-                public Types.PublishResult[] PublishResultList { get; set; } = default!;
+                public List<Types.PublishResult>? PublishResultList { get; set; }
             }
         }
     }

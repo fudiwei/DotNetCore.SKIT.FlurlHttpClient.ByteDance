@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                public string OrderStatus { get; set; } = default!;
+                public string? OrderStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置更新时间戳。

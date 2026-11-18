@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("region_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("region_code")]
-                        public string RegionCode { get; set; } = default!;
+                        public string? RegionCode { get; set; }
                     }
                 }
 
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("onboarded_regions")]
                 [System.Text.Json.Serialization.JsonPropertyName("onboarded_regions")]
-                public Types.OnboardedRegion[] OnboardedRegionList { get; set; } = default!;
+                public List<Types.OnboardedRegion>? OnboardedRegionList { get; set; }
             }
         }
     }

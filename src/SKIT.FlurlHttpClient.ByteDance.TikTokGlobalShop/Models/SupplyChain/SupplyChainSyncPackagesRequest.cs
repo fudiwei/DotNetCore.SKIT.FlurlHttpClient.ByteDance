@@ -66,7 +66,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string SKUId { get; set; } = string.Empty;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置数量。
@@ -82,21 +82,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string PackageId { get; set; } = string.Empty;
+                public string? PackageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置 SKU 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("skus")]
                 [System.Text.Json.Serialization.JsonPropertyName("skus")]
-                public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+                public List<Types.SKU>? SKUList { get; set; }
 
                 /// <summary>
                 /// 获取或设置 WMS 订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("wms_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("wms_order_id")]
-                public string WMSOrderId { get; set; } = string.Empty;
+                public string? WMSOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置供应商仓库编码。
@@ -117,7 +117,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("time_zone")]
                 [System.Text.Json.Serialization.JsonPropertyName("time_zone")]
-                public string TimeZone { get; set; } = string.Empty;
+                public string? TimeZone { get; set; }
 
                 /// <summary>
                 /// 获取或设置发货时间戳。
@@ -145,21 +145,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shipping_provider_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_id")]
-                public string ShippingProviderId { get; set; } = string.Empty;
+                public string? ShippingProviderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置运输服务商名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shipping_provider_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("shipping_provider_name")]
-                public string ShippingProviderName { get; set; } = string.Empty;
+                public string? ShippingProviderName { get; set; }
 
                 /// <summary>
                 /// 获取或设置物流单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tracking_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("tracking_number")]
-                public string TrackingNumber { get; set; } = string.Empty;
+                public string? TrackingNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置尺寸信息。
@@ -182,13 +182,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("warehouse_provider_id")]
         [System.Text.Json.Serialization.JsonPropertyName("warehouse_provider_id")]
-        public string WarehouseProviderId { get; set; } = string.Empty;
+        public string? WarehouseProviderId { get; set; }
 
         /// <summary>
         /// 获取或设置包裹列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("packages")]
         [System.Text.Json.Serialization.JsonPropertyName("packages")]
-        public IList<Types.Package> PackageList { get; set; } = new List<Types.Package>();
+        public List<Types.Package>? PackageList { get; set; }
     }
 }

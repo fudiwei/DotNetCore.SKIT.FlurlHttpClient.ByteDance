@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("country_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                                public string CountryCode { get; set; } = default!;
+                                public string? CountryCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置本地号码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("local_number")]
                                 [System.Text.Json.Serialization.JsonPropertyName("local_number")]
-                                public string LocalNumber { get; set; } = default!;
+                                public string? LocalNumber { get; set; }
                             }
                         }
 
@@ -39,14 +39,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ManufacturerId { get; set; } = default!;
+                        public string? ManufacturerId { get; set; }
 
                         /// <summary>
                         /// 获取或设置制造商名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置制造商注册商业名称。
@@ -60,21 +60,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("email")]
                         [System.Text.Json.Serialization.JsonPropertyName("email")]
-                        public string Email { get; set; } = default!;
+                        public string? Email { get; set; }
 
                         /// <summary>
                         /// 获取或设置电话号码信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("phone_number")]
                         [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-                        public Types.PhoneNumber PhoneNumber { get; set; } = default!;
+                        public Types.PhoneNumber? PhoneNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置地址。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("address")]
                         [System.Text.Json.Serialization.JsonPropertyName("address")]
-                        public string Address { get; set; } = default!;
+                        public string? Address { get; set; }
                     }
                 }
 
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("manufacturers")]
                 [System.Text.Json.Serialization.JsonPropertyName("manufacturers")]
-                public Types.Manufacturer[] ManufacturerList { get; set; } = default!;
+                public List<Types.Manufacturer>? ManufacturerList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string PackageId { get; set; } = default!;
+                                public string? PackageId { get; set; }
                             }
 
                             public class Payment
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("currency")]
                                 [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                                public string Currency { get; set; } = default!;
+                                public string? Currency { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置总金额。
@@ -191,21 +191,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("address_level")]
                                         [System.Text.Json.Serialization.JsonPropertyName("address_level")]
-                                        public string AddressLevel { get; set; } = default!;
+                                        public string? AddressLevel { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置行政区划级别名称。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("address_level_name")]
                                         [System.Text.Json.Serialization.JsonPropertyName("address_level_name")]
-                                        public string AddressLevelName { get; set; } = default!;
+                                        public string? AddressLevelName { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置行政区划名称。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("address_name")]
                                         [System.Text.Json.Serialization.JsonPropertyName("address_name")]
-                                        public string AddressName { get; set; } = default!;
+                                        public string? AddressName { get; set; }
                                     }
 
                                     public class DeliveryPreferences
@@ -215,7 +215,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("drop_off_location")]
                                         [System.Text.Json.Serialization.JsonPropertyName("drop_off_location")]
-                                        public string DropOffLocation { get; set; } = default!;
+                                        public string? DropOffLocation { get; set; }
                                     }
                                 }
 
@@ -224,28 +224,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("full_address")]
                                 [System.Text.Json.Serialization.JsonPropertyName("full_address")]
-                                public string FullAddress { get; set; } = default!;
+                                public string? FullAddress { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置地区编码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("region_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("region_code")]
-                                public string RegionCode { get; set; } = default!;
+                                public string? RegionCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置电话号码。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("phone_number")]
                                 [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-                                public string PhoneNumber { get; set; } = default!;
+                                public string? PhoneNumber { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置联系人姓名。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string ContactName { get; set; } = default!;
+                                public string? ContactName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置联系人名。
@@ -266,14 +266,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("postal_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("postal_code")]
-                                public string PostalCode { get; set; } = default!;
+                                public string? PostalCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置详细地址。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("address_detail")]
                                 [System.Text.Json.Serialization.JsonPropertyName("address_detail")]
-                                public string AddressDetail { get; set; } = default!;
+                                public string? AddressDetail { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置地址行 1。
@@ -308,7 +308,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("district_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("district_info")]
-                                public Types.DistrictInfo[]? DistrictInfoList { get; set; }
+                                public List<Types.DistrictInfo>? DistrictInfoList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置配送首选项。
@@ -329,7 +329,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("tax_type")]
                                         [System.Text.Json.Serialization.JsonPropertyName("tax_type")]
-                                        public string TaxType { get; set; } = default!;
+                                        public string? TaxType { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置税率。
@@ -354,7 +354,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                                public string LineItemId { get; set; } = default!;
+                                public string? LineItemId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品 ID。
@@ -362,14 +362,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("product_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string ProductId { get; set; } = default!;
+                                public string? ProductId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置商品名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("product_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("product_name")]
-                                public string ProductName { get; set; } = default!;
+                                public string? ProductName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU ID。
@@ -377,28 +377,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("sku_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_name")]
-                                public string SKUName { get; set; } = default!;
+                                public string? SKUName { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 类型。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_type")]
-                                public string SKUType { get; set; } = default!;
+                                public string? SKUType { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置 SKU 图片 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sku_image")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sku_image")]
-                                public string SKUImageUrl { get; set; } = default!;
+                                public string? SKUImageUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置卖家 SKU 信息。
@@ -412,7 +412,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("currency")]
                                 [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                                public string Currency { get; set; } = default!;
+                                public string? Currency { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置原价。
@@ -475,7 +475,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("display_status")]
                                 [System.Text.Json.Serialization.JsonPropertyName("display_status")]
-                                public string DisplayStatus { get; set; } = default!;
+                                public string? DisplayStatus { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置取消发起人。
@@ -555,14 +555,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("item_tax")]
                                 [System.Text.Json.Serialization.JsonPropertyName("item_tax")]
-                                public Types.ItemTax[]? ItemTaxList { get; set; }
+                                public List<Types.ItemTax>? ItemTaxList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置组合 SKU 列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("combined_listing_skus")]
                                 [System.Text.Json.Serialization.JsonPropertyName("combined_listing_skus")]
-                                public CombinedListingSKU[]? CombinedListingSKUList { get; set; }
+                                public List<CombinedListingSKU>? CombinedListingSKUList { get; set; }
                             }
 
                             public class CombinedListingSKU : LineItem
@@ -582,7 +582,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置天数。
@@ -601,7 +601,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置电商平台。
@@ -615,14 +615,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_type")]
-                        public string OrderType { get; set; } = default!;
+                        public string? OrderType { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -650,7 +650,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("payment")]
                         [System.Text.Json.Serialization.JsonPropertyName("payment")]
-                        public Types.Payment Payment { get; set; } = default!;
+                        public Types.Payment? Payment { get; set; }
 
                         /// <summary>
                         /// 获取或设置买家用户 ID。
@@ -685,7 +685,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("line_items")]
                         [System.Text.Json.Serialization.JsonPropertyName("line_items")]
-                        public Types.LineItem[]? LineItemList { get; set; }
+                        public List<Types.LineItem>? LineItemList { get; set; }
 
                         /// <summary>
                         /// 获取或设置运输服务商 ID。
@@ -706,7 +706,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("recipient_address")]
                         [System.Text.Json.Serialization.JsonPropertyName("recipient_address")]
-                        public Types.RecipientAddress RecipientAddress { get; set; } = default!;
+                        public Types.RecipientAddress? RecipientAddress { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否已更改收货地址。
@@ -846,7 +846,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("packages")]
                         [System.Text.Json.Serialization.JsonPropertyName("packages")]
-                        public Types.Package[]? PackageList { get; set; }
+                        public List<Types.Package>? PackageList { get; set; }
 
                         /// <summary>
                         /// 获取或设置付款时间戳。
@@ -981,7 +981,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("orders")]
                 [System.Text.Json.Serialization.JsonPropertyName("orders")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                public List<Types.Order>? OrderList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

@@ -33,21 +33,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("original_uri")]
                         [System.Text.Json.Serialization.JsonPropertyName("original_uri")]
-                        public string OriginalUri { get; set; } = default!;
+                        public string? OriginalUri { get; set; }
 
                         /// <summary>
                         /// 获取或设置原始图片 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("original_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("original_url")]
-                        public string OriginalUrl { get; set; } = default!;
+                        public string? OriginalUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置优化状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("optimize_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("optimize_status")]
-                        public string OptimizeStatus { get; set; } = default!;
+                        public string? OptimizeStatus { get; set; }
 
                         /// <summary>
                         /// 获取或设置优化后图片 URI。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("images")]
                 [System.Text.Json.Serialization.JsonPropertyName("images")]
-                public Types.Image[] ImageList { get; set; } = default!;
+                public List<Types.Image>? ImageList { get; set; }
             }
         }
     }

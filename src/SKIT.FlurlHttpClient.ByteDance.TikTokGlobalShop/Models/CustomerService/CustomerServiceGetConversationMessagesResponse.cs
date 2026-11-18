@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("messages")]
                 [System.Text.Json.Serialization.JsonPropertyName("messages")]
-                public Types.Message[] MessageList { get; set; } = default!;
+                public List<Types.Message>? MessageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置下一页分页令牌。

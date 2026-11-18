@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string PackageId { get; set; } = string.Empty;
+                public string? PackageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置交接方式。
@@ -55,6 +55,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("packages")]
         [System.Text.Json.Serialization.JsonPropertyName("packages")]
-        public IList<Types.Package> PackageList { get; set; } = new List<Types.Package>();
+        public List<Types.Package>? PackageList { get; set; }
     }
 }

@@ -12,13 +12,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string GrantType { get; set; } = "authorized_code";
+        public string? GrantType { get; set; } = "authorized_code";
 
         /// <summary>
         /// 获取或设置授权码。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string AuthorizedCode { get; set; } = string.Empty;
+        public string? AuthorizedCode { get; set; }
     }
 }

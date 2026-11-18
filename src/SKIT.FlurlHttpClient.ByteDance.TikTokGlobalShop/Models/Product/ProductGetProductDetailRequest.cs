@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ProductId { get; set; } = string.Empty;
+        public string? ProductId { get; set; }
 
         /// <summary>
         /// 获取或设置是否返回正在审核中的版本。

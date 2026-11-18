@@ -1,12 +1,12 @@
 # SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 
-A client SDK for [TikTok Shop Open Platform](https://partner.tiktokshop.com/) API based on `Flurl.Http`.
+A client SDK for [TikTok Shop](https://partner.tiktokshop.com/) API based on `Flurl.Http`.
 
 ---
 
 ## Features
 
-- Encapsulates TikTok Shop Open Platform API v202309.
+- Encapsulates TikTok Shop API v202309.
 - Auto-generated signature on API requests.
 - Provides some algorithm utilities (such as HMAC-SHA-256).
 

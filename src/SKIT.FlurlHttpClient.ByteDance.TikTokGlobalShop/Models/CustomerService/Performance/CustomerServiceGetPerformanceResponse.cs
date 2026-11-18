@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("performance")]
                 [System.Text.Json.Serialization.JsonPropertyName("performance")]
-                public Types.Performance Performance { get; set; } = default!;
+                public Types.Performance? Performance { get; set; }
             }
         }
     }

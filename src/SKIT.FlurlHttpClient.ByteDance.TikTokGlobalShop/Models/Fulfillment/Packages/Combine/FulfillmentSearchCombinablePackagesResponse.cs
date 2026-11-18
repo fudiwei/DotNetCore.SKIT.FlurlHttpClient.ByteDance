@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string CombinablePackageId { get; set; } = default!;
+                        public string? CombinablePackageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
-                        public string[] OrderIdList { get; set; } = default!;
+                        public List<string>? OrderIdList { get; set; }
                     }
                 }
 
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("combinable_packages")]
                 [System.Text.Json.Serialization.JsonPropertyName("combinable_packages")]
-                public Types.CombinablePackage[] CombinablePackageList { get; set; } = default!;
+                public List<Types.CombinablePackage>? CombinablePackageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

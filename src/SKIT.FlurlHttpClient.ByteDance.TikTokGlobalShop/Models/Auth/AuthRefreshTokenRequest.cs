@@ -12,13 +12,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string GrantType { get; set; } = "refresh_token";
+        public string? GrantType { get; set; } = "refresh_token";
 
         /// <summary>
         /// 获取或设置刷新令牌。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string RefreshToken { get; set; } = string.Empty;
+        public string? RefreshToken { get; set; }
     }
 }

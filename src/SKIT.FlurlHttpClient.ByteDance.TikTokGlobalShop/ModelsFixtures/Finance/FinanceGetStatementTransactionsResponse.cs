@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string TransactionId { get; set; } = default!;
+                        public string? TransactionId { get; set; }
 
                         /// <summary>
                         /// 获取或设置交易类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = default!;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单 ID。
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("currency")]
                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                        public string Currency { get; set; } = default!;
+                        public string? Currency { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算金额。
@@ -474,7 +474,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("statement_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("statement_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string StatementId { get; set; } = default!;
+                public string? StatementId { get; set; }
 
                 /// <summary>
                 /// 获取或设置结算时间戳。
@@ -488,7 +488,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("currency")]
                 [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                public string Currency { get; set; } = default!;
+                public string? Currency { get; set; }
 
                 /// <summary>
                 /// 获取或设置结算金额。
@@ -543,7 +543,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("statement_transactions")]
                 [System.Text.Json.Serialization.JsonPropertyName("statement_transactions")]
-                public Types.Transaction[] TransactionList { get; set; } = default!;
+                public List<Types.Transaction>? TransactionList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

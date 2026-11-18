@@ -19,21 +19,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public virtual string ActivityId { get; set; } = default!;
+                        public string? ActivityId { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -54,14 +54,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("activity_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("activity_type")]
-                        public string ActivityType { get; set; } = default!;
+                        public string? ActivityType { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_level")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_level")]
-                        public string ProductLevel { get; set; } = default!;
+                        public string? ProductLevel { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动开始时间戳。
@@ -84,7 +84,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("activities")]
                 [System.Text.Json.Serialization.JsonPropertyName("activities")]
-                public Types.Activity[] ActivityList { get; set; } = default!;
+                public List<Types.Activity>? ActivityList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

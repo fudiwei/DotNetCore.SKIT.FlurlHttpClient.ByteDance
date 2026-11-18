@@ -1,7 +1,6 @@
 {
     "code": 0,
     "data": {
-        "cancel_because_logistic_issue": 1,
         "create_time": 1635338186,
         "delivery_option": 1,
         "note_tag": 1,

@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                public string Uri { get; set; } = default!;
+                public string? Uri { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("url")]
                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                public string Url { get; set; } = default!;
+                public string? Url { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片宽度（单位：像素）。

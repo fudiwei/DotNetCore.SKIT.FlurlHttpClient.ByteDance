@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string SKUId { get; set; } = string.Empty;
+                public string? SKUId { get; set; }
 
                 /// <summary>
                 /// 获取或设置价格信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("price")]
                 [System.Text.Json.Serialization.JsonPropertyName("price")]
-                public Types.Price Price { get; set; } = new Types.Price();
+                public Types.Price? Price { get; set; }
             }
         }
 
@@ -37,13 +37,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ProductId { get; set; } = string.Empty;
+        public string? ProductId { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+        public List<Types.SKU>? SKUList { get; set; }
     }
 }

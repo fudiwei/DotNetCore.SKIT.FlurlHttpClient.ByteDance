@@ -10,35 +10,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
-        public IList<string>? OrderIdList { get; set; }
+        public List<string>? OrderIdList { get; set; }
 
         /// <summary>
         /// 获取或设置买家用户 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("buyer_user_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("buyer_user_ids")]
-        public IList<string>? BuyerUserIdList { get; set; }
+        public List<string>? BuyerUserIdList { get; set; }
 
         /// <summary>
         /// 获取或设置取消 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_ids")]
-        public IList<string>? CancelIdList { get; set; }
+        public List<string>? CancelIdList { get; set; }
 
         /// <summary>
         /// 获取或设置取消类型列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_types")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_types")]
-        public IList<string>? CancelTypeList { get; set; }
+        public List<string>? CancelTypeList { get; set; }
 
         /// <summary>
         /// 获取或设置取消状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("cancel_status")]
         [System.Text.Json.Serialization.JsonPropertyName("cancel_status")]
-        public IList<string>? CancelStatusList { get; set; }
+        public List<string>? CancelStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置创建时间范围起始时间戳。

@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ReturnId { get; set; } = string.Empty;
+        public string? ReturnId { get; set; }
 
         /// <summary>
         /// 获取或设置决定。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("decision")]
         [System.Text.Json.Serialization.JsonPropertyName("decision")]
-        public string Decision { get; set; } = string.Empty;
+        public string? Decision { get; set; }
 
         /// <summary>
         /// 获取或设置拒绝原因。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reject_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("reject_reason")]
-        public string RejectReason { get; set; } = string.Empty;
+        public string? RejectReason { get; set; }
 
         /// <summary>
         /// 获取或设置评论内容。
@@ -45,6 +45,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("images")]
         [System.Text.Json.Serialization.JsonPropertyName("images")]
-        public IList<Types.Image>? ImageList { get; set; }
+        public List<Types.Image>? ImageList { get; set; }
     }
 }

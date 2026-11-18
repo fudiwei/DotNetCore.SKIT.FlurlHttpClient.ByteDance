@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                public string Uri { get; set; } = string.Empty;
+                public string? Uri { get; set; }
             }
         }
 
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_title")]
         [System.Text.Json.Serialization.JsonPropertyName("product_title")]
-        public string ProductTitle { get; set; } = string.Empty;
+        public string? ProductTitle { get; set; }
 
         /// <summary>
         /// 获取或设置商品描述。
@@ -44,6 +44,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("images")]
         [System.Text.Json.Serialization.JsonPropertyName("images")]
-        public IList<Types.Image>? ImageList { get; set; }
+        public List<Types.Image>? ImageList { get; set; }
     }
 }

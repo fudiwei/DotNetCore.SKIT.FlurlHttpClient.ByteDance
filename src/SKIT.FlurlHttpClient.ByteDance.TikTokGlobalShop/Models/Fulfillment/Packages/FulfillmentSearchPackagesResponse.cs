@@ -26,28 +26,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string PackageId { get; set; } = default!;
+                        public string? PackageId { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单行 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-                        public string[]? OrderLineItemIdList { get; set; }
+                        public List<string>? OrderLineItemIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置订单列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("orders")]
                         [System.Text.Json.Serialization.JsonPropertyName("orders")]
-                        public Types.Order[]? OrderList { get; set; }
+                        public List<Types.Order>? OrderList { get; set; }
 
                         /// <summary>
                         /// 获取或设置包裹状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("packages")]
                 [System.Text.Json.Serialization.JsonPropertyName("packages")]
-                public Types.Package[] PackageList { get; set; } = default!;
+                public List<Types.Package>? PackageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

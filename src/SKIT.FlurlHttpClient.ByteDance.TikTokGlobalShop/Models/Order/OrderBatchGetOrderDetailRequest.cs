@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public IList<string> OrderIdList { get; set; } = new List<string>();
+        public List<string>? OrderIdList { get; set; }
     }
 }

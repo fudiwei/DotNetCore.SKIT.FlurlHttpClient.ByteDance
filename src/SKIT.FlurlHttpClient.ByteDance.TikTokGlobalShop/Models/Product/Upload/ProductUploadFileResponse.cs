@@ -14,28 +14,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string FileId { get; set; } = default!;
+                public string? FileId { get; set; }
 
                 /// <summary>
                 /// 获取或设置文件名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; } = default!;
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 获取或设置文件格式。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("format")]
                 [System.Text.Json.Serialization.JsonPropertyName("format")]
-                public string Format { get; set; } = default!;
+                public string? Format { get; set; }
 
                 /// <summary>
                 /// 获取或设置文件 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("url")]
                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                public string Url { get; set; } = default!;
+                public string? Url { get; set; }
             }
         }
     }

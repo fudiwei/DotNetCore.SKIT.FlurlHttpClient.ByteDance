@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("permissions")]
                 [System.Text.Json.Serialization.JsonPropertyName("permissions")]
-                public string[] PermissionList { get; set; } = default!;
+                public List<string>? PermissionList { get; set; }
             }
         }
     }

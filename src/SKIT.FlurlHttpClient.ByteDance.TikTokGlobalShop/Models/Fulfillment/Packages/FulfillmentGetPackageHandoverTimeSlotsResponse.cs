@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pickup_slots")]
                 [System.Text.Json.Serialization.JsonPropertyName("pickup_slots")]
-                public Types.TimeSlot[] TimeSlotList { get; set; } = default!;
+                public List<Types.TimeSlot>? TimeSlotList { get; set; }
             }
         }
     }

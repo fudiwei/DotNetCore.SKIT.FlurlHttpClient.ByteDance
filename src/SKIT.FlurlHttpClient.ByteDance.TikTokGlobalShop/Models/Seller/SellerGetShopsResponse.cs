@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ShopId { get; set; } = default!;
+                        public string? ShopId { get; set; }
 
                         /// <summary>
                         /// 获取或设置所在地。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("region")]
                         [System.Text.Json.Serialization.JsonPropertyName("region")]
-                        public string Region { get; set; } = default!;
+                        public string? Region { get; set; }
                     }
                 }
 
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shops")]
                 [System.Text.Json.Serialization.JsonPropertyName("shops")]
-                public Types.Shop[] ShopList { get; set; } = default!;
+                public List<Types.Shop>? ShopList { get; set; }
             }
         }
     }

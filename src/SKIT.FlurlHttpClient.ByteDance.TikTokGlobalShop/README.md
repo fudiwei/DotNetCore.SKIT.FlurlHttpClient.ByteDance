@@ -1,10 +1,10 @@
 # SKIT.FlurlHttpClient.ByteDance.TikTokShop
 
-基于 Flurl.Http 的 TikTok Shop Open Platform API 客户端 SDK。
+基于 Flurl.Http 的 TikTok Shop API 客户端 SDK。
 
 ## 功能特性
 
-- 封装 TikTok Shop Open Platform API v202309。
+- 封装 TikTok Shop API v202309。
 - 请求时自动生成签名，无需开发者手动干预。
 - 提供了 HMAC-SHA-256 等算法工具类。
 
@@ -14,7 +14,7 @@
 
 ---
 
-A client SDK for TikTok Shop Open Platform API based on Flurl.Http.
+A client SDK for TikTok Shop API based on Flurl.Http.
 
 ## Features
 

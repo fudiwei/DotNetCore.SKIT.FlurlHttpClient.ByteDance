@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("goods_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("goods_ids")]
-        public IList<string>? GoodsIdList { get; set; }
+        public List<string>? GoodsIdList { get; set; }
 
         /// <summary>
         /// 获取或设置 FBT 仓库 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fbt_warehouse_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("fbt_warehouse_ids")]
-        public IList<string>? FBTWarehouseIdList { get; set; }
+        public List<string>? FBTWarehouseIdList { get; set; }
 
         /// <summary>1
         /// 获取或设置创建时间范围起始时间戳。

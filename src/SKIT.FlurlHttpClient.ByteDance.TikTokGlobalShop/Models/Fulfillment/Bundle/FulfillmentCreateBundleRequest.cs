@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
-        public IList<string> OrderIdList { get; set; } = new List<string>();
+        public List<string>? OrderIdList { get; set; }
 
         /// <summary>
         /// 获取或设置交接方式。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("handover_method")]
         [System.Text.Json.Serialization.JsonPropertyName("handover_method")]
-        public string HandoverMethod { get; set; } = string.Empty;
+        public string? HandoverMethod { get; set; }
 
         /// <summary>
         /// 获取或设置运输服务商 ID。

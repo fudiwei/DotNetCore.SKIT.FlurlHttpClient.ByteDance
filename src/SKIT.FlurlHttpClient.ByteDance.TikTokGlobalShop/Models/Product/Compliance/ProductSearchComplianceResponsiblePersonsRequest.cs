@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("responsible_person_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("responsible_person_ids")]
-        public IList<string>? ResponsiblePersonIdList { get; set; }
+        public List<string>? ResponsiblePersonIdList { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

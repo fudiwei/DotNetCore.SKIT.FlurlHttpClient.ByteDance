@@ -22,35 +22,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("region_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("region_code")]
-                                public string RegionCode { get; set; } = default!;
+                                public string? RegionCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置邮编。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("postal_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("postal_code")]
-                                public string PostalCode { get; set; } = default!;
+                                public string? PostalCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置州。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("state")]
                                 [System.Text.Json.Serialization.JsonPropertyName("state")]
-                                public string State { get; set; } = default!;
+                                public string? State { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置区。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("district")]
                                 [System.Text.Json.Serialization.JsonPropertyName("district")]
-                                public string District { get; set; } = default!;
+                                public string? District { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置市。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("city")]
                                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                                public string City { get; set; } = default!;
+                                public string? City { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置地址行 1。
@@ -81,14 +81,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                                public string Id { get; set; } = default!;
+                                public string? Id { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置物流服务名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置是否订阅。
@@ -104,28 +104,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("fbt_warehouse_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("fbt_warehouse_id")]
-                        public string FBTWarehouseId { get; set; } = default!;
+                        public string? FBTWarehouseId { get; set; }
 
                         /// <summary>
                         /// 获取或设置仓库 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("warehouse_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("warehouse_ids")]
-                        public string[] WarehouseIdList { get; set; } = default!;
+                        public List<string>? WarehouseIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = default!;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否订阅。
@@ -139,14 +139,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("addresses")]
                         [System.Text.Json.Serialization.JsonPropertyName("addresses")]
-                        public Types.Address[] AddressList { get; set; } = default!;
+                        public List<Types.Address>? AddressList { get; set; }
 
                         /// <summary>
                         /// 获取或设置物流服务列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("logistics_services")]
                         [System.Text.Json.Serialization.JsonPropertyName("logistics_services")]
-                        public Types.LogisticsService[] LogisticsServiceList { get; set; } = default!;
+                        public List<Types.LogisticsService>? LogisticsServiceList { get; set; }
                     }
                 }
 
@@ -155,7 +155,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("warehouses")]
                 [System.Text.Json.Serialization.JsonPropertyName("warehouses")]
-                public Types.Warehouse[] WarehouseList { get; set; } = default!;
+                public List<Types.Warehouse>? WarehouseList { get; set; }
             }
         }
     }

@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("message")]
                         [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
+                        public string? Message { get; set; }
                     }
 
                     public class Warning : ProductCreateProductResponse.Types.Data.Types.Warning
@@ -50,14 +50,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("field")]
                         [System.Text.Json.Serialization.JsonPropertyName("field")]
-                        public string Field { get; set; } = default!;
+                        public string? Field { get; set; }
 
                         /// <summary>
                         /// 获取或设置诊断结果列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("diagnosis_results")]
                         [System.Text.Json.Serialization.JsonPropertyName("diagnosis_results")]
-                        public Types.DiagnosisResult[] DiagnosisResultList { get; set; } = default!;
+                        public List<Types.DiagnosisResult>? DiagnosisResultList { get; set; }
 
                         /// <summary>
                         /// 获取或设置修改建议。
@@ -77,14 +77,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("check_result")]
                 [System.Text.Json.Serialization.JsonPropertyName("check_result")]
-                public string CheckResult { get; set; } = default!;
+                public string? CheckResult { get; set; }
 
                 /// <summary>
                 /// 获取或设置失败原因列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fail_reasons")]
                 [System.Text.Json.Serialization.JsonPropertyName("fail_reasons")]
-                public Types.FailReason[]? FailReasonList { get; set; } = default!;
+                public List<Types.FailReason>? FailReasonList { get; set; }
 
                 /// <summary>
                 /// 获取或设置警告信息。
@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("diagnoses")]
                 [System.Text.Json.Serialization.JsonPropertyName("diagnoses")]
-                public Types.Diagnosis[]? DiagnosisList { get; set; }
+                public List<Types.Diagnosis>? DiagnosisList { get; set; }
 
                 /// <summary>
                 /// 获取或设置上架质量信息。

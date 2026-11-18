@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("access_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("access_token")]
-                public string AccessToken { get; set; } = default!;
+                public string? AccessToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置凭证过期时间戳。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refresh_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("refresh_token")]
-                public string RefreshToken { get; set; } = default!;
+                public string? RefreshToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置刷新令牌过期时间戳。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = default!;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户类型。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("granted_permissions")]
                 [System.Text.Json.Serialization.JsonPropertyName("granted_permissions")]
-                public string[]? GrantedPermissionList { get; set; }
+                public List<string>? GrantedPermissionList { get; set; }
             }
         }
     }

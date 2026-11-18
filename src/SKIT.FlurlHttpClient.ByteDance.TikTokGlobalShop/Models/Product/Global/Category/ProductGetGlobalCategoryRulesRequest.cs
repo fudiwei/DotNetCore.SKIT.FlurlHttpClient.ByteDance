@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string CategoryId { get; set; } = string.Empty;
+        public string? CategoryId { get; set; }
     }
 }

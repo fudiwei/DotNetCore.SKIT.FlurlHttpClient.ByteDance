@@ -9,52 +9,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         {
             public class Data
             {
-                public static class Types
-                {
-                    public class Error
-                    {
-                        public static class Types
-                        {
-                            public class Detail
-                            {
-                                /// <summary>
-                                /// 获取或设置商品 ID。
-                                /// </summary>
-                                [Newtonsoft.Json.JsonProperty("product_id")]
-                                [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                                public string ProductId { get; set; } = default!;
-                            }
-                        }
-
-                        /// <summary>
-                        /// 获取或设置错误码。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("code")]
-                        [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public int Code { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置错误信息。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("message")]
-                        [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置详细信息。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("detail")]
-                        [System.Text.Json.Serialization.JsonPropertyName("detail")]
-                        public Types.Detail Detail { get; set; } = default!;
-                    }
-                }
-
                 /// <summary>
-                /// 获取或设置错误列表。
+                /// 获取或设置失败的商品 ID 列表。
                 /// </summary>
-                [Newtonsoft.Json.JsonProperty("errors")]
-                [System.Text.Json.Serialization.JsonPropertyName("errors")]
-                public Types.Error[]? ErrorList { get; set; }
+                [Newtonsoft.Json.JsonProperty("failed_product_ids")]
+                [System.Text.Json.Serialization.JsonPropertyName("failed_product_ids")]
+                public List<string>? FailedProductIdList { get; set; }
             }
         }
     }

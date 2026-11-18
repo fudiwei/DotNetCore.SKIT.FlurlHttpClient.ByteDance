@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("warehouse_id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("warehouse_id")]
-                                        public string WarehouseId { get; set; } = default!;
+                                        public string? WarehouseId { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置可用库存。
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("campaign_name")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("campaign_name")]
-                                                public string CampaignName { get; set; } = default!;
+                                                public string? CampaignName { get; set; }
                                             }
 
                                             public class CreatorInventory : InShopInventory
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("creator_name")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("creator_name")]
-                                                public string CreatorName { get; set; } = default!;
+                                                public string? CreatorName { get; set; }
                                             }
                                         }
 
@@ -83,14 +83,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("campaign_inventory")]
                                         [System.Text.Json.Serialization.JsonPropertyName("campaign_inventory")]
-                                        public Types.CampaignInventory[]? CampaignInventoryList { get; set; }
+                                        public List<Types.CampaignInventory>? CampaignInventoryList { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置创建者库存列表。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("creator_inventory")]
                                         [System.Text.Json.Serialization.JsonPropertyName("creator_inventory")]
-                                        public Types.CreatorInventory[]? CreatorInventoryList { get; set; }
+                                        public List<Types.CreatorInventory>? CreatorInventoryList { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置在店库存列表。
@@ -106,14 +106,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                                public string SKUId { get; set; } = default!;
+                                public string? SKUId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置库存列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("warehouse_inventory")]
                                 [System.Text.Json.Serialization.JsonPropertyName("warehouse_inventory")]
-                                public Types.Inventory[] InventoryList { get; set; } = default!;
+                                public List<Types.Inventory>? InventoryList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置总可用库存。
@@ -151,14 +151,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("product_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ProductId { get; set; } = default!;
+                        public string? ProductId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("skus")]
                         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-                        public Types.SKU[] SKUList { get; set; } = default!;
+                        public List<Types.SKU>? SKUList { get; set; }
                     }
                 }
 
@@ -167,7 +167,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("inventory")]
                 [System.Text.Json.Serialization.JsonPropertyName("inventory")]
-                public Types.ProductInventory[] ProductInventoryList { get; set; } = default!;
+                public List<Types.ProductInventory>? ProductInventoryList { get; set; }
             }
         }
     }

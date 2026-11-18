@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("categories")]
                 [System.Text.Json.Serialization.JsonPropertyName("categories")]
-                public Types.Category[] CategoryList { get; set; } = default!;
+                public List<Types.Category>? CategoryList { get; set; }
             }
         }
     }

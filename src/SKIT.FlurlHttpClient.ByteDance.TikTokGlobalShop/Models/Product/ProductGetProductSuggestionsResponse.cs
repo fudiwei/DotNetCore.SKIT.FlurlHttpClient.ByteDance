@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("text")]
                                         [System.Text.Json.Serialization.JsonPropertyName("text")]
-                                        public string Text { get; set; } = default!;
+                                        public string? Text { get; set; }
                                     }
                                 }
 
@@ -35,14 +35,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("field")]
                                 [System.Text.Json.Serialization.JsonPropertyName("field")]
-                                public string Field { get; set; } = default!;
+                                public string? Field { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置建议项。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("items")]
                                 [System.Text.Json.Serialization.JsonPropertyName("items")]
-                                public Types.Item[] Items { get; set; } = default!;
+                                public List<Types.Item>? Items { get; set; }
                             }
                         }
 
@@ -52,14 +52,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ProductId { get; set; } = default!;
+                        public string? ProductId { get; set; }
 
                         /// <summary>
                         /// 获取或设置修改建议列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("suggestions")]
                         [System.Text.Json.Serialization.JsonPropertyName("suggestions")]
-                        public Types.Suggestion[] SuggestionList { get; set; } = default!;
+                        public List<Types.Suggestion>? SuggestionList { get; set; }
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("products")]
                 [System.Text.Json.Serialization.JsonPropertyName("products")]
-                public Types.Product[] ProductList { get; set; } = default!;
+                public List<Types.Product>? ProductList { get; set; }
             }
         }
     }

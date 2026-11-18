@@ -15,14 +15,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("cancel_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("cancel_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string CancelId { get; set; } = default!;
+                public string? CancelId { get; set; }
 
                 /// <summary>
                 /// 获取或设置取消状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cancel_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("cancel_status")]
-                public string CancelStatus { get; set; } = default!;
+                public string? CancelStatus { get; set; }
             }
         }
     }

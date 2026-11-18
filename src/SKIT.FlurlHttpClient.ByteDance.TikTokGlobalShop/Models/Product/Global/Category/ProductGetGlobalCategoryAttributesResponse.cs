@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-                public Types.Attribute[] AttributeList { get; set; } = default!;
+                public List<Types.Attribute>? AttributeList { get; set; }
             }
         }
     }

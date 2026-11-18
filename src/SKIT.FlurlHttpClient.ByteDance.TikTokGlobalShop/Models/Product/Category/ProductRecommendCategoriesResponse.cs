@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string CategoryId { get; set; } = default!;
+                        public string? CategoryId { get; set; }
 
                         /// <summary>
                         /// 获取或设置分类名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置分类层级。
@@ -47,7 +47,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("permission_statuses")]
                         [System.Text.Json.Serialization.JsonPropertyName("permission_statuses")]
-                        public string[] PermissionStatusList { get; set; } = default!;
+                        public List<string>? PermissionStatusList { get; set; }
                     }
                 }
 
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("categories")]
                 [System.Text.Json.Serialization.JsonPropertyName("categories")]
-                public Types.Category[] CategoryList { get; set; } = default!;
+                public List<Types.Category>? CategoryList { get; set; }
 
                 /// <summary>
                 /// 获取或设置推荐子分类 ID。
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("leaf_category_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("leaf_category_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string LeafCategoryId { get; set; } = default!;
+                public string? LeafCategoryId { get; set; }
             }
         }
     }

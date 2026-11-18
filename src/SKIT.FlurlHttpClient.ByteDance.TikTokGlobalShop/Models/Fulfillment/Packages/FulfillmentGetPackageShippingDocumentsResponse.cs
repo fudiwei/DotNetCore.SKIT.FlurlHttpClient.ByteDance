@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("doc_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("doc_url")]
-                public string DocumentUrl { get; set; } = default!;
+                public string? DocumentUrl { get; set; }
             }
         }
     }

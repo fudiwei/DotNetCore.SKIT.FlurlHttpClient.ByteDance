@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("status")]
         [System.Text.Json.Serialization.JsonPropertyName("status")]
-        public IList<string>? CouponStatusList { get; set; }
+        public List<string>? CouponStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置展示方式列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("display_type")]
         [System.Text.Json.Serialization.JsonPropertyName("display_type")]
-        public IList<string>? DisplayTypeList { get; set; }
+        public List<string>? DisplayTypeList { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

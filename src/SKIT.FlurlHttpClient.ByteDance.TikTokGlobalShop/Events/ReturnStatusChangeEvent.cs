@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置退货 ID。
@@ -27,28 +27,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 [Newtonsoft.Json.JsonProperty("return_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ReturnId { get; set; } = default!;
+                public string? ReturnId { get; set; }
 
                 /// <summary>
                 /// 获取或设置退货发起人。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_role")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_role")]
-                public string ReturnRole { get; set; } = default!;
+                public string? ReturnRole { get; set; }
 
                 /// <summary>
                 /// 获取或设置退货类型。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_type")]
-                public string ReturnType { get; set; } = default!;
+                public string? ReturnType { get; set; }
 
                 /// <summary>
                 /// 获取或设置退货状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_status")]
-                public string ReturnStatus { get; set; } = default!;
+                public string? ReturnStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。

@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("orders")]
                 [System.Text.Json.Serialization.JsonPropertyName("orders")]
-                public Types.Order[] OrderList { get; set; } = default!;
+                public List<Types.Order>? OrderList { get; set; }
             }
         }
     }

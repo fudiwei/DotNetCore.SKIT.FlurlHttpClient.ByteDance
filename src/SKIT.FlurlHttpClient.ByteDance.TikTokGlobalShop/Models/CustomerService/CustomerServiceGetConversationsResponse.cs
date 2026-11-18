@@ -36,21 +36,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("avatar")]
                                 [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                                public string AvatarUrl { get; set; } = default!;
+                                public string? AvatarUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置角色。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("role")]
                                 [System.Text.Json.Serialization.JsonPropertyName("role")]
-                                public string Role { get; set; } = default!;
+                                public string? Role { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置昵称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("nickname")]
                                 [System.Text.Json.Serialization.JsonPropertyName("nickname")]
-                                public string Nickname { get; set; } = default!;
+                                public string? Nickname { get; set; }
                             }
 
                             public class Message
@@ -61,28 +61,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string MessageId { get; set; } = default!;
+                                public string? MessageId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置消息类型。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置消息内容 JSON 字符串。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("content")]
                                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                                public string ContentJson { get; set; } = default!;
+                                public string? ContentJson { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置发送者信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("sender")]
                                 [System.Text.Json.Serialization.JsonPropertyName("sender")]
-                                public Types.Participant Sender { get; set; } = default!;
+                                public Types.Participant? Sender { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置创建时间戳。
@@ -106,7 +106,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ConversationId { get; set; } = default!;
+                        public string? ConversationId { get; set; }
 
                         /// <summary>
                         /// 获取或设置参与者数量。
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("participants")]
                         [System.Text.Json.Serialization.JsonPropertyName("participants")]
-                        public Types.Participant[] ParticipantList { get; set; } = default!;
+                        public List<Types.Participant>? ParticipantList { get; set; }
 
                         /// <summary>
                         /// 获取或设置最新消息信息。
@@ -157,7 +157,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("conversations")]
                 [System.Text.Json.Serialization.JsonPropertyName("conversations")]
-                public Types.Conversation[] ConversationList { get; set; } = default!;
+                public List<Types.Conversation>? ConversationList { get; set; }
 
                 /// <summary>
                 /// 获取或设置下一页分页令牌。

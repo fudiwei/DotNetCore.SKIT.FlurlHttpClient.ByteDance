@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否可分单。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("split_attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("split_attributes")]
-                public Types.SplitAttribute[] SplitAttributeList { get; set; } = default!;
+                public List<Types.SplitAttribute>? SplitAttributeList { get; set; }
             }
         }
     }

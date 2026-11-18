@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("package_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("package_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string PackageId { get; set; } = default!;
+                                public string? PackageId { get; set; }
                             }
                         }
 
@@ -40,14 +40,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("message")]
                         [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
+                        public string? Message { get; set; }
 
                         /// <summary>
                         /// 获取或设置详细信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("detail")]
-                        public Types.Detail Detail { get; set; } = default!;
+                        public Types.Detail? Detail { get; set; }
                     }
                 }
 
@@ -56,14 +56,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("success_packages")]
                 [System.Text.Json.Serialization.JsonPropertyName("success_packages")]
-                public string[] SucceededPackageIdList { get; set; } = default!;
+                public List<string>? SucceededPackageIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置错误列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("errors")]
                 [System.Text.Json.Serialization.JsonPropertyName("errors")]
-                public Types.Error[]? ErrorList { get; set; }
+                public List<Types.Error>? ErrorList { get; set; }
             }
         }
     }

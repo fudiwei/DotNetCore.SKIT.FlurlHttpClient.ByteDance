@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_refund_amount")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_refund_amount")]
-                public Types.RefundAmount RefundAmount { get; set; } = default!;
+                public Types.RefundAmount? RefundAmount { get; set; }
             }
         }
     }

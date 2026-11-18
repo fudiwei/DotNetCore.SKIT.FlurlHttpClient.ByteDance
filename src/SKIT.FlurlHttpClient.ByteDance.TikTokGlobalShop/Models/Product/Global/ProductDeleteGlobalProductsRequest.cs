@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("global_product_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("global_product_ids")]
-        public IList<string> ProductIdList { get; set; } = new List<string>();
+        public List<string>? ProductIdList { get; set; }
     }
 }

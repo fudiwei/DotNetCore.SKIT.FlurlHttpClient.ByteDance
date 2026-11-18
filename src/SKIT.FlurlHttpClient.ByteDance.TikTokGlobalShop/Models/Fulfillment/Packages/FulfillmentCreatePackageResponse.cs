@@ -27,21 +27,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ShippingServiceId { get; set; } = default!;
+                        public string? ShippingServiceId { get; set; }
 
                         /// <summary>
                         /// 获取或设置运输服务名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置币种。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("currency")]
                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                        public string Currency { get; set; } = default!;
+                        public string? Currency { get; set; }
 
                         /// <summary>
                         /// 获取或设置价格。
@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("package_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("package_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string PackageId { get; set; } = default!;
+                public string? PackageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单 ID。
@@ -96,14 +96,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单行 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-                public string[]? OrderLineItemIdList { get; set; } = default!;
+                public List<string>? OrderLineItemIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。

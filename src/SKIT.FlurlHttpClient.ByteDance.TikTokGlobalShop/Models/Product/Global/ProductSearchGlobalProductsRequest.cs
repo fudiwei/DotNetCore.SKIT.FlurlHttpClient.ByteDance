@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("seller_skus")]
         [System.Text.Json.Serialization.JsonPropertyName("seller_skus")]
-        public IList<string>? SellerSKUList { get; set; }
+        public List<string>? SellerSKUList { get; set; }
 
         /// <summary>
         /// 获取或设置分页每页数量。

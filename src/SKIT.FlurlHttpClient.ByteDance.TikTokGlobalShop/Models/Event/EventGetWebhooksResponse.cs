@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("event_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("event_type")]
-                        public string EventType { get; set; } = default!;
+                        public string? EventType { get; set; }
 
                         /// <summary>
                         /// 获取或设置回调地址。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("address")]
                         [System.Text.Json.Serialization.JsonPropertyName("address")]
-                        public string WebhookUrl { get; set; } = default!;
+                        public string? WebhookUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("webhooks")]
                 [System.Text.Json.Serialization.JsonPropertyName("webhooks")]
-                public Types.Webhook[] WebhookList { get; set; } = default!;
+                public List<Types.Webhook>? WebhookList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

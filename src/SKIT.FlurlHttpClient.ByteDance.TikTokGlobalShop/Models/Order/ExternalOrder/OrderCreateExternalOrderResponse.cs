@@ -26,14 +26,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("id")]
                                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                                        public string ExternalOrderId { get; set; } = default!;
+                                        public string? ExternalOrderId { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置来源平台。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("platform")]
                                         [System.Text.Json.Serialization.JsonPropertyName("platform")]
-                                        public string Platform { get; set; } = default!;
+                                        public string? Platform { get; set; }
                                     }
                                 }
 
@@ -42,14 +42,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("order_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                                public string OrderId { get; set; } = default!;
+                                public string? OrderId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置外部订单信息。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("external_order")]
                                 [System.Text.Json.Serialization.JsonPropertyName("external_order")]
-                                public Types.ExternalOrder ExternalOrder { get; set; } = default!;
+                                public Types.ExternalOrder? ExternalOrder { get; set; }
                             }
                         }
 
@@ -65,14 +65,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("message")]
                         [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
+                        public string? Message { get; set; }
 
                         /// <summary>
                         /// 获取或设置详细信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("detail")]
-                        public Types.Detail Detail { get; set; } = default!;
+                        public Types.Detail? Detail { get; set; }
                     }
                 }
 
@@ -81,7 +81,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("errors")]
                 [System.Text.Json.Serialization.JsonPropertyName("errors")]
-                public Types.Error[]? ErrorList { get; set; } = default!;
+                public List<Types.Error>? ErrorList { get; set; }
             }
         }
     }

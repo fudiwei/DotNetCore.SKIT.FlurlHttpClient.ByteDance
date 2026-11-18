@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("check_item")]
                         [System.Text.Json.Serialization.JsonPropertyName("check_item")]
-                        public string CheckItem { get; set; } = default!;
+                        public string? CheckItem { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否失败。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("fail_reasons")]
                         [System.Text.Json.Serialization.JsonPropertyName("fail_reasons")]
-                        public string[]? ReasonList { get; set; }
+                        public List<string>? ReasonList { get; set; }
                     }
                 }
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("check_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("check_results")]
-                public Types.CheckResult[] CheckResultList { get; set; } = default!;
+                public List<Types.CheckResult>? CheckResultList { get; set; }
             }
         }
     }

@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id_list")]
-                        public string[]? OrderIdList { get; set; }
+                        public List<string>? OrderIdList { get; set; }
                     }
                 }
 
@@ -39,21 +39,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Events
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sc_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("sc_type")]
-                public string Type { get; set; } = default!;
+                public string? Type { get; set; }
 
                 /// <summary>
                 /// 获取或设置角色类型。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("role_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("role_type")]
-                public string RoleType { get; set; } = default!;
+                public string? RoleType { get; set; }
 
                 /// <summary>
                 /// 获取或设置包裹列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("package_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("package_list")]
-                public Types.Package[] PackageList { get; set; } = default!;
+                public List<Types.Package>? PackageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置更新时间戳。

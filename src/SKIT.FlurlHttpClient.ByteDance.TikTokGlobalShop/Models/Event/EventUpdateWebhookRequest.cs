@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         [Newtonsoft.Json.JsonProperty("event_type", Order = 1)]
         [System.Text.Json.Serialization.JsonPropertyName("event_type")]
         [System.Text.Json.Serialization.JsonPropertyOrder(1)]
-        public string EventType { get; set; } = string.Empty;
+        public string? EventType { get; set; }
 
         /// <summary>
         /// 获取或设置回调地址。
@@ -19,6 +19,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         [Newtonsoft.Json.JsonProperty("address", Order = 2)]
         [System.Text.Json.Serialization.JsonPropertyName("address")]
         [System.Text.Json.Serialization.JsonPropertyOrder(2)]
-        public string WebhookUrl { get; set; } = string.Empty;
+        public string? WebhookUrl { get; set; }
     }
 }

@@ -19,28 +19,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string BrandId { get; set; } = default!;
+                        public string? BrandId { get; set; }
 
                         /// <summary>
                         /// 获取或设置品牌名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置授权状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("authorized_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("authorized_status")]
-                        public string AuthorizedStatus { get; set; } = default!;
+                        public string? AuthorizedStatus { get; set; }
 
                         /// <summary>
                         /// 获取或设置品牌状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("brand_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("brand_status")]
-                        public string BrandStatus { get; set; } = default!;
+                        public string? BrandStatus { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否是 T1 品牌。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("brands")]
                 [System.Text.Json.Serialization.JsonPropertyName("brands")]
-                public Types.Brand[] BrandList { get; set; } = default!;
+                public List<Types.Brand>? BrandList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

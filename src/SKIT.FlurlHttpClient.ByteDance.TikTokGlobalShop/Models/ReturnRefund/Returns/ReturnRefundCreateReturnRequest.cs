@@ -17,35 +17,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置订单行 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-        public IList<string>? OrderLineItemIdList { get; set; }
+        public List<string>? OrderLineItemIdList { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU>? SKUList { get; set; }
+        public List<Types.SKU>? SKUList { get; set; }
 
         /// <summary>
         /// 获取或设置退货原因。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_reason")]
         [System.Text.Json.Serialization.JsonPropertyName("return_reason")]
-        public string ReturnReason { get; set; } = string.Empty;
+        public string? ReturnReason { get; set; }
 
         /// <summary>
         /// 获取或设置退货类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_type")]
         [System.Text.Json.Serialization.JsonPropertyName("return_type")]
-        public string ReturnType { get; set; } = string.Empty;
+        public string? ReturnType { get; set; }
 
         /// <summary>
         /// 获取或设置币种。

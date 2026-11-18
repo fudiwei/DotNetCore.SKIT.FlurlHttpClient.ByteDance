@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             Utilities.HttpRequestGuard.AgainstEmptyPathVariable(request.CancelId, "cancel_id");
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "cancellations", request.CancelId, "approve");
+                .CreateFlurlRequest(request, HttpMethod.Post, "return_refund", request.ApiVersion, "cancellations", request.CancelId!, "approve");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ReturnRefundApproveCancellationResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

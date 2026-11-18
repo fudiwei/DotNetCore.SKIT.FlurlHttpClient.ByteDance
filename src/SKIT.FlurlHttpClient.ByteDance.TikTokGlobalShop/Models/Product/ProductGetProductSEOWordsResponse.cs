@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("text")]
                                 [System.Text.Json.Serialization.JsonPropertyName("text")]
-                                public string Text { get; set; } = default!;
+                                public string? Text { get; set; }
                             }
                         }
 
@@ -32,14 +32,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ProductId { get; set; } = default!;
+                        public string? ProductId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SEO 关键词列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("seo_words")]
                         [System.Text.Json.Serialization.JsonPropertyName("seo_words")]
-                        public Types.SEOWord[] SEOWordList { get; set; } = default!;
+                        public List<Types.SEOWord>? SEOWordList { get; set; }
                     }
                 }
 
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("products")]
                 [System.Text.Json.Serialization.JsonPropertyName("products")]
-                public Types.Product[] ProductList { get; set; } = default!;
+                public List<Types.Product>? ProductList { get; set; }
             }
         }
     }

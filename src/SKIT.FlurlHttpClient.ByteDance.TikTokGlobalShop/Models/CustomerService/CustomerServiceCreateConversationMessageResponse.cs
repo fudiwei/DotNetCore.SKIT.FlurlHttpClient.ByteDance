@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("message_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("message_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string MessageId { get; set; } = default!;
+                public string? MessageId { get; set; }
             }
         }
     }

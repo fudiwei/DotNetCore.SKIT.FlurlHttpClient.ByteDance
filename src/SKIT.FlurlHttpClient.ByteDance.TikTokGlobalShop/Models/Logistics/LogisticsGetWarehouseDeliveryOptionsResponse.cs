@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("unit")]
                                 [System.Text.Json.Serialization.JsonPropertyName("unit")]
-                                public string Unit { get; set; } = default!;
+                                public string? Unit { get; set; }
                             }
 
                             public class WeightLimit
@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("unit")]
                                 [System.Text.Json.Serialization.JsonPropertyName("unit")]
-                                public string Unit { get; set; } = default!;
+                                public string? Unit { get; set; }
                             }
                         }
 
@@ -77,49 +77,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string DeliveryOptionId { get; set; } = default!;
+                        public string? DeliveryOptionId { get; set; }
 
                         /// <summary>
                         /// 获取或设置配送方式名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = default!;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("description")]
                         [System.Text.Json.Serialization.JsonPropertyName("description")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置尺寸限制。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("dimension_limit")]
                         [System.Text.Json.Serialization.JsonPropertyName("dimension_limit")]
-                        public Types.DimensionLimit DimensionLimit { get; set; } = default!;
+                        public Types.DimensionLimit? DimensionLimit { get; set; }
 
                         /// <summary>
                         /// 获取或设置重量限制。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("weight_limit")]
                         [System.Text.Json.Serialization.JsonPropertyName("weight_limit")]
-                        public Types.WeightLimit WeightLimit { get; set; } = default!;
+                        public Types.WeightLimit? WeightLimit { get; set; }
 
                         /// <summary>
                         /// 获取或设置平台列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("platform")]
                         [System.Text.Json.Serialization.JsonPropertyName("platform")]
-                        public string[]? PlatformList { get; set; }
+                        public List<string>? PlatformList { get; set; }
                     }
                 }
 
@@ -128,7 +128,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("delivery_options")]
                 [System.Text.Json.Serialization.JsonPropertyName("delivery_options")]
-                public Types.DeliveryOption[] DeliveryOptionList { get; set; } = default!;
+                public List<Types.DeliveryOption>? DeliveryOptionList { get; set; }
             }
         }
     }

@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("required_regions")]
                         [System.Text.Json.Serialization.JsonPropertyName("required_regions")]
-                        public string[] RequiredRegionCodeList { get; set; } = default!;
+                        public List<string>? RequiredRegionCodeList { get; set; }
 
                         /// <summary>
                         /// 获取或设置选填的地区编码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("optional_regions")]
                         [System.Text.Json.Serialization.JsonPropertyName("optional_regions")]
-                        public string[] OptionalRegionCodeList { get; set; } = default!;
+                        public List<string>? OptionalRegionCodeList { get; set; }
                     }
 
                     public class SizeChart : ProductGetCategoryRulesResponse.Types.Data.Types.SizeChart
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("product_certifications")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_certifications")]
-                public Types.ProductCertification[] ProductCertificationList { get; set; } = default!;
+                public List<Types.ProductCertification>? ProductCertificationList { get; set; }
 
                 /// <summary>
                 /// 获取或设置尺码表信息。

@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置开始时间戳。
@@ -100,14 +100,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
-                                        public decimal Amount { get; set; } = default!;
+                                        public decimal Amount { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置币种。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("currency")]
                                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                                        public string Currency { get; set; } = default!;
+                                        public string? Currency { get; set; }
                                     }
 
                                     public class MaxDiscount
@@ -119,14 +119,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
-                                        public decimal Amount { get; set; } = default!;
+                                        public decimal Amount { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置币种。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("currency")]
                                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                                        public string Currency { get; set; } = default!;
+                                        public string? Currency { get; set; }
                                     }
                                 }
 
@@ -135,7 +135,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置减免金额信息。
@@ -174,14 +174,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberReadOnlyConverter))]
                                         [System.Text.Json.Serialization.JsonPropertyName("amount")]
                                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberReadOnlyConverter))]
-                                        public decimal Amount { get; set; } = default!;
+                                        public decimal Amount { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置币种。
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("currency")]
                                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                                        public string Currency { get; set; } = default!;
+                                        public string? Currency { get; set; }
                                     }
                                 }
 
@@ -190,7 +190,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置最低消费信息。
@@ -207,28 +207,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string CouponId { get; set; } = default!;
+                        public string? CouponId { get; set; }
 
                         /// <summary>
                         /// 获取或设置优惠券名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置优惠券状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("status")]
                         [System.Text.Json.Serialization.JsonPropertyName("status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置展示方式。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("display_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("display_type")]
-                        public string DisplayType { get; set; } = default!;
+                        public string? DisplayType { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -249,14 +249,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("claim_duration")]
                         [System.Text.Json.Serialization.JsonPropertyName("claim_duration")]
-                        public Types.ClaimDuration ClaimDuration { get; set; } = default!;
+                        public Types.ClaimDuration? ClaimDuration { get; set; }
 
                         /// <summary>
                         /// 获取或设置使用期限信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("redemption_duration")]
                         [System.Text.Json.Serialization.JsonPropertyName("redemption_duration")]
-                        public Types.RedemptionDuration RedemptionDuration { get; set; } = default!;
+                        public Types.RedemptionDuration? RedemptionDuration { get; set; }
 
                         /// <summary>
                         /// 获取或设置优惠码。
@@ -284,14 +284,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("discount")]
                         [System.Text.Json.Serialization.JsonPropertyName("discount")]
-                        public Types.Discount Discount { get; set; } = default!;
+                        public Types.Discount? Discount { get; set; }
 
                         /// <summary>
                         /// 获取或设置门槛信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("threshold")]
                         [System.Text.Json.Serialization.JsonPropertyName("threshold")]
-                        public Types.Threshold Threshold { get; set; } = default!;
+                        public Types.Threshold? Threshold { get; set; }
 
                         /// <summary>
                         /// 获取或设置商品范围。
@@ -314,7 +314,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupons")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupons")]
-                public Types.Coupon[] CouponList { get; set; } = default!;
+                public List<Types.Coupon>? CouponList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

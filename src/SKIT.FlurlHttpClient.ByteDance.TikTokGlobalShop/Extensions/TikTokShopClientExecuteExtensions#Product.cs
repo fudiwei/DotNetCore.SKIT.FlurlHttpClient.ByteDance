@@ -976,7 +976,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "search", "inventory");
+                .CreateFlurlRequest(request, HttpMethod.Post, "product", request.ApiVersion, "inventory", "search");
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetInventoriesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1021,7 +1021,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "listing_schemas")
-                .SetQueryParam("category_ids", $"[{string.Join(",", request.CategoryIdList)}]")
+                .SetQueryParam("category_ids", request.CategoryIdList is not null ? $"[{string.Join(",", request.CategoryIdList)}]" : null)
                 .SetQueryParam("category_version", request.CategoryVersion)
                 .SetQueryParam("locale", request.Locale);
 
@@ -1046,7 +1046,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "diagnoses")
-                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+                .SetQueryParam("product_ids", request.ProductIdList is not null ? $"[{string.Join(",", request.ProductIdList)}]" : null);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductDiagnosesResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1069,7 +1069,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "seo_words")
-                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+                .SetQueryParam("product_ids", request.ProductIdList is not null ? $"[{string.Join(",", request.ProductIdList)}]" : null);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductSEOWordsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -1092,7 +1092,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop
 
             IFlurlRequest flurlReq = client
                 .CreateFlurlRequest(request, HttpMethod.Get, "product", request.ApiVersion, "products", "suggestions")
-                .SetQueryParam("product_ids", $"[{string.Join(",", request.ProductIdList)}]");
+                .SetQueryParam("product_ids", request.ProductIdList is not null ? $"[{string.Join(",", request.ProductIdList)}]" : null);
 
             return await client.SendFlurlRequesAsJsontAsync<Models.ProductGetProductSuggestionsResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }

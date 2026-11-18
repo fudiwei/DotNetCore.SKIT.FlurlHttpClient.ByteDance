@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("country_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("country_code")]
-                public string CountryCode { get; set; } = string.Empty;
+                public string? CountryCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置本地号码。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("local_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("local_number")]
-                public string LocalNumber { get; set; } = string.Empty;
+                public string? LocalNumber { get; set; }
             }
         }
 
@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         /// <summary>
         /// 获取或设置制造商注册商业名称。
@@ -52,20 +52,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("email")]
         [System.Text.Json.Serialization.JsonPropertyName("email")]
-        public string Email { get; set; } = string.Empty;
+        public string? Email { get; set; }
 
         /// <summary>
         /// 获取或设置电话号码信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("phone_number")]
         [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-        public Types.PhoneNumber PhoneNumber { get; set; } = new Types.PhoneNumber();
+        public Types.PhoneNumber? PhoneNumber { get; set; }
 
         /// <summary>
         /// 获取或设置地址。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("address")]
         [System.Text.Json.Serialization.JsonPropertyName("address")]
-        public string Address { get; set; } = string.Empty;
+        public string? Address { get; set; }
     }
 }

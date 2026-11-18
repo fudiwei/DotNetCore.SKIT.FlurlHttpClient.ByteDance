@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("type")]
-                                public string Type { get; set; } = default!;
+                                public string? Type { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置最低观看时长（单位：秒）。
@@ -57,21 +57,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("display_channels")]
                         [System.Text.Json.Serialization.JsonPropertyName("display_channels")]
-                        public string[] DisplayChannelList { get; set; } = default!;
+                        public List<string>? DisplayChannelList { get; set; }
 
                         /// <summary>
                         /// 获取或设置使用统计信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("usage_stats")]
                         [System.Text.Json.Serialization.JsonPropertyName("usage_stats")]
-                        public Types.UsageStatistics UsageStatistics { get; set; } = default!;
+                        public Types.UsageStatistics? UsageStatistics { get; set; }
 
                         /// <summary>
                         /// 获取或设置适用商品 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_ids")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_ids")]
-                        public string[]? ProductIdList { get; set; }
+                        public List<string>? ProductIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置卖家自定义条款。
@@ -85,7 +85,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("live_tasks")]
                         [System.Text.Json.Serialization.JsonPropertyName("live_tasks")]
-                        public Types.LiveTask[]? LiveTaskList { get; set; }
+                        public List<Types.LiveTask>? LiveTaskList { get; set; }
                     }
                 }
 
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon")]
-                public Types.Coupon Coupon { get; set; } = default!;
+                public Types.Coupon? Coupon { get; set; }
             }
         }
     }

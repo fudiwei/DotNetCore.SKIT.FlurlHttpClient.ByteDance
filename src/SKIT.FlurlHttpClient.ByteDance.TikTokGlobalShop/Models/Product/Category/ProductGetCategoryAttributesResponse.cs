@@ -23,14 +23,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string ValueId { get; set; } = default!;
+                                public string? ValueId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置属性值名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
                             }
 
                             public class RequirementCondition
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("condition_type")]
                                 [System.Text.Json.Serialization.JsonPropertyName("condition_type")]
-                                public string ConditionType { get; set; } = default!;
+                                public string? ConditionType { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置属性 ID。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("attribute_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attribute_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string AttributeId { get; set; } = default!;
+                                public string? AttributeId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置属性值 ID。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 [Newtonsoft.Json.JsonProperty("attribute_value_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("attribute_value_id")]
                                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                                public string AttributeValueId { get; set; } = default!;
+                                public string? AttributeValueId { get; set; }
                             }
                         }
 
@@ -66,21 +66,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string AttributeId { get; set; } = default!;
+                        public string? AttributeId { get; set; }
 
                         /// <summary>
                         /// 获取或设置属性名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置属性类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = default!;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否必须。
@@ -115,14 +115,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("values")]
                         [System.Text.Json.Serialization.JsonPropertyName("values")]
-                        public Types.AttributeValue[] ValueList { get; set; } = default!;
+                        public List<Types.AttributeValue>? ValueList { get; set; }
 
                         /// <summary>
                         /// 获取或设置必需条件列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("requirement_conditions")]
                         [System.Text.Json.Serialization.JsonPropertyName("requirement_conditions")]
-                        public Types.RequirementCondition[]? RequirementConditionList { get; set; }
+                        public List<Types.RequirementCondition>? RequirementConditionList { get; set; }
                     }
                 }
 
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("attributes")]
-                public Types.Attribute[] AttributeList { get; set; } = default!;
+                public List<Types.Attribute>? AttributeList { get; set; }
             }
         }
     }

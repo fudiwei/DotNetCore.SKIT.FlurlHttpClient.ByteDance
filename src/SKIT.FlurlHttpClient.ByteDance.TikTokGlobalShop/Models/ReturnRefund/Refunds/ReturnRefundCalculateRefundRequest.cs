@@ -17,35 +17,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置订单行 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-        public IList<string>? OrderLineItemIdList { get; set; }
+        public List<string>? OrderLineItemIdList { get; set; }
 
         /// <summary>
         /// 获取或设置 SKU 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU>? SKUList { get; set; }
+        public List<Types.SKU>? SKUList { get; set; }
 
         /// <summary>
         /// 获取或设置申请原因。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reason_name")]
         [System.Text.Json.Serialization.JsonPropertyName("reason_name")]
-        public string RequestReason { get; set; } = string.Empty;
+        public string? RequestReason { get; set; }
 
         /// <summary>
         /// 获取或设置申请类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("request_type")]
         [System.Text.Json.Serialization.JsonPropertyName("request_type")]
-        public string RequestType { get; set; } = string.Empty;
+        public string? RequestType { get; set; }
 
         /// <summary>
         /// 获取或设置运输类型。

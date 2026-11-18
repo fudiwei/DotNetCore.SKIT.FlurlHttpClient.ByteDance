@@ -26,14 +26,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("url")]
                                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                                public string Url { get; set; } = default!;
+                                public string? Url { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置封面图片 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("cover")]
                                 [System.Text.Json.Serialization.JsonPropertyName("cover")]
-                                public string CoverUrl { get; set; } = default!;
+                                public string? CoverUrl { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置视频宽度（单位：像素）。
@@ -63,28 +63,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("event")]
                         [System.Text.Json.Serialization.JsonPropertyName("event")]
-                        public string Event { get; set; } = default!;
+                        public string? Event { get; set; }
 
                         /// <summary>
                         /// 获取或设置发起角色。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("role")]
                         [System.Text.Json.Serialization.JsonPropertyName("role")]
-                        public string Role { get; set; } = default!;
+                        public string? Role { get; set; }
 
                         /// <summary>
                         /// 获取或设置描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("description")]
                         [System.Text.Json.Serialization.JsonPropertyName("description")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置原因文本。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reason_text")]
                         [System.Text.Json.Serialization.JsonPropertyName("reason_text")]
-                        public string ReasonText { get; set; } = default!;
+                        public string? ReasonText { get; set; }
 
                         /// <summary>
                         /// 获取或设置备注。
@@ -105,14 +105,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("images")]
                         [System.Text.Json.Serialization.JsonPropertyName("images")]
-                        public Types.Image[]? ImageList { get; set; }
+                        public List<Types.Image>? ImageList { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("videos")]
                         [System.Text.Json.Serialization.JsonPropertyName("videos")]
-                        public Types.Video[]? VideoList { get; set; }
+                        public List<Types.Video>? VideoList { get; set; }
                     }
                 }
 
@@ -121,7 +121,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("records")]
                 [System.Text.Json.Serialization.JsonPropertyName("records")]
-                public Types.Record[] RecordList { get; set; } = default!;
+                public List<Types.Record>? RecordList { get; set; }
             }
         }
     }

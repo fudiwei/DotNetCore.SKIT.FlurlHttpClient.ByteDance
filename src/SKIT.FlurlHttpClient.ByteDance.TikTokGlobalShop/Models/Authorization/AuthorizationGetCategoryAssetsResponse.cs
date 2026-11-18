@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
                             }
                         }
 
@@ -39,21 +39,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("cipher")]
                         [System.Text.Json.Serialization.JsonPropertyName("cipher")]
-                        public string Cipher { get; set; } = default!;
+                        public string? Cipher { get; set; }
 
                         /// <summary>
                         /// 获取或设置目标市场。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("target_market")]
                         [System.Text.Json.Serialization.JsonPropertyName("target_market")]
-                        public string TargetMarket { get; set; } = default!;
+                        public string? TargetMarket { get; set; }
 
                         /// <summary>
                         /// 获取或设置类目信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category")]
                         [System.Text.Json.Serialization.JsonPropertyName("category")]
-                        public Types.Category Category { get; set; } = default!;
+                        public Types.Category? Category { get; set; }
                     }
                 }
 
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_assets")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_assets")]
-                public Types.CategoryAsset[] CategoryAssetList { get; set; } = default!;
+                public List<Types.CategoryAsset>? CategoryAssetList { get; set; }
             }
         }
     }

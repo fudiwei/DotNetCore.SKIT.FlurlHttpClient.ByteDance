@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("responsible_person_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("responsible_person_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string ResponsiblePersonId { get; set; } = default!;
+                public string? ResponsiblePersonId { get; set; }
             }
         }
     }

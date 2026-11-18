@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("message")]
                         [System.Text.Json.Serialization.JsonPropertyName("message")]
-                        public string Message { get; set; } = default!;
+                        public string? Message { get; set; }
                     }
                 }
 
@@ -28,14 +28,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单行 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_line_item_ids")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_line_item_ids")]
-                public string[]? OrderLineItemIdList { get; set; }
+                public List<string>? OrderLineItemIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置包裹 ID。
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 [Newtonsoft.Json.JsonProperty("package_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("package_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string PackageId { get; set; } = default!;
+                public string? PackageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置警告信息。

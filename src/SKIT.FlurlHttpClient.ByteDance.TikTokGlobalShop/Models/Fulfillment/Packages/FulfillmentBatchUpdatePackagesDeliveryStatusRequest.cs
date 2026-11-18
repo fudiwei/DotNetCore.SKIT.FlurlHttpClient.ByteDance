@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string PackageId { get; set; } = string.Empty;
+                public string? PackageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置配送类型。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("delivery_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("delivery_type")]
-                public string DeliveryType { get; set; } = string.Empty;
+                public string? DeliveryType { get; set; }
 
                 /// <summary>
                 /// 获取或设置失败原因。
@@ -51,6 +51,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("packages")]
         [System.Text.Json.Serialization.JsonPropertyName("packages")]
-        public IList<Types.Package> PackageList { get; set; } = new List<Types.Package>();
+        public List<Types.Package>? PackageList { get; set; }
     }
 }

@@ -6,8 +6,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.UnitTests.TestCases
 {
     public partial class TestCase_RequestSigningTests
     {
-        [Fact(DisplayName = "测试用例：即时配送相关请求签名")]
-        public async Task TestRequestSignature()
+        [Fact(DisplayName = "测试用例：请求签名")]
+        public async Task TestRequestSigning()
         {
             using var mockClient = TikTokShopClientBuilder
                 .Create(new TikTokShopClientOptions()

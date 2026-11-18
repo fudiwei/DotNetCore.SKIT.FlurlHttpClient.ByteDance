@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("activity_type")]
         [System.Text.Json.Serialization.JsonPropertyName("activity_type")]
-        public string ActivityType { get; set; } = string.Empty;
+        public string? ActivityType { get; set; }
 
         /// <summary>
         /// 获取或设置活动标题。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("title")]
         [System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
         /// <summary>
         /// 获取或设置商品类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_level")]
         [System.Text.Json.Serialization.JsonPropertyName("product_level")]
-        public string ProductLevel { get; set; } = string.Empty;
+        public string? ProductLevel { get; set; }
 
         /// <summary>
         /// 获取或设置活动开始时间戳。

@@ -106,14 +106,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ProductId { get; set; } = string.Empty;
+        public string? ProductId { get; set; }
 
         /// <summary>
         /// 获取或设置商品标题。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("title")]
         [System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
         /// <summary>
         /// 获取或设置商品描述。
@@ -127,7 +127,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_id")]
         [System.Text.Json.Serialization.JsonPropertyName("category_id")]
-        public string CategoryId { get; set; } = string.Empty;
+        public string? CategoryId { get; set; }
 
         /// <summary>
         /// 获取或设置品牌 ID。
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("main_images")]
         [System.Text.Json.Serialization.JsonPropertyName("main_images")]
-        public IList<Types.Image>? MainImageList { get; set; }
+        public List<Types.Image>? MainImageList { get; set; }
 
         /// <summary>
         /// 获取或设置视频信息。
@@ -155,7 +155,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+        public List<Types.SKU>? SKUList { get; set; }
 
         /// <summary>
         /// 获取或设置包装尺寸信息。
@@ -183,14 +183,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("certifications")]
         [System.Text.Json.Serialization.JsonPropertyName("certifications")]
-        public IList<Types.Certification>? CertificationList { get; set; }
+        public List<Types.Certification>? CertificationList { get; set; }
 
         /// <summary>
         /// 获取或设置商品属性列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_attributes")]
         [System.Text.Json.Serialization.JsonPropertyName("product_attributes")]
-        public IList<Types.ProductAttribute>? ProductAttributeList { get; set; }
+        public List<Types.ProductAttribute>? ProductAttributeList { get; set; }
 
         /// <summary>
         /// 获取或设置制造商信息。

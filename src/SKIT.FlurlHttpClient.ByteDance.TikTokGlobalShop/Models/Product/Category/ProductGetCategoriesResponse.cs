@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string CategoryId { get; set; } = default!;
+                        public string? CategoryId { get; set; }
 
                         /// <summary>
                         /// 获取或设置上级分类 ID。
@@ -27,14 +27,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("parent_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("parent_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ParentCategoryId { get; set; } = default!;
+                        public string? ParentCategoryId { get; set; }
 
                         /// <summary>
                         /// 获取或设置名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("local_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("local_name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否是子分类。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("permission_statuses")]
                         [System.Text.Json.Serialization.JsonPropertyName("permission_statuses")]
-                        public string[] PermissionStatusList { get; set; } = default!;
+                        public List<string>? PermissionStatusList { get; set; }
                     }
                 }
 
@@ -57,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("categories")]
                 [System.Text.Json.Serialization.JsonPropertyName("categories")]
-                public Types.Category[] CategoryList { get; set; } = default!;
+                public List<Types.Category>? CategoryList { get; set; }
             }
         }
     }

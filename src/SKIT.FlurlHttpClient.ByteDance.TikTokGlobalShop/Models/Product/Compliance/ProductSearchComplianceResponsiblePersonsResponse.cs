@@ -26,28 +26,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("postal_code")]
                                 [System.Text.Json.Serialization.JsonPropertyName("postal_code")]
-                                public string PostalCode { get; set; } = default!;
+                                public string? PostalCode { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置国家。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("country")]
                                 [System.Text.Json.Serialization.JsonPropertyName("country")]
-                                public string Country { get; set; } = default!;
+                                public string? Country { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置省。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("province")]
                                 [System.Text.Json.Serialization.JsonPropertyName("province")]
-                                public string Province { get; set; } = default!;
+                                public string? Province { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置市。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("city")]
                                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                                public string City { get; set; } = default!;
+                                public string? City { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置区。
@@ -78,35 +78,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string ResponsiblePersonId { get; set; } = default!;
+                        public string? ResponsiblePersonId { get; set; }
 
                         /// <summary>
                         /// 获取或设置责任人名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置邮件地址。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("email")]
                         [System.Text.Json.Serialization.JsonPropertyName("email")]
-                        public string Email { get; set; } = default!;
+                        public string? Email { get; set; }
 
                         /// <summary>
                         /// 获取或设置电话号码信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("phone_number")]
                         [System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-                        public Types.PhoneNumber PhoneNumber { get; set; } = default!;
+                        public Types.PhoneNumber? PhoneNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置地址信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("address")]
                         [System.Text.Json.Serialization.JsonPropertyName("address")]
-                        public Types.Address Address { get; set; } = default!;
+                        public Types.Address? Address { get; set; }
                     }
                 }
 
@@ -115,7 +115,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("responsible_persons")]
                 [System.Text.Json.Serialization.JsonPropertyName("responsible_persons")]
-                public Types.ResponsiblePerson[] ResponsiblePersonList { get; set; } = default!;
+                public List<Types.ResponsiblePerson>? ResponsiblePersonList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。

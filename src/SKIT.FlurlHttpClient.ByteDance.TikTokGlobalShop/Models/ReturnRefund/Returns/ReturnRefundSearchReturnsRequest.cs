@@ -10,42 +10,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("order_ids")]
-        public IList<string>? OrderIdList { get; set; }
+        public List<string>? OrderIdList { get; set; }
 
         /// <summary>
         /// 获取或设置买家用户 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("buyer_user_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("buyer_user_ids")]
-        public IList<string>? BuyerUserIdList { get; set; }
+        public List<string>? BuyerUserIdList { get; set; }
 
         /// <summary>
         /// 获取或设置退货 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("return_ids")]
-        public IList<string>? ReturnIdList { get; set; }
+        public List<string>? ReturnIdList { get; set; }
 
         /// <summary>
         /// 获取或设置退货类型列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_types")]
         [System.Text.Json.Serialization.JsonPropertyName("return_types")]
-        public IList<string>? ReturnTypeList { get; set; }
+        public List<string>? ReturnTypeList { get; set; }
 
         /// <summary>
         /// 获取或设置退货状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_status")]
         [System.Text.Json.Serialization.JsonPropertyName("return_status")]
-        public IList<string>? ReturnStatusList { get; set; }
+        public List<string>? ReturnStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置仲裁状态列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("arbitration_status")]
         [System.Text.Json.Serialization.JsonPropertyName("arbitration_status")]
-        public IList<string>? ArbitrationStatusList { get; set; }
+        public List<string>? ArbitrationStatusList { get; set; }
 
         /// <summary>
         /// 获取或设置创建时间范围起始时间戳。

@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("uri")]
                 [System.Text.Json.Serialization.JsonPropertyName("uri")]
-                public string Uri { get; set; } = string.Empty;
+                public string? Uri { get; set; }
             }
 
             public class Video
@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string FileId { get; set; } = string.Empty;
+                public string? FileId { get; set; }
             }
 
             public class SKU
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string AttributeId { get; set; } = string.Empty;
+                        public string? AttributeId { get; set; }
 
                         /// <summary>
                         /// 获取或设置属性名称。
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("currency")]
                         [System.Text.Json.Serialization.JsonPropertyName("currency")]
-                        public string Currency { get; set; } = string.Empty;
+                        public string? Currency { get; set; }
 
                         /// <summary>
                         /// 获取或设置价格。
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("warehouse_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("warehouse_id")]
-                        public string WarehouseId { get; set; } = string.Empty;
+                        public string? WarehouseId { get; set; }
 
                         /// <summary>
                         /// 获取或设置库存数量。
@@ -119,14 +119,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = string.Empty;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置标识码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("code")]
                         [System.Text.Json.Serialization.JsonPropertyName("code")]
-                        public string Code { get; set; } = string.Empty;
+                        public string? Code { get; set; }
                     }
 
                     public class CombinedSKU
@@ -136,14 +136,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_id")]
-                        public string ProductId { get; set; } = string.Empty;
+                        public string? ProductId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = string.Empty;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU 数量。
@@ -180,7 +180,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("type")]
                         [System.Text.Json.Serialization.JsonPropertyName("type")]
-                        public string Type { get; set; } = string.Empty;
+                        public string? Type { get; set; }
 
                         /// <summary>
                         /// 获取或设置配送信息。
@@ -203,35 +203,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("external_urls")]
                 [System.Text.Json.Serialization.JsonPropertyName("external_urls")]
-                public IList<string>? ExternalUrl { get; set; }
+                public List<string>? ExternalUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置外部编码列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("extra_identifier_codes")]
                 [System.Text.Json.Serialization.JsonPropertyName("extra_identifier_codes")]
-                public IList<string>? ExternalIdentifierCodeList { get; set; }
+                public List<string>? ExternalIdentifierCodeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置销售属性列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sales_attributes")]
                 [System.Text.Json.Serialization.JsonPropertyName("sales_attributes")]
-                public IList<Types.SalesAttribute>? SalesAttributeList { get; set; }
+                public List<Types.SalesAttribute>? SalesAttributeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置库存列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("inventory")]
                 [System.Text.Json.Serialization.JsonPropertyName("inventory")]
-                public IList<Types.Inventory>? InventoryList { get; set; }
+                public List<Types.Inventory>? InventoryList { get; set; }
 
                 /// <summary>
                 /// 获取或设置价格信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("price")]
                 [System.Text.Json.Serialization.JsonPropertyName("price")]
-                public Types.Price Price { get; set; } = new Types.Price();
+                public Types.Price? Price { get; set; }
 
                 /// <summary>
                 /// 获取或设置卖家 SKU 信息。
@@ -252,7 +252,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("combined_skus")]
                 [System.Text.Json.Serialization.JsonPropertyName("combined_skus")]
-                public IList<Types.CombinedSKU>? CombinedSKUList { get; set; }
+                public List<Types.CombinedSKU>? CombinedSKUList { get; set; }
 
                 /// <summary>
                 /// 获取或设置 SKU 单位数量。
@@ -305,7 +305,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("unit")]
                 [System.Text.Json.Serialization.JsonPropertyName("unit")]
-                public string Unit { get; set; } = string.Empty;
+                public string? Unit { get; set; }
             }
 
             public class PackageWeight
@@ -324,7 +324,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("unit")]
                 [System.Text.Json.Serialization.JsonPropertyName("unit")]
-                public string Unit { get; set; } = string.Empty;
+                public string? Unit { get; set; }
             }
 
             public class Certification
@@ -342,7 +342,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string FileId { get; set; } = string.Empty;
+                        public string? FileId { get; set; }
 
                         /// <summary>
                         /// 获取或设置文件名称。
@@ -365,21 +365,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string CertificationId { get; set; } = string.Empty;
+                public string? CertificationId { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("images")]
                 [System.Text.Json.Serialization.JsonPropertyName("images")]
-                public IList<Types.Image>? ImageList { get; set; }
+                public List<Types.Image>? ImageList { get; set; }
 
                 /// <summary>
                 /// 获取或设置文件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("files")]
                 [System.Text.Json.Serialization.JsonPropertyName("files")]
-                public IList<Types.File>? FileList { get; set; }
+                public List<Types.File>? FileList { get; set; }
             }
 
             public class ProductAttribute
@@ -409,14 +409,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id")]
                 [System.Text.Json.Serialization.JsonPropertyName("id")]
-                public string AttributeId { get; set; } = string.Empty;
+                public string? AttributeId { get; set; }
 
                 /// <summary>
                 /// 获取或设置属性值列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("values")]
                 [System.Text.Json.Serialization.JsonPropertyName("values")]
-                public IList<Types.ProductAttributeValue> ValueList { get; set; } = new List<Types.ProductAttributeValue>();
+                public List<Types.ProductAttributeValue>? ValueList { get; set; }
             }
 
             public class SizeChart
@@ -434,7 +434,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string TemplateId { get; set; } = string.Empty;
+                        public string? TemplateId { get; set; }
                     }
                 }
 
@@ -453,7 +453,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
                 public Types.Template? Template { get; set; }
             }
 
-            [Obsolete("相关接口或字段于 2024-09-26 下线。")]
             public class Manufacturer
             {
                 /// <summary>
@@ -505,7 +504,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("title")]
         [System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
         /// <summary>
         /// 获取或设置商品描述。
@@ -526,7 +525,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_id")]
         [System.Text.Json.Serialization.JsonPropertyName("category_id")]
-        public string CategoryId { get; set; } = string.Empty;
+        public string? CategoryId { get; set; }
 
         /// <summary>
         /// 获取或设置品牌 ID。
@@ -540,7 +539,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("main_images")]
         [System.Text.Json.Serialization.JsonPropertyName("main_images")]
-        public IList<Types.Image>? MainImageList { get; set; }
+        public List<Types.Image>? MainImageList { get; set; }
 
         /// <summary>
         /// 获取或设置视频信息。
@@ -554,7 +553,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("skus")]
         [System.Text.Json.Serialization.JsonPropertyName("skus")]
-        public IList<Types.SKU> SKUList { get; set; } = new List<Types.SKU>();
+        public List<Types.SKU>? SKUList { get; set; }
 
         /// <summary>
         /// 获取或设置组合商品主商品 ID。
@@ -589,14 +588,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("certifications")]
         [System.Text.Json.Serialization.JsonPropertyName("certifications")]
-        public IList<Types.Certification>? CertificationList { get; set; }
+        public List<Types.Certification>? CertificationList { get; set; }
 
         /// <summary>
         /// 获取或设置商品属性列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("product_attributes")]
         [System.Text.Json.Serialization.JsonPropertyName("product_attributes")]
-        public IList<Types.ProductAttribute>? ProductAttributeList { get; set; }
+        public List<Types.ProductAttribute>? ProductAttributeList { get; set; }
 
         /// <summary>
         /// 获取或设置是否允许货到付款。
@@ -610,7 +609,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("delivery_option_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("delivery_option_ids")]
-        public IList<string>? DeliveryOptionIdList { get; set; }
+        public List<string>? DeliveryOptionIdList { get; set; }
 
         /// <summary>
         /// 获取或设置制造商信息。
@@ -625,14 +624,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("manufacturer_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("manufacturer_ids")]
-        public IList<string>? ManufacturerIdList { get; set; }
+        public List<string>? ManufacturerIdList { get; set; }
 
         /// <summary>
         /// 获取或设置责任人 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("responsible_person_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("responsible_person_ids")]
-        public IList<string>? ResponsiblePersonIdList { get; set; }
+        public List<string>? ResponsiblePersonIdList { get; set; }
 
         /// <summary>
         /// 获取或设置是否为二手。
@@ -667,6 +666,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobalShop.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("listing_platforms")]
         [System.Text.Json.Serialization.JsonPropertyName("listing_platforms")]
-        public IList<string>? ListingPlatformList { get; set; }
+        public List<string>? ListingPlatformList { get; set; }
     }
 }

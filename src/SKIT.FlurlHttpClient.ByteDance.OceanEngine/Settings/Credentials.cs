@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.OceanEngine.Settings
 {
     public class Credentials

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-		<TargetFrameworks>net461; netstandard2.0; net6.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0; net462; net6.0; net8.0; net10.0</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -11,7 +11,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/fudiwei/DotNetCore.SKIT.FlurlHttpClient.ByteDance</PackageProjectUrl>
-        <PackageTags>Flurl.Http ByteDance OceanEngine 字节 字节跳动 字节广告 字节跳动广告 头条 今日头条 头条广告 今日头条广告 巨量引擎 巨量引擎开放平台 巨量千川 巨量千川开放能力 巨量星图 巨量星图开放能力</PackageTags>
+        <PackageTags>Flurl.Http; ByteDance; OceanEngine; 字节; 字节跳动; 字节广告; 字节跳动广告; 头条; 今日头条; 头条广告; 今日头条广告; 巨量引擎; 巨量引擎开放平台; 巨量千川; 巨量千川开放能力; 巨量星图; 巨量星图开放能力</PackageTags>
         <Authors>Fu Diwei</Authors>
         <Description>基于 Flurl.Http 的巨量引擎开放平台 API 客户端。</Description>
     </PropertyGroup>
@@ -19,10 +19,13 @@
 	<ItemGroup>
 		<None Include="../../LOGO.png" Pack="true" PackagePath="/" />
 		<None Include="README.md" Pack="true" PackagePath="/" />
+        <None Include="ModelsFixtures/**/*.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="3.1.0" />
+        <PackageReference Include="SKIT.FlurlHttpClient.Common" Version="4.0.1" />
+        <PackageReference Include="SKIT.JsonConv.NewtonsoftJson" Version="0.1.2" />
+        <PackageReference Include="SKIT.JsonConv.SystemTextJson" Version="0.1.2" />
 	</ItemGroup>
 
 </Project>

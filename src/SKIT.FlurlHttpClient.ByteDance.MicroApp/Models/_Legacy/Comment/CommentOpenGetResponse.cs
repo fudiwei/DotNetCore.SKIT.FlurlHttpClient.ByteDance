@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("text")]
                                 [System.Text.Json.Serialization.JsonPropertyName("text")]
-                                public string Text { get; set; } = default!;
+                                public string? Text { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置回复时间戳。
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("user")]
                         [System.Text.Json.Serialization.JsonPropertyName("user")]
-                        public Types.User User { get; set; } = default!;
+                        public Types.User? User { get; set; }
 
                         /// <summary>
                         /// 获取或设置状态。
@@ -108,14 +108,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("text")]
                         [System.Text.Json.Serialization.JsonPropertyName("text")]
-                        public string Text { get; set; } = default!;
+                        public string? Text { get; set; }
 
                         /// <summary>
                         /// 获取或设置评论图片 URL 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("imge_urls")]
                         [System.Text.Json.Serialization.JsonPropertyName("imge_urls")]
-                        public string[]? ImageUrlList { get; set; }
+                        public List<string>? ImageUrlList { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间。
@@ -138,7 +138,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("devloper_reply_comments")]
                         [System.Text.Json.Serialization.JsonPropertyName("devloper_reply_comments")]
-                        public Types.DeveloperReply[]? DeveloperReplyList { get; set; }
+                        public List<Types.DeveloperReply>? DeveloperReplyList { get; set; }
                     }
                 }
 
@@ -147,7 +147,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("comment_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("comment_list")]
-                public Types.Comment[] CommentList { get; set; } = default!;
+                public List<Types.Comment>? CommentList { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多数据。
@@ -170,6 +170,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

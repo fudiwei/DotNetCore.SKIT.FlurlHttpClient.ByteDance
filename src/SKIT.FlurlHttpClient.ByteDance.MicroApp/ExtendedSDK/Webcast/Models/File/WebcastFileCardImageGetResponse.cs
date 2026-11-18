@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-                public string ImageId { get; set; } = default!;
+                public string? ImageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置图片状态。
@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("images_status")]
         [System.Text.Json.Serialization.JsonPropertyName("images_status")]
-        public Types.Result[] ResultList { get; set; } = default!;
+        public List<Types.Result>? ResultList { get; set; }
     }
 }

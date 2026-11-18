@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("time")]
-                                public string TimeString { get; set; } = default!;
+                                public string? TimeString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置次均停留时长（单位：毫秒）。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("time")]
-                                public string TimeString { get; set; } = default!;
+                                public string? TimeString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置活跃用户数。
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("time")]
-                                public string TimeString { get; set; } = default!;
+                                public string? TimeString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置新增用户数。
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("time")]
-                                public string TimeString { get; set; } = default!;
+                                public string? TimeString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置打开次数。
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("time")]
                                 [System.Text.Json.Serialization.JsonPropertyName("time")]
-                                public string TimeString { get; set; } = default!;
+                                public string? TimeString { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置访问次数。
@@ -141,14 +141,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_id")]
-                        public string SceneId { get; set; } = default!;
+                        public string? SceneId { get; set; }
 
                         /// <summary>
                         /// 获取或设置场景名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_name")]
-                        public string SceneName { get; set; } = default!;
+                        public string? SceneName { get; set; }
 
                         /// <summary>
                         /// 获取或设置次均停留时长（单位：毫秒）。
@@ -162,7 +162,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_avg_stay_time_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_avg_stay_time_list")]
-                        public Types.SceneAverageStayTimeData[] AverageStayTimeDataList { get; set; } = default!;
+                        public List<Types.SceneAverageStayTimeData>? AverageStayTimeDataList { get; set; }
 
                         /// <summary>
                         /// 获取或设置活跃用户数。
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_uv_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_uv_list")]
-                        public Types.SceneUVData[] UVDataList { get; set; } = default!;
+                        public List<Types.SceneUVData>? UVDataList { get; set; }
 
                         /// <summary>
                         /// 获取或设置新增用户数。
@@ -190,7 +190,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_new_uv_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_new_uv_list")]
-                        public Types.SceneNewUVData[] NewUVDataList { get; set; } = default!;
+                        public List<Types.SceneNewUVData>? NewUVDataList { get; set; }
 
                         /// <summary>
                         /// 获取或设置打开次数。
@@ -204,7 +204,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_open_pv_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_open_pv_list")]
-                        public Types.SceneOpenPVData[] OpenPVDataList { get; set; } = default!;
+                        public List<Types.SceneOpenPVData>? OpenPVDataList { get; set; }
 
                         /// <summary>
                         /// 获取或设置访问次数。
@@ -218,7 +218,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("scene_pv_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("scene_pv_list")]
-                        public Types.ScenePVData[] PVDataList { get; set; } = default!;
+                        public List<Types.ScenePVData>? PVDataList { get; set; }
 
                     }
                 }
@@ -228,7 +228,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("scene_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("scene_list")]
-                public Types.SceneData[] SceneDataList { get; set; } = default!;
+                public List<Types.SceneData>? SceneDataList { get; set; }
             }
         }
 
@@ -237,6 +237,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

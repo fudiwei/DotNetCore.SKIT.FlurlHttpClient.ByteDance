@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("world_rank_version")]
         [System.Text.Json.Serialization.JsonPropertyName("world_rank_version")]
-        public string WorldRankVersion { get; set; } = string.Empty;
+        public string? WorldRankVersion { get; set; }
 
         /// <summary>
         /// 获取或设置上传完成时间戳。

@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path")]
                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string FilePath { get; set; } = string.Empty;
+                public string? FilePath { get; set; }
             }
 
             public class CorpInfo
@@ -31,49 +31,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("province_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("province_code")]
-                public string ProvinceCode { get; set; } = string.Empty;
+                public string? ProvinceCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置省份名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("province_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("province_name")]
-                public string ProvinceName { get; set; } = string.Empty;
+                public string? ProvinceName { get; set; }
 
                 /// <summary>
                 /// 获取或设置城市编号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("city_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("city_code")]
-                public string CityCode { get; set; } = string.Empty;
+                public string? CityCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置城市名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("city_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("city_name")]
-                public string CityName { get; set; } = string.Empty;
+                public string? CityName { get; set; }
 
                 /// <summary>
                 /// 获取或设置区县编号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("region_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("region_code")]
-                public string DistrictCode { get; set; } = string.Empty;
+                public string? DistrictCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置区县名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("region_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("region_name")]
-                public string DistrictName { get; set; } = string.Empty;
+                public string? DistrictName { get; set; }
 
                 /// <summary>
                 /// 获取或设置通信地址。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("communication_address")]
                 [System.Text.Json.Serialization.JsonPropertyName("communication_address")]
-                public string CommunicationAddress { get; set; } = string.Empty;
+                public string? CommunicationAddress { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件类型。
@@ -87,28 +87,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("credentials_address")]
                 [System.Text.Json.Serialization.JsonPropertyName("credentials_address")]
-                public string CredentialsAddress { get; set; } = string.Empty;
+                public string? CredentialsAddress { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("credentials_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("credentials_name")]
-                public string CredentialsName { get; set; } = string.Empty;
+                public string? CredentialsName { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件编号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("credentials_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("credentials_number")]
-                public string CredentialsNumber { get; set; } = string.Empty;
+                public string? CredentialsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件材料。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("credentials_pic")]
                 [System.Text.Json.Serialization.JsonPropertyName("credentials_pic")]
-                public Material CredentialsMaterial { get; set; } = new Material();
+                public Material? CredentialsMaterial { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人证件类型。
@@ -122,21 +122,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_credentials_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_credentials_number")]
-                public string InchargePeopleCredentialsNumber { get; set; } = string.Empty;
+                public string? InchargePeopleCredentialsNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人证件正面材料。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_credentials_front")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_credentials_front")]
-                public Material InchargePeopleCredentialsFrontMaterial { get; set; } = new Material();
+                public Material? InchargePeopleCredentialsFrontMaterial { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人证件背面材料。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_credentials_back")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_credentials_back")]
-                public Material InchargePeopleCredentialsBackMaterial { get; set; } = new Material();
+                public Material? InchargePeopleCredentialsBackMaterial { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人证件是否有有效期。
@@ -164,49 +164,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_name")]
-                public string InchargePeopleName { get; set; } = string.Empty;
+                public string? InchargePeopleName { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人邮箱。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_email")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_email")]
-                public string InchargePeopleEmail { get; set; } = string.Empty;
+                public string? InchargePeopleEmail { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_phone")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_phone")]
-                public string InchargePeoplePhoneNumber { get; set; } = string.Empty;
+                public string? InchargePeoplePhoneNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人应急手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_emergency_phone")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_emergency_phone")]
-                public string InchargePeopleEmergencyPhoneNumber { get; set; } = string.Empty;
+                public string? InchargePeopleEmergencyPhoneNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人授权书材料列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("corp_authority_letter")]
                 [System.Text.Json.Serialization.JsonPropertyName("corp_authority_letter")]
-                public IList<Material>? CorpAuthorityLetterMaterialList { get; set; }
+                public List<Material>? CorpAuthorityLetterMaterialList { get; set; }
 
                 /// <summary>
                 /// 获取或设置主办单位备案承诺书材料列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("corp_commitment")]
                 [System.Text.Json.Serialization.JsonPropertyName("corp_commitment")]
-                public IList<Material>? CorpCommitmentMaterialList { get; set; }
+                public List<Material>? CorpCommitmentMaterialList { get; set; }
 
                 /// <summary>
                 /// 获取或设置主办单位其他材料列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("corp_other_materials")]
                 [System.Text.Json.Serialization.JsonPropertyName("corp_other_materials")]
-                public IList<Material>? CorpOtherMaterialList { get; set; }
+                public List<Material>? CorpOtherMaterialList { get; set; }
 
                 /// <summary>
                 /// 获取或设置备注信息。
@@ -241,7 +241,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("pre_approval_files")]
                         [System.Text.Json.Serialization.JsonPropertyName("pre_approval_files")]
-                        public IList<Material>? PreApprovalMaterialList { get; set; }
+                        public List<Material>? PreApprovalMaterialList { get; set; }
                     }
                 }
 
@@ -250,35 +250,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_language")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_language")]
-                public IList<int> LanguageTypeList { get; set; } = new List<int>();
+                public List<int>? LanguageTypeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置人证核验 Token。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("facial_recognition_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("facial_recognition_token")]
-                public string FacialRecognitionToken { get; set; } = string.Empty;
+                public string? FacialRecognitionToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人邮箱。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_email")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_email")]
-                public string InchargePeopleEmail { get; set; } = string.Empty;
+                public string? InchargePeopleEmail { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_phone")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_phone")]
-                public string InchargePeoplePhoneNumber { get; set; } = string.Empty;
+                public string? InchargePeoplePhoneNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人应急手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("incharge_people_emergency_phone")]
                 [System.Text.Json.Serialization.JsonPropertyName("incharge_people_emergency_phone")]
-                public string InchargePeopleEmergencyPhoneNumber { get; set; } = string.Empty;
+                public string? InchargePeopleEmergencyPhoneNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否涉及前置审批。
@@ -292,28 +292,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pre_approval_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("pre_approval_list")]
-                public IList<Types.PreApproval>? PreApprovalList { get; set; }
+                public List<Types.PreApproval>? PreApprovalList { get; set; }
 
                 /// <summary>
                 /// 获取或设置服务内容 ID 列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("service_content_type_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("service_content_type_list")]
-                public IList<int> ServiceContentTypeList { get; set; } = new List<int>();
+                public List<int>? ServiceContentTypeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置负责人授权书材料列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_authority_letter")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_authority_letter")]
-                public IList<Material>? AppAuthorityLetterMaterialList { get; set; }
+                public List<Material>? AppAuthorityLetterMaterialList { get; set; }
 
                 /// <summary>
                 /// 获取或设置其他材料列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_other_materials")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_other_materials")]
-                public IList<Material>? AppOtherMaterialList { get; set; }
+                public List<Material>? AppOtherMaterialList { get; set; }
 
                 /// <summary>
                 /// 获取或设置备注信息。
@@ -329,13 +329,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("corp_info")]
         [System.Text.Json.Serialization.JsonPropertyName("corp_info")]
-        public Types.CorpInfo CorpInfo { get; set; } = new Types.CorpInfo();
+        public Types.CorpInfo? CorpInfo { get; set; }
 
         /// <summary>
         /// 获取或设置备案应用信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_info")]
         [System.Text.Json.Serialization.JsonPropertyName("app_info")]
-        public Types.AppInfo AppInfo { get; set; } = new Types.AppInfo();
+        public Types.AppInfo? AppInfo { get; set; }
     }
 }

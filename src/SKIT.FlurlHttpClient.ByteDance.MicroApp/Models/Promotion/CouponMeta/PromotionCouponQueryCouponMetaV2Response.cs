@@ -14,35 +14,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
-                public string CouponMetaId { get; set; } = default!;
+                public string? CouponMetaId { get; set; }
 
                 /// <summary>
                 /// 获取或设置券名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_name")]
-                public string CouponName { get; set; } = default!;
+                public string? CouponName { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用须知。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("consume_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("consume_desc")]
-                public string ConsumeDescription { get; set; } = default!;
+                public string? ConsumeDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用链接。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("consume_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("consume_path")]
-                public string ConsumePagePath { get; set; } = default!;
+                public string? ConsumePagePath { get; set; }
 
                 /// <summary>
                 /// 获取或设置商家券模板编号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("merchant_meta_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("merchant_meta_no")]
-                public string MerchantMetaNumber { get; set; } = default!;
+                public string? MerchantMetaNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置券模板状态。
@@ -163,6 +163,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("coupon_meta")]
         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta")]
-        public Types.CouponMeta CouponMeta { get; set; } = default!;
+        public Types.CouponMeta? CouponMeta { get; set; }
     }
 }

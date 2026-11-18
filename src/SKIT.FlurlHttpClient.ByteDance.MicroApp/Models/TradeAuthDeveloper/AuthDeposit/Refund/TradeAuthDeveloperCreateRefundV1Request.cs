@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pay_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("pay_order_id")]
-        public string PayOrderId { get; set; } = string.Empty;
+        public string? PayOrderId { get; set; }
 
         /// <summary>
         /// 获取或设置开发者退款单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_pay_refund_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_pay_refund_no")]
-        public string OutPayRefundNumber { get; set; } = string.Empty;
+        public string? OutPayRefundNumber { get; set; }
 
         /// <summary>
         /// 获取或设置费用明细列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fee_detail_list")]
         [System.Text.Json.Serialization.JsonPropertyName("fee_detail_list")]
-        public IList<Types.FeeDetail> FeeDetailList { get; set; } = new List<Types.FeeDetail>();
+        public List<Types.FeeDetail>? FeeDetailList { get; set; }
 
         /// <summary>
         /// 获取或设置退款总金额（单位：分）。

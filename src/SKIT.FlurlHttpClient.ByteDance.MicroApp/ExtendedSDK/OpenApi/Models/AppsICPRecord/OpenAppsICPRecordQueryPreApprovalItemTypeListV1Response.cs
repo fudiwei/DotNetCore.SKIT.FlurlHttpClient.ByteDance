@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("pre_approval_item_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("pre_approval_item_name")]
-                        public string PreApprovalItemTypeName { get; set; } = default!;
+                        public string? PreApprovalItemTypeName { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pre_approval_item_type_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("pre_approval_item_type_list")]
-                public Types.PreApprovalItemTypeInfo[] PreApprovalItemTypeList { get; set; } = default!;
+                public List<Types.PreApprovalItemTypeInfo>? PreApprovalItemTypeList { get; set; }
             }
         }
 
@@ -43,6 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

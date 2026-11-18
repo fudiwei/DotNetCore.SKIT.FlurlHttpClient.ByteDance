@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("thirdparty_component_id")]
         [System.Text.Json.Serialization.JsonPropertyName("thirdparty_component_id")]
-        public string ComponentAppId { get; set; } = string.Empty;
+        public string? ComponentAppId { get; set; }
 
         /// <summary>
         /// 获取或设置 URL 类型。

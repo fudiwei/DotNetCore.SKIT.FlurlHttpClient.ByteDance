@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置商品单号列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_order_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("item_order_id_list")]
-        public IList<string>? ItemOrderIdList { get; set; }
+        public List<string>? ItemOrderIdList { get; set; }
     }
 }

@@ -11,6 +11,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public string[]? WebviewDomainList { get; set; }
+        public List<string>? WebviewDomainList { get; set; }
     }
 }

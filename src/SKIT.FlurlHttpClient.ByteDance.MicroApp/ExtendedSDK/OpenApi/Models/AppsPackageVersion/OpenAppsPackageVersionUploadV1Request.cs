@@ -17,14 +17,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_version")]
         [System.Text.Json.Serialization.JsonPropertyName("user_version")]
-        public string UserVersion { get; set; } = string.Empty;
+        public string? UserVersion { get; set; }
 
         /// <summary>
         /// 获取或设置描述。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("user_desc")]
-        public string UserDescription { get; set; } = string.Empty;
+        public string? UserDescription { get; set; }
 
         /// <summary>
         /// 获取或设置配置的 JSON 字符串。

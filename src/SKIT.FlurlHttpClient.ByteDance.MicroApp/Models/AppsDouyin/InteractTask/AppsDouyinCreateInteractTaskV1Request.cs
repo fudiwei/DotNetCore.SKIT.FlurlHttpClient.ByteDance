@@ -73,20 +73,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("publish_type")]
         [System.Text.Json.Serialization.JsonPropertyName("publish_type")]
-        public IList<int>? PublishTypeList { get; set; }
+        public List<int>? PublishTypeList { get; set; }
 
         /// <summary>
         /// 获取或设置话题标签列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tags")]
         [System.Text.Json.Serialization.JsonPropertyName("tags")]
-        public IList<string>? TagList { get; set; }
+        public List<string>? TagList { get; set; }
 
         /// <summary>
         /// 获取或设置互动任务目标配置字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("interact_rules")]
         [System.Text.Json.Serialization.JsonPropertyName("interact_rules")]
-        public IDictionary<string, Types.InteractRule>? InteractRuleMap { get; set; }
+        public Dictionary<string, Types.InteractRule>? InteractRuleMap { get; set; }
     }
 }

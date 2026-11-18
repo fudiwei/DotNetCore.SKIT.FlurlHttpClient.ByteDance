@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_name")]
         [System.Text.Json.Serialization.JsonPropertyName("task_name")]
-        public string TaskName { get; set; } = string.Empty;
+        public string? TaskName { get; set; }
 
         /// <summary>
         /// 获取或设置结算方式。
@@ -32,21 +32,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("start_page")]
         [System.Text.Json.Serialization.JsonPropertyName("start_page")]
-        public string PagePath { get; set; } = string.Empty;
+        public string? PagePath { get; set; }
 
         /// <summary>
         /// 获取或设置锚点标题。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("anchor_title")]
         [System.Text.Json.Serialization.JsonPropertyName("anchor_title")]
-        public string AnchorTitle { get; set; } = string.Empty;
+        public string? AnchorTitle { get; set; }
 
         /// <summary>
         /// 获取或设置任务图标 URL。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_icon")]
         [System.Text.Json.Serialization.JsonPropertyName("task_icon")]
-        public string TaskIconUrl { get; set; } = string.Empty;
+        public string? TaskIconUrl { get; set; }
 
         /// <summary>
         /// 获取或设置任务开始时间戳。
@@ -67,42 +67,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("task_desc")]
-        public string TaskDescription { get; set; } = string.Empty;
+        public string? TaskDescription { get; set; }
 
         /// <summary>
         /// 获取或设置示例视频 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_videos")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_videos")]
-        public IList<string> ReferVideoUrlList { get; set; } = new List<string>();
+        public List<string>? ReferVideoUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置任务标签列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_tags")]
         [System.Text.Json.Serialization.JsonPropertyName("task_tags")]
-        public IList<string> TaskTagList { get; set; } = new List<string>();
+        public List<string>? TaskTagList { get; set; }
 
         /// <summary>
         /// 获取或设置小程序截图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_ma_captures")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_ma_captures")]
-        public IList<string> ReferMiniAppCaptureUrlList { get; set; } = new List<string>();
+        public List<string>? ReferMiniAppCaptureUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置视频截图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_video_captures")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_video_captures")]
-        public IList<string> ReferVideoCaptureUrlList { get; set; } = new List<string>();
+        public List<string>? ReferVideoCaptureUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置视频的 GID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_gids")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_gids")]
-        public IList<int>? ReferGIdList { get; set; }
+        public List<int>? ReferGIdList { get; set; }
 
         /// <summary>
         /// 获取或设置任务最大退款周期（单位：天）。

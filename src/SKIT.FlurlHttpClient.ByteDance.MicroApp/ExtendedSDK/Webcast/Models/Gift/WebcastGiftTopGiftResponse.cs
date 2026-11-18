@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("success_top_gift_id_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("success_top_gift_id_list")]
-                public string[] SuccessfulGiftIdList { get; set; } = default!;
+                public List<string>? SuccessfulGiftIdList { get; set; }
             }
         }
 
@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

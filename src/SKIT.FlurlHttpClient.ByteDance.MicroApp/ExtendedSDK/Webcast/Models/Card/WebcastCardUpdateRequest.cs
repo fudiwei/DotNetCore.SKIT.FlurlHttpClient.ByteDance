@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
     {
         public static class Types
         {
-            public class CardValue
+            public class CardValue : WebcastCardDefaultSetRequest.Types.__zz__CardValue
             {
                 public static class Types
                 {
@@ -27,13 +27,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                     {
                     }
                 }
-
-                /// <summary>
-                /// 获取或设置图片 ID。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("image_id")]
-                [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-                public string ImageId { get; set; } = string.Empty;
 
                 /// <summary>
                 /// 获取或设置状态标签信息。
@@ -70,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("room_id")]
         [System.Text.Json.Serialization.JsonPropertyName("room_id")]
-        public string RoomId { get; set; } = string.Empty;
+        public string? RoomId { get; set; }
 
         /// <summary>
         /// 获取或设置讲解卡类型。
@@ -87,6 +80,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("value")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public Types.CardValue CardValue { get; set; } = new Types.CardValue();
+        public Types.CardValue? CardValue { get; set; }
     }
 }

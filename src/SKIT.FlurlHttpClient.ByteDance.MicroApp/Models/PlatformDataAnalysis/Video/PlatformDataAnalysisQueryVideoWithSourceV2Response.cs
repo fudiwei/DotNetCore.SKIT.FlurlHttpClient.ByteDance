@@ -52,21 +52,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("Scenes")]
                         [System.Text.Json.Serialization.JsonPropertyName("Scenes")]
-                        public string Scene { get; set; } = default!;
+                        public string? Scene { get; set; }
 
                         /// <summary>
                         /// 获取或设置场景名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ScenesName")]
                         [System.Text.Json.Serialization.JsonPropertyName("ScenesName")]
-                        public string SceneName { get; set; } = default!;
+                        public string? SceneName { get; set; }
 
                         /// <summary>
                         /// 获取或设置统计数据。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("CommonData")]
                         [System.Text.Json.Serialization.JsonPropertyName("CommonData")]
-                        public Types.CommonData CommonData { get; set; } = default!;
+                        public Types.CommonData? CommonData { get; set; }
 
                         /// <summary>
                         /// 获取或设置视频播放次数。
@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("DataList")]
                 [System.Text.Json.Serialization.JsonPropertyName("DataList")]
-                public Types.VideoData[] VideoDataList { get; set; } = default!;
+                public List<Types.VideoData>? VideoDataList { get; set; }
             }
         }
 
@@ -91,6 +91,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

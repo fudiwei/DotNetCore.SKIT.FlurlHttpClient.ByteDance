@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("uniq_id")]
         [System.Text.Json.Serialization.JsonPropertyName("uniq_id")]
-        public string UserUniqueId { get; set; } = string.Empty;
+        public string? UserUniqueId { get; set; }
 
         /// <summary>
         /// 获取或设置操作类型。

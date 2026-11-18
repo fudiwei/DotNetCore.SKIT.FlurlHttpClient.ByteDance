@@ -18,49 +18,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categories")]
                         [System.Text.Json.Serialization.JsonPropertyName("categories")]
-                        public string[] CategoryList { get; set; } = default!;
+                        public List<string>? CategoryList { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序管理员的头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_avatar")]
-                        public string DeveloperAvatarUrl { get; set; } = default!;
+                        public string? DeveloperAvatarUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序管理员的账号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_id")]
-                        public string DeveloperId { get; set; } = default!;
+                        public string? DeveloperId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序管理员的昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("developer_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("developer_name")]
-                        public string DeveloperName { get; set; } = default!;
+                        public string? DeveloperName { get; set; }
 
                         /// <summary>
                         /// 获取或设置版本号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("version")]
                         [System.Text.Json.Serialization.JsonPropertyName("version")]
-                        public string Version { get; set; } = default!;
+                        public string? Version { get; set; }
 
                         /// <summary>
                         /// 获取或设置版本通道。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("version_tag")]
                         [System.Text.Json.Serialization.JsonPropertyName("version_tag")]
-                        public string VersionTag { get; set; } = default!;
+                        public string? VersionTag { get; set; }
 
                         /// <summary>
                         /// 获取或设置更新信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("summary")]
                         [System.Text.Json.Serialization.JsonPropertyName("summary")]
-                        public string Summary { get; set; } = default!;
+                        public string? Summary { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -74,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("attach_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("attach_info")]
-                        public IDictionary<string, string>? AttachmentMap { get; set; }
+                        public Dictionary<string, string>? AttachmentMap { get; set; }
                     }
 
                     public class LatestVersionInfo : VersionInfoBase
@@ -92,10 +92,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// 获取或设置截图 URL 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("screenshot")]
-                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedStringArrayWithCommaSplitConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedStringListWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("screenshot")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedStringArrayWithCommaSplitConverter))]
-                        public string[]? ScreenshotUrlList { get; set; }
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedStringListWithCommaSplitConverter))]
+                        public List<string>? ScreenshotUrlList { get; set; }
                     }
 
                     public class AuditVersionInfo : VersionInfoBase
@@ -105,7 +105,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("approved_apps")]
                         [System.Text.Json.Serialization.JsonPropertyName("approved_apps")]
-                        public string[]? ApprovedApps { get; set; }
+                        public List<string>? ApprovedApps { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否已发布。
@@ -142,7 +142,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reason_detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("reason_detail")]
-                        public IDictionary<string, string[]>? RejectReasonDetailMap { get; set; }
+                        public Dictionary<string, string[]>? RejectReasonDetailMap { get; set; }
                     }
 
                     public class GrayVersionInfo : VersionInfoBase
@@ -152,7 +152,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("host_gray_scale")]
                         [System.Text.Json.Serialization.JsonPropertyName("host_gray_scale")]
-                        public IDictionary<string, string>? HostGrayScaleMap { get; set; }
+                        public Dictionary<string, string>? HostGrayScaleMap { get; set; }
                     }
 
                     public class CurrentVersionInfo : VersionInfoBase
@@ -182,14 +182,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("approved_apps")]
                         [System.Text.Json.Serialization.JsonPropertyName("approved_apps")]
-                        public string[]? ApprovedApps { get; set; }
+                        public List<string>? ApprovedApps { get; set; }
 
                         /// <summary>
                         /// 获取或设置没有通过审核的宿主端列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("not_approved_apps")]
                         [System.Text.Json.Serialization.JsonPropertyName("not_approved_apps")]
-                        public string[]? NotApprovedApps { get; set; }
+                        public List<string>? NotApprovedApps { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否已下架。
@@ -220,7 +220,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reason_detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("reason_detail")]
-                        public IDictionary<string, string[]>? RejectReasonDetailMap { get; set; }
+                        public Dictionary<string, string[]>? RejectReasonDetailMap { get; set; }
 
                         /// <summary>
                         /// 获取或设置回退信息。
@@ -266,6 +266,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

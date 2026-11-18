@@ -18,28 +18,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string AppId { get; set; } = default!;
+                        public string? AppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-                        public string AppName { get; set; } = default!;
+                        public string? AppName { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("anchor_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("anchor_id")]
-                        public string AnchorId { get; set; } = default!;
+                        public string? AnchorId { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nick_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                        public string AnchorNickname { get; set; } = default!;
+                        public string? AnchorNickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置直播开播时间戳。
@@ -166,21 +166,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置小程序名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-                public string AppName { get; set; } = default!;
+                public string? AppName { get; set; }
 
                 /// <summary>
                 /// 获取或设置小房子直播间数据字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("room_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("room_data")]
-                public IDictionary<string, Types.SmallHomeRoomData> SmallHomeRoomDataMap { get; set; } = default!;
+                public Dictionary<string, Types.SmallHomeRoomData>? SmallHomeRoomDataMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置是否还有更多数据。
@@ -203,6 +203,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

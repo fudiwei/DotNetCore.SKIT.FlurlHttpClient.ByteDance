@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qr_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("qr_url")]
-                        public string Url { get; set; } = default!;
+                        public string? Url { get; set; }
 
                         /// <summary>
                         /// 获取或设置绑定的小程序页面路径。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("load_path")]
                         [System.Text.Json.Serialization.JsonPropertyName("load_path")]
-                        public string PagePath { get; set; } = default!;
+                        public string? PagePath { get; set; }
 
                         /// <summary>
                         /// 获取或设置测试范围。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("stage")]
                         [System.Text.Json.Serialization.JsonPropertyName("stage")]
-                        public string Stage { get; set; } = default!;
+                        public string? Stage { get; set; }
 
                         /// <summary>
                         /// 获取或设置状态。
@@ -57,14 +57,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qr_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("qr_list")]
-                public Types.Qrcode[] QrcodeList { get; set; } = default!;
+                public List<Types.Qrcode>? QrcodeList { get; set; }
 
                 /// <summary>
                 /// 获取或设置目前绑定的链接数量。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("total_count")]
                 [System.Text.Json.Serialization.JsonPropertyName("total_count")]
-                public int TotalCount { get; set; } = default!;
+                public int TotalCount { get; set; }
 
                 /// <summary>
                 /// 获取或设置总共可以绑定的链接数量。
@@ -101,6 +101,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -7,99 +7,26 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
     {
         public static class Types
         {
-            public class CardValue
+            public class CardValue : WebcastCardDefaultSetRequest.Types.__zz__CardValue
             {
                 public static class Types
                 {
-                    public class TitleInfo
+                    public class TitleInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.TitleInfo
                     {
-                        /// <summary>
-                        /// 获取或设置主标题。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("main_title")]
-                        [System.Text.Json.Serialization.JsonPropertyName("main_title")]
-                        public string MainTitle { get; set; } = default!;
-
-                        /// <summary>
-                        /// 获取或设置副标题。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("sub_title")]
-                        [System.Text.Json.Serialization.JsonPropertyName("sub_title")]
-                        public string? SubTitle { get; set; }
                     }
 
-                    public class StatusTagInfo
+                    public class StatusTagInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.StatusTagInfo
                     {
-                        /// <summary>
-                        /// 获取或设置标签类型。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("tag_type")]
-                        [System.Text.Json.Serialization.JsonPropertyName("tag_type")]
-                        public int? TagType { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置活动开始时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("start_timestamp")]
-                        [System.Text.Json.Serialization.JsonPropertyName("start_timestamp")]
-                        public long? StartTimestamp { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置活动结束时间戳。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("stop_timestamp")]
-                        [System.Text.Json.Serialization.JsonPropertyName("stop_timestamp")]
-                        public long? StopTimestamp { get; set; }
                     }
 
-                    public class PropertyTagInfo
+                    public class PropertyTagInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.PropertyTagInfo
                     {
-                        /// <summary>
-                        /// 获取或设置店铺 Logo 图片 ID。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("store_logo_id")]
-                        [System.Text.Json.Serialization.JsonPropertyName("store_logo_id")]
-                        public string? StoreLogoImageId { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置店铺名称。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("store_name")]
-                        [System.Text.Json.Serialization.JsonPropertyName("store_name")]
-                        public string? StoreName { get; set; }
                     }
 
-                    public class ButtonInfo
+                    public class ButtonInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.ButtonInfo
                     {
-                        /// <summary>
-                        /// 获取或设置按钮类型。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("btn_type")]
-                        [System.Text.Json.Serialization.JsonPropertyName("btn_type")]
-                        public int? ButtonType { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置价格字符串。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("price")]
-                        [System.Text.Json.Serialization.JsonPropertyName("price")]
-                        public string? PriceString { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置颜色十六进制值。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("color")]
-                        [System.Text.Json.Serialization.JsonPropertyName("color")]
-                        public string? Color { get; set; }
                     }
                 }
-
-                /// <summary>
-                /// 获取或设置图片 ID。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("image_id")]
-                [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-                public string ImageId { get; set; } = default!;
 
                 /// <summary>
                 /// 获取或设置状态标签信息。
@@ -143,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("value")]
         [System.Text.Json.Serialization.JsonPropertyName("value")]
-        public Types.CardValue CardValue { get; set; } = default!;
+        public Types.CardValue? CardValue { get; set; }
 
         /// <summary>
         /// 获取或设置审核状态。

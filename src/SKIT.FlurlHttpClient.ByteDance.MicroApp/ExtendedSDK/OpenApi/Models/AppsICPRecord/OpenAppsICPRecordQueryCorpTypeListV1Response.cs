@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("credentials_type_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("credentials_type_name")]
-                                public string CredentialsTypeInfoName { get; set; } = default!;
+                                public string? CredentialsTypeInfoName { get; set; }
                             }
                         }
 
@@ -45,14 +45,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("corp_type_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("corp_type_name")]
-                        public string CorpTypeName { get; set; } = default!;
+                        public string? CorpTypeName { get; set; }
 
                         /// <summary>
                         /// 获取或设置证件类型列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("credentials_type_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("credentials_type_list")]
-                        public Types.CredentialsTypeInfo[]? CredentialsTypeList { get; set; }
+                        public List<Types.CredentialsTypeInfo>? CredentialsTypeList { get; set; }
                     }
                 }
 
@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("corp_type_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("corp_type_list")]
-                public Types.CorpTypeInfo[] CorpTypeList { get; set; } = default!;
+                public List<Types.CorpTypeInfo>? CorpTypeList { get; set; }
             }
         }
 
@@ -70,6 +70,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

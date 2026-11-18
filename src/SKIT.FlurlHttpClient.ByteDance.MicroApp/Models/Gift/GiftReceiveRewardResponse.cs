@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("prop_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("prop_id")]
-                        public string PropId { get; set; } = default!;
+                        public string? PropId { get; set; }
 
                         /// <summary>
                         /// 获取或设置图标 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("icon")]
                         [System.Text.Json.Serialization.JsonPropertyName("icon")]
-                        public string IconUrl { get; set; } = default!;
+                        public string? IconUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置道具名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置道具数量。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("gift_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("gift_id")]
-                public string GiftId { get; set; } = default!;
+                public string? GiftId { get; set; }
 
                 /// <summary>
                 /// 获取或设置礼包有效开始时间戳。
@@ -69,14 +69,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("icon_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("icon_url")]
-                public string IconUrl { get; set; } = default!;
+                public string? IconUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置礼包名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string Name { get; set; } = default!;
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 获取或设置玩法类型。
@@ -90,14 +90,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("prop_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("prop_list")]
-                public Types.Property[]? PropertyList { get; set; }
+                public List<Types.Property>? PropertyList { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户领奖说明列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_receive_guide")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_receive_guide")]
-                public string[]? UserReceiveGuideList { get; set; }
+                public List<string>? UserReceiveGuideList { get; set; }
             }
         }
 
@@ -106,6 +106,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("gift_info")]
         [System.Text.Json.Serialization.JsonPropertyName("gift_info")]
-        public Types.GiftInfo GiftInfo { get; set; } = default!;
+        public Types.GiftInfo? GiftInfo { get; set; }
     }
 }

@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("anchor_open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("anchor_open_id")]
-                public string AnchorOpenId { get; set; } = string.Empty;
+                public string? AnchorOpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置​房间 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("room_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("room_id")]
-                public string RoomId { get; set; } = string.Empty;
+                public string? RoomId { get; set; }
             }
 
             public class User
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = string.Empty;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置​用户得分。
@@ -68,13 +68,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("anchor_infos")]
         [System.Text.Json.Serialization.JsonPropertyName("anchor_infos")]
-        public IList<Types.Anchor> AnchorList { get; set; } = new List<Types.Anchor>();
+        public List<Types.Anchor>? AnchorList { get; set; }
 
         /// <summary>
         /// 获取或设置用户列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_list")]
         [System.Text.Json.Serialization.JsonPropertyName("user_list")]
-        public IList<Types.User> UserList { get; set; } = new List<Types.User>();
+        public List<Types.User>? UserList { get; set; }
     }
 }

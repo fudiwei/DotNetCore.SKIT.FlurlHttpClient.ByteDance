@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ApplyPhoneNumberCapabilityResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ApplyPhoneNumberCapabilityResults")]
         [System.Xml.Serialization.XmlElement("ApplyPhoneNumberCapabilityResults")]
-        public Types.ApplyResult ApplyResult { get; set; } = default!;
+        public Types.ApplyResult? ApplyResult { get; set; }
     }
 }

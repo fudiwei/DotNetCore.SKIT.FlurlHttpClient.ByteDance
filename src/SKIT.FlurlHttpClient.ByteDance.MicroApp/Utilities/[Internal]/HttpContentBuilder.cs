@@ -12,7 +12,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Utilities
             fileBytes = fileBytes ?? Array.Empty<byte>();
             fileContentType = string.IsNullOrEmpty(fileContentType) ? MimeTypes.Binary : fileContentType;
             formDataName = formDataName.Replace("\"", string.Empty);
-            
+
             ByteArrayContent fileContent = new ByteArrayContent(fileBytes);
             fileContent.Headers.ContentDisposition = ContentDispositionHeaderValue.Parse(fileName is null ? $"form-data; name=\"{formDataName}\"" : $"form-data; name=\"{formDataName}\"; filename=\"{HttpUtility.UrlEncode(fileName)}\"");
             fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(fileContentType);

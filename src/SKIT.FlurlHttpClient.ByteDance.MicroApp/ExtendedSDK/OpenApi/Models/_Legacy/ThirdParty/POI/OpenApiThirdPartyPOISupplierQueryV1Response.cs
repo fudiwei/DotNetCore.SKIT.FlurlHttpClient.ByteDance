@@ -47,14 +47,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("app_id")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                                                public string AppId { get; set; } = default!;
+                                                public string? AppId { get; set; }
 
                                                 /// <summary>
                                                 /// 获取或设置小程序页面路径。
                                                 /// </summary>
                                                 [Newtonsoft.Json.JsonProperty("path")]
                                                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                                public string PagePath { get; set; } = default!;
+                                                public string? PagePath { get; set; }
 
                                                 /// <summary>
                                                 /// 获取或设置小程序页面参数。
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("poi_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("poi_id")]
-                        public string POIId { get; set; } = default!;
+                        public string? POIId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商铺类型。
@@ -116,21 +116,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置外部商铺 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-                        public string SupplierExternalId { get; set; } = default!;
+                        public string? SupplierExternalId { get; set; }
 
                         /// <summary>
                         /// 获取或设置商铺提供的服务列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("services")]
                         [System.Text.Json.Serialization.JsonPropertyName("services")]
-                        public Types.Service[]? ServiceList { get; set; }
+                        public List<Types.Service>? ServiceList { get; set; }
 
                         /// <summary>
                         /// 获取或设置商铺状态。
@@ -146,7 +146,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sync_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("sync_status")]
-                public Types.SyncResult SyncResult { get; set; } = default!;
+                public Types.SyncResult? SyncResult { get; set; }
 
                 /// <summary>
                 /// 获取或设置最近一次的商铺同步的数据。
@@ -162,6 +162,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

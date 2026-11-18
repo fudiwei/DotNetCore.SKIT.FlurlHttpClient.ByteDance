@@ -33,6 +33,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("query_params_content")]
         [System.Text.Json.Serialization.JsonPropertyName("query_params_content")]
-        public string QueryParameterContent { get; set; } = string.Empty;
+        public string? QueryParameterContent { get; set; }
     }
 }

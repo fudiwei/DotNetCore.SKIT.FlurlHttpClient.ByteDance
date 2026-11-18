@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_uid")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-        public string MerchantId { get; set; } = string.Empty;
+        public string? MerchantId { get; set; }
 
         /// <summary>
         /// 获取或设置提现渠道。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("channel_type")]
         [System.Text.Json.Serialization.JsonPropertyName("channel_type")]
-        public string ChannelType { get; set; } = string.Empty;
+        public string? ChannelType { get; set; }
 
         /// <summary>
         /// 获取或设置提现金额（单位：分）。
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_id")]
-        public string OutOrderId { get; set; } = string.Empty;
+        public string? OutOrderId { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

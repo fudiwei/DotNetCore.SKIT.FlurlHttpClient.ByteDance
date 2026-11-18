@@ -20,7 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("category")]
                 [System.Text.Json.Serialization.JsonPropertyName("category")]
                 [System.Xml.Serialization.XmlElement("category")]
-                public string CategoryIdString { get; set; } = default!;
+                public string? CategoryIdString { get; set; }
 
                 /// <summary>
                 /// 获取或设置类目名称字符串（以短横线分隔）。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("categoryName")]
                 [System.Text.Json.Serialization.JsonPropertyName("categoryName")]
                 [System.Xml.Serialization.XmlElement("categoryName")]
-                public string CategoryNameString { get; set; } = default!;
+                public string? CategoryNameString { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核结果。
@@ -54,6 +54,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ModifyAppCategoryResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ModifyAppCategoryResults")]
         [System.Xml.Serialization.XmlElement("ModifyAppCategoryResults", Type = typeof(Types.ModifyResult))]
-        public Types.ModifyResult[] ModifyResultList { get; set; } = default!;
+        public List<Types.ModifyResult>? ModifyResultList { get; set; }
     }
 }

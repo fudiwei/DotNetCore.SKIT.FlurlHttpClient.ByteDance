@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_status")]
-                public string OrderStatus { get; set; } = default!;
+                public string? OrderStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置支付方式。
@@ -74,20 +74,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutTradeNumber { get; set; } = default!;
+        public string? OutTradeNumber { get; set; }
 
         /// <summary>
         /// 获取或设置订单 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = default!;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置支付信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("payment_info")]
         [System.Text.Json.Serialization.JsonPropertyName("payment_info")]
-        public Types.Payment Payment { get; set; } = default!;
+        public Types.Payment? Payment { get; set; }
     }
 }

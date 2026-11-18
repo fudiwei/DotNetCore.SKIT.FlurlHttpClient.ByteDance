@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_name")]
         [System.Text.Json.Serialization.JsonPropertyName("task_name")]
-        public string TaskName { get; set; } = string.Empty;
+        public string? TaskName { get; set; }
 
         /// <summary>
         /// 获取或设置任务开始时间戳。
@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("conditions")]
         [System.Text.Json.Serialization.JsonPropertyName("conditions")]
-        public IList<string>? ConditionList { get; set; }
+        public List<string>? ConditionList { get; set; }
 
         /// <summary>
         /// 获取或设置条件阈值列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("condition_value")]
         [System.Text.Json.Serialization.JsonPropertyName("condition_value")]
-        public IList<long>? ConditionValueList { get; set; }
+        public List<long>? ConditionValueList { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID。与字段 <see cref="VideoUrl"/> 二选一。

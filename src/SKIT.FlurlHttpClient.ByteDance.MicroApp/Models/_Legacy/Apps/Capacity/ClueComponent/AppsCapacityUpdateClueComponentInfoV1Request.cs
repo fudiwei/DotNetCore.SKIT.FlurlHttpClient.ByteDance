@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("config_id")]
         [System.Text.Json.Serialization.JsonPropertyName("config_id")]
-        public string ConfigId { get; set; } = string.Empty;
+        public string? ConfigId { get; set; }
 
         /// <summary>
         /// 获取或设置线索组件名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("config_name")]
         [System.Text.Json.Serialization.JsonPropertyName("config_name")]
-        public string ConfigName { get; set; } = string.Empty;
+        public string? ConfigName { get; set; }
 
         /// <summary>
         /// 获取或设置地区编号。
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("region_list")]
         [System.Text.Json.Serialization.JsonPropertyName("region_list")]
-        public IList<string>? RegionList { get; set; }
+        public List<string>? RegionList { get; set; }
 
         /// <summary>
         /// 获取或设置服务类目 ID 字符串（以逗号分隔）。

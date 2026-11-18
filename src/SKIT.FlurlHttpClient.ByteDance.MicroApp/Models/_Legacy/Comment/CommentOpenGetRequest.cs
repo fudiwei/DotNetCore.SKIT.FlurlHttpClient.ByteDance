@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("origin_id")]
         [System.Text.Json.Serialization.JsonPropertyName("origin_id")]
-        public string OriginId { get; set; } = string.Empty;
+        public string? OriginId { get; set; }
 
         /// <summary>
         /// 获取或设置业务线类型。

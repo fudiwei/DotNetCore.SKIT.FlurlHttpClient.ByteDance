@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("shop_name")]
         [System.Text.Json.Serialization.JsonPropertyName("shop_name")]
-        public string ShopName { get; set; } = string.Empty;
+        public string? ShopName { get; set; }
 
         /// <summary>
         /// 获取或设置备注说明。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("note")]
         [System.Text.Json.Serialization.JsonPropertyName("note")]
-        public string Notes { get; set; } = string.Empty;
+        public string? Notes { get; set; }
 
         /// <summary>
         /// 获取或设置功能截图文件路径列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("screen_shot_list")]
         [System.Text.Json.Serialization.JsonPropertyName("screen_shot_list")]
-        public IList<string> ScreenshotFilePathList { get; set; } = new List<string>();
+        public List<string>? ScreenshotFilePathList { get; set; }
     }
 }

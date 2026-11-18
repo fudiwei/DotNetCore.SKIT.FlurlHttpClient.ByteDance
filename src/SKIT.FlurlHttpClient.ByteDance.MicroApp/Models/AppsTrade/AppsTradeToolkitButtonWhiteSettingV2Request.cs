@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("uid_list")]
         [System.Text.Json.Serialization.JsonPropertyName("uid_list")]
-        public IList<int>? Whitelist { get; set; }
+        public List<int>? Whitelist { get; set; }
 
         /// <summary>
         /// 获取或设置是否全量用户可见。

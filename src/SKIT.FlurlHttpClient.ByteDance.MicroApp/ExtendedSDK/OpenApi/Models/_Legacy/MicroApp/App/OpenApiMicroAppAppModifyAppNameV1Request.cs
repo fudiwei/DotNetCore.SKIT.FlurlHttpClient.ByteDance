@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("new_name")]
         [System.Text.Json.Serialization.JsonPropertyName("new_name")]
-        public string NewName { get; set; } = string.Empty;
+        public string? NewName { get; set; }
 
         /// <summary>
         /// 获取或设置审核材料路径。

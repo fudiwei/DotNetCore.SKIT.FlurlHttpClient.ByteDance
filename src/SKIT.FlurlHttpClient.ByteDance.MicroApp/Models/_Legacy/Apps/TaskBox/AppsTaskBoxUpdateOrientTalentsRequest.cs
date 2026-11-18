@@ -24,7 +24,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("douyin_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("douyin_ids")]
-        public IList<string> DouyinIdList { get; set; } = new List<string>();
+        public List<string>? DouyinIdList { get; set; }
 
         /// <summary>
         /// 获取或设置操作类型。

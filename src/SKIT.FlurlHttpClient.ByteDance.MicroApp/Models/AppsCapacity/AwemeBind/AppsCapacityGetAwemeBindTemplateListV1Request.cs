@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("aweme_id")]
         [System.Text.Json.Serialization.JsonPropertyName("aweme_id")]
-        public string AwemeId { get; set; } = string.Empty;
+        public string? AwemeId { get; set; }
 
         /// <summary>
         /// 获取或设置绑定类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("type")]
         [System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string Type { get; set; } = string.Empty;
+        public string? Type { get; set; }
 
         /// <summary>
         /// 获取或设置绑定能力标识列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("capacity_list")]
         [System.Text.Json.Serialization.JsonPropertyName("capacity_list")]
-        public IList<string> CapacityKeyList { get; set; } = new List<string>();
+        public List<string>? CapacityKeyList { get; set; }
     }
 }

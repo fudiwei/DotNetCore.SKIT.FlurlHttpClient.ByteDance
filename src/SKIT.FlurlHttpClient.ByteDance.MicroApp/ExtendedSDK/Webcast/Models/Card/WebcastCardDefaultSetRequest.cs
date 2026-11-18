@@ -7,7 +7,17 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
     {
         public static class Types
         {
-            public class CardValue
+            public abstract class __zz__CardValue
+            {
+                /// <summary>
+                /// 获取或设置图片 ID。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("image_id")]
+                [System.Text.Json.Serialization.JsonPropertyName("image_id")]
+                public string? ImageId { get; set; }
+            }
+
+            public class CardValue : __zz__CardValue
             {
                 public static class Types
                 {
@@ -18,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("main_title")]
                         [System.Text.Json.Serialization.JsonPropertyName("main_title")]
-                        public string MainTitle { get; set; } = string.Empty;
+                        public string? MainTitle { get; set; }
 
                         /// <summary>
                         /// 获取或设置副标题。
@@ -95,13 +105,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 }
 
                 /// <summary>
-                /// 获取或设置图片 ID。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("image_id")]
-                [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-                public string ImageId { get; set; } = string.Empty;
-
-                /// <summary>
                 /// 获取或设置状态标签信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status_tag")]
@@ -146,6 +149,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("value")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public Types.CardValue CardValue { get; set; } = new Types.CardValue();
+        public Types.CardValue? CardValue { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
-                public string CouponMetaId { get; set; } = string.Empty;
+                public string? CouponMetaId { get; set; }
 
                 /// <summary>
                 /// 获取或设置券名称。
@@ -93,6 +93,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("coupon_meta")]
         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta")]
-        public Types.CouponMeta CouponMeta { get; set; } = new Types.CouponMeta();
+        public Types.CouponMeta? CouponMeta { get; set; }
     }
 }

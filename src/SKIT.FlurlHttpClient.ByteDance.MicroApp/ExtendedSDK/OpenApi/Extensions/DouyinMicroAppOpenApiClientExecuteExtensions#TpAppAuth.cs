@@ -29,8 +29,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             }
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Get, "openapi", "v2", "auth", "token")
-                .WithUrl(url => url.RemovePath().AppendPathSegments("openapi", "v2", "auth", "token")) // NOTICE: 特殊入口点
+                .CreateFlurlRequest(request, HttpMethod.Get, "openapi", "v2", "auth", "tp", "token")
+                .WithUrl(url => url.RemovePath().AppendPathSegments("openapi", "v2", "auth", "tp", "token")) // NOTICE: 特殊入口点
                 .SetQueryParam("component_appid", request.ComponentAppId)
                 .SetQueryParam("component_appsecret", request.ComponentAppSecret)
                 .SetQueryParam("component_ticket", request.ComponentTicket);

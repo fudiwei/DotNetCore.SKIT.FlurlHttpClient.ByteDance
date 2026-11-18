@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("service_content_type_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("service_content_type_name")]
-                        public string ServiceContentTypeName { get; set; } = default!;
+                        public string? ServiceContentTypeName { get; set; }
 
                         /// <summary>
                         /// 获取或设置子服务内容类型列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sub_service_content_type_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("sub_service_content_type_list")]
-                        public ServiceContentTypeInfo[]? SubServiceContentTypeList { get; set; }
+                        public List<ServiceContentTypeInfo>? SubServiceContentTypeList { get; set; }
                     }
                 }
 
@@ -41,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("service_content_type_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("service_content_type_list")]
-                public Types.ServiceContentTypeInfo[] ServiceContentTypeList { get; set; } = default!;
+                public List<Types.ServiceContentTypeInfo>? ServiceContentTypeList { get; set; }
             }
         }
 
@@ -50,6 +50,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

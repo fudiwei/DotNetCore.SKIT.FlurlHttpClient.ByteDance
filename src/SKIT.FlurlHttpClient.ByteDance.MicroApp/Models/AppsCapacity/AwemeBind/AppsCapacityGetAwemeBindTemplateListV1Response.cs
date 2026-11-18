@@ -26,21 +26,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置所属的类目 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("category_id")]
-                        public string CategoryId { get; set; } = default!;
+                        public string? CategoryId { get; set; }
 
                         /// <summary>
                         /// 获取或设置所属的类目名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("category_name")]
-                        public string CategoryName { get; set; } = default!;
+                        public string? CategoryName { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否可以使用。
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_map")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_map")]
-                public IDictionary<string, Types.TemplateInfo[]> TemplateInfoMap { get; set; } = default!;
+                public Dictionary<string, Types.TemplateInfo[]>? TemplateInfoMap { get; set; }
             }
         }
 
@@ -72,6 +72,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

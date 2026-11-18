@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                        public string ItemOrderId { get; set; } = default!;
+                        public string? ItemOrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置 SKU ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("sku_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("sku_id")]
-                        public string SKUId { get; set; } = default!;
+                        public string? SKUId { get; set; }
 
                         /// <summary>
                         /// 获取或设置金额（单位：分）。
@@ -41,28 +41,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置开发者订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-                public string OutOrderNumber { get; set; } = default!;
+                public string? OutOrderNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                public string OrderId { get; set; } = default!;
+                public string? OrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置订单总金额（单位：分）。
@@ -90,28 +90,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_order_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_order_list")]
-                public Types.ItemOrder[] ItemOrderList { get; set; } = default!;
+                public List<Types.ItemOrder>? ItemOrderList { get; set; }
 
                 /// <summary>
                 /// 获取或设置收款商户号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("merchant_uid")]
                 [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-                public string? MerchantId { get; set; } = default!;
+                public string? MerchantId { get; set; }
 
                 /// <summary>
                 /// 获取或设置支付渠道。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_channel")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_channel")]
-                public int? PayChannel { get; set; } = default!;
+                public int? PayChannel { get; set; }
 
                 /// <summary>
                 /// 获取或设置渠道支付单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("channel_pay_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("channel_pay_id")]
-                public string? ChannelPayId { get; set; } = default!;
+                public string? ChannelPayId { get; set; }
 
                 /// <summary>
                 /// 获取或设置支付时间戳。
@@ -127,6 +127,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

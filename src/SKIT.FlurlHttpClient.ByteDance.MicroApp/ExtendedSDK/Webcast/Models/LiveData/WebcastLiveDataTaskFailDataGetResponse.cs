@@ -19,21 +19,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                         [Newtonsoft.Json.JsonProperty("roomid")]
                         [System.Text.Json.Serialization.JsonPropertyName("roomid")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string RoomId { get; set; } = default!;
+                        public string? RoomId { get; set; }
 
                         /// <summary>
                         /// 获取或设置直播间消息类型。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("msg_type")]
                         [System.Text.Json.Serialization.JsonPropertyName("msg_type")]
-                        public string MessageType { get; set; } = default!;
+                        public string? MessageType { get; set; }
 
                         /// <summary>
                         /// 获取或设置数据 JSON 字符串。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("payload")]
                         [System.Text.Json.Serialization.JsonPropertyName("payload")]
-                        public string PayloadJson { get; set; } = default!;
+                        public string? PayloadJson { get; set; }
                     }
                 }
 
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_list")]
-                public Types.FailedData[] FailedDataList { get; set; } = default!;
+                public List<Types.FailedData>? FailedDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分页页数。
@@ -82,6 +82,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

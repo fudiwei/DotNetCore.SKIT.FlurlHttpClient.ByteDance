@@ -14,28 +14,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_name")]
-                public string CouponName { get; set; } = string.Empty;
+                public string? CouponName { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用须知。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("consume_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("consume_desc")]
-                public string ConsumeDescription { get; set; } = string.Empty;
+                public string? ConsumeDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置使用链接。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("consume_path")]
                 [System.Text.Json.Serialization.JsonPropertyName("consume_path")]
-                public string ConsumePagePath { get; set; } = string.Empty;
+                public string? ConsumePagePath { get; set; }
 
                 /// <summary>
                 /// 获取或设置商家券模板编号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("merchant_meta_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("merchant_meta_no")]
-                public string MerchantMetaNumber { get; set; } = string.Empty;
+                public string? MerchantMetaNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置优惠类型。
@@ -149,6 +149,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("coupon_meta")]
         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta")]
-        public Types.CouponMeta CouponMeta { get; set; } = new Types.CouponMeta();
+        public Types.CouponMeta? CouponMeta { get; set; }
     }
 }

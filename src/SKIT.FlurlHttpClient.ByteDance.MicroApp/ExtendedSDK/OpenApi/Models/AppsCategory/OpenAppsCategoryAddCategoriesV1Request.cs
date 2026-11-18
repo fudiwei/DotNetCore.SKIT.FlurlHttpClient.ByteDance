@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("id")]
                         [System.Text.Json.Serialization.JsonPropertyName("id")]
-                        public string Id { get; set; } = string.Empty;
+                        public string? Id { get; set; }
 
                         /// <summary>
                         /// 获取或设置资质名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = string.Empty;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置资质文件路径列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("path_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("path_list")]
-                        public IList<string>? FilePathList { get; set; }
+                        public List<string>? FilePathList { get; set; }
                     }
                 }
 
@@ -41,14 +41,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category")]
                 [System.Text.Json.Serialization.JsonPropertyName("category")]
-                public string CategoryIdString { get; set; } = string.Empty;
+                public string? CategoryIdString { get; set; }
 
                 /// <summary>
                 /// 获取或设置服务类目资质信息列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_cert")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_cert")]
-                public IList<Types.Certification>? CertificationList { get; set; }
+                public List<Types.Certification>? CertificationList { get; set; }
             }
         }
 
@@ -57,6 +57,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_info")]
         [System.Text.Json.Serialization.JsonPropertyName("category_info")]
-        public IList<Types.CategoryInfo> CategoryInfoList { get; set; } = new List<Types.CategoryInfo>();
+        public List<Types.CategoryInfo>? CategoryInfoList { get; set; }
     }
 }

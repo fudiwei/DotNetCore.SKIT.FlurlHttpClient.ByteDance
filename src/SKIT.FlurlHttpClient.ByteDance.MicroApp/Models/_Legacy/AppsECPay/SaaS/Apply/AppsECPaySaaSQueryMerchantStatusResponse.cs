@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置商户号。
@@ -51,20 +51,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_status_info")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_status_info")]
-        public IDictionary<string, Types.MerchantStatusInfo>? MerchantStatusInfoMap { get; set; }
+        public Dictionary<string, Types.MerchantStatusInfo>? MerchantStatusInfoMap { get; set; }
 
         /// <summary>
         /// 获取或设置光合信号主体渠道进件状态信息字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("new_merchant_status_info")]
         [System.Text.Json.Serialization.JsonPropertyName("new_merchant_status_info")]
-        public IDictionary<string, Types.MerchantStatusInfo>? NewMerchantStatusInfoMap { get; set; }
+        public Dictionary<string, Types.MerchantStatusInfo>? NewMerchantStatusInfoMap { get; set; }
 
         /// <summary>
         /// 获取或设置担保支付企业版渠道进件状态信息字典。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pay_status_info")]
         [System.Text.Json.Serialization.JsonPropertyName("pay_status_info")]
-        public IDictionary<string, Types.MerchantStatusInfo>? PayStatusInfoMap { get; set; }
+        public Dictionary<string, Types.MerchantStatusInfo>? PayStatusInfoMap { get; set; }
     }
 }

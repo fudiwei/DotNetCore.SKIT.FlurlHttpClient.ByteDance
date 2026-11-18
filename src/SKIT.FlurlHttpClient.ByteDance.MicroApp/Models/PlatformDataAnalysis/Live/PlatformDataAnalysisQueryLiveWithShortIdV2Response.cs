@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("AwemeShortID")]
                                 [System.Text.Json.Serialization.JsonPropertyName("AwemeShortID")]
-                                public string AwemeShortId { get; set; } = default!;
+                                public string? AwemeShortId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置账号类型。
@@ -36,14 +36,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("Nickname")]
                                 [System.Text.Json.Serialization.JsonPropertyName("Nickname")]
-                                public string Nickname { get; set; } = default!;
+                                public string? Nickname { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置头像 URL。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("Avat")]
                                 [System.Text.Json.Serialization.JsonPropertyName("Avat")]
-                                public string AvatarUrl { get; set; } = default!;
+                                public string? AvatarUrl { get; set; }
                             }
 
                             public class Statistics
@@ -111,14 +111,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ShortInfo")]
                         [System.Text.Json.Serialization.JsonPropertyName("ShortInfo")]
-                        public Types.AnchorInfo AnchorInfo { get; set; } = default!;
+                        public Types.AnchorInfo? AnchorInfo { get; set; }
 
                         /// <summary>
                         /// 获取或设置统计数据。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("Data")]
                         [System.Text.Json.Serialization.JsonPropertyName("Data")]
-                        public Types.Statistics Statistics { get; set; } = default!;
+                        public Types.Statistics? Statistics { get; set; }
                     }
                 }
 
@@ -127,7 +127,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ShortDataList")]
                 [System.Text.Json.Serialization.JsonPropertyName("ShortDataList")]
-                public Types.AnchorData[] AnchorDataList { get; set; } = default!;
+                public List<Types.AnchorData>? AnchorDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -143,6 +143,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

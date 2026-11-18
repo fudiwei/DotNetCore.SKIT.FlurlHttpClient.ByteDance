@@ -25,21 +25,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置宿主 App 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("host_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("host_list")]
-                        public string[] HostNameList { get; set; } = default!;
+                        public List<string>? HostNameList { get; set; }
 
                         /// <summary>
                         /// 获取或设置关键词列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("keyword_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("keyword_list")]
-                        public string[] KeywordList { get; set; } = default!;
+                        public List<string>? KeywordList { get; set; }
 
                         /// <summary>
                         /// 获取或设置操作时间戳。
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_list")]
-                public Types.Template[] TemplateList { get; set; } = default!;
+                public List<Types.Template>? TemplateList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -85,6 +85,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

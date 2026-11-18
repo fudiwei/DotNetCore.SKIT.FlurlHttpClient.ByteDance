@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("capacity_key")]
                                 [System.Text.Json.Serialization.JsonPropertyName("capacity_key")]
-                                public string CapacityKey { get; set; } = default!;
+                                public string? CapacityKey { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置绑定状态。
@@ -46,14 +46,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("aweme_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("aweme_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string AwemeId { get; set; } = default!;
+                        public string? AwemeId { get; set; }
 
                         /// <summary>
                         /// 获取或设置昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("user_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("user_name")]
-                        public string Nickname { get; set; } = default!;
+                        public string? Nickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置账号类型。
@@ -67,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("capacity_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("capacity_list")]
-                        public Types.Capacity[] CapacityList { get; set; } = default!;
+                        public List<Types.Capacity>? CapacityList { get; set; }
 
                         /// <summary>
                         /// 获取或设置绑定状态。
@@ -90,7 +90,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.AwemeRelation[] AwemeRelationList { get; set; } = default!;
+                public List<Types.AwemeRelation>? AwemeRelationList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -106,6 +106,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -11,34 +11,34 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("action")]
         [System.Text.Json.Serialization.JsonPropertyName("action")]
-        public string Action { get; set; } = "get";
+        public string? Action { get; set; } = "get";
 
         /// <summary>
         /// 获取或设置 HTTP 域名列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("request")]
         [System.Text.Json.Serialization.JsonPropertyName("request")]
-        public IList<string>? RequestDomainList { get; set; }
+        public List<string>? RequestDomainList { get; set; }
 
         /// <summary>
         /// 获取或设置 WebSocket 域名列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("socket")]
         [System.Text.Json.Serialization.JsonPropertyName("socket")]
-        public IList<string>? SocketDomainList { get; set; }
+        public List<string>? SocketDomainList { get; set; }
 
         /// <summary>
         /// 获取或设置上传域名列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("upload")]
         [System.Text.Json.Serialization.JsonPropertyName("upload")]
-        public IList<string>? UploadDomainList { get; set; }
+        public List<string>? UploadDomainList { get; set; }
 
         /// <summary>
         /// 获取或设置下载域名列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("download")]
         [System.Text.Json.Serialization.JsonPropertyName("download")]
-        public IList<string>? DownloadDomainList { get; set; }
+        public List<string>? DownloadDomainList { get; set; }
     }
 }

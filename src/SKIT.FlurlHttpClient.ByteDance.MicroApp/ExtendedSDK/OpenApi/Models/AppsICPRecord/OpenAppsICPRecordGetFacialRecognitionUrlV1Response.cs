@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("facial_recognition_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("facial_recognition_token")]
-                public string FacialRecognitionToken { get; set; } = default!;
+                public string? FacialRecognitionToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置人证核验链接。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("facial_recognition_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("facial_recognition_url")]
-                public string FacialRecognitionUrl { get; set; } = default!;
+                public string? FacialRecognitionUrl { get; set; }
             }
         }
 
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

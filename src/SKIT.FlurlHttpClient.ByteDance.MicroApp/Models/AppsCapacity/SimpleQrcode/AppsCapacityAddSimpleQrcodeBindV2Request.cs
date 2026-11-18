@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("qr_url")]
         [System.Text.Json.Serialization.JsonPropertyName("qr_url")]
-        public string Url { get; set; } = string.Empty;
+        public string? Url { get; set; }
 
         /// <summary>
         /// 获取或设置小程序页面路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("load_path")]
         [System.Text.Json.Serialization.JsonPropertyName("load_path")]
-        public string PagePath { get; set; } = string.Empty;
+        public string? PagePath { get; set; }
 
         /// <summary>
         /// 获取或设置测试范围。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("stage")]
         [System.Text.Json.Serialization.JsonPropertyName("stage")]
-        public string Stage { get; set; } = string.Empty;
+        public string? Stage { get; set; }
 
         /// <summary>
         /// 获取或设置是否独占该链接作为前缀。

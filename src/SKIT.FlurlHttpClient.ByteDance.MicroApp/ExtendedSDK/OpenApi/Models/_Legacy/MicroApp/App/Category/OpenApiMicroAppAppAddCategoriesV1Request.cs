@@ -27,14 +27,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = string.Empty;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置资质文件路径。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("path")]
                         [System.Text.Json.Serialization.JsonPropertyName("path")]
-                        public string FilePath { get; set; } = string.Empty;
+                        public string? FilePath { get; set; }
                     }
                 }
 
@@ -43,14 +43,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category")]
                 [System.Text.Json.Serialization.JsonPropertyName("category")]
-                public string CategoryIdString { get; set; } = string.Empty;
+                public string? CategoryIdString { get; set; }
 
                 /// <summary>
                 /// 获取或设置服务类目资质信息列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("categoryCert")]
                 [System.Text.Json.Serialization.JsonPropertyName("categoryCert")]
-                public IList<Types.Certification>? CertificationList { get; set; }
+                public List<Types.Certification>? CertificationList { get; set; }
             }
         }
 
@@ -60,6 +60,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("categoryInfo")]
         [System.Text.Json.Serialization.JsonPropertyName("categoryInfo")]
-        public IList<Types.CategoryInfo> CategoryInfoList { get; set; } = new List<Types.CategoryInfo>();
+        public List<Types.CategoryInfo>? CategoryInfoList { get; set; }
     }
 }

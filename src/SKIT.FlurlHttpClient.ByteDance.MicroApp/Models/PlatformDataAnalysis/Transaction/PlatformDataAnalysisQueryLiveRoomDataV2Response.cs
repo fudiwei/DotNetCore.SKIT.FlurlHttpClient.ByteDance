@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("time")]
                         [System.Text.Json.Serialization.JsonPropertyName("time")]
-                        public string TimeString { get; set; } = default!;
+                        public string? TimeString { get; set; }
 
                         /// <summary>
                         /// 获取或设置累计观看人数。
@@ -107,14 +107,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("live_data_overview")]
                 [System.Text.Json.Serialization.JsonPropertyName("live_data_overview")]
-                public Types.LiveOverviewData LiveOverviewData { get; set; } = default!;
+                public Types.LiveOverviewData? LiveOverviewData { get; set; }
 
                 /// <summary>
                 /// 获取或设置直播数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("live_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("live_data_list")]
-                public Types.LiveData[] LiveDataList { get; set; } = default!;
+                public List<Types.LiveData>? LiveDataList { get; set; }
             }
         }
 
@@ -123,6 +123,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

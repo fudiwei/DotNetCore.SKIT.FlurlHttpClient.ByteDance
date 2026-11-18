@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category")]
                 [System.Text.Json.Serialization.JsonPropertyName("category")]
-                public string Category { get; set; } = default!;
+                public string? Category { get; set; }
 
                 /// <summary>
                 /// 获取或设置权限描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("description")]
                 [System.Text.Json.Serialization.JsonPropertyName("description")]
-                public string Description { get; set; } = default!;
+                public string? Description { get; set; }
             }
 
             public class ShareData
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("authorizer_access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("authorizer_access_token")]
-        public string AuthorizerAccessToken { get; set; } = default!;
+        public string? AuthorizerAccessToken { get; set; }
 
         /// <summary>
         /// 获取或设置授权方 RefreshToken。
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("authorize_permission")]
         [System.Text.Json.Serialization.JsonPropertyName("authorize_permission")]
-        public Types.Permission[]? PermissionList { get; set; }
+        public List<Types.Permission>? PermissionList { get; set; }
 
         /// <summary>
         /// 获取或设置共享数据。

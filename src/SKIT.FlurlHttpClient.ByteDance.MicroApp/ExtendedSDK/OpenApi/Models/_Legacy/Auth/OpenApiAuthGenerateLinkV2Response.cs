@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("link")]
         [System.Text.Json.Serialization.JsonPropertyName("link")]
-        public string AuthLink { get; set; } = default!;
+        public string? AuthLink { get; set; }
     }
 }

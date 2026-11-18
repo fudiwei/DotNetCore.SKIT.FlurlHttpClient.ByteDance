@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("aweme_short_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("aweme_short_id_list")]
-        public IList<string>? AwemeShortIdList { get; set; }
+        public List<string>? AwemeShortIdList { get; set; }
 
         /// <summary>
         /// 获取或设置分页页数。

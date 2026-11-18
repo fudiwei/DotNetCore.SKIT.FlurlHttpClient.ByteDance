@@ -168,7 +168,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("time")]
                         [System.Text.Json.Serialization.JsonPropertyName("time")]
-                        public string TimeString { get; set; } = default!;
+                        public string? TimeString { get; set; }
                     }
                 }
 
@@ -177,14 +177,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_deal_overview_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_deal_overview_data")]
-                public Types.VideoDealOverviewData VideoDealOverviewData { get; set; } = default!;
+                public Types.VideoDealOverviewData? VideoDealOverviewData { get; set; }
 
                 /// <summary>
                 /// 获取或设置短视频每日数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_deal_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_deal_data_list")]
-                public Types.VideoDealData[] VideoDealDataList { get; set; } = default!;
+                public List<Types.VideoDealData>? VideoDealDataList { get; set; }
             }
         }
 
@@ -193,6 +193,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

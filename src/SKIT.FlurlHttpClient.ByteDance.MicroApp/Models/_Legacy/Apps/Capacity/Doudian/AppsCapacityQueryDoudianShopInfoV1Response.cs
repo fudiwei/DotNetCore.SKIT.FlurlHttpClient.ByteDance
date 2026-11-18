@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("MaAppId")]
                         [System.Text.Json.Serialization.JsonPropertyName("MaAppId")]
-                        public string MicroAppId { get; set; } = default!;
+                        public string? MicroAppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置抖店应用 AppID。
@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         [Newtonsoft.Json.JsonProperty("DoudianAppId")]
                         [System.Text.Json.Serialization.JsonPropertyName("DoudianAppId")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string DoudianAppId { get; set; } = default!;
+                        public string? DoudianAppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置抖店店铺 ID。
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ShopName")]
                         [System.Text.Json.Serialization.JsonPropertyName("ShopName")]
-                        public string ShopName { get; set; } = default!;
+                        public string? ShopName { get; set; }
 
                         /// <summary>
                         /// 获取或设置抖店用户 ID。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ShopIdList")]
                 [System.Text.Json.Serialization.JsonPropertyName("ShopIdList")]
-                public Types.Shop[] ShopList { get; set; } = default!;
+                public List<Types.Shop>? ShopList { get; set; }
             }
         }
 
@@ -65,6 +65,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

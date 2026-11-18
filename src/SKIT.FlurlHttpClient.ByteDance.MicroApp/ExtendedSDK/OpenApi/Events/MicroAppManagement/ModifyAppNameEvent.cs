@@ -45,6 +45,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ModifyAppNameResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ModifyAppNameResults")]
         [System.Xml.Serialization.XmlElement("ModifyAppNameResults")]
-        public Types.ModifyResult ModifyResult { get; set; } = default!;
+        public Types.ModifyResult? ModifyResult { get; set; }
     }
 }

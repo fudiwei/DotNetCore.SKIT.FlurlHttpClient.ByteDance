@@ -14,35 +14,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置签约单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("auth_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
-                public string AuthOrderId { get; set; } = default!;
+                public string? AuthOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置开发者扣款单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_pay_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_pay_order_no")]
-                public string OutPayOrderNumber { get; set; } = default!;
+                public string? OutPayOrderNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_order_id")]
-                public string PayOrderId { get; set; } = default!;
+                public string? PayOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款金额（单位：分）。
@@ -93,6 +93,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

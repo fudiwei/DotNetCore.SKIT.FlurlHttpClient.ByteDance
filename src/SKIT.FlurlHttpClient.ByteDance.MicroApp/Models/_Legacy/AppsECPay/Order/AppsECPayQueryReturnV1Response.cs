@@ -21,49 +21,49 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商户结算单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_settle_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_settle_no")]
-                public string OutSettleNumber { get; set; } = default!;
+                public string? OutSettleNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置担保交易分帐单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_no")]
-                public string SettleNumber { get; set; } = default!;
+                public string? SettleNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置商户回退单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_return_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_return_no")]
-                public string OutReturnNumber { get; set; } = default!;
+                public string? OutReturnNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置平台回退单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_no")]
-                public string ReturnNumber { get; set; } = default!;
+                public string? ReturnNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置回退描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_desc")]
-                public string ReturnDescription { get; set; } = default!;
+                public string? ReturnDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置回退商户号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("merchant_uid")]
                 [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-                public string MerchantId { get; set; } = string.Empty;
+                public string? MerchantId { get; set; }
 
                 /// <summary>
                 /// 获取或设置回退金额（单位：分）。
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("return_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("return_status")]
-                public string ReturnStatus { get; set; } = default!;
+                public string? ReturnStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置回退失败原因。
@@ -107,6 +107,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_info")]
         [System.Text.Json.Serialization.JsonPropertyName("return_info")]
-        public Types.Return Return { get; set; } = default!;
+        public Types.Return? Return { get; set; }
     }
 }

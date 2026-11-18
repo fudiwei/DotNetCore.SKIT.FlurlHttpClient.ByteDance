@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_settle_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_settle_no")]
-        public string OutSettleNumber { get; set; } = string.Empty;
+        public string? OutSettleNumber { get; set; }
     }
 }

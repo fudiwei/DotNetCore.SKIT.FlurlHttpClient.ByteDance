@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("image")]
                 [System.Text.Json.Serialization.JsonPropertyName("image")]
-                public string ImageUrl { get; set; } = string.Empty;
+                public string? ImageUrl { get; set; }
             }
         }
 
@@ -23,13 +23,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("targets")]
         [System.Text.Json.Serialization.JsonPropertyName("targets")]
-        public IList<string> Targets { get; set; } = new List<string>();
+        public List<string>? Targets { get; set; }
 
         /// <summary>
         /// 获取或设置检测任务列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tasks")]
         [System.Text.Json.Serialization.JsonPropertyName("tasks")]
-        public IList<Types.Task> TaskList { get; set; } = new List<Types.Task>();
+        public List<Types.Task>? TaskList { get; set; }
     }
 }

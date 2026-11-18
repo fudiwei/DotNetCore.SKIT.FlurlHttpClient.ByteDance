@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("model_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("model_name")]
-                public string ModelName { get; set; } = default!;
+                public string? ModelName { get; set; }
 
                 /// <summary>
                 /// 获取或设置置信度结果。
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("predicts")]
         [System.Text.Json.Serialization.JsonPropertyName("predicts")]
-        public Types.Predict[] PredictList { get; set; } = default!;
+        public List<Types.Predict>? PredictList { get; set; }
     }
 }

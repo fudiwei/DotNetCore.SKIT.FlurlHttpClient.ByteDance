@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutOrderNumber { get; set; } = string.Empty;
+        public string? OutOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置开发者退款单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_refund_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_refund_no")]
-        public string OutRefundNumber { get; set; } = string.Empty;
+        public string? OutRefundNumber { get; set; }
 
         /// <summary>
         /// 获取或设置退款总金额（单位：分）。
@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_order_detail")]
         [System.Text.Json.Serialization.JsonPropertyName("item_order_detail")]
-        public IList<Types.ItemOrder>? ItemOrderList { get; set; }
+        public List<Types.ItemOrder>? ItemOrderList { get; set; }
 
         /// <summary>
         /// 获取或设置自定义字段。

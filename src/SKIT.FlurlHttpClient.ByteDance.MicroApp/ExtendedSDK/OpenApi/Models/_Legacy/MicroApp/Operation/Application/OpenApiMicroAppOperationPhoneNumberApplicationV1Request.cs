@@ -24,13 +24,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("description")]
         [System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
         /// <summary>
         /// 获取或设置场景示例图路径列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("imagePaths")]
         [System.Text.Json.Serialization.JsonPropertyName("imagePaths")]
-        public IList<string>? ImagePathList { get; set; }
+        public List<string>? ImagePathList { get; set; }
     }
 }

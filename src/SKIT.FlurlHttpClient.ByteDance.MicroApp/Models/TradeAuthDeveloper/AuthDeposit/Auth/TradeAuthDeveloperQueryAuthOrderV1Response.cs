@@ -14,35 +14,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户的 OpenId。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = default!;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置开发者信用单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_auth_order_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_auth_order_no")]
-                public string OutAuthOrderNumber { get; set; } = default!;
+                public string? OutAuthOrderNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置信用单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("auth_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
-                public string AuthOrderId { get; set; } = default!;
+                public string? AuthOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置信用单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置免押场景。
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("service_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("service_id")]
-                public string ServiceId { get; set; } = default!;
+                public string? ServiceId { get; set; }
 
                 /// <summary>
                 /// 获取或设置押金金额（单位：分）。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("merchant_uid")]
                 [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-                public string MerchantId { get; set; } = default!;
+                public string? MerchantId { get; set; }
 
                 /// <summary>
                 /// 获取或设置回调通知地址。
@@ -93,6 +93,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

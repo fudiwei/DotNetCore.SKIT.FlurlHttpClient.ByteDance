@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qrcode_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("qrcode_url")]
-                public string QrcodeUrl { get; set; } = default!;
+                public string? QrcodeUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置二维码数据。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qrcode_parse_content")]
                 [System.Text.Json.Serialization.JsonPropertyName("qrcode_parse_content")]
-                public string QrcodeData { get; set; } = default!;
+                public string? QrcodeData { get; set; }
             }
         }
 
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

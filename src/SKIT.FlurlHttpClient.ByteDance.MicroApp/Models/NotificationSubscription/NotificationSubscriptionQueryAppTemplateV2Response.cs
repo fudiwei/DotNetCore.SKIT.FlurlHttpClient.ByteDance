@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("msg_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("msg_id")]
-                        public string MessageId { get; set; } = default!;
+                        public string? MessageId { get; set; }
                     }
                 }
 
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_list")]
-                public Types.Template[] TemplateList { get; set; } = default!;
+                public List<Types.Template>? TemplateList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -43,6 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -15,6 +15,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
         [Newtonsoft.Json.JsonProperty("PicUrl")]
         [System.Text.Json.Serialization.JsonPropertyName("PicUrl")]
         [System.Xml.Serialization.XmlElement("PicUrl")]
-        public string PictureUrl { get; set; } = default!;
+        public string? PictureUrl { get; set; }
     }
 }

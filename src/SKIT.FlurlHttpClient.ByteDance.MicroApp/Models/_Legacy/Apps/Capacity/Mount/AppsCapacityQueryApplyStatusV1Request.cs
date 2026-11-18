@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string CapacityKey { get; set; } = string.Empty;
+        public string? CapacityKey { get; set; }
     }
 }

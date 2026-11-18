@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("activity_id")]
         [System.Text.Json.Serialization.JsonPropertyName("activity_id")]
-        public string ActivityId { get; set; } = string.Empty;
+        public string? ActivityId { get; set; }
 
         /// <summary>
         /// 获取或设置测试账号列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("test_accounts")]
         [System.Text.Json.Serialization.JsonPropertyName("test_accounts")]
-        public IList<string> TestAccountList { get; set; } = new List<string>();
+        public List<string>? TestAccountList { get; set; }
     }
 }

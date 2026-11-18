@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ApplyVideoCapabilityResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ApplyVideoCapabilityResults")]
         [System.Xml.Serialization.XmlElement("ApplyVideoCapabilityResults")]
-        public Types.ApplyResult ApplyResult { get; set; } = default!;
+        public Types.ApplyResult? ApplyResult { get; set; }
     }
 }

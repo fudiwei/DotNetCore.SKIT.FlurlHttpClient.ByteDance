@@ -18,28 +18,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("templateId")]
                         [System.Text.Json.Serialization.JsonPropertyName("templateId")]
-                        public string TemplateId { get; set; } = default!;
+                        public string? TemplateId { get; set; }
 
                         /// <summary>
                         /// 获取或设置分享标题。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置分享文案。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("description")]
                         [System.Text.Json.Serialization.JsonPropertyName("description")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置分享图片 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("imageUrl")]
                         [System.Text.Json.Serialization.JsonPropertyName("imageUrl")]
-                        public string ImageUrl { get; set; } = default!;
+                        public string? ImageUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否是默认模板。
@@ -92,7 +92,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("shareTplList")]
                 [System.Text.Json.Serialization.JsonPropertyName("shareTplList")]
-                public Types.ShareTemplate[] ShareTemplateList { get; set; } = default!;
+                public List<Types.ShareTemplate>? ShareTemplateList { get; set; }
 
                 /// <summary>
                 /// 获取或设置分享模板总数。
@@ -108,6 +108,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

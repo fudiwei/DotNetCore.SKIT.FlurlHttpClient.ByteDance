@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("callback_url")]
         [System.Text.Json.Serialization.JsonPropertyName("callback_url")]
-        public string CallbackUrl { get; set; } = string.Empty;
+        public string? CallbackUrl { get; set; }
     }
 }

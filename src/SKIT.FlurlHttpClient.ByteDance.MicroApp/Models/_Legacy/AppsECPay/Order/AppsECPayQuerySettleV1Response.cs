@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_no")]
-                public string SettleNumber { get; set; } = default!;
+                public string? SettleNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置分账金额（单位：分）。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_status")]
-                public string SettleStatus { get; set; } = default!;
+                public string? SettleStatus { get; set; }
             }
         }
 
@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("settle_info")]
         [System.Text.Json.Serialization.JsonPropertyName("settle_info")]
-        public Types.Settlement Settlement { get; set; } = default!;
+        public Types.Settlement? Settlement { get; set; }
     }
 }

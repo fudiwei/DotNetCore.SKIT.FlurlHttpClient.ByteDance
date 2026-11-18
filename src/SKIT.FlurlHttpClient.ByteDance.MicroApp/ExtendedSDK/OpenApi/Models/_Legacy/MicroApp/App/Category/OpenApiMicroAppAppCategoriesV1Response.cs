@@ -31,14 +31,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置资质文件路径。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("path")]
                                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                public string FilePath { get; set; } = default!;
+                                public string? FilePath { get; set; }
                             }
                         }
 
@@ -47,28 +47,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category")]
                         [System.Text.Json.Serialization.JsonPropertyName("category")]
-                        public string CategoryIdString { get; set; } = default!;
+                        public string? CategoryIdString { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务类目名称字符串（以短横线分隔）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryName")]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryName")]
-                        public string CategoryNameString { get; set; } = default!;
+                        public string? CategoryNameString { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务类目资质 ID 字符串（以逗号分隔）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryCertIds")]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryCertIds")]
-                        public string CertificationIdString { get; set; } = default!;
+                        public string? CertificationIdString { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务类目资质信息列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryCert")]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryCert")]
-                        public Types.Certification[] CertificationList { get; set; } = default!;
+                        public List<Types.Certification>? CertificationList { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -91,7 +91,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("appCategoryAuditInfo")]
                 [System.Text.Json.Serialization.JsonPropertyName("appCategoryAuditInfo")]
-                public Types.CategoryAuditInfo[] CategoryAuditInfoList { get; set; } = default!;
+                public List<Types.CategoryAuditInfo>? CategoryAuditInfoList { get; set; }
 
                 /// <summary>
                 /// 获取或设置剩余修改次数。
@@ -121,6 +121,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

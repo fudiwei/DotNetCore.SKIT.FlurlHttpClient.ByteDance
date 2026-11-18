@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("alias_word")]
         [System.Text.Json.Serialization.JsonPropertyName("alias_word")]
-        public string Alias { get; set; } = string.Empty;
+        public string? Alias { get; set; }
     }
 }

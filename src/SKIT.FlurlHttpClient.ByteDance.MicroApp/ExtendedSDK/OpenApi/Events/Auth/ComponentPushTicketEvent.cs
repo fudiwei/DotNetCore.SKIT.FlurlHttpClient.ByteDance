@@ -15,7 +15,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("FromUserName")]
         [System.Text.Json.Serialization.JsonPropertyName("FromUserName")]
         [System.Xml.Serialization.XmlElement("FromUserName")]
-        public string FromUserName { get; set; } = default!;
+        public string? FromUserName { get; set; }
 
         /// <summary>
         /// 获取或设置消息类型。
@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("MsgType")]
         [System.Text.Json.Serialization.JsonPropertyName("MsgType")]
         [System.Xml.Serialization.XmlElement("MsgType")]
-        public string MessageType { get; set; } = default!;
+        public string? MessageType { get; set; }
 
         /// <summary>
         /// 获取或设置验证票据。
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("Ticket")]
         [System.Text.Json.Serialization.JsonPropertyName("Ticket")]
         [System.Xml.Serialization.XmlElement("Ticket")]
-        public string Ticket { get; set; } = default!;
+        public string? Ticket { get; set; }
 
         /// <summary>
         /// 获取或设置票据生成时间字符串（格式：yyyy-MM-dd HH:mm:ss）
@@ -39,6 +39,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("CreateTime")]
         [System.Text.Json.Serialization.JsonPropertyName("CreateTime")]
         [System.Xml.Serialization.XmlElement("CreateTime")]
-        public string CreateTimeString { get; set; } = default!;
+        public string? CreateTimeString { get; set; }
     }
 }

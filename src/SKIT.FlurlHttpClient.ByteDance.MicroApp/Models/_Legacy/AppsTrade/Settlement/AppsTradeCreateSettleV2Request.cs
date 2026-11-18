@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutOrderNumber { get; set; } = string.Empty;
+        public string? OutOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置开发者分账单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_settle_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_settle_no")]
-        public string OutSettleNumber { get; set; } = string.Empty;
+        public string? OutSettleNumber { get; set; }
 
         /// <summary>
         /// 获取或设置分账描述。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("settle_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("settle_desc")]
-        public string SettleDescription { get; set; } = string.Empty;
+        public string? SettleDescription { get; set; }
 
         /// <summary>
         /// 获取或设置分账参数列表。
@@ -40,7 +40,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedObjectInJsonFormatConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("settle_params")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedObjectInJsonFormatConverter))]
-        public IList<Types.SettleParameter>? SettleParameterList { get; set; }
+        public List<Types.SettleParameter>? SettleParameterList { get; set; }
 
         /// <summary>
         /// 获取或设置商品单号。

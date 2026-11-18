@@ -23,7 +23,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 [Newtonsoft.Json.JsonProperty("video_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_id")]
                 [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                public string VideoId { get; set; } = default!;
+                public string? VideoId { get; set; }
 
                 /// <summary>
                 /// 获取或设置团长 ID。
@@ -60,6 +60,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data[] Data { get; set; } = default!;
+        public List<Types.Data>? Data { get; set; }
     }
 }

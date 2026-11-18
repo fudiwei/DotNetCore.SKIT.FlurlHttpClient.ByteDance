@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("url_link")]
         [System.Text.Json.Serialization.JsonPropertyName("url_link")]
-        public string UrlLink { get; set; } = string.Empty;
+        public string? UrlLink { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("credentials_type_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("credentials_type_name")]
-                        public string CredentialsTypeInfoName { get; set; } = default!;
+                        public string? CredentialsTypeInfoName { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("credentials_type_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("credentials_type_list")]
-                public Types.CredentialsTypeInfo[]? CredentialsTypeList { get; set; }
+                public List<Types.CredentialsTypeInfo>? CredentialsTypeList { get; set; }
             }
         }
 
@@ -43,6 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

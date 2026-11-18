@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
-        public string CouponMetaId { get; set; } = string.Empty;
+        public string? CouponMetaId { get; set; }
     }
 }

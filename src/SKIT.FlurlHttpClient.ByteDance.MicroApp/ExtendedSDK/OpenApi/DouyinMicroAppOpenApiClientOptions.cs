@@ -26,12 +26,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
         /// <summary>
         /// 获取或设置抖音小程序服务商 AppId。
         /// </summary>
-        public string ComponentAppId { get; set; } = default!;
+        public string ComponentAppId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置抖音小程序服务商 AppSecret。
         /// </summary>
-        public string ComponentAppSecret { get; set; } = default!;
+        public string ComponentAppSecret { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置头条服务器推送的 Token。

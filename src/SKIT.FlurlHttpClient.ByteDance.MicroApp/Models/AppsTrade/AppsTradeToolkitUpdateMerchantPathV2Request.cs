@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("path")]
                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                public string Path { get; set; } = string.Empty;
+                public string? Path { get; set; }
             }
         }
 
@@ -37,13 +37,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_id")]
         [System.Text.Json.Serialization.JsonPropertyName("account_id")]
-        public string AccountId { get; set; } = string.Empty;
+        public string? AccountId { get; set; }
 
         /// <summary>
         /// 获取或设置跳转路径列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("path_data_list")]
         [System.Text.Json.Serialization.JsonPropertyName("path_data_list")]
-        public IList<Types.PathData> PathDataList { get; set; } = new List<Types.PathData>();
+        public List<Types.PathData>? PathDataList { get; set; }
     }
 }

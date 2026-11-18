@@ -21,42 +21,42 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_order_id")]
-                public string PayOrderId { get; set; } = default!;
+                public string? PayOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置开发者退款单号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("out_pay_refund_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("out_pay_refund_no")]
-                public string OutPayRefundNumber { get; set; } = default!;
+                public string? OutPayRefundNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("pay_refund_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("pay_refund_id")]
-                public string PayRefundId { get; set; } = default!;
+                public string? PayRefundId { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款单状态。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("status")]
                 [System.Text.Json.Serialization.JsonPropertyName("status")]
-                public string Status { get; set; } = default!;
+                public string? Status { get; set; }
 
                 /// <summary>
                 /// 获取或设置费用明细列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("fee_detail_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("fee_detail_list")]
-                public Types.FeeDetail[] FeeDetailList { get; set; } = default!;
+                public List<Types.FeeDetail>? FeeDetailList { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款总金额（单位：分）。
@@ -107,6 +107,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

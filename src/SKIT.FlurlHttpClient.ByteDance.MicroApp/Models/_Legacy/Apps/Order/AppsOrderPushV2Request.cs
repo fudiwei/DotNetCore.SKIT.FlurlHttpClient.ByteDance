@@ -5,26 +5,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
     /// </summary>
     public class AppsOrderPushV2Request : DouyinMicroAppRequest
     {
-        public static class Types
-        {
-            public class KeyValue
-            {
-                /// <summary>
-                /// 获取或设置键。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("key")]
-                [System.Text.Json.Serialization.JsonPropertyName("key")]
-                public string Key { get; set; } = string.Empty;
-
-                /// <summary>
-                /// 获取或设置值。
-                /// </summary>
-                [Newtonsoft.Json.JsonProperty("value")]
-                [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public string Value { get; set; } = string.Empty;
-            }
-        }
-
         /// <inheritdoc/>
         [Newtonsoft.Json.JsonProperty("access_token")]
         [System.Text.Json.Serialization.JsonPropertyName("access_token")]
@@ -42,21 +22,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_shop_id")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_shop_id")]
-        public string ExternalShopId { get; set; } = string.Empty;
+        public string? ExternalShopId { get; set; }
 
         /// <summary>
         /// 获取或设置宿主名称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_name")]
         [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-        public string AppName { get; set; } = string.Empty;
+        public string? AppName { get; set; }
 
         /// <summary>
         /// 获取或设置用户的 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置 JSON 格式的订单详情信息。

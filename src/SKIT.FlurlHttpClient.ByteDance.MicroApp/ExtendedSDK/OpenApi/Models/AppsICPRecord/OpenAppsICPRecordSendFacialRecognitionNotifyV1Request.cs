@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("province_code")]
         [System.Text.Json.Serialization.JsonPropertyName("province_code")]
-        public string ProvinceCode { get; set; } = string.Empty;
+        public string? ProvinceCode { get; set; }
 
         /// <summary>
         /// 获取或设置小程序负责人手机号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_incharge_people_phone")]
         [System.Text.Json.Serialization.JsonPropertyName("app_incharge_people_phone")]
-        public string PhoneNumber { get; set; } = string.Empty;
+        public string? PhoneNumber { get; set; }
     }
 }

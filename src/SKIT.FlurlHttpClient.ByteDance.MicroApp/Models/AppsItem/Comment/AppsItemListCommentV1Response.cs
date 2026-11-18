@@ -18,35 +18,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_id")]
-                        public string CommentId { get; set; } = default!;
+                        public string? CommentId { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("comment_user_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("comment_user_id")]
-                        public string UserId { get; set; } = default!;
+                        public string? UserId { get; set; }
 
                         /// <summary>
                         /// 获取或设置评论内容。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("content")]
                         [System.Text.Json.Serialization.JsonPropertyName("content")]
-                        public string Content { get; set; } = default!;
+                        public string? Content { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar")]
-                        public string AvatarUrl { get; set; } = default!;
+                        public string? AvatarUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nick_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                        public string Nickname { get; set; } = default!;
+                        public string? Nickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -83,7 +83,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Comment[] CommentList { get; set; } = default!;
+                public List<Types.Comment>? CommentList { get; set; }
 
                 /// <summary>
                 /// 获取或设置下一页分页游标。
@@ -106,6 +106,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

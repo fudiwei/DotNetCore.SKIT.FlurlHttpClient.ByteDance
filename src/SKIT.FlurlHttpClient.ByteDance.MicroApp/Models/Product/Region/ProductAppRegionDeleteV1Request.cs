@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("region_id")]
         [System.Text.Json.Serialization.JsonPropertyName("region_id")]
-        public string RegionId { get; set; } = string.Empty;
+        public string? RegionId { get; set; }
 
         /// <summary>
         /// 获取或设置页面路径。

@@ -53,14 +53,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("context")]
         [System.Text.Json.Serialization.JsonPropertyName("context")]
-        public Types.Context Context { get; set; } = new Types.Context();
+        public Types.Context? Context { get; set; }
 
         /// <summary>
         /// 获取或设置事件类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("event_type")]
         [System.Text.Json.Serialization.JsonPropertyName("event_type")]
-        public string EventType { get; set; } = string.Empty;
+        public string? EventType { get; set; }
 
         /// <summary>
         /// 获取或设置事件参数 JSON 字符串。

@@ -11,8 +11,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
             {
                 public static class Types
                 {
-                    public class Video : AppsVideoQueryV1Response.Types.Data.Types.Video
+                    public class Video : AppsVideoQueryV1Response.Types.Data.Types.__zz__Video
                     {
+                        public static class Types
+                        {
+                            public class Statistics : AppsVideoQueryV1Response.Types.Data.Types.Video.Types.Statistics
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置统计数据。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("statistics")]
+                        [System.Text.Json.Serialization.JsonPropertyName("statistics")]
+                        public Types.Statistics? Statistics { get; set; }
                     }
                 }
 
@@ -21,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Video[] VideoList { get; set; } = default!;
+                public List<Types.Video>? VideoList { get; set; }
             }
         }
 
@@ -30,6 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

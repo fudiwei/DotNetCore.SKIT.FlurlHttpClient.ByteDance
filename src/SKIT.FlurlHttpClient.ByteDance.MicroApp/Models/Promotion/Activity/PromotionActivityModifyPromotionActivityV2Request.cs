@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("activity_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("activity_id")]
-                public string ActivityId { get; set; } = string.Empty;
+                public string? ActivityId { get; set; }
 
                 /// <summary>
                 /// 获取或设置活动名称。
@@ -140,6 +140,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("promotion_activity")]
         [System.Text.Json.Serialization.JsonPropertyName("promotion_activity")]
-        public Types.Activity Activity { get; set; } = new Types.Activity();
+        public Types.Activity? Activity { get; set; }
     }
 }

@@ -12,13 +12,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("action")]
         [System.Text.Json.Serialization.JsonPropertyName("action")]
-        public string Action { get; set; } = "get";
+        public string? Action { get; set; } = "get";
 
         /// <summary>
         /// 获取或设置 Webview 域名列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("webview")]
         [System.Text.Json.Serialization.JsonPropertyName("webview")]
-        public IList<string>? WebviewDomainList { get; set; }
+        public List<string>? WebviewDomainList { get; set; }
     }
 }

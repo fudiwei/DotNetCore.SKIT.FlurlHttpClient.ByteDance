@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("new_icon_path")]
         [System.Text.Json.Serialization.JsonPropertyName("new_icon_path")]
-        public string NewIconPath { get; set; } = string.Empty;
+        public string? NewIconPath { get; set; }
     }
 }

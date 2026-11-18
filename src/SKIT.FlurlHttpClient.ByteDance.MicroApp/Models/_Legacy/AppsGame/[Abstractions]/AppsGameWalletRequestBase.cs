@@ -19,14 +19,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("openid")]
         [System.Text.Json.Serialization.JsonPropertyName("openid")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置开始时间字符串（格式：yyyyMMdd）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("zone_id")]
         [System.Text.Json.Serialization.JsonPropertyName("zone_id")]
-        public string ZoneId { get; set; } = string.Empty;
+        public string? ZoneId { get; set; }
 
         /// <summary>
         /// 获取或设置平台。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("pf")]
         [System.Text.Json.Serialization.JsonPropertyName("pf")]
-        public string Platform { get; set; } = "android";
+        public string? Platform { get; set; } = "android";
 
         /// <summary>
         /// 获取或设置请求时间戳。如果不指定将由系统自动生成

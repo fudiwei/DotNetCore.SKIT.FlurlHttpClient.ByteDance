@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("authorization_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("authorization_code")]
-                public string AuthorizationCode { get; set; } = default!;
+                public string? AuthorizationCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置授权码有效期（单位：秒）。
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("intro")]
         [System.Text.Json.Serialization.JsonPropertyName("intro")]
-        public string Introduction { get; set; } = string.Empty;
+        public string? Introduction { get; set; }
 
         /// <summary>
         /// 获取或设置预计首次开播时间戳。

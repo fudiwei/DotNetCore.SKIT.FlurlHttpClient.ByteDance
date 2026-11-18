@@ -15,6 +15,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
         [Newtonsoft.Json.JsonProperty("Content")]
         [System.Text.Json.Serialization.JsonPropertyName("Content")]
         [System.Xml.Serialization.XmlElement("Content")]
-        public string Content { get; set; } = default!;
+        public string? Content { get; set; }
     }
 }

@@ -45,21 +45,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_account")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_account")]
-                public string SettleAccount { get; set; } = default!;
+                public string? SettleAccount { get; set; }
 
                 /// <summary>
                 /// 获取或设置银行卡号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("bankcard_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("bankcard_no")]
-                public string BankCardNumber { get; set; } = default!;
+                public string? BankCardNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置银行名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("bank_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("bank_name")]
-                public string BankName { get; set; } = default!;
+                public string? BankName { get; set; }
             }
         }
 
@@ -68,13 +68,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_info")]
         [System.Text.Json.Serialization.JsonPropertyName("account_info")]
-        public Types.Account Account { get; set; } = default!;
+        public Types.Account? Account { get; set; }
 
         /// <summary>
         /// 获取或设置结算信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("settle_info")]
         [System.Text.Json.Serialization.JsonPropertyName("settle_info")]
-        public Types.Settlement Settlement { get; set; } = default!;
+        public Types.Settlement? Settlement { get; set; }
     }
 }

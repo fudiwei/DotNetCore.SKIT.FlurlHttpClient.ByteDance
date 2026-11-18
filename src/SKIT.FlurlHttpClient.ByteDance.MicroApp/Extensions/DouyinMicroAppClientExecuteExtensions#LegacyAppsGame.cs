@@ -32,16 +32,18 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request.Signature is null)
             {
                 string json = client.JsonSerializer.Serialize(request);
-                IDictionary<string, string> paramMap = new SortedDictionary<string, string>(Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary<string, string>>(json)!, StringComparer.Ordinal);
-                foreach (string key in paramMap.Keys.ToArray())
+
+                IDictionary<string, string> kvParams = new SortedDictionary<string, string>(Newtonsoft.Json.JsonConvert.DeserializeObject<IDictionary<string, string>>(json)!, StringComparer.Ordinal);
+
+                foreach (string key in kvParams.Keys.ToArray())
                 {
                     if (key == "mp_sig")
-                        paramMap.Remove(key);
-                    else if (paramMap[key] is null)
-                        paramMap.Remove(key);
+                        kvParams.Remove(key);
+                    else if (kvParams[key] is null)
+                        kvParams.Remove(key);
                 }
 
-                string message = string.Join("&", paramMap.Select(e => $"{e.Key}={e.Value}"))
+                string message = string.Join("&", kvParams.Select(e => $"{e.Key}={e.Value}"))
                     + $"&org_loc={request.GetRequestPath()}"
                     + $"&method={request.GetRequestMethod()}";
                 request.Signature = Utilities.HMACUtility.HashWithSHA256(client.Credentials.ECPaySalt!, message).Value!.ToLower();

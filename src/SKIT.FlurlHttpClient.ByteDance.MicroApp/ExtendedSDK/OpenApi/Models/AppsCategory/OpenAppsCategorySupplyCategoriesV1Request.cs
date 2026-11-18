@@ -21,14 +21,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category")]
                 [System.Text.Json.Serialization.JsonPropertyName("category")]
-                public string CategoryIdString { get; set; } = string.Empty;
+                public string? CategoryIdString { get; set; }
 
                 /// <summary>
                 /// 获取或设置服务类目资质信息列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("category_cert")]
                 [System.Text.Json.Serialization.JsonPropertyName("category_cert")]
-                public IList<Types.Certification>? CertificationList { get; set; }
+                public List<Types.Certification>? CertificationList { get; set; }
             }
         }
 
@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("category_info")]
         [System.Text.Json.Serialization.JsonPropertyName("category_info")]
-        public IList<Types.CategoryInfo> CategoryInfoList { get; set; } = new List<Types.CategoryInfo>();
+        public List<Types.CategoryInfo>? CategoryInfoList { get; set; }
     }
 }

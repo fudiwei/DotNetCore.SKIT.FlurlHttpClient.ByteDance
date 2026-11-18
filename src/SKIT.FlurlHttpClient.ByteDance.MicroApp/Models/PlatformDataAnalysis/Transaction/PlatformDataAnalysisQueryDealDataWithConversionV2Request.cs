@@ -31,6 +31,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("scenes_list")]
         [System.Text.Json.Serialization.JsonPropertyName("scenes_list")]
-        public IList<string>? SceneList { get; set; }
+        public List<string>? SceneList { get; set; }
     }
 }

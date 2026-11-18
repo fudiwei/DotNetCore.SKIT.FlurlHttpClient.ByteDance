@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户数。
@@ -41,28 +41,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("province")]
                 [System.Text.Json.Serialization.JsonPropertyName("province")]
-                public Types.UserPortraitData[] ProvinceUserPortraitDataList { get; set; } = default!;
+                public List<Types.UserPortraitData>? ProvinceUserPortraitDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户城市画像数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("city")]
                 [System.Text.Json.Serialization.JsonPropertyName("city")]
-                public Types.UserPortraitData[] CityUserPortraitDataList { get; set; } = default!;
+                public List<Types.UserPortraitData>? CityUserPortraitDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户性别画像数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("gender")]
                 [System.Text.Json.Serialization.JsonPropertyName("gender")]
-                public Types.UserPortraitData[] GenderUserPortraitDataList { get; set; } = default!;
+                public List<Types.UserPortraitData>? GenderUserPortraitDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户年龄画像数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("age")]
                 [System.Text.Json.Serialization.JsonPropertyName("age")]
-                public Types.UserPortraitData[] AgeUserPortraitDataList { get; set; } = default!;
+                public List<Types.UserPortraitData>? AgeUserPortraitDataList { get; set; }
             }
         }
 
@@ -71,6 +71,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

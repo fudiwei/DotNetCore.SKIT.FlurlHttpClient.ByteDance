@@ -25,14 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("task_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("task_id")]
-                        public string TaskId { get; set; } = default!;
+                        public string? TaskId { get; set; }
 
                         /// <summary>
                         /// 获取或设置外部商铺 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("supplier_ext_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("supplier_ext_id")]
-                        public string SupplierExternalId { get; set; } = default!;
+                        public string? SupplierExternalId { get; set; }
 
                         /// <summary>
                         /// 获取或设置匹配状态。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("match_result_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("match_result_list")]
-                public Types.MatchResult[] MatchResultList { get; set; } = default!;
+                public List<Types.MatchResult>? MatchResultList { get; set; }
             }
         }
 
@@ -57,6 +57,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

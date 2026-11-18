@@ -37,6 +37,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ApplyLiveCapabilityResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ApplyLiveCapabilityResults")]
         [System.Xml.Serialization.XmlElement("ApplyLiveCapabilityResults")]
-        public Types.ApplyResult ApplyResult { get; set; } = default!;
+        public Types.ApplyResult? ApplyResult { get; set; }
     }
 }

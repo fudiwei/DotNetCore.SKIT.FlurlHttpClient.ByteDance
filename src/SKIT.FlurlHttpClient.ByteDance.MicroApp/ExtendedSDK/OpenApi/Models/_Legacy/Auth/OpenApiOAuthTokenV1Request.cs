@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string GrantType { get; set; } = "app_to_tp_authorization_code";
+        public string? GrantType { get; set; } = "app_to_tp_authorization_code";
 
         /// <summary>
         /// 获取或设置授权码。与字段 <see cref="AuthorizerRefreshToken"/> 二选一。

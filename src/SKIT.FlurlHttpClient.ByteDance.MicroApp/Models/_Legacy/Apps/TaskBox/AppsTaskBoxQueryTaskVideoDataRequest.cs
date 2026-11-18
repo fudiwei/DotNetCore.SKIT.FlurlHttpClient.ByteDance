@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("task_ids")]
-        public IList<long> TaskIdList { get; set; } = new List<long>();
+        public List<long>? TaskIdList { get; set; }
 
         /// <summary>
         /// 获取或设置视频发布时间起始时间戳。

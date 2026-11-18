@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("business_license_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("business_license_code")]
-                public string LicenseCode { get; set; } = string.Empty;
+                public string? LicenseCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件地址。
@@ -35,28 +35,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("business_license_picurl")]
                 [System.Text.Json.Serialization.JsonPropertyName("business_license_picurl")]
-                public IDictionary<string, string> FrontPictureImageIdMap { get; set; } = new Dictionary<string, string>();
+                public Dictionary<string, string>? FrontPictureImageIdMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件背面照片图片 ID 字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("business_license_back_picurl")]
                 [System.Text.Json.Serialization.JsonPropertyName("business_license_back_picurl")]
-                public IDictionary<string, string>? BackPictureImageIdMap { get; set; }
+                public Dictionary<string, string>? BackPictureImageIdMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件有效期开始日期字符串（格式：yyyyMMdd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("begin_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("begin_date")]
-                public string BeginDateString { get; set; } = string.Empty;
+                public string? BeginDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件有效期结束日期字符串（格式：yyyyMMdd / "长期"）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("end_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("end_date")]
-                public string EndDateString { get; set; } = string.Empty;
+                public string? EndDateString { get; set; }
             }
 
             public class LegalPerson
@@ -73,14 +73,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("id_no")]
-                public string IdNumber { get; set; } = string.Empty;
+                public string? IdNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件姓名。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string IdName { get; set; } = string.Empty;
+                public string? IdName { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件地址。
@@ -94,28 +94,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("front_pic_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("front_pic_url")]
-                public IDictionary<string, string> FrontPictureImageIdMap { get; set; } = new Dictionary<string, string>();
+                public Dictionary<string, string>? FrontPictureImageIdMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件背面照片图片 ID 字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("back_pic_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("back_pic_url")]
-                public IDictionary<string, string>? BackPictureImageIdMap { get; set; }
+                public Dictionary<string, string>? BackPictureImageIdMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件有效期开始日期字符串（格式：yyyyMMdd）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("begin_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("begin_date")]
-                public string BeginDateString { get; set; } = string.Empty;
+                public string? BeginDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置证件有效期结束日期字符串（格式：yyyyMMdd / "长期"）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("exp_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("exp_date")]
-                public string EndDateString { get; set; } = string.Empty;
+                public string? EndDateString { get; set; }
             }
 
             public class MerchantCardInfo
@@ -125,21 +125,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("account_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("account_name")]
-                public string AccountName { get; set; } = string.Empty;
+                public string? AccountName { get; set; }
 
                 /// <summary>
                 /// 获取或设置银行账号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("account_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("account_no")]
-                public string AccountNumber { get; set; } = string.Empty;
+                public string? AccountNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置开户支行名。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("bank_full_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("bank_full_name")]
-                public string BankFullName { get; set; } = string.Empty;
+                public string? BankFullName { get; set; }
 
                 /// <summary>
                 /// 获取或设置结算类型。
@@ -153,7 +153,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("card_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("card_type")]
-                public string CardType { get; set; } = string.Empty;
+                public string? CardType { get; set; }
 
                 /// <summary>
                 /// 获取或设置支付宝结算类型。
@@ -188,7 +188,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("other_cert_pics")]
                 [System.Text.Json.Serialization.JsonPropertyName("other_cert_pics")]
-                public IList<string>? OtherCertificatePictureImageIdList { get; set; }
+                public List<string>? OtherCertificatePictureImageIdList { get; set; }
             }
 
             public class MerchantOperationInfo
@@ -198,21 +198,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("manage_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("manage_name")]
-                public string ManagerName { get; set; } = string.Empty;
+                public string? ManagerName { get; set; }
 
                 /// <summary>
                 /// 获取或设置联系人手机号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("manage_mobile")]
                 [System.Text.Json.Serialization.JsonPropertyName("manage_mobile")]
-                public string ManagerMobileNumber { get; set; } = string.Empty;
+                public string? ManagerMobileNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置联系人邮箱。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("manage_email")]
                 [System.Text.Json.Serialization.JsonPropertyName("manage_email")]
-                public string ManagerEmail { get; set; } = string.Empty;
+                public string? ManagerEmail { get; set; }
 
                 /// <summary>
                 /// 获取或设置联系人类型。
@@ -233,7 +233,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("manage_id_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("manage_id_no")]
-                public string ManagerIdNumber { get; set; } = string.Empty;
+                public string? ManagerIdNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置联系人证件有效期开始日期字符串（格式：yyyyMMdd）。
@@ -306,14 +306,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("id_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("id_no")]
-                public string IdNumber { get; set; } = string.Empty;
+                public string? IdNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置受益人证件姓名。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("name")]
                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                public string IdName { get; set; } = string.Empty;
+                public string? IdName { get; set; }
 
                 /// <summary>
                 /// 获取或设置受益人证件地址。
@@ -327,21 +327,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("begin_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("begin_date")]
-                public string BeginDateString { get; set; } = string.Empty;
+                public string? BeginDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置受益人证件有效期结束日期字符串（格式：yyyyMMdd / "长期"）。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("exp_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("exp_date")]
-                public string EndDateString { get; set; } = string.Empty;
+                public string? EndDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置受益人证件正面照片图片 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("front_pic_url")]
                 [System.Text.Json.Serialization.JsonPropertyName("front_pic_url")]
-                public string FrontPictureImageId { get; set; } = string.Empty;
+                public string? FrontPictureImageId { get; set; }
 
                 /// <summary>
                 /// 获取或设置受益人证件背面照片图片 ID。
@@ -400,21 +400,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_id")]
-        public string OutOrderId { get; set; } = string.Empty;
+        public string? OutOrderId { get; set; }
 
         /// <summary>
         /// 获取或设置回调通知地址。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("callback_url")]
         [System.Text.Json.Serialization.JsonPropertyName("callback_url")]
-        public string NotifyUrl { get; set; } = string.Empty;
+        public string? NotifyUrl { get; set; }
 
         /// <summary>
         /// 获取或设置进件渠道列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("channels")]
         [System.Text.Json.Serialization.JsonPropertyName("channels")]
-        public IList<string> ChannelList { get; set; } = new List<string>();
+        public List<string>? ChannelList { get; set; }
 
         /// <summary>
         /// 获取或设置商户类型。
@@ -428,98 +428,98 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_name")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_name")]
-        public string MerchantName { get; set; } = string.Empty;
+        public string? MerchantName { get; set; }
 
         /// <summary>
         /// 获取或设置商户简称。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_short_name")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_short_name")]
-        public string MerchantShortName { get; set; } = string.Empty;
+        public string? MerchantShortName { get; set; }
 
         /// <summary>
         /// 获取或设置省份编码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("province_code")]
         [System.Text.Json.Serialization.JsonPropertyName("province_code")]
-        public string ProvinceCode { get; set; } = string.Empty;
+        public string? ProvinceCode { get; set; }
 
         /// <summary>
         /// 获取或设置城市编码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("city_code")]
         [System.Text.Json.Serialization.JsonPropertyName("city_code")]
-        public string CityCode { get; set; } = string.Empty;
+        public string? CityCode { get; set; }
 
         /// <summary>
         /// 获取或设置区县编码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("district_code")]
         [System.Text.Json.Serialization.JsonPropertyName("district_code")]
-        public string DistrictCode { get; set; } = string.Empty;
+        public string? DistrictCode { get; set; }
 
         /// <summary>
         /// 获取或设置注册地址。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("registered_addr")]
         [System.Text.Json.Serialization.JsonPropertyName("registered_addr")]
-        public string RegisteredAddress { get; set; } = string.Empty;
+        public string? RegisteredAddress { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("business_license")]
         [System.Text.Json.Serialization.JsonPropertyName("business_license")]
-        public Types.BusinessLicense BusinessLicense { get; set; } = new Types.BusinessLicense();
+        public Types.BusinessLicense? BusinessLicense { get; set; }
 
         /// <summary>
         /// 获取或设置法人信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("legal_person")]
         [System.Text.Json.Serialization.JsonPropertyName("legal_person")]
-        public Types.LegalPerson LegalPerson { get; set; } = new Types.LegalPerson();
+        public Types.LegalPerson? LegalPerson { get; set; }
 
         /// <summary>
         /// 获取或设置结算账户信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_card_info")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_card_info")]
-        public Types.MerchantCardInfo MerchantCardInfo { get; set; } = new Types.MerchantCardInfo();
+        public Types.MerchantCardInfo? MerchantCardInfo { get; set; }
 
         /// <summary>
         /// 获取或设置商户管理员信息。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_operation_info")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_operation_info")]
-        public Types.MerchantOperationInfo MerchantOperationInfo { get; set; } = new Types.MerchantOperationInfo();
+        public Types.MerchantOperationInfo? MerchantOperationInfo { get; set; }
 
         /// <summary>
         /// 获取或设置行业编码列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("industry_code")]
         [System.Text.Json.Serialization.JsonPropertyName("industry_code")]
-        public IList<string> IndustryCodeList { get; set; } = new List<string>();
+        public List<string>? IndustryCodeList { get; set; }
 
         /// <summary>
         /// 获取或设置补充材料图片 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ext_evidences")]
         [System.Text.Json.Serialization.JsonPropertyName("ext_evidences")]
-        public IList<string>? ExtendedEvidenceImageIdList { get; set; }
+        public List<string>? ExtendedEvidenceImageIdList { get; set; }
 
         /// <summary>
         /// 获取或设置行业资质图片 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("industry_info_pic_urls")]
         [System.Text.Json.Serialization.JsonPropertyName("industry_info_pic_urls")]
-        public IList<string>? IndustryInfoPictureImageIdList { get; set; }
+        public List<string>? IndustryInfoPictureImageIdList { get; set; }
 
         /// <summary>
         /// 获取或设置姓名。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("create_name")]
         [System.Text.Json.Serialization.JsonPropertyName("create_name")]
-        public string CreateName { get; set; } = string.Empty;
+        public string? CreateName { get; set; }
 
         /// <summary>
         /// 获取或设置受益人类型。

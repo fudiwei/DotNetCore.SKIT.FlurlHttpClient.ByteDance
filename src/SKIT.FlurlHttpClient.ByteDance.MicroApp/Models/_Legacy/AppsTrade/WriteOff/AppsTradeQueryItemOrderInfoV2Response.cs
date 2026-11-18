@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                public string ItemOrderId { get; set; } = default!;
+                public string? ItemOrderId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商品单状态。
@@ -51,6 +51,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data[] Data { get; set; } = default!;
+        public List<Types.Data>? Data { get; set; }
     }
 }

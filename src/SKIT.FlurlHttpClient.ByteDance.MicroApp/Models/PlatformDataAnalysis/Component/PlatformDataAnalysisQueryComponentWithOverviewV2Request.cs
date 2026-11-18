@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("componentId_list")]
         [System.Text.Json.Serialization.JsonPropertyName("componentId_list")]
-        public IList<string>? ComponentIdList { get; set; }
+        public List<string>? ComponentIdList { get; set; }
     }
 }

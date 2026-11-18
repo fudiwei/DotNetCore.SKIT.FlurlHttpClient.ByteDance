@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("activity_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("activity_id")]
-                        public string ActivityId { get; set; } = default!;
+                        public string? ActivityId { get; set; }
 
                         /// <summary>
                         /// 获取或设置领取数量。
@@ -42,14 +42,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("talent_open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("talent_open_id")]
-                        public string TalentOpenId { get; set; } = default!;
+                        public string? TalentOpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播抖音号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("talent_account")]
                         [System.Text.Json.Serialization.JsonPropertyName("talent_account")]
-                        public string TalentAccount { get; set; } = default!;
+                        public string? TalentAccount { get; set; }
 
                         /// <summary>
                         /// 获取或设置曝光数量。
@@ -79,14 +79,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("activity_stats")]
                 [System.Text.Json.Serialization.JsonPropertyName("activity_stats")]
-                public Types.ActivityData[] ActivityDataList { get; set; } = default!;
+                public List<Types.ActivityData>? ActivityDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置主播发券统计数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("talent_stats")]
                 [System.Text.Json.Serialization.JsonPropertyName("talent_stats")]
-                public Types.TalentData[] TalentDataList { get; set; } = default!;
+                public List<Types.TalentData>? TalentDataList { get; set; }
             }
         }
 
@@ -95,6 +95,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

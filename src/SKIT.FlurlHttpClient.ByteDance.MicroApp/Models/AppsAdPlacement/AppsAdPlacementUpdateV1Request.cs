@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ad_placement_id")]
         [System.Text.Json.Serialization.JsonPropertyName("ad_placement_id")]
-        public string AdPlacementId { get; set; } = string.Empty;
+        public string? AdPlacementId { get; set; }
 
         /// <summary>
         /// 获取或设置状态。

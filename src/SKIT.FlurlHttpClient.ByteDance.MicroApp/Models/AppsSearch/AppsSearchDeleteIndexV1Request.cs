@@ -17,13 +17,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("name")]
         [System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         /// <summary>
         /// 获取或设置待删除页面路径列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("path_list")]
         [System.Text.Json.Serialization.JsonPropertyName("path_list")]
-        public IList<string> PagePathList { get; set; } = new List<string>();
+        public List<string>? PagePathList { get; set; }
     }
 }

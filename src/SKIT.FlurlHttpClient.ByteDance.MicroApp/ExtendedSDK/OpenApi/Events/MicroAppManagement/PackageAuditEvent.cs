@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
                                 [System.Xml.Serialization.XmlElement("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置修改指引链接。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                                 [Newtonsoft.Json.JsonProperty("link")]
                                 [System.Text.Json.Serialization.JsonPropertyName("link")]
                                 [System.Xml.Serialization.XmlElement("link")]
-                                public string LinkUrl { get; set; } = default!;
+                                public string? LinkUrl { get; set; }
                             }
                         }
 
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                         [Newtonsoft.Json.JsonProperty("reason")]
                         [System.Text.Json.Serialization.JsonPropertyName("reason")]
                         [System.Xml.Serialization.XmlElement("reason")]
-                        public string RejectReason { get; set; } = default!;
+                        public string? RejectReason { get; set; }
 
                         /// <summary>
                         /// 获取或设置附件 URL。
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("hostName")]
                 [System.Text.Json.Serialization.JsonPropertyName("hostName")]
                 [System.Xml.Serialization.XmlElement("hostName")]
-                public string HostName { get; set; } = default!;
+                public string? HostName { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核结果。
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("reason")]
                 [System.Text.Json.Serialization.JsonPropertyName("reason")]
                 [System.Xml.Serialization.XmlElement("reason", Type = typeof(string), IsNullable = true)]
-                public string[]? RejectReasonList { get; set; }
+                public List<string>? RejectReasonList { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核详细列表。
@@ -95,7 +95,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("auditDetail")]
                 [System.Text.Json.Serialization.JsonPropertyName("auditDetail")]
                 [System.Xml.Serialization.XmlElement("auditDetail", Type = typeof(Types.AuditDetail), IsNullable = true)]
-                public Types.AuditDetail[]? AuditDetailList { get; set; }
+                public List<Types.AuditDetail>? AuditDetailList { get; set; }
             }
         }
 
@@ -105,6 +105,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("AuditResults")]
         [System.Text.Json.Serialization.JsonPropertyName("AuditResults")]
         [System.Xml.Serialization.XmlElement("AuditResults", Type = typeof(Types.AuditResult))]
-        public Types.AuditResult[] AuditResultList { get; set; } = default!;
+        public List<Types.AuditResult>? AuditResultList { get; set; }
     }
 }

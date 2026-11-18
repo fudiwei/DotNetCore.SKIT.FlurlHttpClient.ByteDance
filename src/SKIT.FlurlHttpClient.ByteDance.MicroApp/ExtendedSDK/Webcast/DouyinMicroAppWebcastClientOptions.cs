@@ -20,12 +20,12 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
         /// <summary>
         /// 获取或设置抖音小程序 AppId。
         /// </summary>
-        public string AppId { get; set; } = default!;
+        public string AppId { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置抖音小程序 AppSecret。
         /// </summary>
-        public string AppSecret { get; set; } = default!;
+        public string AppSecret { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置抖音小程序应用密钥版本号。
@@ -36,11 +36,11 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast
         /// <summary>
         /// 获取或设置抖音小程序应用私钥。
         /// </summary>
-        public string AppPrivateKey { get; set; } = default!;
+        public string AppPrivateKey { get; set; } = string.Empty;
 
         /// <summary>
         /// 获取或设置抖音小程序平台公钥。
         /// </summary>
-        public string PlatformPublicKey { get; set; } = default!;
+        public string PlatformPublicKey { get; set; } = string.Empty;
     }
 }

@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("origin_region")]
         [System.Text.Json.Serialization.JsonPropertyName("origin_region")]
-        public string OriginRegionId { get; set; } = string.Empty;
+        public string? OriginRegionId { get; set; }
 
         /// <summary>
         /// 获取或设置新关联地区编码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("current_region")]
         [System.Text.Json.Serialization.JsonPropertyName("current_region")]
-        public string CurrentRegionId { get; set; } = string.Empty;
+        public string? CurrentRegionId { get; set; }
 
         /// <summary>
         /// 获取或设置页面路径。

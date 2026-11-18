@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualityRating")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualityRating")]
-                public string QualityRating { get; set; } = default!;
+                public string? QualityRating { get; set; }
             }
         }
 

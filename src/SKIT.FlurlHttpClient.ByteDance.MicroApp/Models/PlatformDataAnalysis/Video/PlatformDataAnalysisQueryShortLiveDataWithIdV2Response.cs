@@ -510,14 +510,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("data_list")]
-                public Types.ShortLiveData[]? ShortLiveDataList { get; set; }
+                public List<Types.ShortLiveData>? ShortLiveDataList { get; set; }
 
                 /// <summary>
                 /// 获取或设置短视频或直播间每日数据字典。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("detail_data")]
                 [System.Text.Json.Serialization.JsonPropertyName("detail_data")]
-                public IDictionary<long, Types.ShortLiveData>? ShortLiveDailyDataMap { get; set; }
+                public Dictionary<long, Types.ShortLiveData>? ShortLiveDailyDataMap { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -533,6 +533,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

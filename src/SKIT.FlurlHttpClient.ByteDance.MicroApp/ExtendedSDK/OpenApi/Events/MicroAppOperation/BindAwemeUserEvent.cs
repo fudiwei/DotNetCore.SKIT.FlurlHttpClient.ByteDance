@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("type")]
                 [System.Text.Json.Serialization.JsonPropertyName("type")]
                 [System.Xml.Serialization.XmlElement("type")]
-                public string BindType { get; set; } = default!;
+                public string? BindType { get; set; }
 
                 /// <summary>
                 /// 获取或设置抖音号。
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("aweme_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("aweme_id")]
                 [System.Xml.Serialization.XmlElement("aweme_id")]
-                public string AwemeId { get; set; } = default!;
+                public string? AwemeId { get; set; }
 
                 /// <summary>
                 /// 获取或设置抖音号昵称。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("user_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_name")]
                 [System.Xml.Serialization.XmlElement("user_name")]
-                public string UserName { get; set; } = default!;
+                public string? UserName { get; set; }
 
                 /// <summary>
                 /// 获取或设置绑定状态。
@@ -53,6 +53,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("EventContent")]
         [System.Text.Json.Serialization.JsonPropertyName("EventContent")]
         [System.Xml.Serialization.XmlElement("EventContent")]
-        public Types.EventContent EventContent { get; set; } = default!;
+        public Types.EventContent? EventContent { get; set; }
     }
 }

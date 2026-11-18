@@ -19,6 +19,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("categoryInfo")]
         [System.Text.Json.Serialization.JsonPropertyName("categoryInfo")]
-        public IList<Types.CategoryInfo> CategoryInfoList { get; set; } = new List<Types.CategoryInfo>();
+        public List<Types.CategoryInfo>? CategoryInfoList { get; set; }
     }
 }

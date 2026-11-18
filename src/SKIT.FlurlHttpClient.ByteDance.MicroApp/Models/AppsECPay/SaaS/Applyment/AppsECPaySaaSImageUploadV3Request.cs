@@ -10,13 +10,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_type")]
         [System.Text.Json.Serialization.JsonPropertyName("image_type")]
-        public string ImageType { get; set; } = string.Empty;
+        public string? ImageType { get; set; }
 
         /// <summary>
         /// 获取或设置图片文件字节数组。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_content")]
         [System.Text.Json.Serialization.JsonPropertyName("image_content")]
-        public byte[] ImageFileBytes { get; set; } = Array.Empty<byte>();
+        public byte[]? ImageFileBytes { get; set; }
     }
 }

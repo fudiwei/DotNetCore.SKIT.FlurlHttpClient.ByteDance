@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("time")]
                         [System.Text.Json.Serialization.JsonPropertyName("time")]
-                        public string TimeString { get; set; } = default!;
+                        public string? TimeString { get; set; }
                     }
                 }
 
@@ -44,14 +44,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("sum")]
                 [System.Text.Json.Serialization.JsonPropertyName("sum")]
-                public Types.SummaryData SummaryData { get; set; } = default!;
+                public Types.SummaryData? SummaryData { get; set; }
 
                 /// <summary>
                 /// 获取或设置行为分析数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("behaviors")]
                 [System.Text.Json.Serialization.JsonPropertyName("behaviors")]
-                public Types.BehaviorData[] BehaviorDataList { get; set; } = default!;
+                public List<Types.BehaviorData>? BehaviorDataList { get; set; }
             }
         }
 
@@ -60,6 +60,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

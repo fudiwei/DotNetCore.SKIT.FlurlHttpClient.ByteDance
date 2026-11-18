@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("keyword_list")]
         [System.Text.Json.Serialization.JsonPropertyName("keyword_list")]
-        public IList<string> KeywordList { get; set; } = new List<string>();
+        public List<string>? KeywordList { get; set; }
     }
 }

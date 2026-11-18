@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("search_tag")]
                 [System.Text.Json.Serialization.JsonPropertyName("search_tag")]
                 [System.Xml.Serialization.XmlElement("search_tag")]
-                public string SearchTag { get; set; } = default!;
+                public string? SearchTag { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核结果。
@@ -45,6 +45,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("EventContent")]
         [System.Text.Json.Serialization.JsonPropertyName("EventContent")]
         [System.Xml.Serialization.XmlElement("EventContent")]
-        public Types.EventContent EventContent { get; set; } = default!;
+        public Types.EventContent? EventContent { get; set; }
     }
 }

@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_version")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_version")]
-                public string UserVersion { get; set; } = default!;
+                public string? UserVersion { get; set; }
 
                 /// <summary>
                 /// 获取或设置描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("user_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("user_desc")]
-                public string UserDescription { get; set; } = default!;
+                public string? UserDescription { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。
@@ -45,6 +45,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("template_list")]
         [System.Text.Json.Serialization.JsonPropertyName("template_list")]
-        public Types.Template[] TemplateList { get; set; } = default!;
+        public List<Types.Template>? TemplateList { get; set; }
     }
 }

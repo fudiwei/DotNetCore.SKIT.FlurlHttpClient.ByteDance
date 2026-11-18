@@ -66,21 +66,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("Scenes")]
                         [System.Text.Json.Serialization.JsonPropertyName("Scenes")]
-                        public string Scene { get; set; } = default!;
+                        public string? Scene { get; set; }
 
                         /// <summary>
                         /// 获取或设置场景名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ScenesName")]
                         [System.Text.Json.Serialization.JsonPropertyName("ScenesName")]
-                        public string SceneName { get; set; } = default!;
+                        public string? SceneName { get; set; }
 
                         /// <summary>
                         /// 获取或设置统计数据。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("Data")]
                         [System.Text.Json.Serialization.JsonPropertyName("Data")]
-                        public Types.Statistics Statistics { get; set; } = default!;
+                        public Types.Statistics? Statistics { get; set; }
                     }
                 }
 
@@ -89,7 +89,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ScenesDataList")]
                 [System.Text.Json.Serialization.JsonPropertyName("ScenesDataList")]
-                public Types.ComponentData[] ComponentDataList { get; set; } = default!;
+                public List<Types.ComponentData>? ComponentDataList { get; set; }
             }
         }
 
@@ -98,6 +98,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

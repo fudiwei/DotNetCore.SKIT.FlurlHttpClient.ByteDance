@@ -11,6 +11,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public long[] TaskIdList { get; set; } = default!;
+        public List<long>? TaskIdList { get; set; }
     }
 }

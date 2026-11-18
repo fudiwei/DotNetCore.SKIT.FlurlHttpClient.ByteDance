@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string ComponentTicket { get; set; } = string.Empty;
+        public string? ComponentTicket { get; set; }
     }
 }

@@ -17,13 +17,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("kv_list")]
         [System.Text.Json.Serialization.JsonPropertyName("kv_list")]
-        public IList<Types.KeyValue> KeyValueList { get; set; } = new List<Types.KeyValue>();
+        public List<Types.KeyValue>? KeyValueList { get; set; }
 
         /// <summary>
         /// 获取或设置用户的 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
     }
 }

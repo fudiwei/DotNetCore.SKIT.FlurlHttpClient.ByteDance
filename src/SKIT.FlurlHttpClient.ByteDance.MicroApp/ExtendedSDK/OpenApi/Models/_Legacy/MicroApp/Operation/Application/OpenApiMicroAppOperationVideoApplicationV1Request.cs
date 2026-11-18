@@ -10,20 +10,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("intro")]
         [System.Text.Json.Serialization.JsonPropertyName("intro")]
-        public string Introduction { get; set; } = string.Empty;
+        public string? Introduction { get; set; }
 
         /// <summary>
         /// 获取或设置挂载锚点文案示例。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("anchorText")]
         [System.Text.Json.Serialization.JsonPropertyName("anchorText")]
-        public string AnchorText { get; set; } = string.Empty;
+        public string? AnchorText { get; set; }
 
         /// <summary>
         /// 获取或设置小程序落地页截图路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("imagePath")]
         [System.Text.Json.Serialization.JsonPropertyName("imagePath")]
-        public string ImagePath { get; set; } = string.Empty;
+        public string? ImagePath { get; set; }
     }
 }

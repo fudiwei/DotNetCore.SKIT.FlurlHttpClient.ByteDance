@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_id")]
         [System.Text.Json.Serialization.JsonPropertyName("image_id")]
-        public string ImageId { get; set; } = default!;
+        public string? ImageId { get; set; }
     }
 }

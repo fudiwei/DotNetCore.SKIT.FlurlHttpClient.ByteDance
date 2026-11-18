@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("settle_no")]
         [System.Text.Json.Serialization.JsonPropertyName("settle_no")]
-        public string SettleNumber { get; set; } = default!;
+        public string? SettleNumber { get; set; }
     }
 }

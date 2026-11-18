@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("douyin_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("douyin_id")]
-                        public string DouyinId { get; set; } = default!;
+                        public string? DouyinId { get; set; }
 
                         /// <summary>
                         /// 获取或设置更新结果。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("update_result")]
                         [System.Text.Json.Serialization.JsonPropertyName("update_result")]
-                        public string UpdateResult { get; set; } = default!;
+                        public string? UpdateResult { get; set; }
                     }
                 }
 
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("update_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("update_info_list")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
 
@@ -43,6 +43,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

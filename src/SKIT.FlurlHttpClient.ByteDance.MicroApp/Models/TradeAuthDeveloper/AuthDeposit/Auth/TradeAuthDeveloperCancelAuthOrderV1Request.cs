@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("auth_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
-        public string AuthOrderId { get; set; } = string.Empty;
+        public string? AuthOrderId { get; set; }
     }
 }

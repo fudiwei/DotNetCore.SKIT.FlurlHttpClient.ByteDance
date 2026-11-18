@@ -25,31 +25,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category")]
                         [System.Text.Json.Serialization.JsonPropertyName("category")]
-                        public string Category { get; set; } = default!;
+                        public string? Category { get; set; }
 
                         /// <summary>
                         /// 获取或设置权限描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("description")]
                         [System.Text.Json.Serialization.JsonPropertyName("description")]
-                        public string Description { get; set; } = default!;
-                    }
-
-                    public class ShareData
-                    {
-                        /// <summary>
-                        /// 获取或设置服务商的分账比例上限（范围：0～30）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("share_ratio")]
-                        [System.Text.Json.Serialization.JsonPropertyName("share_ratio")]
-                        public int? ShareRatio { get; set; }
-
-                        /// <summary>
-                        /// 获取或设置服务商的分账金额上限（范围：0～50）。
-                        /// </summary>
-                        [Newtonsoft.Json.JsonProperty("share_amount")]
-                        [System.Text.Json.Serialization.JsonPropertyName("share_amount")]
-                        public int? ShareAmount { get; set; }
+                        public string? Description { get; set; }
                     }
                 }
 
@@ -58,7 +41,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("authorizer_access_token")]
                 [System.Text.Json.Serialization.JsonPropertyName("authorizer_access_token")]
-                public string AuthorizerAccessToken { get; set; } = default!;
+                public string? AuthorizerAccessToken { get; set; }
 
                 /// <summary>
                 /// 获取或设置授权方 RefreshToken。
@@ -93,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("authorize_permission")]
                 [System.Text.Json.Serialization.JsonPropertyName("authorize_permission")]
-                public Types.Permission[]? PermissionList { get; set; }
+                public List<Types.Permission>? PermissionList { get; set; }
             }
         }
 
@@ -102,6 +85,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

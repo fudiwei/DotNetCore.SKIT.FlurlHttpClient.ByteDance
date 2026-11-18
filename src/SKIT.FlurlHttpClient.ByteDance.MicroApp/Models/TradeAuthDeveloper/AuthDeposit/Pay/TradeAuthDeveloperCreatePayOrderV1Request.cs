@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("title")]
                 [System.Text.Json.Serialization.JsonPropertyName("title")]
-                public string Title { get; set; } = string.Empty;
+                public string? Title { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款项目描述。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("description")]
                 [System.Text.Json.Serialization.JsonPropertyName("description")]
-                public string Description { get; set; } = string.Empty;
+                public string? Description { get; set; }
 
                 /// <summary>
                 /// 获取或设置扣款项目金额（单位：分）。
@@ -44,21 +44,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("auth_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
-        public string AuthOrderId { get; set; } = string.Empty;
+        public string? AuthOrderId { get; set; }
 
         /// <summary>
         /// 获取或设置开发者扣款单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_pay_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_pay_order_no")]
-        public string OutPayOrderNumber { get; set; } = string.Empty;
+        public string? OutPayOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置费用明细列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("fee_detail_list")]
         [System.Text.Json.Serialization.JsonPropertyName("fee_detail_list")]
-        public IList<Types.FeeDetail> FeeDetailList { get; set; } = new List<Types.FeeDetail>();
+        public List<Types.FeeDetail>? FeeDetailList { get; set; }
 
         /// <summary>
         /// 获取或设置扣款金额（单位：分）。

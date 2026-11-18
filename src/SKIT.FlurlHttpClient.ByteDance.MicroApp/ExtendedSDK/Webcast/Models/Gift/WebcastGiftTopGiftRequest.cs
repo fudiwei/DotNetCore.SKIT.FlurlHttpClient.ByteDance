@@ -18,13 +18,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("room_id")]
         [System.Text.Json.Serialization.JsonPropertyName("room_id")]
-        public string RoomId { get; set; } = string.Empty;
+        public string? RoomId { get; set; }
 
         /// <summary>
         /// 获取或设置置顶礼物的礼物 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("sec_gift_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("sec_gift_id_list")]
-        public IList<string> GiftIdList { get; set; } = new List<string>();
+        public List<string>? GiftIdList { get; set; }
     }
 }

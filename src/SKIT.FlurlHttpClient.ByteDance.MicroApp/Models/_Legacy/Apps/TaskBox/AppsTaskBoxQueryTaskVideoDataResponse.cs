@@ -23,28 +23,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_name")]
-                public string TaskName { get; set; } = default!;
+                public string? TaskName { get; set; }
 
                 /// <summary>
                 /// 获取或设置作者抖音号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("douyin_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("douyin_id")]
-                public string DouyinId { get; set; } = default!;
+                public string? DouyinId { get; set; }
 
                 /// <summary>
                 /// 获取或设置作者名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("author")]
                 [System.Text.Json.Serialization.JsonPropertyName("author")]
-                public string Author { get; set; } = default!;
+                public string? Author { get; set; }
 
                 /// <summary>
                 /// 获取或设置小程序标题。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("micro_app_title")]
                 [System.Text.Json.Serialization.JsonPropertyName("micro_app_title")]
-                public string MicroAppTitle { get; set; } = default!;
+                public string? MicroAppTitle { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频 ID。
@@ -59,14 +59,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("video_title")]
                 [System.Text.Json.Serialization.JsonPropertyName("video_title")]
-                public string VideoTitle { get; set; } = default!;
+                public string? VideoTitle { get; set; }
 
                 /// <summary>
                 /// 获取或设置视频 URL。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("VideoLink")]
                 [System.Text.Json.Serialization.JsonPropertyName("VideoLink")]
-                public string VideoUrl { get; set; } = default!;
+                public string? VideoUrl { get; set; }
 
                 /// <summary>
                 /// 获取或设置发布时间戳。
@@ -124,6 +124,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Video[] VideoList { get; set; } = default!;
+        public List<Types.Video>? VideoList { get; set; }
     }
 }

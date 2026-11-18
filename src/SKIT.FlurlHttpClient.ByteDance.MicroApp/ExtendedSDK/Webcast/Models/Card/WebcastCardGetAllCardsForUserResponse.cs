@@ -11,14 +11,61 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
             {
                 public static class Types
                 {
-                    public class CardValue : WebcastCardDefaultGetResponse.Types.CardValue
+                    public class CardValue : WebcastCardDefaultSetRequest.Types.__zz__CardValue
                     {
+                        public static class Types
+                        {
+                            public class TitleInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.TitleInfo
+                            {
+                            }
+
+                            public class StatusTagInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.StatusTagInfo
+                            {
+                            }
+
+                            public class PropertyTagInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.PropertyTagInfo
+                            {
+                            }
+
+                            public class ButtonInfo : WebcastCardDefaultSetRequest.Types.CardValue.Types.ButtonInfo
+                            {
+                            }
+                        }
+
+                        /// <summary>
+                        /// 获取或设置状态标签信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("status_tag")]
+                        [System.Text.Json.Serialization.JsonPropertyName("status_tag")]
+                        public Types.StatusTagInfo? StatusTagInfo { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置属性标签信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("property_tag")]
+                        [System.Text.Json.Serialization.JsonPropertyName("property_tag")]
+                        public Types.PropertyTagInfo? PropertyTagInfo { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置标题信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("title")]
+                        [System.Text.Json.Serialization.JsonPropertyName("title")]
+                        public Types.TitleInfo? TitleInfo { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置按钮信息。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("btn")]
+                        [System.Text.Json.Serialization.JsonPropertyName("btn")]
+                        public Types.ButtonInfo? ButtonInfo { get; set; }
+
                         /// <summary>
                         /// 获取或设置小程序页面路径。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("url")]
                         [System.Text.Json.Serialization.JsonPropertyName("url")]
-                        public string PagePath { get; set; } = default!;
+                        public string? PagePath { get; set; }
                     }
                 }
 
@@ -27,7 +74,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("url")]
                 [System.Text.Json.Serialization.JsonPropertyName("url")]
-                public string PagePath { get; set; } = default!;
+                public string? PagePath { get; set; }
 
                 /// <summary>
                 /// 获取或设置讲解卡类型。
@@ -41,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("value")]
                 [System.Text.Json.Serialization.JsonPropertyName("value")]
-                public Types.CardValue CardValue { get; set; } = default!;
+                public Types.CardValue? CardValue { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核状态。
@@ -71,6 +118,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("card_list")]
         [System.Text.Json.Serialization.JsonPropertyName("card_list")]
-        public Types.Card[] CardList { get; set; } = default!;
+        public List<Types.Card>? CardList { get; set; }
     }
 }

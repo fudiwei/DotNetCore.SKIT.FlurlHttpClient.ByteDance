@@ -11,7 +11,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("hostNames")]
         [System.Text.Json.Serialization.JsonPropertyName("hostNames")]
-        public IList<string> HostNames { get; set; } = new List<string>();
+        public List<string>? HostNames { get; set; }
 
         /// <summary>
         /// 获取或设置本次提审的备注信息。

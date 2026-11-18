@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name")]
                         [System.Text.Json.Serialization.JsonPropertyName("name")]
-                        public string Name { get; set; } = string.Empty;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置上传材料 MaterielId。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("val_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("val_list")]
-                        public IList<string>? ValueList { get; set; }
+                        public List<string>? ValueList { get; set; }
 
                         /// <summary>
                         /// 获取或设置拒绝原因。
@@ -70,7 +70,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_content")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_content")]
-                public IList<Types.TemplateContent> TemplateContentList { get; set; } = new List<Types.TemplateContent>();
+                public List<Types.TemplateContent>? TemplateContentList { get; set; }
             }
 
             public class CooperationInfo
@@ -80,7 +80,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("cooperation_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("cooperation_type")]
-                public string CooperationType { get; set; } = string.Empty;
+                public string? CooperationType { get; set; }
 
                 /// <summary>
                 /// 获取或设置关系过期时间戳。
@@ -129,7 +129,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("contract_image_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("contract_image_list")]
-                public IList<string>? ContractImageMaterielIdList { get; set; }
+                public List<string>? ContractImageMaterielIdList { get; set; }
             }
 
             public class EmployeeInfo
@@ -146,14 +146,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("real_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("real_name")]
-                public string RealName { get; set; } = string.Empty;
+                public string? RealName { get; set; }
 
                 /// <summary>
                 /// 获取或设置身份证号。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("identity_number")]
                 [System.Text.Json.Serialization.JsonPropertyName("identity_number")]
-                public string IdCardNumber { get; set; } = string.Empty;
+                public string? IdCardNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置劳动合同照片 MaterielId。
@@ -167,7 +167,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("contract_image_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("contract_image_list")]
-                public IList<string>? ContractImageMaterielIdList { get; set; }
+                public List<string>? ContractImageMaterielIdList { get; set; }
 
                 /// <summary>
                 /// 获取或设置资质类型。
@@ -181,7 +181,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("qualification_image_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("qualification_image_list")]
-                public IList<string>? QualificationImageMaterielIdList { get; set; }
+                public List<string>? QualificationImageMaterielIdList { get; set; }
             }
         }
 
@@ -190,21 +190,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("aweme_id")]
         [System.Text.Json.Serialization.JsonPropertyName("aweme_id")]
-        public string AwemeId { get; set; } = string.Empty;
+        public string? AwemeId { get; set; }
 
         /// <summary>
         /// 获取或设置绑定类型。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("type")]
         [System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string Type { get; set; } = string.Empty;
+        public string? Type { get; set; }
 
         /// <summary>
         /// 获取或设置绑定能力标识列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("capacity_list")]
         [System.Text.Json.Serialization.JsonPropertyName("capacity_list")]
-        public IList<string> CapacityKeyList { get; set; } = new List<string>();
+        public List<string>? CapacityKeyList { get; set; }
 
         /// <summary>
         /// 获取或设置是否相同主体。
@@ -218,7 +218,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("audit_template_info")]
         [System.Text.Json.Serialization.JsonPropertyName("audit_template_info")]
-        public IDictionary<string, Types.TemplateInfo> AuditTemplateInfoMap { get; set; } = new Dictionary<string, Types.TemplateInfo>();
+        public Dictionary<string, Types.TemplateInfo>? AuditTemplateInfoMap { get; set; }
 
         /// <summary>
         /// 获取或设置合作号信息。

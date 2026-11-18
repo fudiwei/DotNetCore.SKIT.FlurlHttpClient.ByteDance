@@ -78,11 +78,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
 
             try
             {
-                List<string> tmp = new List<string>(capacity: 4) { client.Credentials.PushToken!, webhookTimestamp, webhookNonce, webhookMsg };
-                tmp.Sort(StringComparer.Ordinal);
-                string sign = Utilities.SHA1Utility.Hash(string.Concat(tmp)).Value!;
-                bool valid = string.Equals(sign, webhookSignature, StringComparison.OrdinalIgnoreCase);
+                List<string> lstParams = new List<string>(capacity: 4) { client.Credentials.PushToken!, webhookTimestamp, webhookNonce, webhookMsg };
+                lstParams.Sort(StringComparer.Ordinal);
 
+                string msg = string.Concat(lstParams);
+                string sign = Utilities.SHA1Utility.Hash(msg).Value!;
+
+                bool valid = string.Equals(sign, webhookSignature, StringComparison.OrdinalIgnoreCase);
                 if (valid)
                     result = ErroredResult.Ok();
                 else
@@ -117,10 +119,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(webhookJson);
                 bool valid = Utilities.DyMsgCryptor.VerifySignature(
                     sToken: client.Credentials.PushToken!,
-                    sTimestamp: encryptedEvent.TimestampString,
-                    sNonce: encryptedEvent.Nonce,
-                    sMsgEncrypt: encryptedEvent.EncryptedData,
-                    sMsgSign: encryptedEvent.Signature
+                    sTimestamp: encryptedEvent.TimestampString!,
+                    sNonce: encryptedEvent.Nonce!,
+                    sMsgEncrypt: encryptedEvent.EncryptedData!,
+                    sMsgSign: encryptedEvent.Signature!
                 );
 
                 if (valid)
@@ -184,23 +186,23 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             [Newtonsoft.Json.JsonProperty("Encrypt")]
             [System.Text.Json.Serialization.JsonPropertyName("Encrypt")]
             [System.Xml.Serialization.XmlElement("Encrypt")]
-            public string EncryptedData { get; set; } = default!;
+            public string? EncryptedData { get; set; }
 
             [Newtonsoft.Json.JsonProperty("TimeStamp")]
             [System.Text.Json.Serialization.JsonPropertyName("TimeStamp")]
             [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringConverter))]
             [System.Xml.Serialization.XmlElement("TimeStamp")]
-            public string TimestampString { get; set; } = default!;
+            public string? TimestampString { get; set; }
 
             [Newtonsoft.Json.JsonProperty("Nonce")]
             [System.Text.Json.Serialization.JsonPropertyName("Nonce")]
             [System.Xml.Serialization.XmlElement("Nonce")]
-            public string Nonce { get; set; } = default!;
+            public string? Nonce { get; set; }
 
             [Newtonsoft.Json.JsonProperty("MsgSignature")]
             [System.Text.Json.Serialization.JsonPropertyName("MsgSignature")]
             [System.Xml.Serialization.XmlElement("MsgSignature")]
-            public string Signature { get; set; } = default!;
+            public string? Signature { get; set; }
         }
 
         private static TEvent InnerDeserializeEventFromJson<TEvent>(DouyinMicroAppClient client, string webhookJson)
@@ -214,7 +216,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 if (webhookJson.Contains("\"Encrypt\""))
                 {
                     InnerEncryptedEvent encryptedEvent = client.JsonSerializer.Deserialize<InnerEncryptedEvent>(webhookJson);
-                    webhookJson = Utilities.DyMsgCryptor.AESDecrypt(cipherText: encryptedEvent.EncryptedData, encodingAESKey: client.Credentials.PushEncodingAESKey!, out _);
+                    webhookJson = Utilities.DyMsgCryptor.AESDecrypt(cipherText: encryptedEvent.EncryptedData!, encodingAESKey: client.Credentials.PushEncodingAESKey!, out _);
                 }
 
                 return client.JsonSerializer.Deserialize<TEvent>(webhookJson);

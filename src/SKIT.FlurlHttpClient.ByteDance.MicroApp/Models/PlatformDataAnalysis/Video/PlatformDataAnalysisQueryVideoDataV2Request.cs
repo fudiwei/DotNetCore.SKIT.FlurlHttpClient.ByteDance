@@ -38,20 +38,20 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("aweme_short_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("aweme_short_id_list")]
-        public IList<string>? AwemeShortIdList { get; set; }
+        public List<string>? AwemeShortIdList { get; set; }
 
         /// <summary>
         /// 获取或设置视频 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("item_id_list")]
-        public IList<string>? ItemIdList { get; set; }
+        public List<string>? ItemIdList { get; set; }
 
         /// <summary>
         /// 获取或设置加密的视频 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_item_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("open_item_id_list")]
-        public IList<string>? OpenItemIdList { get; set; }
+        public List<string>? OpenItemIdList { get; set; }
     }
 }

@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("secret")]
                         [System.Text.Json.Serialization.JsonPropertyName("secret")]
-                        public string Secret { get; set; } = default!;
+                        public string? Secret { get; set; }
 
                         /// <summary>
                         /// 获取或设置回调地址。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("callback_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("callback_url")]
-                        public string CallbackUrl { get; set; } = default!;
+                        public string? CallbackUrl { get; set; }
                     }
 
                     public class EventInfo
@@ -35,21 +35,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("event")]
                         [System.Text.Json.Serialization.JsonPropertyName("event")]
-                        public string Event { get; set; } = default!;
+                        public string? Event { get; set; }
 
                         /// <summary>
                         /// 获取或设置中文名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("name_cn")]
                         [System.Text.Json.Serialization.JsonPropertyName("name_cn")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置事件描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("desc")]
                         [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置订阅状态。
@@ -65,14 +65,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("webhook_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("webhook_info")]
-                public Types.WebhookInfo WebhookInfo { get; set; } = default!;
+                public Types.WebhookInfo? WebhookInfo { get; set; }
 
                 /// <summary>
                 /// 获取或设置回调事件列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("event_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("event_list")]
-                public Types.EventInfo[] EventList { get; set; } = default!;
+                public List<Types.EventInfo>? EventList { get; set; }
             }
         }
 
@@ -81,6 +81,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

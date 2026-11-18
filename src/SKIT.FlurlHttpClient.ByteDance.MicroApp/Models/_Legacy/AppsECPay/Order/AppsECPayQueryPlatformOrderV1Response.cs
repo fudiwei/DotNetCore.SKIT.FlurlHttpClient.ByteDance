@@ -29,7 +29,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("merchant_uid")]
                                 [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-                                public string MerchantUid { get; set; } = default!;
+                                public string? MerchantUid { get; set; }
                             }
                         }
 
@@ -38,35 +38,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("out_settle_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("out_settle_no")]
-                        public string OutSettleNumber { get; set; } = default!;
+                        public string? OutSettleNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序分账单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_no")]
-                        public string SettleNumber { get; set; } = default!;
+                        public string? SettleNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置分账参数列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_param_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_param_list")]
-                        public Types.SettleParameter[]? SettleParameterList { get; set; }
+                        public List<Types.SettleParameter>? SettleParameterList { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算渠道。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_way")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_way")]
-                        public string SettleWay { get; set; } = default!;
+                        public string? SettleWay { get; set; }
 
                         /// <summary>
                         /// 获取或设置分账状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settle_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("settle_status")]
-                        public string SettleStatus { get; set; } = default!;
+                        public string? SettleStatus { get; set; }
 
                         /// <summary>
                         /// 获取或设置 CPS 佣金（单位：分）。
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("created_at")]
                         [System.Text.Json.Serialization.JsonPropertyName("created_at")]
-                        public string CreateTimeString { get; set; } = default!;
+                        public string? CreateTimeString { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算完成时间字符串（格式：yyyy-MM-dd HH:mm:ss）。
@@ -103,7 +103,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                public string AppId { get; set; } = default!;
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置商户订单号。
@@ -117,14 +117,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("query_type")]
                 [System.Text.Json.Serialization.JsonPropertyName("query_type")]
-                public string QueryType { get; set; } = default!;
+                public string? QueryType { get; set; }
 
                 /// <summary>
                 /// 获取或设置自动结算明细列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_info_list")]
-                public Types.SettleInfo[]? SettleInfoList { get; set; }
+                public List<Types.SettleInfo>? SettleInfoList { get; set; }
             }
         }
 
@@ -133,6 +133,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("platform_order")]
         [System.Text.Json.Serialization.JsonPropertyName("platform_order")]
-        public Types.PlatformOrder PlatformOrder { get; set; } = default!;
+        public Types.PlatformOrder? PlatformOrder { get; set; }
     }
 }

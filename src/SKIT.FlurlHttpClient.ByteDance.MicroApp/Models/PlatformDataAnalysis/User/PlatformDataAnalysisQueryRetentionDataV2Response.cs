@@ -38,7 +38,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("time")]
                         [System.Text.Json.Serialization.JsonPropertyName("time")]
-                        public string TimeString { get; set; } = default!;
+                        public string? TimeString { get; set; }
 
                         /// <summary>
                         /// 获取或设置活跃用户数。
@@ -52,7 +52,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("retention_rate_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("retention_rate_list")]
-                        public Types.RetentionRate[] RetentionRateList { get; set; } = default!;
+                        public List<Types.RetentionRate>? RetentionRateList { get; set; }
                     }
                 }
 
@@ -61,7 +61,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("retention_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("retention_data_list")]
-                public Types.RetentionData[] RetentionDataList { get; set; } = default!;
+                public List<Types.RetentionData>? RetentionDataList { get; set; }
             }
         }
 
@@ -70,6 +70,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

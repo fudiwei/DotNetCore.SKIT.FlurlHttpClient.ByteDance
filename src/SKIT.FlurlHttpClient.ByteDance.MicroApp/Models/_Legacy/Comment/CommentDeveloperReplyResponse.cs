@@ -24,6 +24,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("reply")]
         [System.Text.Json.Serialization.JsonPropertyName("reply")]
-        public Types.Reply Reply { get; set; } = default!;
+        public Types.Reply? Reply { get; set; }
     }
 }

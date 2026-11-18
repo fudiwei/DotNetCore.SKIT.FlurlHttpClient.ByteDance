@@ -11,6 +11,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("new_intro")]
         [System.Text.Json.Serialization.JsonPropertyName("new_intro")]
-        public string NewIntroduction { get; set; } = string.Empty;
+        public string? NewIntroduction { get; set; }
     }
 }

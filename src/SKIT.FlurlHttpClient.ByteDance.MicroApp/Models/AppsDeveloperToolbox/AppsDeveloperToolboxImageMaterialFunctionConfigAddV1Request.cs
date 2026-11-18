@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("scene_function_config")]
         [System.Text.Json.Serialization.JsonPropertyName("scene_function_config")]
-        public IDictionary<string, IList<string>> SceneFunctionConfigMap { get; set; } = new Dictionary<string, IList<string>>();
+        public Dictionary<string, string[]>? SceneFunctionConfigMap { get; set; }
     }
 }

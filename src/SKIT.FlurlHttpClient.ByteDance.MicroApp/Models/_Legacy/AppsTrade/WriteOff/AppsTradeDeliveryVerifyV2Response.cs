@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                        public string ItemOrderId { get; set; } = default!;
+                        public string? ItemOrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置用户券码。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("certificate_code")]
                         [System.Text.Json.Serialization.JsonPropertyName("certificate_code")]
-                        public string CertificateCode { get; set; } = default!;
+                        public string? CertificateCode { get; set; }
 
                         /// <summary>
                         /// 获取或设置验券结果码。
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("verify_results")]
                 [System.Text.Json.Serialization.JsonPropertyName("verify_results")]
-                public Types.Result[] ResultList { get; set; } = default!;
+                public List<Types.Result>? ResultList { get; set; }
             }
         }
 
@@ -64,6 +64,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_info")]
         [System.Text.Json.Serialization.JsonPropertyName("return_info")]
-        public Types.Return Return { get; set; } = default!;
+        public Types.Return? Return { get; set; }
     }
 }

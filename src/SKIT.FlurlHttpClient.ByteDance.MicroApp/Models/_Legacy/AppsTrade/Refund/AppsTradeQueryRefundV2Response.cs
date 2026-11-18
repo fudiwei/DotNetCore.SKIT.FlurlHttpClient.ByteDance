@@ -29,28 +29,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("order_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-                        public string OrderId { get; set; } = default!;
+                        public string? OrderId { get; set; }
 
                         /// <summary>
                         /// 获取或设置开发者退款单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("out_refund_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("out_refund_no")]
-                        public string OutRefundNumber { get; set; } = default!;
+                        public string? OutRefundNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置退款单号。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_id")]
-                        public string RefundId { get; set; } = default!;
+                        public string? RefundId { get; set; }
 
                         /// <summary>
                         /// 获取或设置退款单状态。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("refund_status")]
                         [System.Text.Json.Serialization.JsonPropertyName("refund_status")]
-                        public string Status { get; set; } = default!;
+                        public string? Status { get; set; }
 
                         /// <summary>
                         /// 获取或设置退款总金额（单位：分）。
@@ -64,7 +64,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("item_order_detail")]
                         [System.Text.Json.Serialization.JsonPropertyName("item_order_detail")]
-                        public Types.ItemOrder[]? ItemOrderList { get; set; }
+                        public List<Types.ItemOrder>? ItemOrderList { get; set; }
 
                         /// <summary>
                         /// 获取或设置退款来源。
@@ -108,7 +108,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_list")]
-                public Types.Refund[] RefundList { get; set; } = default!;
+                public List<Types.Refund>? RefundList { get; set; }
             }
         }
 
@@ -117,6 +117,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("mobile")]
         [System.Text.Json.Serialization.JsonPropertyName("mobile")]
-        public string MobileNumber { get; set; } = string.Empty;
+        public string? MobileNumber { get; set; }
 
         /// <summary>
         /// 获取或设置主体类型。
@@ -24,28 +24,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("company_name")]
         [System.Text.Json.Serialization.JsonPropertyName("company_name")]
-        public string CompanyName { get; set; } = string.Empty;
+        public string? CompanyName { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照编号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("credit_code")]
         [System.Text.Json.Serialization.JsonPropertyName("credit_code")]
-        public string BusinessLicenseNumber { get; set; } = string.Empty;
+        public string? BusinessLicenseNumber { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照有效期（格式：yyyy-MM-dd / "0"）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("credit_end_date")]
         [System.Text.Json.Serialization.JsonPropertyName("credit_end_date")]
-        public string BusinessLicenseEndDateString { get; set; } = string.Empty;
+        public string? BusinessLicenseEndDateString { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照照片文件路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("credit_image_path")]
         [System.Text.Json.Serialization.JsonPropertyName("credit_image_path")]
-        public string BusinessLicenseImageFilePath { get; set; } = string.Empty;
+        public string? BusinessLicenseImageFilePath { get; set; }
 
         /// <summary>
         /// 获取或设置企业类型。
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("legal_person_name")]
         [System.Text.Json.Serialization.JsonPropertyName("legal_person_name")]
-        public string LegalPersonName { get; set; } = string.Empty;
+        public string? LegalPersonName { get; set; }
 
         /// <summary>
         /// 获取或设置注册地址国家编号。
@@ -87,7 +87,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("registered_address")]
         [System.Text.Json.Serialization.JsonPropertyName("registered_address")]
-        public string RegisteredAddress { get; set; } = string.Empty;
+        public string? RegisteredAddress { get; set; }
 
         /// <summary>
         /// 获取或设置注册资本（单位：元）。
@@ -103,28 +103,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberListWithCommaSplitConverter))]
         [System.Text.Json.Serialization.JsonPropertyName("category_code")]
         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberListWithCommaSplitConverter))]
-        public IList<int> CategoryCodeList { get; set; } = new List<int>();
+        public List<int>? CategoryCodeList { get; set; }
 
         /// <summary>
         /// 获取或设置运营人员姓名。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("business_person_name")]
         [System.Text.Json.Serialization.JsonPropertyName("business_person_name")]
-        public string BusinessPersonName { get; set; } = string.Empty;
+        public string? BusinessPersonName { get; set; }
 
         /// <summary>
         /// 获取或设置运营人员身份证号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("business_id_card")]
         [System.Text.Json.Serialization.JsonPropertyName("business_id_card")]
-        public string BusinessIdCardNumber { get; set; } = string.Empty;
+        public string? BusinessIdCardNumber { get; set; }
 
         /// <summary>
         /// 获取或设置运营人员手机号码。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("business_mobile")]
         [System.Text.Json.Serialization.JsonPropertyName("business_mobile")]
-        public string BusinessMobileNumber { get; set; } = string.Empty;
+        public string? BusinessMobileNumber { get; set; }
 
         /// <summary>
         /// 获取或设置公司介绍。

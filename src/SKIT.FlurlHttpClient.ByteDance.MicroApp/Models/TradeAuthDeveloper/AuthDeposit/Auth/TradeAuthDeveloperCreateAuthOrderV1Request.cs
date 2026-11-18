@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("admissible_token")]
         [System.Text.Json.Serialization.JsonPropertyName("admissible_token")]
-        public string AdmissibleToken { get; set; } = string.Empty;
+        public string? AdmissibleToken { get; set; }
 
         /// <summary>
         /// 获取或设置开发者信用单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_auth_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_auth_order_no")]
-        public string OutAuthOrderNumber { get; set; } = string.Empty;
+        public string? OutAuthOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置回调通知 URL。

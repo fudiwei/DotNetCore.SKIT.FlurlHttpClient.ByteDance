@@ -15,14 +15,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tpl_app_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("tpl_app_id")]
-                public string TemplateAppId { get; set; } = default!;
+                public string? TemplateAppId { get; set; }
 
                 /// <summary>
                 /// 获取或设置模板小程序名称。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("app_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-                public string AppName { get; set; } = default!;
+                public string? AppName { get; set; }
 
                 /// <summary>
                 /// 获取或设置上传当前版本的用户名称。
@@ -66,6 +66,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("tpl_app_list")]
         [System.Text.Json.Serialization.JsonPropertyName("tpl_app_list")]
-        public Types.TemplateApp[] TemplateAppList { get; set; } = default!;
+        public List<Types.TemplateApp>? TemplateAppList { get; set; }
     }
 }

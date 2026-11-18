@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_name")]
         [System.Text.Json.Serialization.JsonPropertyName("task_name")]
-        public string TaskName { get; set; } = string.Empty;
+        public string? TaskName { get; set; }
 
         /// <summary>
         /// 获取或设置结算方式。
@@ -57,7 +57,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_icon")]
         [System.Text.Json.Serialization.JsonPropertyName("task_icon")]
-        public string TaskIconUrl { get; set; } = string.Empty;
+        public string? TaskIconUrl { get; set; }
 
         /// <summary>
         /// 获取或设置任务开始时间戳。
@@ -78,35 +78,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("task_desc")]
-        public string TaskDescription { get; set; } = string.Empty;
+        public string? TaskDescription { get; set; }
 
         /// <summary>
         /// 获取或设置示例视频 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_videos")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_videos")]
-        public IList<string>? ReferVideoUrlList { get; set; }
+        public List<string>? ReferVideoUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置任务标签列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("task_tags")]
         [System.Text.Json.Serialization.JsonPropertyName("task_tags")]
-        public IList<string> TaskTagList { get; set; } = new List<string>();
+        public List<string>? TaskTagList { get; set; }
 
         /// <summary>
         /// 获取或设置小程序截图 URL 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_ma_captures")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_ma_captures")]
-        public IList<string>? ReferMicroAppCaptureUrlList { get; set; }
+        public List<string>? ReferMicroAppCaptureUrlList { get; set; }
 
         /// <summary>
         /// 获取或设置视频的 GID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refer_gids")]
         [System.Text.Json.Serialization.JsonPropertyName("refer_gids")]
-        public IList<long>? ReferGIdList { get; set; }
+        public List<long>? ReferGIdList { get; set; }
 
         /// <summary>
         /// 获取或设置任务最大退款周期（单位：天）。
@@ -120,14 +120,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("douyin_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("douyin_ids")]
-        public IList<string>? DouyinIdList { get; set; }
+        public List<string>? DouyinIdList { get; set; }
 
         /// <summary>
         /// 获取或设置混合分成比例字典（单位：万分数）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("mix_payment_allocate_ratio")]
         [System.Text.Json.Serialization.JsonPropertyName("mix_payment_allocate_ratio")]
-        public IDictionary<int, int>? MixPaymentAllocateRatioMap { get; set; }
+        public Dictionary<int, int>? MixPaymentAllocateRatioMap { get; set; }
 
         /// <summary>
         /// 获取或设置分成比例（单位：万分数）。
@@ -141,7 +141,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("talent_mix_payment_allocate_ratio")]
         [System.Text.Json.Serialization.JsonPropertyName("talent_mix_payment_allocate_ratio")]
-        public IDictionary<int, int>? TalentMixPaymentAllocateRatioMap { get; set; }
+        public Dictionary<int, int>? TalentMixPaymentAllocateRatioMap { get; set; }
 
         /// <summary>
         /// 获取或设置达人分成比例（单位：万分数）。

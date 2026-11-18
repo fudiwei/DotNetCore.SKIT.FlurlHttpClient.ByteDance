@@ -10,14 +10,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("auth_order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("auth_order_id")]
-        public string AuthOrderId { get; set; } = string.Empty;
+        public string? AuthOrderId { get; set; }
 
         /// <summary>
         /// 获取或设置开发者扣款单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_pay_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_pay_order_no")]
-        public string OutPayOrderNumber { get; set; } = string.Empty;
+        public string? OutPayOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置扣款金额（单位：分）。

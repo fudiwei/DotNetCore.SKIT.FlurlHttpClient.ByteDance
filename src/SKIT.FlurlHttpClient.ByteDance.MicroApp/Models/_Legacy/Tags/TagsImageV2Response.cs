@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("target")]
                         [System.Text.Json.Serialization.JsonPropertyName("target")]
-                        public string Target { get; set; } = default!;
+                        public string? Target { get; set; }
 
                         /// <summary>
                         /// 获取或设置置信度模型或标签。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("model_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("model_name")]
-                        public string ModelName { get; set; } = default!;
+                        public string? ModelName { get; set; }
 
                         /// <summary>
                         /// 获取或设置置信度概率（范围：0～1）。
@@ -63,14 +63,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_id")]
-                public string TaskId { get; set; } = default!;
+                public string? TaskId { get; set; }
 
                 /// <summary>
                 /// 获取或设置置信度列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("predicts")]
                 [System.Text.Json.Serialization.JsonPropertyName("predicts")]
-                public Types.Predict[] PredictList { get; set; } = default!;
+                public List<Types.Predict>? PredictList { get; set; }
             }
         }
 
@@ -98,7 +98,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Result[] ResultList { get; set; } = default!;
+        public List<Types.Result>? ResultList { get; set; }
 
         public override bool IsSuccessful()
         {

@@ -10,7 +10,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("ad_placement_name")]
         [System.Text.Json.Serialization.JsonPropertyName("ad_placement_name")]
-        public string AdPlacementName { get; set; } = string.Empty;
+        public string? AdPlacementName { get; set; }
 
         /// <summary>
         /// 获取或设置广告位类型。

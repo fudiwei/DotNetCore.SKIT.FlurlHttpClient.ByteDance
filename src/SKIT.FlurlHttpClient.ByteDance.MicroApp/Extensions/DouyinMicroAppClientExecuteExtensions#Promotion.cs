@@ -82,7 +82,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken);
 
             using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "popup_image");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ActivityId)), "activity_id");
+            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ActivityId!)), "activity_id");
             httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PopupType.ToString())), "popup_type");
 
             return await client.SendFlurlRequestAsync<Models.PromotionActivityUploadPopupScreenshotV2Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);

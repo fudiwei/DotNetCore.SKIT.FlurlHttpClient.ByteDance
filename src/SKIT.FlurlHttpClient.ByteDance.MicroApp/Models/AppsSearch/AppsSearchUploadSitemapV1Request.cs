@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("page_paths")]
         [System.Text.Json.Serialization.JsonPropertyName("page_paths")]
-        public IList<string> PagePathList { get; set; } = new List<string>();
+        public List<string>? PagePathList { get; set; }
     }
 }

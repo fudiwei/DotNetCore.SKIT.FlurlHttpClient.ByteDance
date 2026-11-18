@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refund_no")]
         [System.Text.Json.Serialization.JsonPropertyName("refund_no")]
-        public string RefundNumber { get; set; } = default!;
+        public string? RefundNumber { get; set; }
     }
 }

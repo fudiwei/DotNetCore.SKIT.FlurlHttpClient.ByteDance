@@ -15,6 +15,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("AppNameResetNotification")]
         [System.Text.Json.Serialization.JsonPropertyName("AppNameResetNotification")]
         [System.Xml.Serialization.XmlElement("AppNameResetNotification")]
-        public string AppNameResetNotification { get; set; } = default!;
+        public string? AppNameResetNotification { get; set; }
     }
 }

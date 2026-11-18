@@ -42,7 +42,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("video_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                                public string VideoId { get; set; } = default!;
+                                public string? VideoId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置视频状态。
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("interact_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("interact_info")]
-                                public IDictionary<string, Types.InteractInfo> InteractInfoMap { get; set; } = default!;
+                                public Dictionary<string, Types.InteractInfo>? InteractInfoMap { get; set; }
                             }
                         }
 
@@ -72,7 +72,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("task_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("task_id")]
-                        public string TaskId { get; set; } = default!;
+                        public string? TaskId { get; set; }
 
                         /// <summary>
                         /// 获取或设置是否有效。
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_info")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_info")]
-                        public Types.Video[] VideoList { get; set; } = default!;
+                        public List<Types.Video>? VideoList { get; set; }
 
                         /// <summary>
                         /// 获取或设置错误码。
@@ -123,7 +123,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("task_info_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("task_info_list")]
-                public IDictionary<string, Types.TaskInfo> TaskInfoMap { get; set; } = default!;
+                public Dictionary<string, Types.TaskInfo>? TaskInfoMap { get; set; }
             }
         }
 
@@ -132,6 +132,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

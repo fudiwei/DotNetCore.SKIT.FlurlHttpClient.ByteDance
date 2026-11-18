@@ -26,7 +26,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("product_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("product_name")]
-                        public string ProductName { get; set; } = default!;
+                        public string? ProductName { get; set; }
 
                         /// <summary>
                         /// 获取或设置支付总金额（单位：分）。
@@ -63,7 +63,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("deal_data_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("deal_data_list")]
-                public Types.ProductDealData[] ProductDealDataList { get; set; } = default!;
+                public List<Types.ProductDealData>? ProductDealDataList { get; set; }
             }
         }
 
@@ -72,6 +72,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("templateId")]
         [System.Text.Json.Serialization.JsonPropertyName("templateId")]
-        public string TemplateId { get; set; } = string.Empty;
+        public string? TemplateId { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("booking_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("booking_id")]
-                        public string BookingId { get; set; } = default!;
+                        public string? BookingId { get; set; }
 
                         /// <summary>
                         /// 获取或设置预计开播时间戳。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_id")]
-                        public string VideoId { get; set; } = default!;
+                        public string? VideoId { get; set; }
 
                         /// <summary>
                         /// 获取或设置额外信息。
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("list")]
                 [System.Text.Json.Serialization.JsonPropertyName("list")]
-                public Types.Booking[] BookingList { get; set; } = default!;
+                public List<Types.Booking>? BookingList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -71,6 +71,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

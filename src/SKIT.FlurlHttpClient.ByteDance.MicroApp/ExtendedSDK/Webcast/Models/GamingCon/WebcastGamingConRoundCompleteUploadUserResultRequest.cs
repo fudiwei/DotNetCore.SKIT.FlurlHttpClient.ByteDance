@@ -17,14 +17,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("anchor_open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("anchor_open_id")]
-        public string AnchorOpenId { get; set; } = string.Empty;
+        public string? AnchorOpenId { get; set; }
 
         /// <summary>
         /// 获取或设置​房间 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("room_id")]
         [System.Text.Json.Serialization.JsonPropertyName("room_id")]
-        public string RoomId { get; set; } = string.Empty;
+        public string? RoomId { get; set; }
 
         /// <summary>
         /// 获取或设置​​对局 ID。

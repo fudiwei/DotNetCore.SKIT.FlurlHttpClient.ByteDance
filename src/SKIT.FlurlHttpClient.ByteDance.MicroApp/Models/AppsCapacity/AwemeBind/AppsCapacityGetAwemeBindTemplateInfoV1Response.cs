@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置资质描述。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("desc")]
                                 [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                                public string Description { get; set; } = default!;
+                                public string? Description { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置加粗标题。
@@ -57,14 +57,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("val_list")]
                                 [System.Text.Json.Serialization.JsonPropertyName("val_list")]
-                                public string[]? ValueList { get; set; }
+                                public List<string>? ValueList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置选择项列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("val_example")]
                                 [System.Text.Json.Serialization.JsonPropertyName("val_example")]
-                                public string[]? ValueExampleList { get; set; }
+                                public List<string>? ValueExampleList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置拒绝原因。
@@ -88,21 +88,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("title")]
                         [System.Text.Json.Serialization.JsonPropertyName("title")]
-                        public string Title { get; set; } = default!;
+                        public string? Title { get; set; }
 
                         /// <summary>
                         /// 获取或设置模版描述。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("desc")]
                         [System.Text.Json.Serialization.JsonPropertyName("desc")]
-                        public string Description { get; set; } = default!;
+                        public string? Description { get; set; }
 
                         /// <summary>
                         /// 获取或设置内容列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("template_content")]
                         [System.Text.Json.Serialization.JsonPropertyName("template_content")]
-                        public Types.TemplateContent[] TemplateContentList { get; set; } = default!;
+                        public List<Types.TemplateContent>? TemplateContentList { get; set; }
                     }
                 }
 
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("template_info")]
                 [System.Text.Json.Serialization.JsonPropertyName("template_info")]
-                public IDictionary<long, Types.TemplateInfo> TemplateInfoMap { get; set; } = default!;
+                public Dictionary<long, Types.TemplateInfo>? TemplateInfoMap { get; set; }
             }
         }
 
@@ -120,6 +120,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

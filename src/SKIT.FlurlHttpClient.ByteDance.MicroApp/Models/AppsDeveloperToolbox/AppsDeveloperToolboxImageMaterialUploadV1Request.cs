@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("image_material_url")]
         [System.Text.Json.Serialization.JsonPropertyName("image_material_url")]
-        public string ImageMaterialUrl { get; set; } = string.Empty;
+        public string? ImageMaterialUrl { get; set; }
     }
 }

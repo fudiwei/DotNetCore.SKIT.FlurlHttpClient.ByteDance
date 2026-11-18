@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("encrypted_code")]
                 [System.Text.Json.Serialization.JsonPropertyName("encrypted_code")]
-                public string EncryptedCode { get; set; } = string.Empty;
+                public string? EncryptedCode { get; set; }
 
                 /// <summary>
                 /// 获取或设置券 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("certificate_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("certificate_id")]
-                public string CertificateId { get; set; } = string.Empty;
+                public string? CertificateId { get; set; }
             }
 
             public class POIInfo
@@ -54,21 +54,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("verify_token")]
         [System.Text.Json.Serialization.JsonPropertyName("verify_token")]
-        public string VerifyToken { get; set; } = string.Empty;
+        public string? VerifyToken { get; set; }
 
         /// <summary>
         /// 获取或设置订单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("order_id")]
         [System.Text.Json.Serialization.JsonPropertyName("order_id")]
-        public string OrderId { get; set; } = string.Empty;
+        public string? OrderId { get; set; }
 
         /// <summary>
         /// 获取或设置券列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("certificates")]
         [System.Text.Json.Serialization.JsonPropertyName("certificates")]
-        public IList<Types.Certificate> CertificateList { get; set; } = new List<Types.Certificate>();
+        public List<Types.Certificate>? CertificateList { get; set; }
 
         /// <summary>
         /// 获取或设置商铺 POI 信息。

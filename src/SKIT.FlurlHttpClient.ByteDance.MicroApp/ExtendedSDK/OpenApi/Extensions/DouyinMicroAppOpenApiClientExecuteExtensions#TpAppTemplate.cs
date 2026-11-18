@@ -88,7 +88,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "tpapp", "v2", "template", "add_tpl")
+                .CreateFlurlRequest(request, HttpMethod.Post, "tpapp", "v2", "template", "del_tpl")
                 .WithHeader("access-token", request.ComponentAccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.OpenTpAppTemplateDeleteTemplateV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

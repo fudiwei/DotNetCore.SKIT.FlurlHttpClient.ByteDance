@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public byte[] MaterialFileBytes { get; set; } = Array.Empty<byte>();
+        public byte[]? MaterialFileBytes { get; set; }
 
         /// <summary>
         /// 获取或设置资源文件名。如果不指定将由系统自动生成。

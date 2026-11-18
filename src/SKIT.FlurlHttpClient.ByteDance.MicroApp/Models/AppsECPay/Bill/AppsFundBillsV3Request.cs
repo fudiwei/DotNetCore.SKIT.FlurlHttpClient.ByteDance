@@ -25,7 +25,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("account_type")]
         [System.Text.Json.Serialization.JsonPropertyName("account_type")]
-        public string AccountType { get; set; } = "ALL";
+        public string? AccountType { get; set; } = "ALL";
 
         /// <summary>
         /// 获取或设置交易类型。
@@ -33,7 +33,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("trade_type")]
         [System.Text.Json.Serialization.JsonPropertyName("trade_type")]
-        public string TradeType { get; set; } = "ALL";
+        public string? TradeType { get; set; } = "ALL";
 
         /// <summary>
         /// 获取或设置收支类型。
@@ -41,13 +41,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("payment_type")]
         [System.Text.Json.Serialization.JsonPropertyName("payment_type")]
-        public string PaymentType { get; set; } = "ALL";
+        public string? PaymentType { get; set; } = "ALL";
 
         /// <summary>
         /// 获取或设置账单日期字符串（格式：yyyyMMdd）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("bill_date")]
         [System.Text.Json.Serialization.JsonPropertyName("bill_date")]
-        public string BillDateString { get; set; } = string.Empty;
+        public string? BillDateString { get; set; }
     }
 }

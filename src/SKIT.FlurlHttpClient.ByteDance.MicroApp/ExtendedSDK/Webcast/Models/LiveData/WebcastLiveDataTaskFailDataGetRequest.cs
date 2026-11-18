@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        public string RoomId { get; set; } = string.Empty;
+        public string? RoomId { get; set; }
 
         /// <summary>
         /// 获取或设置直播间消息类型。

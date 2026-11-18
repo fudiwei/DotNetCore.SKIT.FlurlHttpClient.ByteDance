@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("tag_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("tag_id")]
-                                public string TagId { get; set; } = default!;
+                                public string? TagId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置标签名称。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("tag_name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("tag_name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置标签类型。
@@ -43,7 +43,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("tag_descs")]
                                 [System.Text.Json.Serialization.JsonPropertyName("tag_descs")]
-                                public string[] DescriptionList { get; set; } = default!;
+                                public List<string>? DescriptionList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置行业类型。
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("biz_status")]
                                         [System.Text.Json.Serialization.JsonPropertyName("biz_status")]
-                                        public string BusinessStatus { get; set; } = default!;
+                                        public string? BusinessStatus { get; set; }
 
                                         /// <summary>
                                         /// 获取或设置商家审核类型。
@@ -94,7 +94,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("rule_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("rule_id")]
-                                public string RuleId { get; set; } = default!;
+                                public string? RuleId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置规则类型。
@@ -117,21 +117,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tag_group_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("tag_group_id")]
-                        public string TagGroupId { get; set; } = default!;
+                        public string? TagGroupId { get; set; }
 
                         /// <summary>
                         /// 获取或设置标签列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("tag_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("tag_list")]
-                        public Types.Tag[] TagList { get; set; } = default!;
+                        public List<Types.Tag>? TagList { get; set; }
 
                         /// <summary>
                         /// 获取或设置规则列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("rule_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("rule_list")]
-                        public Types.Rule[]? RuleList { get; set; }
+                        public List<Types.Rule>? RuleList { get; set; }
                     }
                 }
 
@@ -140,7 +140,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("tag_detail_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("tag_detail_list")]
-                public Types.TagGroup[] TagGroupList { get; set; } = default!;
+                public List<Types.TagGroup>? TagGroupList { get; set; }
             }
         }
 
@@ -149,6 +149,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

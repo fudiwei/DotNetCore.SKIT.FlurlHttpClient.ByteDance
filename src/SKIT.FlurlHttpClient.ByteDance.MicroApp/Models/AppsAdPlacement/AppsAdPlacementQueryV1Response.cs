@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ad_placement_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("ad_placement_id")]
-                        public string AdPlacementId { get; set; } = default!;
+                        public string? AdPlacementId { get; set; }
 
                         /// <summary>
                         /// 获取或设置广告位名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("ad_placement_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("ad_placement_name")]
-                        public string AdPlacementName { get; set; } = default!;
+                        public string? AdPlacementName { get; set; }
 
                         /// <summary>
                         /// 获取或设置广告位类型。
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ad_placement_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("ad_placement_list")]
-                public Types.AdPlacement[] AdPlacementList { get; set; } = default!;
+                public List<Types.AdPlacement>? AdPlacementList { get; set; }
             }
         }
 
@@ -57,6 +57,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

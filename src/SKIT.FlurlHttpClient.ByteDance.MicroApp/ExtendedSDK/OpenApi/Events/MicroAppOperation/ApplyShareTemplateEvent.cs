@@ -20,7 +20,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("templateId")]
                 [System.Text.Json.Serialization.JsonPropertyName("templateId")]
                 [System.Xml.Serialization.XmlElement("templateId")]
-                public string TemplateId { get; set; } = default!;
+                public string? TemplateId { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核结果。
@@ -46,6 +46,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("ApplyShareTemplateResults")]
         [System.Text.Json.Serialization.JsonPropertyName("ApplyShareTemplateResults")]
         [System.Xml.Serialization.XmlElement("ApplyShareTemplateResults")]
-        public Types.ApplyResult ApplyResult { get; set; } = default!;
+        public Types.ApplyResult? ApplyResult { get; set; }
     }
 }

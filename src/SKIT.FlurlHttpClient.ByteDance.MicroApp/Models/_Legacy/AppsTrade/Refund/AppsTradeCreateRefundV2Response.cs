@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_id")]
-                public string RefundId { get; set; } = default!;
+                public string? RefundId { get; set; }
 
                 /// <summary>
                 /// 获取或设置审核的最后期限时间戳。
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

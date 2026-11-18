@@ -22,14 +22,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("text_id")]
                                 [System.Text.Json.Serialization.JsonPropertyName("text_id")]
-                                public string TextId { get; set; } = default!;
+                                public string? TextId { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置文案内容。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("text_content")]
                                 [System.Text.Json.Serialization.JsonPropertyName("text_content")]
-                                public string TextContent { get; set; } = default!;
+                                public string? TextContent { get; set; }
                             }
                         }
 
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("text_content_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("text_content_list")]
-                        public Types.Content[] ContentList { get; set; } = default!;
+                        public List<Types.Content>? ContentList { get; set; }
                     }
                 }
 
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("text_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("text_list")]
-                public Types.Text[] TextList { get; set; } = default!;
+                public List<Types.Text>? TextList { get; set; }
             }
         }
 
@@ -63,6 +63,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

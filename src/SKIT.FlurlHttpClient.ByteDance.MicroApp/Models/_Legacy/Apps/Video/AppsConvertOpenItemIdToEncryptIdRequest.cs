@@ -17,6 +17,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("video_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("video_ids")]
-        public IList<string> OpenItemIdList { get; set; } = new List<string>();
+        public List<string>? OpenItemIdList { get; set; }
     }
 }

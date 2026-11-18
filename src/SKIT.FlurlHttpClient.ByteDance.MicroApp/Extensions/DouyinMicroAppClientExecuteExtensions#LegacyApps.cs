@@ -536,8 +536,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken);
 
             using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: request.ImageFileName, fileBytes: request.ImageFileBytes, fileContentType: request.ImageFileContentType, formDataName: "image");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Title)), "title");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PagePath)), "start_page");
+            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.Title!)), "title");
+            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.PagePath!)), "start_page");
             if (request.RoomId is not null)
                 httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.RoomId.Value.ToString())), "room_id");
 

@@ -19,7 +19,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("scope")]
                 [System.Text.Json.Serialization.JsonPropertyName("scope")]
                 [System.Xml.Serialization.XmlElement("scope")]
-                public string Scope { get; set; } = default!;
+                public string? Scope { get; set; }
 
                 /// <summary>
                 /// 获取或设置额度生效开始日期（格式：yyyy-MM-dd）。
@@ -27,7 +27,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("start_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("start_date")]
                 [System.Xml.Serialization.XmlElement("start_date")]
-                public string StartDateString { get; set; } = default!;
+                public string? StartDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置额度生效结束日期（格式：yyyy-MM-dd）。
@@ -35,7 +35,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("end_date")]
                 [System.Text.Json.Serialization.JsonPropertyName("end_date")]
                 [System.Xml.Serialization.XmlElement("end_date")]
-                public string EndDateString { get; set; } = default!;
+                public string? EndDateString { get; set; }
 
                 /// <summary>
                 /// 获取或设置申请的额度。
@@ -59,7 +59,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
                 [Newtonsoft.Json.JsonProperty("reject_reason_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("reject_reason_list")]
                 [System.Xml.Serialization.XmlElement("reject_reason_list", Type = typeof(string), IsNullable = true)]
-                public string[]? RejectReasonList { get; set; }
+                public List<string>? RejectReasonList { get; set; }
             }
         }
 
@@ -69,6 +69,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
         [Newtonsoft.Json.JsonProperty("EventContent")]
         [System.Text.Json.Serialization.JsonPropertyName("EventContent")]
         [System.Xml.Serialization.XmlElement("EventContent")]
-        public Types.EventContent EventContent { get; set; } = default!;
+        public Types.EventContent? EventContent { get; set; }
     }
 }

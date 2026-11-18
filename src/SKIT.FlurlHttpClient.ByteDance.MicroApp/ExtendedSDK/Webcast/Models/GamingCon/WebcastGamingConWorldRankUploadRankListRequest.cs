@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = string.Empty;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置​世界榜单排名。
@@ -65,13 +65,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("world_rank_version")]
         [System.Text.Json.Serialization.JsonPropertyName("world_rank_version")]
-        public string WorldRankVersion { get; set; } = string.Empty;
+        public string? WorldRankVersion { get; set; }
 
         /// <summary>
         /// 获取或设置​世界榜单列表​。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("rank_list")]
         [System.Text.Json.Serialization.JsonPropertyName("rank_list")]
-        public IList<Types.Rank> RankList { get; set; } = new List<Types.Rank>();
+        public List<Types.Rank>? RankList { get; set; }
     }
 }

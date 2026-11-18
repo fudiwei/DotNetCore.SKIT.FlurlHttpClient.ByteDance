@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("item_order_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("item_order_id")]
-                public string ItemOrderId { get; set; } = string.Empty;
+                public string? ItemOrderId { get; set; }
             }
 
             public class POIInfo : AppsTradeDeliveryVerifyV2Request.Types.POIInfo
@@ -27,14 +27,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_order_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_order_no")]
-        public string OutOrderNumber { get; set; } = string.Empty;
+        public string? OutOrderNumber { get; set; }
 
         /// <summary>
         /// 获取或设置商品单列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("item_order_list")]
         [System.Text.Json.Serialization.JsonPropertyName("item_order_list")]
-        public IList<Types.ItemOrder> ItemOrderList { get; set; } = new List<Types.ItemOrder>();
+        public List<Types.ItemOrder>? ItemOrderList { get; set; }
 
         /// <summary>
         /// 获取或设置是否整单核销。

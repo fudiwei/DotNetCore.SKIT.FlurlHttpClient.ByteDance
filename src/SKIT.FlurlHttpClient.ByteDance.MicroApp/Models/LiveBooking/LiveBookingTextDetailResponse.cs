@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("booking_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("booking_id")]
-                public string BookingId { get; set; } = default!;
+                public string? BookingId { get; set; }
 
                 /// <summary>
                 /// 获取或设置主播 ID。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("content")]
                 [System.Text.Json.Serialization.JsonPropertyName("content")]
-                public string Content { get; set; } = default!;
+                public string? Content { get; set; }
 
                 /// <summary>
                 /// 获取或设置开播时间字符串（格式：HHmm）。
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("live_weekdays")]
                 [System.Text.Json.Serialization.JsonPropertyName("live_weekdays")]
-                public int[]? LiveWeekdays { get; set; }
+                public List<int>? LiveWeekdays { get; set; }
 
                 /// <summary>
                 /// 获取或设置创建时间戳。
@@ -83,6 +83,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("text_booking")]
         [System.Text.Json.Serialization.JsonPropertyName("text_booking")]
-        public Types.Booking Booking { get; set; } = default!;
+        public Types.Booking? Booking { get; set; }
     }
 }

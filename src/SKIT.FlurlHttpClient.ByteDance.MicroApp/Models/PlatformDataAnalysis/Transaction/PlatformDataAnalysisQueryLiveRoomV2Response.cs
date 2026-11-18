@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("anchor_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("anchor_name")]
-                        public string AnchorName { get; set; } = default!;
+                        public string? AnchorName { get; set; }
 
                         /// <summary>
                         /// 获取或设置直播间 ID。
@@ -32,7 +32,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("live_room_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("live_room_name")]
-                        public string LiveRoomName { get; set; } = default!;
+                        public string? LiveRoomName { get; set; }
 
                         /// <summary>
                         /// 获取或设置开播时间戳。
@@ -48,14 +48,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("current_live_room")]
                 [System.Text.Json.Serialization.JsonPropertyName("current_live_room")]
-                public Types.LiveRoom[] CurrentLiveRoomList { get; set; } = default!;
+                public List<Types.LiveRoom>? CurrentLiveRoomList { get; set; }
 
                 /// <summary>
                 /// 获取或设置历史直播间列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("history_live_room")]
                 [System.Text.Json.Serialization.JsonPropertyName("history_live_room")]
-                public Types.LiveRoom[] HistoryLiveRoomList { get; set; } = default!;
+                public List<Types.LiveRoom>? HistoryLiveRoomList { get; set; }
             }
         }
 
@@ -64,6 +64,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

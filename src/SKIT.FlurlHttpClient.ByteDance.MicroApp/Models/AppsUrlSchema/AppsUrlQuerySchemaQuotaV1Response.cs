@@ -34,14 +34,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("long_term_schema_quota")]
                 [System.Text.Json.Serialization.JsonPropertyName("long_term_schema_quota")]
-                public Types.Quota LongTermQuota { get; set; } = default!;
+                public Types.Quota? LongTermQuota { get; set; }
 
                 /// <summary>
                 /// 获取或设置短期有效的配额信息。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("short_term_schema_quota")]
                 [System.Text.Json.Serialization.JsonPropertyName("short_term_schema_quota")]
-                public Types.Quota ShortTermQuota { get; set; } = default!;
+                public Types.Quota? ShortTermQuota { get; set; }
             }
         }
 
@@ -50,6 +50,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

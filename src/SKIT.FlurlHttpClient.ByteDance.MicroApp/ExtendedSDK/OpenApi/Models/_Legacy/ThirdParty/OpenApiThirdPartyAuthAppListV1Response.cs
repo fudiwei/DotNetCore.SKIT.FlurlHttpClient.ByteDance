@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("authAppId")]
                         [System.Text.Json.Serialization.JsonPropertyName("authAppId")]
-                        public string AppId { get; set; } = default!;
+                        public string? AppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置授权时间戳。
@@ -34,7 +34,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("authAppList")]
                 [System.Text.Json.Serialization.JsonPropertyName("authAppList")]
-                public Types.AuthApp[] AuthAppList { get; set; } = default!;
+                public List<Types.AuthApp>? AuthAppList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -50,6 +50,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

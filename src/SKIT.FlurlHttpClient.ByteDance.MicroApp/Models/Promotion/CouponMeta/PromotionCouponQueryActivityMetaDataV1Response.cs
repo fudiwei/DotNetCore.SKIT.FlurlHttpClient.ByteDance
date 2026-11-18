@@ -18,35 +18,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_id")]
-                        public string AppId { get; set; } = default!;
+                        public string? AppId { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-                        public string AppName { get; set; } = default!;
+                        public string? AppName { get; set; }
 
                         /// <summary>
                         /// 获取或设置小程序图标 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("app_icon")]
                         [System.Text.Json.Serialization.JsonPropertyName("app_icon")]
-                        public string AppIconUrl { get; set; } = default!;
+                        public string? AppIconUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动 ID。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("activity_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("activity_id")]
-                        public string ActivityId { get; set; } = default!;
+                        public string? ActivityId { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("activity_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("activity_name")]
-                        public string ActivityName { get; set; } = default!;
+                        public string? ActivityName { get; set; }
 
                         /// <summary>
                         /// 获取或设置活动状态。
@@ -74,21 +74,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
-                        public string CouponMetaId { get; set; } = default!;
+                        public string? CouponMetaId { get; set; }
 
                         /// <summary>
                         /// 获取或设置券名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("coupon_meta_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_name")]
-                        public string CouponName { get; set; } = default!;
+                        public string? CouponName { get; set; }
 
                         /// <summary>
                         /// 获取或设置券图标 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("coupon_icon")]
                         [System.Text.Json.Serialization.JsonPropertyName("coupon_icon")]
-                        public string CouponIconUrl { get; set; } = default!;
+                        public string? CouponIconUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置优惠类型。
@@ -102,7 +102,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("discount_type_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("discount_type_name")]
-                        public string DiscountTypeName { get; set; } = default!;
+                        public string? DiscountTypeName { get; set; }
 
                         /// <summary>
                         /// 获取或设置可领取开始时间戳。
@@ -160,7 +160,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("activity_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("activity_list")]
-                public Types.Activity[] ActivityList { get; set; } = default!;
+                public List<Types.Activity>? ActivityList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -176,6 +176,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

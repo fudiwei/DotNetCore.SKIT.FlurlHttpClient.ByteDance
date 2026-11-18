@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("search_tag")]
                         [System.Text.Json.Serialization.JsonPropertyName("search_tag")]
-                        public string Tag { get; set; } = default!;
+                        public string? Tag { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -55,7 +55,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("search_tag_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("search_tag_list")]
-                public Types.TagItem[] TagList { get; set; } = default!;
+                public List<Types.TagItem>? TagList { get; set; }
             }
         }
 
@@ -64,6 +64,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

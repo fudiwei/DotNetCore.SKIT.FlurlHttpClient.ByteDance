@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置开发者核销单号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("consume_out_no")]
         [System.Text.Json.Serialization.JsonPropertyName("consume_out_no")]
-        public string OutConsumeNumber { get; set; } = string.Empty;
+        public string? OutConsumeNumber { get; set; }
 
         /// <summary>
         /// 获取或设置券 ID 列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("coupon_id_list")]
         [System.Text.Json.Serialization.JsonPropertyName("coupon_id_list")]
-        public IList<string> CouponIdList { get; set; } = new List<string>();
+        public List<string>? CouponIdList { get; set; }
 
         /// <summary>
         /// 获取或设置订单 ID。

@@ -18,7 +18,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("alias")]
                         [System.Text.Json.Serialization.JsonPropertyName("alias")]
-                        public string Alias { get; set; } = default!;
+                        public string? Alias { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -69,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("alias_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("alias_list")]
-                public Types.AliasItem[] AliasList { get; set; } = default!;
+                public List<Types.AliasItem>? AliasList { get; set; }
             }
         }
 
@@ -78,6 +78,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

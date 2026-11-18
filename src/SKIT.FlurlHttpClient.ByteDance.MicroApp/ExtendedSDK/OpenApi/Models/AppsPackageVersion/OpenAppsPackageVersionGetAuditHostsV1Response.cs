@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("host_names")]
                 [System.Text.Json.Serialization.JsonPropertyName("host_names")]
-                public string[] HostNames { get; set; } = default!;
+                public List<string>? HostNames { get; set; }
 
                 /// <summary>
                 /// 获取或设置上次发布的宿主端列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("released_host_names")]
                 [System.Text.Json.Serialization.JsonPropertyName("released_host_names")]
-                public string[] ReleasedHostNames { get; set; } = default!;
+                public List<string>? ReleasedHostNames { get; set; }
             }
         }
 
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

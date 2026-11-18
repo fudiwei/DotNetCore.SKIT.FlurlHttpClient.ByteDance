@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("keyword_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("keyword_id")]
-                        public string KeywordId { get; set; } = default!;
+                        public string? KeywordId { get; set; }
 
                         /// <summary>
                         /// 获取或设置关键词字符串。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("keyword")]
                         [System.Text.Json.Serialization.JsonPropertyName("keyword")]
-                        public string KeywordString { get; set; } = default!;
+                        public string? KeywordString { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -39,7 +39,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("reject_reason_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("reject_reason_list")]
-                        public string[]? RejectReasonList { get; set; }
+                        public List<string>? RejectReasonList { get; set; }
                     }
                 }
 
@@ -48,7 +48,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("keyword_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("keyword_list")]
-                public Types.Keyword[] KeywordList { get; set; } = default!;
+                public List<Types.Keyword>? KeywordList { get; set; }
 
                 /// <summary>
                 /// 获取或设置总数量。
@@ -64,6 +64,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

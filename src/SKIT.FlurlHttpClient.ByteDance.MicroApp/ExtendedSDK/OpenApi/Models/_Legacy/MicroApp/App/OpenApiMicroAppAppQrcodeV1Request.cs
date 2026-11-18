@@ -12,13 +12,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("version")]
         [System.Text.Json.Serialization.JsonPropertyName("version")]
-        public string Version { get; set; } = "current";
+        public string? Version { get; set; } = "current";
 
         /// <summary>
         /// 获取或设置小程序页面路径。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("path")]
         [System.Text.Json.Serialization.JsonPropertyName("path")]
-        public string PagePath { get; set; } = string.Empty;
+        public string? PagePath { get; set; }
     }
 }

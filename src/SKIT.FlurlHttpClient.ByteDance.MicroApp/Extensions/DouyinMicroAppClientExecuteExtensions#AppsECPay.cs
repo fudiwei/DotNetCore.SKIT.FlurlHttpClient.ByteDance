@@ -106,7 +106,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
                 .WithHeader("access-token", request.AccessToken);
 
             using var httpContent = Utilities.HttpContentBuilder.BuildWithFile(fileName: "image.jpg", fileBytes: request.ImageFileBytes, fileContentType: "image/jpeg", formDataName: "image_content");
-            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ImageType)), "image_type");
+            httpContent.Add(new ByteArrayContent(Encoding.UTF8.GetBytes(request.ImageType!)), "image_type");
 
             return await client.SendFlurlRequestAsync<Models.AppsECPaySaaSImageUploadV3Response>(flurlReq, httpContent: httpContent, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -207,7 +207,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
             if (request is null) throw new ArgumentNullException(nameof(request));
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "ecpay", "v3", "saas", "app_add_sub_merchant")
+                .CreateFlurlRequest(request, HttpMethod.Post, "api", "apps", "ecpay", "v3", "saas", "app_add_sub_merchant/")
                 .WithHeader("access-token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.AppsECPaySaaSAppAddSubMerchantV3Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);

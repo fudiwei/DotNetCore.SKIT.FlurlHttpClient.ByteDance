@@ -38,21 +38,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("out_return_no")]
         [System.Text.Json.Serialization.JsonPropertyName("out_return_no")]
-        public string OutReturnNumber { get; set; } = string.Empty;
+        public string? OutReturnNumber { get; set; }
 
         /// <summary>
         /// 获取或设置回退描述。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("return_desc")]
         [System.Text.Json.Serialization.JsonPropertyName("return_desc")]
-        public string ReturnDescription { get; set; } = string.Empty;
+        public string? ReturnDescription { get; set; }
 
         /// <summary>
         /// 获取或设置回退商户号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("merchant_uid")]
         [System.Text.Json.Serialization.JsonPropertyName("merchant_uid")]
-        public string MerchantId { get; set; } = string.Empty;
+        public string? MerchantId { get; set; }
 
         /// <summary>
         /// 获取或设置回退金额（单位：分）。

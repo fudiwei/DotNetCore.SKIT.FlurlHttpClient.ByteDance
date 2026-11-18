@@ -18,14 +18,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("coupon_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("coupon_id")]
-                        public string CouponId { get; set; } = default!;
+                        public string? CouponId { get; set; }
 
                         /// <summary>
                         /// 获取或设置券名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("coupon_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("coupon_name")]
-                        public string CouponName { get; set; } = default!;
+                        public string? CouponName { get; set; }
 
                         /// <summary>
                         /// 获取或设置券状态。
@@ -46,7 +46,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("merchant_meta_no")]
                         [System.Text.Json.Serialization.JsonPropertyName("merchant_meta_no")]
-                        public string MerchantMetaNumber { get; set; } = default!;
+                        public string? MerchantMetaNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置券有效期开始时间戳。
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_receive_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_receive_list")]
-                public Types.Coupon[] CouponList { get; set; } = default!;
+                public List<Types.Coupon>? CouponList { get; set; }
             }
         }
 
@@ -134,6 +134,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

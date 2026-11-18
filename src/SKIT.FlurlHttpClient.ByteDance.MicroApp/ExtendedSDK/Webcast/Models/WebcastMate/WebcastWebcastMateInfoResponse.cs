@@ -19,35 +19,35 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                         [Newtonsoft.Json.JsonProperty("room_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("room_id")]
                         [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.NumericStringReadOnlyConverter))]
-                        public string RoomId { get; set; } = default!;
+                        public string? RoomId { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播的 OpenId。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("anchor_open_id")]
                         [System.Text.Json.Serialization.JsonPropertyName("anchor_open_id")]
-                        public string AnchorOpenId { get; set; } = default!;
+                        public string? AnchorOpenId { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播的昵称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("nick_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("nick_name")]
-                        public string AnchorNickname { get; set; } = default!;
+                        public string? AnchorNickname { get; set; }
 
                         /// <summary>
                         /// 获取或设置主播的头像 URL。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("avatar_url")]
                         [System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
-                        public string AnchorAvatarUrl { get; set; } = default!;
+                        public string? AnchorAvatarUrl { get; set; }
 
                         /// <summary>
                         /// 获取或设置支持的游戏场景列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("available_game_scenes")]
                         [System.Text.Json.Serialization.JsonPropertyName("available_game_scenes")]
-                        public int[]? AvailableGameSceneList { get; set; }
+                        public List<int>? AvailableGameSceneList { get; set; }
 
                         /// <summary>
                         /// 获取或设置当前加入游戏的用户 OpenId。
@@ -71,7 +71,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("info")]
                 [System.Text.Json.Serialization.JsonPropertyName("info")]
-                public Types.LiveInfo LiveInfo { get; set; } = default!;
+                public Types.LiveInfo? LiveInfo { get; set; }
             }
         }
 
@@ -80,6 +80,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

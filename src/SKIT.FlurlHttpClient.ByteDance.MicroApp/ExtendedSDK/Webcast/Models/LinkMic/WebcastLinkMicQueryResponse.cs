@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("link_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("link_id")]
-                public string LinkId { get; set; } = default!;
+                public string? LinkId { get; set; }
 
                 /// <summary>
                 /// 获取或设置麦位总数量。
@@ -51,7 +51,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("open_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-                public string OpenId { get; set; } = default!;
+                public string? OpenId { get; set; }
 
                 /// <summary>
                 /// 获取或设置头像 URL。
@@ -137,13 +137,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.Webcast.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("base_info")]
         [System.Text.Json.Serialization.JsonPropertyName("base_info")]
-        public Types.BaseInfo BaseInfo { get; set; } = default!;
+        public Types.BaseInfo? BaseInfo { get; set; }
 
         /// <summary>
         /// 获取或设置麦位用户列表。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("user_list")]
         [System.Text.Json.Serialization.JsonPropertyName("user_list")]
-        public Types.User[] UserList { get; set; } = default!;
+        public List<Types.User>? UserList { get; set; }
     }
 }

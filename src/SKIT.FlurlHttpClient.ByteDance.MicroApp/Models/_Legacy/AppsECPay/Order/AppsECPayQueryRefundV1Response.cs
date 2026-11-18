@@ -14,7 +14,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_no")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_no")]
-                public string RefundNumber { get; set; } = default!;
+                public string? RefundNumber { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款金额（单位：分）。
@@ -28,7 +28,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("refund_status")]
                 [System.Text.Json.Serialization.JsonPropertyName("refund_status")]
-                public string RefundStatus { get; set; } = default!;
+                public string? RefundStatus { get; set; }
 
                 /// <summary>
                 /// 获取或设置退款时间戳。
@@ -58,6 +58,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("refundInfo")]
         [System.Text.Json.Serialization.JsonPropertyName("refundInfo")]
-        public Types.Refund Refund { get; set; } = default!;
+        public Types.Refund? Refund { get; set; }
     }
 }

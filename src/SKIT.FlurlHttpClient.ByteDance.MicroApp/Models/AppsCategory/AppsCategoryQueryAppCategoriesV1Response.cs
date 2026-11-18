@@ -30,14 +30,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("name")]
                                 [System.Text.Json.Serialization.JsonPropertyName("name")]
-                                public string Name { get; set; } = default!;
+                                public string? Name { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置资质文件路径列表。
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("pathList")]
                                 [System.Text.Json.Serialization.JsonPropertyName("pathList")]
-                                public string[] FilePathList { get; set; } = default!;
+                                public List<string>? FilePathList { get; set; }
                             }
                         }
 
@@ -46,30 +46,30 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("category")]
                         [System.Text.Json.Serialization.JsonPropertyName("category")]
-                        public string CategoryIdString { get; set; } = default!;
+                        public string? CategoryIdString { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务类目名称字符串（以短横线分隔）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryName")]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryName")]
-                        public string CategoryNameString { get; set; } = default!;
+                        public string? CategoryNameString { get; set; }
 
                         /// <summary>
                         /// 获取或设置服务类目资质 ID 列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryCertIds")]
-                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberArrayWithCommaSplitConverter))]
+                        [Newtonsoft.Json.JsonConverter(typeof(SKIT.JsonConv.NewtonsoftJson.Converters.StringifiedNumberListWithCommaSplitConverter))]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryCertIds")]
-                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberArrayWithCommaSplitConverter))]
-                        public int[] CertificationIdList { get; set; } = default!;
+                        [System.Text.Json.Serialization.JsonConverter(typeof(SKIT.JsonConv.SystemTextJson.Converters.StringifiedNumberListWithCommaSplitConverter))]
+                        public List<int>? CertificationIdList { get; set; }
 
                         /// <summary>
                         /// 获取或设置本月剩余更改次数。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("categoryCert")]
                         [System.Text.Json.Serialization.JsonPropertyName("categoryCert")]
-                        public Types.Certificate[] CertificationList { get; set; } = default!;
+                        public List<Types.Certificate>? CertificationList { get; set; }
 
                         /// <summary>
                         /// 获取或设置审核状态。
@@ -113,7 +113,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("appCategoryAuditInfo")]
                 [System.Text.Json.Serialization.JsonPropertyName("appCategoryAuditInfo")]
-                public Types.AppCategoryAuditInfo[] AppCategoryAuditList { get; set; } = default!;
+                public List<Types.AppCategoryAuditInfo>? AppCategoryAuditList { get; set; }
             }
         }
 
@@ -122,6 +122,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

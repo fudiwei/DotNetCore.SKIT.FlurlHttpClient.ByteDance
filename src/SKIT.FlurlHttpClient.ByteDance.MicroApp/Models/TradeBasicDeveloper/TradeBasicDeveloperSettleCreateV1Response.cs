@@ -14,14 +14,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settle_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("settle_id")]
-                public string SettleId { get; set; } = default!;
+                public string? SettleId { get; set; }
 
                 /// <summary>
                 /// 获取或设置底层分账单 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("wallet_settle_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("wallet_settle_id")]
-                public string WalletSettleId { get; set; } = default!;
+                public string? WalletSettleId { get; set; }
             }
         }
 
@@ -30,6 +30,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

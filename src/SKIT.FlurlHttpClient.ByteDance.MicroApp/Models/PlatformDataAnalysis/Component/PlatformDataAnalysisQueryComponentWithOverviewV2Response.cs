@@ -107,14 +107,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ComponentOverviewData")]
                 [System.Text.Json.Serialization.JsonPropertyName("ComponentOverviewData")]
-                public Types.ComponentOverviewData ComponentOverviewData { get; set; } = default!;
+                public Types.ComponentOverviewData? ComponentOverviewData { get; set; }
 
                 /// <summary>
                 /// 获取或设置组件使用数据列表。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("ComponentDataInfoList")]
                 [System.Text.Json.Serialization.JsonPropertyName("ComponentDataInfoList")]
-                public Types.ComponentData[] ComponentDataList { get; set; } = default!;
+                public List<Types.ComponentData>? ComponentDataList { get; set; }
             }
         }
 
@@ -123,6 +123,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

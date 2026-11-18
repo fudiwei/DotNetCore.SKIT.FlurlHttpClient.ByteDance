@@ -22,7 +22,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("path")]
                                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                public string FilePath { get; set; } = default!;
+                                public string? FilePath { get; set; }
                             }
 
                             public class ContractMaterial : BusinessLicenseMaterial
@@ -44,7 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("path")]
                                         [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                        public string FilePath { get; set; } = default!;
+                                        public string? FilePath { get; set; }
                                     }
                                 }
 
@@ -60,7 +60,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("paths")]
                                 [System.Text.Json.Serialization.JsonPropertyName("paths")]
-                                public Types.Material[] MaterialList { get; set; } = default!;
+                                public List<Types.Material>? MaterialList { get; set; }
                             }
                         }
 
@@ -76,28 +76,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("biz_licence")]
                         [System.Text.Json.Serialization.JsonPropertyName("biz_licence")]
-                        public Types.BusinessLicenseMaterial BusinessLicenseMaterial { get; set; } = default!;
+                        public Types.BusinessLicenseMaterial? BusinessLicenseMaterial { get; set; }
 
                         /// <summary>
                         /// 获取或设置合作协议信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("contract")]
                         [System.Text.Json.Serialization.JsonPropertyName("contract")]
-                        public Types.ContractMaterial ContractMaterial { get; set; } = default!;
+                        public Types.ContractMaterial? ContractMaterial { get; set; }
 
                         /// <summary>
                         /// 获取或设置行业资质列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qual_material")]
                         [System.Text.Json.Serialization.JsonPropertyName("qual_material")]
-                        public Types.QualificationMaterial[]? QualificationMaterialList { get; set; }
+                        public List<Types.QualificationMaterial>? QualificationMaterialList { get; set; }
 
                         /// <summary>
                         /// 获取或设置额外材料列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("additional_qual")]
                         [System.Text.Json.Serialization.JsonPropertyName("additional_qual")]
-                        public Types.AdditionalMaterial[]? AdditionalMaterialList { get; set; }
+                        public List<Types.AdditionalMaterial>? AdditionalMaterialList { get; set; }
                     }
 
                     public class AuditShopMaterialInfo
@@ -111,7 +111,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("path")]
                                 [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                public string FilePath { get; set; } = default!;
+                                public string? FilePath { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置审核状态。
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reason")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reason")]
-                                public string[]? RejectReasonList { get; set; }
+                                public List<string>? RejectReasonList { get; set; }
 
                             }
 
@@ -148,7 +148,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                         /// </summary>
                                         [Newtonsoft.Json.JsonProperty("path")]
                                         [System.Text.Json.Serialization.JsonPropertyName("path")]
-                                        public string FilePath { get; set; } = default!;
+                                        public string? FilePath { get; set; }
                                     }
                                 }
 
@@ -164,7 +164,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("paths")]
                                 [System.Text.Json.Serialization.JsonPropertyName("paths")]
-                                public Types.Material[] MaterialList { get; set; } = default!;
+                                public List<Types.Material>? MaterialList { get; set; }
 
                                 /// <summary>
                                 /// 获取或设置审核状态。
@@ -178,7 +178,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                                 /// </summary>
                                 [Newtonsoft.Json.JsonProperty("reason")]
                                 [System.Text.Json.Serialization.JsonPropertyName("reason")]
-                                public string[]? RejectReasonList { get; set; }
+                                public List<string>? RejectReasonList { get; set; }
                             }
                         }
 
@@ -187,28 +187,28 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("biz_licence")]
                         [System.Text.Json.Serialization.JsonPropertyName("biz_licence")]
-                        public Types.BusinessLicenseMaterial BusinessLicenseMaterial { get; set; } = default!;
+                        public Types.BusinessLicenseMaterial? BusinessLicenseMaterial { get; set; }
 
                         /// <summary>
                         /// 获取或设置合作协议信息。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("contract")]
                         [System.Text.Json.Serialization.JsonPropertyName("contract")]
-                        public Types.ContractMaterial ContractMaterial { get; set; } = default!;
+                        public Types.ContractMaterial? ContractMaterial { get; set; }
 
                         /// <summary>
                         /// 获取或设置行业资质列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("qual_material")]
                         [System.Text.Json.Serialization.JsonPropertyName("qual_material")]
-                        public Types.QualificationMaterial[]? QualificationMaterialList { get; set; }
+                        public List<Types.QualificationMaterial>? QualificationMaterialList { get; set; }
 
                         /// <summary>
                         /// 获取或设置额外材料列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("additional_qual")]
                         [System.Text.Json.Serialization.JsonPropertyName("additional_qual")]
-                        public Types.AdditionalMaterial[]? AdditionalMaterialList { get; set; }
+                        public List<Types.AdditionalMaterial>? AdditionalMaterialList { get; set; }
                     }
                 }
 
@@ -233,6 +233,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

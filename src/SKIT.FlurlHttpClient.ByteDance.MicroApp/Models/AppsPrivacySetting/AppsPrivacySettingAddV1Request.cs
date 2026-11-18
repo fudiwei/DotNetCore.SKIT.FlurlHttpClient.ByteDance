@@ -21,7 +21,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("apply_desc")]
                 [System.Text.Json.Serialization.JsonPropertyName("apply_desc")]
-                public string ApplyDescription { get; set; } = string.Empty;
+                public string? ApplyDescription { get; set; }
             }
         }
 
@@ -65,6 +65,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("privacy_item_list")]
         [System.Text.Json.Serialization.JsonPropertyName("privacy_item_list")]
-        public IList<Types.PrivacyItem> PrivacyItemList { get; set; } = new List<Types.PrivacyItem>();
+        public List<Types.PrivacyItem>? PrivacyItemList { get; set; }
     }
 }

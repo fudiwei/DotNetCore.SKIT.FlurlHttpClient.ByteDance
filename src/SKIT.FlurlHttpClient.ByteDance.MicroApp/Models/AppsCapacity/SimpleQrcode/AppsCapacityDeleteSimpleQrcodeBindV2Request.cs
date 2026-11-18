@@ -10,6 +10,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("qr_url")]
         [System.Text.Json.Serialization.JsonPropertyName("qr_url")]
-        public string Url { get; set; } = string.Empty;
+        public string? Url { get; set; }
     }
 }

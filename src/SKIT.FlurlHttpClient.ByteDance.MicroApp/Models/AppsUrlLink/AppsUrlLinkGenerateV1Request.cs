@@ -17,7 +17,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("app_name")]
         [System.Text.Json.Serialization.JsonPropertyName("app_name")]
-        public string AppName { get; set; } = string.Empty;
+        public string? AppName { get; set; }
 
         /// <summary>
         /// 获取或设置页面路径。

@@ -18,21 +18,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settlement_serial")]
                         [System.Text.Json.Serialization.JsonPropertyName("settlement_serial")]
-                        public string SerialNumber { get; set; } = default!;
+                        public string? SerialNumber { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算单名称。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settlement_name")]
                         [System.Text.Json.Serialization.JsonPropertyName("settlement_name")]
-                        public string Name { get; set; } = default!;
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 获取或设置结算周期（格式：yyyy-MM-dd）。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("settlement_period")]
                         [System.Text.Json.Serialization.JsonPropertyName("settlement_period")]
-                        public string PeriodString { get; set; } = default!;
+                        public string? PeriodString { get; set; }
 
                         /// <summary>
                         /// 获取或设置发票税率。
@@ -62,7 +62,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("settlement_list")]
                 [System.Text.Json.Serialization.JsonPropertyName("settlement_list")]
-                public Types.Settlement[] SettlementList { get; set; } = default!;
+                public List<Types.Settlement>? SettlementList { get; set; }
             }
         }
 
@@ -71,6 +71,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data")]
         [System.Text.Json.Serialization.JsonPropertyName("data")]
-        public Types.Data Data { get; set; } = default!;
+        public Types.Data? Data { get; set; }
     }
 }

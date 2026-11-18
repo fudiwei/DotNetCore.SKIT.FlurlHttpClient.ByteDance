@@ -172,14 +172,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("activity_name")]
                 [System.Text.Json.Serialization.JsonPropertyName("activity_name")]
-                public string ActivityName { get; set; } = string.Empty;
+                public string? ActivityName { get; set; }
 
                 /// <summary>
                 /// 获取或设置券模板 ID。
                 /// </summary>
                 [Newtonsoft.Json.JsonProperty("coupon_meta_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("coupon_meta_id")]
-                public string CouponMetaId { get; set; } = string.Empty;
+                public string? CouponMetaId { get; set; }
 
                 /// <summary>
                 /// 获取或设置用户领取次数限制。
@@ -223,6 +223,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("promotion_activity")]
         [System.Text.Json.Serialization.JsonPropertyName("promotion_activity")]
-        public Types.Activity Activity { get; set; } = new Types.Activity();
+        public Types.Activity? Activity { get; set; }
     }
 }

@@ -10,21 +10,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("gift_code")]
         [System.Text.Json.Serialization.JsonPropertyName("gift_code")]
-        public string GiftCode { get; set; } = string.Empty;
+        public string? GiftCode { get; set; }
 
         /// <summary>
         /// 获取或设置兑奖用户的 OpenId。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("open_id")]
         [System.Text.Json.Serialization.JsonPropertyName("open_id")]
-        public string OpenId { get; set; } = string.Empty;
+        public string? OpenId { get; set; }
 
         /// <summary>
         /// 获取或设置兑奖通用唯一 ID。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("uuid")]
         [System.Text.Json.Serialization.JsonPropertyName("uuid")]
-        public string RequestUUID { get; set; } = string.Empty;
+        public string? RequestUUID { get; set; }
 
         /// <summary>
         /// 获取或设置环境类型。

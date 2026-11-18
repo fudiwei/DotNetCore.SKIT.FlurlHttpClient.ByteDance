@@ -17,21 +17,21 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("company_name")]
         [System.Text.Json.Serialization.JsonPropertyName("company_name")]
-        public string CompanyName { get; set; } = string.Empty;
+        public string? CompanyName { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照编号。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("credit_code")]
         [System.Text.Json.Serialization.JsonPropertyName("credit_code")]
-        public string BusinessLicenseNumber { get; set; } = string.Empty;
+        public string? BusinessLicenseNumber { get; set; }
 
         /// <summary>
         /// 获取或设置营业执照有效期（格式：yyyy-MM-dd / "0"）。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("credit_end_date")]
         [System.Text.Json.Serialization.JsonPropertyName("credit_end_date")]
-        public string BusinessLicenseEndDateString { get; set; } = string.Empty;
+        public string? BusinessLicenseEndDateString { get; set; }
 
         /// <summary>
         /// 获取或设置企业类型。
@@ -45,7 +45,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("legal_person_name")]
         [System.Text.Json.Serialization.JsonPropertyName("legal_person_name")]
-        public string LegalPersonName { get; set; } = string.Empty;
+        public string? LegalPersonName { get; set; }
 
         /// <summary>
         /// 获取或设置注册地址国家编号。
@@ -73,7 +73,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty("registered_address")]
         [System.Text.Json.Serialization.JsonPropertyName("registered_address")]
-        public string RegisteredAddress { get; set; } = string.Empty;
+        public string? RegisteredAddress { get; set; }
 
         /// <summary>
         /// 获取或设置注册资本（单位：元）。

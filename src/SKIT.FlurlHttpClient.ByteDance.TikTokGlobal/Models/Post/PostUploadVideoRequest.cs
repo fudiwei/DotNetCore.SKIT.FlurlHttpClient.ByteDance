@@ -1,5 +1,3 @@
-using System;
-
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
     /// <summary>

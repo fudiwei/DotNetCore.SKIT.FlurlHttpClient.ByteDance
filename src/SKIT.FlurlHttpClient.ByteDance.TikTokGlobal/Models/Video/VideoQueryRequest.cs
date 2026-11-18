@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
     /// <summary>
@@ -33,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
         [Newtonsoft.Json.JsonProperty("filters")]
         [System.Text.Json.Serialization.JsonPropertyName("filters")]
         public Types.Filters Filters { get; set; } = new Types.Filters();
-        
+
         public VideoQueryRequest SetCompleteFields()
         {
             FieldList ??= new List<string>();

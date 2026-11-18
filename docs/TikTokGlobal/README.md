@@ -1,12 +1,12 @@
 # SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
 
-A HTTP API SDK for [TikTok Developer API](https://developers.tiktok.com/) based on `Flurl.Http`.
+An API client SDK for [TikTok Developer Platform](https://developers.tiktok.com/) based on `Flurl.Http`.
 
 ---
 
 ## Features
 
-- Based on TikTok Developer API.
+- Encapsulates TikTok Developer API.
 
 ---
 

@@ -60,45 +60,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
 
             Assert.Multiple(() =>
             {
-                var options = TypeDeclarationAnalyzerOptions.LoadFromClient(typeof(ExtendedSDK.ProductApi.DouyinMicroAppProductApiClient));
-                options.ReportOnMissingSDKModels = true;
-                options.ReportOnMissingSDKMethods = true;
-                options.ReportOnMissingSDKWebhooks = true;
-
-                var analyzer = new TypeDeclarationAnalyzer(options);
-
-                var issues = analyzer.Analyze();
-#if DEBUG
-                if (issues.Count > 0)
-                {
-                    foreach (var issue in issues)
-                        _outputHelper.WriteLine(issue.ToString());
-                }
-#endif
-                Assert.Empty(issues);
-            });
-
-            Assert.Multiple(() =>
-            {
-                var options = TypeDeclarationAnalyzerOptions.LoadFromClient(typeof(ExtendedSDK.RoleApi.DouyinMicroAppRoleApiClient));
-                options.ReportOnMissingSDKModels = true;
-                options.ReportOnMissingSDKMethods = true;
-
-                var analyzer = new TypeDeclarationAnalyzer(options);
-
-                var issues = analyzer.Analyze();
-#if DEBUG
-                if (issues.Count > 0)
-                {
-                    foreach (var issue in issues)
-                        _outputHelper.WriteLine(issue.ToString());
-                }
-#endif
-                Assert.Empty(issues);
-            });
-
-            Assert.Multiple(() =>
-            {
                 var options = TypeDeclarationAnalyzerOptions.LoadFromClient(typeof(ExtendedSDK.Webcast.DouyinMicroAppWebcastClient));
                 options.ReportOnMissingSDKModels = true;
                 options.ReportOnMissingSDKMethods = true;
@@ -158,56 +119,6 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.UnitTests
                 options.ReportOnMissingSDKMethodsCodes = true;
                 options.ReportOnMissingSDKWebhooksCodes = true;
                 options.ReportOnMissingSDKWebhooksFixtures = true;
-
-                var analyzer = new StaticFileAnalyzer(options);
-
-                var issues = analyzer.Analyze();
-#if DEBUG
-                if (issues.Count > 0)
-                {
-                    foreach (var issue in issues)
-                        _outputHelper.WriteLine(issue.ToString());
-                }
-#endif
-                Assert.Empty(issues);
-            });
-
-            Assert.Multiple(() =>
-            {
-                string workDir = Environment.CurrentDirectory;
-                string projDir = Path.Combine(workDir, "../../../../../");
-
-                var options = StaticFileAnalyzerOptions.LoadFromClient(typeof(ExtendedSDK.ProductApi.DouyinMicroAppProductApiClient));
-                options.ProjectRootPath = Path.Combine(projDir, "./src/SKIT.FlurlHttpClient.ByteDance.MicroApp/ExtendedSDK/ProductApi/");
-                options.ReportOnMissingSDKModelsCodes = true;
-                options.ReportOnMissingSDKModelsFixtures = true;
-                options.ReportOnMissingSDKMethodsCodes = true;
-                options.ReportOnMissingSDKWebhooksCodes = true;
-                options.ReportOnMissingSDKWebhooksFixtures = true;
-
-                var analyzer = new StaticFileAnalyzer(options);
-
-                var issues = analyzer.Analyze();
-#if DEBUG
-                if (issues.Count > 0)
-                {
-                    foreach (var issue in issues)
-                        _outputHelper.WriteLine(issue.ToString());
-                }
-#endif
-                Assert.Empty(issues);
-            });
-
-            Assert.Multiple(() =>
-            {
-                string workDir = Environment.CurrentDirectory;
-                string projDir = Path.Combine(workDir, "../../../../../");
-
-                var options = StaticFileAnalyzerOptions.LoadFromClient(typeof(ExtendedSDK.RoleApi.DouyinMicroAppRoleApiClient));
-                options.ProjectRootPath = Path.Combine(projDir, "./src/SKIT.FlurlHttpClient.ByteDance.MicroApp/ExtendedSDK/RoleApi/");
-                options.ReportOnMissingSDKModelsCodes = true;
-                options.ReportOnMissingSDKModelsFixtures = true;
-                options.ReportOnMissingSDKMethodsCodes = true;
 
                 var analyzer = new StaticFileAnalyzer(options);
 

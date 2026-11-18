@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
     /// <summary>
-    /// <para>表示 [POST] /oauth/refresh_token/ 接口的请求。</para>
+    /// <para>表示 [POST] /oauth/token/ 接口的请求。</para>
     /// </summary>
     public class OAuthRefreshTokenRequest : TikTokV2Request
     {

@@ -6,8 +6,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         /// <para>异步调用 [POST] /oauth/token/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developers.tiktok.com/doc/oauth-user-access-token-management ]]> <br/>
-        /// <![CDATA[ https://developers.tiktok.com/doc/client-access-token-management ]]>
+        /// <![CDATA[ https://developers.tiktok.com/doc/oauth-get-a-user-access-token ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/minis-oauth ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/silent-login ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-minis-silent-login ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -36,10 +38,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /oauth/refresh_token/ 接口。</para>
+        /// <para>异步调用 [POST] /oauth/token/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developers.tiktok.com/doc/oauth-user-access-token-management ]]>
+        /// <![CDATA[ https://developers.tiktok.com/doc/oauth-refresh-a-user-access-token ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/minis-oauth ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/silent-login ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-minis-silent-login ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -62,7 +67,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
             }
 
             IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "refresh_token/");
+                .CreateFlurlRequest(request, HttpMethod.Post, "oauth", "token/");
 
             return await client.SendFlurlRequestAsFormUrlEncodedAsync<Models.OAuthRefreshTokenResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
@@ -71,7 +76,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         /// <para>异步调用 [POST] /oauth/revoke/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developers.tiktok.com/doc/login-kit-manage-user-access-tokens ]]>
+        /// <![CDATA[ https://developers.tiktok.com/doc/oauth-revoke-a-user-access-token ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/minis-oauth ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/silent-login ]]> <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/tiktok-minis-silent-login ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

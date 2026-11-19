@@ -18,7 +18,9 @@ A client SDK for TikTok Shop API based on Flurl.Http.
 
 ## Features
 
-- Encapsulates TikTok Developer API.
+- Encapsulates TikTok Shop API v202309.
+- Auto-generated signature on API requests.
+- Provides some algorithm utilities (such as HMAC-SHA-256).
 
 ## Documentation
 

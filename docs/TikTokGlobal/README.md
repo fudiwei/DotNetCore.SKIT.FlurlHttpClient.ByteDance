@@ -7,6 +7,7 @@ A client SDK for [TikTok Developer](https://developers.tiktok.com/) API based on
 ## Features
 
 - Encapsulates TikTok Developer API.
+- Provides some algorithm utilities (such as HMAC-SHA-256).
 
 ---
 

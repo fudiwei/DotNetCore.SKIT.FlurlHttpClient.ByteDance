@@ -5,6 +5,7 @@
 ## 功能特性
 
 - 封装 TikTok Developer API。
+- 提供了 HMAC-SHA-256 等算法工具类。
 
 ## 开发文档
 
@@ -17,6 +18,7 @@ A client SDK for TikTok Developer API based on Flurl.Http.
 ## Features
 
 - Encapsulates TikTok Developer API.
+- Provides some algorithm utilities (such as HMAC-SHA-256).
 
 ## Documentation
 

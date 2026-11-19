@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/product/v1/app_region_add/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/set-distribute-city/add-bind-city ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/reach-marketing/mount/set-distribute-city/add-bind-region ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/product/v1/app_region_modify/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/set-distribute-city/modify-bind-city ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/reach-marketing/mount/set-distribute-city/modify-bind-city ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/product/v1/app_region_delete/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/mount/set-distribute-city/delete-bind-city ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/reach-marketing/mount/set-distribute-city/delete-bind-city ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

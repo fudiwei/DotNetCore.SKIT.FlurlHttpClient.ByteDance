@@ -9,7 +9,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/query_binded_user/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/query-binded-user ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-mgmt/query-binded-user ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -29,33 +29,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/promotion/v2/activity/bind_user_to_sidebar_activity/ 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/bind-user-to-activity ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.PromotionActivityBindUserToSidebarActivityV2Response> ExecutePromotionActivityBindUserToSidebarActivityV2Async(this DouyinMicroAppClient client, Models.PromotionActivityBindUserToSidebarActivityV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "promotion", "v2", "activity", "bind_user_to_sidebar_activity/")
-                .WithHeader("access-token", request.AccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.PromotionActivityBindUserToSidebarActivityV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
         /// <para>异步调用 [POST] /api/promotion/v2/activity/upload_popup_screenshot/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/upload-popup-screenshot ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/upload-popup-screenshot ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -92,7 +69,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/add_self_test_accounts/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/add-self-test-accounts ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/add-self-test-accounts ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -115,7 +92,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/create_promotion_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/add-self-test-accounts ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/add-self-test-accounts ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -138,7 +115,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/modify_promotion_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/modify-promotion-activity ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/modify-promotion-activity ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -161,7 +138,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/update_promotion_activity_status/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/update-promotion-activity-status ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/update-promotion-activity-status ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -184,7 +161,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/activity/query_promotion_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/promotion-activity-management/query-promotion-activity ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/promotion-activity-management/query-promotion-activity ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -209,7 +186,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_coupon_receive_info/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/get-coupon-receive-info ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-mgmt/get-coupon-receive-info ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -237,7 +214,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_consume_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/batch-consume-coupon ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-mgmt/batch-consume-coupon ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -270,7 +247,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/batch_rollback_consume_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-mgmt/batch-rollback-consume-coupon ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-mgmt/batch-rollback-consume-coupon ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -303,7 +280,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_talent_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -331,7 +308,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/set_talent_coupon/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/set-talent-coupon ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/anchor-authorization-mgmt/set-talent-coupon ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -359,7 +336,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_talent_coupon_status/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/anchor-authorization-mgmt/get-talent-coupon ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -387,7 +364,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_talent_coupon_stock/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/anchor-authorization-mgmt/update-talent-coupon-stock ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/anchor-authorization-mgmt/update-talent-coupon-stock ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -415,7 +392,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/send_coupon_to_designated_user/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/send-coupon-to-designated-user ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/direct-send/send-coupon-to-designated-user ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -443,7 +420,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_bill_download_url/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/get-bill-download-url ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/get-bill-download-url ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -472,7 +449,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/create_developer_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/create-developer-activity ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/direct-send/create-developer-activity ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -500,7 +477,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/delete_developer_activity/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/direct-send/delete-developer-activity ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/direct-send/delete-developer-activity ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -531,7 +508,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/coupon/create_coupon_meta/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/create-coupon-meta ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/create-coupon-meta ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -554,7 +531,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/coupon/modify_coupon_meta/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/modify-coupon-meta ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/modify-coupon-meta ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -577,7 +554,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v2/coupon/query_coupon_meta/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/query-coupon-meta ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/query-coupon-meta ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -600,7 +577,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/delete_coupon_meta 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/delete-coupon-meta ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/delete-coupon-meta ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -628,7 +605,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_coupon_meta_stock 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/update-coupon-meta-stock ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/update-coupon-meta-stock ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -656,7 +633,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/update_coupon_meta_status 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/update-coupon-meta-status ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/update-coupon-meta-status ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -684,7 +661,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/query_activity_meta_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/query_activity_meta_data ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/query-activity-meta-data ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -707,7 +684,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/promotion/v1/coupon/get_coupon_meta_statistics 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/merchant-coupon/coupon-meta-mgmt/get-coupon-meta-statistics ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/merchant-coupon/coupon-meta-mgmt/get-coupon-meta-statistics ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

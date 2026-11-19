@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/apps/v1/playlet_business/upload/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/playletindustry/upload-playlet-business-rights ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/industry/playletindustry/upload-playlet-business-rights ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

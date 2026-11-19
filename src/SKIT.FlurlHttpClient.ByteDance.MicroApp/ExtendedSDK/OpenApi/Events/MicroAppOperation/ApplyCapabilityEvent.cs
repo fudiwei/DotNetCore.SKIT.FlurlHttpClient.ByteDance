@@ -5,11 +5,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/video-talent-mount ]]> <br/>
-    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/jump-live-room-capacity ]]> <br/>
-    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/live-room-status-capacity ]]> <br/>
-    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/rt-video-flow-capacity ]]> <br/>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/overview/platform-intro ]]> <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/page-layout-custom-capacity ]]> <br/>
-    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/capcut-video-template-capacity ]]>
     /// </para>
     /// </summary>
     public class ApplyCapabilityEvent : DouyinMicroAppOpenApiEvent

@@ -4,7 +4,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
     /// <para>表示 "image" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
-    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service ]]>
+    /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/server/message-push-customer-service ]]>
     /// </para>
     /// </summary>
     public class ImageMessageEvent : DouyinMicroAppEvent

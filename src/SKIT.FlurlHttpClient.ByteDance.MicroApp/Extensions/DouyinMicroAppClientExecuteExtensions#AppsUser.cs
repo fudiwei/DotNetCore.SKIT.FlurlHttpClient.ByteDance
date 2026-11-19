@@ -6,7 +6,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_item/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-video-status ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-video-status ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_item/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-video-status ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-video-status ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -56,7 +56,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_fans/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-fans-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-fans-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -81,7 +81,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_fans/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-fans-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-fans-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -106,7 +106,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-like-number ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-like-number ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -131,7 +131,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_like/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-like-number ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-like-number ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -156,7 +156,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-comment-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-comment-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -181,7 +181,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_comment/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-comment-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-comment-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -206,7 +206,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-share-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-share-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -231,7 +231,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_share/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-share-count ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-share-count ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -256,7 +256,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user/get_profile/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-home-pv ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-home-pv ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -281,7 +281,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/apps/v1/user_bc/get_profile/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-open/user-homepage-data/get-user-home-pv ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/basic-abilities/data-open/user-homepage-data/get-user-home-pv ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

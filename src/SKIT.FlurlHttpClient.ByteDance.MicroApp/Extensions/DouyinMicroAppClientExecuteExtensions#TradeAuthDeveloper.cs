@@ -8,7 +8,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_admissible_auth/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/auth/query-admissible-auth ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/auth/query-admissible-auth ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -31,7 +31,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_auth_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/auth/create-auth-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/auth/create-auth-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -54,7 +54,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/cancel_auth_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/auth/cancel-auth-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/auth/cancel-auth-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -77,7 +77,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/finish_auth_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/auth/finish-auth-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/auth/finish-auth-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -100,7 +100,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_auth_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/auth/query-auth-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/auth/query-auth-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -125,7 +125,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_pay_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/pay/create-pay-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/pay/create-pay-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -148,7 +148,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/close_pay_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/pay/close-pay-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/pay/close-pay-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -171,7 +171,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_pay_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/pay/query-pay-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/pay/query-pay-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -196,7 +196,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_refund/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/refund/create-refund ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/refund/create-refund ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -219,7 +219,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_refund/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/auth-deposit/refund/query-refund ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/auth-deposit/refund/query-refund ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -246,7 +246,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_sign_pay/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/pay/create-sign-pay ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/pay/create-sign-pay ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -269,7 +269,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_pay/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/pay/query-sign-pay ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/pay/query-sign-pay ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -294,7 +294,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/create_sign_refund/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/refund/create-sign-refund ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/refund/create-sign-refund ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -317,7 +317,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_refund/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/refund/query-sign-refund ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/refund/query-sign-refund ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -342,7 +342,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/terminate_sign/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/sign/terminate-sign ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/sign/terminate-sign ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -365,7 +365,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/trade_auth/v1/developer/query_sign_order/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/management-capacity/periodic-deduction/sign/query-sign-order ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/payment/management-capacity/periodic-deduction/sign/query-sign-order ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

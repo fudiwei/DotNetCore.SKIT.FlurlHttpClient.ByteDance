@@ -7,7 +7,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_overview/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-overview-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/component-analysis/component-overview-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -30,7 +30,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_source/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-source-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/component-analysis/component-source-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -53,7 +53,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_detail/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-detail-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/component-analysis/component-detail-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -76,7 +76,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_component_with_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/component-analysis/component-data-analysisv3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/component-analysis/component-data-analysisv3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -101,7 +101,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_live_with_short_id/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/live-shortId-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/live-analysis/live-shortId-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -126,7 +126,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_overview_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-overview-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/small-room-analysis/small-room-overview-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -151,7 +151,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_room_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-room-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/small-room-analysis/small-room-room-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -176,7 +176,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_small_home_order_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/small-room-analysis/small-room-order-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/small-room-analysis/small-room-order-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -205,7 +205,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_deal_overview_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/overview-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/overview-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -232,7 +232,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_deal_data_with_conversion/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/deal-conversion-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/deal-conversion-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -255,7 +255,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_video_deal_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/video-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/video-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -281,7 +281,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_live_room/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/query-live-room-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/query-live-room-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -305,7 +305,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_live_room_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/live-room-data-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/live-room-data-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -329,7 +329,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_live_deal_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/live-deal-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/live-deal-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -353,7 +353,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_product_deal_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/transaction-analysis/product-deal-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/transaction-analysis/product-deal-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -383,7 +383,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_behavior_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/behavior-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/behavior-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -411,7 +411,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_real_time_user_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/realtime-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/realtime-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -436,7 +436,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_retention_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/retention-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/retention-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -465,7 +465,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_scene_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/scene-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/scene-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -492,7 +492,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_user_portrait_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/user-portrait-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/user-portrait-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -520,7 +520,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_client_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/client-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/client-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -548,7 +548,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [GET] /api/platform/v2/data_analysis/query_page_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/user-analysis/page-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/user-analysis/page-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -578,8 +578,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_short_live_id_with_awemeid/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-item-contribute-data ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/live-item-contribute ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/video-analysis/video-item-contribute-data ]]> <br/>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/live-analysis/live-item-contribute ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -602,7 +602,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_video_data/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-overview-data-v3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/video-analysis/video-overview-data-v3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>
@@ -622,34 +622,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         }
 
         /// <summary>
-        /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_short_live_data_with_id/ 接口。</para>
-        /// <para>
-        /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-detail-analysis-data ]]> <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/live-analysis/room-detail-analysis-data ]]>
-        /// </para>
-        /// </summary>
-        /// <param name="client"></param>
-        /// <param name="request"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        public static async Task<Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Response> ExecutePlatformDataAnalysisQueryShortLiveDataWithIdV2Async(this DouyinMicroAppClient client, Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Request request, CancellationToken cancellationToken = default)
-        {
-            if (client is null) throw new ArgumentNullException(nameof(client));
-            if (request is null) throw new ArgumentNullException(nameof(request));
-
-            IFlurlRequest flurlReq = client
-                .CreateFlurlRequest(request, HttpMethod.Post, "api", "platform", "v2", "data_analysis", "query_short_live_data_with_id/")
-                .WithHeader("access-token", request.AccessToken);
-
-            return await client.SendFlurlRequestAsJsonAsync<Models.PlatformDataAnalysisQueryShortLiveDataWithIdV2Response>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
         /// <para>异步调用 [POST] /api/platform/v2/data_analysis/query_video_with_source/ 接口。</para>
         /// <para>
         /// REF: <br/>
-        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/data-analysis/video-analysis/video-source-analysis-datav3 ]]>
+        /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/server/operation/data-analysis/video-analysis/video-source-analysis-datav3 ]]>
         /// </para>
         /// </summary>
         /// <param name="client"></param>

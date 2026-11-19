@@ -1,0 +1,17 @@
+{
+    "data": {
+        "trade_order_id": "UIlpZZ1TIc",
+        "subscription_id": "iSjgkQ9rei",
+        "trade_order_status": "BRM1MQac3i",
+        "is_sandbox": true,
+        "begin_time": 162780036655460135,
+        "end_time": 7326223299323173385,
+        "actually_end_time": 7143902738493296646,
+        "pay_type": "IAP"
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "20241125114034036EE8AEADBAF91D5E93"
+    }
+}

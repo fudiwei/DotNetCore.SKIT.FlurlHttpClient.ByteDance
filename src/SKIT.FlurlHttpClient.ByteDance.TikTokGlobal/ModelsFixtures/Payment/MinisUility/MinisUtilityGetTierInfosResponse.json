@@ -1,0 +1,20 @@
+{
+    "data": {
+        "tier_infos": {
+            "1731381720000100": {
+                "tier_id": "1731381720000100",
+                "tier_name": "pd_beans_showcase_100",
+                "token_amount": 100,
+                "token_type": "BEANS",
+                "price": "1.19",
+                "currency": "USD",
+                "symbol": "$"
+            }
+        }
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "202411190743174589DAA30620D104990F"
+    }
+}

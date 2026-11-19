@@ -1,0 +1,23 @@
+{
+    "data": {
+        "subscriptions": [
+            {
+                "subscription_id": "tb4ML0ZVim",
+                "tier_id": "xohs4Jojay",
+                "is_subscription_rights_valid": true,
+                "is_renewal_normal": false,
+                "trade_order_id": "ggG7luEdWt",
+                "is_sandbox": true,
+                "begin_time": 8054018414209391465,
+                "end_time": 1061662930613089341,
+                "next_deduct_time": 2184276991229817160,
+                "pay_type": "IAP"
+            }
+        ]
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "20241125114034036EE8AEADBAF91D5E93"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "trade_order_id": "TOID1732533244259",
+        "trade_order_status": "PENDING"
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "202411251312430B89D17FDCB31F26244A"
+    }
+}

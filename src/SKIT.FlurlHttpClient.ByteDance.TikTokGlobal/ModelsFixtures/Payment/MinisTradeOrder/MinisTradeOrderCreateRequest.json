@@ -1,0 +1,13 @@
+{
+    "token_type": "BEANS",
+    "token_amount": 100,
+    "order_info": {
+        "order_id": "external_order_id_003",
+        "product_name": "Wake up dad! wedding time",
+        "product_id": "external_product_id",
+        "order_url": "/profile/order_history/external_product_id",
+        "quantity": 1,
+        "quantity_unit": "episode",
+        "image_url": "https//your.domain/pics/wake_up_dad.jpg"
+    }
+}

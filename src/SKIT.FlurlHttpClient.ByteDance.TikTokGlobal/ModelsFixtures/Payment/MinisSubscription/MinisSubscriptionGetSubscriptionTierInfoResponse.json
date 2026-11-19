@@ -1,0 +1,19 @@
+{
+    "data": {
+        "subscription_tiers_info": {
+            "zqrPo2cIEE": {
+                "tier_id": "IdohVeNqMX",
+                "deduct_cycle": "I6Sj9ICBaW",
+                "deduct_type": "CfuHfLeMoH",
+                "price": "MrofV8f93l",
+                "currency": "QiWeEc4YoU",
+                "symbol": "uPk6QRdtsv"
+            }
+        }
+    },
+    "error": {
+        "code": "ok",
+        "message": "",
+        "log_id": "20241125114034036EE8AEADBAF91D5E93"
+    }
+}

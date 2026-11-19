@@ -1,0 +1,7 @@
+{
+    "client_key": "your_client_key",
+    "event": "minis.trade_order.redeem.refund_traceback",
+    "create_time": 1744946518,
+    "user_openid": "",
+    "content": "{\"trade_order_id\":\"TOID2157c5ba03\",\"order_id\":\"order_id_as_in_your_system\",\"is_sandbox\":true,\"refund_amount\":80}"
+}

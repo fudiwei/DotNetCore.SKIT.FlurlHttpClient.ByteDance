@@ -1,0 +1,7 @@
+{
+    "client_key": "your_client_key",
+    "event": "minis.trade_order.redeem.success",
+    "create_time": 1615338610,
+    "user_openid": "",
+    "content": "{\"trade_order_id\":\"TOID667700996\",\"order_id\":\"order_id_as_in_your_system\",\"is_sandbox\":true}"
+}

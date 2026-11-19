@@ -1,0 +1,7 @@
+{
+    "client_key": "bwo2m45353a6k85",
+    "event": "video.upload.failed",
+    "create_time": 1615338610,
+    "user_openid": "act.example12345Example12345Example",
+    "content": "{\"share_id\":\"video.6974245311675353080.VDCxrcMJ\"}"
+}

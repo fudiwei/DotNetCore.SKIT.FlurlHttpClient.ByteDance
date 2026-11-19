@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
-    /// <para>表示 union_auth_info_for_c 事件的数据。</para>
+    /// <para>表示 "union_auth_info_for_c" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/union_auth/union_auth_info ]]> <br/>

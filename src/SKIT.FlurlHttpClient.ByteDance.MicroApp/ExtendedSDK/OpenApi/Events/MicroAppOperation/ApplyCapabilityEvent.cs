@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
 {
     /// <summary>
-    /// <para>表示 EVENT.APPLY_CAPACITY 事件的数据。</para>
+    /// <para>表示 "EVENT.APPLY_CAPACITY" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/auth-app-manage/operation/microapp/video-talent-mount ]]> <br/>

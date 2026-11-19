@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
-    /// <para>表示 life_member_join 事件的数据。</para>
+    /// <para>表示 "life_member_join" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/member/member.join ]]>

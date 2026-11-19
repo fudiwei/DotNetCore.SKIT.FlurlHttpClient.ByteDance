@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
-    /// <para>表示 life_trade_order_notify 事件的数据。</para>
+    /// <para>表示 "life_trade_order_notify" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/life-service-open-ability/life.capacity/order.query/trade.order.notify ]]>

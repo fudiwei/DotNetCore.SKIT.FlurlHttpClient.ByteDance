@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.Events
 {
     /// <summary>
-    /// <para>表示 text 事件的数据。</para>
+    /// <para>表示 "text" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/component/message-push-customer-service ]]>

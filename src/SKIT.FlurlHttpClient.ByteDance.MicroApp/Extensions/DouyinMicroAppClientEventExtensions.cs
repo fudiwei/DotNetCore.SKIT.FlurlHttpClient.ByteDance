@@ -65,10 +65,10 @@ namespace SKIT.FlurlHttpClient.ByteDance.MicroApp
         /// </para>
         /// </summary>
         /// <param name="client"></param>
-        /// <param name="webhookTimestamp">头条回调通知中的 "timestamp" 查询参数。</param>
-        /// <param name="webhookNonce">头条回调通知中的 "nonce" 查询参数。</param>
-        /// <param name="webhookMsg">头条回调通知中的 "msg" 查询参数。</param>
-        /// <param name="webhookSignature">头条回调通知中的 "signature" 查询参数。</param>
+        /// <param name="webhookTimestamp">回调通知中的 "timestamp" 查询参数。</param>
+        /// <param name="webhookNonce">回调通知中的 "nonce" 查询参数。</param>
+        /// <param name="webhookMsg">回调通知中的 "msg" 查询参数。</param>
+        /// <param name="webhookSignature">回调通知中的 "signature" 查询参数。</param>
         /// <returns></returns>
         public static ErroredResult VerifyEventSignatureForEcho(this DouyinMicroAppClient client, string webhookTimestamp, string webhookNonce, string webhookMsg, string webhookSignature)
         {

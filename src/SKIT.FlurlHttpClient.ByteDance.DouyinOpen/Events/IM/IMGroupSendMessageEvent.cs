@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.DouyinOpen.Events
 {
     /// <summary>
-    /// <para>表示 im_group_send_msg 事件的数据。</para>
+    /// <para>表示 "im_group_send_msg" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://developer.open-douyin.com/docs/resource/zh-CN/dop/develop/openapi/interaction-management/group-chat/group-msg/group.fans.webhook ]]> <br/>

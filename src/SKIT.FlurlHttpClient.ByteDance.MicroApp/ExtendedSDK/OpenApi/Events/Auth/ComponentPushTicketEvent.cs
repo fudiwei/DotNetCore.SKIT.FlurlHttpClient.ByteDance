@@ -1,7 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.MicroApp.ExtendedSDK.OpenApi.Events
 {
     /// <summary>
-    /// <para>表示 PUSH.Ticket 事件的数据。</para>
+    /// <para>表示 "PUSH.Ticket" 回调通知事件的数据。</para>
     /// <para>
     /// REF: <br/>
     /// <![CDATA[ https://partner.open-douyin.com/docs/resource/zh-CN/thirdparty/API/smallprogram/authorization/componentticket ]]>

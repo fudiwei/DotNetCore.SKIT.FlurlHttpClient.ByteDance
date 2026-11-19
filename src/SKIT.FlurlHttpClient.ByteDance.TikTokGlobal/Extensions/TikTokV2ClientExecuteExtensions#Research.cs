@@ -119,6 +119,77 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal
         }
         #endregion
 
+        #region TTS
+        /// <summary>
+        /// <para>异步调用 [POST] /research/tts/shop/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/research-api-specs-query-tiktok-shop-info ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchTTSShopResponse> ExecuteResearchTTSShopAsync(this TikTokV2Client client, Models.ResearchTTSShopRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "tts", "shop/")
+                .SetQueryParam("fields", request.FieldList is not null ? string.Join(",", request.FieldList) : null);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchTTSShopResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/tts/product/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/research-api-specs-query-tiktok-shop-products ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchTTSProductResponse> ExecuteResearchTTSProductAsync(this TikTokV2Client client, Models.ResearchTTSProductRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "tts", "product/")
+                .SetQueryParam("fields", request.FieldList is not null ? string.Join(",", request.FieldList) : null);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchTTSProductResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /research/tts/review/ 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.tiktok.com/doc/research-api-specs-query-tiktok-shop-reviews ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ResearchTTSReviewResponse> ExecuteResearchTTSReviewAsync(this TikTokV2Client client, Models.ResearchTTSReviewRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "research", "tts", "review/")
+                .SetQueryParam("fields", request.FieldList is not null ? string.Join(",", request.FieldList) : null);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ResearchTTSReviewResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+        #endregion
+
         #region Playlist
         /// <summary>
         /// <para>异步调用 [POST] /research/playlist/info/ 接口。</para>

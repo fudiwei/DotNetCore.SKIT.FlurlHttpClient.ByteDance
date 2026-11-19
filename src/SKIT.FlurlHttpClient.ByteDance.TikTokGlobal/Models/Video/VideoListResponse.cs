@@ -117,6 +117,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         [Newtonsoft.Json.JsonProperty("create_time")]
                         [System.Text.Json.Serialization.JsonPropertyName("create_time")]
                         public long CreateTimestamp { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置是否是 AI 生成。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("is_aigc")]
+                        [System.Text.Json.Serialization.JsonPropertyName("is_aigc")]
+                        public bool? IsAIGC { get; set; }
                     }
                 }
 

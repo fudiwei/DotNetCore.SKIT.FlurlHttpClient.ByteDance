@@ -1,0 +1,21 @@
+{
+    "data": {
+        "product_data": [
+            {
+                "product_description": "test Description",
+                "product_id": 123456789,
+                "product_name": "test Name",
+                "product_price": [
+                    "20.79GBP"
+                ],
+                "product_rating_1_count": 116,
+                "product_rating_2_count": 47,
+                "product_rating_3_count": 112,
+                "product_rating_4_count": 353,
+                "product_rating_5_count": 2693,
+                "product_review_count": 3321,
+                "product_sold_count": 37741
+            }
+        ]
+    }
+}

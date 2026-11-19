@@ -134,10 +134,14 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             FieldList.Add("playlist_id");
             FieldList.Add("voice_to_text");
             FieldList.Add("is_stem_verified");
-            FieldList.Add("favourites_count");
+            FieldList.Add("favorites_count");
             FieldList.Add("video_duration");
             FieldList.Add("hashtag_info_list");
+            FieldList.Add("sticker_info_list");
+            FieldList.Add("effect_info_list");
             FieldList.Add("video_mention_list");
+            FieldList.Add("video_label");
+            FieldList.Add("video_tag");
             return this;
         }
     }

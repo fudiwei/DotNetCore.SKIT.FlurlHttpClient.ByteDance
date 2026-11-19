@@ -31,6 +31,64 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                                 [System.Text.Json.Serialization.JsonPropertyName("hashtag_description")]
                                 public string? HashTagDescription { get; set; }
                             }
+
+                            public class StickerInfo
+                            {
+                                /// <summary>
+                                /// 获取或设置表情贴纸 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("sticker_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("sticker_id")]
+                                public string? StickerId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置表情贴纸名称。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("sticker_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("sticker_name")]
+                                public string? StickerName { get; set; }
+                            }
+
+                            public class EffectInfo
+                            {
+                                /// <summary>
+                                /// 获取或设置特效 ID。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("effect_id")]
+                                [System.Text.Json.Serialization.JsonPropertyName("effect_id")]
+                                public string? EffectId { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置特效名称。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("effect_name")]
+                                [System.Text.Json.Serialization.JsonPropertyName("effect_name")]
+                                public string? EffectName { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置特效照片 URl。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("effect_photo_url")]
+                                [System.Text.Json.Serialization.JsonPropertyName("effect_photo_url")]
+                                public string? EffectPhotoUrl { get; set; }
+                            }
+
+                            public class VideoTag
+                            {
+                                /// <summary>
+                                /// 获取或设置类型。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("type")]
+                                [System.Text.Json.Serialization.JsonPropertyName("type")]
+                                public string? Type { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置编号。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("number")]
+                                [System.Text.Json.Serialization.JsonPropertyName("number")]
+                                public int Number { get; set; }
+                            }
                         }
 
                         /// <summary>
@@ -93,9 +151,9 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         /// <summary>
                         /// 获取或设置收藏次数。
                         /// </summary>
-                        [Newtonsoft.Json.JsonProperty("favourites_count")]
-                        [System.Text.Json.Serialization.JsonPropertyName("favourites_count")]
-                        public long FavouritesCount { get; set; }
+                        [Newtonsoft.Json.JsonProperty("favorites_count")]
+                        [System.Text.Json.Serialization.JsonPropertyName("favorites_count")]
+                        public long FavoritesCount { get; set; }
 
                         /// <summary>
                         /// 获取或设置创建时间戳。
@@ -141,11 +199,32 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         public List<Types.HashTagInfo>? HashTagInfoList { get; set; }
 
                         /// <summary>
+                        /// 获取或设置表情贴纸信息列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("sticker_info_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("sticker_info_list")]
+                        public List<Types.StickerInfo>? StickerInfoList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置特效信息列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("effect_info_list")]
+                        [System.Text.Json.Serialization.JsonPropertyName("effect_info_list")]
+                        public List<Types.EffectInfo>? EffectInfoList { get; set; }
+
+                        /// <summary>
                         /// 获取或设置提及列表。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("video_mention_list")]
                         [System.Text.Json.Serialization.JsonPropertyName("video_mention_list")]
                         public List<string>? VideoMentionList { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置视频标签列表。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("video_tag")]
+                        [System.Text.Json.Serialization.JsonPropertyName("video_tag")]
+                        public List<Types.VideoTag>? VideoTagList { get; set; }
 
                         /// <summary>
                         /// 获取或设置播放列表 ID。

@@ -44,6 +44,7 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             FieldList.Add("reply_count");
             FieldList.Add("parent_comment_id");
             FieldList.Add("create_time");
+            FieldList.Add("display_name");
             return this;
         }
     }

@@ -1,5 +1,7 @@
 namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
 {
+    using SKIT.FlurlHttpClient.Internal.CodeAnalysis;
+
     /// <summary>
     /// <para>表示 [POST] /research/user/reposted_videos/ 接口的响应。</para>
     /// </summary>
@@ -11,7 +13,8 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
             {
                 public static class Types
                 {
-                    public class Video : ResearchUserLikedVideosResponse.Types.Data.Types.Video
+                    [DisallowAnalyzerRule("type-declaration/no-external-contract-nested-types", Addition = "SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models." + nameof(ResearchVideoQueryResponse) + "." + nameof(ResearchVideoQueryResponse.Types) + "." + nameof(ResearchVideoQueryResponse.Types.Data) + "." + nameof(ResearchVideoQueryResponse.Types.Data.Types) + "." + nameof(ResearchVideoQueryResponse.Types.Data.Types.Video))]
+                    public class Video : ResearchVideoQueryResponse.Types.Data.Types.Video
                     {
                     }
                 }

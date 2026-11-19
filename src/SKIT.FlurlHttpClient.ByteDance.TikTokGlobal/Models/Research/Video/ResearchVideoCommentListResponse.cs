@@ -38,6 +38,13 @@ namespace SKIT.FlurlHttpClient.ByteDance.TikTokGlobal.Models
                         public long? ParentCommentId { get; set; }
 
                         /// <summary>
+                        /// 获取或设置用户显示名称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("display_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("display_name")]
+                        public string? DisplayName { get; set; }
+
+                        /// <summary>
                         /// 获取或设置文本内容。
                         /// </summary>
                         [Newtonsoft.Json.JsonProperty("text")]

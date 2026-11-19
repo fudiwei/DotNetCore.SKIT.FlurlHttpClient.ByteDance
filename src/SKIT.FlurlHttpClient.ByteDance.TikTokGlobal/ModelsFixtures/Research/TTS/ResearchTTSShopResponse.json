@@ -1,0 +1,13 @@
+{
+    "data": {
+        "shop_data": [
+            {
+                "item_sold_count": 1216959,
+                "shop_id": 123456789,
+                "shop_name": "Test Name",
+                "shop_rating": "4.5",
+                "shop_review_count": 12345
+            }
+        ]
+    }
+}
